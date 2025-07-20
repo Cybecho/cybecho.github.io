@@ -4,37 +4,33 @@
   <div class="profile-section">
     {{ with .Site.Params.author }}
       {{ if .avatar }}
-        <img class="profile-avatar" src="{{ .avatar | absURL }}" alt="{{ .name }}" loading="lazy">
+        <img class="profile-avatar" src="{{ .avatar | absURL }}" alt="{{ .name }}">
       {{ end }}
       <h1 class="profile-name">{{ .name }}</h1>
     {{ end }}
     
-    <!-- 소개 텍스트 (_index.md에서 가져옴) -->
     <div class="profile-bio">
       {{ .Content }}
     </div>
 
     <!-- 소셜 링크 아이콘들 -->
     <div class="social-links">
-      <a href="https://github.com/Cybecho" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      <a href="https://github.com/Cybecho" target="_blank" class="social-icon" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
       </a>
-      
-      <a href="https://www.linkedin.com/in/cybecho/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      <a href="https://www.linkedin.com/in/cybecho/" target="_blank" class="social-icon" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
       </a>
-      
-      <a href="https://brunch.co.kr/@cybecho" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Brunch">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+      <a href="https://brunch.co.kr/@cybecho" target="_blank" class="social-icon" aria-label="Brunch">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
       </a>
-      
-      <a href="https://gamma.app/docs/Infra-75ni4cxerzurjak" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Portfolio">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+      <a href="https://gamma.app/docs/Infra-75ni4cxerzurjak" target="_blank" class="social-icon" aria-label="Portfolio">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
       </a>
     </div>
   </div>
 
-  <!-- 최근 포스트들 -->
+  <!-- 최근 포스트들 (간단 버전) -->
   <div class="recent-posts">
     <h2 class="section-title"><em>Recent Posts</em></h2>
     
@@ -45,18 +41,19 @@
           <h3 class="post-title">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
           </h3>
-          <time class="post-date">{{ .Date.Format "2025.01.02" }}</time>
+          <time class="post-date">{{ .Date.Format "2 Jan 2006" }}</time>
         </div>
         
-        <!-- AI 요약 또는 Description 표시 -->
+        <!-- AI 요약 (50글자만) -->
         {{ if .Description }}
           <div class="post-summary">
-            {{ .Description }}
+            {{ $summary := .Description }}
+            {{ if gt (len $summary) 50 }}
+              {{ $summary = printf "%s..." (substr $summary 0 47) }}
+            {{ end }}
+            {{ $summary }}
           </div>
         {{ end }}
-        
-        <!-- 구분선 (마지막 포스트 제외) -->
-        <div class="post-divider"></div>
       </article>
     {{ end }}
 
@@ -69,227 +66,57 @@
 </div>
 
 <style>
-/* 기본 컨테이너 */
-.container { 
-  max-width: 800px; 
-  margin: 0 auto; 
-  padding: 2rem 1.5rem; 
-}
+.container { max-width: 750px; margin: 0 auto; padding: 2rem 1rem; }
 
-/* 프로필 섹션 */
-.profile-section { 
-  text-align: center; 
-  margin-bottom: 3rem; 
-  padding-bottom: 2rem; 
-  border-bottom: 1px solid var(--border-color); 
-}
+/* 프로필 섹션 - 간소화 */
+.profile-section { text-align: center; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-color); }
+.profile-avatar { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent); }
+.profile-name { font-size: 1.8rem; font-weight: 700; margin: 0 0 0.75rem 0; }
+.profile-bio { font-size: 1rem; color: var(--text-muted); line-height: 1.5; margin: 0 auto 1.5rem auto; max-width: 500px; }
 
-.profile-avatar { 
-  width: 120px; 
-  height: 120px; 
-  border-radius: 50%; 
-  margin-bottom: 1.5rem; 
-  border: 4px solid var(--accent); 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
+/* 소셜 링크 - 작게 */
+.social-links { display: flex; justify-content: center; gap: 1rem; }
+.social-icon { color: var(--text-muted); transition: color 0.2s ease, transform 0.2s ease; }
+.social-icon:hover { color: var(--accent); transform: translateY(-2px); }
+.social-icon svg { width: 20px; height: 20px; }
 
-.profile-avatar:hover {
-  transform: scale(1.05);
-}
+/* Recent Posts - 간소화 */
+.section-title { font-size: 1.3rem; font-weight: 400; margin-bottom: 1.5rem; color: var(--text-muted); }
+.section-title em { font-style: italic; font-size: 1.2rem; }
 
-.profile-name { 
-  font-size: 2.2rem; 
-  font-weight: 700; 
-  margin: 0 0 1rem 0; 
-  color: var(--text-color);
-}
-
-.profile-bio { 
-  font-size: 1.1rem; 
-  color: var(--text-muted); 
-  line-height: 1.6; 
-  margin: 0 auto 2rem auto; 
-  max-width: 600px; 
-}
-
-/* 소셜 링크 */
-.social-links { 
-  display: flex; 
-  justify-content: center; 
-  gap: 1.5rem; 
-}
-
-.social-icon { 
-  color: var(--text-muted); 
-  transition: all 0.3s ease; 
-  padding: 0.75rem;
-  border-radius: 50%;
-  background: var(--bg-color);
-  border: 2px solid var(--border-color);
-}
-
-.social-icon:hover { 
-  color: var(--accent); 
-  transform: translateY(-3px);
-  border-color: var(--accent);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.social-icon svg { 
-  width: 24px; 
-  height: 24px; 
-}
-
-/* 최근 포스트 섹션 */
-.section-title { 
-  font-size: 1.6rem; 
-  font-weight: 400; 
-  margin-bottom: 2rem; 
-  color: var(--text-muted);
-  text-align: left;
-}
-
-.section-title em {
-  font-style: italic;
-  font-size: 1.4rem;
-}
-
-/* 포스트 아이템 */
-.post-item { 
-  margin-bottom: 2.5rem;
-  position: relative;
-}
-
-.post-item:last-child .post-divider {
-  display: none;
-}
-
-.post-header { 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: flex-start; 
-  margin-bottom: 0.75rem; 
-  gap: 1.5rem; 
-}
-
-.post-title { 
-  margin: 0; 
-  flex: 1; 
-}
-
+/* 포스트 아이템 - 극도로 간소화 */
+.post-item { margin-bottom: 1.5rem; }
+.post-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.3rem; gap: 1rem; }
+.post-title { margin: 0; flex: 1; }
 .post-title a { 
-  font-size: 1.35rem; 
-  font-weight: 600; 
+  font-size: 1.1rem; 
+  font-weight: 500; 
   text-decoration: none; 
   color: var(--text-color); 
-  line-height: 1.4;
-  transition: color 0.2s ease;
+  line-height: 1.3;
 }
+.post-title a:hover { color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; }
 
-.post-title a:hover { 
-  color: var(--accent); 
-}
-
-.post-date { 
-  font-size: 0.9rem; 
-  color: var(--text-muted); 
-  white-space: nowrap; 
-  padding-top: 0.3rem;
-  font-weight: 500;
-}
-
-/* AI 요약/설명 */
+/* AI 요약 - 아주 작게 */
 .post-summary { 
-  font-size: 1rem; 
+  font-size: 0.85rem; 
   color: var(--text-muted); 
-  line-height: 1.6; 
-  margin: 0.5rem 0 1.5rem 0;
-  padding: 1rem 1.5rem;
-  background: var(--code-bg);
-  border-left: 4px solid var(--accent);
-  border-radius: 0 8px 8px 0;
-}
-
-/* 포스트 구분선 */
-.post-divider {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--border-color), transparent);
-  margin-top: 1.5rem;
+  line-height: 1.4; 
+  margin: 0.2rem 0 0 0;
+  opacity: 0.8;
 }
 
 /* 더보기 링크 */
-.view-more { 
-  text-align: center; 
-  margin-top: 3rem; 
-}
+.view-more { text-align: center; margin-top: 2rem; }
+.view-more-link { font-size: 0.95rem; color: var(--accent); text-decoration: none; font-weight: 500; }
+.view-more-link:hover { text-decoration: underline; }
 
-.view-more-link { 
-  font-size: 1.1rem; 
-  color: var(--accent); 
-  text-decoration: none; 
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--accent);
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-
-.view-more-link:hover {
-  background: var(--accent);
-  color: var(--bg-color);
-  transform: translateY(-2px);
-}
-
-/* 반응형 디자인 */
+/* 반응형 */
 @media (max-width: 768px) {
-  .container {
-    padding: 1.5rem 1rem;
-  }
-  
-  .post-header { 
-    flex-direction: column; 
-    align-items: flex-start; 
-    gap: 0.5rem; 
-  }
-  
-  .profile-name { 
-    font-size: 2rem; 
-  }
-  
-  .profile-bio { 
-    font-size: 1rem; 
-  }
-  
-  .post-title a { 
-    font-size: 1.2rem; 
-  }
-  
-  .profile-avatar {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .social-links {
-    gap: 1rem;
-  }
-  
-  .post-summary {
-    padding: 0.75rem 1rem;
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .social-icon {
-    padding: 0.5rem;
-  }
-  
-  .social-icon svg {
-    width: 20px;
-    height: 20px;
-  }
+  .post-header { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+  .profile-name { font-size: 1.6rem; }
+  .post-title a { font-size: 1rem; }
 }
 </style>
 {{ end }}
