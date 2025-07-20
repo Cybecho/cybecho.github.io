@@ -1,0 +1,266 @@
+{{ define "main" }}
+<div class="single-container">
+  <article class="post-content">
+    <header class="post-header">
+      <h1 class="post-title">{{ .Title }}</h1>
+      <div class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ if .Params.tags }}
+          <div class="post-tags">
+            {{ range .Params.tags }}
+              <span class="tag">#{{ . }}</span>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    </header>
+
+    <!-- TOC (목차) -->
+    {{ if .TableOfContents }}
+      <div class="toc-container" id="toc">
+        <div class="toc-title">목차</div>
+        <div class="toc-content">
+          {{ .TableOfContents }}
+        </div>
+      </div>
+    {{ end }}
+
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </article>
+</div>
+
+<script>
+// 🎯 스마트 TOC 스크립트
+document.addEventListener('DOMContentLoaded', function() {
+  const toc = document.getElementById('toc');
+  const tocLinks = document.querySelectorAll('#toc a');
+  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  
+  if (!toc || tocLinks.length === 0 || headings.length === 0) return;
+
+  // 현재 활성 헤딩 추적
+  function updateActiveToc() {
+    let current = '';
+    const scrollY = window.scrollY;
+    
+    headings.forEach(heading => {
+      const rect = heading.getBoundingClientRect();
+      if (rect.top <= 100) {
+        current = heading.id;
+      }
+    });
+
+    // 모든 TOC 링크에서 active 클래스 제거
+    tocLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+
+    // 현재 헤딩에 해당하는 TOC 링크 활성화
+    if (current) {
+      const activeLink = document.querySelector(`#toc a[href="#${current}"]`);
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+  }
+
+  // 스크롤 이벤트 리스너
+  let ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(updateActiveToc);
+      ticking = true;
+      setTimeout(() => { ticking = false; }, 15);
+    }
+  });
+
+  // 초기 실행
+  updateActiveToc();
+
+  // TOC 링크 클릭 시 부드러운 스크롤
+  tocLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        const offsetTop = targetElement.offsetTop - 80;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+</script>
+
+<style>
+.single-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+
+.post-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.post-meta {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.post-tags {
+  margin-top: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin: 0.2rem;
+}
+
+/* 🎯 TOC 스타일 */
+.toc-container {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  z-index: 100;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.toc-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.toc-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-content li {
+  margin: 0.25rem 0;
+}
+
+.toc-content a {
+  display: block;
+  padding: 0.4rem 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.toc-content a:hover {
+  color: var(--accent);
+  background: var(--code-bg);
+}
+
+.toc-content a.active {
+  color: var(--accent);
+  background: var(--code-bg);
+  border-left-color: var(--accent);
+  font-weight: 500;
+}
+
+/* 중첩 레벨 들여쓰기 */
+.toc-content ul ul a {
+  padding-left: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.toc-content ul ul ul a {
+  padding-left: 2.5rem;
+  font-size: 0.75rem;
+}
+
+.content {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  scroll-margin-top: 100px; /* 스크롤 오프셋 */
+}
+
+/* 반응형 TOC */
+@media (max-width: 1400px) {
+  .toc-container {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 2rem auto;
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .post-title {
+    font-size: 2rem;
+  }
+  
+  .toc-container {
+    max-height: 150px;
+  }
+  
+  .content {
+    font-size: 1rem;
+  }
+}
+
+/* 다크모드 지원 */
+@media (prefers-color-scheme: dark) {
+  .toc-container {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+}
+</style>
+{{ end }}
