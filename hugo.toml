@@ -1,0 +1,64 @@
+baseURL = 'https://cybecho.github.io/'
+languageCode = 'ko-kr'
+title = '삽질 저장소 - Cybecho Blog'
+theme = 'lightbi-hugo'
+
+paginate = 10
+disqusShortname = ""
+googleAnalytics = ""
+
+[params]
+  author = "Cybecho"
+  description = "개발자 Cybecho의 삽질과 학습을 기록하는 공간"
+  keywords = ["개발", "프로그래밍", "학습", "기술", "삽질"]
+  homeTitle = "삽질 저장소"
+  homeSubtitle = "실패에서 배우고, 성공을 기록하다"
+  previewCardImagePlacement = "top"
+
+  [params.social]
+    github = "Cybecho"
+
+  [params.site]
+    showReadingTime = true
+    showShareButtons = true
+    showRelatedPosts = true
+    showCommitSha = true
+
+[[menu.main]]
+  name = "블로그"
+  url = "/posts/"
+  weight = 1
+
+[[menu.main]]
+  name = "태그"
+  url = "/tags/"
+  weight = 2
+
+[[menu.main]]
+  name = "카테고리"
+  url = "/categories/"
+  weight = 3
+
+[[menu.main]]
+  name = "소개"
+  url = "/about/"
+  weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    lineNos = true
+    lineNumbersInTable = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+
+[languages]
+  [languages.ko]
+    languageName = "한국어"
+    weight = 1

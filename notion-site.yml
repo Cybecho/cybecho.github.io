@@ -1,0 +1,22 @@
+# Notion Database 설정
+database_id: "5a4c3f14e7cc4d78961a6c87c2aa0ce8"
+notion_secret: "${{ secrets.NOTION_SECRET }}"
+
+content:
+  output_path: "content/posts"
+
+filter:
+  property: "Status"
+  operator: "equals"
+  value: "Published"
+
+hugo:
+  front_matter_format: "yaml"
+  date_format: "2006-01-02T15:04:05+09:00"
+
+property_mapping:
+  title: "Title"
+  date: "Date"
+  tags: "Tags"
+  status: "Status"
+  cover: "Cover"
