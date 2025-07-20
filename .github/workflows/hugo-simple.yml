@@ -1,8 +1,10 @@
-name: Simple Hugo Deploy
+name: Deploy Hugo Site
 
 on:
   push:
     branches: ["main"]
+  schedule:
+    - cron: '0 2 * * *'
   workflow_dispatch:
 
 permissions:
@@ -28,120 +30,90 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
-      # 🔍 디버깅: 파일 구조 확인
-      - name: Debug - Check files
-        run: |
-          echo "=== Current directory structure ==="
-          ls -la
-          echo "=== Hugo config file ==="
-          if [ -f hugo.toml ]; then
-            cat hugo.toml
-          else
-            echo "hugo.toml not found!"
-          fi
-          echo "=== Content directory ==="
-          if [ -d content ]; then
-            ls -la content/
-          else
-            echo "content directory not found, creating..."
-            mkdir -p content/posts
-          fi
-          echo "=== Themes directory ==="
-          if [ -d themes ]; then
-            ls -la themes/
-          else
-            echo "themes directory not found!"
-          fi
-
-      # Node.js 설치
+      # 🔧 Node.js 버전 업그레이드 (v20)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
-      # Hugo 액션
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
 
-      # 🔧 수정: heredoc 문법 수정
-      - name: Create minimal config if needed
-        run: |
-          if [ ! -f hugo.toml ]; then
-            echo "No hugo.toml found, creating minimal config..."
-            cat > hugo.toml << 'EOF'
-          baseURL = 'https://cybecho.github.io/'
-          languageCode = 'ko-kr'
-          title = '삽질 저장소 - Cybecho Blog'
-          theme = 'lightbi-hugo'
-
-          [params]
-            author = "Cybecho"
-            homeTitle = "삽질 저장소"
-            homeSubtitle = "실패에서 배우고, 성공을 기록하다"
-          EOF
-          fi
-
-      # Hugo 설정 검증
-      - name: Validate Hugo Config
-        run: |
-          echo "=== Hugo version ==="
-          hugo version
-          echo "=== Hugo config check ==="
-          hugo config
-
-      # Notion JAM CLI 설치 및 실행
-      - name: Install notion-jam
-        run: npm install -g notion-jam
-
+      # 🔧 DATABASE_ID 형식 수정
       - name: Sync Notion Content
         run: |
+          echo "Installing notion-jam..."
+          npm install -g notion-jam
+          
           echo "Syncing Notion content..."
+          echo "Database ID: ${{ secrets.DATABASE_ID }}"
+          
+          # 🔧 올바른 데이터베이스 URL 형식 사용
           notion-jam \
             --notion-token "${{ secrets.NOTION_SECRET }}" \
-            --root-page "${{ secrets.DATABASE_ID }}" \
+            --root-page "https://www.notion.so/${{ secrets.DATABASE_ID }}" \
             --output-dir "content/posts" \
             --download-images \
-            --image-dir "static/images"
-        continue-on-error: true
+            --image-dir "static/images" || echo "Notion sync failed, continuing with existing content"
 
-      # 기본 콘텐츠 생성 (Notion 동기화 실패 시 백업)
+      # 기본 콘텐츠 생성
       - name: Create default content if needed
         run: |
           if [ ! -d "content/posts" ] || [ -z "$(ls -A content/posts 2>/dev/null)" ]; then
-            echo "No content found, creating sample post..."
+            echo "Creating default content..."
             mkdir -p content/posts/welcome
             cat > content/posts/welcome/index.md << 'EOF'
           ---
-          title: "환영합니다!"
+          title: "삽질 저장소에 오신 것을 환영합니다!"
           date: 2024-01-01T00:00:00+09:00
           draft: false
-          tags: ["환영", "첫글"]
+          tags: ["환영", "블로그"]
           ---
 
-          # 삽질 저장소에 오신 것을 환영합니다! 🎉
+          # 환영합니다! 🎉
 
-          이곳은 Cybecho의 개발 여정과 삽질 기록을 담는 공간입니다.
+          이곳은 **Cybecho**의 개발 삽질과 학습을 기록하는 공간입니다.
 
-          ## 앞으로 기대하세요
-          - 🔧 개발 삽질기
-          - 📚 학습 노트  
-          - 💡 문제 해결 과정
-          - 🚀 새로운 기술 탐험
+          ## 무엇을 다루나요?
 
-          Notion에서 작성한 글들이 자동으로 여기에 동기화됩니다!
+          - 🔧 **개발 삽질기**: 실패와 성공의 기록
+          - 📚 **학습 노트**: 새로 배운 기술들
+          - 💡 **문제 해결**: 트러블슈팅 과정
+          - 🚀 **기술 탐험**: 신기술 실험
+
+          ## 블로그 구조
+
+          이 블로그는 다음 기술로 구축되었습니다:
+          - **CMS**: Notion
+          - **정적 사이트 생성기**: Hugo
+          - **테마**: Lightbi
+          - **호스팅**: GitHub Pages
+          - **자동화**: GitHub Actions
+
+          앞으로 많은 삽질 이야기들이 업로드될 예정입니다! 😄
           EOF
           fi
 
-      # Hugo 빌드
+      # 🔧 Hugo 빌드 (verbose 플래그 제거)
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
         run: |
           echo "Building Hugo site..."
-          hugo --minify --verbose
+          echo "Hugo version: $(hugo version)"
+          hugo --gc --minify
+
+      # 빌드 결과 확인
+      - name: Check build output
+        run: |
+          echo "=== Build completed ==="
+          ls -la public/
+          echo "=== Generated pages ==="
+          find public -name "*.html" | wc -l
+          echo "total HTML files generated"
 
       # GitHub Pages 배포
       - name: Upload artifact
