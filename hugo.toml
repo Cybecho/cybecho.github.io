@@ -3,41 +3,32 @@ languageCode = 'ko-kr'
 title = '삽질 저장소 - Cybecho Blog'
 theme = 'lightbi-hugo'
 
-# 🔧 Hugo v0.128+ 호환 설정
 enableEmoji = true
 enableGitInfo = true
 
-# 🔧 paginate → pagination.pagerSize 변경
 [pagination]
   pagerSize = 10
 
-# 🔧 Lightbi 테마 요구사항에 맞춘 author 설정
 [params]
-  # Author 정보 (테마가 .name 필드를 찾음)
   [params.author]
     name = "Cybecho"
-    email = "cybecho@example.com"  # 선택사항
+    email = "cybecho@example.com"
     
-  # 사이트 정보
   description = "개발자 Cybecho의 삽질과 학습을 기록하는 공간"
   keywords = ["개발", "프로그래밍", "학습", "기술", "삽질"]
   
-  # 메인 페이지
   homeTitle = "삽질 저장소"
   homeSubtitle = "실패에서 배우고, 성공을 기록하다"
   
-  # Lightbi 테마 설정
   previewCardImagePlacement = "top"
   showReadingTime = true
   showShareButtons = true
   showRelatedPosts = true
-  showCommitSha = true
+  showCommitSha = false  # 🔧 이 부분을 false로 변경
   
-  # 소셜 미디어
   [params.social]
     github = "Cybecho"
 
-# 메뉴 설정
 [[menu.main]]
   name = "블로그"
   url = "/posts/"
@@ -49,7 +40,7 @@ enableGitInfo = true
   weight = 2
 
 [[menu.main]]
-  name = "카테고리"  
+  name = "카테고리"
   url = "/categories/"
   weight = 3
 
@@ -58,7 +49,6 @@ enableGitInfo = true
   url = "/about/"
   weight = 4
 
-# 마크다운 설정
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -68,24 +58,20 @@ enableGitInfo = true
     lineNos = true
     codeFences = true
 
-# 출력 형식
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML"]
   section = ["HTML", "RSS"]
 
-# 이미지 처리
 [imaging]
   resampleFilter = "CatmullRom"
   quality = 95
   anchor = "smart"
 
-# 빌드 설정
 buildDrafts = false
 buildFuture = false
 buildExpired = false
 
-# 분류법 설정
 [taxonomies]
   category = "categories"
   tag = "tags"
