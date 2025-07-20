@@ -10,11 +10,9 @@ title: "삽질 저장소"
 
 ### 🎯 주요 주제들
 
-- **인프라**: AWS, Kubernetes, Docker, ProxMox 등
-- **개발환경**: Linux, macOS, 개발도구 설정
+- **인프라**: AWS, Kubernetes, Docker, ProxMox
+- **개발환경**: Linux, macOS, 개발도구
 - **학습**: 새로운 기술과 개념 탐구
-- **문제해결**: 실무에서 만난 문제들과 해결 과정
+- **문제해결**: 실무 문제와 해결 과정
 
 ---
-
-📚 **[전체 글 보기](/posts/)** | 🏷️ **[태그별 보기](/tags/)** | 📁 **[카테고리별 보기](/categories/)**

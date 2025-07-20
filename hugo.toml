@@ -3,9 +3,9 @@ languageCode = 'ko-kr'
 title = '삽질 저장소 - Cybecho Blog'
 theme = 'hugo-blog-awesome'
 
-# 새로운 pagination 설정 (Hugo v0.128.0+)
+# 새로운 pagination 설정
 [pagination]
-  pagerSize = 5
+  pagerSize = 8
   path = "page"
 
 # 기본 설정
@@ -13,7 +13,7 @@ enableRobotsTXT = true
 enableEmoji = true
 
 [params]
-  # 작성자 설정 (프로필 사진 추가)
+  # 작성자 설정
   [params.author]
     name = "Cybecho"
     avatar = "https://avatars.githubusercontent.com/u/42949995?v=4"
@@ -24,23 +24,16 @@ enableEmoji = true
   homeTitle = "삽질 저장소"
   homeSubtitle = "실패에서 배우고, 성공을 기록하다"
   
-  # Read More 버튼 활성화
-  showReadMore = true
-  readMoreText = "더 많은 글 보기"
-  
-  # 홈페이지에 표시할 최근 포스트 수
-  homePostLimit = 5
-  
-  # 테마 설정
-  showToc = true
+  # 테마 설정 (깔끔하게)
+  showToc = false
   TocOpen = false
   ShowReadingTime = true
-  ShowShareButtons = true
+  ShowShareButtons = false
   ShowPostNavLinks = true
-  ShowBreadCrumbs = true
+  ShowBreadCrumbs = false
   ShowCodeCopyButtons = true
-  ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = false
   UseHugoToc = true
   disableSpecial1stPost = false
   disableScrollToTop = false
@@ -49,7 +42,7 @@ enableEmoji = true
   hideSummary = false
   
   # 색상 테마
-  colorScheme = "auto" # "light", "dark", "auto"
+  colorScheme = "auto"
 
   # 소셜 링크
   [[params.socialIcons]]
