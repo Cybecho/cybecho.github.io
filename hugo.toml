@@ -71,3 +71,13 @@ enableGitInfo = true
   resampleFilter = "CatmullRom"
   quality = 95
   anchor = "smart"
+
+[params]
+  # Draft 상태 글 숨기기
+  draft = false
+
+  # Build 설정
+  buildDrafts = false
+  buildFuture = false
+  buildExpired = false
+
