@@ -41,7 +41,7 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # 🔧 수정된 Notion 동기화 스크립트 (AI 요약 50자 제한 + 토글 지원)
+      # 🔧 완전히 개선된 Notion 동기화 스크립트
       - name: Enhanced Notion Sync Script
         run: |
           echo "🚀 Creating enhanced Notion sync script..."
@@ -57,14 +57,12 @@ jobs:
           // YAML 안전 문자열 생성 함수
           function createSafeYamlString(str) {
             if (!str) return '""';
-
             const escaped = str
               .replace(/\\/g, '\\\\')
               .replace(/"/g, '\\"')
               .replace(/\n/g, '\\n')
               .replace(/\r/g, '\\r')
               .replace(/\t/g, '\\t');
-
             return `"${escaped}"`;
           }
 
@@ -89,20 +87,19 @@ jobs:
           // 리치 텍스트 변환 함수
           function convertRichText(richTextArray) {
             if (!richTextArray || !Array.isArray(richTextArray)) return '';
-
             return richTextArray.map(textObj => {
               let text = textObj.plain_text || '';
-
               if (textObj.annotations?.bold) text = `**${text}**`;
               if (textObj.annotations?.italic) text = `*${text}*`;
               if (textObj.annotations?.code) text = '`' + text + '`';
+              if (textObj.annotations?.strikethrough) text = `~~${text}~~`;
+              if (textObj.annotations?.underline) text = `<u>${text}</u>`;
               if (textObj.href) text = `[${text}](${textObj.href})`;
-
               return text;
             }).join('');
           }
 
-          // 블록 변환 함수 (토글 블록 포함)
+          // 강화된 블록 변환 함수 (모든 블록 타입 지원)
           async function convertBlocks(pageId, depth = 0) {
             try {
               const blocks = await notion.blocks.children.list({
@@ -118,6 +115,8 @@ jobs:
                   case 'paragraph':
                     if (block.paragraph?.rich_text?.length > 0) {
                       content += indent + convertRichText(block.paragraph.rich_text) + '\n\n';
+                    } else if (block.paragraph?.rich_text?.length === 0) {
+                      content += '\n'; // 빈 줄 처리
                     }
                     break;
 
@@ -142,8 +141,6 @@ jobs:
                   case 'bulleted_list_item':
                     if (block.bulleted_list_item?.rich_text?.length > 0) {
                       content += indent + '- ' + convertRichText(block.bulleted_list_item.rich_text) + '\n';
-                      
-                      // 중첩된 자식 블록 처리
                       if (block.has_children) {
                         const childContent = await convertBlocks(block.id, depth + 1);
                         content += childContent;
@@ -154,8 +151,6 @@ jobs:
                   case 'numbered_list_item':
                     if (block.numbered_list_item?.rich_text?.length > 0) {
                       content += indent + '1. ' + convertRichText(block.numbered_list_item.rich_text) + '\n';
-                      
-                      // 중첩된 자식 블록 처리
                       if (block.has_children) {
                         const childContent = await convertBlocks(block.id, depth + 1);
                         content += childContent;
@@ -167,13 +162,10 @@ jobs:
                     if (block.toggle?.rich_text?.length > 0) {
                       const toggleTitle = convertRichText(block.toggle.rich_text);
                       content += indent + '<details>\n' + indent + '<summary>' + toggleTitle + '</summary>\n\n';
-                      
-                      // 토글 내부의 자식 블록들 처리
                       if (block.has_children) {
                         const childContent = await convertBlocks(block.id, depth);
                         content += childContent;
                       }
-                      
                       content += indent + '</details>\n\n';
                     }
                     break;
@@ -194,13 +186,97 @@ jobs:
 
                   case 'callout':
                     if (block.callout?.rich_text?.length > 0) {
-                      const icon = block.callout.icon?.emoji || '📝';
-                      content += indent + icon + ' **' + convertRichText(block.callout.rich_text) + '**\n\n';
+                      const icon = block.callout.icon?.emoji || '💡';
+                      content += indent + '{{< callout type="info" >}}\n';
+                      content += indent + icon + ' ' + convertRichText(block.callout.rich_text) + '\n';
+                      content += indent + '{{< /callout >}}\n\n';
                     }
                     break;
 
                   case 'divider':
                     content += indent + '---\n\n';
+                    break;
+
+                  case 'image':
+                    if (block.image?.file?.url) {
+                      const caption = block.image.caption?.length > 0 ? 
+                        convertRichText(block.image.caption) : 'Image';
+                      content += indent + '![' + caption + '](' + block.image.file.url + ')\n\n';
+                    } else if (block.image?.external?.url) {
+                      const caption = block.image.caption?.length > 0 ? 
+                        convertRichText(block.image.caption) : 'Image';
+                      content += indent + '![' + caption + '](' + block.image.external.url + ')\n\n';
+                    }
+                    break;
+
+                  case 'video':
+                    if (block.video?.external?.url) {
+                      const url = block.video.external.url;
+                      if (url.includes('youtube.com') || url.includes('youtu.be')) {
+                        // 유튜브 임베드 처리
+                        let videoId = '';
+                        if (url.includes('youtu.be/')) {
+                          videoId = url.split('youtu.be/')[1].split('?')[0];
+                        } else if (url.includes('youtube.com')) {
+                          const urlParams = new URLSearchParams(url.split('?')[1]);
+                          videoId = urlParams.get('v');
+                        }
+                        if (videoId) {
+                          content += indent + '{{< youtube ' + videoId + ' >}}\n\n';
+                        } else {
+                          content += indent + '[동영상 보기](' + url + ')\n\n';
+                        }
+                      } else {
+                        content += indent + '[동영상 보기](' + url + ')\n\n';
+                      }
+                    }
+                    break;
+
+                  case 'bookmark':
+                  case 'link_preview':
+                    const bookmarkUrl = block.bookmark?.url || block.link_preview?.url;
+                    if (bookmarkUrl) {
+                      const title = block.bookmark?.caption?.length > 0 ? 
+                        convertRichText(block.bookmark.caption) : bookmarkUrl;
+                      content += indent + '🔗 [' + title + '](' + bookmarkUrl + ')\n\n';
+                    }
+                    break;
+
+                  case 'embed':
+                    if (block.embed?.url) {
+                      content += indent + '[임베드 콘텐츠](' + block.embed.url + ')\n\n';
+                    }
+                    break;
+
+                  case 'file':
+                    if (block.file?.file?.url) {
+                      const fileName = block.file.name || 'File';
+                      content += indent + '📎 [' + fileName + '](' + block.file.file.url + ')\n\n';
+                    }
+                    break;
+
+                  case 'pdf':
+                    if (block.pdf?.file?.url) {
+                      content += indent + '📄 [PDF 문서](' + block.pdf.file.url + ')\n\n';
+                    }
+                    break;
+
+                  case 'table':
+                    if (block.has_children) {
+                      // 간단한 테이블 처리
+                      content += indent + '\n| | |\n|---|---|\n';
+                      const tableContent = await convertBlocks(block.id, depth);
+                      content += tableContent + '\n';
+                    }
+                    break;
+
+                  case 'table_row':
+                    if (block.table_row?.cells?.length > 0) {
+                      const cells = block.table_row.cells.map(cell => 
+                        convertRichText(cell) || ' '
+                      );
+                      content += indent + '| ' + cells.join(' | ') + ' |\n';
+                    }
                     break;
 
                   case 'to_do':
@@ -209,9 +285,27 @@ jobs:
                       content += indent + '- ' + checked + ' ' + convertRichText(block.to_do.rich_text) + '\n';
                     }
                     break;
+
+                  case 'column_list':
+                    if (block.has_children) {
+                      content += indent + '<div class="columns">\n';
+                      const columnContent = await convertBlocks(block.id, depth);
+                      content += columnContent;
+                      content += indent + '</div>\n\n';
+                    }
+                    break;
+
+                  case 'column':
+                    if (block.has_children) {
+                      content += indent + '<div class="column">\n';
+                      const columnContent = await convertBlocks(block.id, depth);
+                      content += columnContent;
+                      content += indent + '</div>\n';
+                    }
+                    break;
                 }
 
-                // API 호출 제한 방지를 위한 지연
+                // API 호출 제한 방지
                 await new Promise(resolve => setTimeout(resolve, 50));
               }
 
@@ -245,7 +339,7 @@ jobs:
                     }
                   ],
                   start_cursor: nextCursor,
-                  page_size: 100  // 최대 100개씩
+                  page_size: 100
                 });
 
                 allPages = allPages.concat(response.results);
@@ -254,7 +348,6 @@ jobs:
 
                 console.log('📄 Retrieved ' + response.results.length + ' pages (Total: ' + allPages.length + ')');
 
-                // API 제한 방지
                 if (hasMore) {
                   await new Promise(resolve => setTimeout(resolve, 100));
                 }
@@ -339,7 +432,6 @@ jobs:
                   console.log('✅ Created: "' + title + '" → ' + slug);
                   successCount++;
 
-                  // API 제한 방지
                   await new Promise(resolve => setTimeout(resolve, 100));
 
                 } catch (err) {
@@ -376,19 +468,29 @@ jobs:
           echo "=== 포스트 목록 ==="
           find content/posts -name "index.md" -type f | head -5
           
-          echo "=== YAML 검증 ==="
-          for file in $(find content/posts -name "index.md" -type f | head -3); do
-            echo "🔍 검사 중: $file"
-            # YAML front matter 추출 및 검증
-            sed -n '1,/^---$/p' "$file" | head -15
-            echo "---"
-          done
+          echo "=== 첫 번째 포스트 내용 미리보기 ==="
+          if [ -f "$(find content/posts -name "index.md" -type f | head -1)" ]; then
+            echo "--- 첫 번째 포스트 ---"
+            head -50 "$(find content/posts -name "index.md" -type f | head -1)"
+            echo "--- 내용 끝 ---"
+          fi
 
       - name: Ensure Default Content
         run: |
+          # 메인 페이지 (_index.md) - 테마 원본처럼
+          mkdir -p content
+          cat > content/_index.md << 'EOF'
+          ---
+          title: "삽질 저장소"
+          ---
+          
+          개발자 Cybecho의 삽질과 학습을 기록하는 공간입니다.
+          
+          실패에서 배우고, 성공을 기록하며, 지식을 공유합니다.
+          EOF
+          
           # About 페이지
           if [ ! -f content/about.md ]; then
-            mkdir -p content
             cat > content/about.md << 'EOF'
           ---
           title: "소개"
@@ -428,31 +530,6 @@ jobs:
           
           ---
           *Notion API를 통해 Published 상태의 글들이 자동 동기화됩니다* ✨
-          EOF
-          fi
-          
-          # 메인 페이지 (_index.md)
-          if [ ! -f content/_index.md ]; then
-            mkdir -p content
-            cat > content/_index.md << 'EOF'
-          ---
-          title: "삽질 저장소"
-          ---
-          
-          ## 👋 안녕하세요!
-          
-          개발자 **Cybecho**의 삽질과 학습을 기록하는 공간입니다.
-          
-          실패에서 배우고, 성공을 기록하며, 지식을 공유합니다.
-          
-          ### 🎯 주요 주제들
-          
-          - **인프라**: AWS, Kubernetes, Docker, ProxMox
-          - **개발환경**: Linux, macOS, 개발도구
-          - **학습**: 새로운 기술과 개념 탐구
-          - **문제해결**: 실무 문제와 해결 과정
-          
-          ---
           EOF
           fi
 
