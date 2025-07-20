@@ -41,10 +41,10 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # 🚀 스마트 캐싱이 적용된 Notion 동기화 스크립트
-      - name: Smart Cached Notion Sync Script
+      # 🚀 스마트 캐싱이 적용된 Notion 동기화 스크립트 + AI Summary BlockQuote
+      - name: Smart Cached Notion Sync Script with AI Summary
         run: |
-          echo "🚀 Creating smart cached Notion sync script..."
+          echo "🚀 Creating smart cached Notion sync script with AI Summary BlockQuote..."
           cat > sync_notion.js << 'EOF'
           const { Client } = require('@notionhq/client');
           const fs = require('fs');
@@ -432,7 +432,7 @@ jobs:
                     content += 'categories: [' + categories.join(', ') + ']\n';
                   }
 
-                  // AI 요약 50자 제한 처리
+                  // AI 요약 50자 제한 처리 (메타데이터용)
                   if (aiSummary) {
                     const truncatedSummary = aiSummary.length > 50 ? 
                       aiSummary.substring(0, 50) + '...' : aiSummary;
@@ -442,6 +442,18 @@ jobs:
                   content += 'notion_id: ' + createSafeYamlString(page.id) + '\n';
                   content += 'notion_url: ' + createSafeYamlString(page.url) + '\n';
                   content += '---\n\n';
+
+                  // AI 요약을 BlockQuote로 추가 (원본 내용 전체)
+                  if (aiSummary) {
+                    content += '> **Summary**\n';
+                    content += '> \n';
+                    // AI 요약을 줄바꿈 단위로 나누어 각 줄 앞에 '> ' 추가
+                    const summaryLines = aiSummary.split('\n');
+                    summaryLines.forEach(line => {
+                      content += '> ' + line + '\n';
+                    });
+                    content += '\n';
+                  }
 
                   if (blockContent.trim()) {
                     content += blockContent;
@@ -571,6 +583,7 @@ jobs:
           - **Notion 연동**: 편리한 글 작성과 관리
           - **자동 배포**: GitHub Actions를 통한 자동화  
           - **스마트 캐싱**: 변경된 글만 업데이트하여 빠른 빌드
+          - **AI 요약**: 모든 글 상단에 AI 요약 자동 표시
           - **반응형**: 모든 디바이스에서 완벽한 경험
           
           ## 📊 Notion 연동 상태
@@ -594,7 +607,8 @@ jobs:
           
           ---
           *Notion API를 통해 Published 상태의 글들이 자동 동기화됩니다* ✨  
-          *스마트 캐싱으로 변경된 글만 빠르게 업데이트됩니다* ⚡
+          *스마트 캐싱으로 변경된 글만 빠르게 업데이트됩니다* ⚡  
+          *AI 요약이 모든 글 상단에 자동으로 표시됩니다* 🤖
           EOF
           fi
 
