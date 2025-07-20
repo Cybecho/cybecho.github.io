@@ -41,7 +41,7 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # 🔧 개선된 Notion 동기화 스크립트
+      # 🔧 수정된 Notion 동기화 스크립트 (YAML 안전성 강화)
       - name: Enhanced Notion Sync Script
         run: |
           echo "🚀 Creating enhanced Notion sync script..."
@@ -54,6 +54,21 @@ jobs:
             auth: process.env.NOTION_SECRET,
           });
           
+          // YAML 안전 문자열 생성 함수 (핵심 수정!)
+          function createSafeYamlString(str) {
+            if (!str) return '""';
+            
+            // 문자열에서 따옴표와 특수문자 이스케이프
+            const escaped = str
+              .replace(/\\/g, '\\\\')  // 백슬래시 이스케이프
+              .replace(/"/g, '\\"')    // 따옴표 이스케이프
+              .replace(/\n/g, '\\n')   // 줄바꿈 이스케이프
+              .replace(/\r/g, '\\r')   // 캐리지 리턴 이스케이프
+              .replace(/\t/g, '\\t');  // 탭 이스케이프
+              
+            return `"${escaped}"`;
+          }
+          
           // 날짜 포맷팅 함수
           function formatDate(dateString) {
             if (!dateString) return new Date().toISOString();
@@ -61,14 +76,15 @@ jobs:
             return date.toISOString();
           }
           
-          // 슬러그 생성 함수
+          // 안전한 슬러그 생성 함수
           function createSlug(title) {
             return title
               .toLowerCase()
               .replace(/[^a-z0-9가-힣\s]/g, '') // 한글, 영문, 숫자, 공백만 허용
               .replace(/\s+/g, '-') // 공백을 대시로
               .replace(/-+/g, '-') // 연속 대시를 하나로
-              .replace(/^-|-$/g, ''); // 시작/끝 대시 제거
+              .replace(/^-|-$/g, '') // 시작/끝 대시 제거
+              .substring(0, 100); // 길이 제한
           }
           
           // 리치 텍스트 변환 함수
@@ -76,7 +92,7 @@ jobs:
             if (!richTextArray || !Array.isArray(richTextArray)) return '';
             
             return richTextArray.map(textObj => {
-              let text = textObj.plain_text;
+              let text = textObj.plain_text || '';
               
               if (textObj.annotations?.bold) text = `**${text}**`;
               if (textObj.annotations?.italic) text = `*${text}*`;
@@ -220,38 +236,31 @@ jobs:
                   // 블록 콘텐츠 가져오기
                   const blockContent = await convertBlocks(page.id);
                   
-                  // Hugo front matter 생성
-                  const frontMatter = {
-                    title: title,
-                    date: formatDate(dateValue),
-                    draft: false,
-                    tags: [...tags, ...themes],
-                    categories: themes,
-                    description: aiSummary || title.substring(0, 100),
-                    notion_id: page.id,
-                    notion_url: page.url
-                  };
-                  
-                  // 마크다운 콘텐츠 생성
+                  // 🔧 YAML 안전성을 위한 안전한 front matter 생성
                   let content = '---\n';
-                  content += `title: "${frontMatter.title}"\n`;
-                  content += `date: ${frontMatter.date}\n`;
-                  content += `draft: ${frontMatter.draft}\n`;
+                  content += `title: ${createSafeYamlString(title)}\n`;
+                  content += `date: ${formatDate(dateValue)}\n`;
+                  content += `draft: false\n`;
                   
-                  if (frontMatter.tags.length > 0) {
-                    content += `tags: [${frontMatter.tags.map(tag => `"${tag}"`).join(', ')}]\n`;
+                  // 태그 처리 (안전한 방식)
+                  if (tags.length > 0 || themes.length > 0) {
+                    const allTags = [...tags, ...themes].map(tag => createSafeYamlString(tag));
+                    content += `tags: [${allTags.join(', ')}]\n`;
                   }
                   
-                  if (frontMatter.categories.length > 0) {
-                    content += `categories: [${frontMatter.categories.map(cat => `"${cat}"`).join(', ')}]\n`;
+                  // 카테고리 처리
+                  if (themes.length > 0) {
+                    const categories = themes.map(theme => createSafeYamlString(theme));
+                    content += `categories: [${categories.join(', ')}]\n`;
                   }
                   
-                  if (frontMatter.description) {
-                    content += `description: "${frontMatter.description}"\n`;
+                  // 설명 추가
+                  if (aiSummary) {
+                    content += `description: ${createSafeYamlString(aiSummary)}\n`;
                   }
                   
-                  content += `notion_id: "${frontMatter.notion_id}"\n`;
-                  content += `notion_url: "${frontMatter.notion_url}"\n`;
+                  content += `notion_id: ${createSafeYamlString(page.id)}\n`;
+                  content += `notion_url: ${createSafeYamlString(page.url)}\n`;
                   content += '---\n\n';
                   
                   // 콘텐츠 추가
@@ -312,10 +321,11 @@ jobs:
           echo "=== 포스트 목록 ==="
           find content/posts -name "index.md" -type f | head -5
           
-          echo "=== 샘플 콘텐츠 미리보기 ==="
-          for file in $(find content/posts -name "index.md" -type f | head -2); do
-            echo "📄 파일: $file"
-            head -15 "$file"
+          echo "=== YAML 검증 ==="
+          for file in $(find content/posts -name "index.md" -type f | head -3); do
+            echo "🔍 검사 중: $file"
+            # YAML front matter 추출 및 검증
+            sed -n '1,/^---$/p' "$file" | head -15
             echo "---"
           done
 
