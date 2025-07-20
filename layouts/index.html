@@ -1,48 +1,59 @@
 {{ define "main" }}
-<div class="profile">
-  {{ with .Site.Params.author }}
-    {{ if .avatar }}
-      <img class="avatar" src="{{ .avatar | absURL }}" alt="{{ .name }}">
-    {{ end }}
-    <h1 class="author">{{ .name }}</h1>
-  {{ end }}
-  <h2 class="bio">{{ .Site.Params.subtitle | default .Site.Params.description }}</h2>
-</div>
-
-{{ if .Content }}
-  <div class="intro">
-    {{ .Content }}
-  </div>
-{{ end }}
-
-<div class="posts">
-  {{ $pages := where .Site.RegularPages "Section" "posts" }}
-  {{ range $index, $post := first 10 $pages }}
-    {{ if gt $index 0 }}
-      <hr class="post-divider">
-    {{ end }}
-    <div class="post">
-      <div class="post-header">
-        <h3 class="title">
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </h3>
-        <div class="date">{{ .Date.Format "Jan 2, 2006" }}</div>
-      </div>
-      {{ if .Description }}
-        <div class="description">{{ .Description }}</div>
+<div class="container">
+  <div class="profile">
+    {{ with .Site.Params.author }}
+      {{ if .avatar }}
+        <img class="avatar" src="{{ .avatar | absURL }}" alt="{{ .name }}">
       {{ end }}
+      <h1 class="author">{{ .name }}</h1>
+    {{ end }}
+    <h2 class="bio">{{ .Site.Params.subtitle | default .Site.Params.description }}</h2>
+  </div>
+
+  {{ if .Content }}
+    <div class="intro">
+      {{ .Content }}
     </div>
   {{ end }}
-  
-  {{ if gt (len (where .Site.RegularPages "Section" "posts")) 10 }}
-    <hr class="post-divider">
-    <div class="read-more">
-      <a href="/posts/">더 많은 글 보기 →</a>
-    </div>
-  {{ end }}
+
+  <div class="posts">
+    {{ $pages := where .Site.RegularPages "Section" "posts" }}
+    {{ range $index, $post := first 10 $pages }}
+      {{ if gt $index 0 }}
+        <hr class="post-divider">
+      {{ end }}
+      <div class="post">
+        <div class="post-header">
+          <h3 class="title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+          <div class="date">{{ .Date.Format "Jan 2, 2006" }}</div>
+        </div>
+        {{ if .Description }}
+          <div class="description">{{ .Description }}</div>
+        {{ end }}
+      </div>
+    {{ end }}
+    
+    {{ if gt (len (where .Site.RegularPages "Section" "posts")) 10 }}
+      <hr class="post-divider">
+      <div class="read-more">
+        <a href="/posts/">더 많은 글 보기 →</a>
+      </div>
+    {{ end }}
+  </div>
 </div>
 
 <style>
+/* 컨테이너 - 반응형 여백 */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .profile {
   text-align: center;
   margin-bottom: 2rem;
@@ -66,16 +77,18 @@
   color: var(--text-muted);
   margin: 0 0 2rem 0;
   font-weight: 400;
+  line-height: 1.4;
 }
 
 .intro {
   margin-bottom: 2rem;
   font-size: 1rem;
   color: var(--text-color);
+  line-height: 1.6;
 }
 
 .posts {
-  max-width: 100%;
+  width: 100%;
 }
 
 .post {
@@ -101,6 +114,7 @@
   text-decoration: none;
   color: var(--text-color);
   line-height: 1.4;
+  display: block;
 }
 
 .title a:hover {
@@ -151,8 +165,19 @@
   }
 }
 
-/* 모바일 최적화 */
+/* 반응형 여백 조정 */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 700px;
+    padding: 2rem 1.2rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+  
   .profile {
     margin-bottom: 1.5rem;
   }
@@ -190,6 +215,32 @@
   
   .post {
     padding: 1rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0.8rem;
+  }
+  
+  .author {
+    font-size: 1.4rem;
+  }
+  
+  .bio {
+    font-size: 0.95rem;
+  }
+  
+  .title a {
+    font-size: 1.1rem;
+  }
+}
+
+/* 큰 화면에서의 여백 */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 900px;
+    padding: 2.5rem 2rem;
   }
 }
 </style>
