@@ -1,0 +1,60 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.author.name | default .Site.Title }}. {{ i18n "footer_rights" | default "All rights reserved." }}</p>
+      </div>
+      <div class="col-sm-6">
+        <div class="footer-links">
+          {{ with .Site.Params.social.github }}
+            <a href="https://github.com/{{ . }}" target="_blank" rel="noopener">
+              <i class="bi bi-github"></i>
+            </a>
+          {{ end }}
+          {{ with .Site.Params.social.twitter }}
+            <a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener">
+              <i class="bi bi-twitter"></i>
+            </a>
+          {{ end }}
+          {{ with .Site.Params.social.linkedin }}
+            <a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="noopener">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          {{ end }}
+        </div>
+        {{ if and .Site.Params.showCommitSha .GitInfo }}
+          <div class="commit-info">
+            <small>
+              {{ if .GitInfo.Hash }}
+                Build: <code>{{ substr .GitInfo.Hash 0 7 }}</code>
+              {{ end }}
+            </small>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+.site-footer {
+  margin-top: auto;
+  padding: 2rem 0;
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-links a {
+  margin-left: 1rem;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+.commit-info {
+  margin-top: 0.5rem;
+}
+</style>
