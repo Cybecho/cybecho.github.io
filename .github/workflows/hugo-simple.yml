@@ -3,8 +3,6 @@ name: Simple Hugo Deploy
 on:
   push:
     branches: ["main"]
-  schedule:
-    - cron: '0 2 * * *'
   workflow_dispatch:
 
 permissions:
@@ -30,13 +28,38 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
+      # 🔍 디버깅: 파일 구조 확인
+      - name: Debug - Check files
+        run: |
+          echo "=== Current directory structure ==="
+          ls -la
+          echo "=== Hugo config file ==="
+          cat hugo.toml
+          echo "=== Content directory ==="
+          ls -la content/
+          echo "=== Themes directory ==="
+          ls -la themes/
+
       # Node.js 설치
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      # Notion JAM CLI 직접 사용
+      # Hugo 설치
+      - name: Setup Hugo
+        uses: actions/hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      # 🔍 Hugo 설정 검증
+      - name: Validate Hugo Config
+        run: |
+          hugo config
+          hugo version
+
+      # Notion JAM CLI 설치 및 실행
       - name: Install notion-jam
         run: npm install -g notion-jam
 
@@ -47,22 +70,22 @@ jobs:
             --root-page "${{ secrets.DATABASE_ID }}" \
             --output-dir "content/posts" \
             --download-images \
-            --image-dir "static/images" \
-            --slug-format "title"
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_SECRET }}
+            --image-dir "static/images"
+        continue-on-error: true
 
-      # Hugo 설치 및 빌드
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
+      # 🔍 콘텐츠 확인
+      - name: Debug - Check content after sync
+        run: |
+          echo "=== Content after sync ==="
+          find content -name "*.md" | head -10
+          echo "=== Sample content file ==="
+          find content -name "*.md" -exec head -20 {} \; | head -50
 
+      # Hugo 빌드
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
-        run: hugo --minify
+        run: hugo --minify --verbose
 
       # GitHub Pages 배포
       - name: Upload artifact

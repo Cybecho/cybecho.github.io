@@ -8,6 +8,12 @@ paginate = 10
 enableEmoji = true
 enableGitInfo = true
 
+# Build 설정 (Draft 필터링)
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# 모든 파라미터를 하나의 [params] 섹션으로 통합
 [params]
   # 사이트 정보
   author = "Cybecho"
@@ -25,7 +31,10 @@ enableGitInfo = true
   showRelatedPosts = true
   showCommitSha = true
   
-  # 소셜 미디어
+  # Draft 상태 글 숨기기
+  draft = false
+
+  # 소셜 미디어 (서브테이블로 정의)
   [params.social]
     github = "Cybecho"
 
@@ -66,18 +75,14 @@ enableGitInfo = true
   page = ["HTML"]
   section = ["HTML", "RSS"]
 
-# 이미지 처리 (notion-jam과 연동)
+# 이미지 처리
 [imaging]
   resampleFilter = "CatmullRom"
   quality = 95
   anchor = "smart"
 
-[params]
-  # Draft 상태 글 숨기기
-  draft = false
-
-  # Build 설정
-  buildDrafts = false
-  buildFuture = false
-  buildExpired = false
-
+# 다국어 설정 (한국어 기본)
+[languages]
+  [languages.ko]
+    languageName = "한국어"
+    weight = 1
