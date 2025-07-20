@@ -41,61 +41,139 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # 🔧 Notion 동기화 - 다른 도구 사용
-      - name: Sync with Notion (Alternative)
+      # 🔧 개선된 Notion 동기화 스크립트
+      - name: Enhanced Notion Sync Script
         run: |
-          echo "🔄 Trying alternative Notion sync methods..."
-          
-          # 방법 1: notion-blog-kit 시도
-          npm install -g notion-blog-kit || echo "notion-blog-kit install failed"
-          
-          # 방법 2: 수동 확인을 위한 curl 테스트
-          echo "🧪 Testing Notion API connection..."
-          curl -X POST https://api.notion.com/v1/databases/${{ secrets.DATABASE_ID }}/query \
-            -H 'Authorization: Bearer ${{ secrets.NOTION_SECRET }}' \
-            -H 'Notion-Version: 2022-06-28' \
-            -H 'Content-Type: application/json' \
-            -d '{"filter":{"property":"Status","select":{"equals":"Published"}},"page_size":5}' \
-            > notion_test.json || echo "API call failed"
-          
-          if [ -f notion_test.json ]; then
-            echo "📊 API Response sample:"
-            head -20 notion_test.json
-          fi
-
-      # 🎯 전문 Notion → Hugo 도구 사용
-      - name: Install and Use notion-hugo
-        run: |
-          echo "🚀 Using notion-hugo tool..."
-          
-          # Python 기반 도구 시도
-          pip install notion-client || echo "notion-client install failed"
-          
-          # Go 기반 도구 설치 시도
-          wget -O notion2hugo https://github.com/younho9/notion2hugo/releases/latest/download/notion2hugo-linux-amd64 || echo "notion2hugo download failed"
-          chmod +x notion2hugo || echo "chmod failed"
-          
-          # 실행 시도
-          ./notion2hugo \
-            --token="${{ secrets.NOTION_SECRET }}" \
-            --database-id="${{ secrets.DATABASE_ID }}" \
-            --output-dir="content/posts" \
-            --filter-prop="Status" \
-            --filter-value="Published" || echo "notion2hugo execution failed"
-
-      # 🔧 대안: JavaScript로 직접 구현
-      - name: Custom Notion Sync Script
-        run: |
-          echo "🛠️ Creating custom sync script..."
+          echo "🚀 Creating enhanced Notion sync script..."
           cat > sync_notion.js << 'EOF'
           const { Client } = require('@notionhq/client');
           const fs = require('fs');
           const path = require('path');
-
+          
           const notion = new Client({
             auth: process.env.NOTION_SECRET,
           });
-
+          
+          // 날짜 포맷팅 함수
+          function formatDate(dateString) {
+            if (!dateString) return new Date().toISOString();
+            const date = new Date(dateString);
+            return date.toISOString();
+          }
+          
+          // 슬러그 생성 함수
+          function createSlug(title) {
+            return title
+              .toLowerCase()
+              .replace(/[^a-z0-9가-힣\s]/g, '') // 한글, 영문, 숫자, 공백만 허용
+              .replace(/\s+/g, '-') // 공백을 대시로
+              .replace(/-+/g, '-') // 연속 대시를 하나로
+              .replace(/^-|-$/g, ''); // 시작/끝 대시 제거
+          }
+          
+          // 리치 텍스트 변환 함수
+          function convertRichText(richTextArray) {
+            if (!richTextArray || !Array.isArray(richTextArray)) return '';
+            
+            return richTextArray.map(textObj => {
+              let text = textObj.plain_text;
+              
+              if (textObj.annotations?.bold) text = `**${text}**`;
+              if (textObj.annotations?.italic) text = `*${text}*`;
+              if (textObj.annotations?.code) text = `\`${text}\``;
+              if (textObj.href) text = `[${text}](${textObj.href})`;
+              
+              return text;
+            }).join('');
+          }
+          
+          // 블록 변환 함수
+          async function convertBlocks(pageId) {
+            try {
+              const blocks = await notion.blocks.children.list({
+                block_id: pageId,
+                page_size: 100
+              });
+              
+              let content = '';
+              
+              for (const block of blocks.results) {
+                switch (block.type) {
+                  case 'paragraph':
+                    if (block.paragraph?.rich_text?.length > 0) {
+                      content += convertRichText(block.paragraph.rich_text) + '\n\n';
+                    }
+                    break;
+                    
+                  case 'heading_1':
+                    if (block.heading_1?.rich_text?.length > 0) {
+                      content += '# ' + convertRichText(block.heading_1.rich_text) + '\n\n';
+                    }
+                    break;
+                    
+                  case 'heading_2':
+                    if (block.heading_2?.rich_text?.length > 0) {
+                      content += '## ' + convertRichText(block.heading_2.rich_text) + '\n\n';
+                    }
+                    break;
+                    
+                  case 'heading_3':
+                    if (block.heading_3?.rich_text?.length > 0) {
+                      content += '### ' + convertRichText(block.heading_3.rich_text) + '\n\n';
+                    }
+                    break;
+                    
+                  case 'bulleted_list_item':
+                    if (block.bulleted_list_item?.rich_text?.length > 0) {
+                      content += '- ' + convertRichText(block.bulleted_list_item.rich_text) + '\n';
+                    }
+                    break;
+                    
+                  case 'numbered_list_item':
+                    if (block.numbered_list_item?.rich_text?.length > 0) {
+                      content += '1. ' + convertRichText(block.numbered_list_item.rich_text) + '\n';
+                    }
+                    break;
+                    
+                  case 'code':
+                    if (block.code?.rich_text?.length > 0) {
+                      const language = block.code.language || '';
+                      const codeText = convertRichText(block.code.rich_text);
+                      content += `\`\`\`${language}\n${codeText}\n\`\`\`\n\n`;
+                    }
+                    break;
+                    
+                  case 'quote':
+                    if (block.quote?.rich_text?.length > 0) {
+                      content += '> ' + convertRichText(block.quote.rich_text) + '\n\n';
+                    }
+                    break;
+                    
+                  case 'callout':
+                    if (block.callout?.rich_text?.length > 0) {
+                      content += '📝 **' + convertRichText(block.callout.rich_text) + '**\n\n';
+                    }
+                    break;
+                    
+                  case 'divider':
+                    content += '---\n\n';
+                    break;
+                    
+                  case 'image':
+                    if (block.image?.file?.url) {
+                      content += `![Image](${block.image.file.url})\n\n`;
+                    }
+                    break;
+                }
+              }
+              
+              return content;
+            } catch (error) {
+              console.error(`❌ Error converting blocks: ${error.message}`);
+              return '';
+            }
+          }
+          
           async function syncNotionDatabase() {
             try {
               console.log('🔄 Connecting to Notion...');
@@ -108,87 +186,139 @@ jobs:
                     equals: 'Published'
                   }
                 },
-                page_size: 10
+                sorts: [
+                  {
+                    property: 'Date',
+                    direction: 'descending'
+                  }
+                ],
+                page_size: 50
               });
-
+          
               console.log(`📊 Found ${response.results.length} published posts`);
-
+          
               if (!fs.existsSync('content/posts')) {
                 fs.mkdirSync('content/posts', { recursive: true });
               }
-
+          
+              let successCount = 0;
+              let errorCount = 0;
+          
               for (const page of response.results) {
                 try {
-                  const title = page.properties.Title?.title?.[0]?.plain_text || 'Untitled';
-                  const slug = title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+                  // 🔧 한글 속성명 사용
+                  const title = page.properties['제목']?.title?.[0]?.plain_text || 'Untitled';
+                  const dateValue = page.properties['Date']?.date?.start || page.created_time;
+                  const tags = page.properties['Tags']?.multi_select?.map(tag => tag.name) || [];
+                  const themes = page.properties['Thems']?.multi_select?.map(theme => theme.name) || [];
+                  const aiSummary = page.properties['AI 요약']?.rich_text?.[0]?.plain_text || '';
                   
-                  // 페이지 콘텐츠 가져오기
-                  const blocks = await notion.blocks.children.list({
-                    block_id: page.id,
-                  });
-
-                  let content = `---\ntitle: "${title}"\ndate: ${new Date().toISOString()}\ndraft: false\n---\n\n# ${title}\n\n`;
+                  const slug = createSlug(title);
                   
-                  // 간단한 블록 변환
-                  for (const block of blocks.results) {
-                    if (block.type === 'paragraph' && block.paragraph?.rich_text) {
-                      const text = block.paragraph.rich_text.map(t => t.plain_text).join('');
-                      content += text + '\n\n';
-                    } else if (block.type === 'heading_1' && block.heading_1?.rich_text) {
-                      const text = block.heading_1.rich_text.map(t => t.plain_text).join('');
-                      content += `# ${text}\n\n`;
-                    } else if (block.type === 'heading_2' && block.heading_2?.rich_text) {
-                      const text = block.heading_2.rich_text.map(t => t.plain_text).join('');
-                      content += `## ${text}\n\n`;
-                    }
+                  console.log(`📝 Processing: "${title}"`);
+                  
+                  // 블록 콘텐츠 가져오기
+                  const blockContent = await convertBlocks(page.id);
+                  
+                  // Hugo front matter 생성
+                  const frontMatter = {
+                    title: title,
+                    date: formatDate(dateValue),
+                    draft: false,
+                    tags: [...tags, ...themes],
+                    categories: themes,
+                    description: aiSummary || title.substring(0, 100),
+                    notion_id: page.id,
+                    notion_url: page.url
+                  };
+                  
+                  // 마크다운 콘텐츠 생성
+                  let content = '---\n';
+                  content += `title: "${frontMatter.title}"\n`;
+                  content += `date: ${frontMatter.date}\n`;
+                  content += `draft: ${frontMatter.draft}\n`;
+                  
+                  if (frontMatter.tags.length > 0) {
+                    content += `tags: [${frontMatter.tags.map(tag => `"${tag}"`).join(', ')}]\n`;
                   }
-
+                  
+                  if (frontMatter.categories.length > 0) {
+                    content += `categories: [${frontMatter.categories.map(cat => `"${cat}"`).join(', ')}]\n`;
+                  }
+                  
+                  if (frontMatter.description) {
+                    content += `description: "${frontMatter.description}"\n`;
+                  }
+                  
+                  content += `notion_id: "${frontMatter.notion_id}"\n`;
+                  content += `notion_url: "${frontMatter.notion_url}"\n`;
+                  content += '---\n\n';
+                  
+                  // 콘텐츠 추가
+                  if (blockContent.trim()) {
+                    content += blockContent;
+                  } else {
+                    content += `# ${title}\n\n*이 글은 Notion에서 가져왔습니다.*\n\n`;
+                    content += `[원본 보기](${page.url})\n`;
+                  }
+                  
+                  // 파일 저장
                   const postDir = `content/posts/${slug}`;
                   if (!fs.existsSync(postDir)) {
                     fs.mkdirSync(postDir, { recursive: true });
                   }
                   
-                  fs.writeFileSync(`${postDir}/index.md`, content);
-                  console.log(`✅ Created post: ${title}`);
+                  fs.writeFileSync(`${postDir}/index.md`, content, 'utf8');
+                  
+                  console.log(`✅ Created: "${title}" → ${slug}`);
+                  successCount++;
+                  
+                  // API 호출 제한을 위한 지연
+                  await new Promise(resolve => setTimeout(resolve, 100));
+                  
                 } catch (err) {
                   console.error(`❌ Error processing page: ${err.message}`);
+                  errorCount++;
                 }
               }
+              
+              console.log(`\n📊 동기화 완료:`);
+              console.log(`✅ 성공: ${successCount}개`);
+              console.log(`❌ 실패: ${errorCount}개`);
+              
             } catch (error) {
               console.error('❌ Notion API Error:', error.message);
-              process.exit(0); // 실패해도 계속 진행
+              process.exit(0);
             }
           }
-
+          
           syncNotionDatabase();
           EOF
 
-          # 필요한 패키지 설치 및 실행
+          # Node.js 프로젝트 초기화 및 패키지 설치
           npm init -y
           npm install @notionhq/client
-          
+
           # 스크립트 실행
           NOTION_SECRET="${{ secrets.NOTION_SECRET }}" DATABASE_ID="${{ secrets.DATABASE_ID }}" node sync_notion.js
 
-      # 동기화 결과 확인
       - name: Check Sync Results
         run: |
-          echo "📊 Sync Results:"
-          echo "=== Posts directory ==="
+          echo "📊 동기화 결과:"
+          echo "=== 생성된 포스트 ==="
           find content/posts -name "*.md" -type f | wc -l
-          echo "total posts"
+          echo "개의 포스트가 생성되었습니다."
           
-          echo "=== Sample posts ==="
-          find content/posts -name "*.md" -type f | head -3
+          echo "=== 포스트 목록 ==="
+          find content/posts -name "index.md" -type f | head -5
           
-          echo "=== Content preview ==="
-          for file in $(find content/posts -name "*.md" -type f | head -2); do
-            echo "📄 File: $file"
-            head -10 "$file"
+          echo "=== 샘플 콘텐츠 미리보기 ==="
+          for file in $(find content/posts -name "index.md" -type f | head -2); do
+            echo "📄 파일: $file"
+            head -15 "$file"
             echo "---"
           done
 
-      # 기본 콘텐츠 생성
       - name: Ensure Default Content
         run: |
           # About 페이지
@@ -200,56 +330,24 @@ jobs:
           date: 2024-01-01T00:00:00+09:00
           draft: false
           ---
-
+          
           # 안녕하세요, Cybecho입니다! 👋
-
+          
           개발자로서의 삽질과 성장을 기록하는 공간입니다.
-
+          
           ## Notion 연동 상태
-
+          
           - **데이터베이스**: [삽질 저장소](https://notion.so/${{ secrets.DATABASE_ID }})  
-          - **자동 동기화**: 매일 새벽 2시
+          - **자동 동기화**: 매일 새벽 2시 (KST)
           - **수동 동기화**: GitHub Actions에서 "Run workflow"
-
+          
           ## 연락처
           - **GitHub**: [@Cybecho](https://github.com/Cybecho)
-
+          
           ---
           *Notion API를 통해 Published 상태의 글들이 자동 동기화됩니다* ✨
           EOF
           fi
-
-          # 동기화 상태 포스트
-          mkdir -p content/posts/sync-status
-          cat > content/posts/sync-status/index.md << 'EOF'
-          ---
-          title: "🔄 Notion 동기화 상태"
-          date: 2024-01-20T10:00:00+09:00
-          draft: false
-          tags: ["Notion", "동기화", "상태"]
-          categories: ["기술"]
-          ---
-
-          # Notion 동기화 상태 리포트
-
-          **마지막 동기화**: $(date '+%Y-%m-%d %H:%M:%S')
-
-          ## 설정 정보
-          - **Database ID**: `${{ secrets.DATABASE_ID }}`
-          - **필터**: Status = "Published"
-          - **동기화 방식**: 직접 Notion API 호출
-
-          ## 동기화된 글 수
-          $(find content/posts -name "*.md" -type f | wc -l) 개의 포스트
-
-          ## 문제 해결
-          만약 Notion 글이 동기화되지 않는다면:
-          1. Notion에서 Status를 "Published"로 설정했는지 확인
-          2. Integration이 데이터베이스에 연결되어 있는지 확인
-          3. GitHub Actions 로그에서 에러 메시지 확인
-
-          **다음 자동 동기화**: 매일 새벽 2시 (KST)
-          EOF
 
       # Hugo 빌드
       - name: Build with Hugo
