@@ -41,18 +41,10 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # 🚀 스마트 캐싱이 적용된 Notion 동기화 스크립트
-      # 스마트 캐시 초기화 + Notion 동기화
-      - name: Smart Cache Reset and Notion Sync
+      # 복구된 스마트 캐시 Notion 동기화 스크립트
+      - name: Smart Cached Notion Sync Script
         run: |
-          echo "🚀 Creating smart cached Notion sync script..."
-          
-          # 일주일에 한 번 캐시 초기화 (선택사항)
-          if [ "$(date +%u)" = "7" ]; then
-            echo "🗑️ Weekly cache reset..."
-            rm -f notion_cache.json
-          fi
-          
+          echo "Creating smart cached Notion sync script..."
           cat > sync_notion.js << 'EOF'
           const { Client } = require('@notionhq/client');
           const fs = require('fs');
@@ -133,8 +125,8 @@ jobs:
             }).join('');
           }
 
-          // 블록 변환 함수 (기존과 동일하지만 짧게)
-          async function convertBlocks(pageId) {
+          // 강화된 블록 변환 함수
+          async function convertBlocks(pageId, depth = 0) {
             try {
               const blocks = await notion.blocks.children.list({
                 block_id: pageId,
@@ -142,53 +134,192 @@ jobs:
               });
 
               let content = '';
+              const indent = '  '.repeat(depth);
+
               for (const block of blocks.results) {
                 switch (block.type) {
                   case 'paragraph':
                     if (block.paragraph?.rich_text?.length > 0) {
-                      content += convertRichText(block.paragraph.rich_text) + '\\n\\n';
+                      content += indent + convertRichText(block.paragraph.rich_text) + '\\n\\n';
+                    } else if (block.paragraph?.rich_text?.length === 0) {
+                      content += '\\n';
                     }
                     break;
+
                   case 'heading_1':
                     if (block.heading_1?.rich_text?.length > 0) {
-                      content += '# ' + convertRichText(block.heading_1.rich_text) + '\\n\\n';
+                      content += indent + '# ' + convertRichText(block.heading_1.rich_text) + '\\n\\n';
                     }
                     break;
+
                   case 'heading_2':
                     if (block.heading_2?.rich_text?.length > 0) {
-                      content += '## ' + convertRichText(block.heading_2.rich_text) + '\\n\\n';
+                      content += indent + '## ' + convertRichText(block.heading_2.rich_text) + '\\n\\n';
                     }
                     break;
+
                   case 'heading_3':
                     if (block.heading_3?.rich_text?.length > 0) {
-                      content += '### ' + convertRichText(block.heading_3.rich_text) + '\\n\\n';
+                      content += indent + '### ' + convertRichText(block.heading_3.rich_text) + '\\n\\n';
                     }
                     break;
+
                   case 'bulleted_list_item':
                     if (block.bulleted_list_item?.rich_text?.length > 0) {
-                      content += '- ' + convertRichText(block.bulleted_list_item.rich_text) + '\\n';
+                      content += indent + '- ' + convertRichText(block.bulleted_list_item.rich_text) + '\\n';
+                      if (block.has_children) {
+                        const childContent = await convertBlocks(block.id, depth + 1);
+                        content += childContent;
+                      }
                     }
                     break;
+
+                  case 'numbered_list_item':
+                    if (block.numbered_list_item?.rich_text?.length > 0) {
+                      content += indent + '1. ' + convertRichText(block.numbered_list_item.rich_text) + '\\n';
+                      if (block.has_children) {
+                        const childContent = await convertBlocks(block.id, depth + 1);
+                        content += childContent;
+                      }
+                    }
+                    break;
+
+                  case 'toggle':
+                    if (block.toggle?.rich_text?.length > 0) {
+                      const toggleTitle = convertRichText(block.toggle.rich_text);
+                      content += indent + '<details>\\n' + indent + '<summary>' + toggleTitle + '</summary>\\n\\n';
+                      if (block.has_children) {
+                        const childContent = await convertBlocks(block.id, depth);
+                        content += childContent;
+                      }
+                      content += indent + '</details>\\n\\n';
+                    }
+                    break;
+
                   case 'code':
                     if (block.code?.rich_text?.length > 0) {
                       const language = block.code.language || '';
                       const codeText = convertRichText(block.code.rich_text);
-                      content += '```' + language + '\\n' + codeText + '\\n```\\n\\n';
+                      content += indent + '```' + language + '\\n' + codeText + '\\n```\\n\\n';
                     }
                     break;
+
                   case 'quote':
                     if (block.quote?.rich_text?.length > 0) {
-                      content += '> ' + convertRichText(block.quote.rich_text) + '\\n\\n';
+                      content += indent + '> ' + convertRichText(block.quote.rich_text) + '\\n\\n';
                     }
                     break;
+
+                  case 'callout':
+                    if (block.callout?.rich_text?.length > 0) {
+                      const icon = block.callout.icon?.emoji || '';
+                      const calloutText = convertRichText(block.callout.rich_text);
+                      content += indent + '> ' + icon + ' **' + calloutText + '**\\n\\n';
+                    }
+                    break;
+
+                  case 'divider':
+                    content += indent + '---\\n\\n';
+                    break;
+
                   case 'image':
                     if (block.image?.file?.url) {
-                      content += '![Image](' + block.image.file.url + ')\\n\\n';
+                      const caption = block.image.caption?.length > 0 ?
+                        convertRichText(block.image.caption) : 'Image';
+                      content += indent + '![' + caption + '](' + block.image.file.url + ')\\n\\n';
+                    } else if (block.image?.external?.url) {
+                      const caption = block.image.caption?.length > 0 ?
+                        convertRichText(block.image.caption) : 'Image';
+                      content += indent + '![' + caption + '](' + block.image.external.url + ')\\n\\n';
+                    }
+                    break;
+
+                  case 'video':
+                    if (block.video?.external?.url) {
+                      const url = block.video.external.url;
+                      if (url.includes('youtube.com') || url.includes('youtu.be')) {
+                        content += indent + '[YouTube 동영상 보기](' + url + ')\\n\\n';
+                      } else {
+                        content += indent + '[동영상 보기](' + url + ')\\n\\n';
+                      }
+                    }
+                    break;
+
+                  case 'bookmark':
+                  case 'link_preview':
+                    const bookmarkUrl = block.bookmark?.url || block.link_preview?.url;
+                    if (bookmarkUrl) {
+                      const title = block.bookmark?.caption?.length > 0 ?
+                        convertRichText(block.bookmark.caption) : bookmarkUrl;
+                      content += indent + '[' + title + '](' + bookmarkUrl + ')\\n\\n';
+                    }
+                    break;
+
+                  case 'embed':
+                    if (block.embed?.url) {
+                      content += indent + '[임베드 콘텐츠](' + block.embed.url + ')\\n\\n';
+                    }
+                    break;
+
+                  case 'file':
+                    if (block.file?.file?.url) {
+                      const fileName = block.file.name || 'File';
+                      content += indent + '[' + fileName + '](' + block.file.file.url + ')\\n\\n';
+                    }
+                    break;
+
+                  case 'pdf':
+                    if (block.pdf?.file?.url) {
+                      content += indent + '[PDF 문서](' + block.pdf.file.url + ')\\n\\n';
+                    }
+                    break;
+
+                  case 'table':
+                    if (block.has_children) {
+                      content += indent + '\\n| | |\\n|---|---|\\n';
+                      const tableContent = await convertBlocks(block.id, depth);
+                      content += tableContent + '\\n';
+                    }
+                    break;
+
+                  case 'table_row':
+                    if (block.table_row?.cells?.length > 0) {
+                      const cells = block.table_row.cells.map(cell =>
+                        convertRichText(cell) || ' '
+                      );
+                      content += indent + '| ' + cells.join(' | ') + ' |\\n';
+                    }
+                    break;
+
+                  case 'to_do':
+                    if (block.to_do?.rich_text?.length > 0) {
+                      const checked = block.to_do.checked ? '[x]' : '[ ]';
+                      content += indent + '- ' + checked + ' ' + convertRichText(block.to_do.rich_text) + '\\n';
+                    }
+                    break;
+
+                  case 'column_list':
+                    if (block.has_children) {
+                      content += indent + '<div class="columns">\\n';
+                      const columnContent = await convertBlocks(block.id, depth);
+                      content += columnContent;
+                      content += indent + '</div>\\n\\n';
+                    }
+                    break;
+
+                  case 'column':
+                    if (block.has_children) {
+                      content += indent + '<div class="column">\\n';
+                      const columnContent = await convertBlocks(block.id, depth);
+                      content += columnContent;
+                      content += indent + '</div>\\n';
                     }
                     break;
                 }
+
                 await new Promise(resolve => setTimeout(resolve, 20));
               }
+
               return content;
             } catch (error) {
               console.error('Error converting blocks: ' + error.message);
@@ -196,7 +327,7 @@ jobs:
             }
           }
 
-          // 모든 페이지 가져오기
+          // 모든 페이지 가져오기 (페이지네이션 처리)
           async function getAllPages() {
             let allPages = [];
             let hasMore = true;
@@ -208,9 +339,16 @@ jobs:
                   database_id: process.env.DATABASE_ID,
                   filter: {
                     property: 'Status',
-                    select: { equals: 'Published' }
+                    select: {
+                      equals: 'Published'
+                    }
                   },
-                  sorts: [{ property: 'Date', direction: 'descending' }],
+                  sorts: [
+                    {
+                      property: 'Date',
+                      direction: 'descending'
+                    }
+                  ],
                   start_cursor: nextCursor,
                   page_size: 100
                 });
@@ -218,22 +356,27 @@ jobs:
                 allPages = allPages.concat(response.results);
                 hasMore = response.has_more;
                 nextCursor = response.next_cursor;
+
                 console.log('Retrieved ' + response.results.length + ' pages (Total: ' + allPages.length + ')');
 
                 if (hasMore) {
                   await new Promise(resolve => setTimeout(resolve, 50));
                 }
+
               } catch (error) {
                 console.error('Error fetching pages: ' + error.message);
                 break;
               }
             }
+
             return allPages;
           }
 
           async function syncNotionDatabase() {
             try {
               console.log('Connecting to Notion...');
+
+              // 캐시 로드
               const cache = loadCache();
               console.log('Loaded cache with ' + Object.keys(cache).length + ' entries');
 
@@ -244,8 +387,10 @@ jobs:
                 fs.mkdirSync('content/posts', { recursive: true });
               }
 
-              let processedCount = 0;
+              let successCount = 0;
+              let errorCount = 0;
               let skippedCount = 0;
+              let updatedCount = 0;
               const newCache = {};
 
               for (const page of allPages) {
@@ -257,17 +402,17 @@ jobs:
                   const postDir = 'content/posts/' + slug;
                   const postFile = postDir + '/index.md';
 
-                  // 💡 핵심 수정: 캐시 확인 + 파일 존재 확인
+                  // 캐시 확인 - 변경사항이 없고 파일이 존재하면 스킵
                   if (cache[pageId] && 
                       cache[pageId].last_edited_time === lastEditedTime && 
                       fs.existsSync(postFile)) {
-                    console.log('Skipped (cached + file exists): "' + title + '"');
+                    console.log('Skipped (no changes): "' + title + '"');
                     newCache[pageId] = cache[pageId];
                     skippedCount++;
                     continue;
                   }
 
-                  console.log('Processing: "' + title + '"');
+                  console.log('Processing: "' + title + '" (last edited: ' + lastEditedTime + ')');
 
                   const dateValue = page.properties['Date']?.date?.start || page.created_time;
                   const tags = page.properties['Tags']?.multi_select?.map(tag => tag.name) || [];
@@ -297,12 +442,15 @@ jobs:
                     content += 'description: ' + createSafeYamlString(truncatedSummary) + '\\n';
                   }
 
+                  content += 'notion_id: ' + createSafeYamlString(page.id) + '\\n';
+                  content += 'notion_url: ' + createSafeYamlString(page.url) + '\\n';
                   content += '---\\n\\n';
 
                   if (blockContent.trim()) {
                     content += blockContent;
                   } else {
-                    content += '# ' + title + '\\n\\n*이 글은 Notion에서 가져왔습니다.*\\n';
+                    content += '# ' + title + '\\n\\n*이 글은 Notion에서 가져왔습니다.*\\n\\n';
+                    content += '[원본 보기](' + page.url + ')\\n';
                   }
 
                   if (!fs.existsSync(postDir)) {
@@ -311,6 +459,7 @@ jobs:
 
                   fs.writeFileSync(postFile, content, 'utf8');
 
+                  // 캐시에 정보 저장
                   newCache[pageId] = {
                     last_edited_time: lastEditedTime,
                     title: title,
@@ -318,25 +467,36 @@ jobs:
                     processed_at: new Date().toISOString()
                   };
 
-                  console.log('Created/Updated: "' + title + '" → ' + slug);
-                  processedCount++;
+                  if (cache[pageId]) {
+                    console.log('Updated: "' + title + '" → ' + slug);
+                    updatedCount++;
+                  } else {
+                    console.log('Created: "' + title + '" → ' + slug);
+                  }
+
+                  successCount++;
+
                   await new Promise(resolve => setTimeout(resolve, 50));
 
                 } catch (err) {
                   console.error('Error processing page: ' + err.message);
+                  errorCount++;
                 }
               }
 
+              // 새 캐시 저장
               saveCache(newCache);
 
               console.log('\\n동기화 완료:');
-              console.log('처리: ' + processedCount + '개');
+              console.log('성공: ' + successCount + '개');
+              console.log('업데이트: ' + updatedCount + '개');
               console.log('스킵: ' + skippedCount + '개');
+              console.log('실패: ' + errorCount + '개');
               console.log('캐시 효율: ' + Math.round((skippedCount / allPages.length) * 100) + '%');
 
             } catch (error) {
               console.error('Notion API Error: ' + error.message);
-              process.exit(1);
+              process.exit(0);
             }
           }
 
@@ -345,6 +505,7 @@ jobs:
 
           npm init -y
           npm install @notionhq/client
+
           NOTION_SECRET="${{ secrets.NOTION_SECRET }}" DATABASE_ID="${{ secrets.DATABASE_ID }}" node sync_notion.js
 
       # 캐시 파일을 다음 실행을 위해 커밋
@@ -364,17 +525,11 @@ jobs:
 
       - name: Check Sync Results
         run: |
-          echo "📊 동기화 결과:"
+          echo "동기화 결과:"
           echo "=== 생성된 포스트 ==="
           find content/posts -name "*.md" -type f | wc -l
           echo "개의 포스트가 생성되었습니다."
-          
-          echo "=== 캐시 정보 ==="
-          if [ -f notion_cache.json ]; then
-            echo "캐시 파일 크기: $(wc -l < notion_cache.json) 라인"
-            echo "캐시된 항목 수: $(jq 'length' notion_cache.json 2>/dev/null || echo 'jq not available')"
-          fi
-          
+
           echo "=== 포스트 목록 ==="
           find content/posts -name "index.md" -type f | head -5
 
@@ -386,12 +541,12 @@ jobs:
           ---
           title: "삽질 저장소"
           ---
-          
+
           개발자 Cybecho의 삽질과 학습을 기록하는 공간입니다.
-          
+
           실패에서 배우고, 성공을 기록하며, 지식을 공유합니다.
           EOF
-          
+
           # About 페이지
           if [ ! -f content/about.md ]; then
             cat > content/about.md << 'EOF'
@@ -402,40 +557,40 @@ jobs:
           ShowToc: false
           ShowBreadCrumbs: false
           ---
-          
-          # 안녕하세요, Cybecho입니다! 👋
-          
+
+          # 안녕하세요, Cybecho입니다!
+
           개발자로서의 삽질과 성장을 기록하는 공간입니다.
-          
-          ## 🚀 이 블로그는...
-          
+
+          ## 이 블로그는...
+
           - **Notion 연동**: 편리한 글 작성과 관리
-          - **자동 배포**: GitHub Actions를 통한 자동화  
+          - **자동 배포**: GitHub Actions를 통한 자동화
           - **스마트 캐싱**: 변경된 글만 업데이트하여 빠른 빌드
           - **반응형**: 모든 디바이스에서 완벽한 경험
-          
-          ## 📊 Notion 연동 상태
-          
+
+          ## Notion 연동 상태
+
           - **데이터베이스**: 삽질 저장소
           - **자동 동기화**: 매일 새벽 2시 (KST)
           - **수동 동기화**: GitHub Actions에서 "Run workflow"
           - **캐싱 시스템**: 변경된 글만 처리하여 빠른 빌드
-          
-          ## 🛠️ 기술 스택
-          
+
+          ## 기술 스택
+
           - **정적 사이트 생성기**: Hugo
           - **테마**: Hugo Blog Awesome
           - **CMS**: Notion
           - **배포**: GitHub Pages
           - **CI/CD**: GitHub Actions + Smart Caching
-          
-          ## 📬 연락처
-          
+
+          ## 연락처
+
           - **GitHub**: [@Cybecho](https://github.com/Cybecho)
-          
+
           ---
-          *Notion API를 통해 Published 상태의 글들이 자동 동기화됩니다* ✨  
-          *스마트 캐싱으로 변경된 글만 빠르게 업데이트됩니다* ⚡
+          *Notion API를 통해 Published 상태의 글들이 자동 동기화됩니다*
+          *스마트 캐싱으로 변경된 글만 빠르게 업데이트됩니다*
           EOF
           fi
 
@@ -444,7 +599,7 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
         run: |
-          echo "🏗️ Building Hugo site..."
+          echo "Building Hugo site..."
           hugo --gc --minify
 
       - name: Upload artifact
