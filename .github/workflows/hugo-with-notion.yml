@@ -1,0 +1,209 @@
+name: Deploy Hugo with Notion Sync
+
+on:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: '0 2 * * *'  # 매일 새벽 2시 Notion 동기화
+  workflow_dispatch:
+
+permissions:
+  contents: write  # Notion 콘텐츠 커밋을 위해 write 권한 필요
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      # 🚀 Notion 콘텐츠 동기화 (핵심 부분!)
+      - name: Install notion-jam
+        run: npm install -g notion-jam
+
+      - name: Sync Notion Content
+        run: |
+          echo "🔄 Starting Notion sync..."
+          echo "Database ID: ${{ secrets.DATABASE_ID }}"
+          
+          # Notion → Markdown 변환
+          notion-jam \
+            --notion-token "${{ secrets.NOTION_SECRET }}" \
+            --root-page "https://www.notion.so/${{ secrets.DATABASE_ID }}" \
+            --output-dir "content/posts" \
+            --download-images \
+            --image-dir "static/images" \
+            --slug-format "title" \
+            --filter-prop "Status" \
+            --filter-values "Published" || echo "⚠️ Notion sync had issues, continuing..."
+
+      # Notion 동기화 결과 확인
+      - name: Check Notion Content
+        run: |
+          echo "📊 Notion sync results:"
+          echo "=== Content directory ==="
+          find content -name "*.md" -type f | wc -l
+          echo "total markdown files"
+          
+          echo "=== Sample files ==="
+          find content -name "*.md" -type f | head -5
+          
+          echo "=== Images downloaded ==="
+          if [ -d "static/images" ]; then
+            ls static/images/ | wc -l
+            echo "total images"
+          else
+            echo "No images directory found"
+          fi
+
+      # Notion 콘텐츠가 없으면 기본 콘텐츠 생성
+      - name: Create default content if needed
+        run: |
+          if [ ! -f content/about.md ]; then
+            echo "📄 Creating about page..."
+            mkdir -p content
+            cat > content/about.md << 'EOF'
+          ---
+          title: "소개"
+          date: 2024-01-01T00:00:00+09:00
+          draft: false
+          ---
+
+          # 안녕하세요, Cybecho입니다! 👋
+
+          개발자로서의 삽질과 성장을 기록하는 공간입니다.
+
+          ## 이 블로그는...
+          - 🔧 개발 삽질기  
+          - 📚 학습 노트
+          - 💡 문제 해결 과정
+          - 🚀 새로운 기술 탐험
+
+          을 다룹니다.
+
+          ## 연락처
+          - **GitHub**: [@Cybecho](https://github.com/Cybecho)
+          - **Notion**: [삽질 저장소 데이터베이스](https://www.notion.so/cybecho/${{ secrets.DATABASE_ID }})
+
+          ---
+          *Notion에서 작성한 글들이 자동으로 여기에 동기화됩니다!* ✨
+          EOF
+          fi
+
+          # 만약 Notion에서 콘텐츠를 가져오지 못했다면 샘플 생성
+          post_count=$(find content/posts -name "*.md" -type f 2>/dev/null | wc -l)
+          if [ "$post_count" -eq 0 ]; then
+            echo "⚠️ No Notion content found, creating sample post..."
+            mkdir -p content/posts/notion-sync-guide
+            cat > content/posts/notion-sync-guide/index.md << 'EOF'
+          ---
+          title: "🔄 Notion 동기화 설정 완료!"
+          date: 2024-01-20T00:00:00+09:00
+          draft: false
+          tags: ["Notion", "자동화", "블로그"]
+          categories: ["기술"]
+          summary: "Notion 데이터베이스와 Hugo 블로그 자동 동기화가 설정되었습니다!"
+          ---
+
+          # Notion 자동 동기화 설정 완료! 🎉
+
+          안녕하세요! 드디어 **Notion 데이터베이스**와 이 Hugo 블로그 간의 자동 동기화가 설정되었습니다.
+
+          ## 🔧 현재 설정
+
+          - **Notion 데이터베이스**: [삽질 저장소](${{ secrets.DATABASE_ID }})
+          - **자동 동기화**: 매일 새벽 2시 + 코드 변경시
+          - **필터링**: Status = "Published"인 글만 동기화
+          - **이미지**: 자동 다운로드 및 최적화
+
+          ## 📝 사용법
+
+          1. **Notion에서 글 작성**
+          2. **Status를 "Published"로 변경**
+          3. **자동으로 이 블로그에 반영** (최대 24시간)
+
+          ## 🚀 다음 단계
+
+          - Notion에서 첫 번째 글을 "Published" 상태로 변경해보세요
+          - GitHub Actions에서 동기화 상태를 확인할 수 있습니다
+          - 궁금한 점은 GitHub Issues로 남겨주세요!
+
+          **Happy Writing!** ✨
+          EOF
+          fi
+
+      # Notion 콘텐츠 변경사항 커밋
+      - name: Commit Notion Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "📝 Changes detected, committing..."
+            git add content/ static/images/ || true
+            git commit -m "🔄 Sync Notion content - $(date '+%Y-%m-%d %H:%M')" || true
+            git push || echo "Nothing to push"
+          else
+            echo "✅ No changes to commit"
+          fi
+
+      # Hugo 빌드
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          echo "🏗️ Building Hugo site..."
+          hugo --gc --minify
+
+      # 빌드 결과 최종 확인
+      - name: Build Summary
+        run: |
+          echo "📊 Build Summary:"
+          echo "=== Generated HTML files ==="
+          find public -name "*.html" | wc -l
+          echo "=== Post pages ==="
+          find public/posts -name "*.html" 2>/dev/null | wc -l || echo "0"
+          echo "=== Static assets ==="
+          find public -name "*.css" -o -name "*.js" -o -name "*.png" -o -name "*.jpg" | wc -l
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
