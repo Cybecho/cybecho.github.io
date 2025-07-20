@@ -41,7 +41,7 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # 🔧 완전히 개선된 Notion 동기화 스크립트
+      # 🔧 수정된 Notion 동기화 스크립트 (callout 수정)
       - name: Enhanced Notion Sync Script
         run: |
           echo "🚀 Creating enhanced Notion sync script..."
@@ -99,7 +99,7 @@ jobs:
             }).join('');
           }
 
-          // 강화된 블록 변환 함수 (모든 블록 타입 지원)
+          // 강화된 블록 변환 함수 (callout 수정)
           async function convertBlocks(pageId, depth = 0) {
             try {
               const blocks = await notion.blocks.children.list({
@@ -187,9 +187,9 @@ jobs:
                   case 'callout':
                     if (block.callout?.rich_text?.length > 0) {
                       const icon = block.callout.icon?.emoji || '💡';
-                      content += indent + '{{< callout type="info" >}}\n';
-                      content += indent + icon + ' ' + convertRichText(block.callout.rich_text) + '\n';
-                      content += indent + '{{< /callout >}}\n\n';
+                      const calloutText = convertRichText(block.callout.rich_text);
+                      // Hugo 숏코드 대신 일반 마크다운으로 변환
+                      content += indent + '> ' + icon + ' **' + calloutText + '**\n\n';
                     }
                     break;
 
@@ -213,21 +213,10 @@ jobs:
                     if (block.video?.external?.url) {
                       const url = block.video.external.url;
                       if (url.includes('youtube.com') || url.includes('youtu.be')) {
-                        // 유튜브 임베드 처리
-                        let videoId = '';
-                        if (url.includes('youtu.be/')) {
-                          videoId = url.split('youtu.be/')[1].split('?')[0];
-                        } else if (url.includes('youtube.com')) {
-                          const urlParams = new URLSearchParams(url.split('?')[1]);
-                          videoId = urlParams.get('v');
-                        }
-                        if (videoId) {
-                          content += indent + '{{< youtube ' + videoId + ' >}}\n\n';
-                        } else {
-                          content += indent + '[동영상 보기](' + url + ')\n\n';
-                        }
+                        // 유튜브 링크 처리
+                        content += indent + '🎥 [YouTube 동영상 보기](' + url + ')\n\n';
                       } else {
-                        content += indent + '[동영상 보기](' + url + ')\n\n';
+                        content += indent + '🎥 [동영상 보기](' + url + ')\n\n';
                       }
                     }
                     break;
@@ -244,7 +233,7 @@ jobs:
 
                   case 'embed':
                     if (block.embed?.url) {
-                      content += indent + '[임베드 콘텐츠](' + block.embed.url + ')\n\n';
+                      content += indent + '🔗 [임베드 콘텐츠](' + block.embed.url + ')\n\n';
                     }
                     break;
 
