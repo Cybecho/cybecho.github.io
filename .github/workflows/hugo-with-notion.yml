@@ -41,10 +41,10 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # 🔧 수정된 Notion 동기화 스크립트 (callout 수정)
-      - name: Enhanced Notion Sync Script
+      # 🚀 스마트 캐싱이 적용된 Notion 동기화 스크립트
+      - name: Smart Cached Notion Sync Script
         run: |
-          echo "🚀 Creating enhanced Notion sync script..."
+          echo "🚀 Creating smart cached Notion sync script..."
           cat > sync_notion.js << 'EOF'
           const { Client } = require('@notionhq/client');
           const fs = require('fs');
@@ -53,6 +53,32 @@ jobs:
           const notion = new Client({
             auth: process.env.NOTION_SECRET,
           });
+
+          // 캐시 파일 경로
+          const CACHE_FILE = 'notion_cache.json';
+
+          // 캐시 로드 함수
+          function loadCache() {
+            try {
+              if (fs.existsSync(CACHE_FILE)) {
+                const cacheData = fs.readFileSync(CACHE_FILE, 'utf8');
+                return JSON.parse(cacheData);
+              }
+            } catch (error) {
+              console.log('⚠️ Cache load error:', error.message);
+            }
+            return {};
+          }
+
+          // 캐시 저장 함수
+          function saveCache(cache) {
+            try {
+              fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
+              console.log('💾 Cache saved successfully');
+            } catch (error) {
+              console.error('❌ Cache save error:', error.message);
+            }
+          }
 
           // YAML 안전 문자열 생성 함수
           function createSafeYamlString(str) {
@@ -99,7 +125,7 @@ jobs:
             }).join('');
           }
 
-          // 강화된 블록 변환 함수 (callout 수정)
+          // 강화된 블록 변환 함수
           async function convertBlocks(pageId, depth = 0) {
             try {
               const blocks = await notion.blocks.children.list({
@@ -116,7 +142,7 @@ jobs:
                     if (block.paragraph?.rich_text?.length > 0) {
                       content += indent + convertRichText(block.paragraph.rich_text) + '\n\n';
                     } else if (block.paragraph?.rich_text?.length === 0) {
-                      content += '\n'; // 빈 줄 처리
+                      content += '\n';
                     }
                     break;
 
@@ -188,7 +214,6 @@ jobs:
                     if (block.callout?.rich_text?.length > 0) {
                       const icon = block.callout.icon?.emoji || '💡';
                       const calloutText = convertRichText(block.callout.rich_text);
-                      // Hugo 숏코드 대신 일반 마크다운으로 변환
                       content += indent + '> ' + icon + ' **' + calloutText + '**\n\n';
                     }
                     break;
@@ -213,7 +238,6 @@ jobs:
                     if (block.video?.external?.url) {
                       const url = block.video.external.url;
                       if (url.includes('youtube.com') || url.includes('youtu.be')) {
-                        // 유튜브 링크 처리
                         content += indent + '🎥 [YouTube 동영상 보기](' + url + ')\n\n';
                       } else {
                         content += indent + '🎥 [동영상 보기](' + url + ')\n\n';
@@ -252,7 +276,6 @@ jobs:
 
                   case 'table':
                     if (block.has_children) {
-                      // 간단한 테이블 처리
                       content += indent + '\n| | |\n|---|---|\n';
                       const tableContent = await convertBlocks(block.id, depth);
                       content += tableContent + '\n';
@@ -294,8 +317,7 @@ jobs:
                     break;
                 }
 
-                // API 호출 제한 방지
-                await new Promise(resolve => setTimeout(resolve, 50));
+                await new Promise(resolve => setTimeout(resolve, 20));
               }
 
               return content;
@@ -338,7 +360,7 @@ jobs:
                 console.log('📄 Retrieved ' + response.results.length + ' pages (Total: ' + allPages.length + ')');
 
                 if (hasMore) {
-                  await new Promise(resolve => setTimeout(resolve, 100));
+                  await new Promise(resolve => setTimeout(resolve, 50));
                 }
 
               } catch (error) {
@@ -353,6 +375,10 @@ jobs:
           async function syncNotionDatabase() {
             try {
               console.log('🔄 Connecting to Notion...');
+              
+              // 캐시 로드
+              const cache = loadCache();
+              console.log('📋 Loaded cache with ' + Object.keys(cache).length + ' entries');
 
               const allPages = await getAllPages();
               console.log('📊 Found ' + allPages.length + ' published posts');
@@ -363,18 +389,31 @@ jobs:
 
               let successCount = 0;
               let errorCount = 0;
+              let skippedCount = 0;
+              let updatedCount = 0;
+              const newCache = {};
 
               for (const page of allPages) {
                 try {
+                  const pageId = page.id;
+                  const lastEditedTime = page.last_edited_time;
                   const title = page.properties['제목']?.title?.[0]?.plain_text || 'Untitled';
+                  const slug = createSlug(title);
+                  
+                  // 캐시 확인 - 변경사항이 없으면 스킵
+                  if (cache[pageId] && cache[pageId].last_edited_time === lastEditedTime) {
+                    console.log('⏩ Skipped (no changes): "' + title + '"');
+                    newCache[pageId] = cache[pageId];
+                    skippedCount++;
+                    continue;
+                  }
+
+                  console.log('📝 Processing: "' + title + '" (last edited: ' + lastEditedTime + ')');
+
                   const dateValue = page.properties['Date']?.date?.start || page.created_time;
                   const tags = page.properties['Tags']?.multi_select?.map(tag => tag.name) || [];
                   const themes = page.properties['Thems']?.multi_select?.map(theme => theme.name) || [];
                   const aiSummary = page.properties['AI 요약']?.rich_text?.[0]?.plain_text || '';
-
-                  const slug = createSlug(title);
-
-                  console.log('📝 Processing: "' + title + '"');
 
                   const blockContent = await convertBlocks(page.id);
 
@@ -418,10 +457,24 @@ jobs:
 
                   fs.writeFileSync(postDir + '/index.md', content, 'utf8');
 
-                  console.log('✅ Created: "' + title + '" → ' + slug);
+                  // 캐시에 정보 저장
+                  newCache[pageId] = {
+                    last_edited_time: lastEditedTime,
+                    title: title,
+                    slug: slug,
+                    processed_at: new Date().toISOString()
+                  };
+
+                  if (cache[pageId]) {
+                    console.log('🔄 Updated: "' + title + '" → ' + slug);
+                    updatedCount++;
+                  } else {
+                    console.log('✅ Created: "' + title + '" → ' + slug);
+                  }
+                  
                   successCount++;
 
-                  await new Promise(resolve => setTimeout(resolve, 100));
+                  await new Promise(resolve => setTimeout(resolve, 50));
 
                 } catch (err) {
                   console.error('❌ Error processing page: ' + err.message);
@@ -429,9 +482,15 @@ jobs:
                 }
               }
 
+              // 새 캐시 저장
+              saveCache(newCache);
+
               console.log('\n📊 동기화 완료:');
               console.log('✅ 성공: ' + successCount + '개');
+              console.log('🔄 업데이트: ' + updatedCount + '개');
+              console.log('⏩ 스킵: ' + skippedCount + '개');
               console.log('❌ 실패: ' + errorCount + '개');
+              console.log('⚡ 캐시 효율: ' + Math.round((skippedCount / allPages.length) * 100) + '%');
 
             } catch (error) {
               console.error('❌ Notion API Error: ' + error.message);
@@ -447,6 +506,21 @@ jobs:
 
           NOTION_SECRET="${{ secrets.NOTION_SECRET }}" DATABASE_ID="${{ secrets.DATABASE_ID }}" node sync_notion.js
 
+      # 캐시 파일을 다음 실행을 위해 커밋
+      - name: Commit Cache
+        run: |
+          if [ -f notion_cache.json ]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add notion_cache.json
+            if git diff --staged --quiet; then
+              echo "No cache changes to commit"
+            else
+              git commit -m "Update Notion cache [skip ci]" || echo "No changes to commit"
+              git push || echo "No changes to push"
+            fi
+          fi
+
       - name: Check Sync Results
         run: |
           echo "📊 동기화 결과:"
@@ -454,19 +528,18 @@ jobs:
           find content/posts -name "*.md" -type f | wc -l
           echo "개의 포스트가 생성되었습니다."
           
+          echo "=== 캐시 정보 ==="
+          if [ -f notion_cache.json ]; then
+            echo "캐시 파일 크기: $(wc -l < notion_cache.json) 라인"
+            echo "캐시된 항목 수: $(jq 'length' notion_cache.json 2>/dev/null || echo 'jq not available')"
+          fi
+          
           echo "=== 포스트 목록 ==="
           find content/posts -name "index.md" -type f | head -5
-          
-          echo "=== 첫 번째 포스트 내용 미리보기 ==="
-          if [ -f "$(find content/posts -name "index.md" -type f | head -1)" ]; then
-            echo "--- 첫 번째 포스트 ---"
-            head -50 "$(find content/posts -name "index.md" -type f | head -1)"
-            echo "--- 내용 끝 ---"
-          fi
 
       - name: Ensure Default Content
         run: |
-          # 메인 페이지 (_index.md) - 테마 원본처럼
+          # 메인 페이지 (_index.md)
           mkdir -p content
           cat > content/_index.md << 'EOF'
           ---
@@ -496,7 +569,8 @@ jobs:
           ## 🚀 이 블로그는...
           
           - **Notion 연동**: 편리한 글 작성과 관리
-          - **자동 배포**: GitHub Actions를 통한 자동화
+          - **자동 배포**: GitHub Actions를 통한 자동화  
+          - **스마트 캐싱**: 변경된 글만 업데이트하여 빠른 빌드
           - **반응형**: 모든 디바이스에서 완벽한 경험
           
           ## 📊 Notion 연동 상태
@@ -504,6 +578,7 @@ jobs:
           - **데이터베이스**: 삽질 저장소
           - **자동 동기화**: 매일 새벽 2시 (KST)
           - **수동 동기화**: GitHub Actions에서 "Run workflow"
+          - **캐싱 시스템**: 변경된 글만 처리하여 빠른 빌드
           
           ## 🛠️ 기술 스택
           
@@ -511,14 +586,15 @@ jobs:
           - **테마**: Hugo Blog Awesome
           - **CMS**: Notion
           - **배포**: GitHub Pages
-          - **CI/CD**: GitHub Actions
+          - **CI/CD**: GitHub Actions + Smart Caching
           
           ## 📬 연락처
           
           - **GitHub**: [@Cybecho](https://github.com/Cybecho)
           
           ---
-          *Notion API를 통해 Published 상태의 글들이 자동 동기화됩니다* ✨
+          *Notion API를 통해 Published 상태의 글들이 자동 동기화됩니다* ✨  
+          *스마트 캐싱으로 변경된 글만 빠르게 업데이트됩니다* ⚡
           EOF
           fi
 

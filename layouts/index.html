@@ -17,26 +17,30 @@
 
 <div class="posts">
   {{ $pages := where .Site.RegularPages "Section" "posts" }}
-  {{ range first 10 $pages }}
+  {{ range $index, $post := first 10 $pages }}
+    {{ if gt $index 0 }}
+      <hr class="post-divider">
+    {{ end }}
     <div class="post">
-      <div class="date">{{ .Date.Format "Jan 2, 2006" }}</div>
-      <div class="title">
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <div class="post-header">
+        <h3 class="title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h3>
+        <div class="date">{{ .Date.Format "Jan 2, 2006" }}</div>
       </div>
       {{ if .Description }}
         <div class="description">{{ .Description }}</div>
-      {{ else if .Summary }}
-        <div class="description">{{ .Summary | truncate 100 }}</div>
       {{ end }}
     </div>
   {{ end }}
+  
+  {{ if gt (len (where .Site.RegularPages "Section" "posts")) 10 }}
+    <hr class="post-divider">
+    <div class="read-more">
+      <a href="/posts/">더 많은 글 보기 →</a>
+    </div>
+  {{ end }}
 </div>
-
-{{ if gt (len (where .Site.RegularPages "Section" "posts")) 10 }}
-  <div class="read-more">
-    <a href="/posts/">Read more →</a>
-  </div>
-{{ end }}
 
 <style>
 .profile {
@@ -75,42 +79,58 @@
 }
 
 .post {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
 }
 
-.post:last-child {
-  border-bottom: none;
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
 }
 
-.date {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-bottom: 0.3rem;
+.title {
+  flex: 1;
+  margin: 0;
+  padding-right: 1rem;
 }
 
 .title a {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   text-decoration: none;
   color: var(--text-color);
+  line-height: 1.4;
 }
 
 .title a:hover {
   color: var(--accent);
 }
 
+.date {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  margin-left: auto;
+}
+
 .description {
   font-size: 0.95rem;
   color: var(--text-muted);
-  margin-top: 0.5rem;
   line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+.post-divider {
+  border: none;
+  height: 1px;
+  background-color: var(--border-color, #e5e7eb);
+  margin: 0;
 }
 
 .read-more {
   text-align: center;
-  margin-top: 2rem;
+  padding: 2rem 0 1rem 0;
 }
 
 .read-more a {
@@ -122,6 +142,55 @@
 
 .read-more a:hover {
   text-decoration: underline;
+}
+
+/* 다크모드 지원 */
+@media (prefers-color-scheme: dark) {
+  .post-divider {
+    background-color: #374151;
+  }
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  .profile {
+    margin-bottom: 1.5rem;
+  }
+  
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .author {
+    font-size: 1.5rem;
+  }
+  
+  .bio {
+    font-size: 1rem;
+  }
+  
+  .post-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .title {
+    padding-right: 0;
+    margin-bottom: 0.3rem;
+  }
+  
+  .title a {
+    font-size: 1.2rem;
+  }
+  
+  .date {
+    margin-left: 0;
+  }
+  
+  .post {
+    padding: 1rem 0;
+  }
 }
 </style>
 {{ end }}
