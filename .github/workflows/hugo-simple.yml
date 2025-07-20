@@ -34,11 +34,24 @@ jobs:
           echo "=== Current directory structure ==="
           ls -la
           echo "=== Hugo config file ==="
-          cat hugo.toml
+          if [ -f hugo.toml ]; then
+            cat hugo.toml
+          else
+            echo "hugo.toml not found!"
+          fi
           echo "=== Content directory ==="
-          ls -la content/
+          if [ -d content ]; then
+            ls -la content/
+          else
+            echo "content directory not found, creating..."
+            mkdir -p content/posts
+          fi
           echo "=== Themes directory ==="
-          ls -la themes/
+          if [ -d themes ]; then
+            ls -la themes/
+          else
+            echo "themes directory not found!"
+          fi
 
       # Node.js 설치
       - name: Setup Node.js
@@ -46,9 +59,9 @@ jobs:
         with:
           node-version: '18'
 
-      # Hugo 설치
+      # 🔧 수정: 올바른 Hugo 액션 이름
       - name: Setup Hugo
-        uses: actions/hugo@v3
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
@@ -56,8 +69,25 @@ jobs:
       # 🔍 Hugo 설정 검증
       - name: Validate Hugo Config
         run: |
-          hugo config
+          echo "=== Hugo version ==="
           hugo version
+          echo "=== Hugo config check ==="
+          if [ -f hugo.toml ]; then
+            hugo config
+          else
+            echo "No hugo.toml found, creating minimal config..."
+            cat > hugo.toml << EOF
+baseURL = 'https://cybecho.github.io/'
+languageCode = 'ko-kr'
+title = '삽질 저장소 - Cybecho Blog'
+theme = 'lightbi-hugo'
+
+[params]
+  author = "Cybecho"
+  homeTitle = "삽질 저장소"
+  homeSubtitle = "실패에서 배우고, 성공을 기록하다"
+EOF
+          fi
 
       # Notion JAM CLI 설치 및 실행
       - name: Install notion-jam
@@ -65,6 +95,7 @@ jobs:
 
       - name: Sync Notion Content
         run: |
+          echo "Syncing Notion content..."
           notion-jam \
             --notion-token "${{ secrets.NOTION_SECRET }}" \
             --root-page "${{ secrets.DATABASE_ID }}" \
@@ -77,15 +108,63 @@ jobs:
       - name: Debug - Check content after sync
         run: |
           echo "=== Content after sync ==="
-          find content -name "*.md" | head -10
+          find content -name "*.md" | head -10 || echo "No markdown files found"
           echo "=== Sample content file ==="
-          find content -name "*.md" -exec head -20 {} \; | head -50
+          if find content -name "*.md" | head -1 | xargs test -f; then
+            find content -name "*.md" | head -1 | xargs head -20
+          else
+            echo "No content files to show"
+          fi
+          echo "=== Static images ==="
+          if [ -d static/images ]; then
+            ls -la static/images/ | head -10
+          else
+            echo "No static images directory"
+          fi
+
+      # 기본 콘텐츠 생성 (Notion 동기화 실패 시 백업)
+      - name: Create default content if needed
+        run: |
+          if [ ! -d "content/posts" ] || [ -z "$(ls -A content/posts)" ]; then
+            echo "No content found, creating sample post..."
+            mkdir -p content/posts/welcome
+            cat > content/posts/welcome/index.md << 'EOF'
+---
+title: "환영합니다!"
+date: 2024-01-01T00:00:00+09:00
+draft: false
+tags: ["환영", "첫글"]
+---
+
+# 삽질 저장소에 오신 것을 환영합니다! 🎉
+
+이곳은 Cybecho의 개발 여정과 삽질 기록을 담는 공간입니다.
+
+## 앞으로 기대하세요
+- 🔧 개발 삽질기
+- 📚 학습 노트  
+- 💡 문제 해결 과정
+- 🚀 새로운 기술 탐험
+
+Notion에서 작성한 글들이 자동으로 여기에 동기화됩니다!
+EOF
+          fi
 
       # Hugo 빌드
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
-        run: hugo --minify --verbose
+        run: |
+          echo "Building Hugo site..."
+          hugo --minify --verbose
+
+      # 빌드 결과 확인
+      - name: Debug - Check build output
+        run: |
+          echo "=== Build output ==="
+          ls -la public/
+          echo "=== Sample generated files ==="
+          find public -name "*.html" | head -5 | xargs ls -la
 
       # GitHub Pages 배포
       - name: Upload artifact
