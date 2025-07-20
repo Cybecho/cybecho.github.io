@@ -283,8 +283,8 @@ async function syncNotionDatabase() {
         }
 
         if (themes.length > 0) {
-          const categories = themes.map(theme => createSafeYamlString(theme));
-          frontMatter += 'categories: [' + categories.join(', ') + ']\n';
+          const seriesList = themes.map(theme => createSafeYamlString(theme));
+          frontMatter += 'series: [' + seriesList.join(', ') + ']\n';  // categories → series
         }
 
         if (aiSummary) {

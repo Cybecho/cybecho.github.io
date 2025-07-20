@@ -15,7 +15,13 @@
       </div>
     </header>
 
-    <!-- TOC 토글 버튼 (좁은 화면에서만 보임) -->
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </article>
+
+  <!-- TOC 토글 버튼 (좁은 화면에서만 보임) -->
+  {{ if .TableOfContents }}
     <button class="toc-toggle" id="tocToggle" aria-label="목차 토글">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="8" y1="6" x2="21" y2="6"></line>
@@ -27,35 +33,29 @@
       </svg>
     </button>
 
+    <!-- TOC 오버레이 (배경 어둡게 + 클릭 시 닫기) -->
+    <div class="toc-overlay" id="tocOverlay"></div>
+
     <!-- TOC (목차) -->
-    {{ if .TableOfContents }}
-      <div class="toc-container" id="toc">
-        <div class="toc-header">
-          <div class="toc-title">목차</div>
-          <button class="toc-close" id="tocClose" aria-label="목차 닫기">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-        </div>
-        <div class="toc-content">
-          {{ .TableOfContents }}
-        </div>
+    <div class="toc-container" id="toc">
+      <div class="toc-header">
+        <div class="toc-title">목차</div>
+        <button class="toc-close" id="tocClose" aria-label="목차 닫기">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
       </div>
-
-      <!-- TOC 오버레이 (모바일에서 배경 클릭 시 닫기) -->
-      <div class="toc-overlay" id="tocOverlay"></div>
-    {{ end }}
-
-    <div class="content">
-      {{ .Content }}
+      <div class="toc-content">
+        {{ .TableOfContents }}
+      </div>
     </div>
-  </article>
+  {{ end }}
 </div>
 
 <script>
-// 🎯 스마트 TOC + 토글 스크립트
+// 🎯 개선된 TOC + 토글 스크립트
 document.addEventListener('DOMContentLoaded', function() {
   const toc = document.getElementById('toc');
   const tocToggle = document.getElementById('tocToggle');
@@ -68,9 +68,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // TOC 토글 기능
   function toggleToc() {
-    toc.classList.toggle('active');
-    tocOverlay.classList.toggle('active');
-    document.body.classList.toggle('toc-open');
+    const isActive = toc.classList.contains('active');
+    
+    if (isActive) {
+      closeToc();
+    } else {
+      openToc();
+    }
+  }
+
+  function openToc() {
+    toc.classList.add('active');
+    tocOverlay.classList.add('active');
+    document.body.classList.add('toc-open');
+    
+    // 접근성: TOC가 열리면 포커스 이동
+    setTimeout(() => {
+      tocClose.focus();
+    }, 300);
   }
 
   function closeToc() {
@@ -98,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     headings.forEach(heading => {
       const rect = heading.getBoundingClientRect();
-      if (rect.top <= 100) {
+      if (rect.top <= 120) { // 여유 공간 증가
         current = heading.id;
       }
     });
@@ -123,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!ticking) {
       requestAnimationFrame(updateActiveToc);
       ticking = true;
-      setTimeout(() => { ticking = false; }, 15);
+      setTimeout(() => { ticking = false; }, 16);
     }
   });
 
@@ -138,15 +153,15 @@ document.addEventListener('DOMContentLoaded', function() {
       const targetElement = document.getElementById(targetId);
       
       if (targetElement) {
-        const offsetTop = targetElement.offsetTop - 80;
+        const offsetTop = targetElement.offsetTop - 100;
         window.scrollTo({
           top: offsetTop,
           behavior: 'smooth'
         });
 
-        // 모바일에서 TOC 자동 닫기
+        // 좁은 화면에서 TOC 자동 닫기 (딜레이 후)
         if (window.innerWidth <= 1400) {
-          setTimeout(closeToc, 300);
+          setTimeout(closeToc, 500);
         }
       }
     });
@@ -207,7 +222,21 @@ document.addEventListener('DOMContentLoaded', function() {
   margin: 0.2rem;
 }
 
-/* 🎯 TOC 토글 버튼 (좁은 화면에서만) */
+.content {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  position: relative;
+  z-index: 1; /* 📍 콘텐츠 z-index 명시 */
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  scroll-margin-top: 120px;
+}
+
+/* 🎯 TOC 토글 버튼 */
 .toc-toggle {
   display: none;
   position: fixed;
@@ -220,19 +249,42 @@ document.addEventListener('DOMContentLoaded', function() {
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   cursor: pointer;
-  z-index: 200;
+  z-index: 300; /* 📍 최상위 */
   transition: all 0.3s ease;
 }
 
 .toc-toggle:hover {
   transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+}
+
+.toc-toggle:active {
+  transform: translateY(-50%) scale(0.95);
 }
 
 .toc-toggle svg {
   margin: 0;
+}
+
+/* 🎯 TOC 오버레이 - 정확한 z-index */
+.toc-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5); /* 📍 반투명 검정 배경 */
+  z-index: 250; /* 📍 TOC 아래, 콘텐츠 위 */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.toc-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* 🎯 TOC 컨테이너 */
@@ -247,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
   border-radius: 12px;
   padding: 0;
   box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-  z-index: 150;
+  z-index: 280; /* 📍 오버레이 위, 토글 버튼 아래 */
   max-height: 70vh;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -336,33 +388,7 @@ document.addEventListener('DOMContentLoaded', function() {
   font-size: 0.8rem;
 }
 
-/* TOC 오버레이 */
-.toc-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.3);
-  z-index: 140;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.content {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text-color);
-}
-
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  scroll-margin-top: 100px;
-}
-
-/* 🎯 반응형 TOC (좁은 화면 대응) */
+/* 🎯 좁은 화면 대응 */
 @media (max-width: 1400px) {
   .toc-toggle {
     display: flex;
@@ -372,7 +398,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   .toc-container {
     position: fixed;
-    right: -300px; /* 초기에는 숨김 */
+    right: -320px; /* 📍 완전히 숨김 */
     top: 0;
     transform: none;
     width: 300px;
@@ -381,26 +407,22 @@ document.addEventListener('DOMContentLoaded', function() {
     border-radius: 0;
     border-right: none;
     transition: right 0.3s ease;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
   }
 
   .toc-container.active {
-    right: 0; /* 활성화 시 나타남 */
+    right: 0; /* 📍 슬라이드 인 */
   }
 
   .toc-close {
     display: block;
   }
 
-  .toc-overlay.active {
-    display: block;
-    opacity: 1;
-  }
-
   .toc-content {
     max-height: calc(100vh - 60px);
   }
 
-  /* 스크롤 방지 */
+  /* 📍 TOC 열린 상태에서 스크롤 방지 */
   body.toc-open {
     overflow: hidden;
   }
@@ -417,6 +439,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   .toc-container {
     width: 280px;
+    right: -300px;
   }
   
   .toc-toggle {
@@ -448,11 +471,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   .toc-toggle {
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   }
   
   .toc-overlay {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6);
   }
 }
 </style>
