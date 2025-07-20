@@ -3,27 +3,33 @@ languageCode = 'ko-kr'
 title = '삽질 저장소 - Cybecho Blog'
 theme = 'lightbi-hugo'
 
+# 기본 설정
 paginate = 10
-disqusShortname = ""
-googleAnalytics = ""
+enableEmoji = true
+enableGitInfo = true
 
 [params]
+  # 사이트 정보
   author = "Cybecho"
   description = "개발자 Cybecho의 삽질과 학습을 기록하는 공간"
   keywords = ["개발", "프로그래밍", "학습", "기술", "삽질"]
+  
+  # 메인 페이지
   homeTitle = "삽질 저장소"
   homeSubtitle = "실패에서 배우고, 성공을 기록하다"
+  
+  # Lightbi 테마 설정
   previewCardImagePlacement = "top"
-
+  showReadingTime = true
+  showShareButtons = true
+  showRelatedPosts = true
+  showCommitSha = true
+  
+  # 소셜 미디어
   [params.social]
     github = "Cybecho"
 
-  [params.site]
-    showReadingTime = true
-    showShareButtons = true
-    showRelatedPosts = true
-    showCommitSha = true
-
+# 메뉴 설정
 [[menu.main]]
   name = "블로그"
   url = "/posts/"
@@ -44,6 +50,7 @@ googleAnalytics = ""
   url = "/about/"
   weight = 4
 
+# 마크다운 및 콘텐츠 설정
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -51,14 +58,16 @@ googleAnalytics = ""
   [markup.highlight]
     style = "github"
     lineNos = true
-    lineNumbersInTable = false
+    codeFences = true
 
+# SEO 최적화
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML"]
   section = ["HTML", "RSS"]
 
-[languages]
-  [languages.ko]
-    languageName = "한국어"
-    weight = 1
+# 이미지 처리 (notion-jam과 연동)
+[imaging]
+  resampleFilter = "CatmullRom"
+  quality = 95
+  anchor = "smart"
