@@ -3,20 +3,22 @@ languageCode = 'ko-kr'
 title = '삽질 저장소 - Cybecho Blog'
 theme = 'lightbi-hugo'
 
-# 기본 설정
-paginate = 10
+# 🔧 Hugo v0.128+ 호환 설정
 enableEmoji = true
 enableGitInfo = true
 
-# Build 설정 (Draft 필터링)
-buildDrafts = false
-buildFuture = false
-buildExpired = false
+# 🔧 paginate → pagination.pagerSize 변경
+[pagination]
+  pagerSize = 10
 
-# 모든 파라미터를 하나의 [params] 섹션으로 통합
+# 🔧 Lightbi 테마 요구사항에 맞춘 author 설정
 [params]
+  # Author 정보 (테마가 .name 필드를 찾음)
+  [params.author]
+    name = "Cybecho"
+    email = "cybecho@example.com"  # 선택사항
+    
   # 사이트 정보
-  author = "Cybecho"
   description = "개발자 Cybecho의 삽질과 학습을 기록하는 공간"
   keywords = ["개발", "프로그래밍", "학습", "기술", "삽질"]
   
@@ -31,10 +33,7 @@ buildExpired = false
   showRelatedPosts = true
   showCommitSha = true
   
-  # Draft 상태 글 숨기기
-  draft = false
-
-  # 소셜 미디어 (서브테이블로 정의)
+  # 소셜 미디어
   [params.social]
     github = "Cybecho"
 
@@ -50,7 +49,7 @@ buildExpired = false
   weight = 2
 
 [[menu.main]]
-  name = "카테고리"
+  name = "카테고리"  
   url = "/categories/"
   weight = 3
 
@@ -59,7 +58,7 @@ buildExpired = false
   url = "/about/"
   weight = 4
 
-# 마크다운 및 콘텐츠 설정
+# 마크다운 설정
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -69,7 +68,7 @@ buildExpired = false
     lineNos = true
     codeFences = true
 
-# SEO 최적화
+# 출력 형식
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML"]
@@ -81,8 +80,12 @@ buildExpired = false
   quality = 95
   anchor = "smart"
 
-# 다국어 설정 (한국어 기본)
-[languages]
-  [languages.ko]
-    languageName = "한국어"
-    weight = 1
+# 빌드 설정
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# 분류법 설정
+[taxonomies]
+  category = "categories"
+  tag = "tags"

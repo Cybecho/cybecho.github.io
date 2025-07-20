@@ -1,0 +1,189 @@
+name: Deploy Hugo to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      # 🔍 설정 파일 검증
+      - name: Validate Hugo Config
+        run: |
+          echo "=== Hugo Version ==="
+          hugo version
+          echo "=== Config Check ==="
+          hugo config
+          echo "=== Site Info ==="
+          hugo config | grep -E "(baseurl|title|theme|author)"
+
+      # 샘플 콘텐츠 생성 (테스트용)
+      - name: Create sample content
+        run: |
+          # about 페이지가 없다면 생성
+          if [ ! -f content/about.md ]; then
+            mkdir -p content
+            cat > content/about.md << 'EOF'
+          ---
+          title: "소개"
+          date: 2024-01-01T00:00:00+09:00
+          draft: false
+          ---
+
+          # 안녕하세요, Cybecho입니다! 👋
+
+          개발자로서의 삽질과 성장을 기록하는 공간입니다.
+
+          ## 이 블로그는...
+          - 🔧 개발 삽질기
+          - 📚 학습 노트
+          - 💡 문제 해결 과정
+          - 🚀 새로운 기술 탐험
+
+          을 다룹니다.
+
+          **GitHub**: [@Cybecho](https://github.com/Cybecho)
+          EOF
+          fi
+
+          # 첫 번째 포스트 생성
+          if [ ! -d "content/posts" ] || [ -z "$(ls -A content/posts 2>/dev/null)" ]; then
+            mkdir -p content/posts/welcome
+            cat > content/posts/welcome/index.md << 'EOF'
+          ---
+          title: "삽질 저장소 오픈!"
+          date: 2024-01-20T00:00:00+09:00
+          draft: false
+          tags: ["환영", "첫글"]
+          categories: ["공지"]
+          summary: "개발자 Cybecho의 기술 블로그가 드디어 오픈했습니다!"
+          ---
+
+          # 삽질 저장소에 오신 것을 환영합니다! 🎉
+
+          안녕하세요! 개발자 **Cybecho**입니다.
+
+          드디어 제 개인 기술 블로그인 **삽질 저장소**가 문을 열었습니다.
+
+          ## 왜 "삽질 저장소"일까요? 🤔
+
+          개발을 하다 보면 수많은 **시행착오**를 겪게 됩니다.
+          
+          - ❌ 몇 시간 동안 헤맨 버그들
+          - 🔧 삽질 끝에 찾은 해결책들  
+          - 📚 새로 배운 기술과 개념들
+          - 💡 "아, 이렇게 하면 되는구나!" 순간들
+
+          이런 모든 **삽질**들이 결국 성장의 밑거름이 된다고 생각해요.
+          그래서 이 블로그 이름을 **"삽질 저장소"**라고 지었습니다.
+
+          ## 어떤 내용을 다룰 예정인가요? 📝
+
+          ### 🖥️ 기술 스택
+          - **Frontend**: React, Vue.js, TypeScript
+          - **Backend**: Node.js, Python, Java
+          - **DevOps**: Docker, Kubernetes, AWS
+          - **Database**: MySQL, PostgreSQL, MongoDB
+
+          ### 📖 콘텐츠 유형
+          - **삽질기**: 실패와 성공의 솔직한 기록
+          - **학습 노트**: 새로 배운 기술 정리
+          - **프로젝트 후기**: 개인/회사 프로젝트 경험담
+          - **도구 리뷰**: 유용한 개발 도구들 소개
+
+          ## 블로그 기술 스택 🛠️
+
+          이 블로그는 다음 기술들로 구성되어 있어요:
+
+          - **CMS**: Notion (글 작성)
+          - **Static Site Generator**: Hugo
+          - **Theme**: Lightbi (깔끔한 디자인!)
+          - **Hosting**: GitHub Pages
+          - **CI/CD**: GitHub Actions
+          - **Domain**: cybecho.github.io
+
+          Notion에서 글을 작성하면 GitHub Actions가 자동으로 Hugo 사이트를 빌드하고 배포하는 구조입니다!
+
+          ## 앞으로의 계획 🚀
+
+          - **정기적인 포스팅**: 주 1~2회 목표
+          - **시리즈 연재**: 심도 있는 주제들을 연재로
+          - **오픈소스 기여**: 제가 만든 도구들 공유
+          - **커뮤니티 활동**: 개발 커뮤니티 참여 후기
+
+          ## 마무리 💬
+
+          아직 부족한 부분이 많지만, 꾸준히 기록하고 공유하며 함께 성장하는 공간이 되었으면 좋겠어요.
+
+          궁금한 점이나 피드백이 있으시면 언제든 GitHub를 통해 연락 주세요!
+
+          **Happy Coding!** ✨
+
+          ---
+          
+          **연락처**:
+          - GitHub: [@Cybecho](https://github.com/Cybecho)
+          - Blog: [삽질 저장소](https://cybecho.github.io)
+          EOF
+          fi
+
+      # Hugo 빌드
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          echo "Building with Hugo..."
+          hugo --gc --minify
+
+      # 빌드 결과 확인
+      - name: List generated files
+        run: |
+          echo "=== Generated files ==="
+          ls -la public/
+          echo "=== HTML pages ==="
+          find public -name "*.html" | wc -l
+          echo "total HTML files"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
