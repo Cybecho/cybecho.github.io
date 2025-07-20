@@ -1,4 +1,4 @@
-baseURL = 'https://[USERNAME].github.io/'
+baseURL = 'https://cybecho.github.io/'
 languageCode = 'ko-kr'
 title = '삽질 저장소'
 theme = 'hugo-blog-awesome'
@@ -11,19 +11,16 @@ enableRobotsTXT = true
 enableEmoji = true
 
 [params]
-  # 작성자 설정 (프로필 사진 URL 수정)
   [params.author]
     name = "Cybecho"
     avatar = "https://avatars.githubusercontent.com/u/42949995?v=4"
 
-  # 홈페이지 설정
   title = "삽질 저장소"
   subtitle = "본질에 몰입하는 엔지니어 입니다. HW 및 OS에 관심이 많습니다."
 
   mainSections = ["posts"]
   postSectionName = "블로그"
 
-  # 테마 기본 설정
   showToc = true
   TocOpen = false
   ShowReadingTime = true
@@ -33,7 +30,6 @@ enableEmoji = true
   UseHugoToc = true
   colorScheme = "auto"
   
-# 메뉴 설정
 [menu]
   [[menu.main]]
     identifier = "posts"
@@ -61,12 +57,11 @@ enableEmoji = true
     url = "/archives/"
     weight = 50
 
-# 마크다운 렌더러 설정
 [markup]
   [markup.goldmark.renderer]
-    unsafe = true # HTML 태그 허용
+    unsafe = true
   [markup.highlight]
-    style = "github-dark" # 코드 블록 스타일
+    style = "github-dark"
     lineNos = true
     noClasses = false
 
