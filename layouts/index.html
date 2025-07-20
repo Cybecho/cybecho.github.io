@@ -78,20 +78,16 @@
   </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // 반짝반짝 효과는 유지
-});
-</script>
-
 <style>
-/* 기존 스타일 유지 + 시리즈 태그 추가 */
+/* ===== 라이트 모드 기본 스타일 ===== */
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
   width: 100%;
   box-sizing: border-box;
+  background: #ffffff;
+  color: #1f2937;
 }
 
 .profile {
@@ -104,20 +100,23 @@ document.addEventListener('DOMContentLoaded', function() {
   height: 70px;
   border-radius: 50%;
   margin-bottom: 1rem;
+  border: 3px solid #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
 }
 
 .author {
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 0.5rem 0;
+  color: #111827;
 }
 
 .bio {
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: #4b5563;
   margin: 0 0 1rem 0;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .social-links {
@@ -128,13 +127,19 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .social-icon {
-  color: var(--text-muted);
+  color: #6b7280;
   transition: color 0.2s ease, transform 0.2s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: 2px solid #e5e7eb;
+  background: #ffffff;
 }
 
 .social-icon:hover {
-  color: var(--accent);
+  color: #3b82f6;
   transform: translateY(-2px);
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
 }
 
 .social-icon svg {
@@ -145,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
 .intro {
   margin-bottom: 2rem;
   font-size: 1rem;
-  color: var(--text-color);
+  color: #374151;
   line-height: 1.6;
   text-align: center;
 }
@@ -156,8 +161,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .section-title {
   font-size: 1.3rem;
-  font-weight: 400;
-  color: var(--text-muted);
+  font-weight: 500;
+  color: #4b5563;
   margin: 0;
   text-align: left;
 }
@@ -165,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
 .section-title em {
   font-style: italic;
   font-size: 1.2rem;
+  color: #6b7280;
 }
 
 .posts {
@@ -192,30 +198,30 @@ document.addEventListener('DOMContentLoaded', function() {
   font-size: 1.3rem;
   font-weight: 600;
   text-decoration: none;
-  color: var(--text-color);
+  color: #111827;
   line-height: 1.4;
   display: block;
 }
 
 .title a:hover {
-  color: var(--accent);
+  color: #3b82f6;
 }
 
 .date {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: #6b7280;
   white-space: nowrap;
   margin-left: auto;
+  font-weight: 500;
 }
 
 .description {
   font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.5;
+  color: #4b5563;
+  line-height: 1.6;
   margin-top: 0.5rem;
 }
 
-/* 🎯 홈 페이지 시리즈 태그 스타일 */
 .post-series {
   margin-top: 0.75rem;
 }
@@ -234,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function() {
 .post-divider {
   border: none;
   height: 1px;
-  background-color: var(--border-color, #e5e7eb);
+  background: #e5e7eb;
   margin: 0;
 }
 
@@ -246,13 +252,15 @@ document.addEventListener('DOMContentLoaded', function() {
 .sparkle-btn {
   position: relative;
   font-size: 1rem;
-  color: var(--accent);
+  color: #3b82f6;
   text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  border: 2px solid #3b82f6;
   transition: all 0.3s ease;
   overflow: hidden;
+  background: #ffffff;
 }
 
 .sparkle-btn::before {
@@ -262,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function() {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
   transform: rotate(45deg);
   transition: all 0.6s ease;
   opacity: 0;
@@ -270,7 +278,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .sparkle-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.2);
+  background: #3b82f6;
+  color: white;
 }
 
 .sparkle-btn:hover::before {
@@ -283,6 +293,78 @@ document.addEventListener('DOMContentLoaded', function() {
   100% { transform: translateX(200%) rotate(45deg); }
 }
 
+/* ===== 다크 모드 ===== */
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: #111827;
+    color: #f9fafb;
+  }
+
+  .author {
+    color: #f9fafb;
+  }
+
+  .bio {
+    color: #d1d5db;
+  }
+
+  .intro {
+    color: #e5e7eb;
+  }
+
+  .section-title {
+    color: #d1d5db;
+  }
+
+  .section-title em {
+    color: #9ca3af;
+  }
+
+  .title a {
+    color: #f9fafb;
+  }
+
+  .title a:hover {
+    color: #60a5fa;
+  }
+
+  .date {
+    color: #9ca3af;
+  }
+
+  .description {
+    color: #d1d5db;
+  }
+
+  .post-divider {
+    background: #374151;
+  }
+
+  .social-icon {
+    color: #9ca3af;
+    border-color: #374151;
+    background: #1f2937;
+  }
+
+  .social-icon:hover {
+    color: #60a5fa;
+    border-color: #60a5fa;
+    background: #1e3a8a;
+  }
+
+  .sparkle-btn {
+    color: #60a5fa;
+    border-color: #60a5fa;
+    background: #1f2937;
+  }
+
+  .sparkle-btn:hover {
+    background: #3b82f6;
+    color: white;
+  }
+}
+
+/* 반응형 */
 @media (max-width: 768px) {
   .container {
     padding: 1.5rem 1rem;

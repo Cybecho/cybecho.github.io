@@ -71,11 +71,24 @@ document.addEventListener('DOMContentLoaded', function() {
   const tocLinks = document.querySelectorAll('#toc a');
   const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
   
-  if (!toc || tocLinks.length === 0 || headings.length === 0) return;
+  console.log('TOC elements:', {
+    toc: !!toc,
+    tocToggle: !!tocToggle,
+    tocClose: !!tocClose,
+    tocOverlay: !!tocOverlay,
+    tocLinks: tocLinks.length,
+    headings: headings.length
+  });
+  
+  if (!toc) {
+    console.log('TOC not found');
+    return;
+  }
 
   // TOC 토글 기능
   function toggleToc() {
     const isActive = toc.classList.contains('active');
+    console.log('Toggle TOC, currently active:', isActive);
     
     if (isActive) {
       closeToc();
@@ -85,8 +98,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function openToc() {
+    console.log('Opening TOC');
     toc.classList.add('active');
-    tocOverlay.classList.add('active');
+    if (tocOverlay) tocOverlay.classList.add('active');
     document.body.classList.add('toc-open');
     
     // 접근성: TOC가 열리면 포커스 이동
@@ -96,83 +110,110 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function closeToc() {
+    console.log('Closing TOC');
     toc.classList.remove('active');
-    tocOverlay.classList.remove('active');
+    if (tocOverlay) tocOverlay.classList.remove('active');
     document.body.classList.remove('toc-open');
   }
 
   // 이벤트 리스너
-  if (tocToggle) tocToggle.addEventListener('click', toggleToc);
-  if (tocClose) tocClose.addEventListener('click', closeToc);
-  if (tocOverlay) tocOverlay.addEventListener('click', closeToc);
+  if (tocToggle) {
+    tocToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('TOC toggle clicked');
+      toggleToc();
+    });
+  }
+  
+  if (tocClose) {
+    tocClose.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('TOC close clicked');
+      closeToc();
+    });
+  }
+  
+  if (tocOverlay) {
+    tocOverlay.addEventListener('click', function(e) {
+      console.log('TOC overlay clicked');
+      closeToc();
+    });
+  }
 
   // ESC 키로 TOC 닫기
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && toc.classList.contains('active')) {
+      console.log('ESC key pressed, closing TOC');
       closeToc();
     }
   });
 
-  // 현재 활성 헤딩 추적
-  function updateActiveToc() {
-    let current = '';
-    const scrollY = window.scrollY;
-    
-    headings.forEach(heading => {
-      const rect = heading.getBoundingClientRect();
-      if (rect.top <= 120) {
-        current = heading.id;
-      }
-    });
-
-    // 모든 TOC 링크에서 active 클래스 제거
-    tocLinks.forEach(link => {
-      link.classList.remove('active');
-    });
-
-    // 현재 헤딩에 해당하는 TOC 링크 활성화
-    if (current) {
-      const activeLink = document.querySelector(`#toc a[href="#${current}"]`);
-      if (activeLink) {
-        activeLink.classList.add('active');
-      }
-    }
-  }
-
-  // 스크롤 이벤트 리스너 (성능 최적화)
-  let ticking = false;
-  window.addEventListener('scroll', function() {
-    if (!ticking) {
-      requestAnimationFrame(updateActiveToc);
-      ticking = true;
-      setTimeout(() => { ticking = false; }, 16);
-    }
-  });
-
-  // 초기 실행
-  updateActiveToc();
-
-  // TOC 링크 클릭 시 부드러운 스크롤 + 모바일에서 TOC 닫기
-  tocLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
+  // 현재 활성 헤딩 추적 (headings와 tocLinks가 있을 때만)
+  if (headings.length > 0 && tocLinks.length > 0) {
+    function updateActiveToc() {
+      let current = '';
+      const scrollY = window.scrollY;
       
-      if (targetElement) {
-        const offsetTop = targetElement.offsetTop - 100;
-        window.scrollTo({
-          top: offsetTop,
-          behavior: 'smooth'
-        });
+      headings.forEach(heading => {
+        if (heading.id) {
+          const rect = heading.getBoundingClientRect();
+          if (rect.top <= 120) {
+            current = heading.id;
+          }
+        }
+      });
 
-        // 좁은 화면에서 TOC 자동 닫기 (딜레이 후)
-        if (window.innerWidth <= 1400) {
-          setTimeout(closeToc, 500);
+      // 모든 TOC 링크에서 active 클래스 제거
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      // 현재 헤딩에 해당하는 TOC 링크 활성화
+      if (current) {
+        const activeLink = document.querySelector(`#toc a[href="#${current}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active');
         }
       }
+    }
+
+    // 스크롤 이벤트 리스너 (성능 최적화)
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(updateActiveToc);
+        ticking = true;
+        setTimeout(() => { ticking = false; }, 16);
+      }
     });
-  });
+
+    // 초기 실행
+    updateActiveToc();
+
+    // TOC 링크 클릭 시 부드러운 스크롤 + 모바일에서 TOC 닫기
+    tocLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          const offsetTop = targetElement.offsetTop - 100;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+
+          // 좁은 화면에서 TOC 자동 닫기 (딜레이 후)
+          if (window.innerWidth <= 1400) {
+            setTimeout(closeToc, 500);
+          }
+        }
+      });
+    });
+  }
 
   // 화면 크기 변경 시 TOC 상태 초기화
   window.addEventListener('resize', function() {

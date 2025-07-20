@@ -5,56 +5,100 @@
     <p class="page-description">{{ .Pages | len }}개의 글</p>
   </header>
 
-  <div class="series-posts">
-    {{ range .Pages.ByDate.Reverse }}
-      <article class="series-post-item">
-        <div class="post-header">
-          <h3 class="post-title">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </h3>
-          <time class="post-date">{{ .Date.Format "Jan 2, 2006" }}</time>
-        </div>
-        {{ if .Description }}
-          <div class="post-summary">{{ .Description }}</div>
-        {{ end }}
-      </article>
-    {{ end }}
-  </div>
+  {{ if .Pages }}
+    <div class="series-posts">
+      {{ range .Pages.ByDate.Reverse }}
+        <article class="series-post-item">
+          <div class="post-header">
+            <h3 class="post-title">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h3>
+            <time class="post-date">{{ .Date.Format "Jan 2, 2006" }}</time>
+          </div>
+          {{ if .Description }}
+            <div class="post-summary">{{ .Description }}</div>
+          {{ end }}
+          {{ if .Params.tags }}
+            <div class="post-tags">
+              {{ range .Params.tags }}
+                <span class="tag"># {{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+        </article>
+      {{ end }}
+    </div>
+
+    <!-- 시리즈 네비게이션 -->
+    <div class="series-navigation">
+      <a href="/series/" class="back-to-series">
+        ← 모든 시리즈 보기
+      </a>
+    </div>
+  {{ else }}
+    <div class="no-posts">
+      <p>이 시리즈에는 아직 글이 없습니다.</p>
+      <a href="/series/" class="back-to-series">← 모든 시리즈 보기</a>
+    </div>
+  {{ end }}
 </div>
 
 <style>
+/* ===== 라이트 모드 기본 스타일 ===== */
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
+  background: #ffffff;
+  color: #1f2937;
+  min-height: 60vh;
 }
 
 .page-header {
   text-align: center;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px solid #e5e7eb;
 }
 
 .page-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin: 0 0 1rem 0;
+  color: #111827;
+  line-height: 1.2;
 }
 
 .page-description {
-  color: var(--text-muted);
-  font-size: 1.1rem;
+  color: #059669;
+  font-size: 1rem;
+  font-weight: 600;
   margin: 0;
+  padding: 0.5rem 1rem;
+  background: #d1fae5;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.series-posts {
+  margin-bottom: 3rem;
 }
 
 .series-post-item {
   padding: 2rem 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
 }
 
 .series-post-item:last-child {
   border-bottom: none;
+}
+
+.series-post-item:hover {
+  background: #f9fafb;
+  margin: 0 -1rem;
+  padding: 2rem 1rem;
+  border-radius: 12px;
 }
 
 .post-header {
@@ -73,36 +117,193 @@
 .post-title a {
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--text-color);
+  color: #111827;
   text-decoration: none;
   line-height: 1.4;
 }
 
 .post-title a:hover {
-  color: var(--accent);
+  color: #3b82f6;
 }
 
 .post-date {
-  color: var(--text-muted);
+  color: #6b7280;
   font-size: 0.9rem;
   white-space: nowrap;
+  font-weight: 500;
+  background: #f3f4f6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
 }
 
 .post-summary {
-  color: var(--text-muted);
+  color: #4b5563;
   line-height: 1.6;
   font-size: 0.95rem;
+  margin-bottom: 1rem;
 }
 
+.post-tags {
+  margin-top: 0.75rem;
+}
+
+.tag {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  margin: 0.2rem 0.2rem 0 0;
+  font-weight: 500;
+}
+
+.series-navigation {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.back-to-series {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.back-to-series:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.no-posts {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.no-posts .back-to-series {
+  margin-top: 1.5rem;
+}
+
+/* ===== 다크 모드 ===== */
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: #111827;
+    color: #f9fafb;
+  }
+
+  .page-header {
+    border-bottom-color: #374151;
+  }
+
+  .page-title {
+    color: #f9fafb;
+  }
+
+  .page-description {
+    color: #065f46;
+    background: #064e3b;
+  }
+
+  .series-post-item {
+    border-bottom-color: #374151;
+  }
+
+  .series-post-item:hover {
+    background: #1f2937;
+  }
+
+  .post-title a {
+    color: #f9fafb;
+  }
+
+  .post-title a:hover {
+    color: #60a5fa;
+  }
+
+  .post-date {
+    color: #9ca3af;
+    background: #374151;
+  }
+
+  .post-summary {
+    color: #d1d5db;
+  }
+
+  .series-navigation {
+    border-top-color: #374151;
+  }
+
+  .back-to-series {
+    color: #60a5fa;
+    border-color: #60a5fa;
+  }
+
+  .back-to-series:hover {
+    background: #3b82f6;
+    color: white;
+  }
+
+  .no-posts {
+    color: #9ca3af;
+  }
+}
+
+/* 반응형 */
 @media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
   .post-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
-  
+
   .post-title a {
     font-size: 1.2rem;
+  }
+
+  .post-date {
+    font-size: 0.8rem;
+  }
+
+  .series-post-item:hover {
+    margin: 0 -0.5rem;
+    padding: 2rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0.75rem;
+  }
+
+  .page-title {
+    font-size: 1.6rem;
+  }
+
+  .post-title a {
+    font-size: 1.1rem;
+  }
+
+  .back-to-series {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
   }
 }
 </style>
