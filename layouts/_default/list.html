@@ -1,0 +1,148 @@
+{{ define "main" }}
+<div class="home">
+  <div class="bio">
+    {{ if .Site.Params.author.avatar }}
+      <img src="{{ .Site.Params.author.avatar }}" alt="{{ .Site.Params.author.name }}" class="avatar">
+    {{ end }}
+    <div class="bio-content">
+      <h1>{{ .Site.Params.homeTitle | default .Site.Title }}</h1>
+      <p>{{ .Site.Params.homeSubtitle | default .Site.Params.description }}</p>
+    </div>
+  </div>
+
+  {{ if .Content }}
+    <div class="content">
+      {{ .Content }}
+    </div>
+  {{ end }}
+
+  <div class="posts">
+    <h2>최근 글</h2>
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    {{ $limit := .Site.Params.homePostLimit | default 5 }}
+    {{ range first $limit $posts }}
+      <article class="post-item">
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <div class="post-meta">
+          <time>{{ .Date.Format "2006-01-02" }}</time>
+          {{ if .Params.tags }}
+            {{ range first 3 .Params.tags }}
+              <span class="tag">#{{ . }}</span>
+            {{ end }}
+          {{ end }}
+        </div>
+        {{ if .Description }}
+          <p>{{ .Description | truncate 150 }}</p>
+        {{ else }}
+          <p>{{ .Summary | truncate 150 }}</p>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+
+  <div class="read-more">
+    <a href="/posts/" class="btn">📚 모든 글 보기</a>
+  </div>
+</div>
+
+<style>
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bio-content h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.bio-content p {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+.posts h2 {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.post-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.post-item h3 a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.post-item h3 a:hover {
+  color: var(--accent);
+}
+
+.post-meta {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.tag {
+  margin-left: 1rem;
+  color: var(--accent);
+}
+
+.read-more {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .bio {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+</style>
+{{ end }}

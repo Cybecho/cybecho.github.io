@@ -13,16 +13,23 @@ enableRobotsTXT = true
 enableEmoji = true
 
 [params]
-  # 작성자 설정 (객체 형태로 변경)
+  # 작성자 설정 (프로필 사진 추가)
   [params.author]
     name = "Cybecho"
-    avatar = ""  # 빈 문자열로 설정
+    avatar = "https://avatars.githubusercontent.com/u/42949995?v=4"
     
   description = "개발자 Cybecho의 삽질과 학습을 기록하는 공간"
   
   # 홈페이지 설정
   homeTitle = "삽질 저장소"
   homeSubtitle = "실패에서 배우고, 성공을 기록하다"
+  
+  # Read More 버튼 활성화
+  showReadMore = true
+  readMoreText = "더 많은 글 보기"
+  
+  # 홈페이지에 표시할 최근 포스트 수
+  homePostLimit = 5
   
   # 테마 설정
   showToc = true
