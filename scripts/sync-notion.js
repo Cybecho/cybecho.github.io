@@ -271,25 +271,26 @@ async function syncNotionDatabase() {
 
         const blockContent = await convertBlocks(page.id);
 
-        // YAML Front Matter (제목 원본 보존)
+        // 🎯 YAML Front Matter (시리즈 지원)
         let frontMatter = '---\n';
         frontMatter += 'title: ' + createSafeYamlString(originalTitle) + '\n';
         frontMatter += 'date: ' + formatDate(dateValue) + '\n';
         frontMatter += 'draft: false\n';
 
-        if (tags.length > 0 || themes.length > 0) {
-          const allTags = [...tags, ...themes].map(tag => createSafeYamlString(tag));
-          frontMatter += 'tags: [' + allTags.join(', ') + ']\n';
+        // 🔧 tags와 series 분리 처리
+        if (tags.length > 0) {
+          const tagsList = tags.map(tag => createSafeYamlString(tag));
+          frontMatter += 'tags: [' + tagsList.join(', ') + ']\n';
         }
 
         if (themes.length > 0) {
           const seriesList = themes.map(theme => createSafeYamlString(theme));
-          frontMatter += 'series: [' + seriesList.join(', ') + ']\n';  // categories → series
+          frontMatter += 'series: [' + seriesList.join(', ') + ']\n';  // ✅ series로 변경
         }
 
         if (aiSummary) {
-        // Description에 AI 요약을 그대로 넣음 (Summary 표시는 레이아웃에서 처리)
-        frontMatter += 'description: ' + createSafeYamlString(aiSummary) + '\n';
+          // Description에 AI 요약을 그대로 넣음 (Summary 표시는 레이아웃에서 처리)
+          frontMatter += 'description: ' + createSafeYamlString(aiSummary) + '\n';
         }
 
         frontMatter += 'notion_id: ' + createSafeYamlString(page.id) + '\n';
@@ -348,16 +349,18 @@ async function syncNotionDatabase() {
 
     saveCache(newCache);
 
-    console.log('\n동기화 완료:');
-    console.log('성공:', successCount + '개');
-    console.log('업데이트:', updatedCount + '개');
-    console.log('스킵:', skippedCount + '개');
-    console.log('캐시 효율:', Math.round((skippedCount / allPages.length) * 100) + '%');
+    console.log('\n🎯 동기화 완료:');
+    console.log('📝 성공:', successCount + '개');
+    console.log('🔄 업데이트:', updatedCount + '개');  
+    console.log('⏭️ 스킵:', skippedCount + '개');
+    console.log('⚡ 캐시 효율:', Math.round((skippedCount / allPages.length) * 100) + '%');
+    console.log('🏷️ 시리즈 지원: 활성화');
 
   } catch (error) {
-    console.error('Notion API Error:', error.message);
+    console.error('❌ Notion API Error:', error.message);
     process.exit(0);
   }
 }
 
 syncNotionDatabase();
+// 📚 이 스크립트는 Notion 데이터베이스에서 게시물을 가져와 Markdown 파일로 변환하고 저장합니다.

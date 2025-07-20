@@ -1,0 +1,160 @@
+{{ define "main" }}
+<div class="container">
+  <header class="page-header">
+    <h1 class="page-title">시리즈</h1>
+    <p class="page-description">주제별로 정리된 글들을 확인하세요</p>
+  </header>
+
+  <div class="series-grid">
+    {{ range .Data.Terms.ByCount }}
+      <div class="series-card">
+        <h3 class="series-name">
+          <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        </h3>
+        <div class="series-count">{{ .Count }}개 글</div>
+        <div class="series-posts">
+          {{ range first 3 .Pages }}
+            <div class="series-post">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+              <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+            </div>
+          {{ end }}
+          {{ if gt .Count 3 }}
+            <div class="series-more">
+              <a href="{{ .Page.Permalink }}">더 보기 →</a>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+<style>
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.page-description {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.series-card {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.series-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border-color: var(--accent);
+}
+
+.series-name {
+  margin: 0 0 0.5rem 0;
+}
+
+.series-name a {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.series-name a:hover {
+  color: var(--accent);
+}
+
+.series-count {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.series-posts {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.series-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  gap: 1rem;
+}
+
+.series-post a {
+  flex: 1;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.series-post a:hover {
+  color: var(--accent);
+}
+
+.series-post time {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.series-more {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.series-more a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.series-more a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .series-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .series-post {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}
+</style>
+{{ end }}

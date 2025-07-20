@@ -58,6 +58,14 @@
             {{ $summary }}
           </div>
         {{ end }}
+        <!-- 🎯 시리즈 표시 추가 -->
+        {{ if .Params.series }}
+          <div class="post-series">
+            {{ range .Params.series }}
+              <span class="series-tag"># {{ . }}</span>
+            {{ end }}
+          </div>
+        {{ end }}
       </div>
     {{ end }}
     
@@ -70,8 +78,14 @@
   </div>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 반짝반짝 효과는 유지
+});
+</script>
+
 <style>
-/* 기본 스타일 유지 */
+/* 기존 스타일 유지 + 시리즈 태그 추가 */
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -128,13 +142,12 @@
   height: 18px;
 }
 
-/* 🎯 중앙정렬 추가 */
 .intro {
   margin-bottom: 2rem;
   font-size: 1rem;
   color: var(--text-color);
   line-height: 1.6;
-  text-align: center; /* 중앙정렬 */
+  text-align: center;
 }
 
 .section-header {
@@ -202,6 +215,22 @@
   margin-top: 0.5rem;
 }
 
+/* 🎯 홈 페이지 시리즈 태그 스타일 */
+.post-series {
+  margin-top: 0.75rem;
+}
+
+.series-tag {
+  display: inline-block;
+  background: #059669;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  margin: 0.2rem 0.2rem 0 0;
+  font-weight: 500;
+}
+
 .post-divider {
   border: none;
   height: 1px;
@@ -214,7 +243,6 @@
   padding: 2rem 0 1rem 0;
 }
 
-/* 🌟 반짝반짝 버튼 효과 */
 .sparkle-btn {
   position: relative;
   font-size: 1rem;
@@ -255,7 +283,6 @@
   100% { transform: translateX(200%) rotate(45deg); }
 }
 
-/* 기존 반응형 스타일 유지 */
 @media (max-width: 768px) {
   .container {
     padding: 1.5rem 1rem;
@@ -285,6 +312,7 @@
   .post-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.3rem;
   }
   
   .title {

@@ -12,6 +12,13 @@
             {{ end }}
           </div>
         {{ end }}
+        {{ if .Params.series }}
+          <div class="post-series">
+            {{ range .Params.series }}
+              <span class="series-tag">시리즈: {{ . }}</span>
+            {{ end }}
+          </div>
+        {{ end }}
       </div>
     </header>
 
@@ -84,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 접근성: TOC가 열리면 포커스 이동
     setTimeout(() => {
-      tocClose.focus();
+      if (tocClose) tocClose.focus();
     }, 300);
   }
 
@@ -113,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     headings.forEach(heading => {
       const rect = heading.getBoundingClientRect();
-      if (rect.top <= 120) { // 여유 공간 증가
+      if (rect.top <= 120) {
         current = heading.id;
       }
     });
@@ -193,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
   text-align: center;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .post-title {
@@ -201,39 +208,147 @@ document.addEventListener('DOMContentLoaded', function() {
   font-weight: 700;
   margin: 0 0 1rem 0;
   line-height: 1.2;
+  color: #1f2937;
 }
 
 .post-meta {
-  color: var(--text-muted);
+  color: #6b7280;
   font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .post-tags {
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .tag {
   display: inline-block;
-  background: var(--accent);
+  background: #3b82f6;
   color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 12px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
   font-size: 0.8rem;
-  margin: 0.2rem;
+  margin: 0.25rem;
+  font-weight: 500;
+}
+
+.post-series {
+  margin-top: 0.5rem;
+}
+
+.series-tag {
+  display: inline-block;
+  background: #059669;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  margin: 0.25rem;
+  font-weight: 500;
 }
 
 .content {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: var(--text-color);
+  color: #1f2937;
   position: relative;
-  z-index: 1; /* 📍 콘텐츠 z-index 명시 */
+  z-index: 1;
 }
 
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
   scroll-margin-top: 120px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.content h1 {
+  font-size: 2rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.content h2 {
+  font-size: 1.6rem;
+}
+
+.content h3 {
+  font-size: 1.3rem;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+}
+
+.content ul, .content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.content li {
+  margin-bottom: 0.5rem;
+}
+
+.content blockquote {
+  border-left: 4px solid #3b82f6;
+  background: #f8fafc;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #4b5563;
+}
+
+.content code {
+  background: #f1f5f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #e11d48;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.content pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.content pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.content th,
+.content td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.content th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
 }
 
 /* 🎯 TOC 토글 버튼 */
@@ -243,21 +358,21 @@ document.addEventListener('DOMContentLoaded', function() {
   top: 50%;
   right: 1rem;
   transform: translateY(-50%);
-  background: var(--accent);
+  background: #3b82f6;
   color: white;
   border: none;
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
   cursor: pointer;
-  z-index: 300; /* 📍 최상위 */
+  z-index: 300;
   transition: all 0.3s ease;
 }
 
 .toc-toggle:hover {
   transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 25px rgba(59, 130, 246, 0.4);
 }
 
 .toc-toggle:active {
@@ -268,15 +383,15 @@ document.addEventListener('DOMContentLoaded', function() {
   margin: 0;
 }
 
-/* 🎯 TOC 오버레이 - 정확한 z-index */
+/* 🎯 TOC 오버레이 */
 .toc-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.5); /* 📍 반투명 검정 배경 */
-  z-index: 250; /* 📍 TOC 아래, 콘텐츠 위 */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 250;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -294,15 +409,16 @@ document.addEventListener('DOMContentLoaded', function() {
   top: 50%;
   transform: translateY(-50%);
   width: 280px;
-  background: var(--bg-color);
-  border: 1px solid var(--border-color);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 0;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-  z-index: 280; /* 📍 오버레이 위, 토글 버튼 아래 */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  z-index: 280;
   max-height: 70vh;
   overflow: hidden;
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .toc-header {
@@ -310,14 +426,14 @@ document.addEventListener('DOMContentLoaded', function() {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.25rem;
-  border-bottom: 1px solid var(--border-color);
-  background: var(--code-bg);
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
 }
 
 .toc-title {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--text-color);
+  color: #1f2937;
   margin: 0;
 }
 
@@ -325,7 +441,7 @@ document.addEventListener('DOMContentLoaded', function() {
   display: none;
   background: none;
   border: none;
-  color: var(--text-muted);
+  color: #6b7280;
   cursor: pointer;
   padding: 0.25rem;
   border-radius: 4px;
@@ -333,14 +449,15 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .toc-close:hover {
-  color: var(--text-color);
-  background: var(--border-color);
+  color: #1f2937;
+  background: #e5e7eb;
 }
 
 .toc-content {
   padding: 1rem;
   overflow-y: auto;
   max-height: calc(70vh - 60px);
+  background: #ffffff;
 }
 
 .toc-content ul {
@@ -356,7 +473,7 @@ document.addEventListener('DOMContentLoaded', function() {
 .toc-content a {
   display: block;
   padding: 0.5rem 0.75rem;
-  color: var(--text-muted);
+  color: #6b7280;
   text-decoration: none;
   font-size: 0.9rem;
   border-radius: 6px;
@@ -366,14 +483,14 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .toc-content a:hover {
-  color: var(--accent);
-  background: var(--code-bg);
+  color: #3b82f6;
+  background: #f3f4f6;
 }
 
 .toc-content a.active {
-  color: var(--accent);
-  background: var(--code-bg);
-  border-left-color: var(--accent);
+  color: #3b82f6;
+  background: #eff6ff;
+  border-left-color: #3b82f6;
   font-weight: 500;
 }
 
@@ -398,7 +515,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   .toc-container {
     position: fixed;
-    right: -320px; /* 📍 완전히 숨김 */
+    right: -320px;
     top: 0;
     transform: none;
     width: 300px;
@@ -407,11 +524,12 @@ document.addEventListener('DOMContentLoaded', function() {
     border-radius: 0;
     border-right: none;
     transition: right 0.3s ease;
-    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
   }
 
   .toc-container.active {
-    right: 0; /* 📍 슬라이드 인 */
+    right: 0;
   }
 
   .toc-close {
@@ -422,7 +540,6 @@ document.addEventListener('DOMContentLoaded', function() {
     max-height: calc(100vh - 60px);
   }
 
-  /* 📍 TOC 열린 상태에서 스크롤 방지 */
   body.toc-open {
     overflow: hidden;
   }
@@ -451,9 +568,29 @@ document.addEventListener('DOMContentLoaded', function() {
   .content {
     font-size: 1rem;
   }
+
+  .content h1 {
+    font-size: 1.75rem;
+  }
+
+  .content h2 {
+    font-size: 1.4rem;
+  }
+
+  .content h3 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .single-container {
+    padding: 1rem 0.75rem;
+  }
+
+  .post-title {
+    font-size: 1.75rem;
+  }
+
   .toc-container {
     width: 100vw;
     right: -100vw;
@@ -462,20 +599,111 @@ document.addEventListener('DOMContentLoaded', function() {
   .toc-container.active {
     right: 0;
   }
+
+  .content {
+    font-size: 0.95rem;
+  }
 }
 
-/* 다크모드 지원 */
+/* 🎯 다크모드 대응 */
 @media (prefers-color-scheme: dark) {
-  .toc-container {
-    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  .post-header {
+    border-bottom-color: #374151;
   }
   
-  .toc-toggle {
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  .post-title {
+    color: #f9fafb;
+  }
+  
+  .content {
+    color: #f3f4f6;
+  }
+  
+  .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    color: #f9fafb;
+  }
+
+  .content h1 {
+    border-bottom-color: #374151;
+  }
+  
+  .post-meta {
+    color: #9ca3af;
+  }
+
+  .content blockquote {
+    background: #1f2937;
+    border-left-color: #60a5fa;
+    color: #d1d5db;
+  }
+
+  .content code {
+    background: #374151;
+    color: #fbbf24;
+  }
+
+  .content th {
+    background: #374151;
+    color: #f3f4f6;
+  }
+
+  .content td {
+    border-color: #4b5563;
+  }
+  
+  .toc-container {
+    background: #1f2937 !important;
+    border-color: #374151 !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  .toc-header {
+    background: #111827 !important;
+    border-bottom-color: #374151;
+  }
+  
+  .toc-title {
+    color: #f3f4f6 !important;
+  }
+  
+  .toc-content {
+    background: #1f2937 !important;
+  }
+  
+  .toc-content a {
+    color: #9ca3af;
+  }
+  
+  .toc-content a:hover {
+    color: #60a5fa;
+    background: #374151;
+  }
+  
+  .toc-content a.active {
+    color: #60a5fa;
+    background: #1e3a8a;
+    border-left-color: #60a5fa;
+  }
+  
+  .toc-close {
+    color: #9ca3af;
+  }
+  
+  .toc-close:hover {
+    color: #f3f4f6;
+    background: #374151;
   }
   
   .toc-overlay {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* 큰 화면에서의 여백 */
+@media (min-width: 1400px) {
+  .single-container {
+    max-width: 1300px;
+    padding: 2.5rem 2rem;
   }
 }
 </style>

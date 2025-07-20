@@ -4,7 +4,7 @@ title = '삽질 저장소'
 theme = 'hugo-blog-awesome'
 
 [pagination]
-  pagerSize = 20  # 한 페이지당 20개 글
+  pagerSize = 20
 
 enableRobotsTXT = true
 enableEmoji = true
@@ -41,7 +41,7 @@ enableEmoji = true
     url = "/tags/"
     weight = 20
   [[menu.main]]
-    identifier = "series"  # categories → series
+    identifier = "series"
     name = "시리즈"
     url = "/series/"
     weight = 30
@@ -68,7 +68,7 @@ enableEmoji = true
   home = ["HTML", "RSS", "JSON"]
 
 [taxonomies]
-  series = 'series'  # categories → series
+  series = 'series'
   tag = 'tags'
   archive = 'archives'
 
