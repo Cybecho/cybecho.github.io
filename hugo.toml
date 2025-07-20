@@ -1,54 +1,95 @@
 baseURL = 'https://cybecho.github.io/'
 languageCode = 'ko-kr'
 title = '삽질 저장소 - Cybecho Blog'
-theme = 'lightbi-hugo'
+theme = 'hugo-blog-awesome'
 
+# 페이지네이션
+paginate = 5
+paginatePath = "page"
+
+# 코멘트 시스템 (선택사항)
+disqusShortname = ""
+googleAnalytics = ""
+
+# 사이트 기본 설정
+enableRobotsTXT = true
 enableEmoji = true
-enableGitInfo = true
-
-[pagination]
-  pagerSize = 10
 
 [params]
-  [params.author]
-    name = "Cybecho"
-    email = "cybecho@example.com"
-    
+  author = "Cybecho"
   description = "개발자 Cybecho의 삽질과 학습을 기록하는 공간"
-  keywords = ["개발", "프로그래밍", "학습", "기술", "삽질"]
   
+  # 홈페이지 설정
   homeTitle = "삽질 저장소"
   homeSubtitle = "실패에서 배우고, 성공을 기록하다"
   
-  previewCardImagePlacement = "top"
-  showReadingTime = true
-  showShareButtons = true
-  showRelatedPosts = true
-  showCommitSha = false  # 🔧 이 부분을 false로 변경
-  
-  [params.social]
-    github = "Cybecho"
+  # 테마별 설정
+  showToc = true
+  TocOpen = false
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = false
+  tocopen = false
 
-[[menu.main]]
-  name = "블로그"
-  url = "/posts/"
-  weight = 1
+  # 프로필 이미지 (선택사항)
+  # profilePicture = "images/profile.jpg"
 
-[[menu.main]]
-  name = "태그"
-  url = "/tags/"
-  weight = 2
+  # 색상 테마
+  colorScheme = "auto" # "light", "dark", "auto"
 
-[[menu.main]]
-  name = "카테고리"
-  url = "/categories/"
-  weight = 3
+  # 소셜 링크
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Cybecho"
 
-[[menu.main]]
-  name = "소개"
-  url = "/about/"
-  weight = 4
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:your-email@example.com"
 
+# 메뉴 설정
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "블로그"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "태그"
+    url = "/tags/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "카테고리"
+    url = "/categories/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "about"
+    name = "소개"
+    url = "/about/"
+    weight = 40
+
+  [[menu.main]]
+    identifier = "archives"
+    name = "아카이브"
+    url = "/archives/"
+    weight = 50
+
+# 마크다운 설정
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -56,22 +97,36 @@ enableGitInfo = true
   [markup.highlight]
     style = "github"
     lineNos = true
-    codeFences = true
+    noClasses = false
 
+# 출력 형식
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML"]
   section = ["HTML", "RSS"]
 
-[imaging]
-  resampleFilter = "CatmullRom"
-  quality = 95
-  anchor = "smart"
+# 다국어 설정
+[languages]
+  [languages.ko]
+    languageName = "한국어"
+    weight = 1
 
-buildDrafts = false
-buildFuture = false
-buildExpired = false
-
+# 분류법 설정
 [taxonomies]
-  category = "categories"
-  tag = "tags"
+  category = 'categories'
+  tag = 'tags'
+  archive = 'archives'
+
+# 빌드 설정
+[build]
+  writeStats = true
+
+# 미디어 타입
+[mediaTypes]
+  [mediaTypes."application/manifest+json"]
+    suffixes = ["webmanifest"]
+
+[outputFormats]
+  [outputFormats.WebAppManifest]
+    mediaType = "application/manifest+json"
+    rel = "manifest"
