@@ -288,9 +288,8 @@ async function syncNotionDatabase() {
         }
 
         if (aiSummary) {
-          const truncatedSummary = aiSummary.length > 50 ? 
-            aiSummary.substring(0, 50) + '...' : aiSummary;
-          frontMatter += 'description: ' + createSafeYamlString(truncatedSummary) + '\n';
+        // Description에 AI 요약을 그대로 넣음 (Summary 표시는 레이아웃에서 처리)
+        frontMatter += 'description: ' + createSafeYamlString(aiSummary) + '\n';
         }
 
         frontMatter += 'notion_id: ' + createSafeYamlString(page.id) + '\n';
