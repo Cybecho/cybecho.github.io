@@ -19,8 +19,7 @@ enableEmoji = true
   title = "삽질 저장소"
   subtitle = "본질에 몰입하는 엔지니어 입니다. HW 및 OS에 관심이 많습니다."
 
-  # 🔥 posts 섹션만 메인으로 설정
-  mainSections = ["posts"]
+  
   postSectionName = "블로그"
 
   showToc = true
