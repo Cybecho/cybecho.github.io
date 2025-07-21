@@ -26,7 +26,8 @@
     </div>
   </header>
 
-  {{ $paginator := .Paginate .RegularPagesRecursive 20 }}
+  {{ $section := .Site.GetPage "section" "posts" }}
+  {{ $paginator := .Paginate $section.RegularPagesRecursive 20 }}
   {{ $posts := $paginator.Pages }}
 
   <!-- 갤러리 뷰 -->
