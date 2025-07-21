@@ -26,22 +26,23 @@
     </div>
   </header>
 
-  <!-- 🎯 원래 방식으로 복원: 페이지네이터 우선, 폴백 로직 포함 -->
-  {{ $posts := .Paginator.Pages }}
-  {{ if not $posts }}
-    {{ $posts = first 20 (where .Site.RegularPages "Section" "posts") }}
-  {{ end }}
+  <!-- 🎯 Hugo 페이지네이션을 강제로 사용하도록 수정 -->
+  {{ $allPosts := where .Site.RegularPages "Section" "posts" }}
+  {{ $allPosts = $allPosts.ByDate.Reverse }}
+  
+  <!-- Hugo 페이지네이터를 수동으로 생성 -->
+  {{ $paginator := .Paginate $allPosts 20 }}
+  {{ $posts := $paginator.Pages }}
 
   <!-- 🔍 디버깅 정보 (개발 환경에서만 표시) -->
   {{ if eq hugo.Environment "development" }}
     <div class="debug-info" style="background: #f3f4f6; padding: 1rem; margin-bottom: 2rem; border-radius: 8px; font-size: 0.85rem;">
       <strong>📊 디버깅 정보:</strong><br>
-      - 전체 posts 페이지 수: {{ len (where .Site.RegularPages "Section" "posts") }}<br>
-      - 현재 페이지네이터 페이지 수: {{ len .Paginator.Pages }}<br>
-      - 페이지네이터 총 페이지: {{ .Paginator.TotalPages }}<br>
-      - 현재 표시할 포스트 수: {{ len $posts }}<br>
-      - 폴백 모드: {{ if .Paginator.Pages }}No{{ else }}Yes{{ end }}<br>
-      - 현재 페이지 번호: {{ .Paginator.PageNumber }}<br>
+      - 전체 posts 페이지 수: {{ len $allPosts }}<br>
+      - 현재 페이지네이터 페이지 수: {{ len $posts }}<br>
+      - 페이지네이터 총 페이지: {{ $paginator.TotalPages }}<br>
+      - 현재 페이지 번호: {{ $paginator.PageNumber }}<br>
+      - 페이지네이터 URL: {{ $paginator.URL }}<br>
       - 섹션명: "{{ .Section }}"<br>
       - Hugo 환경: {{ hugo.Environment }}
     </div>
@@ -122,30 +123,12 @@
     {{ end }}
   </div>
 
-  <!-- 🎯 페이지네이션 (항상 표시하도록 개선) -->
-  {{ $totalPosts := len (where .Site.RegularPages "Section" "posts") }}
-  {{ $paginatorExists := gt .Paginator.TotalPages 0 }}
-  {{ $totalPages := .Paginator.TotalPages }}
-  {{ $currentPage := .Paginator.PageNumber }}
-  
-  <!-- 페이지네이터가 없어도 수동으로 페이지네이션 계산 -->
-  {{ if not $paginatorExists }}
-    {{ $totalPages = div (add $totalPosts 19) 20 }} <!-- 20개씩, 올림 계산 -->
-    {{ $currentPage = 1 }}
-  {{ end }}
-
-  {{ if gt $totalPages 1 }}
+  <!-- 🎯 Hugo 내장 페이지네이션만 사용 -->
+  {{ if gt $paginator.TotalPages 1 }}
     <nav class="pagination" aria-label="페이지네이션">
       <!-- 이전 페이지 버튼 -->
-      {{ if and $paginatorExists .Paginator.HasPrev }}
-        <a href="{{ .Paginator.Prev.URL }}" class="pagination-btn prev" rel="prev">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15,18 9,12 15,6"></polyline>
-          </svg>
-          이전
-        </a>
-      {{ else if and (not $paginatorExists) (gt $currentPage 1) }}
-        <a href="/posts/page/{{ sub $currentPage 1 }}/" class="pagination-btn prev" rel="prev">
+      {{ if $paginator.HasPrev }}
+        <a href="{{ $paginator.Prev.URL }}" class="pagination-btn prev" rel="prev">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="15,18 9,12 15,6"></polyline>
           </svg>
@@ -162,13 +145,12 @@
 
       <!-- 페이지 번호 목록 -->
       <div class="pagination-numbers">
+        {{ $currentPage := $paginator.PageNumber }}
+        {{ $totalPages := $paginator.TotalPages }}
+        
         <!-- 첫 페이지 -->
         {{ if gt $currentPage 3 }}
-          {{ if $paginatorExists }}
-            <a href="{{ .Paginator.First.URL }}" class="pagination-number">1</a>
-          {{ else }}
-            <a href="/posts/" class="pagination-number">1</a>
-          {{ end }}
+          <a href="{{ $paginator.First.URL }}" class="pagination-number">1</a>
           {{ if gt $currentPage 4 }}
             <span class="pagination-ellipsis">...</span>
           {{ end }}
@@ -184,15 +166,7 @@
           {{ if eq . $currentPage }}
             <span class="pagination-number active" aria-current="page">{{ . }}</span>
           {{ else }}
-            {{ if eq . 1 }}
-              <a href="/posts/" class="pagination-number">{{ . }}</a>
-            {{ else }}
-              {{ if $paginatorExists }}
-                <a href="{{ (index $.Paginator.Pagers (sub . 1)).URL }}" class="pagination-number">{{ . }}</a>
-              {{ else }}
-                <a href="/posts/page/{{ . }}/" class="pagination-number">{{ . }}</a>
-              {{ end }}
-            {{ end }}
+            <a href="{{ (index $paginator.Pagers (sub . 1)).URL }}" class="pagination-number">{{ . }}</a>
           {{ end }}
         {{ end }}
 
@@ -201,24 +175,13 @@
           {{ if lt $currentPage (sub $totalPages 3) }}
             <span class="pagination-ellipsis">...</span>
           {{ end }}
-          {{ if $paginatorExists }}
-            <a href="{{ .Paginator.Last.URL }}" class="pagination-number">{{ $totalPages }}</a>
-          {{ else }}
-            <a href="/posts/page/{{ $totalPages }}/" class="pagination-number">{{ $totalPages }}</a>
-          {{ end }}
+          <a href="{{ $paginator.Last.URL }}" class="pagination-number">{{ $totalPages }}</a>
         {{ end }}
       </div>
 
       <!-- 다음 페이지 버튼 -->
-      {{ if and $paginatorExists .Paginator.HasNext }}
-        <a href="{{ .Paginator.Next.URL }}" class="pagination-btn next" rel="next">
-          다음
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9,18 15,12 9,6"></polyline>
-          </svg>
-        </a>
-      {{ else if and (not $paginatorExists) (lt $currentPage $totalPages) }}
-        <a href="/posts/page/{{ add $currentPage 1 }}/" class="pagination-btn next" rel="next">
+      {{ if $paginator.HasNext }}
+        <a href="{{ $paginator.Next.URL }}" class="pagination-btn next" rel="next">
           다음
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="9,18 15,12 9,6"></polyline>
@@ -236,12 +199,12 @@
 
     <!-- 페이지 정보 -->
     <div class="pagination-info">
-      <p>{{ $currentPage }} / {{ $totalPages }} 페이지 (총 {{ $totalPosts }}개 글)</p>
+      <p>{{ $currentPage }} / {{ $totalPages }} 페이지 (총 {{ len $allPosts }}개 글)</p>
     </div>
   {{ else }}
     <!-- 페이지가 1개뿐일 때도 정보 표시 -->
     <div class="pagination-info">
-      <p>총 {{ $totalPosts }}개 글</p>
+      <p>총 {{ len $allPosts }}개 글</p>
     </div>
   {{ end }}
 </div>
