@@ -67,9 +67,12 @@
     border-radius: 5px;
     margin-left: 0.5rem;
     line-height: 1;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; /* Added transform */
   }
   .view-switcher button:hover {
     background-color: var(--tertiary-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Added box-shadow */
+    transform: translateY(-2px); /* Added transform */
   }
   .view-switcher button.active {
     background-color: var(--primary-color);
@@ -89,7 +92,7 @@
   .post-separator-top, .post-separator-bottom {
     border: 0;
     height: 1px;
-    background-color: var(--border-color);
+    background-color: var(--border-color); /* Ensure visibility */
     margin: 2rem 0;
   }
 
@@ -104,7 +107,7 @@
     background-color: var(--secondary-bg);
     border: 1px solid var(--border-color); /* Thin Round Border for Gallery */
     border-radius: 8px;
-    padding: 1rem; /* Reduced padding for shorter cards */
+    padding: 0.8rem; /* Further reduced padding for shorter cards */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -167,9 +170,11 @@
   }
   .view-list .post-title { flex-grow: 1; }
   .view-list .post-meta { margin-left: 0; margin-top: 0.5rem; } /* Adjusted margin */
-  .view-list .post-summary-ai,
+  .view-list .post-summary-ai {
+    display: block !important; /* Make them visible in list view */
+  }
   .view-list .post-tags {
-    display: block; /* Make them visible in list view */
+    display: block !important; /* Make them visible in list view */
   }
 
   /* Responsive */
