@@ -3,12 +3,11 @@ languageCode = 'ko-kr'
 title = '삽질 저장소'
 theme = 'hugo-blog-awesome'
 
+# 🎯 페이지네이션 설정 수정
 [pagination]
   pagerSize = 20
 
-enableRobotsTXT = true
-enableEmoji = true
-
+# 🎯 섹션 설정 추가
 [params]
   [params.author]
     name = "Cybecho"
@@ -17,6 +16,7 @@ enableEmoji = true
   title = "삽질 저장소"
   subtitle = "본질에 몰입하는 엔지니어 입니다. HW 및 OS에 관심이 많습니다."
 
+  # 🔧 메인 섹션 명시적 설정
   mainSections = ["posts"]
   postSectionName = "블로그"
 
@@ -28,6 +28,9 @@ enableEmoji = true
   ShowCodeCopyButtons = true
   UseHugoToc = true
   colorScheme = "auto"
+
+enableRobotsTXT = true
+enableEmoji = true
   
 [menu]
   [[menu.main]]

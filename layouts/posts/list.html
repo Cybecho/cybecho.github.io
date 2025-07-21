@@ -26,18 +26,27 @@
     </div>
   </header>
 
-  <!-- 디버깅 정보 (개발 중에만 표시) -->
+  <!-- 🎯 포스트 가져오기 - 페이지네이터 우선, 폴백 로직 포함 -->
+  {{ $posts := .Paginator.Pages }}
+  {{ if not $posts }}
+    {{ $allPosts := where .Site.RegularPages "Section" "posts" }}
+    {{ $posts = first 20 $allPosts }}
+    {{ $.Scratch.Set "useFallback" true }}
+  {{ end }}
+
+  <!-- 디버깅 정보 (나중에 제거) -->
   <div style="background: #f0f0f0; padding: 1rem; margin-bottom: 1rem; font-size: 0.8rem;">
     <strong>디버깅 정보:</strong><br>
     - 전체 페이지 수: {{ len .Site.RegularPages }}<br>
     - posts 섹션 페이지 수: {{ len (where .Site.RegularPages "Section" "posts") }}<br>
     - 현재 페이지네이터: {{ .Paginator.Pages | len }}개<br>
     - 페이지네이터 총 페이지: {{ .Paginator.TotalPages }}<br>
+    - 폴백 모드: {{ if $.Scratch.Get "useFallback" }}Yes{{ else }}No{{ end }}<br>
+    - 현재 표시할 포스트 수: {{ len $posts }}<br>
   </div>
 
   <!-- 갤러리 뷰 -->
   <div class="posts-gallery active" id="galleryView">
-    {{ $posts := .Paginator.Pages }}
     {{ if $posts }}
       {{ range $posts }}
         <article class="gallery-card">
@@ -67,15 +76,13 @@
       {{ end }}
     {{ else }}
       <div class="no-posts">
-        <p>현재 페이지에 표시할 글이 없습니다.</p>
-        <p>전체 글 수: {{ len (where .Site.RegularPages "Section" "posts") }}개</p>
+        <p>표시할 글이 없습니다.</p>
       </div>
     {{ end }}
   </div>
 
   <!-- 리스트 뷰 -->
   <div class="posts-list" id="listView">
-    {{ $posts := .Paginator.Pages }}
     {{ if $posts }}
       {{ range $index, $post := $posts }}
         {{ if gt $index 0 }}
@@ -108,85 +115,47 @@
       {{ end }}
     {{ else }}
       <div class="no-posts">
-        <p>현재 페이지에 표시할 글이 없습니다.</p>
-        <p>전체 글 수: {{ len (where .Site.RegularPages "Section" "posts") }}개</p>
+        <p>표시할 글이 없습니다.</p>
       </div>
     {{ end }}
   </div>
 
-  <!-- 페이지네이션 -->
-  {{ if gt .Paginator.TotalPages 1 }}
-    <nav class="pagination">
-      {{ if .Paginator.HasPrev }}
-        <a href="{{ .Paginator.Prev.URL }}" class="pagination-btn prev">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15,18 9,12 15,6"></polyline>
-          </svg>
-          이전
-        </a>
-      {{ end }}
-
-      <div class="pagination-numbers">
-        {{ $current := .Paginator.PageNumber }}
-        {{ $total := .Paginator.TotalPages }}
-        {{ $start := sub $current 2 }}
-        {{ $end := add $current 2 }}
-        {{ if lt $start 1 }}{{ $start = 1 }}{{ end }}
-        {{ if gt $end $total }}{{ $end = $total }}{{ end }}
-
-        {{ if gt $start 1 }}
-          <a href="{{ (index .Paginator.Pagers 0).URL }}" class="pagination-number">1</a>
-          {{ if gt $start 2 }}<span class="pagination-ellipsis">...</span>{{ end }}
+  <!-- 🎯 페이지네이션 - 폴백 모드에서는 간단한 네비게이션 -->
+  {{ if not ($.Scratch.Get "useFallback") }}
+    <!-- 정상 페이지네이션 -->
+    {{ if gt .Paginator.TotalPages 1 }}
+      <nav class="pagination">
+        {{ if .Paginator.HasPrev }}
+          <a href="{{ .Paginator.Prev.URL }}" class="pagination-btn prev">이전</a>
         {{ end }}
-
-        {{ range seq $start $end }}
-          {{ if eq . $current }}
-            <span class="pagination-number active">{{ . }}</span>
-          {{ else }}
-            <a href="{{ (index $.Paginator.Pagers (sub . 1)).URL }}" class="pagination-number">{{ . }}</a>
-          {{ end }}
+        <span>{{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}</span>
+        {{ if .Paginator.HasNext }}
+          <a href="{{ .Paginator.Next.URL }}" class="pagination-btn next">다음</a>
         {{ end }}
-
-        {{ if lt $end $total }}
-          {{ if lt $end (sub $total 1) }}<span class="pagination-ellipsis">...</span>{{ end }}
-          <a href="{{ (index .Paginator.Pagers (sub $total 1)).URL }}" class="pagination-number">{{ $total }}</a>
-        {{ end }}
-      </div>
-
-      {{ if .Paginator.HasNext }}
-        <a href="{{ .Paginator.Next.URL }}" class="pagination-btn next">
-          다음
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9,18 15,12 9,6"></polyline>
-          </svg>
-        </a>
-      {{ end }}
-    </nav>
+      </nav>
+    {{ end }}
+  {{ else }}
+    <!-- 폴백 모드 - 간단한 안내 -->
+    <div class="fallback-notice" style="text-align: center; margin-top: 2rem; padding: 1rem; background: #f0f0f0;">
+      <p>더 많은 글이 있습니다. 페이지네이션을 활성화하려면 사이트 설정을 확인해주세요.</p>
+    </div>
   {{ end }}
 </div>
 
-<!-- 기존 스크립트와 스타일은 그대로 유지 -->
+<!-- 기존 스크립트와 스타일 유지 -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const viewBtns = document.querySelectorAll('.view-btn');
   const galleryView = document.getElementById('galleryView');
   const listView = document.getElementById('listView');
 
-  console.log('View buttons:', viewBtns.length);
-  console.log('Gallery view:', galleryView);
-  console.log('List view:', listView);
-
-  // 뷰 모드 변경
   viewBtns.forEach(btn => {
     btn.addEventListener('click', function() {
       const view = this.dataset.view;
-      console.log('Switching to view:', view);
       
-      // 버튼 상태 변경
       viewBtns.forEach(b => b.classList.remove('active'));
       this.classList.add('active');
       
-      // 뷰 변경
       if (view === 'gallery') {
         galleryView.classList.add('active');
         listView.classList.remove('active');
@@ -199,7 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // 저장된 뷰 모드 복원
   const savedView = localStorage.getItem('postsView') || 'gallery';
   const targetBtn = document.querySelector(`[data-view="${savedView}"]`);
   if (targetBtn) {
@@ -207,8 +175,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
-
-<!-- 기존 스타일 그대로 유지 -->
 
 
 <style>
