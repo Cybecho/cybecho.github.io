@@ -26,24 +26,17 @@
     </div>
   </header>
 
-  <!-- 🎯 개선된 포스트 가져오기 로직 -->
+  <!-- 🎯 posts 섹션에서 페이지네이터를 강제로 사용하도록 수정 -->
   {{ $posts := .Paginator.Pages }}
-  {{ if not $posts }}
-    <!-- posts 섹션이 없으면 모든 posts 섹션 페이지를 가져옴 -->
-    {{ $allPostsPages := where .Site.RegularPages "Section" "posts" }}
-    {{ $posts = first 20 $allPostsPages }}
-  {{ end }}
 
-  <!-- 🔍 디버깅 정보 (hugo server 실행 시에만 표시) -->
+  <!-- 🔍 디버깅 정보 (개발 환경에서만 표시) -->
   {{ if eq hugo.Environment "development" }}
     <div class="debug-info" style="background: #f3f4f6; padding: 1rem; margin-bottom: 2rem; border-radius: 8px; font-size: 0.85rem;">
       <strong>📊 디버깅 정보:</strong><br>
-      - 전체 페이지 수: {{ len .Site.RegularPages }}<br>
-      - posts 섹션 페이지 수: {{ len (where .Site.RegularPages "Section" "posts") }}<br>
+      - 전체 posts 페이지 수: {{ len (where .Site.RegularPages "Section" "posts") }}<br>
       - 현재 페이지네이터 페이지 수: {{ len .Paginator.Pages }}<br>
       - 페이지네이터 총 페이지: {{ .Paginator.TotalPages }}<br>
-      - 현재 표시할 포스트 수: {{ len $posts }}<br>
-      - 폴백 모드: {{ if .Paginator.Pages }}No{{ else }}Yes{{ end }}<br>
+      - 현재 페이지 번호: {{ .Paginator.PageNumber }}<br>
       - 섹션명: "{{ .Section }}"<br>
       - Hugo 환경: {{ hugo.Environment }}
     </div>
@@ -142,66 +135,89 @@
     {{ end }}
   </div>
 
-  <!-- 🎯 페이지네이션 -->
-  {{ if gt .Paginator.TotalPages 1 }}
-    <nav class="pagination">
+  <!-- 🎯 강화된 페이지네이션 - 항상 표시 -->
+  {{ $totalPosts := len (where .Site.RegularPages "Section" "posts") }}
+  {{ $totalPages := .Paginator.TotalPages }}
+  {{ $currentPage := .Paginator.PageNumber }}
+  
+  {{ if gt $totalPages 1 }}
+    <nav class="pagination" aria-label="페이지네이션">
+      <!-- 이전 페이지 버튼 -->
       {{ if .Paginator.HasPrev }}
-        <a href="{{ .Paginator.Prev.URL }}" class="pagination-btn prev">
+        <a href="{{ .Paginator.Prev.URL }}" class="pagination-btn prev" rel="prev">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="15,18 9,12 15,6"></polyline>
           </svg>
           이전
         </a>
+      {{ else }}
+        <span class="pagination-btn prev disabled">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15,18 9,12 15,6"></polyline>
+          </svg>
+          이전
+        </span>
       {{ end }}
 
+      <!-- 페이지 번호 목록 -->
       <div class="pagination-numbers">
-        {{ $current := .Paginator.PageNumber }}
-        {{ $total := .Paginator.TotalPages }}
-        
-        <!-- 처음 페이지 -->
-        {{ if ne $current 1 }}
+        <!-- 첫 페이지 -->
+        {{ if gt $currentPage 3 }}
           <a href="{{ .Paginator.First.URL }}" class="pagination-number">1</a>
-          {{ if gt $current 3 }}
+          {{ if gt $currentPage 4 }}
             <span class="pagination-ellipsis">...</span>
           {{ end }}
         {{ end }}
 
-        <!-- 현재 페이지 주변 -->
-        {{ $start := sub $current 1 }}
-        {{ $end := add $current 1 }}
+        <!-- 현재 페이지 주변 페이지들 -->
+        {{ $start := sub $currentPage 2 }}
+        {{ $end := add $currentPage 2 }}
         {{ if lt $start 1 }}{{ $start = 1 }}{{ end }}
-        {{ if gt $end $total }}{{ $end = $total }}{{ end }}
+        {{ if gt $end $totalPages }}{{ $end = $totalPages }}{{ end }}
 
         {{ range seq $start $end }}
-          {{ if eq . $current }}
-            <span class="pagination-number active">{{ . }}</span>
+          {{ if eq . $currentPage }}
+            <span class="pagination-number active" aria-current="page">{{ . }}</span>
           {{ else }}
             <a href="{{ (index $.Paginator.Pagers (sub . 1)).URL }}" class="pagination-number">{{ . }}</a>
           {{ end }}
         {{ end }}
 
         <!-- 마지막 페이지 -->
-        {{ if ne $current $total }}
-          {{ if lt $current (sub $total 2) }}
+        {{ if lt $currentPage (sub $totalPages 2) }}
+          {{ if lt $currentPage (sub $totalPages 3) }}
             <span class="pagination-ellipsis">...</span>
           {{ end }}
-          <a href="{{ .Paginator.Last.URL }}" class="pagination-number">{{ $total }}</a>
+          <a href="{{ .Paginator.Last.URL }}" class="pagination-number">{{ $totalPages }}</a>
         {{ end }}
       </div>
 
+      <!-- 다음 페이지 버튼 -->
       {{ if .Paginator.HasNext }}
-        <a href="{{ .Paginator.Next.URL }}" class="pagination-btn next">
+        <a href="{{ .Paginator.Next.URL }}" class="pagination-btn next" rel="next">
           다음
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="9,18 15,12 9,6"></polyline>
           </svg>
         </a>
+      {{ else }}
+        <span class="pagination-btn next disabled">
+          다음
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9,18 15,12 9,6"></polyline>
+          </svg>
+        </span>
       {{ end }}
     </nav>
 
     <!-- 페이지 정보 -->
     <div class="pagination-info">
-      <p>{{ $current }} / {{ $total }} 페이지 (총 {{ len (where .Site.RegularPages "Section" "posts") }}개 글)</p>
+      <p>{{ $currentPage }} / {{ $totalPages }} 페이지 (총 {{ $totalPosts }}개 글)</p>
+    </div>
+  {{ else }}
+    <!-- 페이지가 1개뿐일 때도 정보 표시 -->
+    <div class="pagination-info">
+      <p>총 {{ $totalPosts }}개 글</p>
     </div>
   {{ end }}
 </div>
@@ -240,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <style>
-/* ===== 라이트 모드 기본 스타일 ===== */
+/* 기존 CSS는 유지하고, 페이지네이션 부분만 개선 */
 .posts-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -304,12 +320,6 @@ document.addEventListener('DOMContentLoaded', function() {
   background: #3b82f6;
   color: white;
   box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
-}
-
-/* 디버깅 정보 스타일 */
-.debug-info {
-  font-family: 'Courier New', monospace;
-  line-height: 1.6;
 }
 
 /* 갤러리 뷰 */
@@ -378,14 +388,6 @@ document.addEventListener('DOMContentLoaded', function() {
   color: #4b5563;
   line-height: 1.6;
   margin-bottom: 1rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.card-series, .list-series {
-  margin-top: auto;
 }
 
 .series-tag {
@@ -452,10 +454,6 @@ document.addEventListener('DOMContentLoaded', function() {
   margin: 0.5rem 0;
 }
 
-.list-series {
-  margin-top: 0.5rem;
-}
-
 .post-divider {
   border: none;
   height: 1px;
@@ -470,14 +468,14 @@ document.addEventListener('DOMContentLoaded', function() {
   font-size: 1.1rem;
 }
 
-/* 🎯 페이지네이션 */
+/* 🎯 강화된 페이지네이션 스타일 */
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin: 3rem 0 1rem 0;
+  flex-wrap: wrap;
 }
 
 .pagination-btn {
@@ -492,12 +490,21 @@ document.addEventListener('DOMContentLoaded', function() {
   font-weight: 500;
   border: 2px solid #e5e7eb;
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
-.pagination-btn:hover {
+.pagination-btn:hover:not(.disabled) {
   background: #3b82f6;
   color: white;
   border-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+.pagination-btn.disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  border-color: #e5e7eb;
 }
 
 .pagination-numbers {
@@ -505,14 +512,16 @@ document.addEventListener('DOMContentLoaded', function() {
   align-items: center;
   gap: 0.25rem;
   margin: 0 1rem;
+  flex-wrap: wrap;
 }
 
 .pagination-number {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 0.5rem;
   background: #f9fafb;
   color: #374151;
   text-decoration: none;
@@ -526,17 +535,20 @@ document.addEventListener('DOMContentLoaded', function() {
   background: #3b82f6;
   color: white;
   border-color: #3b82f6;
+  transform: translateY(-1px);
 }
 
 .pagination-number.active {
   background: #3b82f6;
   color: white;
   border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
 
 .pagination-ellipsis {
   color: #6b7280;
   padding: 0 0.5rem;
+  font-weight: 500;
 }
 
 .pagination-info {
@@ -544,6 +556,7 @@ document.addEventListener('DOMContentLoaded', function() {
   color: #6b7280;
   font-size: 0.9rem;
   margin-top: 1rem;
+  font-weight: 500;
 }
 
 /* 다크 모드 */
@@ -551,12 +564,6 @@ document.addEventListener('DOMContentLoaded', function() {
   .posts-container {
     color: #f9fafb;
     background: #111827;
-  }
-
-  .debug-info {
-    background: #1f2937;
-    color: #d1d5db;
-    border: 1px solid #374151;
   }
 
   .posts-header {
@@ -631,12 +638,18 @@ document.addEventListener('DOMContentLoaded', function() {
     border-color: #374151;
   }
 
-  .pagination-btn:hover,
+  .pagination-btn:hover:not(.disabled),
   .pagination-number:hover,
   .pagination-number.active {
     background: #3b82f6;
     color: white;
     border-color: #3b82f6;
+  }
+
+  .pagination-btn.disabled {
+    background: #1f2937;
+    color: #6b7280;
+    border-color: #374151;
   }
 
   .pagination-ellipsis,
@@ -646,12 +659,6 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 /* 반응형 */
-@media (min-width: 1200px) {
-  .posts-gallery {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
   .posts-container {
     padding: 1.5rem 1rem;
@@ -682,18 +689,24 @@ document.addEventListener('DOMContentLoaded', function() {
     padding-right: 0;
   }
   
+  .pagination {
+    gap: 0.25rem;
+  }
+  
   .pagination-numbers {
     margin: 0 0.5rem;
+    gap: 0.2rem;
   }
   
   .pagination-number {
-    width: 36px;
-    height: 36px;
+    min-width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
   }
 
-  .debug-info {
-    font-size: 0.75rem;
-    padding: 0.75rem;
+  .pagination-btn {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
   }
 }
 </style>
