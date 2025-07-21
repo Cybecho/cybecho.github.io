@@ -18,7 +18,8 @@ enableEmoji = true
   title = "삽질 저장소"
   subtitle = "본질에 몰입하는 엔지니어 입니다. HW 및 OS에 관심이 많습니다."
 
-  mainSections = ["posts"]
+  # 🔥 mainSections 수정 - 모든 컨텐츠를 포함하도록 변경
+  mainSections = ["posts", ""]
   postSectionName = "블로그"
 
   showToc = true
