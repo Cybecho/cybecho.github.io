@@ -3,12 +3,13 @@ languageCode = 'ko-kr'
 title = '삽질 저장소'
 theme = 'hugo-blog-awesome'
 
-# 🎯 페이지네이션 설정 (최상단으로 이동)
-paginate = 20
-paginatePath = "page"
-
 enableRobotsTXT = true
 enableEmoji = true
+
+# 🎯 Hugo v0.148+ 호환 페이지네이션 설정
+[pagination]
+  pagerSize = 20
+  path = "page"
 
 [params]
   [params.author]
@@ -18,8 +19,8 @@ enableEmoji = true
   title = "삽질 저장소"
   subtitle = "본질에 몰입하는 엔지니어 입니다. HW 및 OS에 관심이 많습니다."
 
-  # 🔥 mainSections 수정 - 모든 컨텐츠를 포함하도록 변경
-  mainSections = ["posts", ""]
+  # 🔥 posts 섹션만 메인으로 설정
+  mainSections = ["posts"]
   postSectionName = "블로그"
 
   showToc = true

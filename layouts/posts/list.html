@@ -29,18 +29,13 @@
   <!-- 🎯 개선된 포스트 가져오기 로직 -->
   {{ $posts := .Paginator.Pages }}
   {{ if not $posts }}
-    <!-- posts 섹션이 없으면 모든 정규 페이지 중에서 블로그 관련 페이지들을 가져옴 -->
-    {{ $allPages := where .Site.RegularPages "Kind" "page" }}
-    {{ $filteredPages := where $allPages "Section" "in" (slice "posts" "blog" "") }}
-    {{ if not $filteredPages }}
-      <!-- 그것도 없으면 모든 정규 페이지 사용 (about, archives 제외) -->
-      {{ $filteredPages = where $allPages "Title" "not in" (slice "소개" "About" "아카이브" "Archives") }}
-    {{ end }}
-    {{ $posts = first 20 $filteredPages }}
+    <!-- posts 섹션이 없으면 모든 posts 섹션 페이지를 가져옴 -->
+    {{ $allPostsPages := where .Site.RegularPages "Section" "posts" }}
+    {{ $posts = first 20 $allPostsPages }}
   {{ end }}
 
-  <!-- 🔍 디버깅 정보 (개발 모드에서만 표시) -->
-  {{ if .Site.IsServer }}
+  <!-- 🔍 디버깅 정보 (hugo server 실행 시에만 표시) -->
+  {{ if eq hugo.Environment "development" }}
     <div class="debug-info" style="background: #f3f4f6; padding: 1rem; margin-bottom: 2rem; border-radius: 8px; font-size: 0.85rem;">
       <strong>📊 디버깅 정보:</strong><br>
       - 전체 페이지 수: {{ len .Site.RegularPages }}<br>
@@ -49,7 +44,8 @@
       - 페이지네이터 총 페이지: {{ .Paginator.TotalPages }}<br>
       - 현재 표시할 포스트 수: {{ len $posts }}<br>
       - 폴백 모드: {{ if .Paginator.Pages }}No{{ else }}Yes{{ end }}<br>
-      - 섹션명: "{{ .Section }}"
+      - 섹션명: "{{ .Section }}"<br>
+      - Hugo 환경: {{ hugo.Environment }}
     </div>
   {{ end }}
 
@@ -62,7 +58,7 @@
             <h3 class="card-title">
               <a href="{{ .Permalink }}">{{ .Title }}</a>
             </h3>
-            <time class="card-date">{{ .Date.Format "Jan 2, 2006" }}</time>
+            <time class="card-date">{{ .Date.Format "2006년 1월 2일" }}</time>
           </div>
           {{ if .Description }}
             <div class="card-summary">
@@ -92,8 +88,8 @@
       {{ end }}
     {{ else }}
       <div class="no-posts">
-        <p>표시할 글이 없습니다.</p>
-        <p><small>content/posts/ 디렉토리에 마크다운 파일을 추가해주세요.</small></p>
+        <p>📝 아직 블로그 포스트가 없습니다.</p>
+        <p><small>Notion에서 글을 작성하면 자동으로 이곳에 표시됩니다.</small></p>
       </div>
     {{ end }}
   </div>
@@ -110,7 +106,7 @@
             <h3 class="list-title">
               <a href="{{ .Permalink }}">{{ .Title }}</a>
             </h3>
-            <time class="list-date">{{ .Date.Format "Jan 2, 2006" }}</time>
+            <time class="list-date">{{ .Date.Format "2006년 1월 2일" }}</time>
           </div>
           {{ if .Description }}
             <div class="list-summary">
@@ -140,95 +136,73 @@
       {{ end }}
     {{ else }}
       <div class="no-posts">
-        <p>표시할 글이 없습니다.</p>
-        <p><small>content/posts/ 디렉토리에 마크다운 파일을 추가해주세요.</small></p>
+        <p>📝 아직 블로그 포스트가 없습니다.</p>
+        <p><small>Notion에서 글을 작성하면 자동으로 이곳에 표시됩니다.</small></p>
       </div>
     {{ end }}
   </div>
 
-  <!-- 🎯 개선된 페이지네이션 -->
-  {{ $showPagination := false }}
-  {{ if .Paginator }}
-    {{ if gt .Paginator.TotalPages 1 }}
-      {{ $showPagination = true }}
-    {{ end }}
-  {{ else if gt (len $posts) 20 }}
-    {{ $showPagination = true }}
-  {{ end }}
-
-  {{ if $showPagination }}
+  <!-- 🎯 페이지네이션 -->
+  {{ if gt .Paginator.TotalPages 1 }}
     <nav class="pagination">
-      {{ if .Paginator }}
-        {{ if .Paginator.HasPrev }}
-          <a href="{{ .Paginator.Prev.URL }}" class="pagination-btn prev">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="15,18 9,12 15,6"></polyline>
-            </svg>
-            이전
-          </a>
+      {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="pagination-btn prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15,18 9,12 15,6"></polyline>
+          </svg>
+          이전
+        </a>
+      {{ end }}
+
+      <div class="pagination-numbers">
+        {{ $current := .Paginator.PageNumber }}
+        {{ $total := .Paginator.TotalPages }}
+        
+        <!-- 처음 페이지 -->
+        {{ if ne $current 1 }}
+          <a href="{{ .Paginator.First.URL }}" class="pagination-number">1</a>
+          {{ if gt $current 3 }}
+            <span class="pagination-ellipsis">...</span>
+          {{ end }}
         {{ end }}
 
-        <div class="pagination-numbers">
-          {{ $current := .Paginator.PageNumber }}
-          {{ $total := .Paginator.TotalPages }}
-          
-          <!-- 처음 페이지 -->
-          {{ if ne $current 1 }}
-            <a href="{{ .Paginator.First.URL }}" class="pagination-number">1</a>
-            {{ if gt $current 3 }}
-              <span class="pagination-ellipsis">...</span>
-            {{ end }}
+        <!-- 현재 페이지 주변 -->
+        {{ $start := sub $current 1 }}
+        {{ $end := add $current 1 }}
+        {{ if lt $start 1 }}{{ $start = 1 }}{{ end }}
+        {{ if gt $end $total }}{{ $end = $total }}{{ end }}
+
+        {{ range seq $start $end }}
+          {{ if eq . $current }}
+            <span class="pagination-number active">{{ . }}</span>
+          {{ else }}
+            <a href="{{ (index $.Paginator.Pagers (sub . 1)).URL }}" class="pagination-number">{{ . }}</a>
           {{ end }}
-
-          <!-- 현재 페이지 주변 -->
-          {{ $start := sub $current 1 }}
-          {{ $end := add $current 1 }}
-          {{ if lt $start 1 }}{{ $start = 1 }}{{ end }}
-          {{ if gt $end $total }}{{ $end = $total }}{{ end }}
-
-          {{ range seq $start $end }}
-            {{ if eq . $current }}
-              <span class="pagination-number active">{{ . }}</span>
-            {{ else }}
-              <a href="{{ (index $.Paginator.Pagers (sub . 1)).URL }}" class="pagination-number">{{ . }}</a>
-            {{ end }}
-          {{ end }}
-
-          <!-- 마지막 페이지 -->
-          {{ if ne $current $total }}
-            {{ if lt $current (sub $total 2) }}
-              <span class="pagination-ellipsis">...</span>
-            {{ end }}
-            <a href="{{ .Paginator.Last.URL }}" class="pagination-number">{{ $total }}</a>
-          {{ end }}
-        </div>
-
-        {{ if .Paginator.HasNext }}
-          <a href="{{ .Paginator.Next.URL }}" class="pagination-btn next">
-            다음
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9,18 15,12 9,6"></polyline>
-            </svg>
-          </a>
         {{ end }}
-      {{ else }}
-        <!-- 폴백 페이지네이션 (Paginator가 없는 경우) -->
-        <div class="pagination-numbers">
-          <span class="pagination-number active">1</span>
-        </div>
+
+        <!-- 마지막 페이지 -->
+        {{ if ne $current $total }}
+          {{ if lt $current (sub $total 2) }}
+            <span class="pagination-ellipsis">...</span>
+          {{ end }}
+          <a href="{{ .Paginator.Last.URL }}" class="pagination-number">{{ $total }}</a>
+        {{ end }}
+      </div>
+
+      {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="pagination-btn next">
+          다음
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9,18 15,12 9,6"></polyline>
+          </svg>
+        </a>
       {{ end }}
     </nav>
 
     <!-- 페이지 정보 -->
-    {{ if .Paginator }}
-      <div class="pagination-info">
-        <p>{{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }} 페이지 (총 {{ len (where .Site.RegularPages "Section" "posts") }}개 글)</p>
-      </div>
-    {{ else }}
-      <div class="pagination-info">
-        <p>총 {{ len $posts }}개 글</p>
-      </div>
-    {{ end }}
+    <div class="pagination-info">
+      <p>{{ $current }} / {{ $total }} 페이지 (총 {{ len (where .Site.RegularPages "Section" "posts") }}개 글)</p>
+    </div>
   {{ end }}
 </div>
 
@@ -496,7 +470,7 @@ document.addEventListener('DOMContentLoaded', function() {
   font-size: 1.1rem;
 }
 
-/* 🎯 개선된 페이지네이션 */
+/* 🎯 페이지네이션 */
 .pagination {
   display: flex;
   justify-content: center;
