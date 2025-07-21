@@ -26,7 +26,7 @@
     </div>
   </header>
 
-  {{ $paginator := .Paginate (where (where .Site.Pages "Section" "posts") "IsPage" true) 20 }}
+  {{ $paginator := .Paginate .RegularPagesRecursive 20 }}
   {{ $posts := $paginator.Pages }}
 
   <!-- 갤러리 뷰 -->
