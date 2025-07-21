@@ -26,24 +26,11 @@
     </div>
   </header>
 
-  <!-- 🎯 포스트 가져오기 - 페이지네이터 우선, 폴백 로직 포함 -->
+  <!-- 🎯 포스트 가져오기 - 페이지네이터 우선 -->
   {{ $posts := .Paginator.Pages }}
   {{ if not $posts }}
-    {{ $allPosts := where .Site.RegularPages "Section" "posts" }}
-    {{ $posts = first 20 $allPosts }}
-    {{ $.Scratch.Set "useFallback" true }}
+    {{ $posts = first 20 (where .Site.RegularPages "Section" "posts") }}
   {{ end }}
-
-  <!-- 디버깅 정보 (나중에 제거) -->
-  <div style="background: #f0f0f0; padding: 1rem; margin-bottom: 1rem; font-size: 0.8rem;">
-    <strong>디버깅 정보:</strong><br>
-    - 전체 페이지 수: {{ len .Site.RegularPages }}<br>
-    - posts 섹션 페이지 수: {{ len (where .Site.RegularPages "Section" "posts") }}<br>
-    - 현재 페이지네이터: {{ .Paginator.Pages | len }}개<br>
-    - 페이지네이터 총 페이지: {{ .Paginator.TotalPages }}<br>
-    - 폴백 모드: {{ if $.Scratch.Get "useFallback" }}Yes{{ else }}No{{ end }}<br>
-    - 현재 표시할 포스트 수: {{ len $posts }}<br>
-  </div>
 
   <!-- 갤러리 뷰 -->
   <div class="posts-gallery active" id="galleryView">
@@ -120,29 +107,70 @@
     {{ end }}
   </div>
 
-  <!-- 🎯 페이지네이션 - 폴백 모드에서는 간단한 네비게이션 -->
-  {{ if not ($.Scratch.Get "useFallback") }}
-    <!-- 정상 페이지네이션 -->
-    {{ if gt .Paginator.TotalPages 1 }}
-      <nav class="pagination">
-        {{ if .Paginator.HasPrev }}
-          <a href="{{ .Paginator.Prev.URL }}" class="pagination-btn prev">이전</a>
+  <!-- 🎯 완전한 페이지네이션 -->
+  {{ if gt .Paginator.TotalPages 1 }}
+    <nav class="pagination">
+      {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="pagination-btn prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15,18 9,12 15,6"></polyline>
+          </svg>
+          이전
+        </a>
+      {{ end }}
+
+      <div class="pagination-numbers">
+        {{ $current := .Paginator.PageNumber }}
+        {{ $total := .Paginator.TotalPages }}
+        
+        <!-- 처음 페이지 -->
+        {{ if ne $current 1 }}
+          <a href="{{ .Paginator.First.URL }}" class="pagination-number">1</a>
+          {{ if gt $current 3 }}
+            <span class="pagination-ellipsis">...</span>
+          {{ end }}
         {{ end }}
-        <span>{{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}</span>
-        {{ if .Paginator.HasNext }}
-          <a href="{{ .Paginator.Next.URL }}" class="pagination-btn next">다음</a>
+
+        <!-- 현재 페이지 주변 -->
+        {{ $start := sub $current 1 }}
+        {{ $end := add $current 1 }}
+        {{ if lt $start 1 }}{{ $start = 1 }}{{ end }}
+        {{ if gt $end $total }}{{ $end = $total }}{{ end }}
+
+        {{ range seq $start $end }}
+          {{ if eq . $current }}
+            <span class="pagination-number active">{{ . }}</span>
+          {{ else }}
+            <a href="{{ (index $.Paginator.Pagers (sub . 1)).URL }}" class="pagination-number">{{ . }}</a>
+          {{ end }}
         {{ end }}
-      </nav>
-    {{ end }}
-  {{ else }}
-    <!-- 폴백 모드 - 간단한 안내 -->
-    <div class="fallback-notice" style="text-align: center; margin-top: 2rem; padding: 1rem; background: #f0f0f0;">
-      <p>더 많은 글이 있습니다. 페이지네이션을 활성화하려면 사이트 설정을 확인해주세요.</p>
+
+        <!-- 마지막 페이지 -->
+        {{ if ne $current $total }}
+          {{ if lt $current (sub $total 2) }}
+            <span class="pagination-ellipsis">...</span>
+          {{ end }}
+          <a href="{{ .Paginator.Last.URL }}" class="pagination-number">{{ $total }}</a>
+        {{ end }}
+      </div>
+
+      {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="pagination-btn next">
+          다음
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9,18 15,12 9,6"></polyline>
+          </svg>
+        </a>
+      {{ end }}
+    </nav>
+
+    <!-- 페이지 정보 -->
+    <div class="pagination-info">
+      <p>{{ $current }} / {{ $total }} 페이지 (총 {{ len (where .Site.RegularPages "Section" "posts") }}개 글)</p>
     </div>
   {{ end }}
 </div>
 
-<!-- 기존 스크립트와 스타일 유지 -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const viewBtns = document.querySelectorAll('.view-btn');
@@ -176,7 +204,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-
 <style>
 /* ===== 라이트 모드 기본 스타일 ===== */
 .posts-container {
@@ -209,7 +236,6 @@ document.addEventListener('DOMContentLoaded', function() {
   gap: 1rem;
 }
 
-/* 🎯 개선된 뷰 토글 버튼 */
 .view-toggle {
   display: flex;
   background: #f3f4f6;
@@ -245,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
   box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
 
-/* 🎯 갤러리 뷰 */
+/* 갤러리 뷰 */
 .posts-gallery {
   display: none;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -332,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
   font-weight: 500;
 }
 
-/* 🎯 리스트 뷰 */
+/* 리스트 뷰 */
 .posts-list {
   display: none;
   margin-bottom: 3rem;
@@ -403,13 +429,14 @@ document.addEventListener('DOMContentLoaded', function() {
   font-size: 1.1rem;
 }
 
-/* 🎯 페이지네이션 */
+/* 🎯 개선된 페이지네이션 */
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
   margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 .pagination-btn {
@@ -471,7 +498,14 @@ document.addEventListener('DOMContentLoaded', function() {
   padding: 0 0.5rem;
 }
 
-/* ===== 다크 모드 ===== */
+.pagination-info {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* 다크 모드 */
 @media (prefers-color-scheme: dark) {
   .posts-container {
     color: #f9fafb;
@@ -558,7 +592,8 @@ document.addEventListener('DOMContentLoaded', function() {
     border-color: #3b82f6;
   }
 
-  .pagination-ellipsis {
+  .pagination-ellipsis,
+  .pagination-info {
     color: #9ca3af;
   }
 }
