@@ -1,317 +1,213 @@
 {{ define "main" }}
-<div class="posts-container">
-  <header class="posts-header">
-    <h1 class="posts-title">{{ .Title }}</h1>
-    <div class="posts-controls">
-      <div class="view-toggle">
-        <button class="view-btn active" data-view="gallery" title="갤러리 보기">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="7" height="7"></rect>
-            <rect x="14" y="3" width="7" height="7"></rect>
-            <rect x="14" y="14" width="7" height="7"></rect>
-            <rect x="3" y="14" width="7" height="7"></rect>
-          </svg>
-        </button>
-        <button class="view-btn" data-view="list" title="리스트 보기">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="8" y1="6" x2="21" y2="6"></line>
-            <line x1="8" y1="12" x2="21" y2="12"></line>
-            <line x1="8" y1="18" x2="21" y2="18"></line>
-            <line x1="3" y1="6" x2="3.01" y2="6"></line>
-            <line x1="3" y1="12" x2="3.01" y2="12"></line>
-            <line x1="3" y1="18" x2="3.01" y2="18"></line>
-          </svg>
-        </button>
-      </div>
+<div class="container">
+  <div class="header">
+    <h1 class="page-title">{{ .Title }}</h1>
+    <div class="view-switcher">
+      <button id="gallery-view-btn" title="Gallery View"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg></button>
+      <button id="list-view-btn" title="List View"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></button>
     </div>
-  </header>
-
-  {{ $section := .Site.GetPage "section" "posts" }}
-  {{ $paginator := .Paginate $section.RegularPagesRecursive 20 }}
-  {{ $posts := $paginator.Pages }}
-
-  <!-- 갤러리 뷰 -->
-  <div class="posts-gallery active" id="galleryView">
-    {{ if $posts }}
-      {{ range $posts }}
-        <article class="gallery-card">
-          <div class="card-header">
-            <h3 class="card-title">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h3>
-            <time class="card-date">{{ .Date.Format "Jan 2, 2006" }}</time>
-          </div>
-          {{ if .Description }}
-            <div class="card-summary">
-              {{ $summary := .Description }}
-              {{ if gt (len $summary) 100 }}
-                {{ $summary = printf "%s..." (substr $summary 0 97) }}
-              {{ end }}
-              {{ $summary }}
-            </div>
-          {{ end }}
-        </article>
-      {{ end }}
-    {{ else }}
-      <div class="no-posts">
-        <p>표시할 글이 없습니다.</p>
-      </div>
-    {{ end }}
   </div>
 
-  <!-- 리스트 뷰 -->
-  <div class="posts-list" id="listView">
-    {{ if $posts }}
-      {{ range $index, $post := $posts }}
-        {{ if gt $index 0 }}
-          <hr class="post-divider">
-        {{ end }}
-        <article class="list-item">
-          <div class="list-header">
-            <h3 class="list-title">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h3>
-            <time class="list-date">{{ .Date.Format "Jan 2, 2006" }}</time>
-          </div>
-          {{ if .Description }}
-            <div class="list-summary">
-              {{ .Description }}
+  <div id="post-list-container" class="post-item-container">
+    {{ $paginator := .Paginator }}
+    {{ if $paginator.Pages }}
+      {{ range $paginator.Pages }}
+        <a href="{{ .Permalink }}" class="post-item-link">
+          <article class="post-item">
+            <h2 class="post-title">{{ .Title }}</h2>
+            <div class="post-meta">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006년 01월 02일" }}</time>
+              {{ with .Params.series }}
+                <span class="post-series">
+                  {{ range . }}
+                    <span class="series-tag">{{ . }}</span>
+                  {{ end }}
+                </span>
+              {{ end }}
             </div>
-          {{ end }}
-        </article>
+            <p class="post-summary">{{ .Description | default "요약 정보가 없습니다." | truncate 150 "..." }}</p>
+          </article>
+        </a>
       {{ end }}
     {{ else }}
-      <div class="no-posts">
-        <p>표시할 글이 없습니다.</p>
-      </div>
+      <p>표시할 글이 없습니다. Notion에서 글을 작성하고 'Published' 상태로 변경했는지 확인해주세요.</p>
     {{ end }}
   </div>
 
   {{ partial "pagination.html" . }}
-
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const viewBtns = document.querySelectorAll('.view-btn');
-  const galleryView = document.getElementById('galleryView');
-  const listView = document.getElementById('listView');
+<style>
+  .container {
+    padding: 1rem;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .page-title {
+    margin: 0;
+  }
+  .view-switcher button {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+  }
+  .view-switcher button:hover {
+    background-color: var(--tertiary-bg);
+  }
+  .view-switcher button.active {
+    background-color: var(--primary-color);
+    color: var(--primary-bg);
+    border-color: var(--primary-color);
+  }
+  .view-switcher button svg {
+    vertical-align: middle;
+  }
 
-  // Load saved view or default to gallery
-  const savedView = localStorage.getItem('postsView') || 'gallery';
-  
+  /* Post Item Base Styles */
+  .post-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+  .post-item {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .post-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .post-title {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+  }
+  .post-meta {
+    font-size: 0.875rem;
+    color: var(--text-color-secondary);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .post-series {
+      display: flex;
+      gap: 0.5rem;
+  }
+  .series-tag {
+    background-color: var(--tertiary-bg);
+    color: var(--text-color-secondary);
+    padding: 0.2em 0.6em;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+  .post-summary {
+    font-size: 0.95rem;
+    margin: 0;
+    flex-grow: 1;
+    color: var(--text-color-secondary);
+  }
+
+  /* Gallery View */
+  .view-gallery .post-item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* List View */
+  .view-list .post-item-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .view-list .post-item {
+      flex-direction: row;
+      align-items: center;
+      padding: 1rem 1.5rem;
+  }
+  .view-list .post-item-link {
+      display: block;
+  }
+  .view-list .post-title {
+      font-size: 1.1rem;
+      margin: 0;
+  }
+  .view-list .post-meta {
+      margin: 0 0 0 1.5rem;
+      flex-shrink: 0;
+  }
+  .view-list .post-summary {
+      display: none; /* Hide summary in list view for brevity */
+  }
+
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .view-gallery .post-item-container,
+    .view-list .post-item-container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .view-list .post-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .view-list .post-meta {
+        margin: 0.5rem 0 0 0;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.getElementById('post-list-container');
+  const galleryBtn = document.getElementById('gallery-view-btn');
+  const listBtn = document.getElementById('list-view-btn');
+  const viewKey = 'preferred-view';
+
   function setView(view) {
-    viewBtns.forEach(b => b.classList.remove('active'));
-    document.querySelector(`[data-view="${view}"]`).classList.add('active');
-    
-    if (view === 'gallery') {
-      galleryView.classList.add('active');
-      listView.classList.remove('active');
+    if (view === 'list') {
+      container.classList.remove('view-gallery');
+      container.classList.add('view-list');
+      listBtn.classList.add('active');
+      galleryBtn.classList.remove('active');
+      localStorage.setItem(viewKey, 'list');
     } else {
-      galleryView.classList.remove('active');
-      listView.classList.add('active');
+      container.classList.remove('view-list');
+      container.classList.add('view-gallery');
+      galleryBtn.classList.add('active');
+      listBtn.classList.remove('active');
+      localStorage.setItem(viewKey, 'gallery');
     }
   }
 
-  viewBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      const view = this.dataset.view;
-      localStorage.setItem('postsView', view);
-      setView(view);
-    });
-  });
+  galleryBtn.addEventListener('click', () => setView('gallery'));
+  listBtn.addEventListener('click', () => setView('list'));
 
-  // Set initial view
-  setView(savedView);
+  // Load preferred view or default to gallery
+  const preferredView = localStorage.getItem(viewKey) || 'gallery';
+  setView(preferredView);
 });
 </script>
-
-<style>
-.posts-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-}
-
-.posts-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.posts-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-.view-toggle {
-  display: flex;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.view-btn {
-  background: transparent;
-  border: none;
-  padding: 0.5rem 0.75rem;
-  cursor: pointer;
-  color: var(--text-color);
-  border-left: 1px solid var(--border-color);
-}
-
-.view-btn:first-child {
-  border-left: none;
-}
-
-.view-btn.active {
-  background-color: var(--theme-color);
-  color: var(--bg-color);
-}
-
-.view-btn svg {
-  vertical-align: middle;
-}
-
-/* Gallery View */
-.posts-gallery {
-  display: none;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.posts-gallery.active {
-  display: grid;
-}
-
-.gallery-card {
-  background: var(--bg-color);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 1.5rem;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  display: flex;
-  flex-direction: column;
-}
-
-.gallery-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.card-header {
-  margin-bottom: 1rem;
-}
-
-.card-title a {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.card-date {
-  font-size: 0.8rem;
-  color: var(--text-color-secondary);
-  display: block;
-  margin-top: 0.25rem;
-}
-
-.card-summary {
-  font-size: 0.9rem;
-  color: var(--text-color-secondary);
-  line-height: 1.5;
-  flex-grow: 1;
-}
-
-/* List View */
-.posts-list {
-  display: none;
-  margin-bottom: 2rem;
-}
-
-.posts-list.active {
-  display: block;
-}
-
-.list-item {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.list-item:first-child {
-  padding-top: 0;
-}
-
-.list-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.5rem;
-}
-
-.list-title a {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.list-date {
-  font-size: 0.9rem;
-  color: var(--text-color-secondary);
-  white-space: nowrap;
-}
-
-.list-summary {
-  font-size: 0.95rem;
-  color: var(--text-color-secondary);
-  line-height: 1.6;
-}
-
-.no-posts {
-  text-align: center;
-  padding: 4rem 0;
-  color: var(--text-color-secondary);
-}
-
-/* Pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 3rem;
-}
-
-.pagination-btn, .pagination-number {
-  border: 1px solid var(--border-color);
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.pagination-btn.disabled {
-  color: var(--text-color-secondary);
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.pagination-number.active {
-  background-color: var(--theme-color);
-  color: var(--bg-color);
-  border-color: var(--theme-color);
-}
-
-.pagination-ellipsis {
-  padding: 0.5rem;
-}
-
-</style>
 {{ end }}
