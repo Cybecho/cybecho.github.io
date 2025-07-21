@@ -1,440 +1,200 @@
 {{ define "main" }}
 <div class="container">
-  <div class="profile">
-    {{ with .Site.Params.author }}
-      {{ if .avatar }}
-        <img class="avatar" src="{{ .avatar | absURL }}" alt="{{ .name }}">
-      {{ end }}
-      <h1 class="author">{{ .name }}</h1>
-    {{ end }}
-    <h2 class="bio">{{ .Site.Params.subtitle | default .Site.Params.description }}</h2>
-    
-    <!-- 소셜 링크 -->
-    <div class="social-links">
-      <a href="https://github.com/Cybecho" target="_blank" class="social-icon" aria-label="GitHub">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/cybecho/" target="_blank" class="social-icon" aria-label="LinkedIn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-      </a>
-      <a href="https://brunch.co.kr/@cybecho" target="_blank" class="social-icon" aria-label="Brunch">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
-      </a>
-      <a href="https://gamma.app/docs/Infra-75ni4cxerzurjak" target="_blank" class="social-icon" aria-label="Portfolio">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
-      </a>
+  <div class="header">
+    <h1 class="page-title">{{ .Title | default "최신 글" }}</h1>
+    <div class="view-switcher">
+      <button id="gallery-view-btn" title="Gallery View"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg></button>
+      <button id="list-view-btn" title="List View"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></button>
     </div>
   </div>
 
-  {{ if .Content }}
-    <div class="intro">
-      {{ .Content }}
-    </div>
-  {{ end }}
+  {{ $pages := where .Site.RegularPages "Type" "posts" }}
+  {{ $paginator := .Paginate $pages }}
 
-  <div class="section-header">
-    <h2 class="section-title"><em>Recent Posts</em></h2>
-  </div>
-
-  <div class="posts">
-    {{ $pages := where .Site.RegularPages "Section" "posts" }}
-    {{ range $index, $post := first 10 $pages }}
-      {{ if gt $index 0 }}
-        <hr class="post-divider">
+  <div id="post-list-container" class="post-item-container">
+    {{ if $paginator.Pages }}
+      {{ range $paginator.Pages }}
+        <a href="{{ .Permalink }}" class="post-item-link">
+          <article class="post-item">
+            <h2 class="post-title">{{ .Title }}</h2>
+            <div class="post-meta">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006년 01월 02일" }}</time>
+            </div>
+            <p class="post-summary">{{ .Description | default "요약 정보가 없습니다." | truncate 150 "..." }}</p>
+            {{ with .Params.series }}
+              <div class="post-series">
+                {{ range . }}
+                  <span class="series-tag">#{{ . }}</span>
+                {{ end }}
+              </div>
+            {{ end }}
+          </article>
+        </a>
       {{ end }}
-      <div class="post">
-        <div class="post-header">
-          <h3 class="title">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </h3>
-          <div class="date">{{ .Date.Format "Jan 2, 2006" }}</div>
-        </div>
-        {{ if .Description }}
-          <div class="description">
-            {{ $summary := .Description }}
-            {{ if gt (len $summary) 50 }}
-              {{ $summary = printf "%s..." (substr $summary 0 47) }}
-            {{ end }}
-            {{ $summary }}
-          </div>
-        {{ end }}
-        <!-- 🎯 시리즈 표시 추가 -->
-        {{ if .Params.series }}
-          <div class="post-series">
-            {{ range .Params.series }}
-              <span class="series-tag"># {{ . }}</span>
-            {{ end }}
-          </div>
-        {{ end }}
-      </div>
-    {{ end }}
-    
-    {{ if gt (len (where .Site.RegularPages "Section" "posts")) 10 }}
-      <hr class="post-divider">
-      <div class="read-more">
-        <a href="/posts/" class="sparkle-btn">Read More</a>
-      </div>
+    {{ else }}
+      <p class="no-posts">표시할 글이 없습니다. Notion에서 글을 작성하고 'Published' 상태로 변경했는지 확인해주세요.</p>
     {{ end }}
   </div>
+
+  {{ partial "pagination.html" . }}
 </div>
 
 <style>
-/* ===== 라이트 모드 기본 스타일 ===== */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  width: 100%;
-  box-sizing: border-box;
-  background: #ffffff;
-  color: #1f2937;
-}
-
-.profile {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* 🎯 프로필 사진 - 장식 제거 */
-.avatar {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  /* 파란색 테두리 제거 */
-}
-
-.author {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0;
-  color: #111827;
-}
-
-.bio {
-  font-size: 1.1rem;
-  color: #4b5563;
-  margin: 0 0 1rem 0;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 0.8rem;
-  margin-bottom: 1rem;
-}
-
-/* 🎯 소셜 링크 - 동그란 배경과 테두리 제거 */
-.social-icon {
-  color: #6b7280;
-  transition: color 0.2s ease, transform 0.2s ease;
-  /* 모든 장식 제거 */
-}
-
-.social-icon:hover {
-  color: #3b82f6;
-  transform: translateY(-2px);
-}
-
-.social-icon svg {
-  width: 18px;
-  height: 18px;
-}
-
-.intro {
-  margin-bottom: 2rem;
-  font-size: 1rem;
-  color: #374151;
-  line-height: 1.6;
-  text-align: center;
-}
-
-.section-header {
-  margin-bottom: 1.5rem;
-}
-
-.section-title {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #4b5563;
-  margin: 0;
-  text-align: left;
-}
-
-.section-title em {
-  font-style: italic;
-  font-size: 1.2rem;
-  color: #6b7280;
-}
-
-.posts {
-  width: 100%;
-}
-
-.post {
-  padding: 1.5rem 0;
-}
-
-.post-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 0.5rem;
-}
-
-.title {
-  flex: 1;
-  margin: 0;
-  padding-right: 1rem;
-}
-
-.title a {
-  font-size: 1.3rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #111827;
-  line-height: 1.4;
-  display: block;
-}
-
-.title a:hover {
-  color: #3b82f6;
-}
-
-.date {
-  font-size: 0.9rem;
-  color: #6b7280;
-  white-space: nowrap;
-  margin-left: auto;
-  font-weight: 500;
-}
-
-.description {
-  font-size: 0.95rem;
-  color: #4b5563;
-  line-height: 1.6;
-  margin-top: 0.5rem;
-}
-
-.post-series {
-  margin-top: 0.75rem;
-}
-
-.series-tag {
-  display: inline-block;
-  background: #059669;
-  color: white;
-  font-size: 0.75rem;
-  padding: 0.25rem 0.6rem;
-  border-radius: 12px;
-  margin: 0.2rem 0.2rem 0 0;
-  font-weight: 500;
-}
-
-.post-divider {
-  border: none;
-  height: 1px;
-  background: #e5e7eb;
-  margin: 0;
-}
-
-.read-more {
-  text-align: center;
-  padding: 2rem 0 1rem 0;
-}
-
-.sparkle-btn {
-  position: relative;
-  font-size: 1rem;
-  color: #3b82f6;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 12px;
-  border: 2px solid #3b82f6;
-  transition: all 0.3s ease;
-  overflow: hidden;
-  background: #ffffff;
-}
-
-.sparkle-btn::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
-  transform: rotate(45deg);
-  transition: all 0.6s ease;
-  opacity: 0;
-}
-
-.sparkle-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.2);
-  background: #3b82f6;
-  color: white;
-}
-
-.sparkle-btn:hover::before {
-  animation: sparkle 1.5s infinite;
-  opacity: 1;
-}
-
-@keyframes sparkle {
-  0% { transform: translateX(-100%) rotate(45deg); }
-  100% { transform: translateX(200%) rotate(45deg); }
-}
-
-/* ===== 다크 모드 ===== */
-@media (prefers-color-scheme: dark) {
   .container {
-    background: #111827;
-    color: #f9fafb;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .page-title {
+    margin: 0;
+  }
+  .view-switcher button {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    line-height: 1;
+  }
+  .view-switcher button:hover {
+    background-color: var(--tertiary-bg);
+  }
+  .view-switcher button.active {
+    background-color: var(--primary-color);
+    color: var(--primary-bg);
+    border-color: var(--primary-color);
+  }
+  .view-switcher button svg {
+    vertical-align: middle;
+  }
+  .no-posts {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-color-secondary);
   }
 
-  .author {
-    color: #f9fafb;
+  /* Post Item Base Styles */
+  .post-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
   }
-
-  .bio {
-    color: #d1d5db;
-  }
-
-  .intro {
-    color: #e5e7eb;
-  }
-
-  .section-title {
-    color: #d1d5db;
-  }
-
-  .section-title em {
-    color: #9ca3af;
-  }
-
-  .title a {
-    color: #f9fafb;
-  }
-
-  .title a:hover {
-    color: #60a5fa;
-  }
-
-  .date {
-    color: #9ca3af;
-  }
-
-  .description {
-    color: #d1d5db;
-  }
-
-  .post-divider {
-    background: #374151;
-  }
-
-  .social-icon {
-    color: #9ca3af;
-  }
-
-  .social-icon:hover {
-    color: #60a5fa;
-  }
-
-  .sparkle-btn {
-    color: #60a5fa;
-    border-color: #60a5fa;
-    background: #1f2937;
-  }
-
-  .sparkle-btn:hover {
-    background: #3b82f6;
-    color: white;
-  }
-}
-
-/* 반응형 */
-@media (max-width: 768px) {
-  .container {
-    padding: 1.5rem 1rem;
-  }
-  
-  .profile {
-    margin-bottom: 1.5rem;
-  }
-  
-  .avatar {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .author {
-    font-size: 1.5rem;
-  }
-  
-  .bio {
-    font-size: 1rem;
-  }
-  
-  .social-links {
-    gap: 0.6rem;
-  }
-  
-  .post-header {
+  .post-item {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.3rem;
+    height: 100%; /* For uniform height */
   }
-  
-  .title {
-    padding-right: 0;
-    margin-bottom: 0.3rem;
+  .post-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   }
-  
-  .title a {
+  .post-title {
     font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
   }
-  
-  .date {
-    margin-left: 0;
+  .post-meta {
+    font-size: 0.875rem;
+    color: var(--text-color-secondary);
+    margin-bottom: 1rem;
   }
-  
-  .post {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 1rem 0.8rem;
-  }
-  
-  .author {
-    font-size: 1.4rem;
-  }
-  
-  .bio {
+  .post-summary {
     font-size: 0.95rem;
+    margin: 0 0 1rem 0;
+    flex-grow: 1; /* Makes summary take up available space */
+    color: var(--text-color-secondary);
   }
-  
-  .title a {
-    font-size: 1.1rem;
+  .post-series {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto; /* Pushes series to the bottom */
   }
-  
-  .social-icon svg {
-    width: 16px;
-    height: 16px;
+  .series-tag {
+    background-color: var(--tertiary-bg);
+    color: var(--text-color-secondary);
+    padding: 0.2em 0.6em;
+    border-radius: 4px;
+    font-size: 0.8rem;
   }
-}
 
-@media (min-width: 1400px) {
-  .container {
-    max-width: 900px;
-    padding: 2.5rem 2rem;
+  /* Gallery View */
+  .view-gallery .post-item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
   }
-}
+
+  /* List View */
+  .view-list .post-item-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .view-list .post-item {
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+  .view-list .post-title { flex-grow: 1; }
+  .view-list .post-meta { margin-left: 1.5rem; flex-shrink: 0; }
+  .view-list .post-summary, .view-list .post-series { display: none; }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .view-gallery .post-item-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  @media (max-width: 768px) {
+    .header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .view-list .post-item { flex-direction: column; align-items: flex-start; }
+    .view-list .post-meta { margin-left: 0; margin-top: 0.5rem; }
+  }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.body;
+  const galleryBtn = document.getElementById('gallery-view-btn');
+  const listBtn = document.getElementById('list-view-btn');
+  const viewKey = 'preferred-view-cybecho';
+
+  function setView(view) {
+    if (view === 'list') {
+      container.classList.remove('view-gallery');
+      container.classList.add('view-list');
+      listBtn.classList.add('active');
+      galleryBtn.classList.remove('active');
+      localStorage.setItem(viewKey, 'list');
+    } else {
+      container.classList.remove('view-list');
+      container.classList.add('view-gallery');
+      galleryBtn.classList.remove('active');
+      listBtn.classList.add('active'); // 기본 뷰를 리스트로 설정
+      localStorage.setItem(viewKey, 'gallery');
+    }
+  }
+
+  galleryBtn.addEventListener('click', () => setView('gallery'));
+  listBtn.addEventListener('click', () => setView('list'));
+
+  const preferredView = localStorage.getItem(viewKey) || 'list'; // 기본 뷰를 리스트로 설정
+  setView(preferredView);
+});
+</script>
 {{ end }}
