@@ -26,10 +26,20 @@
     </div>
   </header>
 
+  <!-- 디버깅 정보 (개발 중에만 표시) -->
+  <div style="background: #f0f0f0; padding: 1rem; margin-bottom: 1rem; font-size: 0.8rem;">
+    <strong>디버깅 정보:</strong><br>
+    - 전체 페이지 수: {{ len .Site.RegularPages }}<br>
+    - posts 섹션 페이지 수: {{ len (where .Site.RegularPages "Section" "posts") }}<br>
+    - 현재 페이지네이터: {{ .Paginator.Pages | len }}개<br>
+    - 페이지네이터 총 페이지: {{ .Paginator.TotalPages }}<br>
+  </div>
+
   <!-- 갤러리 뷰 -->
   <div class="posts-gallery active" id="galleryView">
-    {{ if .Paginator.Pages }}
-      {{ range .Paginator.Pages }}
+    {{ $posts := .Paginator.Pages }}
+    {{ if $posts }}
+      {{ range $posts }}
         <article class="gallery-card">
           <div class="card-header">
             <h3 class="card-title">
@@ -57,15 +67,17 @@
       {{ end }}
     {{ else }}
       <div class="no-posts">
-        <p>아직 게시된 글이 없습니다.</p>
+        <p>현재 페이지에 표시할 글이 없습니다.</p>
+        <p>전체 글 수: {{ len (where .Site.RegularPages "Section" "posts") }}개</p>
       </div>
     {{ end }}
   </div>
 
   <!-- 리스트 뷰 -->
   <div class="posts-list" id="listView">
-    {{ if .Paginator.Pages }}
-      {{ range $index, $post := .Paginator.Pages }}
+    {{ $posts := .Paginator.Pages }}
+    {{ if $posts }}
+      {{ range $index, $post := $posts }}
         {{ if gt $index 0 }}
           <hr class="post-divider">
         {{ end }}
@@ -96,7 +108,8 @@
       {{ end }}
     {{ else }}
       <div class="no-posts">
-        <p>아직 게시된 글이 없습니다.</p>
+        <p>현재 페이지에 표시할 글이 없습니다.</p>
+        <p>전체 글 수: {{ len (where .Site.RegularPages "Section" "posts") }}개</p>
       </div>
     {{ end }}
   </div>
@@ -152,6 +165,7 @@
   {{ end }}
 </div>
 
+<!-- 기존 스크립트와 스타일은 그대로 유지 -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const viewBtns = document.querySelectorAll('.view-btn');
@@ -193,6 +207,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+<!-- 기존 스타일 그대로 유지 -->
+
 
 <style>
 /* ===== 라이트 모드 기본 스타일 ===== */
