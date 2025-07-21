@@ -1,0 +1,22 @@
+{{ $paginator := .Paginator }}
+{{ if gt $paginator.TotalPages 1 }}
+<nav class="pagination" aria-label="페이지네이션">
+  {{ if $paginator.HasPrev }}
+    <a href="{{ $paginator.Prev.URL }}" class="pagination-btn prev" rel="prev">이전</a>
+  {{ else }}
+    <span class="pagination-btn prev disabled">이전</span>
+  {{ end }}
+
+  <div class="pagination-numbers">
+    {{ range $paginator.Pagers }}
+      <a href="{{ .URL }}" class="pagination-number {{ if eq . $paginator }}active{{ end }}">{{ .PageNumber }}</a>
+    {{ end }}
+  </div>
+
+  {{ if $paginator.HasNext }}
+    <a href="{{ $paginator.Next.URL }}" class="pagination-btn next" rel="next">다음</a>
+  {{ else }}
+    <span class="pagination-btn next disabled">다음</span>
+  {{ end }}
+</nav>
+{{ end }}
