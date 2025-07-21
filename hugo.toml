@@ -36,7 +36,7 @@ enableEmoji = true
   [[menu.main]]
     identifier = "posts"
     name = "블로그"
-    url = "/posts/"
+    url = "/"
     weight = 10
   [[menu.main]]
     identifier = "tags"
