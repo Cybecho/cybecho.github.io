@@ -8,6 +8,8 @@
     </div>
   </div>
 
+  <hr class="post-separator-top">
+
   {{ $pages := where .Site.RegularPages "Type" "posts" }}
   {{ $paginator := .Paginate $pages }}
 
@@ -20,11 +22,11 @@
             <div class="post-meta">
               <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006년 01월 02일" }}</time>
             </div>
-            <p class="post-summary">{{ .Description | default "요약 정보가 없습니다." | truncate 150 "..." }}</p>
-            {{ with .Params.series }}
-              <div class="post-series">
+            <p class="post-summary-ai">{{ .Description | default "요약 정보가 없습니다." | truncate 50 "..." }}</p>
+            {{ with .Params.tags }}
+              <div class="post-tags">
                 {{ range . }}
-                  <span class="series-tag">#{{ . }}</span>
+                  <span class="tag-block">{{ . }}</span>
                 {{ end }}
               </div>
             {{ end }}
@@ -35,6 +37,8 @@
       <p class="no-posts">표시할 글이 없습니다. Notion에서 글을 작성하고 'Published' 상태로 변경했는지 확인해주세요.</p>
     {{ end }}
   </div>
+
+  <hr class="post-separator-bottom">
 
   {{ partial "pagination.html" . }}
 </div>
@@ -81,6 +85,14 @@
     color: var(--text-color-secondary);
   }
 
+  /* Separators */
+  .post-separator-top, .post-separator-bottom {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 2rem 0;
+  }
+
   /* Post Item Base Styles */
   .post-item-link {
     text-decoration: none;
@@ -90,7 +102,7 @@
   }
   .post-item {
     background-color: var(--secondary-bg);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color); /* Thin Round Border for Gallery */
     border-radius: 8px;
     padding: 1.5rem;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -112,24 +124,23 @@
     color: var(--text-color-secondary);
     margin-bottom: 1rem;
   }
-  .post-summary {
-    font-size: 0.95rem;
-    margin: 0 0 1rem 0;
-    flex-grow: 1; /* Makes summary take up available space */
+  .post-summary-ai { /* New class for AI summary */
+    font-size: 0.85rem; /* Smaller font size */
     color: var(--text-color-secondary);
+    margin: 0 0 0.5rem 0;
   }
-  .post-series {
+  .post-tags { /* New class for tags */
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: auto; /* Pushes series to the bottom */
+    margin-top: 0.5rem;
   }
-  .series-tag {
+  .tag-block {
     background-color: var(--tertiary-bg);
     color: var(--text-color-secondary);
     padding: 0.2em 0.6em;
     border-radius: 4px;
-    font-size: 0.8rem;
+    font-size: 0.75rem; /* Smaller font size for tags */
   }
 
   /* Gallery View */
@@ -137,6 +148,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
+  }
+  .view-gallery .post-summary-ai,
+  .view-gallery .post-tags {
+    display: block; /* Ensure they are visible in gallery view */
   }
 
   /* List View */
@@ -146,13 +161,16 @@
     gap: 1rem;
   }
   .view-list .post-item {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column; /* Changed to column to stack elements */
+    align-items: flex-start; /* Align items to the start */
     padding: 1rem 1.5rem;
   }
   .view-list .post-title { flex-grow: 1; }
-  .view-list .post-meta { margin-left: 1.5rem; flex-shrink: 0; }
-  .view-list .post-summary, .view-list .post-series { display: none; }
+  .view-list .post-meta { margin-left: 0; margin-top: 0.5rem; } /* Adjusted margin */
+  .view-list .post-summary-ai,
+  .view-list .post-tags {
+    display: block; /* Make them visible in list view */
+  }
 
   /* Responsive */
   @media (max-width: 992px) {
