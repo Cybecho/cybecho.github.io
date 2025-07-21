@@ -7,6 +7,7 @@ enableRobotsTXT = true
 enableEmoji = true
 
 # 🎯 Hugo v0.148+ 호환 페이지네이션 설정
+mainSections = ["posts"]
 [pagination]
   pagerSize = 20
   path = "page"
