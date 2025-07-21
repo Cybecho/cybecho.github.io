@@ -1,0 +1,44 @@
+{{ $paginator := .Paginator }}
+{{ $currentPage := $paginator.PageNumber }}
+{{ $totalPages := $paginator.TotalPages }}
+
+<!-- 표시할 페이지 번호의 최대 개수 -->
+{{ $maxPages := 5 }}
+
+<!-- 시작과 끝 페이지 번호 계산 -->
+{{ $start := $currentPage }}
+{{ $end := $currentPage }}
+
+{{ range seq 2 $maxPages }}
+  {{ if or (lt $start 2) (gt (sub $end (add $start -1)) (sub $maxPages 1)) }}
+    {{ if lt (add $end 1) $totalPages }}{{ $end = add $end 1 }}{{ end }}
+  {{ end }}
+  {{ if or (gt $end (sub $totalPages 1)) (gt (sub $end (add $start -1)) (sub $maxPages 1)) }}
+    {{ if gt (sub $start 1) 1 }}{{ $start = sub $start 1 }}{{ end }}
+  {{ end }}
+{{ end }}
+
+<!-- 첫 페이지 링크 -->
+{{ if gt $start 2 }}
+  <a href="{{ $paginator.First.URL }}" class="pagination-number">1</a>
+  <span class="pagination-ellipsis">&hellip;</span>
+{{ else if eq $start 2 }}
+    <a href="{{ $paginator.First.URL }}" class="pagination-number">1</a>
+{{ end }}
+
+<!-- 페이지 번호 목록 -->
+{{ range seq $start $end }}
+  {{ if eq . $currentPage }}
+    <span class="pagination-number active" aria-current="page">{{ . }}</span>
+  {{ else }}
+    <a href="{{ (index $paginator.Pagers (sub . 1)).URL }}" class="pagination-number">{{ . }}</a>
+  {{ end }}
+{{ end }}
+
+<!-- 마지막 페이지 링크 -->
+{{ if lt $end (sub $totalPages 1) }}
+  <span class="pagination-ellipsis">&hellip;</span>
+  <a href="{{ $paginator.Last.URL }}" class="pagination-number">{{ $totalPages }}</a>
+{{ else if eq $end (sub $totalPages 1) }}
+    <a href="{{ $paginator.Last.URL }}" class="pagination-number">{{ $totalPages }}</a>
+{{ end }}

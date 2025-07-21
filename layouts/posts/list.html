@@ -26,21 +26,17 @@
     </div>
   </header>
 
-  <!-- 🎯 Hugo 페이지네이션을 강제로 사용하도록 수정 -->
-  {{ $allPosts := where .Site.RegularPages "Section" "posts" }}
-  {{ $allPosts = $allPosts.ByDate.Reverse }}
-  
-  <!-- Hugo 페이지네이터를 수동으로 생성 -->
-  {{ $paginator := .Paginate $allPosts 20 }}
+  <!-- 🎯 Hugo 내장 페이지네이션 사용 -->
+  {{ $paginator := .Paginator }}
   {{ $posts := $paginator.Pages }}
 
   <!-- 🔍 디버깅 정보 (개발 환경에서만 표시) -->
   {{ if eq hugo.Environment "development" }}
     <div class="debug-info" style="background: #f3f4f6; padding: 1rem; margin-bottom: 2rem; border-radius: 8px; font-size: 0.85rem;">
       <strong>📊 디버깅 정보:</strong><br>
-      - 전체 posts 페이지 수: {{ len $allPosts }}<br>
-      - 현재 페이지네이터 페이지 수: {{ len $posts }}<br>
-      - 페이지네이터 총 페이지: {{ $paginator.TotalPages }}<br>
+      - 전체 글 수 (from Paginator): {{ $paginator.TotalNumberOfElements }}<br>
+      - 현재 페이지 글 수: {{ len $posts }}<br>
+      - 총 페이지 수: {{ $paginator.TotalPages }}<br>
       - 현재 페이지 번호: {{ $paginator.PageNumber }}<br>
       - 페이지네이터 URL: {{ $paginator.URL }}<br>
       - 섹션명: "{{ .Section }}"<br>
@@ -123,7 +119,7 @@
     {{ end }}
   </div>
 
-  <!-- 🎯 Hugo 내장 페이지네이션만 사용 -->
+  <!-- 🎯 Hugo 내장 페이지네이션 UI -->
   {{ if gt $paginator.TotalPages 1 }}
     <nav class="pagination" aria-label="페이지네이션">
       <!-- 이전 페이지 버튼 -->
@@ -145,38 +141,7 @@
 
       <!-- 페이지 번호 목록 -->
       <div class="pagination-numbers">
-        {{ $currentPage := $paginator.PageNumber }}
-        {{ $totalPages := $paginator.TotalPages }}
-        
-        <!-- 첫 페이지 -->
-        {{ if gt $currentPage 3 }}
-          <a href="{{ $paginator.First.URL }}" class="pagination-number">1</a>
-          {{ if gt $currentPage 4 }}
-            <span class="pagination-ellipsis">...</span>
-          {{ end }}
-        {{ end }}
-
-        <!-- 현재 페이지 주변 페이지들 -->
-        {{ $start := sub $currentPage 2 }}
-        {{ $end := add $currentPage 2 }}
-        {{ if lt $start 1 }}{{ $start = 1 }}{{ end }}
-        {{ if gt $end $totalPages }}{{ $end = $totalPages }}{{ end }}
-
-        {{ range seq $start $end }}
-          {{ if eq . $currentPage }}
-            <span class="pagination-number active" aria-current="page">{{ . }}</span>
-          {{ else }}
-            <a href="{{ (index $paginator.Pagers (sub . 1)).URL }}" class="pagination-number">{{ . }}</a>
-          {{ end }}
-        {{ end }}
-
-        <!-- 마지막 페이지 -->
-        {{ if lt $currentPage (sub $totalPages 2) }}
-          {{ if lt $currentPage (sub $totalPages 3) }}
-            <span class="pagination-ellipsis">...</span>
-          {{ end }}
-          <a href="{{ $paginator.Last.URL }}" class="pagination-number">{{ $totalPages }}</a>
-        {{ end }}
+        {{ partial "partials/pagination.html" . }}
       </div>
 
       <!-- 다음 페이지 버튼 -->
@@ -199,12 +164,12 @@
 
     <!-- 페이지 정보 -->
     <div class="pagination-info">
-      <p>{{ $currentPage }} / {{ $totalPages }} 페이지 (총 {{ len $allPosts }}개 글)</p>
+      <p>{{ $paginator.PageNumber }} / {{ $paginator.TotalPages }} 페이지 (총 {{ $paginator.TotalNumberOfElements }}개 글)</p>
     </div>
-  {{ else }}
+  {{ else if gt $paginator.TotalNumberOfElements 0 }}
     <!-- 페이지가 1개뿐일 때도 정보 표시 -->
     <div class="pagination-info">
-      <p>총 {{ len $allPosts }}개 글</p>
+      <p>총 {{ $paginator.TotalNumberOfElements }}개 글</p>
     </div>
   {{ end }}
 </div>
