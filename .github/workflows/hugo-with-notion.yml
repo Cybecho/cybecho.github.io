@@ -49,20 +49,7 @@ jobs:
 
           NOTION_SECRET="${{ secrets.NOTION_SECRET }}" DATABASE_ID="${{ secrets.DATABASE_ID }}" node scripts/sync-notion.js
 
-      # 캐시 커밋
-      - name: Commit Cache
-        run: |
-          if [ -f notion_cache.json ]; then
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-            git add notion_cache.json
-            if git diff --staged --quiet; then
-              echo "No cache changes to commit"
-            else
-              git commit -m "Update Notion cache [skip ci]" || echo "No changes to commit"
-              git push || echo "No changes to push"
-            fi
-          fi
+      
 
       - name: Build with Hugo
         env:
