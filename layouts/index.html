@@ -39,6 +39,8 @@
       <button id="list-view-btn" title="List View"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></button>
     </div>
   </div>
+  
+  <hr class="section-separator">
 
   {{ $pages := where .Site.RegularPages "Type" "posts" }}
   {{ $paginator := .Paginate $pages }}
@@ -51,19 +53,12 @@
             <h2 class="post-title">{{ .Title }}</h2>
             <div class="post-meta">
               <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006년 01월 02일" }}</time>
-              {{ with .Params.series }}
-                <span class="post-series-meta">
-                  {{ range . }}
-                    <span class="series-tag">#{{ . }}</span>
-                  {{ end }}
-                </span>
-              {{ end }}
             </div>
-            <p class="post-summary">{{ .Description | default "요약 정보가 없습니다." | truncate 150 "..." }}</p>
-            {{ with .Params.series }}
-              <div class="post-series-bottom">
+            <p class="post-summary">{{ .Description | default "요약 정보가 없습니다." | truncate 50 "..." }}</p>
+            {{ with .Params.tags }}
+              <div class="post-tags">
                 {{ range . }}
-                  <span class="series-tag">#{{ . }}</span>
+                  <span class="tag-item">{{ . }}</span>
                 {{ end }}
               </div>
             {{ end }}
@@ -75,6 +70,8 @@
     {{ end }}
   </div>
 
+  
+  <hr class="section-separator">
   {{ partial "pagination.html" . }}
 </div>
 
@@ -185,9 +182,12 @@
   border-radius: 5px;
   margin-left: 0.5rem;
   line-height: 1;
+  transition: all 0.2s ease;
 }
 .view-switcher button:hover {
   background-color: var(--tertiary-bg);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .view-switcher button.active {
   background-color: var(--primary-color);
@@ -217,7 +217,7 @@
   background-color: var(--secondary-bg);
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1.2rem;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -228,7 +228,8 @@
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 .post-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 400;
   margin: 0 0 0.5rem 0;
   line-height: 1.3;
 }
@@ -246,10 +247,11 @@
   gap: 0.5rem;
 }
 .post-summary {
-  font-size: 0.95rem;
-  margin: 0 0 1rem 0;
+  font-size: 0.85rem;
+  margin: 0 0 0.8rem 0;
   flex-grow: 1; /* Makes summary take up available space */
   color: var(--text-color-secondary);
+  line-height: 1.4;
 }
 .post-series-bottom {
   display: flex;
@@ -257,12 +259,25 @@
   gap: 0.5rem;
   margin-top: auto; /* Pushes series to the bottom */
 }
-.series-tag {
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: auto;
+}
+.tag-item {
   background-color: var(--tertiary-bg);
   color: var(--text-color-secondary);
-  padding: 0.2em 0.6em;
-  border-radius: 4px;
-  font-size: 0.8rem;
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  font-size: 0.75rem;
+}
+.section-separator {
+  border: none;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 2rem 0;
+  opacity: 0.6;
 }
 
 /* Gallery View */
@@ -279,14 +294,26 @@
   gap: 1rem;
 }
 .view-list .post-item {
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 1rem 1.5rem;
+  height: auto;
 }
-.view-list .post-title { flex-grow: 1; }
-.view-list .post-meta { margin-left: 1.5rem; flex-shrink: 0; }
-.view-list .post-summary, .view-list .post-series-bottom { display: none; }
-.view-list .post-series-meta { display: none; }
+.view-list .post-title { 
+  flex-grow: 1; 
+  margin-bottom: 0.3rem;
+}
+.view-list .post-meta { 
+  margin: 0 0 0.3rem 0; 
+  flex-shrink: 0; 
+}
+.view-list .post-summary { 
+  display: block !important; 
+  margin-bottom: 0.5rem;
+}
+.view-list .post-tags { 
+  display: block !important; 
+}
 
 /* Pagination Styles */
 .pagination {
@@ -394,11 +421,15 @@
   }
   .view-switcher button:hover {
     background-color: var(--dark-tertiary-bg, #1f2937);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
   .view-switcher button.active {
     background-color: var(--dark-primary-color, #3b82f6);
     color: var(--dark-primary-bg, #111827);
     border-color: var(--dark-primary-color, #3b82f6);
+  }
+  .section-separator {
+    background-color: var(--dark-border-color, #374151);
   }
   .post-item {
     background-color: var(--dark-secondary-bg, #1f2937);
@@ -413,7 +444,7 @@
   .post-meta, .post-summary {
     color: var(--dark-text-color-secondary, #d1d5db);
   }
-  .series-tag {
+  .tag-item {
     background-color: var(--dark-tertiary-bg, #374151);
     color: var(--dark-text-color-secondary, #d1d5db);
   }
