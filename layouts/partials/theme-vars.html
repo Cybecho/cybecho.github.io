@@ -1,0 +1,34 @@
+<style>
+:root {
+  /* Light mode colors */
+  --primary-color: #3b82f6;
+  --primary-bg: #ffffff;
+  --secondary-bg: #f9fafb;
+  --tertiary-bg: #f3f4f6;
+  --border-color: #e5e7eb;
+  --text-color: #1f2937;
+  --text-color-secondary: #6b7280;
+  --background-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode colors */
+    --primary-color: #60a5fa;
+    --primary-bg: #111827;
+    --secondary-bg: #1f2937;
+    --tertiary-bg: #374151;
+    --border-color: #4b5563;
+    --text-color: #f9fafb;
+    --text-color-secondary: #d1d5db;
+    --background-color: #111827;
+  }
+}
+
+/* Ensure body background uses CSS variable */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+</style>
