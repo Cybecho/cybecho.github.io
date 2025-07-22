@@ -2,7 +2,7 @@
 title: "폐쇄망 환경에서의 로컬 레포지토리 서버 구축"
 date: 2025-06-26
 description: "외부와 단절된 폐쇄망 환경에서 Nginx와 Docker를 활용해 안전하고 예측 가능한 내부 패키지 저장소를 구축하여 운영 안정성을 확보한 과정을 기록합니다."
-featured_image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop"
+featured_image: "https://github.com/Cybecho/cybecho.github.io/blob/main/static/images/archives/0626_cj_diagram_nginx.gif?raw=true"
 tags: ["Infra", "System", "Linux", "RHEL", "Docker", "Nginx", "Repository", "Security", "Network"]
 categories: ["Infra"]
 draft: false
