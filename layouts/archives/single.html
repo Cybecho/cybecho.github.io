@@ -1,0 +1,395 @@
+{{ define "main" }}
+<article class="archive-single">
+  <!-- 헤더 섹션 -->
+  <header class="archive-header">
+    {{ if .Params.featured_image }}
+    <div class="archive-hero-image">
+      <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" loading="lazy">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1 class="archive-title">{{ .Title }}</h1>
+          <div class="archive-meta">
+            <time class="archive-date" datetime="{{ .Date.Format "2006-01-02" }}">
+              {{ .Date.Format "2006년 1월 2일" }}
+            </time>
+            {{ if .Params.categories }}
+            <span class="archive-category">{{ index .Params.categories 0 }}</span>
+            {{ end }}
+            <span class="archive-read-time">{{ .ReadingTime }}분 읽기</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ else }}
+    <div class="archive-header-simple">
+      <h1 class="archive-title">{{ .Title }}</h1>
+      <div class="archive-meta">
+        <time class="archive-date" datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date.Format "2006년 1월 2일" }}
+        </time>
+        {{ if .Params.categories }}
+        <span class="archive-category">{{ index .Params.categories 0 }}</span>
+        {{ end }}
+        <span class="archive-read-time">{{ .ReadingTime }}분 읽기</span>
+      </div>
+    </div>
+    {{ end }}
+    
+    {{ if .Description }}
+    <p class="archive-description">{{ .Description }}</p>
+    {{ end }}
+    
+    {{ if .Params.tags }}
+    <div class="archive-tags">
+      {{ range .Params.tags }}
+      <span class="archive-tag">#{{ . }}</span>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+  <!-- 콘텐츠 섹션 -->
+  <div class="archive-content">
+    {{ .Content }}
+  </div>
+
+  <!-- 푸터 섹션 -->
+  <footer class="archive-footer">
+    <div class="archive-navigation">
+      <a href="/archives/" class="back-to-archives">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12,19 5,12 12,5"></polyline>
+        </svg>
+        아카이브로 돌아가기
+      </a>
+    </div>
+    
+    {{ if .Params.tags }}
+    <div class="related-tags">
+      <h3>관련 태그</h3>
+      <div class="tag-list">
+        {{ range .Params.tags }}
+        <a href="/tags/{{ . | urlize }}" class="tag-link">#{{ . }}</a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </footer>
+</article>
+
+<style>
+.archive-single {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* 헤더 스타일 */
+.archive-hero-image {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.archive-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  color: white;
+}
+
+.archive-hero-image .archive-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.archive-header-simple {
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.archive-header-simple .archive-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.archive-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.archive-date {
+  color: inherit;
+  opacity: 0.9;
+}
+
+.archive-category {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.archive-read-time {
+  opacity: 0.8;
+}
+
+.archive-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-color-secondary);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  padding: 0 1rem;
+}
+
+.archive-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.archive-tag {
+  background: var(--tertiary-bg);
+  color: var(--primary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.archive-tag:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* 콘텐츠 스타일 */
+.archive-content {
+  line-height: 1.7;
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 3rem;
+}
+
+.archive-content h1,
+.archive-content h2,
+.archive-content h3,
+.archive-content h4,
+.archive-content h5,
+.archive-content h6 {
+  color: var(--text-color);
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+  line-height: 1.3;
+}
+
+.archive-content h1 { font-size: 2rem; }
+.archive-content h2 { font-size: 1.6rem; }
+.archive-content h3 { font-size: 1.4rem; }
+.archive-content h4 { font-size: 1.2rem; }
+
+.archive-content p {
+  margin-bottom: 1.5rem;
+}
+
+.archive-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.archive-content blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  background: var(--tertiary-bg);
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.archive-content ul,
+.archive-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.archive-content li {
+  margin-bottom: 0.5rem;
+}
+
+.archive-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: var(--secondary-bg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.archive-content th,
+.archive-content td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.archive-content th {
+  background: var(--tertiary-bg);
+  font-weight: 600;
+}
+
+/* 푸터 스타일 */
+.archive-footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+  margin-top: 3rem;
+}
+
+.archive-navigation {
+  margin-bottom: 2rem;
+}
+
+.back-to-archives {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color-secondary);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.back-to-archives:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background: var(--tertiary-bg);
+  transform: translateX(-4px);
+}
+
+.related-tags h3 {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-link {
+  background: var(--secondary-bg);
+  color: var(--text-color-secondary);
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.tag-link:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .archive-single {
+    padding: 0 1rem;
+  }
+  
+  .archive-hero-image {
+    height: 250px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .archive-hero-image .archive-title {
+    font-size: 1.8rem;
+  }
+  
+  .archive-header-simple .archive-title {
+    font-size: 1.8rem;
+  }
+  
+  .archive-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .archive-description {
+    font-size: 1rem;
+  }
+  
+  .archive-content {
+    font-size: 0.95rem;
+  }
+  
+  .archive-content h1 { font-size: 1.6rem; }
+  .archive-content h2 { font-size: 1.4rem; }
+  .archive-content h3 { font-size: 1.2rem; }
+}
+
+/* 다크 모드 최적화 */
+[data-theme="dark"] .archive-content img {
+  opacity: 0.9;
+}
+
+[data-theme="dark"] .hero-overlay {
+  background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+}
+</style>
+{{ end }}
