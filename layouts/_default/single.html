@@ -230,6 +230,8 @@ document.addEventListener('DOMContentLoaded', function() {
   margin: 0 auto;
   padding: 2rem 1.5rem;
   position: relative;
+  color: var(--text-color);
+  background: var(--background-color);
 }
 
 .post-content {
@@ -450,8 +452,8 @@ document.addEventListener('DOMContentLoaded', function() {
   top: 50%;
   transform: translateY(-50%);
   width: 280px;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 0;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
@@ -498,7 +500,7 @@ document.addEventListener('DOMContentLoaded', function() {
   padding: 1rem;
   overflow-y: auto;
   max-height: calc(70vh - 60px);
-  background: #ffffff;
+  background: var(--background-color);
 }
 
 .toc-content ul {
@@ -566,7 +568,7 @@ document.addEventListener('DOMContentLoaded', function() {
     border-right: none;
     transition: right 0.3s ease;
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
-    background: #ffffff;
+    background: var(--background-color);
   }
 
   .toc-container.active {

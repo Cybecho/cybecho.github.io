@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    gap: 0.5rem;
+    gap: 0.3rem;
+    flex-wrap: wrap;
   }
   .pagination-btn,
   .pagination-number,
@@ -12,9 +13,9 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    min-width: 36px;
-    height: 36px;
-    padding: 0 10px;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 8px;
     border: 1px solid var(--border-color);
     border-radius: 6px;
     text-decoration: none;
@@ -22,7 +23,10 @@
     font-weight: 500;
     background-color: var(--secondary-bg);
     transition: all 0.2s ease;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .pagination-ellipsis {
     border: none;
@@ -55,9 +59,9 @@
 <nav class="pagination" aria-label="페이지네이션">
   <!-- 처음 버튼 -->
   {{ if ne $paginator.PageNumber 1 }}
-    <a href="{{ $paginator.First.URL }}" class="pagination-btn first">처음</a>
+    <a href="{{ $paginator.First.URL }}" class="pagination-btn first" title="첫 페이지">◀◀</a>
   {{ else }}
-    <span class="pagination-btn first disabled">처음</span>
+    <span class="pagination-btn first disabled" title="첫 페이지">◀◀</span>
   {{ end }}
 
   <div class="pagination-numbers">
@@ -88,9 +92,9 @@
 
   <!-- 마지막 버튼 -->
   {{ if ne $paginator.PageNumber $paginator.TotalPages }}
-    <a href="{{ $paginator.Last.URL }}" class="pagination-btn last">마지막</a>
+    <a href="{{ $paginator.Last.URL }}" class="pagination-btn last" title="마지막 페이지">▶▶</a>
   {{ else }}
-    <span class="pagination-btn last disabled">마지막</span>
+    <span class="pagination-btn last disabled" title="마지막 페이지">▶▶</span>
   {{ end }}
 </nav>
 {{ end }}

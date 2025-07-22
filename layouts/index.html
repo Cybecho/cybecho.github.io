@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ partial "theme-vars.html" . }}
 <div class="container">
   <div class="profile">
     {{ with .Site.Params.author }}
@@ -91,8 +90,8 @@
   padding: 2rem 1.5rem;
   width: 100%;
   box-sizing: border-box;
-  background: #ffffff;
-  color: #1f2937;
+  background: var(--background-color);
+  color: var(--text-color);
 }
 
 .profile {
@@ -304,7 +303,8 @@
 .view-gallery .post-item-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
+  row-gap: 2.5rem;
 }
 .view-gallery .post-item {
   border: 1px solid var(--border-color);

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
+  <meta name="author" content="{{ .Site.Params.author.name }}">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
+  <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
+  
+  <!-- RSS Feed -->
+  {{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}">
+  {{ end }}
+  
+  <!-- JSON Feed for Search -->
+  {{ with .OutputFormats.Get "JSON" }}
+    <link href="{{ .Permalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }} Search Index">
+  {{ end }}
+  
+  <!-- Include theme variables -->
+  {{ partial "theme-vars.html" . }}
+</head>
+<body>
+  {{ partial "header.html" . }}
+  
+  <main role="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+  
+  <!-- Search Modal -->
+  {{ partial "search.html" . }}
+  
+  <!-- Load search scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+  <script>
+    // Initialize search functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof initSearch === 'function') {
+        initSearch();
+      }
+    });
+    
+    // Keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+      // Ctrl+K or Cmd+K to open search
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        const searchModal = document.getElementById('search-modal');
+        if (searchModal) {
+          searchModal.style.display = 'block';
+          document.getElementById('search-input').focus();
+        }
+      }
+      
+      // Escape to close search
+      if (e.key === 'Escape') {
+        const searchModal = document.getElementById('search-modal');
+        if (searchModal && searchModal.style.display === 'block') {
+          searchModal.style.display = 'none';
+        }
+      }
+    });
+  </script>
+</body>
+</html>

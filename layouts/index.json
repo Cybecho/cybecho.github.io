@@ -1,0 +1,19 @@
+{{- $.Scratch.Add "searchIndex" slice -}}
+{{- range where .Site.RegularPages "Type" "posts" -}}
+  {{- $content := .Plain | htmlUnescape | plainify -}}
+  {{- $summary := .Description | default .Summary | plainify -}}
+  {{- $tags := delimit .Params.tags ", " -}}
+  {{- $series := delimit .Params.series ", " -}}
+  {{- $.Scratch.Add "searchIndex" (dict 
+    "title" .Title
+    "url" .RelPermalink
+    "date" (.Date.Format "2006-01-02")
+    "dateFormatted" (.Date.Format "2006년 1월 2일")
+    "summary" $summary
+    "content" ($content | truncate 500 "...")
+    "tags" $tags
+    "series" $series
+    "section" .Section
+  ) -}}
+{{- end -}}
+{{- $.Scratch.Get "searchIndex" | jsonify -}}
