@@ -4,7 +4,7 @@
       <!-- Site Logo/Title -->
       <div class="site-brand">
         <a href="/" class="brand-link">
-          <span class="brand-icon">🛠️</span>
+          <img src="https://minecraft.wiki/images/Enchanted_Stone_Shovel.gif?33e82" alt="삽질 저장소" class="brand-icon" width="24" height="24">
           <span class="brand-text">{{ .Site.Title }}</span>
         </a>
       </div>
@@ -81,7 +81,12 @@
 }
 
 .brand-icon {
-  font-size: 1.3rem;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 
 .brand-text {
