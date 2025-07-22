@@ -30,7 +30,7 @@ mainSections = ["posts"]
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
   UseHugoToc = true
-  colorScheme = "auto"
+  colorScheme = "light"
   
 [menu]
   [[menu.main]]

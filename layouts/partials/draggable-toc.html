@@ -1,0 +1,522 @@
+<!-- Draggable TOC Button Component -->
+<div id="draggable-toc-styles">
+<style>
+/* 드래그 가능한 TOC 버튼 */
+.draggable-toc-container {
+  position: fixed;
+  z-index: 1000;
+  transition: none;
+  pointer-events: auto;
+}
+
+.draggable-toc-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: grab;
+  transition: all 0.2s ease;
+  font-size: 18px;
+  user-select: none;
+  touch-action: none;
+  -webkit-touch-action: none;
+}
+
+.draggable-toc-btn:active {
+  cursor: grabbing;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.draggable-toc-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.draggable-toc-btn.dragging {
+  cursor: grabbing;
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+}
+
+/* TOC 패널 */
+.toc-panel {
+  position: fixed;
+  top: 50%;
+  right: -350px;
+  width: 320px;
+  max-height: 70vh;
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-50%);
+  transition: right 0.3s ease;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.toc-panel.open {
+  right: 20px;
+}
+
+.toc-panel.open.left-aligned {
+  right: auto;
+  left: 20px;
+}
+
+.toc-header {
+  padding: 1rem 1.5rem;
+  background: var(--secondary-bg);
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.toc-content {
+  padding: 1rem;
+  max-height: calc(70vh - 60px);
+  overflow-y: auto;
+}
+
+.toc-content nav {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.toc-content a {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  color: var(--text-color-secondary);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  margin: 0.1rem 0;
+}
+
+.toc-content a:hover {
+  background: var(--tertiary-bg);
+  color: var(--text-color);
+}
+
+.toc-content a.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* 중첩된 TOC 항목 */
+.toc-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-content li ul {
+  margin-left: 1rem;
+  border-left: 2px solid var(--border-color);
+  padding-left: 0.75rem;
+}
+
+/* 모바일에서만 보이기 */
+@media (min-width: 769px) {
+  .draggable-toc-container {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .toc-panel {
+    width: 280px;
+    max-height: 60vh;
+  }
+  
+  .toc-panel.open {
+    right: 10px;
+  }
+  
+  .toc-panel.open.left-aligned {
+    left: 10px;
+  }
+  
+  .draggable-toc-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .toc-panel {
+    width: calc(100vw - 40px);
+    max-width: 280px;
+  }
+  
+  .draggable-toc-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+/* 접근성을 위한 포커스 스타일 */
+.draggable-toc-btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* 스크롤바 스타일 */
+.toc-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.toc-content::-webkit-scrollbar-track {
+  background: var(--secondary-bg);
+  border-radius: 3px;
+}
+
+.toc-content::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+.toc-content::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color-secondary);
+}
+</style>
+</div>
+
+<script>
+class DraggableTOC {
+  constructor() {
+    this.container = null;
+    this.button = null;
+    this.panel = null;
+    this.isDragging = false;
+    this.startX = 0;
+    this.startY = 0;
+    this.currentX = 0;
+    this.currentY = 0;
+    this.isOpen = false;
+    this.isLeftSide = false;
+    this.snapThreshold = window.innerWidth * 0.5;
+    
+    // 터치 디바이스 감지
+    this.isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    this.init();
+  }
+
+  init() {
+    // TOC가 있는 페이지에서만 작동
+    const tocContent = document.querySelector('.toc, #TableOfContents, [class*="toc"]');
+    if (!tocContent || window.innerWidth > 768) {
+      return;
+    }
+
+    this.createTOCElements();
+    this.setupEventListeners();
+    this.positionButton();
+    this.setupTOCContent();
+    this.setupIntersectionObserver();
+  }
+
+  createTOCElements() {
+    // 컨테이너 생성
+    this.container = document.createElement('div');
+    this.container.className = 'draggable-toc-container';
+    this.container.id = 'draggable-toc-container';
+
+    // 버튼 생성
+    this.button = document.createElement('button');
+    this.button.className = 'draggable-toc-btn';
+    this.button.innerHTML = '📝';
+    this.button.setAttribute('aria-label', 'TOC 토글');
+    this.button.setAttribute('title', '목차 (드래그로 이동 가능)');
+
+    // 패널 생성
+    this.panel = document.createElement('div');
+    this.panel.className = 'toc-panel';
+    this.panel.innerHTML = `
+      <div class="toc-header">📋 목차</div>
+      <div class="toc-content" id="draggable-toc-content"></div>
+    `;
+
+    this.container.appendChild(this.button);
+    document.body.appendChild(this.container);
+    document.body.appendChild(this.panel);
+  }
+
+  setupEventListeners() {
+    // 버튼 클릭 이벤트
+    this.button.addEventListener('click', (e) => {
+      if (!this.isDragging) {
+        this.toggleTOC();
+      }
+    });
+
+    // 드래그 이벤트 (마우스)
+    this.button.addEventListener('mousedown', this.handleStart.bind(this));
+    document.addEventListener('mousemove', this.handleMove.bind(this));
+    document.addEventListener('mouseup', this.handleEnd.bind(this));
+
+    // 드래그 이벤트 (터치)
+    if (this.isTouchDevice) {
+      this.button.addEventListener('touchstart', this.handleStart.bind(this), { passive: false });
+      document.addEventListener('touchmove', this.handleMove.bind(this), { passive: false });
+      document.addEventListener('touchend', this.handleEnd.bind(this));
+    }
+
+    // 윈도우 리사이즈
+    window.addEventListener('resize', this.handleResize.bind(this));
+
+    // 패널 외부 클릭시 닫기
+    document.addEventListener('click', (e) => {
+      if (this.isOpen && !this.panel.contains(e.target) && !this.button.contains(e.target)) {
+        this.closeTOC();
+      }
+    });
+
+    // ESC 키로 닫기
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && this.isOpen) {
+        this.closeTOC();
+      }
+    });
+  }
+
+  handleStart(e) {
+    e.preventDefault();
+    
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    
+    this.isDragging = false;
+    this.startX = clientX - this.currentX;
+    this.startY = clientY - this.currentY;
+    
+    this.button.classList.add('dragging');
+    
+    // 작은 지연 후 드래그 시작으로 인식
+    setTimeout(() => {
+      if (this.button.classList.contains('dragging')) {
+        this.isDragging = true;
+      }
+    }, 100);
+  }
+
+  handleMove(e) {
+    if (!this.button.classList.contains('dragging')) return;
+    
+    e.preventDefault();
+    
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    
+    this.currentX = clientX - this.startX;
+    this.currentY = clientY - this.startY;
+    
+    // 화면 경계 제한
+    const buttonWidth = 48;
+    const buttonHeight = 48;
+    const maxX = window.innerWidth - buttonWidth;
+    const maxY = window.innerHeight - buttonHeight;
+    
+    this.currentX = Math.max(0, Math.min(maxX, this.currentX));
+    this.currentY = Math.max(0, Math.min(maxY, this.currentY));
+    
+    // 위치 업데이트
+    this.container.style.transform = `translate(${this.currentX}px, ${this.currentY}px)`;
+    this.container.style.transition = 'none';
+  }
+
+  handleEnd(e) {
+    if (!this.button.classList.contains('dragging')) return;
+    
+    this.button.classList.remove('dragging');
+    
+    if (this.isDragging) {
+      // 좌우 끝으로 스냅
+      this.snapToSide();
+      
+      // 드래그 후 클릭 방지
+      setTimeout(() => {
+        this.isDragging = false;
+      }, 50);
+    }
+  }
+
+  snapToSide() {
+    const centerX = this.currentX + 24; // 버튼 중심
+    const isLeft = centerX < this.snapThreshold;
+    
+    this.isLeftSide = isLeft;
+    this.currentX = isLeft ? 20 : window.innerWidth - 68; // 20px margin
+    
+    this.container.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+    this.container.style.transform = `translate(${this.currentX}px, ${this.currentY}px)`;
+    
+    // 패널 위치 조정
+    if (this.isOpen) {
+      this.updatePanelPosition();
+    }
+  }
+
+  positionButton() {
+    // 초기 위치: 우측 하단
+    this.currentX = window.innerWidth - 68; // 48px 버튼 + 20px margin
+    this.currentY = window.innerHeight - 120; // 하단에서 120px 위
+    
+    this.container.style.transform = `translate(${this.currentX}px, ${this.currentY}px)`;
+  }
+
+  toggleTOC() {
+    if (this.isOpen) {
+      this.closeTOC();
+    } else {
+      this.openTOC();
+    }
+  }
+
+  openTOC() {
+    this.isOpen = true;
+    this.panel.classList.add('open');
+    this.updatePanelPosition();
+    this.button.innerHTML = '❌';
+    this.button.setAttribute('aria-label', 'TOC 닫기');
+  }
+
+  closeTOC() {
+    this.isOpen = false;
+    this.panel.classList.remove('open');
+    this.button.innerHTML = '📝';
+    this.button.setAttribute('aria-label', 'TOC 열기');
+  }
+
+  updatePanelPosition() {
+    if (this.isLeftSide) {
+      this.panel.classList.add('left-aligned');
+    } else {
+      this.panel.classList.remove('left-aligned');
+    }
+  }
+
+  setupTOCContent() {
+    // 기존 TOC 찾기
+    const existingTOC = document.querySelector('.toc, #TableOfContents, [class*="toc"]');
+    if (!existingTOC) {
+      // TOC가 없으면 헤딩으로 자동 생성
+      this.generateTOCFromHeadings();
+    } else {
+      // 기존 TOC 복사
+      const tocContent = document.getElementById('draggable-toc-content');
+      tocContent.innerHTML = existingTOC.outerHTML;
+    }
+  }
+
+  generateTOCFromHeadings() {
+    const headings = document.querySelectorAll('main h1, main h2, main h3, main h4, main h5, main h6');
+    if (headings.length === 0) {
+      document.querySelector('.toc-header').textContent = 'TOC 없음';
+      return;
+    }
+
+    let tocHTML = '<nav><ul>';
+    let currentLevel = 1;
+    
+    headings.forEach((heading, index) => {
+      const level = parseInt(heading.tagName.charAt(1));
+      const id = heading.id || `heading-${index}`;
+      const text = heading.textContent.trim();
+      
+      if (!heading.id) {
+        heading.id = id;
+      }
+      
+      if (level > currentLevel) {
+        tocHTML += '<ul>'.repeat(level - currentLevel);
+      } else if (level < currentLevel) {
+        tocHTML += '</ul>'.repeat(currentLevel - level);
+      }
+      
+      tocHTML += `<li><a href="#${id}">${text}</a></li>`;
+      currentLevel = level;
+    });
+    
+    tocHTML += '</ul>'.repeat(currentLevel) + '</nav>';
+    
+    const tocContent = document.getElementById('draggable-toc-content');
+    tocContent.innerHTML = tocHTML;
+  }
+
+  setupIntersectionObserver() {
+    // 활성 섹션 하이라이트
+    const headings = document.querySelectorAll('main h1, main h2, main h3, main h4, main h5, main h6');
+    const tocLinks = document.querySelectorAll('#draggable-toc-content a');
+    
+    if (headings.length === 0 || tocLinks.length === 0) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.id;
+        const link = document.querySelector(`#draggable-toc-content a[href="#${id}"]`);
+        
+        if (link) {
+          if (entry.isIntersecting) {
+            // 모든 링크에서 active 클래스 제거
+            tocLinks.forEach(l => l.classList.remove('active'));
+            // 현재 링크에 active 클래스 추가
+            link.classList.add('active');
+          }
+        }
+      });
+    }, {
+      rootMargin: '-100px 0px -80% 0px',
+      threshold: 0.1
+    });
+
+    headings.forEach(heading => observer.observe(heading));
+  }
+
+  handleResize() {
+    // 화면 크기 변경시 위치 재조정
+    this.snapThreshold = window.innerWidth * 0.5;
+    
+    // 버튼이 화면 밖으로 나가지 않도록 조정
+    const maxX = window.innerWidth - 68;
+    const maxY = window.innerHeight - 120;
+    
+    this.currentX = Math.min(this.currentX, maxX);
+    this.currentY = Math.min(this.currentY, maxY);
+    
+    this.container.style.transform = `translate(${this.currentX}px, ${this.currentY}px)`;
+    
+    // 데스크톱에서는 숨기기
+    if (window.innerWidth > 768) {
+      this.container.style.display = 'none';
+      this.panel.style.display = 'none';
+    } else {
+      this.container.style.display = 'block';
+      this.panel.style.display = 'block';
+    }
+  }
+}
+
+// 초기화
+document.addEventListener('DOMContentLoaded', () => {
+  // 포스트 페이지에서만 작동
+  if (document.querySelector('article, .post-content, main')) {
+    new DraggableTOC();
+  }
+});
+
+// 전역 함수로 노출
+window.DraggableTOC = DraggableTOC;
+</script>
