@@ -4,7 +4,7 @@ date: 2024-10-10
 description: "GitHub 자동 커밋이라는 작은 프로젝트에서 시작해 웹 크롤링, 개인사업의 배송비 80% 절감 시스템 구축까지, 자동화 기술을 통해 비즈니스 모델을 혁신한 경험과 성장의 과정을 기록합니다."
 featured_image: "https://cybecho.notion.site/image/https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*i5kspLfcTfk1NjmJUYJJaQ.png?table=block&id=c3eac632-b7b7-42ba-aa72-749ede19e65a&spaceId=09ccd4d5-876c-4bba-bbdf-cc77a0a11257&width=2000&userId=&cache=v2"
 tags: ["Automation", "GitHub", "Python", "Web Crawling", "Scripting", "Business", "Cost Reduction", "System", "AI"]
-categories: ["Automation"]```
+categories: ["Automation"]
 ---
 
 이제 조사한 자료들을 바탕으로 완성된 글을 작성하겠습니다. 지금까지의 조사 결과를 보면:
