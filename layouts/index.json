@@ -2,8 +2,14 @@
 {{- range where .Site.RegularPages "Type" "posts" -}}
   {{- $content := .Plain | htmlUnescape | plainify -}}
   {{- $summary := .Description | default .Summary | plainify -}}
-  {{- $tags := delimit .Params.tags ", " -}}
-  {{- $series := delimit .Params.series ", " -}}
+  {{- $tags := "" -}}
+  {{- if .Params.tags -}}
+    {{- $tags = delimit .Params.tags ", " -}}
+  {{- end -}}
+  {{- $series := "" -}}
+  {{- if .Params.series -}}
+    {{- $series = delimit .Params.series ", " -}}
+  {{- end -}}
   {{- $.Scratch.Add "searchIndex" (dict 
     "title" .Title
     "url" .RelPermalink
