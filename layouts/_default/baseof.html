@@ -28,6 +28,11 @@
     <link href="{{ .Permalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }} Search Index">
   {{ end }}
   
+  <!-- Google Fonts for Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
   <!-- Include theme variables -->
   {{ partial "theme-vars.html" . }}
 </head>
@@ -43,6 +48,9 @@
   
   <!-- URL Preview -->
   {{ partial "url-preview.html" . }}
+  
+  <!-- Code Enhancements -->
+  {{ partial "code-enhancements.html" . }}
   
   <!-- URL Preview Configuration -->
   <script src="/js/url-preview-config.js"></script>

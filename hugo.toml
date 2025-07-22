@@ -63,9 +63,12 @@ mainSections = ["posts"]
   [markup.goldmark.renderer]
     unsafe = true
   [markup.highlight]
-    style = "github-dark"
+    style = "github"
     lineNos = true
+    lineNumbersInTable = true
     noClasses = false
+    tabWidth = 2
+    guessSyntax = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

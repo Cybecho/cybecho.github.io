@@ -1,0 +1,427 @@
+<!-- Code Block Enhancements -->
+<style>
+/* 코드블록 기본 스타일 개선 */
+.highlight {
+  position: relative;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--tertiary-bg);
+  border: 1px solid var(--border-color);
+}
+
+.highlight pre {
+  margin: 0;
+  padding: 1rem;
+  overflow-x: auto;
+  background: transparent;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  height: fit-content;
+  max-height: 600px;
+}
+
+.highlight code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-family: 'Fira Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* 코드블록 헤더 (언어 표시 + 복사 버튼) */
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: var(--secondary-bg);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.8rem;
+  color: var(--text-color-secondary);
+}
+
+.code-language {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.code-copy-btn {
+  background: var(--tertiary-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: inherit;
+}
+
+.code-copy-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.code-copy-btn.copied {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
+}
+
+.code-copy-btn svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* 인라인 코드 개선 */
+code:not(.highlight code) {
+  background: var(--tertiary-bg);
+  color: var(--primary-color);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-family: 'Fira Code', 'SF Mono', Consolas, monospace;
+  border: 1px solid var(--border-color);
+}
+
+/* 라인 번호가 있는 경우 */
+.highlight .lntable {
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 100%;
+}
+
+.highlight .lntable td {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.highlight .lntd:first-child {
+  width: 10px;
+}
+
+.highlight .lnt {
+  color: var(--text-color-secondary);
+  margin-right: 0.5em;
+  display: block;
+  user-select: none;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.highlight .ln {
+  color: var(--text-color-secondary);
+  margin-right: 0.5em;
+  user-select: none;
+  opacity: 0.6;
+}
+
+/* 다크모드에서 코드블록 강조 */
+@media (prefers-color-scheme: dark) {
+  .highlight {
+    background: #1e293b;
+    border-color: #334155;
+  }
+  
+  .code-header {
+    background: #0f172a;
+    border-bottom-color: #334155;
+  }
+  
+  .code-copy-btn {
+    background: #334155;
+    border-color: #475569;
+    color: #e2e8f0;
+  }
+  
+  .code-copy-btn:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  code:not(.highlight code) {
+    background: #334155;
+    color: #60a5fa;
+    border-color: #475569;
+  }
+}
+
+/* 토글 가능한 긴 코드블록 */
+.code-expandable {
+  max-height: 300px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.code-expandable.expanded {
+  max-height: none;
+}
+
+.code-expand-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  z-index: 10;
+}
+
+.code-expand-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* 반응형 개선 */
+@media (max-width: 640px) {
+  .highlight pre {
+    font-size: 0.8rem;
+    padding: 0.75rem;
+  }
+  
+  .code-header {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .code-copy-btn {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+</style>
+
+<script>
+class CodeEnhancements {
+  constructor() {
+    this.copyIcon = `<svg fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>`;
+    this.checkIcon = `<svg fill="currentColor" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>`;
+  }
+
+  init() {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => this.enhanceCodeBlocks());
+    } else {
+      this.enhanceCodeBlocks();
+    }
+    
+    // 동적으로 추가되는 코드블록 감지
+    this.observeContentChanges();
+  }
+
+  observeContentChanges() {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach(mutation => {
+        if (mutation.type === 'childList') {
+          mutation.addedNodes.forEach(node => {
+            if (node.nodeType === 1) { // Element node
+              const newCodeBlocks = node.querySelectorAll?.('.highlight') || [];
+              newCodeBlocks.forEach(block => {
+                if (!block.querySelector('.code-header')) {
+                  this.enhanceCodeBlock(block);
+                }
+              });
+            }
+          });
+        }
+      });
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  }
+
+  enhanceCodeBlocks() {
+    const codeBlocks = document.querySelectorAll('.highlight');
+    codeBlocks.forEach(block => this.enhanceCodeBlock(block));
+  }
+
+  enhanceCodeBlock(block) {
+    // 이미 처리된 블록 건너뛰기
+    if (block.querySelector('.code-header')) {
+      return;
+    }
+
+    const pre = block.querySelector('pre');
+    const code = block.querySelector('code');
+    
+    if (!pre || !code) return;
+
+    // 언어 감지
+    const language = this.detectLanguage(block, code);
+    
+    // 헤더 생성
+    const header = this.createCodeHeader(language, code.textContent);
+    
+    // 헤더를 코드블록 상단에 삽입
+    block.insertBefore(header, pre);
+
+    // 긴 코드블록에 확장/축소 기능 추가
+    this.addExpandFunctionality(block, pre);
+
+    // 코드블록 높이 자동 조정
+    this.adjustCodeBlockHeight(pre);
+  }
+
+  detectLanguage(block, code) {
+    // 클래스명에서 언어 추출
+    const classList = Array.from(block.classList);
+    const langClass = classList.find(cls => 
+      cls.startsWith('language-') || 
+      cls.startsWith('highlight-') ||
+      cls === 'javascript' ||
+      cls === 'python' ||
+      cls === 'html' ||
+      cls === 'css' ||
+      cls === 'bash' ||
+      cls === 'json'
+    );
+    
+    if (langClass) {
+      return langClass.replace(/^(language-|highlight-)/, '');
+    }
+
+    // 코드 내용으로 언어 추측
+    const text = code.textContent.trim();
+    if (text.startsWith('<?php')) return 'php';
+    if (text.includes('function') && text.includes('=>')) return 'javascript';
+    if (text.includes('def ') && text.includes(':')) return 'python';
+    if (text.includes('<html') || text.includes('<!DOCTYPE')) return 'html';
+    if (text.includes('import ') && text.includes('from ')) return 'python';
+    if (text.startsWith('#!') && text.includes('bash')) return 'bash';
+    if (text.startsWith('{') && text.includes('"')) return 'json';
+
+    return 'code';
+  }
+
+  createCodeHeader(language, codeContent) {
+    const header = document.createElement('div');
+    header.className = 'code-header';
+    
+    const langSpan = document.createElement('span');
+    langSpan.className = 'code-language';
+    langSpan.textContent = language;
+    
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'code-copy-btn';
+    copyBtn.innerHTML = `${this.copyIcon} Copy`;
+    copyBtn.setAttribute('aria-label', '코드 복사');
+    copyBtn.addEventListener('click', () => this.copyCode(copyBtn, codeContent));
+    
+    header.appendChild(langSpan);
+    header.appendChild(copyBtn);
+    
+    return header;
+  }
+
+  async copyCode(button, text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      
+      // 버튼 상태 변경
+      const originalHTML = button.innerHTML;
+      button.innerHTML = `${this.checkIcon} Copied!`;
+      button.classList.add('copied');
+      
+      // 2초 후 원래 상태로 복원
+      setTimeout(() => {
+        button.innerHTML = originalHTML;
+        button.classList.remove('copied');
+      }, 2000);
+      
+    } catch (err) {
+      console.warn('클립보드 복사 실패:', err);
+      
+      // 폴백: 텍스트 선택
+      this.fallbackCopy(text);
+      
+      // 사용자에게 알림
+      button.innerHTML = `${this.checkIcon} Selected!`;
+      button.classList.add('copied');
+      
+      setTimeout(() => {
+        button.innerHTML = `${this.copyIcon} Copy`;
+        button.classList.remove('copied');
+      }, 2000);
+    }
+  }
+
+  fallbackCopy(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.opacity = '0';
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+  }
+
+  addExpandFunctionality(block, pre) {
+    const maxHeight = 300; // px
+    const actualHeight = pre.scrollHeight;
+    
+    if (actualHeight > maxHeight) {
+      pre.style.maxHeight = maxHeight + 'px';
+      pre.style.overflow = 'hidden';
+      pre.classList.add('code-expandable');
+      
+      const expandBtn = document.createElement('button');
+      expandBtn.className = 'code-expand-btn';
+      expandBtn.textContent = '더 보기';
+      expandBtn.addEventListener('click', () => {
+        if (pre.classList.contains('expanded')) {
+          pre.style.maxHeight = maxHeight + 'px';
+          pre.classList.remove('expanded');
+          expandBtn.textContent = '더 보기';
+        } else {
+          pre.style.maxHeight = 'none';
+          pre.classList.add('expanded');
+          expandBtn.textContent = '접기';
+        }
+      });
+      
+      block.style.position = 'relative';
+      block.appendChild(expandBtn);
+    }
+  }
+
+  adjustCodeBlockHeight(pre) {
+    // 자동 높이 조정 (최소/최대 높이 설정)
+    pre.style.minHeight = '2.5rem';
+    
+    // 내용이 적을 때 불필요한 여백 제거
+    const lineCount = (pre.textContent.match(/\n/g) || []).length + 1;
+    
+    if (lineCount <= 3) {
+      pre.style.padding = '0.75rem 1rem';
+    } else if (lineCount <= 10) {
+      pre.style.padding = '1rem';
+    }
+  }
+}
+
+// 초기화
+const codeEnhancements = new CodeEnhancements();
+codeEnhancements.init();
+
+// 전역 함수로 노출 (필요시 사용)
+window.CodeEnhancements = CodeEnhancements;
+</script>
