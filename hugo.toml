@@ -76,7 +76,6 @@ mainSections = ["posts"]
 [taxonomies]
   series = 'series'
   tag = 'tags'
-  archive = 'archives'
 
 [build]
   writeStats = true

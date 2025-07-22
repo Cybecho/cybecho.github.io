@@ -5,9 +5,10 @@
     <p class="archives-description">{{ .Content | safeHTML }}</p>
   </header>
 
-  {{ if .Pages }}
+  {{ $archivePages := where site.RegularPages "Section" "archives" }}
+  {{ if $archivePages }}
   <div class="archives-grid">
-    {{ range .Pages.ByDate.Reverse }}
+    {{ range $archivePages.ByDate.Reverse }}
     <article class="archive-card">
       {{ if .Params.featured_image }}
       <div class="archive-image">
