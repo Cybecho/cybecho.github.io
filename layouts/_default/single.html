@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
   text-align: center;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .post-title {
@@ -251,11 +251,11 @@ document.addEventListener('DOMContentLoaded', function() {
   font-weight: 700;
   margin: 0 0 1rem 0;
   line-height: 1.2;
-  color: #1f2937;
+  color: var(--heading-color);
 }
 
 .post-meta {
-  color: #6b7280;
+  color: var(--text-color-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function() {
 .content {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #1f2937;
+  color: var(--text-color);
   position: relative;
   z-index: 1;
 }
@@ -302,13 +302,13 @@ document.addEventListener('DOMContentLoaded', function() {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   scroll-margin-top: 120px;
-  color: #1f2937;
+  color: var(--heading-color);
   font-weight: 600;
 }
 
 .content h1 {
   font-size: 2rem;
-  border-bottom: 2px solid #e5e7eb;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
 
@@ -334,26 +334,26 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .content blockquote {
-  border-left: 4px solid #3b82f6;
-  background: #f8fafc;
+  border-left: 4px solid var(--link-color);
+  background: var(--secondary-bg);
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
   font-style: italic;
-  color: #4b5563;
+  color: var(--text-color-secondary);
 }
 
 .content code {
-  background: #f1f5f9;
+  background: var(--code-bg);
   padding: 0.2rem 0.4rem;
   border-radius: 3px;
   font-size: 0.9em;
-  color: #e11d48;
+  color: var(--link-color);
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
 }
 
 .content pre {
-  background: #1e293b;
-  color: #e2e8f0;
+  background: var(--code-bg);
+  color: var(--code-text);
   padding: 1.5rem;
   border-radius: 8px;
   overflow-x: auto;
@@ -383,15 +383,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .content th,
 .content td {
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   padding: 0.75rem 1rem;
   text-align: left;
 }
 
 .content th {
-  background: #f9fafb;
+  background: var(--secondary-bg);
   font-weight: 600;
-  color: #374151;
+  color: var(--text-color);
 }
 
 /* 🎯 TOC 토글 버튼 */
@@ -469,14 +469,14 @@ document.addEventListener('DOMContentLoaded', function() {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.25rem;
-  border-bottom: 1px solid #e5e7eb;
-  background: #f9fafb;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--secondary-bg);
 }
 
 .toc-title {
   font-size: 1rem;
   font-weight: 600;
-  color: #1f2937;
+  color: var(--heading-color);
   margin: 0;
 }
 
@@ -484,7 +484,7 @@ document.addEventListener('DOMContentLoaded', function() {
   display: none;
   background: none;
   border: none;
-  color: #6b7280;
+  color: var(--text-color-secondary);
   cursor: pointer;
   padding: 0.25rem;
   border-radius: 4px;
@@ -492,8 +492,8 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .toc-close:hover {
-  color: #1f2937;
-  background: #e5e7eb;
+  color: var(--text-color);
+  background: var(--tertiary-bg);
 }
 
 .toc-content {
@@ -516,7 +516,7 @@ document.addEventListener('DOMContentLoaded', function() {
 .toc-content a {
   display: block;
   padding: 0.5rem 0.75rem;
-  color: #6b7280;
+  color: var(--text-color-secondary);
   text-decoration: none;
   font-size: 0.9rem;
   border-radius: 6px;
@@ -526,14 +526,14 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .toc-content a:hover {
-  color: #3b82f6;
-  background: #f3f4f6;
+  color: var(--link-color);
+  background: var(--tertiary-bg);
 }
 
 .toc-content a.active {
-  color: #3b82f6;
-  background: #eff6ff;
-  border-left-color: #3b82f6;
+  color: var(--link-color);
+  background: var(--tertiary-bg);
+  border-left-color: var(--link-color);
   font-weight: 500;
 }
 
@@ -648,99 +648,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 
-/* 🎯 다크모드 대응 */
-@media (prefers-color-scheme: dark) {
-  .post-header {
-    border-bottom-color: #374151;
-  }
-  
-  .post-title {
-    color: #f9fafb;
-  }
-  
-  .content {
-    color: #f3f4f6;
-  }
-  
-  .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-    color: #f9fafb;
-  }
-
-  .content h1 {
-    border-bottom-color: #374151;
-  }
-  
-  .post-meta {
-    color: #9ca3af;
-  }
-
-  .content blockquote {
-    background: #1f2937;
-    border-left-color: #60a5fa;
-    color: #d1d5db;
-  }
-
-  .content code {
-    background: #374151;
-    color: #fbbf24;
-  }
-
-  .content th {
-    background: #374151;
-    color: #f3f4f6;
-  }
-
-  .content td {
-    border-color: #4b5563;
-  }
-  
-  .toc-container {
-    background: #1f2937 !important;
-    border-color: #374151 !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-  }
-  
-  .toc-header {
-    background: #111827 !important;
-    border-bottom-color: #374151;
-  }
-  
-  .toc-title {
-    color: #f3f4f6 !important;
-  }
-  
-  .toc-content {
-    background: #1f2937 !important;
-  }
-  
-  .toc-content a {
-    color: #9ca3af;
-  }
-  
-  .toc-content a:hover {
-    color: #60a5fa;
-    background: #374151;
-  }
-  
-  .toc-content a.active {
-    color: #60a5fa;
-    background: #1e3a8a;
-    border-left-color: #60a5fa;
-  }
-  
-  .toc-close {
-    color: #9ca3af;
-  }
-  
-  .toc-close:hover {
-    color: #f3f4f6;
-    background: #374151;
-  }
-  
-  .toc-overlay {
-    background: rgba(0, 0, 0, 0.7);
-  }
-}
+/* 화이트모드 고정 - 다크모드 완전 제거 */
 
 /* 큰 화면에서의 여백 */
 @media (min-width: 1400px) {

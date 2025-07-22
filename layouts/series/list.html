@@ -100,7 +100,7 @@
 }
 
 .breadcrumb a {
-  color: #3b82f6;
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -109,24 +109,24 @@
 }
 
 .separator {
-  color: #9ca3af;
+  color: var(--text-color-secondary);
 }
 
 .current {
   font-weight: 500;
-  color: #374151;
+  color: var(--text-color);
 }
 
 .series-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 1rem 0;
-  color: #111827;
+  color: var(--heading-color);
 }
 
 .series-description {
   font-size: 1.1rem;
-  color: #6b7280;
+  color: var(--text-color-secondary);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -150,7 +150,7 @@
 }
 
 .date-range {
-  color: #6b7280;
+  color: var(--text-color-secondary);
   font-size: 0.9rem;
 }
 
@@ -200,24 +200,24 @@
 .post-title a {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--heading-color);
   text-decoration: none;
   line-height: 1.4;
 }
 
 .post-title a:hover {
-  color: #3b82f6;
+  color: var(--link-color);
 }
 
 .post-date {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: var(--text-color-secondary);
   font-weight: 500;
 }
 
 .post-summary {
   margin: 0.5rem 0;
-  color: #4b5563;
+  color: var(--text-color-secondary);
   line-height: 1.6;
 }
 
@@ -239,20 +239,20 @@
 .no-posts {
   text-align: center;
   padding: 4rem 2rem;
-  color: #6b7280;
+  color: var(--text-color-secondary);
   font-size: 1.1rem;
 }
 
 .other-series {
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 2px solid #e5e7eb;
+  border-top: 2px solid var(--border-color);
 }
 
 .other-series h3 {
   text-align: center;
   margin-bottom: 1.5rem;
-  color: #111827;
+  color: var(--heading-color);
 }
 
 .series-grid {
@@ -280,7 +280,7 @@
 
 .series-card h4 {
   margin: 0 0 0.5rem 0;
-  color: #111827;
+  color: var(--heading-color);
   font-size: 1rem;
   font-weight: 600;
 }
@@ -291,7 +291,7 @@
 
 .series-count {
   font-size: 0.8rem;
-  color: #6b7280;
+  color: var(--text-color-secondary);
   font-weight: 500;
 }
 
@@ -299,86 +299,7 @@
   color: #bfdbfe;
 }
 
-/* 다크 모드 */
-@media (prefers-color-scheme: dark) {
-  .series-container {
-    color: #f9fafb;
-    background: #111827;
-  }
-
-  .series-title {
-    color: #f9fafb;
-  }
-
-  .current {
-    color: #d1d5db;
-  }
-
-  .series-description {
-    color: #9ca3af;
-  }
-
-  .series-stats {
-    background: #1f2937;
-    border-color: #374151;
-  }
-
-  .series-post-item {
-    background: #1f2937;
-    border-color: #374151;
-  }
-
-  .series-post-item:hover {
-    border-color: #60a5fa;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  }
-
-  .post-title a {
-    color: #f9fafb;
-  }
-
-  .post-title a:hover {
-    color: #60a5fa;
-  }
-
-  .post-date {
-    color: #9ca3af;
-  }
-
-  .post-summary {
-    color: #d1d5db;
-  }
-
-  .tag {
-    background: #374151;
-    color: #d1d5db;
-  }
-
-  .no-posts {
-    color: #9ca3af;
-  }
-
-  .other-series {
-    border-top-color: #374151;
-  }
-
-  .other-series h3 {
-    color: #f9fafb;
-  }
-
-  .series-card {
-    background: #1f2937;
-    border-color: #374151;
-  }
-
-  .series-card h4 {
-    color: #f9fafb;
-  }
-
-  .series-count {
-    color: #9ca3af;
-  }
-}
+/* 화이트모드 고정 - 다크모드 완전 제거 */
 
 /* 반응형 */
 @media (max-width: 768px) {

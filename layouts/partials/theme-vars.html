@@ -1,88 +1,53 @@
 <style>
-/* 기본 테마를 라이트 모드로 설정 - 기존 구조 유지, 색상만 개선 */
+/* 화이트모드 고정 - 다크모드 완전 제거 */
 :root {
-  /* Light mode colors - 가독성 최적화 */
+  /* 색상 변수들을 화이트모드 값으로 고정 */
   --primary-color: #2563eb;
   --primary-bg: #ffffff;
   --secondary-bg: #f8fafc;
   --tertiary-bg: #f1f5f9;
   --border-color: #e2e8f0;
-  --text-color: #0f172a;              /* 더 진한 검은색으로 대비 향상 */
-  --text-color-secondary: #475569;    /* 더 진한 회색으로 가독성 향상 */
+  --text-color: #0f172a;
+  --text-color-secondary: #475569;
   --background-color: #ffffff;
-  
-  /* 추가 색상 변수 - 섹션별 차별화 */
-  --heading-color: #1e293b;           /* 제목용 더 진한 색상 */
-  --link-color: #2563eb;              /* 링크 색상 */
-  --link-hover-color: #1d4ed8;        /* 링크 호버 색상 */
-  --code-bg: #f8fafc;                 /* 코드 배경 */
-  --code-text: #475569;               /* 코드 텍스트 */
+  --heading-color: #1e293b;
+  --link-color: #2563eb;
+  --link-hover-color: #1d4ed8;
+  --code-bg: #f8fafc;
+  --code-text: #475569;
 }
 
-/* Dark mode colors - 크로스 플랫폼 호환 및 가독성 대폭 개선 */
-[data-theme="dark"] {
-  --primary-color: #3b82f6;
-  --primary-bg: #0f172a;
-  --secondary-bg: #1e293b;
-  --tertiary-bg: #334155;
-  --border-color: #475569;
-  --text-color: #f1f5f9;              /* 더 밝은 흰색으로 대비 향상 */
-  --text-color-secondary: #cbd5e1;    /* 더 밝은 회색으로 가독성 향상 */
-  --background-color: #0f172a;
-  
-  /* 다크모드 섹션별 차별화 색상 */
-  --heading-color: #ffffff;           /* 제목은 완전한 흰색으로 */
-  --link-color: #60a5fa;              /* 링크 색상 */
-  --link-hover-color: #93c5fd;        /* 링크 호버 색상 */
-  --code-bg: #1e293b;                 /* 코드 배경 */
-  --code-text: #e2e8f0;               /* 코드 텍스트 */
-}
-
-/* 기존 body 스타일 유지 */
+/* 기본 body 스타일 */
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #ffffff;
+  color: #0f172a;
+  transition: none; /* 테마 전환 애니메이션 제거 */
 }
 
-/* 제목과 링크에 새로운 색상 적용 */
+/* 제목과 링크 색상 */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--heading-color);
+  color: #1e293b;
 }
 
 a {
-  color: var(--link-color);
+  color: #2563eb;
 }
 
 a:hover {
-  color: var(--link-hover-color);
+  color: #1d4ed8;
 }
 
-/* 코드 블록 색상 개선 */
+/* 코드 블록 색상 */
 code {
-  background-color: var(--code-bg);
-  color: var(--code-text);
+  background-color: #f8fafc;
+  color: #475569;
 }
 
 pre {
-  background-color: var(--code-bg);
+  background-color: #f8fafc;
 }
 
 pre code {
-  color: var(--code-text);
-}
-
-/* 다크모드에서 이미지 밝기 조절 */
-[data-theme="dark"] img {
-  opacity: 0.9;
-  filter: brightness(0.9);
-}
-
-/* 모든 플랫폼에서 일관된 다크모드 동작 보장 */
-@media (prefers-color-scheme: dark) {
-  /* 시스템 다크모드여도 data-theme으로만 제어 */
-  :root {
-    /* 라이트모드 색상 유지 - data-theme="dark"로만 다크모드 활성화 */
-  }
+  color: #475569;
 }
 </style>

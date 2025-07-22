@@ -90,8 +90,8 @@
   padding: 2rem 1.5rem;
   width: 100%;
   box-sizing: border-box;
-  background: var(--background-color);
-  color: var(--text-color);
+  background: #ffffff;
+  color: #0f172a;
 }
 
 .profile {
@@ -112,12 +112,12 @@
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
-  color: #111827;
+  color: #1e293b;
 }
 
 .bio {
   font-size: 1.1rem;
-  color: #4b5563;
+  color: #475569;
   margin: 0 0 1rem 0;
   font-weight: 400;
   line-height: 1.5;
@@ -132,13 +132,13 @@
 
 /* 🎯 소셜 링크 - 동그란 배경과 테두리 제거 */
 .social-icon {
-  color: #6b7280;
+  color: #475569;
   transition: color 0.2s ease, transform 0.2s ease;
   /* 모든 장식 제거 */
 }
 
 .social-icon:hover {
-  color: #3b82f6;
+  color: #2563eb;
   transform: translateY(-2px);
 }
 
@@ -150,7 +150,7 @@
 .intro {
   margin-bottom: 2rem;
   font-size: 1rem;
-  color: #374151;
+  color: #0f172a;
   line-height: 1.6;
   text-align: center;
 }
@@ -162,7 +162,7 @@
 .section-title {
   font-size: 1.3rem;
   font-weight: 500;
-  color: #4b5563;
+  color: #0f172a;
   margin: 0;
   text-align: left;
 }
@@ -170,7 +170,7 @@
 .section-title em {
   font-style: italic;
   font-size: 1.2rem;
-  color: #6b7280;
+  color: #475569;
 }
 
 /* Blog specific styles */
@@ -182,8 +182,8 @@
 }
 .view-switcher button {
   background: none;
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
   padding: 0.5rem;
   cursor: pointer;
   border-radius: 5px;
@@ -192,14 +192,14 @@
   transition: all 0.2s ease;
 }
 .view-switcher button:hover {
-  background-color: var(--tertiary-bg);
+  background-color: #f1f5f9;
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .view-switcher button.active {
-  background-color: var(--primary-color);
-  color: var(--primary-bg);
-  border-color: var(--primary-color);
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
 }
 .view-switcher button svg {
   vertical-align: middle;
@@ -207,7 +207,7 @@
 .no-posts {
   text-align: center;
   padding: 3rem;
-  color: var(--text-color-secondary);
+  color: #475569;
 }
 
 /* Post Item Base Styles */
@@ -221,8 +221,8 @@
   height: 100%;
 }
 .post-item {
-  background-color: var(--secondary-bg);
-  border: 1px solid var(--border-color);
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 1.2rem;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -256,7 +256,7 @@
 }
 .post-meta {
   font-size: 0.875rem;
-  color: var(--text-color-secondary);
+  color: #475569;
   margin: 0;
   flex-shrink: 0;
 }
@@ -268,7 +268,7 @@
   font-size: 0.85rem;
   margin: 0 0 0.8rem 0;
   flex-grow: 1; /* Makes summary take up available space */
-  color: var(--text-color-secondary);
+  color: #475569;
   line-height: 1.4;
 }
 .post-series-bottom {
@@ -294,7 +294,7 @@
 .section-separator {
   border: none;
   height: 1px;
-  background-color: var(--border-color);
+  background-color: #e2e8f0;
   margin: 2rem 0;
   opacity: 0.6;
 }
@@ -307,7 +307,7 @@
   row-gap: 3.5rem;
 }
 .view-gallery .post-item {
-  border: 1px solid var(--border-color);
+  border: 1px solid #e2e8f0;
 }
 .view-gallery .post-meta {
   font-size: 0.75rem;
@@ -350,138 +350,26 @@
 .pagination-link {
   display: block;
   padding: 0.5rem 0.8rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid #e2e8f0;
   border-radius: 5px;
   text-decoration: none;
-  color: var(--text-color);
+  color: #0f172a;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .pagination-link:hover {
-  background-color: var(--tertiary-bg);
+  background-color: #f1f5f9;
 }
 .pagination-link.active {
-  background-color: var(--primary-color);
-  color: var(--primary-bg);
-  border-color: var(--primary-color);
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
 }
 .pagination-link.disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-/* ===== 다크 모드 ===== */
-@media (prefers-color-scheme: dark) {
-  /* Dark mode styles now handled by CSS variables */
-
-  .author {
-    color: #f9fafb;
-  }
-
-  .bio {
-    color: #d1d5db;
-  }
-
-  .intro {
-    color: #e5e7eb;
-  }
-
-  .section-title {
-    color: #d1d5db;
-  }
-
-  .section-title em {
-    color: #9ca3af;
-  }
-
-  .title a {
-    color: #f9fafb;
-  }
-
-  .title a:hover {
-    color: #60a5fa;
-  }
-
-  .date {
-    color: #9ca3af;
-  }
-
-  .description {
-    color: #d1d5db;
-  }
-
-  .post-divider {
-    background: #374151;
-  }
-
-  .social-icon {
-    color: #9ca3af;
-  }
-
-  .social-icon:hover {
-    color: #60a5fa;
-  }
-
-  .sparkle-btn {
-    color: #60a5fa;
-    border-color: #60a5fa;
-    background: #1f2937;
-  }
-
-  .sparkle-btn:hover {
-    background: #3b82f6;
-    color: white;
-  }
-
-  /* Dark mode for blog specific styles */
-  .view-switcher button {
-    border-color: var(--dark-border-color, #374151);
-    color: var(--dark-text-color, #f9fafb);
-  }
-  .view-switcher button:hover {
-    background-color: var(--dark-tertiary-bg, #1f2937);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  }
-  .view-switcher button.active {
-    background-color: var(--dark-primary-color, #3b82f6);
-    color: var(--dark-primary-bg, #111827);
-    border-color: var(--dark-primary-color, #3b82f6);
-  }
-  .section-separator {
-    background-color: var(--dark-border-color, #374151);
-  }
-  .post-item {
-    background-color: var(--dark-secondary-bg, #1f2937);
-    border-color: var(--dark-border-color, #374151);
-  }
-  .post-item:hover {
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  }
-  .post-title {
-    color: var(--dark-text-color, #f9fafb);
-  }
-  .post-meta, .post-summary {
-    color: var(--dark-text-color-secondary, #d1d5db);
-  }
-  .tag-item {
-    background-color: #6b7280 !important;
-    color: #ffffff !important;
-  }
-  .no-posts {
-    color: var(--dark-text-color-secondary, #d1d5db);
-  }
-  .pagination-link {
-    border-color: var(--dark-border-color, #374151);
-    color: var(--dark-text-color, #f9fafb);
-  }
-  .pagination-link:hover {
-    background-color: var(--dark-tertiary-bg, #1f2937);
-  }
-  .pagination-link.active {
-    background-color: var(--dark-primary-color, #3b82f6);
-    color: var(--dark-primary-bg, #111827);
-    border-color: var(--dark-primary-color, #3b82f6);
-  }
-}
+/* 화이트모드 고정 - 다크모드 완전 제거 */
 
 /* 반응형 */
 @media (max-width: 992px) {

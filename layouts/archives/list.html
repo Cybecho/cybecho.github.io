@@ -343,31 +343,6 @@
   }
 }
 
-/* 다크 모드 개선 - 색상만 수정 */
-[data-theme="dark"] .archive-card {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-[data-theme="dark"] .archive-card:hover {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-}
-
-[data-theme="dark"] .archive-date {
-  background: var(--secondary-bg);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-}
-
-[data-theme="dark"] .archive-title a {
-  color: var(--heading-color);
-}
-
-[data-theme="dark"] .archive-description {
-  color: var(--text-color-secondary);
-}
-
-[data-theme="dark"] .archive-read-more {
-  color: var(--link-color);
-}
+/* 화이트모드 고정 - 다크모드 완전 제거 */
 </style>
 {{ end }}

@@ -137,53 +137,7 @@ code:not(.highlight code) {
   font-weight: 400;
 }
 
-/* 다크모드에서 코드블록 강조 - data-theme 기반으로 변경 */
-[data-theme="dark"] .highlight {
-  background: var(--code-bg);
-  border-color: var(--border-color);
-}
-
-[data-theme="dark"] .highlight pre {
-  background: var(--code-bg);
-  color: var(--code-text);
-}
-
-[data-theme="dark"] .highlight code {
-  color: var(--code-text);
-}
-
-[data-theme="dark"] .code-header {
-  background: var(--tertiary-bg);
-  border-bottom-color: var(--border-color);
-  color: var(--text-color-secondary);
-}
-
-[data-theme="dark"] .code-language {
-  color: var(--text-color);
-}
-
-[data-theme="dark"] .code-copy-btn {
-  background: var(--secondary-bg);
-  border-color: var(--border-color);
-  color: var(--text-color);
-}
-
-[data-theme="dark"] .code-copy-btn:hover {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
-  color: white;
-}
-
-[data-theme="dark"] .highlight .lnt,
-[data-theme="dark"] .highlight .ln {
-  color: var(--text-color-secondary);
-}
-
-[data-theme="dark"] code:not(.highlight code) {
-  background: var(--code-bg);
-  color: var(--link-color);
-  border-color: var(--border-color);
-}
+/* 화이트모드 고정 - 다크모드 완전 제거 */
 
 /* 토글 가능한 긴 코드블록 */
 .code-expandable {
