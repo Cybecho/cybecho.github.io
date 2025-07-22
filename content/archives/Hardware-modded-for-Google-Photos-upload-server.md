@@ -1,6 +1,6 @@
 ---
 title: "구글 포토 무제한 업로드를 위한 픽셀 1 되살리기: 하드웨어 개조와 자동화 구축기"
-date: 2024-08-15
+date: 2025-07-15
 description: "오래된 구글 픽셀 1의 하드웨어적 한계를 극복하고, 24/7 무중단 자동 백업 서버로 재탄생시킨 과정을 기록합니다. 배터리 제거, 전원부 개조, 쿨링 시스템 설계 등 창의적인 문제 해결 과정을 공유합니다."
 featured_image: "https://preview.redd.it/android-service-for-unlimited-google-photos-uploads-v0-5vwc4c29qxcf1.png?width=1080&crop=smart&auto=webp&s=57728f4ad0bc0166b23b77876993cb3390ef1c02"
 tags: ["Homelab", "DIY", "Android", "Google Pixel", "Hardware", "Automation", "Backup", "Tailscale", "Engineering"]

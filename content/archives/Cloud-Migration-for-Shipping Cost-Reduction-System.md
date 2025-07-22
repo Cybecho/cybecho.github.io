@@ -1,23 +1,10 @@
 ---
 title: "단순한 잔디심기에서 시작된 자동화 여정: 80% 비용 절감까지의 이야기"
-date: 2024-10-10
+date: 2023-05-10
 description: "GitHub 자동 커밋이라는 작은 프로젝트에서 시작해 웹 크롤링, 개인사업의 배송비 80% 절감 시스템 구축까지, 자동화 기술을 통해 비즈니스 모델을 혁신한 경험과 성장의 과정을 기록합니다."
 featured_image: "https://cybecho.notion.site/image/https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*i5kspLfcTfk1NjmJUYJJaQ.png?table=block&id=c3eac632-b7b7-42ba-aa72-749ede19e65a&spaceId=09ccd4d5-876c-4bba-bbdf-cc77a0a11257&width=2000&userId=&cache=v2"
 tags: ["Automation", "GitHub", "Python", "Web Crawling", "Scripting", "Business", "Cost Reduction", "System", "AI"]
 categories: ["Automation"]
----
-
-이제 조사한 자료들을 바탕으로 완성된 글을 작성하겠습니다. 지금까지의 조사 결과를 보면:
-
-1. GitHub 잔디심기 자동화 시스템 (github 커밋 자동화 프로그램)
-2. 다모아 URL Co-Pilot 프로젝트 (다모아 사이보그화)
-3. 웹사이트 자동화 및 크롤링 시스템
-4. "하루 20달러 파밍" 시리즈 (배송비 절약 솔루션)
-5. 개인사업 경험 (MoaiProductProxy)
-6. 자주쓰는 내용 아카이브에서 확인되는 자동화 경험들
-
-이제 이를 바탕으로 완성된 글을 작성하겠습니다.
-
 ---
 
 # 단순한 잔디심기에서 시작된 자동화 여정: 80% 비용 절감까지의 이야기

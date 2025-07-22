@@ -1,8 +1,8 @@
 ---
 title: "Notion ↔ GitHub Pages 자동 동기화 시스템"
-date: 2025-01-22
+date: 2025-07-22
 description: "Notion을 CMS로 활용하여 GitHub Pages와 자동 동기화하는 블로그 시스템 구축"
-featured_image: "https://notion-avatar.vercel.app/api/img/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsb2ctc3lzdGVtIn0.notion"
+featured_image: "https://cybecho.notion.site/image/https%3A%2F%2Fuploads-ssl.webflow.com%2F62375700635d76646ef2457f%2F634d847671eca1f83e84acdb_Github%2520in%2520Notion.png?table=block&id=2381bab9-e3f8-8041-8a47-c79853e75dd1&spaceId=09ccd4d5-876c-4bba-bbdf-cc77a0a11257&width=2000&userId=&cache=v2"
 tags: ["Notion", "GitHub Actions", "Hugo", "자동화"]
 categories: ["프로젝트"]
 draft: false
