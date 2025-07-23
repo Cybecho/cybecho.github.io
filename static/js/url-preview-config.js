@@ -14,7 +14,11 @@ window.URLPreviewConfig = {
     '.social-links a',
     'nav a',
     'header a',
-    'footer a'
+    'footer a',
+    '.comments-section a',
+    '.giscus-container a',
+    '.comments-description a',
+    '.setup-notice-content a'
   ],
   
   // 특정 URL 패턴 제외
