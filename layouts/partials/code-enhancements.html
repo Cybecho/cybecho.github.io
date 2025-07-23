@@ -1,8 +1,8 @@
-<!-- VS Code Style Code Blocks -->
+<!-- VS Code Style Code Blocks - Hugo Native Structure Compatible -->
 <style>
 /* VS Code 스타일 코드블록 컨테이너 */
 .vscode-container {
-  background: #1e1e1e; /* VS Code dark theme background */
+  background: #1e1e1e;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   margin: 2rem 0;
@@ -49,11 +49,11 @@
 }
 
 /* 언어별 아이콘 */
-.vscode-tab.lang-javascript::before {
+.vscode-tab.lang-javascript::before, .vscode-tab.lang-js::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f7df1e' d='M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z'/%3E%3C/svg%3E");
 }
 
-.vscode-tab.lang-python::before {
+.vscode-tab.lang-python::before, .vscode-tab.lang-py::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233776ab' d='M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09-.33.22zM21.1 6.11l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08-.33.23z'/%3E%3C/svg%3E");
 }
 
@@ -69,7 +69,7 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffd700' d='M5.219 2.5c-.638 0-1.157.519-1.157 1.157v16.686c0 .638.519 1.157 1.157 1.157h13.562c.638 0 1.157-.519 1.157-1.157V3.657c0-.638-.519-1.157-1.157-1.157H5.219zm2.023 3.447h1.734v1.734H7.242V5.947zm4.336 0h1.734v1.734h-1.734V5.947zm4.336 0h1.734v1.734h-1.734V5.947z'/%3E%3C/svg%3E");
 }
 
-.vscode-tab.lang-bash::before, .vscode-tab.lang-shell::before {
+.vscode-tab.lang-bash::before, .vscode-tab.lang-shell::before, .vscode-tab.lang-sh::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234eaa25' d='M3 3v18h18V3H3zm16 16H5V5h14v14zM7 7v2h2V7H7zm4 0v2h6V7h-6zm-4 4v2h2v-2H7zm4 0v2h6v-2h-6z'/%3E%3C/svg%3E");
 }
 
@@ -121,122 +121,216 @@
   flex-shrink: 0;
 }
 
-/* 코드 컨텐츠 영역 - 새로운 구조 */
-.vscode-content {
+/* Hugo의 highlight 구조를 VS Code 스타일로 변환 */
+.highlight.vscode-enhanced {
   background: #1e1e1e;
-  color: #d4d4d4;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   position: relative;
-  display: flex;
+  margin: 2rem 0;
   overflow: hidden;
 }
 
-/* 라인 번호 영역 */
-.vscode-line-numbers {
-  background: #1e1e1e;
-  color: #858585;
-  padding: 16px 0;
-  text-align: right;
-  user-select: none;
-  font-size: 14px;
-  line-height: 1.45;
-  min-width: 50px;
-  border-right: 1px solid #333333;
-  flex-shrink: 0;
-  overflow: hidden;
-}
-
-.vscode-line-number {
-  padding: 0 16px;
-  height: 20.3px; /* 1.45 * 14px */
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-/* 코드 내용 영역 */
-.vscode-code-content {
-  flex: 1;
-  background: #1e1e1e;
-  overflow-x: auto;
-  padding: 16px;
-}
-
-.vscode-pre {
+/* Hugo chroma 구조 숨기기 */
+.highlight.vscode-enhanced .chroma {
   background: transparent;
   color: #d4d4d4;
+}
+
+/* Hugo lntable 구조를 VS Code 스타일로 스타일링 */
+.highlight.vscode-enhanced .lntable {
+  border-spacing: 0;
+  border-collapse: separate;
+  width: 100%;
+  background: #1e1e1e;
+  color: #d4d4d4;
   margin: 0;
+  display: flex;
+  font-family: 'Fira Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+.highlight.vscode-enhanced .lntable tr {
+  display: flex;
+  width: 100%;
+}
+
+.highlight.vscode-enhanced .lntable .lntd {
+  border: none;
   padding: 0;
-  font-family: inherit;
+  vertical-align: top;
+}
+
+/* 첫 번째 td: 라인 번호 영역 */
+.highlight.vscode-enhanced .lntable .lntd:first-child {
+  background: #1e1e1e;
+  border-right: 1px solid #333333;
+  flex-shrink: 0;
+  min-width: 50px;
+}
+
+.highlight.vscode-enhanced .lntable .lntd:first-child pre {
+  background: transparent;
+  margin: 0;
+  padding: 16px;
+  text-align: right;
+  user-select: none;
+  color: #858585;
   font-size: 14px;
   line-height: 1.45;
+  border: none;
+  overflow: visible;
+}
+
+.highlight.vscode-enhanced .lntable .lntd:first-child code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-family: inherit;
+}
+
+.highlight.vscode-enhanced .lnt {
+  display: block;
+  color: #858585;
+  font-weight: 400;
+  height: 20.3px;
+  line-height: 20.3px;
+  user-select: none;
+}
+
+/* 두 번째 td: 코드 내용 영역 */
+.highlight.vscode-enhanced .lntable .lntd:last-child {
+  flex: 1;
+  background: #1e1e1e;
+}
+
+.highlight.vscode-enhanced .lntable .lntd:last-child pre {
+  background: transparent;
+  margin: 0;
+  padding: 16px;
+  color: #d4d4d4;
+  font-size: 14px;
+  line-height: 1.45;
+  overflow-x: auto;
+  border: none;
   white-space: pre;
-  word-wrap: normal;
   tab-size: 4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.vscode-code {
+.highlight.vscode-enhanced .lntable .lntd:last-child code {
   background: transparent;
   color: inherit;
   padding: 0;
   font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
   display: block;
   white-space: pre;
 }
 
-.vscode-line {
-  height: 20.3px; /* 라인 번호와 정확히 일치 */
+/* Hugo 생성 라인 구조 */
+.highlight.vscode-enhanced .line {
   display: block;
-  position: relative;
+  height: 20.3px;
+  line-height: 20.3px;
 }
 
-/* VS Code 구문 강조 색상 */
-.vscode-keyword { color: #569cd6; font-weight: normal; }
-.vscode-string { color: #ce9178; }
-.vscode-comment { color: #6a9955; font-style: italic; }
-.vscode-number { color: #b5cea8; }
-.vscode-function { color: #dcdcaa; }
-.vscode-variable { color: #9cdcfe; }
-.vscode-type { color: #4ec9b0; }
-.vscode-operator { color: #d4d4d4; }
-.vscode-bracket { color: #ffd700; }
-.vscode-tag { color: #569cd6; }
-.vscode-attribute { color: #92c5f8; }
-.vscode-value { color: #ce9178; }
+.highlight.vscode-enhanced .cl {
+  display: inline;
+}
+
+/* VS Code 구문 강조 색상으로 기존 chroma 클래스들 덮어쓰기 */
+.highlight.vscode-enhanced .k,
+.highlight.vscode-enhanced .kc,
+.highlight.vscode-enhanced .kd,
+.highlight.vscode-enhanced .kn,
+.highlight.vscode-enhanced .kp,
+.highlight.vscode-enhanced .kr,
+.highlight.vscode-enhanced .kt { color: #569cd6 !important; font-weight: normal !important; }
+
+.highlight.vscode-enhanced .s,
+.highlight.vscode-enhanced .sa,
+.highlight.vscode-enhanced .sb,
+.highlight.vscode-enhanced .sc,
+.highlight.vscode-enhanced .dl,
+.highlight.vscode-enhanced .sd,
+.highlight.vscode-enhanced .s2,
+.highlight.vscode-enhanced .se,
+.highlight.vscode-enhanced .sh,
+.highlight.vscode-enhanced .si,
+.highlight.vscode-enhanced .sx,
+.highlight.vscode-enhanced .sr,
+.highlight.vscode-enhanced .s1,
+.highlight.vscode-enhanced .ss { color: #ce9178 !important; }
+
+.highlight.vscode-enhanced .c,
+.highlight.vscode-enhanced .ch,
+.highlight.vscode-enhanced .cm,
+.highlight.vscode-enhanced .c1,
+.highlight.vscode-enhanced .cs { color: #6a9955 !important; font-style: italic !important; }
+
+.highlight.vscode-enhanced .m,
+.highlight.vscode-enhanced .mb,
+.highlight.vscode-enhanced .mf,
+.highlight.vscode-enhanced .mh,
+.highlight.vscode-enhanced .mi,
+.highlight.vscode-enhanced .il,
+.highlight.vscode-enhanced .mo { color: #b5cea8 !important; }
+
+.highlight.vscode-enhanced .n,
+.highlight.vscode-enhanced .na,
+.highlight.vscode-enhanced .nb,
+.highlight.vscode-enhanced .bp,
+.highlight.vscode-enhanced .nc,
+.highlight.vscode-enhanced .no,
+.highlight.vscode-enhanced .nd,
+.highlight.vscode-enhanced .ni,
+.highlight.vscode-enhanced .ne,
+.highlight.vscode-enhanced .nf,
+.highlight.vscode-enhanced .fm,
+.highlight.vscode-enhanced .nl,
+.highlight.vscode-enhanced .nn,
+.highlight.vscode-enhanced .nx,
+.highlight.vscode-enhanced .py,
+.highlight.vscode-enhanced .nt,
+.highlight.vscode-enhanced .nv,
+.highlight.vscode-enhanced .vc,
+.highlight.vscode-enhanced .vg,
+.highlight.vscode-enhanced .vi,
+.highlight.vscode-enhanced .vm { color: #9cdcfe !important; }
+
+.highlight.vscode-enhanced .o,
+.highlight.vscode-enhanced .ow { color: #d4d4d4 !important; }
+
+.highlight.vscode-enhanced .p,
+.highlight.vscode-enhanced .pi { color: #ffd700 !important; }
+
+.highlight.vscode-enhanced .gt { color: #4ec9b0 !important; }
 
 /* 스크롤바 스타일링 */
-.vscode-code-content::-webkit-scrollbar {
+.highlight.vscode-enhanced .lntd:last-child pre::-webkit-scrollbar {
   height: 10px;
 }
 
-.vscode-code-content::-webkit-scrollbar-track {
+.highlight.vscode-enhanced .lntd:last-child pre::-webkit-scrollbar-track {
   background: #1e1e1e;
 }
 
-.vscode-code-content::-webkit-scrollbar-thumb {
+.highlight.vscode-enhanced .lntd:last-child pre::-webkit-scrollbar-thumb {
   background: #424242;
   border-radius: 5px;
 }
 
-.vscode-code-content::-webkit-scrollbar-thumb:hover {
+.highlight.vscode-enhanced .lntd:last-child pre::-webkit-scrollbar-thumb:hover {
   background: #4f4f4f;
 }
 
 /* 포커스/호버 효과 */
-.vscode-container:hover {
+.highlight.vscode-enhanced:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
-/* 일반 pre/code 태그 변환 */
-pre:not(.vscode-pre), .highlight {
-  /* 기존 스타일 숨김 - VS Code 스타일로 변환될 예정 */
-}
-
-/* 인라인 코드는 기존 스타일 유지하되 개선 */
-code:not(.vscode-code):not(.highlight code):not(pre code) {
+/* 인라인 코드 스타일 */
+code:not(.highlight code):not(.vscode-code):not(pre code) {
   background: #2d2d30;
   color: #cccccc;
   padding: 2px 6px;
@@ -249,38 +343,26 @@ code:not(.vscode-code):not(.highlight code):not(pre code) {
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
-  .vscode-container {
-    margin: 1.5rem -1rem;
-    border-radius: 0;
+  .highlight.vscode-enhanced .lntable .lntd:first-child {
+    min-width: 40px;
+  }
+  
+  .highlight.vscode-enhanced .lntable .lntd:first-child pre,
+  .highlight.vscode-enhanced .lntable .lntd:last-child pre {
+    padding: 12px;
+    font-size: 13px;
+  }
+  
+  .highlight.vscode-enhanced .lnt,
+  .highlight.vscode-enhanced .line {
+    height: 18.85px;
+    line-height: 18.85px;
   }
   
   .vscode-tab {
     padding: 6px 12px;
     font-size: 12px;
     min-width: 100px;
-  }
-  
-  .vscode-line-numbers {
-    padding: 12px 0;
-    min-width: 40px;
-    font-size: 13px;
-  }
-  
-  .vscode-line-number {
-    padding: 0 12px;
-    height: 18.85px; /* 1.45 * 13px */
-  }
-  
-  .vscode-code-content {
-    padding: 12px;
-  }
-  
-  .vscode-pre {
-    font-size: 13px;
-  }
-  
-  .vscode-line {
-    height: 18.85px;
   }
   
   .vscode-copy-btn {
@@ -291,39 +373,27 @@ code:not(.vscode-code):not(.highlight code):not(pre code) {
 }
 
 @media (max-width: 480px) {
+  .highlight.vscode-enhanced .lntable .lntd:first-child {
+    min-width: 35px;
+  }
+  
+  .highlight.vscode-enhanced .lntable .lntd:first-child pre,
+  .highlight.vscode-enhanced .lntable .lntd:last-child pre {
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  .highlight.vscode-enhanced .lnt,
+  .highlight.vscode-enhanced .line {
+    height: 17.4px;
+    line-height: 17.4px;
+  }
+  
   .vscode-tab {
     padding: 6px 8px;
     font-size: 11px;
     min-width: 80px;
   }
-  
-  .vscode-line-numbers {
-    min-width: 35px;
-    font-size: 12px;
-  }
-  
-  .vscode-line-number {
-    padding: 0 8px;
-    height: 17.4px; /* 1.45 * 12px */
-  }
-  
-  .vscode-code-content {
-    padding: 8px;
-  }
-  
-  .vscode-pre {
-    font-size: 12px;
-  }
-  
-  .vscode-line {
-    height: 17.4px;
-  }
-}
-
-/* 빈 라인 처리 */
-.vscode-line:empty::after {
-  content: ' ';
-  visibility: hidden;
 }
 </style>
 
@@ -371,9 +441,9 @@ class VSCodeEnhancer {
 
   init() {
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => this.convertAllCodeBlocks());
+      document.addEventListener('DOMContentLoaded', () => this.enhanceAllCodeBlocks());
     } else {
-      this.convertAllCodeBlocks();
+      this.enhanceAllCodeBlocks();
     }
     
     // 동적으로 추가되는 코드블록 감지
@@ -387,14 +457,16 @@ class VSCodeEnhancer {
           mutation.addedNodes.forEach(node => {
             if (node.nodeType === Node.ELEMENT_NODE) {
               // 새로 추가된 코드블록들 처리
-              const newHighlights = node.querySelectorAll ? node.querySelectorAll('.highlight') : [];
-              const newPres = node.querySelectorAll ? node.querySelectorAll('pre:not(.vscode-pre)') : [];
+              const newHighlights = node.querySelectorAll ? node.querySelectorAll('.highlight:not(.vscode-enhanced)') : [];
+              const newPres = node.querySelectorAll ? node.querySelectorAll('pre:not(.highlight pre)') : [];
               
-              newHighlights.forEach(block => this.convertToVSCode(block));
+              newHighlights.forEach(block => this.enhanceCodeBlock(block));
               newPres.forEach(pre => this.convertToVSCode(pre));
               
               // 노드 자체가 코드블록인 경우
-              if (node.matches && (node.matches('.highlight') || node.matches('pre:not(.vscode-pre)'))) {
+              if (node.matches && node.matches('.highlight:not(.vscode-enhanced)')) {
+                this.enhanceCodeBlock(node);
+              } else if (node.matches && node.matches('pre:not(.highlight pre)')) {
                 this.convertToVSCode(node);
               }
             }
@@ -409,53 +481,65 @@ class VSCodeEnhancer {
     });
   }
 
-  convertAllCodeBlocks() {
-    // .highlight 코드블록들
-    const highlightBlocks = document.querySelectorAll('.highlight');
-    highlightBlocks.forEach(block => this.convertToVSCode(block));
+  enhanceAllCodeBlocks() {
+    // Hugo highlight 구조가 있는 코드블록들 처리
+    const highlightBlocks = document.querySelectorAll('.highlight:not(.vscode-enhanced)');
+    highlightBlocks.forEach(block => this.enhanceCodeBlock(block));
     
-    // 일반 pre 태그들
-    const preBlocks = document.querySelectorAll('pre:not(.vscode-pre)');
+    // 일반 pre 태그들 (Hugo가 처리하지 않은 것들)
+    const preBlocks = document.querySelectorAll('pre:not(.highlight pre)');
     preBlocks.forEach(pre => this.convertToVSCode(pre));
   }
 
-  convertToVSCode(originalElement) {
-    // 이미 변환된 경우 건너뛰기
-    if (originalElement.closest('.vscode-container')) {
+  enhanceCodeBlock(highlightElement) {
+    // 이미 처리된 경우 건너뛰기
+    if (highlightElement.classList.contains('vscode-enhanced')) {
       return;
     }
 
-    // 코드 내용과 언어 추출
-    let codeContent = '';
-    let language = 'text';
-    let codeElement = null;
-
-    if (originalElement.classList.contains('highlight')) {
-      codeElement = originalElement.querySelector('code');
-      language = this.detectLanguageFromHighlight(originalElement);
-    } else if (originalElement.tagName === 'PRE') {
-      codeElement = originalElement.querySelector('code') || originalElement;
-      language = this.detectLanguageFromElement(originalElement);
-    }
-
-    if (codeElement) {
-      codeContent = codeElement.textContent || codeElement.innerText || '';
-    }
-
+    // 언어 감지
+    const language = this.detectLanguageFromHighlight(highlightElement);
+    
+    // 코드 내용 추출 (Hugo 구조 활용)
+    const codeContent = this.extractCodeFromHugoStructure(highlightElement);
+    
     if (!codeContent.trim()) {
       return; // 빈 코드블록은 건너뛰기
     }
 
-    // VS Code 스타일 컨테이너 생성
-    const vscodeContainer = this.createVSCodeContainer(language, codeContent);
+    // VS Code 스타일 클래스 추가
+    highlightElement.classList.add('vscode-enhanced');
     
-    // 원래 요소 교체
-    originalElement.parentNode.replaceChild(vscodeContainer, originalElement);
+    // 헤더 추가
+    const header = this.createHeader(language, codeContent);
+    highlightElement.insertBefore(header, highlightElement.firstChild);
+  }
+
+  extractCodeFromHugoStructure(highlightElement) {
+    // Hugo의 lntable 구조에서 코드 내용 추출
+    const codeElement = highlightElement.querySelector('.lntd:last-child code');
+    if (codeElement) {
+      return codeElement.textContent || codeElement.innerText || '';
+    }
+    
+    // 일반적인 구조에서 추출
+    const generalCode = highlightElement.querySelector('code');
+    if (generalCode) {
+      return generalCode.textContent || generalCode.innerText || '';
+    }
+    
+    return '';
   }
 
   detectLanguageFromHighlight(element) {
-    const classList = Array.from(element.classList);
+    // 코드 요소에서 data-lang 속성 확인
+    const codeElement = element.querySelector('code[data-lang]');
+    if (codeElement) {
+      return codeElement.getAttribute('data-lang').toLowerCase();
+    }
     
+    // 클래스명에서 언어 추출
+    const classList = Array.from(element.classList);
     for (const className of classList) {
       if (className.startsWith('language-')) {
         return className.replace('language-', '').toLowerCase();
@@ -465,19 +549,9 @@ class VSCodeEnhancer {
       }
     }
     
-    return this.detectLanguageFromContent(element.textContent || '');
-  }
-
-  detectLanguageFromElement(element) {
-    const classList = Array.from(element.classList);
-    
-    for (const className of classList) {
-      if (['javascript', 'python', 'html', 'css', 'json', 'bash', 'shell'].includes(className)) {
-        return className;
-      }
-    }
-    
-    return this.detectLanguageFromContent(element.textContent || '');
+    // 내용으로 언어 추측
+    const content = this.extractCodeFromHugoStructure(element);
+    return this.detectLanguageFromContent(content);
   }
 
   detectLanguageFromContent(content) {
@@ -494,22 +568,6 @@ class VSCodeEnhancer {
     if (text.includes('SELECT') || text.includes('FROM')) return 'sql';
     
     return 'text';
-  }
-
-  createVSCodeContainer(language, codeContent) {
-    const container = document.createElement('div');
-    container.className = 'vscode-container';
-    
-    // 헤더 생성
-    const header = this.createHeader(language, codeContent);
-    
-    // 컨텐츠 생성
-    const content = this.createContent(codeContent);
-    
-    container.appendChild(header);
-    container.appendChild(content);
-    
-    return container;
   }
 
   createHeader(language, codeContent) {
@@ -543,42 +601,125 @@ class VSCodeEnhancer {
     return header;
   }
 
+  // Hugo가 처리하지 않은 일반 pre 태그를 위한 변환 (기존 방식 유지)
+  convertToVSCode(originalElement) {
+    // 이미 변환된 경우 건너뛰기
+    if (originalElement.closest('.vscode-container')) {
+      return;
+    }
+
+    // 코드 내용과 언어 추출
+    let codeContent = '';
+    let language = 'text';
+    let codeElement = originalElement.querySelector('code') || originalElement;
+
+    if (codeElement) {
+      codeContent = codeElement.textContent || codeElement.innerText || '';
+    }
+
+    if (!codeContent.trim()) {
+      return; // 빈 코드블록은 건너뛰기
+    }
+
+    language = this.detectLanguageFromContent(codeContent);
+
+    // VS Code 스타일 컨테이너 생성 (기존 방식)
+    const vscodeContainer = this.createVSCodeContainer(language, codeContent);
+    
+    // 원래 요소 교체
+    originalElement.parentNode.replaceChild(vscodeContainer, originalElement);
+  }
+
+  createVSCodeContainer(language, codeContent) {
+    const container = document.createElement('div');
+    container.className = 'vscode-container';
+    
+    // 헤더 생성
+    const header = this.createHeader(language, codeContent);
+    
+    // 컨텐츠 생성 (기존 방식)
+    const content = this.createContent(codeContent);
+    
+    container.appendChild(header);
+    container.appendChild(content);
+    
+    return container;
+  }
+
   createContent(codeContent) {
     const content = document.createElement('div');
     content.className = 'vscode-content';
+    content.style.display = 'flex';
     
     // 라인별로 분리
     const lines = codeContent.split('\n');
     
     // 라인 번호 영역
     const lineNumbers = document.createElement('div');
-    lineNumbers.className = 'vscode-line-numbers';
+    lineNumbers.style.cssText = `
+      background: #1e1e1e;
+      color: #858585;
+      padding: 16px;
+      text-align: right;
+      user-select: none;
+      font-size: 14px;
+      line-height: 1.45;
+      min-width: 50px;
+      border-right: 1px solid #333333;
+      flex-shrink: 0;
+    `;
     
     // 코드 내용 영역
     const codeContentDiv = document.createElement('div');
-    codeContentDiv.className = 'vscode-code-content';
+    codeContentDiv.style.cssText = `
+      flex: 1;
+      background: #1e1e1e;
+      overflow-x: auto;
+      padding: 16px;
+    `;
     
     const pre = document.createElement('pre');
-    pre.className = 'vscode-pre';
+    pre.style.cssText = `
+      background: transparent;
+      color: #d4d4d4;
+      margin: 0;
+      padding: 0;
+      font-family: inherit;
+      font-size: 14px;
+      line-height: 1.45;
+      white-space: pre;
+      tab-size: 4;
+    `;
     
     const code = document.createElement('code');
-    code.className = 'vscode-code';
+    code.style.cssText = `
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      font-family: inherit;
+      display: block;
+      white-space: pre;
+    `;
     
     // 라인 번호 생성
     lines.forEach((line, index) => {
       const lineNum = document.createElement('div');
-      lineNum.className = 'vscode-line-number';
       lineNum.textContent = (index + 1).toString();
+      lineNum.style.cssText = `
+        height: 20.3px;
+        line-height: 20.3px;
+      `;
       lineNumbers.appendChild(lineNum);
     });
     
-    // 코드 라인 생성 (구문 강조 적용)
-    const highlightedLines = lines.map(line => this.applySyntaxHighlighting(line));
-    
+    // 코드 라인 생성
     lines.forEach((line, index) => {
       const lineDiv = document.createElement('div');
-      lineDiv.className = 'vscode-line';
-      lineDiv.innerHTML = highlightedLines[index];
+      lineDiv.style.cssText = `
+        height: 20.3px;
+        line-height: 20.3px;
+      `;
+      lineDiv.innerHTML = this.applySyntaxHighlighting(line);
       code.appendChild(lineDiv);
     });
     
@@ -592,9 +733,8 @@ class VSCodeEnhancer {
   }
 
   applySyntaxHighlighting(line) {
-    // 빈 라인 처리
     if (!line.trim()) {
-      return '&nbsp;'; // 공백으로 라인 높이 유지
+      return '&nbsp;';
     }
     
     // 기본적인 구문 강조 (HTML 이스케이프 먼저)
@@ -607,13 +747,13 @@ class VSCodeEnhancer {
     
     // 구문 강조 적용
     highlighted = highlighted
-      .replace(/(".*?")/g, '<span class="vscode-string">$1</span>')
-      .replace(/('.*?')/g, '<span class="vscode-string">$1</span>')
-      .replace(/(\/\/.*$)/g, '<span class="vscode-comment">$1</span>')
-      .replace(/(\/\*.*?\*\/)/g, '<span class="vscode-comment">$1</span>')
-      .replace(/\b(function|class|const|let|var|if|else|for|while|return|import|export|from|as|default|def|print|True|False|None)\b/g, '<span class="vscode-keyword">$1</span>')
-      .replace(/\b(\d+\.?\d*)\b/g, '<span class="vscode-number">$1</span>')
-      .replace(/([{}()\[\]])/g, '<span class="vscode-bracket">$1</span>');
+      .replace(/(".*?")/g, '<span style="color: #ce9178;">$1</span>')
+      .replace(/('.*?')/g, '<span style="color: #ce9178;">$1</span>')
+      .replace(/(\/\/.*$)/g, '<span style="color: #6a9955; font-style: italic;">$1</span>')
+      .replace(/(\/\*.*?\*\/)/g, '<span style="color: #6a9955; font-style: italic;">$1</span>')
+      .replace(/\b(function|class|const|let|var|if|else|for|while|return|import|export|from|as|default|def|print|True|False|None)\b/g, '<span style="color: #569cd6;">$1</span>')
+      .replace(/\b(\d+\.?\d*)\b/g, '<span style="color: #b5cea8;">$1</span>')
+      .replace(/([{}()\[\]])/g, '<span style="color: #ffd700;">$1</span>');
     
     return highlighted;
   }
