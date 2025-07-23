@@ -121,20 +121,51 @@
   flex-shrink: 0;
 }
 
-/* 코드 컨텐츠 영역 */
+/* 코드 컨텐츠 영역 - 새로운 구조 */
 .vscode-content {
   background: #1e1e1e;
   color: #d4d4d4;
   position: relative;
+  display: flex;
   overflow: hidden;
+}
+
+/* 라인 번호 영역 */
+.vscode-line-numbers {
+  background: #1e1e1e;
+  color: #858585;
+  padding: 16px 0;
+  text-align: right;
+  user-select: none;
+  font-size: 14px;
+  line-height: 1.45;
+  min-width: 50px;
+  border-right: 1px solid #333333;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.vscode-line-number {
+  padding: 0 16px;
+  height: 20.3px; /* 1.45 * 14px */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* 코드 내용 영역 */
+.vscode-code-content {
+  flex: 1;
+  background: #1e1e1e;
+  overflow-x: auto;
+  padding: 16px;
 }
 
 .vscode-pre {
   background: transparent;
-  color: inherit;
+  color: #d4d4d4;
   margin: 0;
-  padding: 16px 0;
-  overflow-x: auto;
+  padding: 0;
   font-family: inherit;
   font-size: 14px;
   line-height: 1.45;
@@ -156,32 +187,9 @@
   white-space: pre;
 }
 
-/* 라인 번호 */
-.vscode-line-numbers {
-  display: flex;
-}
-
-.vscode-line-number {
-  color: #858585;
-  background: #1e1e1e;
-  padding: 0 16px 0 16px;
-  text-align: right;
-  user-select: none;
-  font-size: 14px;
-  line-height: 1.45;
-  min-width: 50px;
-  border-right: 1px solid #333333;
-  flex-shrink: 0;
-}
-
-.vscode-line-content {
-  flex: 1;
-  padding: 0 16px;
-  overflow-x: auto;
-}
-
 .vscode-line {
-  min-height: 20px;
+  height: 20.3px; /* 라인 번호와 정확히 일치 */
+  display: block;
   position: relative;
 }
 
@@ -200,20 +208,20 @@
 .vscode-value { color: #ce9178; }
 
 /* 스크롤바 스타일링 */
-.vscode-pre::-webkit-scrollbar {
+.vscode-code-content::-webkit-scrollbar {
   height: 10px;
 }
 
-.vscode-pre::-webkit-scrollbar-track {
+.vscode-code-content::-webkit-scrollbar-track {
   background: #1e1e1e;
 }
 
-.vscode-pre::-webkit-scrollbar-thumb {
+.vscode-code-content::-webkit-scrollbar-thumb {
   background: #424242;
   border-radius: 5px;
 }
 
-.vscode-pre::-webkit-scrollbar-thumb:hover {
+.vscode-code-content::-webkit-scrollbar-thumb:hover {
   background: #4f4f4f;
 }
 
@@ -252,19 +260,27 @@ code:not(.vscode-code):not(.highlight code):not(pre code) {
     min-width: 100px;
   }
   
-  .vscode-pre {
-    font-size: 13px;
+  .vscode-line-numbers {
     padding: 12px 0;
-  }
-  
-  .vscode-line-number {
-    padding: 0 12px 0 12px;
     min-width: 40px;
     font-size: 13px;
   }
   
-  .vscode-line-content {
+  .vscode-line-number {
     padding: 0 12px;
+    height: 18.85px; /* 1.45 * 13px */
+  }
+  
+  .vscode-code-content {
+    padding: 12px;
+  }
+  
+  .vscode-pre {
+    font-size: 13px;
+  }
+  
+  .vscode-line {
+    height: 18.85px;
   }
   
   .vscode-copy-btn {
@@ -281,19 +297,33 @@ code:not(.vscode-code):not(.highlight code):not(pre code) {
     min-width: 80px;
   }
   
-  .vscode-pre {
+  .vscode-line-numbers {
+    min-width: 35px;
     font-size: 12px;
   }
   
   .vscode-line-number {
-    font-size: 12px;
-    min-width: 35px;
-    padding: 0 8px 0 8px;
+    padding: 0 8px;
+    height: 17.4px; /* 1.45 * 12px */
   }
   
-  .vscode-line-content {
-    padding: 0 8px;
+  .vscode-code-content {
+    padding: 8px;
   }
+  
+  .vscode-pre {
+    font-size: 12px;
+  }
+  
+  .vscode-line {
+    height: 17.4px;
+  }
+}
+
+/* 빈 라인 처리 */
+.vscode-line:empty::after {
+  content: ' ';
+  visibility: hidden;
 }
 </style>
 
@@ -470,7 +500,7 @@ class VSCodeEnhancer {
     const container = document.createElement('div');
     container.className = 'vscode-container';
     
-    // 헤더 생성 (codeContent도 전달)
+    // 헤더 생성
     const header = this.createHeader(language, codeContent);
     
     // 컨텐츠 생성
@@ -517,19 +547,19 @@ class VSCodeEnhancer {
     const content = document.createElement('div');
     content.className = 'vscode-content';
     
+    // 라인별로 분리
+    const lines = codeContent.split('\n');
+    
+    // 라인 번호 영역
+    const lineNumbers = document.createElement('div');
+    lineNumbers.className = 'vscode-line-numbers';
+    
+    // 코드 내용 영역
+    const codeContentDiv = document.createElement('div');
+    codeContentDiv.className = 'vscode-code-content';
+    
     const pre = document.createElement('pre');
     pre.className = 'vscode-pre';
-    
-    // 라인별로 분리하여 라인 번호와 함께 표시
-    const lines = codeContent.split('\n');
-    const lineContainer = document.createElement('div');
-    lineContainer.className = 'vscode-line-numbers';
-    
-    const lineNumbers = document.createElement('div');
-    lineNumbers.className = 'vscode-line-number';
-    
-    const lineContent = document.createElement('div');
-    lineContent.className = 'vscode-line-content';
     
     const code = document.createElement('code');
     code.className = 'vscode-code';
@@ -537,34 +567,55 @@ class VSCodeEnhancer {
     // 라인 번호 생성
     lines.forEach((line, index) => {
       const lineNum = document.createElement('div');
+      lineNum.className = 'vscode-line-number';
       lineNum.textContent = (index + 1).toString();
       lineNumbers.appendChild(lineNum);
     });
     
-    // 코드 내용 설정 (기본 구문 강조)
-    code.innerHTML = this.applySyntaxHighlighting(codeContent);
+    // 코드 라인 생성 (구문 강조 적용)
+    const highlightedLines = lines.map(line => this.applySyntaxHighlighting(line));
     
-    lineContent.appendChild(code);
-    lineContainer.appendChild(lineNumbers);
-    lineContainer.appendChild(lineContent);
+    lines.forEach((line, index) => {
+      const lineDiv = document.createElement('div');
+      lineDiv.className = 'vscode-line';
+      lineDiv.innerHTML = highlightedLines[index];
+      code.appendChild(lineDiv);
+    });
     
-    pre.appendChild(lineContainer);
-    content.appendChild(pre);
+    pre.appendChild(code);
+    codeContentDiv.appendChild(pre);
+    
+    content.appendChild(lineNumbers);
+    content.appendChild(codeContentDiv);
     
     return content;
   }
 
-  applySyntaxHighlighting(code) {
-    // 기본적인 구문 강조 (간단한 정규식 기반)
-    return code
-      .replace(/\n/g, '<br>')
+  applySyntaxHighlighting(line) {
+    // 빈 라인 처리
+    if (!line.trim()) {
+      return '&nbsp;'; // 공백으로 라인 높이 유지
+    }
+    
+    // 기본적인 구문 강조 (HTML 이스케이프 먼저)
+    let highlighted = line
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+    
+    // 구문 강조 적용
+    highlighted = highlighted
       .replace(/(".*?")/g, '<span class="vscode-string">$1</span>')
       .replace(/('.*?')/g, '<span class="vscode-string">$1</span>')
-      .replace(/(\/\/.*?$)/gm, '<span class="vscode-comment">$1</span>')
-      .replace(/(\/\*[\s\S]*?\*\/)/g, '<span class="vscode-comment">$1</span>')
-      .replace(/\b(function|class|const|let|var|if|else|for|while|return|import|export|from|as|default)\b/g, '<span class="vscode-keyword">$1</span>')
+      .replace(/(\/\/.*$)/g, '<span class="vscode-comment">$1</span>')
+      .replace(/(\/\*.*?\*\/)/g, '<span class="vscode-comment">$1</span>')
+      .replace(/\b(function|class|const|let|var|if|else|for|while|return|import|export|from|as|default|def|print|True|False|None)\b/g, '<span class="vscode-keyword">$1</span>')
       .replace(/\b(\d+\.?\d*)\b/g, '<span class="vscode-number">$1</span>')
       .replace(/([{}()\[\]])/g, '<span class="vscode-bracket">$1</span>');
+    
+    return highlighted;
   }
 
   async copyToClipboard(button, text) {
