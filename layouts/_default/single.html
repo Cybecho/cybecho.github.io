@@ -62,6 +62,21 @@
       </div>
     </div>
   {{ end }}
+
+  <!-- 이미지 모달 -->
+  <div class="image-modal" id="imageModal">
+    <div class="image-modal-overlay" id="imageModalOverlay"></div>
+    <div class="image-modal-content">
+      <button class="image-modal-close" id="imageModalClose" aria-label="이미지 모달 닫기">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img class="image-modal-img" id="imageModalImg" src="" alt="">
+      <div class="image-modal-info" id="imageModalInfo"></div>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -268,6 +283,61 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// 🎯 이미지 모달 기능
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('imageModalImg');
+  const modalInfo = document.getElementById('imageModalInfo');
+  const modalClose = document.getElementById('imageModalClose');
+  const modalOverlay = document.getElementById('imageModalOverlay');
+  const images = document.querySelectorAll('.content img');
+
+  if (!modal || !modalImg || !modalClose || !modalOverlay) {
+    return;
+  }
+
+  // 이미지 클릭 시 모달 열기
+  images.forEach(img => {
+    img.addEventListener('click', function() {
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+      modalInfo.textContent = this.alt || '이미지';
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // 배경 스크롤 방지
+    });
+  });
+
+  // 모달 닫기 함수
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    // 이미지 정보 초기화
+    setTimeout(() => {
+      modalImg.src = '';
+      modalImg.alt = '';
+      modalInfo.textContent = '';
+    }, 300);
+  }
+
+  // 닫기 버튼 클릭
+  modalClose.addEventListener('click', closeModal);
+
+  // 오버레이 클릭 시 닫기
+  modalOverlay.addEventListener('click', closeModal);
+
+  // ESC 키로 닫기
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  // 모달 이미지 클릭 시 닫기 방지
+  modalImg.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+});
 </script>
 
 <style>
@@ -413,11 +483,19 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .content img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   border-radius: 8px;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
+  display: block;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  cursor: zoom-in;
+  transition: all 0.3s ease;
+}
+
+.content img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .content table {
@@ -691,6 +769,109 @@ document.addEventListener('DOMContentLoaded', function() {
 
   .content {
     font-size: 0.95rem;
+  }
+}
+
+/* 🎯 이미지 모달 스타일 */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.image-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+
+.image-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 95vw;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+  z-index: 1001;
+}
+
+.image-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.image-modal-img {
+  max-width: 100%;
+  max-height: calc(95vh - 80px);
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+.image-modal-info {
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .image-modal-close {
+    top: -40px;
+    right: -10px;
+    padding: 0.4rem;
+  }
+  
+  .image-modal-close svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .image-modal-img {
+    max-height: calc(95vh - 60px);
+  }
+  
+  .image-modal-info {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 
