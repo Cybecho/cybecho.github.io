@@ -1,132 +1,304 @@
-<!-- Code Copy Enhancement -->
+<!-- VS Code Style Code Blocks -->
 <style>
-/* 코드블록 기본 스타일 개선 */
-.highlight {
-  position: relative;
-  margin: 1.5rem 0;
+/* VS Code 스타일 코드블록 컨테이너 */
+.vscode-container {
+  background: #1e1e1e; /* VS Code dark theme background */
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 2rem 0;
   overflow: hidden;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-}
-
-.highlight pre {
-  margin: 0;
-  padding: 1rem;
-  overflow-x: auto;
-  background: #f8fafc;
-  line-height: 1.5;
-  font-size: 0.9rem;
-  height: fit-content;
-  max-height: 600px;
-  color: #1e293b;
-}
-
-.highlight code {
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
   font-family: 'Fira Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: #1e293b;
+  position: relative;
 }
 
-/* 코드 복사 버튼 */
-.code-copy-btn {
+/* VS Code 탭 헤더 */
+.vscode-header {
+  background: #2d2d30;
+  border-bottom: 1px solid #3e3e42;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  height: 35px;
+  position: relative;
+}
+
+.vscode-tab {
+  background: #1e1e1e;
+  color: #cccccc;
+  padding: 8px 16px;
+  font-size: 13px;
+  border-right: 1px solid #3e3e42;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  height: 100%;
+  min-width: 120px;
+  cursor: default;
+}
+
+.vscode-tab::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+
+/* 언어별 아이콘 */
+.vscode-tab.lang-javascript::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f7df1e' d='M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z'/%3E%3C/svg%3E");
+}
+
+.vscode-tab.lang-python::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233776ab' d='M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09-.33.22zM21.1 6.11l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08-.33.23z'/%3E%3C/svg%3E");
+}
+
+.vscode-tab.lang-html::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e34f26' d='M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z'/%3E%3C/svg%3E");
+}
+
+.vscode-tab.lang-css::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231572b6' d='M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm4.75 7.5l4.5 4.5H5.25l1.5-1.5h3l-3-3zm0 0V6l6 6-1.5 1.5-4.5-4.5z'/%3E%3C/svg%3E");
+}
+
+.vscode-tab.lang-json::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffd700' d='M5.219 2.5c-.638 0-1.157.519-1.157 1.157v16.686c0 .638.519 1.157 1.157 1.157h13.562c.638 0 1.157-.519 1.157-1.157V3.657c0-.638-.519-1.157-1.157-1.157H5.219zm2.023 3.447h1.734v1.734H7.242V5.947zm4.336 0h1.734v1.734h-1.734V5.947zm4.336 0h1.734v1.734h-1.734V5.947z'/%3E%3C/svg%3E");
+}
+
+.vscode-tab.lang-bash::before, .vscode-tab.lang-shell::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234eaa25' d='M3 3v18h18V3H3zm16 16H5V5h14v14zM7 7v2h2V7H7zm4 0v2h6V7h-6zm-4 4v2h2v-2H7zm4 0v2h6v-2h-6z'/%3E%3C/svg%3E");
+}
+
+.vscode-tab-filename {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* 복사 버튼 */
+.vscode-copy-btn {
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid #e2e8f0;
-  color: #475569;
-  padding: 0.5rem;
-  border-radius: 6px;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: 1px solid #484848;
+  color: #cccccc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
   cursor: pointer;
+  opacity: 0;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 4px;
   font-family: inherit;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  opacity: 0.8;
-  backdrop-filter: blur(4px);
-  width: 32px;
-  height: 32px;
+  height: 22px;
 }
 
-.code-copy-btn:hover {
-  background: #3b82f6;
-  color: white;
-  border-color: #3b82f6;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+.vscode-container:hover .vscode-copy-btn {
   opacity: 1;
 }
 
-.code-copy-btn.copied {
-  background: #10b981 !important;
-  color: white !important;
-  border-color: #10b981 !important;
-  opacity: 1;
+.vscode-copy-btn:hover {
+  background: #094771;
+  border-color: #007acc;
+  color: #ffffff;
 }
 
-.code-copy-btn svg {
-  width: 16px;
-  height: 16px;
+.vscode-copy-btn.copied {
+  background: #16825d !important;
+  border-color: #16825d !important;
+  color: #ffffff !important;
+}
+
+.vscode-copy-btn svg {
+  width: 12px;
+  height: 12px;
   flex-shrink: 0;
 }
 
-/* 일반 pre 태그 스타일링 */
-pre:not(.highlight pre) {
+/* 코드 컨텐츠 영역 */
+.vscode-content {
+  background: #1e1e1e;
+  color: #d4d4d4;
   position: relative;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 1rem;
+  overflow: hidden;
+}
+
+.vscode-pre {
+  background: transparent;
+  color: inherit;
+  margin: 0;
+  padding: 16px 0;
   overflow-x: auto;
-  margin: 1.5rem 0;
-  font-family: 'Fira Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: #1e293b;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.45;
+  white-space: pre;
+  word-wrap: normal;
+  tab-size: 4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* 인라인 코드 개선 */
-code:not(.highlight code):not(pre code) {
-  background: #f1f5f9;
-  color: #e11d48;
-  padding: 0.2em 0.4em;
+.vscode-code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  display: block;
+  white-space: pre;
+}
+
+/* 라인 번호 */
+.vscode-line-numbers {
+  display: flex;
+}
+
+.vscode-line-number {
+  color: #858585;
+  background: #1e1e1e;
+  padding: 0 16px 0 16px;
+  text-align: right;
+  user-select: none;
+  font-size: 14px;
+  line-height: 1.45;
+  min-width: 50px;
+  border-right: 1px solid #333333;
+  flex-shrink: 0;
+}
+
+.vscode-line-content {
+  flex: 1;
+  padding: 0 16px;
+  overflow-x: auto;
+}
+
+.vscode-line {
+  min-height: 20px;
+  position: relative;
+}
+
+/* VS Code 구문 강조 색상 */
+.vscode-keyword { color: #569cd6; font-weight: normal; }
+.vscode-string { color: #ce9178; }
+.vscode-comment { color: #6a9955; font-style: italic; }
+.vscode-number { color: #b5cea8; }
+.vscode-function { color: #dcdcaa; }
+.vscode-variable { color: #9cdcfe; }
+.vscode-type { color: #4ec9b0; }
+.vscode-operator { color: #d4d4d4; }
+.vscode-bracket { color: #ffd700; }
+.vscode-tag { color: #569cd6; }
+.vscode-attribute { color: #92c5f8; }
+.vscode-value { color: #ce9178; }
+
+/* 스크롤바 스타일링 */
+.vscode-pre::-webkit-scrollbar {
+  height: 10px;
+}
+
+.vscode-pre::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.vscode-pre::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 5px;
+}
+
+.vscode-pre::-webkit-scrollbar-thumb:hover {
+  background: #4f4f4f;
+}
+
+/* 포커스/호버 효과 */
+.vscode-container:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* 일반 pre/code 태그 변환 */
+pre:not(.vscode-pre), .highlight {
+  /* 기존 스타일 숨김 - VS Code 스타일로 변환될 예정 */
+}
+
+/* 인라인 코드는 기존 스타일 유지하되 개선 */
+code:not(.vscode-code):not(.highlight code):not(pre code) {
+  background: #2d2d30;
+  color: #cccccc;
+  padding: 2px 6px;
   border-radius: 3px;
-  font-size: 0.85em;
+  font-size: 0.9em;
   font-family: 'Fira Code', 'SF Mono', Consolas, monospace;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #404040;
+  font-weight: normal;
 }
 
-/* 반응형 개선 */
-@media (max-width: 640px) {
-  .highlight pre, pre:not(.highlight pre) {
-    font-size: 0.8rem;
-    padding: 0.75rem;
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .vscode-container {
+    margin: 1.5rem -1rem;
+    border-radius: 0;
   }
   
-  .code-copy-btn {
-    width: 28px;
-    height: 28px;
-    top: 0.5rem;
-    right: 0.5rem;
+  .vscode-tab {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-width: 100px;
   }
   
-  .code-copy-btn svg {
-    width: 14px;
-    height: 14px;
+  .vscode-pre {
+    font-size: 13px;
+    padding: 12px 0;
+  }
+  
+  .vscode-line-number {
+    padding: 0 12px 0 12px;
+    min-width: 40px;
+    font-size: 13px;
+  }
+  
+  .vscode-line-content {
+    padding: 0 12px;
+  }
+  
+  .vscode-copy-btn {
+    font-size: 10px;
+    padding: 3px 6px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vscode-tab {
+    padding: 6px 8px;
+    font-size: 11px;
+    min-width: 80px;
+  }
+  
+  .vscode-pre {
+    font-size: 12px;
+  }
+  
+  .vscode-line-number {
+    font-size: 12px;
+    min-width: 35px;
+    padding: 0 8px 0 8px;
+  }
+  
+  .vscode-line-content {
+    padding: 0 8px;
   }
 }
 </style>
 
 <script>
-class CodeCopyEnhancer {
+class VSCodeEnhancer {
   constructor() {
     this.copyIcon = `<svg fill="currentColor" viewBox="0 0 16 16">
       <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
@@ -137,14 +309,41 @@ class CodeCopyEnhancer {
       <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
     </svg>`;
     
+    this.languageExtensions = {
+      'javascript': 'script.js',
+      'js': 'script.js',
+      'python': 'script.py',
+      'py': 'script.py',
+      'html': 'index.html',
+      'css': 'styles.css',
+      'json': 'data.json',
+      'bash': 'script.sh',
+      'shell': 'script.sh',
+      'sh': 'script.sh',
+      'typescript': 'script.ts',
+      'ts': 'script.ts',
+      'php': 'script.php',
+      'java': 'Script.java',
+      'c': 'script.c',
+      'cpp': 'script.cpp',
+      'go': 'script.go',
+      'rust': 'script.rs',
+      'sql': 'query.sql',
+      'yaml': 'config.yaml',
+      'yml': 'config.yml',
+      'xml': 'data.xml',
+      'markdown': 'README.md',
+      'md': 'README.md'
+    };
+    
     this.init();
   }
 
   init() {
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => this.enhanceAllCodeBlocks());
+      document.addEventListener('DOMContentLoaded', () => this.convertAllCodeBlocks());
     } else {
-      this.enhanceAllCodeBlocks();
+      this.convertAllCodeBlocks();
     }
     
     // 동적으로 추가되는 코드블록 감지
@@ -159,14 +358,14 @@ class CodeCopyEnhancer {
             if (node.nodeType === Node.ELEMENT_NODE) {
               // 새로 추가된 코드블록들 처리
               const newHighlights = node.querySelectorAll ? node.querySelectorAll('.highlight') : [];
-              const newPres = node.querySelectorAll ? node.querySelectorAll('pre:not(.highlight pre)') : [];
+              const newPres = node.querySelectorAll ? node.querySelectorAll('pre:not(.vscode-pre)') : [];
               
-              newHighlights.forEach(block => this.addCopyButton(block));
-              newPres.forEach(pre => this.addCopyButton(pre));
+              newHighlights.forEach(block => this.convertToVSCode(block));
+              newPres.forEach(pre => this.convertToVSCode(pre));
               
               // 노드 자체가 코드블록인 경우
-              if (node.matches && (node.matches('.highlight') || node.matches('pre:not(.highlight pre)'))) {
-                this.addCopyButton(node);
+              if (node.matches && (node.matches('.highlight') || node.matches('pre:not(.vscode-pre)'))) {
+                this.convertToVSCode(node);
               }
             }
           });
@@ -180,63 +379,200 @@ class CodeCopyEnhancer {
     });
   }
 
-  enhanceAllCodeBlocks() {
+  convertAllCodeBlocks() {
     // .highlight 코드블록들
     const highlightBlocks = document.querySelectorAll('.highlight');
-    highlightBlocks.forEach(block => this.addCopyButton(block));
+    highlightBlocks.forEach(block => this.convertToVSCode(block));
     
-    // 일반 pre 태그들 (.highlight 내부가 아닌 것만)
-    const preBlocks = document.querySelectorAll('pre:not(.highlight pre)');
-    preBlocks.forEach(pre => this.addCopyButton(pre));
+    // 일반 pre 태그들
+    const preBlocks = document.querySelectorAll('pre:not(.vscode-pre)');
+    preBlocks.forEach(pre => this.convertToVSCode(pre));
   }
 
-  addCopyButton(container) {
-    // 이미 복사 버튼이 있으면 건너뛰기
-    if (container.querySelector('.code-copy-btn')) {
+  convertToVSCode(originalElement) {
+    // 이미 변환된 경우 건너뛰기
+    if (originalElement.closest('.vscode-container')) {
       return;
     }
 
-    // 코드 내용 추출
+    // 코드 내용과 언어 추출
     let codeContent = '';
-    const codeElement = container.querySelector('code');
-    
+    let language = 'text';
+    let codeElement = null;
+
+    if (originalElement.classList.contains('highlight')) {
+      codeElement = originalElement.querySelector('code');
+      language = this.detectLanguageFromHighlight(originalElement);
+    } else if (originalElement.tagName === 'PRE') {
+      codeElement = originalElement.querySelector('code') || originalElement;
+      language = this.detectLanguageFromElement(originalElement);
+    }
+
     if (codeElement) {
       codeContent = codeElement.textContent || codeElement.innerText || '';
-    } else if (container.tagName === 'PRE') {
-      codeContent = container.textContent || container.innerText || '';
     }
-    
+
     if (!codeContent.trim()) {
       return; // 빈 코드블록은 건너뛰기
     }
 
-    // 복사 버튼 생성
+    // VS Code 스타일 컨테이너 생성
+    const vscodeContainer = this.createVSCodeContainer(language, codeContent);
+    
+    // 원래 요소 교체
+    originalElement.parentNode.replaceChild(vscodeContainer, originalElement);
+  }
+
+  detectLanguageFromHighlight(element) {
+    const classList = Array.from(element.classList);
+    
+    for (const className of classList) {
+      if (className.startsWith('language-')) {
+        return className.replace('language-', '').toLowerCase();
+      }
+      if (className.startsWith('highlight-')) {
+        return className.replace('highlight-', '').toLowerCase();
+      }
+    }
+    
+    return this.detectLanguageFromContent(element.textContent || '');
+  }
+
+  detectLanguageFromElement(element) {
+    const classList = Array.from(element.classList);
+    
+    for (const className of classList) {
+      if (['javascript', 'python', 'html', 'css', 'json', 'bash', 'shell'].includes(className)) {
+        return className;
+      }
+    }
+    
+    return this.detectLanguageFromContent(element.textContent || '');
+  }
+
+  detectLanguageFromContent(content) {
+    const text = content.trim();
+    
+    // 간단한 언어 감지 로직
+    if (text.startsWith('<?php')) return 'php';
+    if (text.includes('function') && text.includes('=>')) return 'javascript';
+    if (text.includes('def ') && text.includes(':')) return 'python';
+    if (text.includes('<html') || text.includes('<!DOCTYPE')) return 'html';
+    if (text.includes('import ') && text.includes('from ')) return 'python';
+    if (text.startsWith('#!') && text.includes('bash')) return 'bash';
+    if ((text.startsWith('{') || text.startsWith('[')) && text.includes('"')) return 'json';
+    if (text.includes('SELECT') || text.includes('FROM')) return 'sql';
+    
+    return 'text';
+  }
+
+  createVSCodeContainer(language, codeContent) {
+    const container = document.createElement('div');
+    container.className = 'vscode-container';
+    
+    // 헤더 생성 (codeContent도 전달)
+    const header = this.createHeader(language, codeContent);
+    
+    // 컨텐츠 생성
+    const content = this.createContent(codeContent);
+    
+    container.appendChild(header);
+    container.appendChild(content);
+    
+    return container;
+  }
+
+  createHeader(language, codeContent) {
+    const header = document.createElement('div');
+    header.className = 'vscode-header';
+    
+    const tab = document.createElement('div');
+    tab.className = `vscode-tab lang-${language}`;
+    
+    const filename = document.createElement('span');
+    filename.className = 'vscode-tab-filename';
+    filename.textContent = this.languageExtensions[language] || `code.${language}`;
+    
     const copyBtn = document.createElement('button');
-    copyBtn.className = 'code-copy-btn';
-    copyBtn.innerHTML = this.copyIcon;
+    copyBtn.className = 'vscode-copy-btn';
+    copyBtn.innerHTML = `${this.copyIcon} Copy`;
     copyBtn.title = '코드 복사';
     copyBtn.setAttribute('aria-label', '코드 복사');
     
-    // 클릭 이벤트
+    // 복사 이벤트 연결
     copyBtn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       this.copyToClipboard(copyBtn, codeContent);
     });
+    
+    tab.appendChild(filename);
+    header.appendChild(tab);
+    header.appendChild(copyBtn);
+    
+    return header;
+  }
 
-    // 컨테이너를 relative로 설정하고 버튼 추가
-    container.style.position = 'relative';
-    container.appendChild(copyBtn);
+  createContent(codeContent) {
+    const content = document.createElement('div');
+    content.className = 'vscode-content';
+    
+    const pre = document.createElement('pre');
+    pre.className = 'vscode-pre';
+    
+    // 라인별로 분리하여 라인 번호와 함께 표시
+    const lines = codeContent.split('\n');
+    const lineContainer = document.createElement('div');
+    lineContainer.className = 'vscode-line-numbers';
+    
+    const lineNumbers = document.createElement('div');
+    lineNumbers.className = 'vscode-line-number';
+    
+    const lineContent = document.createElement('div');
+    lineContent.className = 'vscode-line-content';
+    
+    const code = document.createElement('code');
+    code.className = 'vscode-code';
+    
+    // 라인 번호 생성
+    lines.forEach((line, index) => {
+      const lineNum = document.createElement('div');
+      lineNum.textContent = (index + 1).toString();
+      lineNumbers.appendChild(lineNum);
+    });
+    
+    // 코드 내용 설정 (기본 구문 강조)
+    code.innerHTML = this.applySyntaxHighlighting(codeContent);
+    
+    lineContent.appendChild(code);
+    lineContainer.appendChild(lineNumbers);
+    lineContainer.appendChild(lineContent);
+    
+    pre.appendChild(lineContainer);
+    content.appendChild(pre);
+    
+    return content;
+  }
+
+  applySyntaxHighlighting(code) {
+    // 기본적인 구문 강조 (간단한 정규식 기반)
+    return code
+      .replace(/\n/g, '<br>')
+      .replace(/(".*?")/g, '<span class="vscode-string">$1</span>')
+      .replace(/('.*?')/g, '<span class="vscode-string">$1</span>')
+      .replace(/(\/\/.*?$)/gm, '<span class="vscode-comment">$1</span>')
+      .replace(/(\/\*[\s\S]*?\*\/)/g, '<span class="vscode-comment">$1</span>')
+      .replace(/\b(function|class|const|let|var|if|else|for|while|return|import|export|from|as|default)\b/g, '<span class="vscode-keyword">$1</span>')
+      .replace(/\b(\d+\.?\d*)\b/g, '<span class="vscode-number">$1</span>')
+      .replace(/([{}()\[\]])/g, '<span class="vscode-bracket">$1</span>');
   }
 
   async copyToClipboard(button, text) {
     try {
-      // 클립보드 API 사용
       await navigator.clipboard.writeText(text);
       this.showCopySuccess(button);
     } catch (err) {
       console.warn('클립보드 복사 실패, 폴백 방법 사용:', err);
-      // 폴백: execCommand 사용
       this.fallbackCopy(text);
       this.showCopySuccess(button);
     }
@@ -264,17 +600,17 @@ class CodeCopyEnhancer {
 
   showCopySuccess(button) {
     const originalHTML = button.innerHTML;
-    button.innerHTML = this.checkIcon;
+    button.innerHTML = `${this.checkIcon} Copied!`;
     button.classList.add('copied');
     
-    // 1.5초 후 원래 상태로 복원
+    // 2초 후 원래 상태로 복원
     setTimeout(() => {
       button.innerHTML = originalHTML;
       button.classList.remove('copied');
-    }, 1500);
+    }, 2000);
   }
 }
 
-// 전역으로 초기화
-window.codeCopyEnhancer = new CodeCopyEnhancer();
+// VS Code 스타일 코드블록 초기화
+window.vscodeEnhancer = new VSCodeEnhancer();
 </script>
