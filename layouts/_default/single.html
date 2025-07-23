@@ -27,6 +27,9 @@
     </div>
   </article>
 
+  <!-- 댓글 섹션 -->
+  {{ partial "comments.html" . }}
+
   <!-- TOC 토글 버튼 (좁은 화면에서만 보임) -->
   {{ if .TableOfContents }}
     <button class="toc-toggle" id="tocToggle" aria-label="목차 토글">
