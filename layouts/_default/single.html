@@ -155,15 +155,58 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateActiveToc() {
       let current = '';
       const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
       
-      headings.forEach(heading => {
-        if (heading.id) {
-          const rect = heading.getBoundingClientRect();
-          if (rect.top <= 120) {
-            current = heading.id;
-          }
+      // 페이지 끝까지 스크롤했는지 확인 (여유분 50px)
+      const isAtBottom = scrollY + windowHeight >= documentHeight - 50;
+      
+      if (isAtBottom) {
+        // 페이지 끝에 도달했으면 마지막 헤딩을 활성화
+        const lastHeading = headings[headings.length - 1];
+        if (lastHeading && lastHeading.id) {
+          current = lastHeading.id;
         }
-      });
+      } else {
+        // 일반적인 스크롤 추적 로직
+        let foundCurrent = false;
+        let closestHeading = null;
+        let minDistance = Infinity;
+        
+        // viewport 중앙 기준으로 가장 가까운 헤딩 찾기
+        const viewportCenter = scrollY + windowHeight / 2;
+        
+        headings.forEach(heading => {
+          if (heading.id) {
+            const rect = heading.getBoundingClientRect();
+            const headingTop = rect.top + scrollY;
+            
+            // viewport 상단 기준으로 지나간 헤딩들 중에서
+            if (headingTop <= scrollY + 150) {
+              current = heading.id;
+              foundCurrent = true;
+            }
+            
+            // viewport 중앙에서 가장 가까운 헤딩도 계산
+            const distance = Math.abs(headingTop - viewportCenter);
+            if (distance < minDistance) {
+              minDistance = distance;
+              closestHeading = heading.id;
+            }
+          }
+        });
+        
+        // 기본 로직으로 찾지 못했으면 중앙 기준 가장 가까운 헤딩 사용
+        if (!foundCurrent && closestHeading) {
+          current = closestHeading;
+          foundCurrent = true;
+        }
+        
+        // 그래도 없으면 첫 번째 헤딩 활성화
+        if (!foundCurrent && headings[0] && headings[0].id) {
+          current = headings[0].id;
+        }
+      }
 
       // 모든 TOC 링크에서 active 클래스 제거
       tocLinks.forEach(link => {
