@@ -276,12 +276,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // 화면 크기 변경 시 TOC 상태 초기화
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 1400) {
-      closeToc();
-    }
-  });
+  // 화면 크기 변경 시 TOC 상태는 유지 (사용자 경험 개선)
 });
 
 // 🎯 이미지 모달 기능
@@ -520,7 +515,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* 🎯 TOC 토글 버튼 */
 .toc-toggle {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 50%;
   right: 1rem;
@@ -572,7 +569,7 @@ document.addEventListener('DOMContentLoaded', function() {
 /* 🎯 TOC 컨테이너 */
 .toc-container {
   position: fixed;
-  right: 2rem;
+  right: -320px;
   top: 50%;
   transform: translateY(-50%);
   width: 280px;
@@ -586,6 +583,10 @@ document.addEventListener('DOMContentLoaded', function() {
   overflow: hidden;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+}
+
+.toc-container.active {
+  right: 2rem;
 }
 
 .toc-header {
@@ -605,7 +606,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .toc-close {
-  display: none;
+  display: block;
   background: none;
   border: none;
   color: var(--text-color-secondary);
@@ -674,12 +675,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* 🎯 좁은 화면 대응 */
 @media (max-width: 1400px) {
-  .toc-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   .toc-container {
     position: fixed;
     right: -320px;
@@ -697,10 +692,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   .toc-container.active {
     right: 0;
-  }
-
-  .toc-close {
-    display: block;
   }
 
   .toc-content {
