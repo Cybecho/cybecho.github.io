@@ -2,3 +2,4 @@ notion_cache.json
 .hugo_build.lock
 hugo_stats.json
 public/
+node_modules/
