@@ -145,15 +145,31 @@ async function convertBlocks(pageId, indentLevel = 0) {
         case 'toggle':
           if (block.toggle?.rich_text?.length > 0) {
             const toggleText = convertRichText(block.toggle.rich_text);
-            content += '<details>\n<summary>' + toggleText + '</summary>\n\n';
             
-            // 토글 내부 컨텐츠 처리
-            if (block.has_children) {
-              const childContent = await convertBlocks(block.id, 0);
-              content += childContent;
+            // 제목 토글인지 확인 (# ## ### 으로 시작하는지 체크)
+            const headingMatch = toggleText.match(/^(#{1,3})\s+(.+)/);
+            
+            if (headingMatch) {
+              // 제목 토글의 경우: 토글 기능 제거하고 제목만 표시
+              content += headingMatch[1] + ' ' + headingMatch[2] + '\n\n';
+              
+              // 제목 토글 내부 컨텐츠를 일반 컨텐츠로 처리
+              if (block.has_children) {
+                const childContent = await convertBlocks(block.id, 0);
+                content += childContent;
+              }
+            } else {
+              // 일반 토글의 경우: 기존대로 details/summary 태그 사용
+              content += '<details>\n<summary>' + toggleText + '</summary>\n\n';
+              
+              // 토글 내부 컨텐츠 처리
+              if (block.has_children) {
+                const childContent = await convertBlocks(block.id, 0);
+                content += childContent;
+              }
+              
+              content += '</details>\n\n';
             }
-            
-            content += '</details>\n\n';
           }
           break;
           
@@ -161,7 +177,13 @@ async function convertBlocks(pageId, indentLevel = 0) {
           if (block.code?.rich_text?.length > 0) {
             const language = block.code.language || '';
             const codeText = convertRichText(block.code.rich_text);
-            content += '```' + language + '\n' + codeText + '\n```\n\n';
+            
+            // Mermaid 코드블록인지 확인
+            if (language.toLowerCase() === 'mermaid') {
+              content += '```mermaid\n' + codeText + '\n```\n\n';
+            } else {
+              content += '```' + language + '\n' + codeText + '\n```\n\n';
+            }
           }
           break;
           
