@@ -21,49 +21,61 @@
 
 ## 🚀 사용자가 직접 설정해야 할 항목
 
-### 1. Google Search Console 등록
+### 1. Google Search Console 등록 ✅ **완료**
 
-1. [Google Search Console](https://search.google.com/search-console) 접속
-2. '속성 추가' → 'URL 접두어' 선택
-3. `https://cybecho.github.io` 입력
-4. 소유권 확인을 위해 다음 중 하나 선택:
-   - **권장**: HTML 메타태그 방법
-   - DNS 인증
-   - HTML 파일 업로드
+- ✅ 사이트 등록: `https://cybecho.github.io`
+- ✅ 소유권 확인: HTML 메타태그 방법 적용됨
+- ✅ 인증 코드: `Qo0OxfN5ruMcndy9ZDJD0ldtj-8gqSZkhc_0C2bx6Po`
 
-#### HTML 메타태그 방법 (권장)
-1. Google에서 제공하는 메타태그 확인
-2. `hugo.toml` 파일에서 다음 라인 수정:
-   ```toml
-   # Google Search Console (설정 시 추가)  
-   googleSiteVerification = "여기에_확인_코드_입력"
-   ```
-3. 사이트 빌드 및 배포 후 Google에서 확인
+**다음 단계**: Google Search Console에서 "확인" 버튼 클릭
 
-### 2. 사이트맵 제출
+### 2. 사이트맵 제출 📋 **대기 중**
 
-Google Search Console에서:
+**Google Search Console에서:**
 1. 좌측 메뉴 → 'Sitemaps' 클릭
 2. 'ADD A NEW SITEMAP' → `sitemap.xml` 입력
 3. 'SUBMIT' 클릭
 
-### 3. Google Analytics 설정 (선택사항)
+### 3. Google Analytics 설정 ✅ **완료**
 
-1. [Google Analytics](https://analytics.google.com) 접속
-2. 새 속성 생성
-3. 웹사이트 선택 → URL 입력
-4. 측정 ID (G-XXXXXXXXXX) 획득
-5. `hugo.toml` 파일에서 다음 라인 수정:
-   ```toml
-   # Google Analytics (설정 시 추가)
-   googleAnalytics = "G-XXXXXXXXXX"
-   ```
+- ✅ 측정 ID 설정: `G-3S7YFLEF06`
+- ✅ gtag.js 스크립트 자동 삽입 설정
+- ✅ 데이터 수집 시작 준비 완료
 
-### 4. 네이버 서치어드바이저 등록 (선택사항)
+**확인 방법**: Google Analytics 대시보드에서 실시간 사용자 데이터 확인
 
+### 4. 네이버 서치어드바이저 등록 ✅ **완료**
+
+- ✅ 사이트 등록: `https://cybecho.github.io`
+- ✅ HTML 확인 파일 업로드: `naver76650691c0c59a1cdbc8a82af51e60fe.html`
+
+**다음 단계**: 
+1. 네이버 서치어드바이저에서 소유권 확인
+2. 사이트맵 제출: `https://cybecho.github.io/sitemap.xml`
+
+## 🎯 즉시 해야 할 작업
+
+### 1. Google Search Console 확인 (우선순위 1)
+1. [Google Search Console](https://search.google.com/search-console) 접속
+2. 속성 `https://cybecho.github.io` 선택
+3. **"확인"** 버튼 클릭
+4. ✅ "소유권이 확인되었습니다" 메시지 확인
+
+### 2. Google Search Console 사이트맵 제출 (우선순위 2)
+1. 좌측 메뉴 → **"Sitemaps"** 클릭
+2. "새 사이트맵 추가" → `sitemap.xml` 입력
+3. **"제출"** 클릭
+4. 상태가 "성공"으로 변경되는지 확인
+
+### 3. 네이버 서치어드바이저 확인 (우선순위 3)
 1. [네이버 서치어드바이저](https://searchadvisor.naver.com) 접속
-2. 웹마스터 도구에서 사이트 등록
-3. 소유권 확인 후 사이트맵 제출
+2. 사이트 소유권 확인 완료
+3. **사이트맵 제출**: `https://cybecho.github.io/sitemap.xml`
+
+### 4. Google Analytics 확인 (우선순위 4)
+1. [Google Analytics](https://analytics.google.com) 접속
+2. 속성 "Cybecho.github.io" 선택
+3. 실시간 → 현재 사용자 수 확인 (본인 접속으로 1명 표시되어야 함)
 
 ## 📈 SEO 최적화 체크리스트
 

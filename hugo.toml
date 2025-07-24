@@ -31,8 +31,8 @@ mainSections = ["posts"]
   # SEO 설정
   keywords = ["프로그래밍", "개발", "기술블로그", "Hugo", "GitHub", "엔지니어링"]
   
-  # Google Analytics (설정 시 추가)
-  # googleAnalytics = "G-XXXXXXXXXX"
+  # Google Analytics
+  googleAnalytics = "G-3S7YFLEF06"
   
   # Google Search Console 
   googleSiteVerification = "Qo0OxfN5ruMcndy9ZDJD0ldtj-8gqSZkhc_0C2bx6Po"
