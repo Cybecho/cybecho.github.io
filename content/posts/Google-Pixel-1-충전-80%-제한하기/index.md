@@ -4,7 +4,7 @@ date: 2024-07-18T12:34:00.000Z
 draft: false
 tags: ["Other"]
 series: ["Let's Homelab!", "HW"]
-description: "Tasker와 스마트 플러그를 사용하여 배터리 충전을 80%로 제한하는 방법을 설명합니다. AccuBattery 앱을 통해 충전 상태를 모니터링하고, IFTTT를 사용하여 알림을 기반으로 스마트 플러그를 제어하여 충전을 자동으로 중지할 수 있습니다. 이 방법은 루팅이 필요 없고, 다양한 스마트폰과 호환됩니다."
+description: "Tasker와 스마트 플러그를 사용하여 배터리 충전을 80%로 제한하는 방법을 설명합니다. AccuBattery 앱을 통해 충전 상태를 모니터링하고 알림을 설정한 후, IFTTT를 사용하여 스마트 플러그를 제어하여 충전이 완료되면 자동으로 전원을 차단합니다. 이 방법은 루팅이 필요 없으며, 배터리 수명을 연장하는 데 도움이 됩니다."
 notion_id: "f36d494b-d658-48dc-aad0-da5de2663c85"
 notion_url: "https://www.notion.so/Google-Pixel-1-80-f36d494bd65848dcaad0da5de2663c85"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Google-Pixel-1-80-f36d494bd65848dcaad0da5de26
 # Google Pixel 1 충전 80% 제한하기
 
 > **Summary**
-> Tasker와 스마트 플러그를 사용하여 배터리 충전을 80%로 제한하는 방법을 설명합니다. AccuBattery 앱을 통해 충전 상태를 모니터링하고, IFTTT를 사용하여 알림을 기반으로 스마트 플러그를 제어하여 충전을 자동으로 중지할 수 있습니다. 이 방법은 루팅이 필요 없고, 다양한 스마트폰과 호환됩니다.
+> Tasker와 스마트 플러그를 사용하여 배터리 충전을 80%로 제한하는 방법을 설명합니다. AccuBattery 앱을 통해 충전 상태를 모니터링하고 알림을 설정한 후, IFTTT를 사용하여 스마트 플러그를 제어하여 충전이 완료되면 자동으로 전원을 차단합니다. 이 방법은 루팅이 필요 없으며, 배터리 수명을 연장하는 데 도움이 됩니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f76881f6-006b-47a3-b913-e07e1a043609/Untitled.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4663G2PJ5DL%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101800Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIH7vK%2FXuZqxFaPA7ZPgHCf7OXw%2FepJMCe7x5OiTIve3nAiEA2ZdokHFSeXnA6J2a109LLKzz8Xr6%2FxCx42ZcSChK4%2BUq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDHqb5xuQiK8yT7NffSrcA2TXx55vbUj8o0FWdWmZu2Q9Wxspy5QRmetcwPfFEwDKPH4Vsg99Zatbfn%2BNboAB%2B74dHP9w6UWtzvJbsAyGwsNK894GWHa7JfY%2FOZkWMdb9OwljnMvWLci05QlqbW%2FH%2F0%2FQ6C3NCSPWfxHWJLy9OSNbKiuVgJsRhu0OGsSW%2Fz2%2FOqniDBuIYhXtMpQIkluQFdxvyAA07OlcC4bnA%2Fouxh7n%2FdCCmHfrJSL2vZPZCnBHo9EFUe%2BS1GBOgiXTzsdZ9piW7ygpBYqZfK14NooUrBEw2oXniJsUevrfhWZWV5NE5HpupVXc0vukD%2BNsllYqsl0ko5v%2BzBDt0DPAH9IA4f8rEYNYI2Wpo4nrAyUKmJae8q5HlvKpKlsXiJ5yzWmMROEKa4gfxqKwitcdPnSn20zKB7Yx9uUOnAED8SSARq%2FHhq%2F8Pcd5g3exxe21Rz6OGU2lAG1DNakJ1Z3C3if5iJQ8Zbtca%2BLVfmoKDwRzH4oCbz3J2fU0zEkM23SC2Mf2nglfpNyNn1Lg1Im1E2EpIei5mkvBRGtd0%2BPLX3Zr0FxG70Kp38Jjy%2B0iJ5SBCokRGhhY%2FkOEeUDGVNi4G6d6FptSsueJxvawU1KNg0TQhRa9j%2FAsp9wQjLBErfebMMn2h8QGOqUBUvfGqzefa6aX9Wxzxftn%2FAd0gClTVv4A%2BSMCveejHmqwC6uJ%2BnJLzfhFbfiE9k6%2BD%2B1%2BdYbMAKSstPX8jpoQWSXC%2FnE%2Fj034rrcJrihR8Z%2BQxTqeLzymCx1NtP50KSRBLvslbadL753wFzDM%2FY8d2IMtz6%2BXcHkSjAHVbh8Q4tk5qB84dImcL45Sgd7RZQDTIlf2BENdlMnWsQ8jVergyasQycoE&X-Amz-Signature=c27199bad3ae3d443fec5653b90a7efd406440db35d634c6d909891612dd53dd&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f76881f6-006b-47a3-b913-e07e1a043609/Untitled.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TVJGJ52X%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115622Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJGMEQCIFAd4Z9AAzMtELyeS2vrxzf32yriaSrUTuO3hxNu1hNkAiAIRnqdJX%2FcshhToGvcgt%2Bno3xLpzLAx1GKPegRpZX%2BeSr%2FAwgsEAAaDDYzNzQyMzE4MzgwNSIMIb1E8oZ6yskdIKJmKtwD8MN7j6cgaannF6B5zOZeSRrP6zeXs6T%2BD6nfIyHUJ2sHb7i%2BkXywBAAzhw3GNXZkMiQP65n8khX072PspPZ8v24vT27d5Ww3KOqoDIBP9Fs%2BE%2F967G%2FhkFdQz%2FZUpN7WDqaKubLEj8NB26b1NyZoaeoSINhhOj0cU2UbdUp63qzJZKxUMV5BRCHwN3zUpim7WtyHfof0NaLnhvZp99aAxx1OoMD1BAMvkyzib%2BX%2B0T7fi%2BeMdFdL5dE9GgK04%2Bwt8E5uln26bva39ccI4upBiMujKeiOiqZFbj4CKB8a%2BeUM1F4y4kNiAHB%2F2Q2uPHJgK18%2FRRTlIX7f5fbb4Y%2FCnAvb44HDqKSVUId9OvgCC4uDAlrc2wdYddeRGduYeuCYc2atgJXSN8XDtf62DEMKteUsIz2c5VCk06bTsYXj2vxS5KqfQ%2F%2F4B%2FfWYYPhA4s65GE1FD68iq66t7uaM3mnvo8VR4%2BF%2B6bL0W6WN0s31HkKqPvt%2Bbuewur%2FsaQLhAdkT6MPVf806x8s8paEiGOZvWe0vuRC%2FEuPo8DuNIDhyFyuA1ZlyF%2F%2FHnQkU62kioZGK4wwOR5hbwdLp2tm0CwGrAWjZKSIla25xluy8ta6TVS3dwURnU2aomZ1sDYwopuIxAY6pgH0KvhOj8fVR2ipwqUSqjtT8N6xit%2F47SHgjFTsc1wYBhFdaLn%2F7knYvv5ZJEQJoAH49S2kcXSoHl7q%2FTY%2F0C5bF83z3EleGm3p1WUKRWyZH1qU%2BbyeiFst5RdJ3KSLNIa9GppgpxCIecE38TWil8xRM9f8L2Wo0I%2FbPDr7uO9PBruyOAUCX8f8EBDHJPtedOXS8OUid4xgHJb4V6XhQGWrvugYxhkw&X-Amz-Signature=877f823a91201938b341f151dc8b7f203cb5c661b9b0f6acd4e51fa02370ecb9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # **Tasker + 스마트 플러그**
 

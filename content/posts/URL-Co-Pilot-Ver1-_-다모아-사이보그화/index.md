@@ -4,7 +4,7 @@ date: 2023-02-16T00:00:00.000Z
 draft: false
 tags: ["Python"]
 series: ["매크로개발", "진심글쓰기"]
-description: "URL을 키매핑하여 웹사이트 이동을 반자동화하는 프로그램에 대한 설명과 파이썬 코드 재시작 방법, 매크로 개발 및 관련 참고 코드 링크가 포함되어 있습니다."
+description: "URL을 키매핑하여 웹사이트 이동을 반자동화하는 프로그램에 대한 내용으로, 파이썬 코드 재시작 방법과 관련된 코드 예시가 포함되어 있습니다. 매크로 개발과 진심 글쓰기를 주제로 하며, Tkinter를 사용한 최상위 창 만들기 및 모니터 해상도 얻기와 관련된 참고 코드도 제공됩니다."
 notion_id: "f3776e74-adb9-4a5b-a8bd-baecbc987170"
 notion_url: "https://www.notion.so/URL-Co-Pilot-Ver1-f3776e74adb94a5ba8bdbaecbc987170"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/URL-Co-Pilot-Ver1-f3776e74adb94a5ba8bdbaecbc9
 # URL Co-Pilot Ver1 : 다모아 사이보그화
 
 > **Summary**
-> URL을 키매핑하여 웹사이트 이동을 반자동화하는 프로그램에 대한 설명과 파이썬 코드 재시작 방법, 매크로 개발 및 관련 참고 코드 링크가 포함되어 있습니다.
+> URL을 키매핑하여 웹사이트 이동을 반자동화하는 프로그램에 대한 내용으로, 파이썬 코드 재시작 방법과 관련된 코드 예시가 포함되어 있습니다. 매크로 개발과 진심 글쓰기를 주제로 하며, Tkinter를 사용한 최상위 창 만들기 및 모니터 해상도 얻기와 관련된 참고 코드도 제공됩니다.
 
 ---
 

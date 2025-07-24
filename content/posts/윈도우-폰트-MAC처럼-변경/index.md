@@ -4,7 +4,7 @@ date: 2023-09-16T00:00:00.000Z
 draft: false
 tags: ["WINDOWS"]
 series: ["Don't Hate Windows!"]
-description: "윈도우에서 폰트를 맥과 리눅스 스타일로 변경하기 위한 방법을 설명합니다. MacType과 noMeiryoUI를 사용하여 폰트 렌더링을 FreeType으로 변경하고, Pretendard 폰트를 통해 시스템 폰트를 조정하는 과정을 안내합니다. 설치 방법과 ini 파일 설정, 브라우저 및 Java 기반 앱에서의 호환성 문제 해결 방법도 포함되어 있습니다."
+description: "윈도우에서 폰트를 맥과 리눅스처럼 변경하기 위한 방법을 설명합니다. MacType을 사용하여 폰트 렌더링 엔진을 FreeType으로 바꾸고, noMeiryoUI를 통해 시스템 폰트를 변경합니다. Pretendard 폰트를 사용하면 더 나은 결과를 얻을 수 있으며, ini 파일을 설정하여 렌더링을 조정하는 방법도 포함되어 있습니다. 추가적으로, 특정 프로그램에서의 호환성 문제를 해결하는 방법과 브라우저에서의 폰트 적용 방법도 안내합니다."
 notion_id: "00cfa92b-3602-45c6-a08e-5821c08f82ba"
 notion_url: "https://www.notion.so/MAC-00cfa92b360245c6a08e5821c08f82ba"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/MAC-00cfa92b360245c6a08e5821c08f82ba"
 # 윈도우 폰트 MAC처럼 변경
 
 > **Summary**
-> 윈도우에서 폰트를 맥과 리눅스 스타일로 변경하기 위한 방법을 설명합니다. MacType과 noMeiryoUI를 사용하여 폰트 렌더링을 FreeType으로 변경하고, Pretendard 폰트를 통해 시스템 폰트를 조정하는 과정을 안내합니다. 설치 방법과 ini 파일 설정, 브라우저 및 Java 기반 앱에서의 호환성 문제 해결 방법도 포함되어 있습니다.
+> 윈도우에서 폰트를 맥과 리눅스처럼 변경하기 위한 방법을 설명합니다. MacType을 사용하여 폰트 렌더링 엔진을 FreeType으로 바꾸고, noMeiryoUI를 통해 시스템 폰트를 변경합니다. Pretendard 폰트를 사용하면 더 나은 결과를 얻을 수 있으며, ini 파일을 설정하여 렌더링을 조정하는 방법도 포함되어 있습니다. 추가적으로, 특정 프로그램에서의 호환성 문제를 해결하는 방법과 브라우저에서의 폰트 적용 방법도 안내합니다.
 
 ---
 

@@ -4,7 +4,7 @@ date: 2024-01-09T00:00:00.000Z
 draft: false
 tags: ["Arch", "ubuntu"]
 series: ["Let's Linux!"]
-description: "HDMI 모니터가 감지되지 않을 경우, xorg-xrandr 패키지를 설치하고 그래픽 드라이버를 확인해야 합니다. Mesa 드라이버와 AMD GPU 드라이버를 설치하여 문제를 해결할 수 있으며, 필요한 기능에 따라 다양한 패키지를 설치할 수 있습니다."
+description: "Arch Linux에서 HDMI 모니터를 설정하는 방법에 대한 안내로, xorg-xrandr와 mons 패키지를 사용하여 모니터를 감지하고 설정하는 방법을 설명합니다. HDMI 모니터가 감지되지 않을 경우 그래픽 드라이버 설치 및 업데이트 방법도 포함되어 있으며, Mesa와 AMD GPU 드라이버 설치 방법이 자세히 설명되어 있습니다."
 notion_id: "09824508-16f4-4e87-8175-dd92d1385869"
 notion_url: "https://www.notion.so/Arch-Linux-HDMI-Monitor-setting-0982450816f44e878175dd92d1385869"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Arch-Linux-HDMI-Monitor-setting-0982450816f44
 # Arch Linux HDMI Monitor setting
 
 > **Summary**
-> HDMI 모니터가 감지되지 않을 경우, xorg-xrandr 패키지를 설치하고 그래픽 드라이버를 확인해야 합니다. Mesa 드라이버와 AMD GPU 드라이버를 설치하여 문제를 해결할 수 있으며, 필요한 기능에 따라 다양한 패키지를 설치할 수 있습니다.
+> Arch Linux에서 HDMI 모니터를 설정하는 방법에 대한 안내로, xorg-xrandr와 mons 패키지를 사용하여 모니터를 감지하고 설정하는 방법을 설명합니다. HDMI 모니터가 감지되지 않을 경우 그래픽 드라이버 설치 및 업데이트 방법도 포함되어 있으며, Mesa와 AMD GPU 드라이버 설치 방법이 자세히 설명되어 있습니다.
 
 ---
 

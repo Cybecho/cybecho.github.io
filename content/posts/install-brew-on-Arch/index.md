@@ -4,7 +4,7 @@ date: 2023-12-02T00:00:00.000Z
 draft: false
 tags: ["Arch"]
 series: ["Let's Linux!"]
-description: "Instructions for installing Homebrew on Arch Linux, with a reference link to a guide for Manjaro Linux."
+description: "Instructions for installing Homebrew on Arch Linux, with a reference link to a guide for Manjaro Linux installation."
 notion_id: "243c8164-65d0-4c78-a416-35848b11674f"
 notion_url: "https://www.notion.so/install-brew-on-Arch-243c816465d04c78a41635848b11674f"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/install-brew-on-Arch-243c816465d04c78a4163584
 # install brew on Arch
 
 > **Summary**
-> Instructions for installing Homebrew on Arch Linux, with a reference link to a guide for Manjaro Linux.
+> Instructions for installing Homebrew on Arch Linux, with a reference link to a guide for Manjaro Linux installation.
 
 ---
 

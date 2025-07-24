@@ -4,7 +4,7 @@ date: 2025-06-16T12:55:00.000Z
 draft: false
 tags: ["Other", "Util"]
 series: ["HW"]
-description: "Nutanix의 HCI는 각 서버 노드가 독립적인 스토리지 컨트롤러 역할을 수행하여 성능 병목을 해소하고, 간편한 확장성과 데이터 안정성을 제공한다. 이를 통해 복잡한 레거시 인프라를 단순화하고, 하이브리드 멀티클라우드 환경을 지원한다."
+description: "Nutanix의 HCI는 각 서버 노드가 독립적인 스토리지 컨트롤러 역할을 하여 성능 병목을 해소하고, 간편한 확장성과 강화된 데이터 안정성을 제공한다. 이를 통해 복잡한 레거시 인프라를 단순화하고, 하이브리드 멀티클라우드 환경에서의 유연한 워크로드 이동성을 지원한다. \"스토리지에 OS가 있다\"는 개념은 인프라를 지능적이고 자율적인 분산 시스템으로 전환하는 혁신을 의미한다."
 notion_id: "2141bab9-e3f8-8079-a1f0-d8de153cc6cc"
 notion_url: "https://www.notion.so/Nutamix-HCI-OS-2141bab9e3f88079a1f0d8de153cc6cc"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Nutamix-HCI-OS-2141bab9e3f88079a1f0d8de153cc6
 # Nutamix : HCI개념을 알아보다가, 스토리지도 사실은 OS가 있다고? 이게 무슨말인가!
 
 > **Summary**
-> Nutanix의 HCI는 각 서버 노드가 독립적인 스토리지 컨트롤러 역할을 수행하여 성능 병목을 해소하고, 간편한 확장성과 데이터 안정성을 제공한다. 이를 통해 복잡한 레거시 인프라를 단순화하고, 하이브리드 멀티클라우드 환경을 지원한다.
+> Nutanix의 HCI는 각 서버 노드가 독립적인 스토리지 컨트롤러 역할을 하여 성능 병목을 해소하고, 간편한 확장성과 강화된 데이터 안정성을 제공한다. 이를 통해 복잡한 레거시 인프라를 단순화하고, 하이브리드 멀티클라우드 환경에서의 유연한 워크로드 이동성을 지원한다. "스토리지에 OS가 있다"는 개념은 인프라를 지능적이고 자율적인 분산 시스템으로 전환하는 혁신을 의미한다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/32654f26-a1d5-4924-875e-51eea5fd7af2/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466SZJV2M6E%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101353Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQDVfNOJBq05eXyEKv7ZUaHVPpsi1ncRWypzSeW%2BIH4xFgIge2Pxur6lrYww8iN%2B0LILMWZFGzRXmsNGaRtClOwRZMoq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDGzEc415aR4KWcmv8SrcAxmDvOa3KNGXFxLfwpOjjaHbFR28zWEVFUiQaLD%2FYTKqiASIPXIzfssqh5FmztZSkQg0Ufj7hWSfSw9j%2ByxCqtffhpZRHkd7YxQq7f7RvmrWRxy21GNMjJbvkWFOVFzEZ04WD2Z864sGOTJ6Gsdrz5jP73LKXMMrs4Ucyin0DiUO%2FsbTkkXd7iy12F1xxbfKyfJuokV6JMnLsksGd4SeHKo3eKXsMVi5Wg3hoH4D922D9wSEmYFe8q2UI8lctARZcP5qdqQo0gOAckorFlR7GsQxnaK8iuG8exKiIax3LWCyxe5W%2FkFCe4N2Y5YY7VKN%2B%2F6ZyP6mIzyL3P%2FiIeXeNKTqrlwvKigO3lNd8UaKUFtaa437PgrzmUtCfBFlUshY8TDoW12eL6AN5YJW9gl3lFjXuyp4mDkoDH0rRwER9NyR3IeAbyI9JRI5%2B3j49JloubCQlxvTdfP1dEmdONcdD8oA2TdGIN5WVP1pokV0j0LsE64NC6AcLLvxtIhGnj2rOnh1YoaFrbMshAlotIGDc76D4SrnSRYi55PKGnAhvK8MrXjqrSuVeFxkYmLQ%2BzuuB4dExE%2FiBipHTmi0M9dhb33gelJKUOjDZsM1dqoPrmMuLcy6JpD9rIPeaUJOMJr3h8QGOqUBGsQNbSiR6EC5c4GP3kEn5tUPyMnspMJG3vIsRP2m9%2B3xH8F75aHZ9q9DgSsUFUO5YhUBM9ehb3P9cjYxnKYEdm%2BC4QhQ33ur97Q8fgP9vH9T5GqBVnSp8lJ8bsoRBac11J7Qyl7pgh%2BWMkCV0dqemZOG7izGVbz2TVmNUGIn0IaiEElJF5kLsWfJg%2F%2FdkxiQ0GkZ4rq%2BMGLS5NwLP0Gh6li7cISX&X-Amz-Signature=52ea35cd7e75f3d85a5cd8a6a74d794c98d67e2b6c4fd62e1223a7fa30f60be7&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/32654f26-a1d5-4924-875e-51eea5fd7af2/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466X5MN5ACG%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115221Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJIMEYCIQCgh7EiGdaA1EcOvew4x%2FW7zpSVD6SZ2z9QlleJf4RbogIhAMm2vaJfWWtiZhrQ9ya%2FRKnkXP9mYjoWW45xlcpwC69DKv8DCCwQABoMNjM3NDIzMTgzODA1IgxCX1K1ZFV8DMrl10wq3AMST%2FZBrKreR%2BJb8rkZsj1SSfL6oyJV8LqYFK65sjXCGqeragnsMiPJzG%2FZA7cP2yoEOR7KiBkD0JauNmoSWoKYbWwmkfzmDeMFxCf0w6PxS6ldz0wmWnKH6XB5d%2FShk7spOaq1sUaCIKPY1FxXI1Ef3gziUKzAJqFQoludyPrYat5Uliua2FMVUXWbgtpJyVPQg7HWEvmcWCc3ZH7mJkdqw2%2B3wYp0gtQWYu8o4steQLNjPq5YrbBKeKTm%2BHFMGWhNAEa5Q3NOy0sd9xBfxyIMrn6Onn6SFTGzwWAjF7Stfx3WChjKxUAIbKGd%2FMt3N%2FW9YlSbxqKOzVhHp%2BES42aVYeANJGZPmFVWcIZ4h%2BlWoFPFF5BEi6%2FzXBZIXYWaA4tC%2BkOOe%2BbiJlGw3eTHDea6P1soSUEu4srm5%2FijnrmfrH0SeDKbdMvDqMadLoyoFB%2F3MKBx5t21Bw5VtxB5SEKGA7VaWchPNgd7t6khoxGjyEdNWuzfVE7PGrx4PY1qdfSJI8txhzsIJ5wzWIIFB%2FrLxpyxzWBSxXCBfxiqzH2qMLcOvsvAhkPrzzOZEoUNne%2Fyx4iYuCyqPV9r07BSXw6qAES4tWRKlaEw0Ebsk%2FU9R1PEV%2FTiQrqKLQEK8TCkm4jEBjqkAfPr05xZT7mqTD40KZe%2BzlIMqRSZYzsBEzxu%2Fs4ae4oB%2BZ424fANJPXwwbkqnw4vtFgPkdggciLM1F1ORPhgewQfDfXdHB12b9A5xyI%2B2W7AR9D3%2BoKi9m9s%2Fvs289kblInqR%2BNt4jUVnsdrJuzyFixXW4fiWDsf%2F86WnwqhaNPea0F%2Be8BfMxUqB%2F9hksaeCJeXFk8YRbW7RETwHofhkYjB40h7&X-Amz-Signature=1577b2467f05f0b0cb286570c751d21a9a0fa82da12cd6ec5b5877458a4ef3fa&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ```plain text
 결론부터 말하자면, Nutanix의 "스토리지에 OS가 있다"는 말은 각 서버 노드(Node)가 독립적인 지능형 스토리지 컨트롤러 역할을 직접 수행한다는 의미입니다.

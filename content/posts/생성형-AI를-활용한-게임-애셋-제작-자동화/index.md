@@ -4,7 +4,7 @@ date: 2024-03-18T05:36:00.000Z
 draft: false
 tags: ["생성형 이미지"]
 series: ["AI"]
-description: "미드저니를 사용하여 이미지를 생성하고, KADIM으로 3D 모델을 제작하며, Mixamo 또는 AI를 통해 애니메이션을 생성하는 방법을 설명합니다. 애프터이펙트를 활용해 프레임 단위로 이미지를 스프라이트로 제작하는 과정도 포함됩니다."
+description: "미드저니를 사용하여 이미지를 생성하고, KADIM을 통해 3D 모델을 제작하며, Mixamo 또는 Text to Animation AI로 애니메이션을 생성하는 방법을 설명합니다. 애프터이펙트를 활용하여 프레임 단위로 이미지를 추출해 스프라이트를 제작하는 과정도 포함되어 있습니다."
 notion_id: "dbcd2fbc-4692-49f3-abc4-e1204e514f6b"
 notion_url: "https://www.notion.so/AI-dbcd2fbc469249f3abc4e1204e514f6b"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/AI-dbcd2fbc469249f3abc4e1204e514f6b"
 # 생성형 AI를 활용한 게임 애셋 제작 자동화
 
 > **Summary**
-> 미드저니를 사용하여 이미지를 생성하고, KADIM으로 3D 모델을 제작하며, Mixamo 또는 AI를 통해 애니메이션을 생성하는 방법을 설명합니다. 애프터이펙트를 활용해 프레임 단위로 이미지를 스프라이트로 제작하는 과정도 포함됩니다.
+> 미드저니를 사용하여 이미지를 생성하고, KADIM을 통해 3D 모델을 제작하며, Mixamo 또는 Text to Animation AI로 애니메이션을 생성하는 방법을 설명합니다. 애프터이펙트를 활용하여 프레임 단위로 이미지를 추출해 스프라이트를 제작하는 과정도 포함되어 있습니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/2b8ac6f6-390e-4103-b702-6d7925393f38/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466UBLR54QL%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101917Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQDpWyPWJ35eymf0Lm0SDfAozFrgxsLZvJ%2F%2FcaXTaLpzzQIgF9%2FTkjMkEvpIqvXwBUNASEXylxejTQ32JM7DLchXsJYq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDJj5Z%2BjpbTI6b7vvESrcA5j%2Beg90j0uLbwpsoyj%2FLVaneC7BUU25kxAQ%2BNmtgdurg45T1fRPUrcLQJSH3ewTQRYiPmlBcEwBs5e22JJwLQ7GNNSgFnmf3u4PcgbhN10x6th%2F6158itAqG84qshyGQ47ZguKa4y7i12rIeiTNCdpEo4KIhDS3xQtwa9P6BzTzf1IfOMIR9fG5Ewm8tLgMUyf%2BQh1D5JapZmoXZIReGkVRoPAFmaWNtkYVHSBlZvwraJe6peolGK%2B43rW7ycv6HxVSabTQg%2Fvzgt14vQp7SASvyNWqFYrmJpqM6mZlW6Gw%2FNs3BH3%2FF72uOoVGNEgKkAuSkXqphvq6epnMIjAEqJZ5SHnbPPzp4jeuti48db1graS0Qj8sPYLr8HJzF6W4qaJth3m1cqXSZpNEBqJUeAP7XlWkJ6QGWC%2FSMvxWqR%2B9XbCMms6XETZgxtSN6NfuGOE5KcSMT0Rl0vjEO7sss13QoPNFDp1gem14%2ByDugsnQ0PAhq0%2FhGz6dGXGYSMsGXpr1gIYEwI%2BaD%2BJr2HOEDVjKP%2FCyizimcfQA0EJRgNYoArRtNDpeScf%2FXtdawFmMxjkOZNLd6i77066STGJBz3URQ5WnREZPSCRyOjRhlsdN2JzEAC6C9ETH9mDJMIH2h8QGOqUB%2F3uTDCN3pxngFOu22HiltQREc9FFCbcgLXDXNoDrfJe%2FXMj%2BCIRSNcyTMM%2BROGCrCq7B37HoILPUgSt31AzQS%2BLguaIp0PIEPcPIQquyc2QMvhoq1%2FqW56ZlBwkmvKINxDM1sK4ZyPwk%2BC1YDkgRlWvRnvq8mVCh95jpl24uQCoVBGrUB1ssDSXLHkjHdtqV3dGuCjvkAnCoczuD1%2B%2BThOSt4Mqa&X-Amz-Signature=d75deb0e3afcfad8bc7d56d1cc4847039dbf32460f8a88c9174ce64fd137f1f3&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/2b8ac6f6-390e-4103-b702-6d7925393f38/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4663PJTLEKG%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115745Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJGMEQCIGgYLQvqewJJCA6iuvrdG0tFDH%2FFBbQmENDuex4%2F15WsAiAJBC9wPF3DiCNfuuoA07DxZaH79sHUyfXXEI6B%2FoVz5Cr%2FAwgsEAAaDDYzNzQyMzE4MzgwNSIMHI9mwLvkwE20DYfKKtwDRXFoC8w8dv5qc3oYL19ehKBGYDsCs8r7K3R3o0neZfw22Ym8d0kNN5pR4TYGZzkAOYg6qOHdO8tzHi6xabYSlUhWVuUAbwhUxWBl78kISZccW4h7ZDoNMyjG8y0axBQ2bAt7rrPQzuLY4w6WaEIWQBaTygKdff1%2FtIwidydDQshF0PS9mOfgKhcIlt2%2FXQCXRQEG3F5Emy07K%2FFB8ADvp4bSkyO1p4NeFIP4PNVBXHEZzkmnA6wFgiylJXueh53J0kHo8c3NWo8iOmZtnTeZnzZ%2B8kDAgxqEBeXQkO7tYlHjHp3ulCKZvyuF1AENxdjPGpBQE%2FJFSamhH78uQUn7kNTq8DXRjP4Qo0rh4%2BRLJaknFvL7D0OazI588EB5nDuHrxwJk6uGjwCV1jB7k7%2BEm3dqWQ5EurmM8%2BPrnwNpO68mRYP41WMCFs4no9QORCx73pWYBWTUG16TVB2VuUlZCSWrmD3OINxaaO8l9NzL9Ek0oawcXyD9AoXbVMZe0hf9Duo0KiS1x%2BYcrASQuO3wxLd%2BKZrIqtkP7D2dV16oSYJ3V%2BW2VxvjlfD41iMT7lSgGQ%2F3okWfFoJEgizRSz0948uvPL5tS9gMgKhPJgZ3du9xvsjt3CDo2%2BrB1ZAwk5yIxAY6pgHNX067iYkAQo59rtkO1Dqw%2FwAZiv74xD8Ze26V3QfKXMsy21HN3viViE0JZLNrraiHvXfj%2FlnLoeHZpt%2FvaCplWqSet5Ydr%2FTI43mPK7o6djqnGmmnNC%2FFHeS%2FhxF4DWa1YsPTl00WdwTWYFZof9GpCH%2B7n3srAs43zYx9dOU%2BrUh5F%2BR9AFfV6lslAWM%2FNIgNme0p5go61JyXrcc5rDwlfixKMjg8&X-Amz-Signature=8fca83d6912c51bae8e727a858d6a47910fe70fecec169db637aadb18fa9a87a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ```latex
 큰 아이디어는 다음과 같다

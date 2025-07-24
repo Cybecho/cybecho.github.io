@@ -4,7 +4,7 @@ date: 2024-02-10T03:37:00.000Z
 draft: false
 tags: ["ubuntu", "Arch"]
 series: ["Let's Linux!"]
-description: "Arch Linux와 Ubuntu에 i3wm 설치 방법, i3wm 사용법 및 단축키 안내. i3-gaps 설치를 위한 튜토리얼 링크와 소스에서 빌드하는 방법도 포함되어 있습니다."
+description: "Arch Linux와 Ubuntu에서 i3wm 설치 및 사용법에 대한 가이드. 주요 단축키와 터미널 명령어, i3-gaps 설치 방법을 포함하며, 관련 튜토리얼 링크도 제공됨."
 notion_id: "242197e7-1102-495c-807e-0d7eb2896288"
 notion_url: "https://www.notion.so/i3wm-242197e71102495c807e0d7eb2896288"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/i3wm-242197e71102495c807e0d7eb2896288"
 # i3wm
 
 > **Summary**
-> Arch Linux와 Ubuntu에 i3wm 설치 방법, i3wm 사용법 및 단축키 안내. i3-gaps 설치를 위한 튜토리얼 링크와 소스에서 빌드하는 방법도 포함되어 있습니다.
+> Arch Linux와 Ubuntu에서 i3wm 설치 및 사용법에 대한 가이드. 주요 단축키와 터미널 명령어, i3-gaps 설치 방법을 포함하며, 관련 튜토리얼 링크도 제공됨.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/3b9564cb-dea9-4ae8-a8ef-e6ebff8d8f6e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466X47377KM%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101938Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQDOoK6nQYNXLhrpDuIwz1qfWmb1iy%2F7LBGo4iq2DWoVFgIhAN0cWqvYTm8U0CmJE0HLGY766nsRcZzkp00uT9Qfy%2BgeKv8DCCoQABoMNjM3NDIzMTgzODA1IgyL5M08RMI0GBMaRLQq3AOWp6AqOoP%2BVoscI%2FOCgPSflcVRcM2yBgAsfakx0qbxePHTxdfhB0VnqWcG213zOHTD7le7QlpsSRtvTCbvnkWEQizW1Pw6P%2BqGifqIIBAkD3EnXmKZxFX%2BsSy19fPSaepRfjWq%2FdHklwilful56thzzCQlKRMIhYajupAuNjrP%2Byb4dbgxLgl%2BdoGSXgelf7vnToRDVKvYOuUyNb0pmyML6wQfqbMAdQW75iNoB5IBlE6HLXTj7PCIPbIIfQzXfXjMQ%2FXMKOs2KJ6oxkTIpzerx1EdBIMn8UCaNuycNnKv5pNi%2FwvhjkNSu3pbxoLJoKkQM5GlyMAjM28SJIHDxK7gHQw%2B79cst4HVZ%2B7jBKpAAPjT%2B%2Bm68DqTB%2FfUQsau4vJN98u0smK4HKeSM7qZEq5Pq1Dm43ey2uwWd6KcaXU2wnimiPsheyaLRl4zjqCd817jzDLG88wzrPQ90miRj%2FK4htFGMMVnmB7nxE9fWMbv7fEnfy0WCYPHP9CJMLA42KG6frbXPgVU7avOn6qhtFy1K8YK9XoLA9QoP%2BwpVl4pUceWrriAKwoj6IX9nfNQIb8b6q4WMTb0KsZqbOC7PmKtmBz7SxVZJad%2By%2FM75JgQT4u6QxJSQqumq%2B%2FHwjCX9ofEBjqkAe70yFOP9M7cATX91eYDzuS8MhOWzmKEkCcn62wOUR7vEB9YkGPCEDmryi9v9HfjKUQrbLhq%2FjfGnV88qWRAXyp8czw6nCLUdYSsVCQEotMWa2IY3O7%2FSNTyA1YknolYlRFGyO89aB8HydiCNUFP1u57tMnHTd4npQGcDdG5zzdVU3KeEqL%2BMc0Fqqqz%2FBSQdBj8PhMxfuhGnfFYs%2BAjaavqMQ9%2B&X-Amz-Signature=d68a1eb32ee226ab8ffc200b1c549f2a69ec713b28b839996c27594d961cbe94&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/3b9564cb-dea9-4ae8-a8ef-e6ebff8d8f6e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46642OMTOGA%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115812Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJIMEYCIQCyyLmHqMRo5XB1Om%2ByguXCF68rv2%2Bb%2FXzw%2FHR4z5kshAIhALyOb%2FQ6CQCxIPS4uucINco093sBh7OEeARayjceYqaUKv8DCCwQABoMNjM3NDIzMTgzODA1Igz7h2QtSpwgBAbY1boq3APWyskI7jgCQUoc3EJ9IqgBBOBBnpXFUg%2F3eZgj%2FsyHHG9bGphk5hpkVJTpg0YTsanzxtxuQFMwRKvcgvh2%2Bqy5NKw%2Fhx49VT4pKkJedNbVttlxsr6MiFpN%2BenpC8mseUCIJC2JoUrfHVJP9YEJ4KwmKf8QZF7La532LMHiMVjowqjA1MOz7s9a%2FegEBwSSkkEvcQx%2BnAWln21PCfh7mDLnq8KKD4zgn4FjU%2BJIPnSihVdz0bfo3BEwNdcfo156jUOESFgLrepWZ3z8jQUpUJPCqxt%2FlsgenKis0aSw8dlyI3H%2FDtXROjesGAgj1Fbhg8hhTw5xX4jfX08885XoXTwR9xk%2B5DMiW%2BPNn3xSmvk7KFRpd8SNATw6x5Cxw3aorA6pCZp15dmcpJPUdMjX2V24zZjmI7A7d6UYw8bmh97PdmVPMf8uVECsZDWftUm4FmxUO%2BE%2FIe5GOLRYd3%2F%2Bpq84%2BbxKTHA4fYf24l8U7wDq6uO%2BfypIOnyNOzi1%2Fx4qCGVe4za9nAFl%2BXF78k6tm9sel5WWlRe0J6RELV14mzAsEV1ZJAiMRmzRSrbqtEIyusVg2ZLd1FGnEDRWNZYk%2FeX%2Fbqcgh%2FX6tLA5sQzwSLHVgm2YdVJpzffCo%2Bx28jCKm4jEBjqkAbkpAIJNAToDqOGqjnVDA64sjHdAJpMSPSV49s8fiJtif6YGG965SM1BtVamtb8opKxPDKx2qDsDRo9Y5JCjdGIR%2BUR8XYr%2BMqG3WzUqpBSGiXuod2u%2Fj4dMCwh0uAE7YSP82%2BSV7rSLe5t2UdLlUHqgqFazvq8qE%2FAU3Bxo5BQrNJUHq%2Bkr%2FIlVw4qwTzqAdI3FtIvMmnsAwXYdNHa5YKQldOUr&X-Amz-Signature=a5214e129b5cbdc3b0c6438f392641bd53ea70507771368cd8eaedf95aeeb257&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ### install on Arch Linux
 

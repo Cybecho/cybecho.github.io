@@ -4,7 +4,7 @@ date: 2023-11-19T00:00:00.000Z
 draft: false
 tags: ["WINDOWS", "POWER_TOYS", "레지스트리"]
 series: ["Don't Hate Windows!"]
-description: "PowerToys 키보드 매니저를 위한 배치파일 제작 방법을 설명하며, 소스 및 대상 디렉토리 설정, 파일 복사 명령어, 관리자 권한 요청 및 PowerToys 재시작 스크립트를 포함합니다."
+description: "PowerToys 키보드 매니저를 위한 배치파일 제작 방법을 설명하며, 소스 및 타겟 디렉토리를 설정하고, 파일을 복사하는 명령어와 관리자 권한 요청을 위한 스크립트를 포함하고 있습니다."
 notion_id: "59ed9abc-2f7b-4c21-8816-66330e7c4ce9"
 notion_url: "https://www.notion.so/PowerToys-59ed9abc2f7b4c21881666330e7c4ce9"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/PowerToys-59ed9abc2f7b4c21881666330e7c4ce9"
 # PowerToys 키보드 매니저 배치파일 제작
 
 > **Summary**
-> PowerToys 키보드 매니저를 위한 배치파일 제작 방법을 설명하며, 소스 및 대상 디렉토리 설정, 파일 복사 명령어, 관리자 권한 요청 및 PowerToys 재시작 스크립트를 포함합니다.
+> PowerToys 키보드 매니저를 위한 배치파일 제작 방법을 설명하며, 소스 및 타겟 디렉토리를 설정하고, 파일을 복사하는 명령어와 관리자 권한 요청을 위한 스크립트를 포함하고 있습니다.
 
 ---
 

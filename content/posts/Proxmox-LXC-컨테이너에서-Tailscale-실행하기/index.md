@@ -4,7 +4,7 @@ date: 2025-02-09T14:19:00.000Z
 draft: false
 tags: ["ProxMox"]
 series: ["Let's Homelab!"]
-description: "Proxmox LXC 컨테이너에서 Tailscale VPN을 실행하기 위해 TUN 디바이스를 활성화하는 방법을 설명합니다. LXC 설정 파일을 수정하고, 컨테이너를 재시작한 후 TUN 디바이스가 활성화되었는지 확인하며, tailscaled를 실행하고 자동 실행 설정을 추가하는 단계로 구성되어 있습니다. 문제가 발생하면 로그를 확인하여 디버깅할 수 있습니다."
+description: "Proxmox LXC 컨테이너에서 Tailscale VPN을 실행하기 위해 TUN 디바이스를 활성화하는 방법을 설명합니다. LXC 설정 파일을 수정하고 컨테이너를 재시작한 후, TUN 디바이스가 활성화되었는지 확인하고 tailscaled를 실행합니다. 또한, 컨테이너 재부팅 시 자동으로 Tailscale이 실행되도록 crontab을 설정하는 방법도 포함되어 있습니다."
 notion_id: "1951bab9-e3f8-80c7-afe8-c902aed1fde2"
 notion_url: "https://www.notion.so/Proxmox-LXC-Tailscale-1951bab9e3f880c7afe8c902aed1fde2"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Proxmox-LXC-Tailscale-1951bab9e3f880c7afe8c90
 # Proxmox LXC 컨테이너에서 Tailscale 실행하기
 
 > **Summary**
-> Proxmox LXC 컨테이너에서 Tailscale VPN을 실행하기 위해 TUN 디바이스를 활성화하는 방법을 설명합니다. LXC 설정 파일을 수정하고, 컨테이너를 재시작한 후 TUN 디바이스가 활성화되었는지 확인하며, tailscaled를 실행하고 자동 실행 설정을 추가하는 단계로 구성되어 있습니다. 문제가 발생하면 로그를 확인하여 디버깅할 수 있습니다.
+> Proxmox LXC 컨테이너에서 Tailscale VPN을 실행하기 위해 TUN 디바이스를 활성화하는 방법을 설명합니다. LXC 설정 파일을 수정하고 컨테이너를 재시작한 후, TUN 디바이스가 활성화되었는지 확인하고 tailscaled를 실행합니다. 또한, 컨테이너 재부팅 시 자동으로 Tailscale이 실행되도록 crontab을 설정하는 방법도 포함되어 있습니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/2498a140-b3e0-48b6-a6e3-8f96f3927e3d/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4663TQK4NSG%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101627Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIDNk%2Bwn3SSkItL7dP8QL%2Fh08jt8yqjMWkMCDkm38199TAiEAnhCvIRHg34AElnbS%2BX0GLQX%2BEoxFo6%2F%2FYjhngoa40Lkq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDJOP%2F1MdmWuDGftpeircAyzAP96DHWuHCnF2360PUE8e5g4kY6nLAgN%2FmkBi5Y1xzwgIDJmYjk%2FwNwLnHdoe2jqnpxzHOOfHP66S%2FG1hsYGn09fQY8qOnJ9twAPOx6X1Tins%2BF64h5eecHI2xNS3rbRBYzNqVY9fUiKr%2FhQ3Ha0M94jwOxPZWxcAaJyx1%2B9a081a8C00hqioZeeXOceUXFjBoCgggupYBXCmtF46kfX1jFdElXT9t3HXeeJXbsXiWsaHDOpK4%2B5mKorxJYcUcIR%2BeoqdVzNABgg%2BANyqEvJTaRi8dQ2i54PiMYWnLLirdR9xNmqdGja6gHj%2FJ90h2ttx3eTrZJA5EUNb2LV1s0m3Ad1IqtkP0B5VvKUSY%2B5zjifFFNxs5xiJVFiUzsGCXysgsJo1b132EkPqoCSZRLdk3qxR65xQApGUSP7O0IrfHRNRBN%2FvJ3MIa1v%2FdhtebZz89TTEwUA655ZBAYydw5KNVQMpJfhvlERB1afhfPXikVtcE91Idw1fg0PCrbhoVlkxR3H09RSt%2FiErNe7YRrs9oGOqxg5zyirJo6zEXS%2B3bzMiU9eSiFpI9toHGjq3ISvgGHqJ9%2BkMXxTVxpDNnqbfU%2FAR6KDIv0WBrpXIOE4dfYJW8xJKUrLanaylMJT2h8QGOqUBeH0RHDNnAMlxp43FT3prLEKbi75rz0inJUosqyBIuoTsZ3H%2FBIin3LFdCQqjfpVlDxOvPgn2ypbo4tW9QJPVWeq6b2nUueYGmzd%2FYkiA00%2F7M7wtQL%2BynsEUFpD%2FvykDq%2FKEWMGp4Zbq%2F0Ju%2FdMWVaChcV5uv8Cl0qWQurrgBeIhAg8SIXiaK8oxBAywHM6knoETyfqiSw7qtTs3qrv%2FjCIDoup2&X-Amz-Signature=ea966af8fe6c89eedc1459c2807634bea50f6f9c1ecf729961399945b3f9d238&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/2498a140-b3e0-48b6-a6e3-8f96f3927e3d/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TNNLIO5U%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115441Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJIMEYCIQCIwEeggpD4cF7eFDMdIHIDCJOjyMBpDdTTBLFgkpITawIhAKQKiqR%2FNAfsCLUDET7IWeCl0g5g8ob1%2FGOCAVE8LHvmKv8DCCwQABoMNjM3NDIzMTgzODA1Igw7ydmtd5LwiLIRlhcq3AOp4SMM%2FXlSgW39tX6P4WzXudimAWj%2FBJkeLWO6iBgqyWMhN6nGzsKVwrPwR72a9NdsjVAjRqKmbFDxZIEmX6lEBx2xpS6h%2F2%2B8%2BQY5hi63e1kXTXo%2F8JYcwraJ%2F28FRK%2FiINuTcF%2BATNlU%2FUHtDmLNXaoMZlFEFJOsVh0kl6ZpBuOTqPviH5Dr%2BGosBwhszAdghxBkTff%2FFdD9pqN%2FKrXczCT%2FRvAl895NI02mGg8FeKjrszxECWF42aGKzC8crx97LzZFJJJVahVwU%2BR9ZfAER4QfdXR%2BVUh1XM1YKIiMzfB%2BXy0m%2B5DKJSbyeBCkbaxJttsk75MvIxMvz535JkJW%2BQZ1wyvRO8ogLDMjxIrI5Ia5QqFpkTOFFoxN9Vmm1j1pg0rd%2B6boo05LlQUl3s5NZQRn1Nk0r96dw3uL5WGMO8nL3Lh23gyEM0Os%2F%2FCjz6Gl19YvFjP3L7vBsKY2zgIXRPtqmQvW9XeFJURiIeJycDBcXCI7m8kkMedIvBAO8adoR%2FoK3u3nedeZoMSmr4MqqGiOBBVCNtwpelv%2BM3OiSBTStjz6QQDu7bivT0jW%2BdpzMxrlh9Pz%2Ba%2BOGnjc4UvRXeLc%2ByX6dmsLRj0Alp5ksns1cuBGAUTzGzG3KzDYm4jEBjqkAR%2BS%2BuMPTpw9h%2BSzyV6m3zzNkMlmFEEB4QNodhkDKagJ%2FV%2BL2CZhnVp7826Zb81gX4OefLGclF51RjtcmUZ4E8bAHJF6wlCLBmO1YHuXC2XVLNh3YE65B%2BZty3lLGW%2F6f1QXGEltsP43xB0F7uUZJYzQiEOaJJV%2F%2FqTnLNCUcXw%2BV6CuqqcxuUoy0EzOggPzLbyKkZLSVAmQS9tly12LietlRrxH&X-Amz-Signature=4d66255e9fca909f3cb3db3dca27ef2e4e40bff713c36ef755d98c1c56cfdf59&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # Proxmox LXC 컨테이너에서 Tailscale 실행하기
 

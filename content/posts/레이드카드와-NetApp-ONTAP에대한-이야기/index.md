@@ -4,7 +4,7 @@ date: 2025-06-16T12:35:00.000Z
 draft: false
 tags: ["Other", "Util"]
 series: ["HW"]
-description: "레이드카드는 데이터 안전성과 성능 향상을 위한 하드웨어로, 원격 관리 기능과 PCIe 대역폭의 중요성이 강조된다. NetApp ONTAP은 소프트웨어 정의 스토리지로, 복잡한 데이터 관리 요구를 충족시키며, 현대 데이터 관리의 진화와 유연성을 보여준다. 각 솔루션의 장단점은 상황에 따라 다르다."
+description: "레이드카드는 여러 하드드라이브를 하나의 볼륨으로 관리하여 데이터 안전성과 성능을 향상시키는 하드웨어이며, 원격 관리 기능이 필요하다. PCIe 대역폭은 단순한 데이터 전송을 넘어 실시간 처리 능력을 나타내며, NetApp ONTAP은 소프트웨어 정의 스토리지로 하드웨어 RAID의 한계를 넘어선다. 데이터 관리의 복잡성이 증가하면서, ONTAP은 멀티 클라우드 환경 지원, 실시간 데이터 복제 등 현대의 다양한 요구사항을 충족할 수 있다."
 notion_id: "2141bab9-e3f8-80ed-9387-eb558dc98303"
 notion_url: "https://www.notion.so/NetApp-ONTAP-2141bab9e3f880ed9387eb558dc98303"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/NetApp-ONTAP-2141bab9e3f880ed9387eb558dc98303
 # 레이드카드와 NetApp ONTAP에대한 이야기
 
 > **Summary**
-> 레이드카드는 데이터 안전성과 성능 향상을 위한 하드웨어로, 원격 관리 기능과 PCIe 대역폭의 중요성이 강조된다. NetApp ONTAP은 소프트웨어 정의 스토리지로, 복잡한 데이터 관리 요구를 충족시키며, 현대 데이터 관리의 진화와 유연성을 보여준다. 각 솔루션의 장단점은 상황에 따라 다르다.
+> 레이드카드는 여러 하드드라이브를 하나의 볼륨으로 관리하여 데이터 안전성과 성능을 향상시키는 하드웨어이며, 원격 관리 기능이 필요하다. PCIe 대역폭은 단순한 데이터 전송을 넘어 실시간 처리 능력을 나타내며, NetApp ONTAP은 소프트웨어 정의 스토리지로 하드웨어 RAID의 한계를 넘어선다. 데이터 관리의 복잡성이 증가하면서, ONTAP은 멀티 클라우드 환경 지원, 실시간 데이터 복제 등 현대의 다양한 요구사항을 충족할 수 있다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/995a5d5e-0782-4616-84fd-92780d6e6c0a/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YUDUOYRH%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101354Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQDGzrSWYTv4DvehPLvoYIHoewf86%2BWebfjdlwKjQGjipAIhAPTysrYJKs1CSRGjH7OZADd4eejXkUXjAdlUbrLfhlYIKv8DCCoQABoMNjM3NDIzMTgzODA1IgytYQc19520%2BZ0Ntwkq3AO6943bPTPUiqu9Y%2B4tQDhCncdi8L2fYrSaF6h7EjYr7WAJmR7U8ZgE%2FhlF5LL8Ikln51PyVZNZl9OYTmMyF611wEJ2f8KnF%2Ft7AwGokEnpjbJ0KygPOG77%2BFYfAk82Timcrr0bl3YBrFP8ABt%2BHeo8d01AhZfVtm2d1myRUojRNYUgoHnE7ybEZpcQAVgzJcdVxZXM4dvBmvtvdKNkXjoKffAQOenCSkheRUy34%2FSF3AaCzvQGYfJCz7bEgrT%2FVLC6f%2Bi%2BrrhW1WTu%2Btv%2FrnydKjjRbq53Kp6nGynhlx8raPbOSOG9vFw8aO1ZaEjQOQlKU0VxsVEmVosxCpoS3MgSuYGYvNYnxVPcozE5sI8TlAcA7WMsDBO0LUt9Shac04aDskBsxdioqU7zn52%2BKMh%2BOVj8DmBBAu7K1ZjZ6GRohW6kRVJXgq2yU7TqwU5BWDG0r23uawz%2FJ0C9fAA1fQaZU%2FHMd6fpR%2FSjggmY6CXrgmmU0VnHkEyr3yOVPxm0gvwTgY1MabTOfMvxPP1kLFhLG3F5xPqPtmnlRikTXBuP0ntKvsvI%2FQOCJF61ELWU3k0TMpmK3%2BRyf3lbImgFhB2HqkHQQcndWnJXZnmBRj5etEwSeLfElrDvtnXuTDCn9ofEBjqkAdyOGk90wqqqparjmW%2FYrmNf0CEt%2Bu46h5OUgaeEm%2BAYmJKnZtgVaJ%2BB2nhC%2FpsDTmTud%2BG1ehIbuzag8nlviSqyOB6ScR1SJmHNP95NmJh6ywuhCpsw6zG9kHacWVAm69OMlLabE1nuRJ9GPuc7KZjIhyXcI7PLpXAU%2BQC%2FwlsfUr3vEElVgL0en3Rep4koiVnF5DXxz2CrikYFM%2FIJzXuNabjg&X-Amz-Signature=fba9260de765ee45846f5e2b8d1a2da1da7887add1b019a336edb5cc108e8861&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/995a5d5e-0782-4616-84fd-92780d6e6c0a/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YRIEGY54%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115222Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJGMEQCIC1%2Bb5knyynZ79u18D7bqtInM1ctvcscyLkyA3kTO6DeAiB1oQBSkmYOjK5n27lFMgK%2FCv1VvKJ8yksT229l%2FwFcGyr%2FAwgsEAAaDDYzNzQyMzE4MzgwNSIM67GmPbiJAQVCY0%2BOKtwD6KPMuKeyBZ0DbndoNhXJqwQnLlQlVTu2wGLWly31XoZdtCzOXcchCcUAqc4LfLNHanc30LWZm%2BwgJAWG%2FbJuopb0rMXe3Ee2A2DObAndQG8gj6hs46DrKOmcAU3IP6LspY8C8uI%2BwY4Zl9e6Yk8Dvn0jJTY1F1zbdYz5S3%2BlL%2BTvGNm6KHa2IerFAReMib8LQdu2ST6XDWliZlar%2FXOYF%2FS1oUfeTmt%2FkN2AlwdJtHVszKUWBTRFqPIxxQ3zvt88u0t%2FZGYXZuoj%2FE1hQztnypuUOqo5MHayc4xWrIOhwH09yzelbyOc1eNq42uBvA2YEQlZCeE3iF%2BjavhMe3tl4ErL96MTDljMgm47%2FoY3ArDN8SDXy9OtBWfnRQYLrgaeuuHlBzxjdOSF5DffJptyxSrW%2FIMGrTUpk%2F2LgbOMxhUKUtBrGbCdmDAeBtruhCN9OGYxWHqB1KodbNGY5P2IaxDkXllTYrS%2FkMN1WoBWDJrEQrFqwxtmTufUgzDCx%2B4YVzpoHoFWkW0YWDMjQ808EIG56jy9372cWVCcye9Un6O5w6%2Fv7dnoiEFREu66k0NiYb8zpfasmiJQ1MFP3JEZJ4RySjFJ3dv%2FVTjbOc7EVX78uwKQuGaUe0Imb%2FswmpuIxAY6pgEVnJvazwqepMBcG4SSGVY7SvMxyytx%2FDvSgHO5ZsOsyqalevCBEsAgY83BdRPBFaWuei2eW2Z6%2BnwKnYCLjYmUqh6QP0e7b8C2qRSShsf7A3V4pe9tGoTvdkWEsOKvXWx9JZRdXnfbJ6XMIiDqCsC8tnf%2ByUbmdp4sZ%2F1aX9iZ9OwsCkMSBSHNTMmLymKPl6VqwkYToxkk2RFf24ttblTwwr8H4q%2Fz&X-Amz-Signature=1311409fc5fc43f41e269ff70e2b0a272097a93ad7d11a1fa13d348f16e9af68&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # 레이드카드와 NetApp ONTAP에대한 이야기
 

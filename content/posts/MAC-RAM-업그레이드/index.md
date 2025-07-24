@@ -4,7 +4,7 @@ date: 2023-05-22T00:00:00.000Z
 draft: false
 tags: ["MAC"]
 series: ["Let's MAC!"]
-description: "2018년 맥미니의 RAM 업그레이드를 위한 정보와 추천 제품 링크가 포함되어 있으며, 삼성전자와 Crucial의 DDR4-2666 메모리 제품을 소개하고 있습니다."
+description: "2018년 맥미니의 RAM 업그레이드 방법과 추천 메모리 제품에 대한 정보가 포함되어 있으며, 삼성전자와 Crucial의 DDR4-2666 메모리 제품 링크가 제공됩니다."
 notion_id: "d11311fd-7070-4e51-9538-cc5e7f3dc13a"
 notion_url: "https://www.notion.so/MAC-RAM-d11311fd70704e519538cc5e7f3dc13a"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/MAC-RAM-d11311fd70704e519538cc5e7f3dc13a"
 # MAC RAM 업그레이드
 
 > **Summary**
-> 2018년 맥미니의 RAM 업그레이드를 위한 정보와 추천 제품 링크가 포함되어 있으며, 삼성전자와 Crucial의 DDR4-2666 메모리 제품을 소개하고 있습니다.
+> 2018년 맥미니의 RAM 업그레이드 방법과 추천 메모리 제품에 대한 정보가 포함되어 있으며, 삼성전자와 Crucial의 DDR4-2666 메모리 제품 링크가 제공됩니다.
 
 ---
 

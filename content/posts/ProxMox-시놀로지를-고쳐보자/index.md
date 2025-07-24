@@ -4,7 +4,7 @@ date: 2025-02-24T15:21:00.000Z
 draft: false
 tags: ["ProxMox"]
 series: ["Infra & Network", "Let's Homelab!"]
-description: "HDD 사용률이 100%를 초과하여 헤놀로지에 접속할 수 없는 문제 발생. RAID로 묶인 두 개의 2000GB 하드디스크가 가상 머신의 QCOW2 파일로 인해 거의 가득 차 있으며, 파일 정리를 위해 직접 접속하거나 더 큰 HDD로 데이터를 옮기는 방법을 고려해야 함."
+description: "HDD 사용률이 100%를 초과하여 Synology VM에 접속할 수 없는 문제 발생. RAID로 묶인 두 개의 하드디스크가 가상 머신의 QCOW2 파일로 인해 거의 가득 차 있으며, 파일 정리를 위해 직접 접속하거나 더 큰 HDD로 데이터 이전이 필요함. 현재 스토리지 정보와 가상 머신 설정이 포함됨."
 notion_id: "1a41bab9-e3f8-8000-ae27-f6265f10dfa1"
 notion_url: "https://www.notion.so/ProxMox-1a41bab9e3f88000ae27f6265f10dfa1"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/ProxMox-1a41bab9e3f88000ae27f6265f10dfa1"
 # ProxMox 시놀로지를 고쳐보자
 
 > **Summary**
-> HDD 사용률이 100%를 초과하여 헤놀로지에 접속할 수 없는 문제 발생. RAID로 묶인 두 개의 2000GB 하드디스크가 가상 머신의 QCOW2 파일로 인해 거의 가득 차 있으며, 파일 정리를 위해 직접 접속하거나 더 큰 HDD로 데이터를 옮기는 방법을 고려해야 함.
+> HDD 사용률이 100%를 초과하여 Synology VM에 접속할 수 없는 문제 발생. RAID로 묶인 두 개의 하드디스크가 가상 머신의 QCOW2 파일로 인해 거의 가득 차 있으며, 파일 정리를 위해 직접 접속하거나 더 큰 HDD로 데이터 이전이 필요함. 현재 스토리지 정보와 가상 머신 설정이 포함됨.
 
 ---
 

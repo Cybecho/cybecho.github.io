@@ -4,7 +4,7 @@ date: 2025-05-28T03:11:00.000Z
 draft: false
 tags: ["AI"]
 series: ["AI"]
-description: "OpenManus는 Manus AI의 오픈소스 대안으로, 무료로 설치하여 사용할 수 있으며, 다양한 AI 모델을 선택할 수 있는 장점이 있다. 설치는 간단하며, uv 프로그램을 설치하고 GitHub에서 파일을 다운로드한 후 Python 3.12 환경을 만들면 된다."
+description: "OpenManus는 Manus AI의 무료 오픈소스 프로그램으로, 사용자가 가벼운 AI 모델부터 고성능 AI 모델까지 선택하여 설치할 수 있습니다. 설치는 간단하며, uv 프로그램을 설치하고 GitHub에서 파일을 다운로드한 후 Python 3.12 환경을 만들면 됩니다. 이를 통해 누구나 쉽게 시작하고 필요에 맞게 설정을 조정할 수 있습니다."
 notion_id: "2011bab9-e3f8-8008-a94d-cc2d1f484bbf"
 notion_url: "https://www.notion.so/AI-Manus-Self-Hosting-2011bab9e3f88008a94dcc2d1f484bbf"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/AI-Manus-Self-Hosting-2011bab9e3f88008a94dcc2
 # 에이전트 AI, Manus를 Self Hosting 해보자
 
 > **Summary**
-> OpenManus는 Manus AI의 오픈소스 대안으로, 무료로 설치하여 사용할 수 있으며, 다양한 AI 모델을 선택할 수 있는 장점이 있다. 설치는 간단하며, uv 프로그램을 설치하고 GitHub에서 파일을 다운로드한 후 Python 3.12 환경을 만들면 된다.
+> OpenManus는 Manus AI의 무료 오픈소스 프로그램으로, 사용자가 가벼운 AI 모델부터 고성능 AI 모델까지 선택하여 설치할 수 있습니다. 설치는 간단하며, uv 프로그램을 설치하고 GitHub에서 파일을 다운로드한 후 Python 3.12 환경을 만들면 됩니다. 이를 통해 누구나 쉽게 시작하고 필요에 맞게 설정을 조정할 수 있습니다.
 
 ---
 

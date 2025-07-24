@@ -4,7 +4,7 @@ date: 2024-08-02T10:36:00.000Z
 draft: false
 tags: ["ProxMox", "NAS"]
 series: ["Let's Homelab!"]
-description: "외부 포트오픈이 불가능한 환경에서 Tailscale을 이용해 서버를 운영하는 방법을 소개합니다. Oracle Cloud 인스턴스를 사용하여 내부 서비스용 서버와 연결하고, NPM을 통해 프록시 설정을 간단히 구성할 수 있습니다. 이를 통해 NAS와 다양한 서비스에 접근할 수 있습니다."
+description: "외부 포트오픈이 불가능한 환경에서 Tailscale을 이용해 서버를 운영하는 방법을 소개합니다. Oracle Cloud 인스턴스를 사용하여 내부 서비스용 서버와 연결하고, NPM을 통해 프록시 설정을 간단히 할 수 있습니다. 이를 통해 NAS와 다양한 서비스에 접근할 수 있습니다."
 notion_id: "87ddaadc-d981-49f0-af8d-07c951639c9d"
 notion_url: "https://www.notion.so/Synology-NAS-1-Feat-Tailscale-87ddaadcd98149f0af8d07c951639c9d"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Synology-NAS-1-Feat-Tailscale-87ddaadcd98149f
 # Synology NAS 
 
 > **Summary**
-> 외부 포트오픈이 불가능한 환경에서 Tailscale을 이용해 서버를 운영하는 방법을 소개합니다. Oracle Cloud 인스턴스를 사용하여 내부 서비스용 서버와 연결하고, NPM을 통해 프록시 설정을 간단히 구성할 수 있습니다. 이를 통해 NAS와 다양한 서비스에 접근할 수 있습니다.
+> 외부 포트오픈이 불가능한 환경에서 Tailscale을 이용해 서버를 운영하는 방법을 소개합니다. Oracle Cloud 인스턴스를 사용하여 내부 서비스용 서버와 연결하고, NPM을 통해 프록시 설정을 간단히 할 수 있습니다. 이를 통해 NAS와 다양한 서비스에 접근할 수 있습니다.
 
 ---
 

@@ -4,7 +4,7 @@ date: 2024-12-15T13:41:00.000Z
 draft: false
 tags: ["ubuntu"]
 series: ["Let's Linux!"]
-description: "SSH 공개 키를 사용하여 Pop!_OS 서버에 안전하게 접속하는 방법을 설명하며, Mac에서 SSH 키 생성 및 iCloud 연동, Pop!_OS 서버에 SSH 설치 및 설정, Windows에서 iCloud를 통한 접속 설정을 포함합니다. 비밀번호 없는 SSH 접속을 위한 테스트와 주의사항도 안내합니다."
+description: "SSH 공개 키를 사용하여 Pop!_OS 서버에 안전하게 접속하는 방법을 설명합니다. Mac에서 SSH 키를 생성하고 iCloud와 연동하여 공개 키를 Pop!_OS 서버에 등록하며, Windows에서도 iCloud를 통해 SSH 접속을 설정하는 과정을 다룹니다. 비밀번호 없는 SSH 접속을 테스트하고, 보안 강화를 위한 주의사항도 포함되어 있습니다."
 notion_id: "15d1bab9-e3f8-8077-898a-dfe448d70390"
 notion_url: "https://www.notion.so/Pop-_OS-SSH-ICloud-15d1bab9e3f88077898adfe448d70390"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Pop-_OS-SSH-ICloud-15d1bab9e3f88077898adfe448
 # Pop!_OS 서버에 SSH 공개 키 등록 및 ICloud를 활용한 키 관리
 
 > **Summary**
-> SSH 공개 키를 사용하여 Pop!_OS 서버에 안전하게 접속하는 방법을 설명하며, Mac에서 SSH 키 생성 및 iCloud 연동, Pop!_OS 서버에 SSH 설치 및 설정, Windows에서 iCloud를 통한 접속 설정을 포함합니다. 비밀번호 없는 SSH 접속을 위한 테스트와 주의사항도 안내합니다.
+> SSH 공개 키를 사용하여 Pop!_OS 서버에 안전하게 접속하는 방법을 설명합니다. Mac에서 SSH 키를 생성하고 iCloud와 연동하여 공개 키를 Pop!_OS 서버에 등록하며, Windows에서도 iCloud를 통해 SSH 접속을 설정하는 과정을 다룹니다. 비밀번호 없는 SSH 접속을 테스트하고, 보안 강화를 위한 주의사항도 포함되어 있습니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/86c4df21-9be3-4c42-b886-904e996cf715/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YVOBBQYK%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101715Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCICM5a0XFArUB4pNiKgsQfogLoDFl4%2F0XCNgez9RPgL1CAiEAi7qtjiIlIHHD50a8HlpA%2BUYbo%2BR8a68zoxEbhsQ3mGoq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDO%2FmCQ970IlM5Y7p7yrcA1A%2FOvEd%2FjcQl1S66BOAJyYNNEzxePk7Ea1pH3%2FZ1dFGdRQXpmE5acFMStUrifnn5mVRjMYUA2JKyh3TsisBdAig5TlYg8svjtHcO2hA0fmSzBKVr%2FlCEdJO2ghomQc6pi5zHgpAi%2BZV9a%2BGqZ2BujPDXmHaeLoLaldA%2FXo8IQDO4fl4Suio8boQubd%2Bge%2BNusZ4XBYTos0bJLnRTpbw8LpMLECzDqI6LB8wHUXjK1UC4ISi1oMKVylFKR5t0Hd5CEEcy%2F1SlUIQw%2FWWmgFqLEBkFDUsbvsmN6NCoxkQgdHoQaAhMX6NxVWxnvCHyiF54nvl1woTayWsSOASvc6gtrI%2Fw7KuuNiIYp9%2F98yVvGVqofsBwmR0mVabaQ%2BuJym8e957I23k%2BkpVzlyjqJlrJkhdbC3Q8DgMjHwpWRAPTEOqBDveWM3rgAALdqA%2FFczvAMysRaty5snyww%2FokWPP8%2BIAa8GyBtOZeSlaLsZF29SkhT%2FKubecVwXX%2FPrHSZB7QsZM3B9RXiBIjj5Dr9yEuk7dG82Ktmo22XSoNLCK7q9pv8gXoJsmYOUizq%2BqwzQQkGc41XUY79unViuuY8MQ0%2BP6XwEiE78G1HTC8Ad3PcvwrsFmXV%2BSsbxB0vl%2FMJ%2F2h8QGOqUBMEtJ24vb5y%2FowfX3yKc8UInQwWwJMs96LA%2BJHTSZyGUJvzMigtEVrBPWK79PqYO6oRNADW3xeVRe%2FtezLIVLHG66OOhSvv2ZCbTj1tVJOsXYWFjVuSRJro9nQXRK61onWINyAbiupLwi1wt14vBySdjDjNSppFdwkZlGHMVV32tPtxbyEp%2Bd5cdmYazBNHbIBMSymtYapORxWByEy6%2B9fbrL4QE4&X-Amz-Signature=c27e83806fed45d0aa45fa88573e6ab1a1997382b80438499c03d5b62abc0157&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/86c4df21-9be3-4c42-b886-904e996cf715/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466RWF5MHC2%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115528Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJIMEYCIQC266tAe8IaDfKalBF%2BiF1LXe%2FnF38P0vuTNePNnIUkKgIhAN8eseTcDCOlWAWKBHUFzl3YeCMBPiPw%2BC0l6msKN6oTKv8DCCwQABoMNjM3NDIzMTgzODA1IgwUoVuYBsIZ0PIaPkoq3AMiiFshjmPbpCg6MMaB6FuZi7uW2tc96YT0OOgJ%2FOri%2FvxGGk9G8Lw46cfYBXaltnbj7qJUm0ttOg13uUydMUazwm2Rlczxm7U%2Bj10chNNO3sf1vJBk9E8B2hGFvrF6aP2YWT6RR29h%2BgxXTDf7VYe80WiSM2worRQgMPmKrtsfjER99YUOomumvVV4zYyE26ncMXQx3E3e6Wlf1yMburwvt%2FbZ0SgPZhCi3eV678YSMBEnSZhD9xzEgDTQk2dl50z9pPFOT1CZ7Yt1FCNML6YrZd%2FqXJXo8E0Nb2CtoT63EhzK0%2FldCTowdCxDSl0vbz04%2FstTcRwXN02Zmgkp1QnkKSVJ%2Bkq2i8rxCOL3PmdqPC7PWZecq77HPB00LnG0Hqt7wS7awcdBCbLgPfsdU9huLLN7JE5rNxnHXogbbo%2FyC770llLU%2Fy4wbKghtYrZU9iVfArOiyiEgAhX13p5GsYA2tYuK5Q1xDKa0hgx%2FLiGEKG%2Bc53MVMgTPakgMJ%2FxwHHQDnhcA3qIqdcx9IH%2F%2BgPOskdp0oPcnqv%2FSb%2BiMVrtTPuAkRcxtQZ2HpFQlehCi46RrdJkMN5WDJ3DmrjgKSgRUgnzaZwghE4sImoZbR%2BS1KfyDeKkkF5t8UFdqjCXm4jEBjqkAd7brWjwI5NMqgxaTJEz48RZC4f6y9bkoMn%2FbzNRGbYN1F5OvaEvFfX%2BIY7Bu1SNLrCDjy%2FJekXPmZ3JR0GUzR3y6IDrz88dw7Nak1njUcJJyXpuFwwMmABLQXv0YToBPywAeGjRNt83gHgCvzc8Lu4V5rcdqZhY%2BnTX9owVb2P7sc1JMopoQFywa3tngLlVtR4Jh56k0a6Z3Sx7s3K0AzP2xAF4&X-Amz-Signature=654be877ffb4aefd341f619628772f5f758983761a0886100d780ceccdc14652&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # Pop!\_OS 서버에 SSH 공개 키 등록 및 접속 튜토리얼
 

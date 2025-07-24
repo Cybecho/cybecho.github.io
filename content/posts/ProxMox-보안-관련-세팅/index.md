@@ -4,7 +4,7 @@ date: 2024-07-16T07:14:00.000Z
 draft: false
 tags: ["ProxMox", "보안"]
 series: ["Infra & Network", "Let's Homelab!"]
-description: "ProxMox 보안을 위해 시스템 업데이트, 알림 설정, TLS 인증서 구성, 데이터 백업 작업 설정, PCI 패스스루 활성화, VM 모범 사례 적용, VPN 사용, 무작위 대입 차단을 위한 fail2ban 설정, 해외 IP 차단을 위한 iptables 규칙 설정 등의 방법을 제안합니다. 추가적으로 강력한 비밀번호와 정기 업데이트 등의 보안 조치도 필요합니다."
+description: "ProxMox 보안을 위해 시스템 업데이트, 알림 설정, TLS 인증서 구성, 데이터 백업 작업 설정, PCI 패스스루 활성화, VM 모범 사례 적용 등의 설정을 권장하며, VPN을 통해 내부망 접근을 제한하고 fail2ban으로 무작위 대입 공격을 차단하는 방법을 설명합니다. 또한, 해외 IP 차단을 위해 iptables를 사용하여 방화벽 규칙을 설정하는 방법도 안내합니다."
 notion_id: "a34e26d0-6b6f-4fca-8e75-126ff4b9f248"
 notion_url: "https://www.notion.so/ProxMox-a34e26d06b6f4fca8e75126ff4b9f248"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/ProxMox-a34e26d06b6f4fca8e75126ff4b9f248"
 # ProxMox 보안 관련 세팅
 
 > **Summary**
-> ProxMox 보안을 위해 시스템 업데이트, 알림 설정, TLS 인증서 구성, 데이터 백업 작업 설정, PCI 패스스루 활성화, VM 모범 사례 적용, VPN 사용, 무작위 대입 차단을 위한 fail2ban 설정, 해외 IP 차단을 위한 iptables 규칙 설정 등의 방법을 제안합니다. 추가적으로 강력한 비밀번호와 정기 업데이트 등의 보안 조치도 필요합니다.
+> ProxMox 보안을 위해 시스템 업데이트, 알림 설정, TLS 인증서 구성, 데이터 백업 작업 설정, PCI 패스스루 활성화, VM 모범 사례 적용 등의 설정을 권장하며, VPN을 통해 내부망 접근을 제한하고 fail2ban으로 무작위 대입 공격을 차단하는 방법을 설명합니다. 또한, 해외 IP 차단을 위해 iptables를 사용하여 방화벽 규칙을 설정하는 방법도 안내합니다.
 
 ---
 

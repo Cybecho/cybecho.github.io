@@ -4,7 +4,7 @@ date: 2023-06-04T00:00:00.000Z
 draft: false
 tags: ["GCP", "shell", "ubuntu"]
 series: ["Let's Linux!"]
-description: "GCP에서 Ubuntu VM을 다른 계정으로 복사하기 위해 스냅샷을 생성하고 관리하는 방법을 설명합니다. gcloud CLI를 설정하고, 스냅샷 목록을 확인하며, 프로젝트 간 또는 조직 간 스냅샷 데이터를 공유하는 절차와 필요한 권한에 대해 안내합니다."
+description: "GCP에서 Ubuntu VM을 다른 계정으로 복사하기 위해 스냅샷을 생성하고 관리하는 방법을 설명합니다. Cloud Shell 또는 로컬 셸에서 gcloud CLI를 설정한 후, 스냅샷 목록을 확인하고 특정 스냅샷의 정보를 조회하며, 동일 조직 내 또는 여러 조직 간에 스냅샷 데이터를 공유하는 절차를 안내합니다. 필요한 권한과 명령어 사용법도 포함되어 있습니다."
 notion_id: "deef1c00-6580-46f2-8a0c-e30c5d06bb91"
 notion_url: "https://www.notion.so/GCP-Ubuntu-Export-deef1c00658046f28a0ce30c5d06bb91"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/GCP-Ubuntu-Export-deef1c00658046f28a0ce30c5d0
 # GCP Ubuntu 설정 Export방법
 
 > **Summary**
-> GCP에서 Ubuntu VM을 다른 계정으로 복사하기 위해 스냅샷을 생성하고 관리하는 방법을 설명합니다. gcloud CLI를 설정하고, 스냅샷 목록을 확인하며, 프로젝트 간 또는 조직 간 스냅샷 데이터를 공유하는 절차와 필요한 권한에 대해 안내합니다.
+> GCP에서 Ubuntu VM을 다른 계정으로 복사하기 위해 스냅샷을 생성하고 관리하는 방법을 설명합니다. Cloud Shell 또는 로컬 셸에서 gcloud CLI를 설정한 후, 스냅샷 목록을 확인하고 특정 스냅샷의 정보를 조회하며, 동일 조직 내 또는 여러 조직 간에 스냅샷 데이터를 공유하는 절차를 안내합니다. 필요한 권한과 명령어 사용법도 포함되어 있습니다.
 
 ---
 

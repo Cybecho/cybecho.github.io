@@ -4,7 +4,7 @@ date: 2024-12-15T13:05:00.000Z
 draft: false
 tags: ["ubuntu"]
 series: ["Let's Linux!"]
-description: "Xfce 환경에서 RDP 접속 중 마우스 입력이 비활성화된 문제를 해결하기 위해 터미널을 열고, "
+description: "Xfce 환경에서 RDP 접속 중 마우스 입력이 비활성화된 문제를 해결하기 위해 터미널을 통해 설정 경로를 찾고, 마우스 입력 상태를 확인한 후 올바른 값 형식으로 수정하여 문제를 해결했습니다. 설정 적용을 위해 Xfce 세션을 재시작하고, 로그 파일을 확인하는 과정도 포함되었습니다."
 notion_id: "15d1bab9-e3f8-80cd-8748-fbb3aa63e9de"
 notion_url: "https://www.notion.so/Xfce-RDP-15d1bab9e3f880cd8748fbb3aa63e9de"
 ---
@@ -12,12 +12,12 @@ notion_url: "https://www.notion.so/Xfce-RDP-15d1bab9e3f880cd8748fbb3aa63e9de"
 # Xfce 환경에서 RDP 마우스 입력 문제 해결하기
 
 > **Summary**
-> Xfce 환경에서 RDP 접속 중 마우스 입력이 비활성화된 문제를 해결하기 위해 터미널을 열고, 
+> Xfce 환경에서 RDP 접속 중 마우스 입력이 비활성화된 문제를 해결하기 위해 터미널을 통해 설정 경로를 찾고, 마우스 입력 상태를 확인한 후 올바른 값 형식으로 수정하여 문제를 해결했습니다. 설정 적용을 위해 Xfce 세션을 재시작하고, 로그 파일을 확인하는 과정도 포함되었습니다.
 
 ---
 
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/e91c702e-6c10-4e46-a73d-b573f73e98d4/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466RQC7VN6B%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101717Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCICHTiWtWTPhH7y%2BR59j6YqxMQSWI6mb%2FeEf6izT2d3A6AiEAwIQZ1zLlrvOm12N%2FsafXPNGMtLQu6NIBtCrEiWzTfB4q%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDH33ZfCtFr2JcwwHAyrcA50mV7IpN6yhgq%2B4sCute16qIr5fXKN7DbCfbOCS8CDYMVOx%2BdOJYVnzWA6q9Sc%2F8TlcLEAuAvzZOg530G8faiShKmdfIdi0KoxZwtaOBd6YndYrk4BakAr28KuHxrK99edYJxviKEaEtQNLtrC%2FF9LcYWxll7c%2FMj3QTjF91ErcPlTxtKAQmg28eOtOb8cjN9ubq1hcMqGm18U3up6GTejb2bZfvC7%2FTpSXTo8A3WVYATMkhkCqXhwGEdZojs3ptm7PZ%2FO6sPGVdvLYX1hq8G4n8gSAAsddTch%2BE1w5fjUI0%2BffJor6i9fKHJe9qStcK%2BsDnRaaWde5fqxYWq9HKiDbePkqETet7Kfuj7uow7tWtsF33DyJBwdKND6SLrlaiuYcQsAAE62fRAd9BeNPZPdzOavrn8GIZK5yKP9xCCQJrfxa8WhS2HSOmOxtVF1rtkpfrWpPenEVg%2BtqShwOZsMFO33KNDNghYK6GxceSFa5fkPMIj9hSFHMC1g2D4zltCZQLFceIuHfzRE76g%2FEwmanBc4iPvQA2epHh0pwySJqME6OeYrSOF7RQET11htqVL3PHwOMUvjVvum5dius0nL%2FWVJH6%2B%2FxcUWoOOof%2BAjC6DVwzem2aYKinGb1MKj1h8QGOqUBCxea1xfm13HGBjiY6m12gwWRh6Bf99A0sbREr0dtYKW35mm96G%2BPx2lPuVwBTnygG3eIdRZgduHgOQ61Hvh4dzZmdYKXPyWwRF2hc8o%2BGGfhL8I%2BuIcM8r%2FSpkTxbJ85uUg5ZwsRYTLyYmXCUc1SM8ZcYHTebGA09WtrNXXhhT%2BeXcTfXwnHqDPFDNhp0PW102HfKHdtZruWC0%2BmuJcQOaXbgVM7&X-Amz-Signature=037fe90650c671b44c5c450ab41c3c4f7708a7cb029217718f9148d1bddc3690&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/e91c702e-6c10-4e46-a73d-b573f73e98d4/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466UX327LSV%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115530Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIQDnOSFb6c9SEma7g3zwBg3OmwK3ELrvSGQPTQJraY7SSwIgJ7pyxGZgqJIOphMHK6bWOg8u6MH4u8hLAOwLmTHCaPEq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDJUcDae92y%2F2F9aqmCrcA9SL%2FmobRNX9atte73nOaGN2coJeE%2BTVAChQih%2B85cR23um%2FFmHuPmlps4JQI%2FzfnW26Ld9j6%2BWxFs%2FoNz1sqrzuluk6CN1cmP9bud08A7ONPNWyB4HMoIwY4wYi9cjYInt5OnS15kZVOLspg6epgjQsKamk5FQibc85h0fvLK%2BwbiM1Hr1M1o6e9JFsnO8srejVuJIffEPZ%2FTW5wByoe%2F21eLyEol2SQ2JP7zpsNOee81EzSCTkDoliLMSRMUQq0mq8Gqhf14Ew8d6Sq3re1Hmg76pKA80BCRnl%2FZXKbecf24dPYi68rQzNRAUSWwxOk3Io%2BXl3feAHUqE0wFQRMzr4X5P6EjP8U9pq5zzXx%2Bce1wKjZbg9qnafsBU4NC1oeC7c%2FqWtX9ZQagWGOYGscG9tYUBUyIVFIwfQh0vtlcTwW82UtkgnsVhm0S5Di5xDff06c0RFVNj49NGZWo1ITZh1dzc3NRVOu%2B2y%2F8k9S3j4qk7HlFgBew4cJcAKzkkaul5zlcqAWXylFyH%2Fx6m9HqxpmftyeNkaoc8Q6sbI0lP1vgsROaDEL6T1l4Q%2BLPM8QznifhvT6Wv5wvzKXBNPw92uhfUI%2FavzCrEsPVAyh7qCQTe2VmdKJndLcFhlMNubiMQGOqUB4X8FG%2Fc%2FjQPuLeAvNZ8aWuXVu%2BId%2B20FiZoErjl7CzRzDkFJ7T4we3Zi0Uo7CuJ6xQWcszryLSXGYqxls%2FpbFxLJNeMC4v0jJ3SJZetVeu0DqKmQGzd%2BCvlYClRRgBsgu7qgz%2BUklUF3b2TWfZ4zMSx28rLwRS%2Ftan6Phz57nahy7jzRGUtg5Wh%2BpqRLQP80m4RBRdQop0E8xkEbMgQCWy5aq3O9&X-Amz-Signature=6c38a4beda55e9eebcd0526df19433e7286bbf8fb856931f3f7dc5c50c632e23&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # Xfce 환경에서 RDP 마우스 입력 문제 해결하기
 

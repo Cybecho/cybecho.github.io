@@ -4,7 +4,7 @@ date: 2023-03-03T00:00:00.000Z
 draft: false
 tags: ["C#", "UNITY"]
 series: ["유니티 로그라이크 클론 게임 개발"]
-description: "플레이어 이동을 위한 Rigidbody2D 함수와 FixedUpdate 사용법을 설명하며, 속도 조절을 위해 벡터를 노말라이즈하고 GetAxis 대신 GetAxisRaw를 사용하여 반응성을 개선하는 방법을 제시합니다."
+description: "플레이어 이동을 위한 Rigidbody2D 함수 설명과 FixedUpdate의 사용법을 다루며, 입력 벡터를 정규화하고 속도를 제어하는 방법을 설명합니다. GetAxis 대신 GetAxisRaw를 사용하여 반응성을 개선할 수 있습니다."
 notion_id: "8f5e0db5-c75c-4700-997d-1b35a3411446"
 notion_url: "https://www.notion.so/02-8f5e0db5c75c4700997d1b35a3411446"
 ---
@@ -12,13 +12,13 @@ notion_url: "https://www.notion.so/02-8f5e0db5c75c4700997d1b35a3411446"
 # 유니티 로그라이크 02
 
 > **Summary**
-> 플레이어 이동을 위한 Rigidbody2D 함수와 FixedUpdate 사용법을 설명하며, 속도 조절을 위해 벡터를 노말라이즈하고 GetAxis 대신 GetAxisRaw를 사용하여 반응성을 개선하는 방법을 제시합니다.
+> 플레이어 이동을 위한 Rigidbody2D 함수 설명과 FixedUpdate의 사용법을 다루며, 입력 벡터를 정규화하고 속도를 제어하는 방법을 설명합니다. GetAxis 대신 GetAxisRaw를 사용하여 반응성을 개선할 수 있습니다.
 
 ---
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=YAu4yWU5D5U)
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/6cba5215-9739-4ac3-81f4-b7fac882fbfa/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664PLDNK6B%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102234Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIDxsII1zvrcOwqJiZqO%2FmpoR0vLyr8K1mqewW%2BSUKECEAiEA83Wqe1TLbvgdBrntqaeW8NtrTNDgx9grKYTNu22Nj%2F4q%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDGlqkfqZWkJjIGBOVCrcA0dwBXlfBKsjU7G4kLQPiT4p%2FfCoqHbmacZZEWsZzLixUBFBz22hmDUR8ixV%2BxRLgjgZZ4Zvb8m%2F9T8GnOYj4MC55veroxVH%2FrQwIlqDn7P2Tp4vBW5%2F1tOaAKBIE0RqubfnzPOtnh7EP%2BrmNbRcoXUHvNcNOAOAFtHyjoxfQIL9iF5Idua1qdDyHkCpzWzySIvorGpA1la%2FPooINL%2FEE%2FohG9REuPSLJkY0e2METlIVd%2BRPOiXtIf1DtKie%2BC337Axa7lXBcr1lcGsosNVw7a3%2FYeQjN6Gd48VemTE8Xreqhz8e32fypSb6g43ZXNS1UxfYbUvzjoWH9P2J4VaSv3SF4IhTgYyvGgV%2FRL0fufa0fbmkc3ePiU%2BDNvSelA5mIHHz%2Byuw6FnDHfx8Sh%2FAEbXiZGF4tFLlGxPRqXs3LBnwjbuwKeorwjnf%2FDjSGbA7rviXxwvKwo813raYMp934Lt4WwGMYmoka9zbR80EZyKVJPGWVLI9raFFNYN7rcDYWjaXxtWyol1wXmUsRZUN2PLCpdIkBlXlMot%2B0V1Zu1eUsvb%2ByrHTuOAYbiuCtOW5l%2Ftm%2BsNGIHKcYS5TpVKbyQHmTtyoI37x35hlJeLjCG7NlAdF5XPnYq1nUxi9MJL1h8QGOqUBrLASiCSmtDK3ZI0cmq82MkvdroqeC9hCRD8HK1zogA7RjhO1fqIf6%2FmSv3fDMnRripXLxpnHhThSzGmTK8BFnE74wIl%2F4Yr4m0xZlLqbuzvqwjI%2F3%2BtCU9FRa96yTNMZvwucCRtvANGfrIXNyWjVsXCXfs%2BJhOY%2FeZuRNQigqAI4V0NWxAgYhsrbnSr6u27XrQSy05Lsng8%2FFYL6pRq%2Bd6V5tCAe&X-Amz-Signature=145cf97c354dc34994a6169b64f268f539be03803c51aa69c0f97c33d67bfcbc&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/6cba5215-9739-4ac3-81f4-b7fac882fbfa/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466ZZXXHLO3%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T120143Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLXdlc3QtMiJIMEYCIQDzwsxQBftJ%2F2J%2FoDQV9sst8Z3C4MJlPQIuiqloshM5ewIhAJu7NQBsC7w37bRpExuu79g%2F3RpGJsh%2Fw45ty78koUuyKv8DCC0QABoMNjM3NDIzMTgzODA1IgwqBFMoxH26xqPKcCgq3AP47tFs%2BA4KhPRqao4bAZUmYRDLi7ah3K%2BErYtvKxAQTWTZ3mYNXTEBFk08sXtaodxEaA9ICRao0jSaSyM2ulm%2FCDQwiGLM3CHo9%2BH%2BjZVIi2d4so072vYIfrbnOyPXJI6YdDdsJpxnGv5sljyRx69XLJaxV4ukhelQk0Imrc2bB35qKLJYtl2kmjA7bre%2FBkywv3ZpywLmhnboko5pj%2BiucsZ1eMX2Hvi%2BhIw7ENcVzx70bzqMEZtfECJIh%2B%2F8c6hnk1QCGaAdtK6T4M14Y%2FoX4wr6oZ04R2Y0FIW3h5KSEt05EWZqHMNjOYaBvxNiUsvO0tCjZHcfrKtS79ok0OdAUVj7Jp5%2B46KhL4427WAhIaNcEa8802%2F0LpsgfjjcCrSl1nLD50Ky4HaoMwlQVdRLBjiG%2F1FIC5F0qxowoMXbQNbBWL65Q3oMjFlh8neBLuUeUcXC9R9K%2BdBQDwIsNhZrDBXPlc2BuAyvLi42Qs2vQCiTHK7c2%2BfNNUJvDdE3me8g7TaNtPrdC6fAsICRUYrrDRFl2sDEqUCqIUHxMiyVV3DIqvtuyFajO4SwNsGwvW35v8VNfSBL2641LDpa%2BFWa67qXmxgAkk4OQB6n4a%2FRUJqTaC48q%2FkpnnljVzC5v4jEBjqkAe8bWEKTP3J%2Fr%2B6cDvv3Y9NQkTuWVyL6pNufiJIcnw9LTN3qEXTQGmoh1LXg%2B2AmdHEOG3Pfz2Y2lZfaumwU5otndMTXYe%2Fv5MjPoVqgqYre9KFseG%2F20NEuWqnIsZKQBmM50P4xqMYWn9jpZy9H2GVgFJRfQ5LBchdOL7s2JguBzKnKs4TMnbZ9f1KfIVEJCIlLsDGHHzSrNMH%2FvlSe6dLoh3qo&X-Amz-Signature=192358116a32ae32d17e844950c0206540cc76948e2427ff8eb4d52d15bbabd2&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 > 🔥 **`FixedUdate`는 물리 연산 프레임마다 호출되는 함수다**
 

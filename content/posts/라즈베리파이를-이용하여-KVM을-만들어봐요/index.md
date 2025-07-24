@@ -4,7 +4,7 @@ date: 2025-06-13T10:40:00.000Z
 draft: false
 tags: ["Other", "Util"]
 series: ["HW"]
-description: "라즈베리파이를 활용하여 KVM over IP를 구축하는 방법을 소개합니다. 이를 통해 원격지에서 서버의 BIOS 화면까지 제어할 수 있으며, 저렴한 비용으로 강력한 원격 관리 솔루션을 제공합니다."
+description: "라즈베리파이를 활용하여 KVM over IP를 구축하는 방법을 소개합니다. 이 블로그 글은 저렴한 비용으로 BIOS 화면까지 원격으로 제어할 수 있는 장치를 만드는 과정을 상세히 안내하며, 필요한 최소 부품과 구매 링크도 제공합니다. 또한, USB 스플리터의 필요성과 각 부품의 특징을 비교하여 최적의 선택을 도와줍니다."
 notion_id: "2111bab9-e3f8-80a6-8557-ffa3ff921a60"
 notion_url: "https://www.notion.so/KVM-2111bab9e3f880a68557ffa3ff921a60"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/KVM-2111bab9e3f880a68557ffa3ff921a60"
 # 라즈베리파이를 이용하여 KVM을 만들어봐요
 
 > **Summary**
-> 라즈베리파이를 활용하여 KVM over IP를 구축하는 방법을 소개합니다. 이를 통해 원격지에서 서버의 BIOS 화면까지 제어할 수 있으며, 저렴한 비용으로 강력한 원격 관리 솔루션을 제공합니다.
+> 라즈베리파이를 활용하여 KVM over IP를 구축하는 방법을 소개합니다. 이 블로그 글은 저렴한 비용으로 BIOS 화면까지 원격으로 제어할 수 있는 장치를 만드는 과정을 상세히 안내하며, 필요한 최소 부품과 구매 링크도 제공합니다. 또한, USB 스플리터의 필요성과 각 부품의 특징을 비교하여 최적의 선택을 도와줍니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/eaa8a3c5-4740-4ddd-856f-16a85f0fcce9/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466ZZZOJHUF%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101359Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQDNpRT%2BRqpMWq6A9N0btZF9PU4CMYLTKNGYMvHQNpUxVwIgCp7ub5K2iP6N8m9ayqdDselPd89OFn6rXpE%2BdiezPqoq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDGJIOm8vRgbVlkIPNSrcA4aAljnClBjjLt3tZml2ecERYnADYx0Q9R7PMNB1nUtq85pA28kIGMoRkuz1IO%2BX39YJMs8fBOQ6wNZXdqIyer0V2Wbm9Omq%2F%2BH47RNe3ALZ6PtGebOhOckJOrN35jCRRBYBKWnY2SywEWH%2FtmZXghmEqXK2sojeLvzcFgc1HmmgIvhBej9ywe%2BlG83XVQjdX5Rt3q4N6FkaljS7Wl%2BqZ5l8mkvGaHE%2BmxLpXr2rqZQFtI7TQ0%2BuAT%2BV%2FraxQx1dG3trzsOLFSc1VCgBUjNXQ8DQEpi8A%2BvTH5Oi%2FUQWrHst442FU94ax8v%2Bl89io0U9OIBbQaPzd7nAopbAGTgx8TnaU6Yw1G62DIDiZF7mspgo4QBzPmqxv%2BP9WcHrXVFeNyRo5%2FRHgF26%2BVQypRI9COhkHy1%2FErjC7SjQ569s0x8bqYGRdKj5FtjUDztJohCWpXvOOwFyRULs3tM0a3s%2FiE5%2BuXcIRI4NT2t%2FNUE3fTPQYypLs9%2Fd77SyNhXO2hVbwcKRxYiny1vTMbqS6F0lHSIYrpYJyi1ri9qYVG1fsY1OBSeP39yIWkN%2FdAanfq1HAttgeAOb6v5D64Ih7wGBcY0O8nWSwLlsmLOA6Er%2FF0%2Fak6NYG0pJjs1w82FwMLL1h8QGOqUBNaLA7ZE80Vt8OniSIryr0%2FUycEf5gTL%2Fl%2Bp9G8TAMXReY6GccV2qxZhY4wGDyczh8GupKDNx3hV%2Beagft4bCmax3LYFcSOWUVAygCFKYGjR1INb7KMShMiHMvml5kS9oOahcUT55x9EAmaU8PIO1sMhwFaiaVGYhK2POPNuB1MnsrW36lB7pspb8tC3il0V7zqJf9ZjiSIFy5wdEQMwM%2FQmDGBwh&X-Amz-Signature=3c158cc2a0d247565854e565b5be58bc84a91999005d90ca63285d35eb1395ab&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/eaa8a3c5-4740-4ddd-856f-16a85f0fcce9/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466SUCPCSNY%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115228Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJGMEQCIARANVc8PyiDa19krcq%2BQUBctQAc2gy1M9eQmOHTAsdyAiBRcmoij8mvMPTxzOug6trVFZwSjAwTyGnv%2FSWcQvlgRCr%2FAwgsEAAaDDYzNzQyMzE4MzgwNSIMRHYdUa9VTGidIEZKKtwDsiVJaQrlufmPh39%2BIdzp2SIKizqdBq87bUqQVgkmo96evQv2Pz6jlePJWRxGEsKJ8WohsVQDKyUBeux4%2BAtHqLmcmpfU2f40QUgFiNxZUsdUel05y3nYFlYgGmDWdvIXxUJIPp3u9YdYonN8tE%2Fx%2FxhikKYjOR%2Fev7r5MDOBlszfzi7GNlTQf4sRXO8fliTjglK5o2dMkgPSmGyxvSXeChocqc4WxPp4w%2BCuxj49MMutgQ0wDSzC6p%2FMSPEdJm7nnbxovTc2SAEpRB4JoSvsmaNhl1WSQngcfuFeAaMeRhEfkYFX6utpVuw9cPOyFzM%2B%2BexRILR8pumuf3MwzfRDq61Ole1rDJ%2FxGbR9j1HweAExmiFKsvdL0fwEVvQpQ7OZZUnXDRBaKQxl17Lp7E7J9j9HV4DQNxPfGTBjOyNQsD0ZMGa0tSNCos%2Fu7x0Qbw6CFi2X8H2SiziHfI3POzZDcm4TWukQ6%2BIjNFS2wt0EoH9tvqnvroe04uwZ0fpMSm%2B2GWXCfqxFPxve7hFk8IP2p2FZahZAyqELHQkdoVs7EqB0xrl5n7jrDomiLa9%2B5KNd44MuXOQMztb4ZNU3VULn4%2BeyxpJn%2Bgtr967s0E7sUeaxWZDNJEOoN0ghARIwlZuIxAY6pgFUDizDXUdvN3Q%2BQXpkhOakhW06xNtQv6nvUtDiZ8cKVPzhGw7mXA6H%2BuJY%2BbD5f1T1lgU6ueZ6cqQYr3MZP%2B0PPez9BfdPBU8Y0lTo3OhQG%2B%2BAakv2%2BUUwV%2BHaZJJ%2BZiQ8NCyoT73ghReZE1%2FFOIHAlUogOKkF%2BwWS3B84sLjnY1cPB05xNb8i7BtHuNxx98hRwzmQ54xeFyrOh1C71LXScgVq4RfU&X-Amz-Signature=40a0799b11bca7e2c5a38bc23fcfe298f935cfea13f1f9b6c99ec5d44ba8febb&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 > 아… 취업하고나니, 집에있는 윈도우 서버가 원인모를 문제로 다운될때마다, 직접 키는게 참 곤혹이다…
 

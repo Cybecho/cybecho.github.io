@@ -4,7 +4,7 @@ date: 2024-07-15T12:41:00.000Z
 draft: false
 tags: ["ProxMox"]
 series: ["Let's Homelab!"]
-description: "LXC는 호스트 OS 위에서 여러 독립된 Linux 시스템을 실행할 수 있게 해주는 OS 레벨 가상화 기술로, Proxmox에서 이미지를 다운로드하고 LXC 컨테이너를 생성하는 방법을 설명합니다. pveam 명령어를 사용하여 이미지 목록을 업데이트하고, 사용 가능한 이미지를 확인한 후, 원하는 이미지를 다운로드하여 컨테이너를 관리할 수 있습니다."
+description: "LXC는 호스트 OS 위에서 여러 독립된 Linux 시스템을 실행할 수 있게 해주는 OS 레벨 가상화 기술로, Proxmox에서 컨테이너를 만들기 위해서는 이미지가 필요하다. pveam 명령어를 사용하여 이미지 목록을 업데이트하고, 사용 가능한 이미지를 확인한 후, 원하는 이미지를 다운로드하여 LXC 컨테이너를 생성하고 관리할 수 있다."
 notion_id: "1692f3b7-188c-4c2b-8874-1c10e47bce33"
 notion_url: "https://www.notion.so/Proxmox-LXC-1692f3b7188c4c2b88741c10e47bce33"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Proxmox-LXC-1692f3b7188c4c2b88741c10e47bce33"
 # Proxmox에서 LXC 컨테이너 생성 및 다운로드하기
 
 > **Summary**
-> LXC는 호스트 OS 위에서 여러 독립된 Linux 시스템을 실행할 수 있게 해주는 OS 레벨 가상화 기술로, Proxmox에서 이미지를 다운로드하고 LXC 컨테이너를 생성하는 방법을 설명합니다. pveam 명령어를 사용하여 이미지 목록을 업데이트하고, 사용 가능한 이미지를 확인한 후, 원하는 이미지를 다운로드하여 컨테이너를 관리할 수 있습니다.
+> LXC는 호스트 OS 위에서 여러 독립된 Linux 시스템을 실행할 수 있게 해주는 OS 레벨 가상화 기술로, Proxmox에서 컨테이너를 만들기 위해서는 이미지가 필요하다. pveam 명령어를 사용하여 이미지 목록을 업데이트하고, 사용 가능한 이미지를 확인한 후, 원하는 이미지를 다운로드하여 LXC 컨테이너를 생성하고 관리할 수 있다.
 
 ---
 

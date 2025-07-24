@@ -4,7 +4,7 @@ date: 2023-03-01T00:00:00.000Z
 draft: false
 tags: ["Python"]
 series: ["매크로개발", "진심글쓰기"]
-description: "ver2 업데이트로 각 키에 URL 적용 버튼이 추가되었고, F4 키 매핑에서 발생한 버그를 수정했습니다. 파이썬에서 클래스 상속 방법과 버튼 텍스트 우측 정렬 방법도 설명합니다."
+description: "ver2 업데이트로 키마다 URL적용 버튼이 추가되었으며, F4 키 매핑 시 발생하는 버그를 수정하기 위해 새로운 코드를 작성하였다. 파이썬에서 클래스 상속을 사용하는 방법과 tkinter 라이브러리를 활용한 버튼 텍스트 우측 정렬 방법도 설명되었다."
 notion_id: "a1a7f4a9-f9df-442b-9a46-39a02363c57b"
 notion_url: "https://www.notion.so/URL-Co-Pilot-Ver2-a1a7f4a9f9df442b9a4639a02363c57b"
 ---
@@ -12,14 +12,14 @@ notion_url: "https://www.notion.so/URL-Co-Pilot-Ver2-a1a7f4a9f9df442b9a4639a0236
 # URL Co-Pilot Ver2 : 업데이트
 
 > **Summary**
-> ver2 업데이트로 각 키에 URL 적용 버튼이 추가되었고, F4 키 매핑에서 발생한 버그를 수정했습니다. 파이썬에서 클래스 상속 방법과 버튼 텍스트 우측 정렬 방법도 설명합니다.
+> ver2 업데이트로 키마다 URL적용 버튼이 추가되었으며, F4 키 매핑 시 발생하는 버그를 수정하기 위해 새로운 코드를 작성하였다. 파이썬에서 클래스 상속을 사용하는 방법과 tkinter 라이브러리를 활용한 버튼 텍스트 우측 정렬 방법도 설명되었다.
 
 ---
 
 - ver2 업데이트 내용 *
 - 이제 키마다 URL적용 버튼을 가지게 되었습니다
 - shift + alt 를 눌렀을 때 '12121212' 가 입력됩니다 (버튼이 눌렸을때만 활성화)
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/3a3f32e9-84de-497d-9871-9de75ec4e7d4/icon2.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662XWCS3AY%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102243Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIHrekVHt5ed3QC7Em4Dh6vkOEZzF02OKJcDPK%2F8B%2F7v%2FAiEAw9p%2FUmdEwC4I%2Fk53SIF8UWf7LJYJeZYI5E34Fe0COQkq%2FwMIKxAAGgw2Mzc0MjMxODM4MDUiDMOfG%2BviYxAIewYLiircA94eip1MuUyBCKV6iwfjcjJgslFrGhOU3PxUupWM7Mqqs%2BTpO1JZaBdhOZlY%2Fuh9CecegKVZ7rtqkVwsXpIfq59nVLSwQk6LqR9q6PivmC009Fx7nXmVHwWgNmPRjWxPlFp01iZ2p5o7mpVfDcbQa%2FuE7nyEQfPviozqaEMKR81lHNoP%2BMz%2BVwe7J1i3OY9R6PEShS1LHr3HFGPoBolz3iExMFUGEfQbZCIwwm6v%2FofFuCmmXwgsXcWUgD1mi5bayyXguSjjN9g5XhE033jGyiC7qOOnKEBEJOCGUrEtAWjWiGC54RrADYSd62PK65aNr7PxTWvzFT0I2t2NfFyJkpNmEzeD2fTReXiQdsZshQOROHsdj9VAgpVQJTyBU6qULHb52YRfTDS7xVf8ejMYsCX1f3Pu1EQ4cqPCKePHONvWU8wFFQs4ktFP9NC3vf1zRUlS2%2FnYYYsZPPGLKbeSz%2Fqswmq8a3h95DVrEkJsYPkQkf8hOjCqlo85jRIbdkfXUetQvH7f7QdzttNn06dJlEVnTcgA52LfDAkowAFTY%2FwmfgpAmxVM7NccKjpL0TVoc19wSLI4ex6P%2BV0pJ0y77CUYS%2B9UrBIeeHHWcmmnoMb10908gb4%2BVMcX6yn%2BMN32h8QGOqUB%2Fh1KAdjiJ%2BxrAH73EKAPotYDaepru%2F7dWb3DIIp5wcuFof3oC7xYEx1MhytedxEHaB3NFeGyvpaqW9BwM93Tp2m2a5ot2PfkfHZ7rVew7UAwKvnoKuzBZNcOljxb%2BifovYOYd5xo6rA2pJfswkbwovXJp2XyYEiOvfFVksDNo%2Fqx0bPRlXrjz6rgRqgsw9iHgJRwtcltQmjkcfgvAUXvtvjWeo5x&X-Amz-Signature=c949102d0e441416030a6f52ef006b32c9ddd3bd5d6e87f5c3542b608f7e423c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/3a3f32e9-84de-497d-9871-9de75ec4e7d4/icon2.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TPQ2VNIQ%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T120149Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLXdlc3QtMiJHMEUCIAgRLgx72CtdEKgAzQ%2FLpKjG7UUIVzunuRP2qx%2FwXLgkAiEAnWNNjeBUNlXvkMZTzNVO%2BWems4sOwe1mpVa80xvE3hIq%2FwMILRAAGgw2Mzc0MjMxODM4MDUiDO8odtwcN3ckdTR3fircA7rl3i5MmLGWFkV2gu2FcbnSu4Y4kxyVDkLW2Rv1OvazTWQwJJ71rj2fsPmVCH4ggSK3vXlBjf2ZfFqTrc8BceIv3WO3nswZawX94vUIbOTZqQPAvQ3Ej27XsTKfZqVapeM6bYJdx41YFtLYz1CQ00SbaMPncHD%2FdBYZuSdvmnnyqjSIsu%2Bv08jYWLGNM9zExjE6LkeU%2BWtoq1zF7o1c2zia1EIhYTFuMyET5%2BIUaU2AaVdeD0fMXayDLUpHd%2Bz2Wb60bBeXTYhYCGgGQPzHAhugcfKJgrCNdNaPnzHYj8sBd3%2FTok8UwmxRGen48Z1Iq5xi845Ke5CeAmbFvMIcJPAqAvEUj3A2nzQ7k%2F1OJRB2JkXt71H%2BCn21J6k4Ix1U8xNnv9BgMcn8Jk3xVONF551n6dadHe2vf1IswxpFuv5gI8d8zGUfjHCocHHuHCCazKnoaTqTXlORWelFyz9dLjK7qgTTDeTAXRm8CSoH58K03baUX%2BMaTlprSLx80hL%2FMyU0CGgRmu%2BWpBtdV5T3L3pTO4ieSpckc0O4%2Bxd8zSXMXHBe3tglMxTEohmajFfc4JKYZW8hEuOqoXBp1Qi8R5kqy1iFSgHi4uNVZAAcEPewyO7KGS3MKL6YFiqMML%2B%2FiMQGOqUBseOz%2BM5kC%2F0%2Fl4UNE6JV76cl5xfRVLOABEyyZ9nFR5J9SyY4EZ%2BFzxN1dtF7mK6kMwrhFEVbOV6757mxPejgyHyPcnwWAWZDVSz%2B6ZZpxg%2F8QjdoJqSJ%2FkFtOLWjvfJCNArkxVSe5asJtjszqdeMM8C928R0r2YKJNhjKqMZKWgLbpa2bMCWMswElzq17EByFdpMipBP4c8kQ41CazDki4Ks9vIo&X-Amz-Signature=3abd67edbe6867e84848161b37c6fc0320aeecf9b9ab24b815e3f592a6cc20b0&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 > 🔥 **파이썬에서 클래스를 상속받는방법은 다음과같다**
 > # `class 함수명(상속받을함수):`

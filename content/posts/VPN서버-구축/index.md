@@ -4,7 +4,7 @@ date: 2024-04-23T02:46:00.000Z
 draft: false
 tags: ["Other", "보안"]
 series: ["Infra & Network", "Let's Homelab!"]
-description: "VPN 서버 구축을 위해 Tailscale이나 PiVPN을 설정하고, OpenVPN을 사용할 계획입니다. Fail2ban을 통해 무차별 대입 공격을 방지하며, Docker를 이용해 OpenMediaVault, Nginx Proxy, OpenVPN, Fail2Ban을 간편하게 설치하고 관리할 수 있는 방법을 설명합니다."
+description: "VPN 서버 구축을 위해 Tailscale이나 PiVPN을 설정하고, OpenVPN을 사용할 계획이다. Fail2ban을 통해 SSH 서버의 보안을 강화하고, Docker를 이용해 OpenMediaVault, Nginx Proxy, OpenVPN, Fail2Ban을 설치하여 관리할 수 있다. 각 서비스의 설정 파일을 수정하여 외부에서 안전하게 NAS에 접속할 수 있도록 하고, 무차별 대입 공격을 차단한다."
 notion_id: "bc4c874c-5da5-4797-aea5-07aac90246d6"
 notion_url: "https://www.notion.so/VPN-bc4c874c5da54797aea507aac90246d6"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/VPN-bc4c874c5da54797aea507aac90246d6"
 # VPN서버 구축
 
 > **Summary**
-> VPN 서버 구축을 위해 Tailscale이나 PiVPN을 설정하고, OpenVPN을 사용할 계획입니다. Fail2ban을 통해 무차별 대입 공격을 방지하며, Docker를 이용해 OpenMediaVault, Nginx Proxy, OpenVPN, Fail2Ban을 간편하게 설치하고 관리할 수 있는 방법을 설명합니다.
+> VPN 서버 구축을 위해 Tailscale이나 PiVPN을 설정하고, OpenVPN을 사용할 계획이다. Fail2ban을 통해 SSH 서버의 보안을 강화하고, Docker를 이용해 OpenMediaVault, Nginx Proxy, OpenVPN, Fail2Ban을 설치하여 관리할 수 있다. 각 서비스의 설정 파일을 수정하여 외부에서 안전하게 NAS에 접속할 수 있도록 하고, 무차별 대입 공격을 차단한다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/b6b1a443-6818-461f-a471-41cfdbe46783/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4666UK6PROP%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101907Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIHhBUd%2BQEGpfF5pg4pQthNdViEXpnuiTK8Arf56pQta%2FAiEAnUJc%2BgUUi%2Bei3QpMPs1eCEN73R7vShJpqe28UQ6530Iq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDOZjUCznXV61QnkXBircA3gMyrCIKK9s4eSmaW4M%2Faf%2BLIEX0SdiJel6cEaOhTjpgUhSBWO1Zg%2B4cvT1gB0HOC1Z5cijoCePBTu0BqlYeYZYIT6klopcd4MnkIM5%2FBcC%2FKf1%2FlyZRzdUtTCUcYAKysO86z0F3EuFKTmIaeB2d0UMxXyJARnJJizkAwCx%2FqDZIV0i7wXKN832ZmV50nZOCvZx781ekw8AGp9%2B8x%2BpA4dv5arKZtXp05OTB4TAD329RTBgylO96P3ZwnoP%2FnULPOjTvKxG5N9lJFQ1Ttx%2BaKuIDwV0g7UHaoC24%2FwG0KC20YX%2FXh%2FTQCk8SExOgmi3I2knQLGMY9fPKoIbq6q3ktmTbO9VTN1VKyVZVZQBgfYDSgfrtOOLyBq4hrH7JrfwJA%2FPdh22OcHDHmcXxXvMMpOFVCmuMreXtSyRTPi%2FlYVquGD0ZPT1vJQXAL%2BsrdjL2fAkTFRQONm24tq5k04eKfR46uZcBW0Nmo2RjtJXpM2nuck0axW54AxiEqzc8gwwWHA5OcLX4W3Q8t1PnIOXT7UdOiKIYT1yGX9OfgSGRVIZQBFw1qQtbsnsDEE0TlMlAP%2FsJ57XNGnb427JCUI8%2FWTOcbWATvFRo0tETR9E4ggaLCqEm%2FPPQdnbW9WdMJf2h8QGOqUBnn71IPCieY%2Bafj8gY7TNlbGRjBXDONKqiME1Gm8x0rp95Kdg4gCEx3R4aJGu4vOFn1NoWuARvOnGmnAudU28hd9BomhNryvMucAMZ6mS05FL5Vd8rIsIX1OSrcdxvFw9VYe7oCuTGVsKKBBFR4%2B%2B%2BwcZA6PiAj8j0kiV6ZNDlbZyPek8P8MTzXRhUDsqfmPoTh0lOm62blRj6kvhm4OURWUvnSoj&X-Amz-Signature=2ef5b1f0f547c0b21565216fed0f3641d1c8dd80838d633f5977622e4c68ba09&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/b6b1a443-6818-461f-a471-41cfdbe46783/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665XLJLL72%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115731Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIGny%2BKnNJM16qx1ItuV5%2B6XSnMDJrgmftkS%2F5biKhaBiAiEA4dBJcmbFFIb001ppojdMIZehfYelOgnpZEVqlXL4WBwq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDAKST3%2FKvieRh5ZDDSrcAwPtwCxz9TbHnNBHSVZfaxTUeDfVWGpRvIuGaQk4opd3lGikemoInQt40sMoB%2Bm2xytDCzj0mWAX9cBLqRYO0zWdeTPTQETSlbG3lzlHikiQmRWbsjPQr41367TZ%2F7bgHxLhKSsSmqMXNAHZrUcRG36AftFS86KkHSxOfHU8BURlmndx2Nvd21dRsCreVWU2nVvhrE6w8pTjbQi12rf0lBsRYY1xyiTQ0eEPnsBBDUsMoZsedxHf3GM6JkPUahuMlNkjqSzG1oW20achOx398exFI%2B4w7gH1ak6ttZLGoclC13R3RzuE4Wz3LgrZDnjyXHxaK97sWyBxjXzma8z%2BgF0Dj0sCofHzw20MpLL0%2FmTz7H4h6EcOA21mvQDo38024q9g4WZf3awcFSOC4CCwb03o8bNW2X17Fs11piayLGscHyQFVptEY8jLN4qJhnHCLWHIAYrh48e4OLHJ6vZJSXunIQ4JfxMv7GEIhgEBoABuV8TijiPjsBLAdrbNJJvyJ4UZcM0EwRm7Dc%2FPsyPKNetXVHwsROapx1077XWc5ebjAsbZlGbt48OM8ReJXBqW7tKQuSiwAggl3yN6NCNBmTsQABshgAr5hyqrcpOfDsyl1cHkcoKpYfC1Nu%2FKMOSbiMQGOqUBFMx%2FdFDWLOY2UEPA4KbS8%2BSr3pfmrA38ILdKwwBimSMbVi%2FGBMKblqIol%2FKFERJeO1VuokSzCs%2FaaP%2Bc6OzLc168QLgPyzi5ak4edaqqu2vdl4WLpRJi5bRfBz93H4cyK0XNMzjIFUIyceu3EHnMKS5qLEEiUaMsOLppTulo1gWFVMJQD0IFAtRrEU0VIqC5FeOyXNprNL5gpWZdrlVK5osRU7%2FL&X-Amz-Signature=6e7be51b3f7b76896e0d413f8e6bc7d1360405652842605efc618373097a9c8b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ```latex
 Tailscale이나 PiVPN 하나 설정해두시고 VPN 접속해서 SSH 접속하시는걸 추천합니다.

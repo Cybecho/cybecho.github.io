@@ -4,7 +4,7 @@ date: 2023-07-25T00:00:00.000Z
 draft: false
 tags: ["Docker", "ubuntu"]
 series: ["Infra & Network", "Don't Hate Windows!"]
-description: "Docker 소켓은 Docker 명령이 실행될 수 있도록 항상 활성화되어야 하며, 이는 Docker 클라이언트와 Docker 데몬 간의 통신을 가능하게 합니다. 소켓이 활성 상태일 때 Docker 서비스가 자동으로 시작되어 사용자가 수동으로 서비스를 시작할 필요 없이 컨테이너를 빠르게 실행할 수 있습니다."
+description: "Docker 소켓은 Docker 명령이 실행될 수 있도록 항상 활성 상태여야 하며, 이를 통해 Docker 데몬이 필요할 때 자동으로 시작됩니다. 소켓이 활성화되면 사용자가 매번 수동으로 서비스를 시작할 필요 없이 Docker 명령을 신속하게 실행하고 컨테이너를 관리할 수 있습니다."
 notion_id: "82adb5e8-7378-4b12-a106-f80977c8ef72"
 notion_url: "https://www.notion.so/Docker-socket-82adb5e873784b12a106f80977c8ef72"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Docker-socket-82adb5e873784b12a106f80977c8ef7
 # Docker.socket은 왜 항상 실행되어야 하는가?
 
 > **Summary**
-> Docker 소켓은 Docker 명령이 실행될 수 있도록 항상 활성화되어야 하며, 이는 Docker 클라이언트와 Docker 데몬 간의 통신을 가능하게 합니다. 소켓이 활성 상태일 때 Docker 서비스가 자동으로 시작되어 사용자가 수동으로 서비스를 시작할 필요 없이 컨테이너를 빠르게 실행할 수 있습니다.
+> Docker 소켓은 Docker 명령이 실행될 수 있도록 항상 활성 상태여야 하며, 이를 통해 Docker 데몬이 필요할 때 자동으로 시작됩니다. 소켓이 활성화되면 사용자가 매번 수동으로 서비스를 시작할 필요 없이 Docker 명령을 신속하게 실행하고 컨테이너를 관리할 수 있습니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/c84ffdfa-ad3c-40ca-8228-2e96fec1f73e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VG6VIM6F%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102100Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJGMEQCIDSnAX0V2qqrorOO1msXCk4fRxl%2FrdIGnEyKpRz%2FPZIIAiAVpyLHiLZxZ3bk05UTu%2Ft4CEmAHgWkiHO8%2BEjBLOgskCr%2FAwgqEAAaDDYzNzQyMzE4MzgwNSIMdnA%2BrDQ30AZQCOk4KtwDIJqFSG2mCPpOCYz6gJN1XPBISP5qqx6uGsf%2BKDdxZanwsY1Jd2NVTkisknhAJkhieZyipv1HFBFRGBIne%2BEaL2IGEHMWl4yRp4A432eDOkMB%2Bs0HmJgi%2BbBA29Cz9I63UKOTiKfR9HHb%2BEtbpZ44MFGiX13eUddUZXedqz7lLeC7t4C0hxEQKWa6euY7p7yWGY3DGZrCKFVOZf9zaPRmNDT1B12u9jnALycz%2FUUIjFuXtNUSDB4ngb60Qndc4We3%2BBSkqd6IscM7wq8rhsXoupNTq0max%2Fk9Kt7yZsl0bF7y6zxjYugd95nPiSOhsthOvealS3U0Z2eMOQosg%2B9ubL81CqPpkbBy8sfuWSH5hWlmtToIHmpEEBD52gkIX6CzmKnOnRNxa8g28sSUYn14OaiAPDIfjjQk4NaG2PJVB5H%2F3npR8JwRTKleUkG1kDk03S%2BOcQApR%2Fhis5P8rvXNIxwLXbJGtpjHoZ9slbar4nDjcqV4B6SIO4GsPL1u9NIe3rI75UxdlBROQgN%2F7v0u6WpwMN5UsHZSiegd1uOzktPJxSE2Dx4uiGga3AbHfujYPzOBLIjJ6FmFru6dqSY3oIPA77PzM6Cyv5gk7jk%2BN7hymznzA7dfowhHMVEwzPaHxAY6pgFpZ%2BDwj%2FtMUGlLSGrJJQcpeAhkUxMLMgbLb6%2FKrJ6sEURr%2FhvOlzOTRsm2MUTn%2F2HB0xEIA9xsTVH01HpP1ZOpw6lWuEnPSqxRCTXH0svtG2ecDtl6q0pn4J6%2BwQZnVGOAkFU44JczUmDOFIY6OYvKHPC0zNviK6eEhvaSfowQ3cTpKgYQ48TWw1IOosrl84aRqvUUJnkbpAFgg8z%2FhKFz8zD%2Bpof2&X-Amz-Signature=40f4743a8ee37366169c55cd621dcaf530dee87c11347e4861ef7ca673864482&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/c84ffdfa-ad3c-40ca-8228-2e96fec1f73e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662E5L5AYS%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115945Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIDbTx%2FSS7a7a0zTQoX%2BMvZbjS85LC3scz5LWCSbWEecmAiEAtZ3d4W5AMhgYi0lnP4hng0spo7Enz4kXaqUBrrRJ8oAq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDBtptbss9t3WU96lfCrcA090bept2P1fJdSmGm%2B95APH2doIot0L3%2FSzx%2B7rmEpjgspeWf7qceA1OqE6NN2X0U12dFC0XuNtE9QKFN%2FUd9qIEkufr5rm4t5EOFA8l%2BQA0jRjttkq%2FUHnYMan7n31Qq%2Bi2nEBScsJQovZmXP9VTBNqCU2Th2%2FEdbooPqQhqEmu%2FipfqfeW%2BjJ8AJ2OQafJRp3AzPRIWuZOfxhMGGuIwzAcCoO8S97oKlCcRaff69lcpDaY62KBEbUSZNnQp%2BhEUBs6b2HatsaS8BwG8k11mqKdKkVoIqmzXUIpYqe5a%2BGZ6d1Ko0Qok1afX0X%2FuktlPz6lvQcc2tAMj8UR68ZH7b3Lmd7GF5fZZK%2BUXxWw6Cu6%2FeyE%2BmqAkrHD3GjuvCOi3NfPskHLHjq3sx6m5h%2BlAuGfVZ3iQGAJGoGFFpjQQ0nVRlMsBUAI71r9QGtjyRoA7RSJSSEYGvBvvIYKrM8di7fYXTUAVZGu0MhgpE9FxTWKBHywehk7gQE3ailA0%2FN2Yh89yU2tzOvZUJLqzr1bhDgwUPmp9nrswcv78TD5H8YgYWWIIWsyKRVXQwcW4GRWnlKsX8ngxWgat6qm1eoRwdT3jIR2oAiL5OvyQUpkyeCWF3TUiFsCPmRS7TEMKKbiMQGOqUBVSJbS04CPmkWkWfzdRt76ALXvF4NZ0HG0ew%2BoKgCUkT%2Bi8%2FkBKPs%2BQNmmdzMWflXq4kVZCfUm6jerYmxcj7wkg9sV%2Fh5fgWe7giYwX7TH57czs32udWGnzq%2BmzviRj6rMy5Tx%2F0UMdC%2Foy2kodyYEea3U7gBpb0%2BbWeN4sik7sSruteJdZKj5asXNWDbGWctgArQRnogNQDgoNQS%2FPBzC38zlCT%2B&X-Amz-Signature=400a2ea85a806f11870ca99187e4b9f67578105b237bba96144940e6c9ee2331&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ```shell
 sudo systemctl stop docker

@@ -4,7 +4,7 @@ date: 2024-07-11T14:51:00.000Z
 draft: false
 tags: ["Docker"]
 series: ["Let's Homelab!"]
-description: "Confluence와 AFFiNE는 협업 및 지식 관리 도구로, Confluence는 주로 지식 관리와 문서화에 강점을 가지며, 실시간 협업과 다양한 통합 기능을 제공합니다. 반면 AFFiNE는 오픈 소스 기반의 올인원 워크스페이스로, 블록 기반 콘텐츠 작성과 무제한 캔버스를 제공하며, 사용자가 직접 호스팅할 수 있는 무료 솔루션입니다. 각 도구는 사용자의 필요에 따라 선택할 수 있습니다."
+description: "Confluence와 AFFiNE는 협업 및 지식 관리를 위한 도구로, Confluence는 주로 지식 관리와 문서화에 중점을 두고 실시간 협업과 다양한 통합 기능을 제공하며, AFFiNE는 올인원 워크스페이스와 로컬 우선 아키텍처를 갖춘 오픈 소스 솔루션으로 창의적인 작업을 지원합니다. 각 도구는 사용자의 필요에 따라 선택할 수 있는 강점과 특징을 가지고 있습니다."
 notion_id: "a8d48634-f32f-472f-a690-fd6ceb6651f4"
 notion_url: "https://www.notion.so/Confluence-AFFiNE-a8d48634f32f472fa690fd6ceb6651f4"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Confluence-AFFiNE-a8d48634f32f472fa690fd6ceb6
 # 개인 위키 
 
 > **Summary**
-> Confluence와 AFFiNE는 협업 및 지식 관리 도구로, Confluence는 주로 지식 관리와 문서화에 강점을 가지며, 실시간 협업과 다양한 통합 기능을 제공합니다. 반면 AFFiNE는 오픈 소스 기반의 올인원 워크스페이스로, 블록 기반 콘텐츠 작성과 무제한 캔버스를 제공하며, 사용자가 직접 호스팅할 수 있는 무료 솔루션입니다. 각 도구는 사용자의 필요에 따라 선택할 수 있습니다.
+> Confluence와 AFFiNE는 협업 및 지식 관리를 위한 도구로, Confluence는 주로 지식 관리와 문서화에 중점을 두고 실시간 협업과 다양한 통합 기능을 제공하며, AFFiNE는 올인원 워크스페이스와 로컬 우선 아키텍처를 갖춘 오픈 소스 솔루션으로 창의적인 작업을 지원합니다. 각 도구는 사용자의 필요에 따라 선택할 수 있는 강점과 특징을 가지고 있습니다.
 
 ---
 

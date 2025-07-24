@@ -4,7 +4,7 @@ date: 2025-01-26T11:17:00.000Z
 draft: false
 tags: ["ubuntu"]
 series: ["Let's Linux!"]
-description: "Guake는 GNOME 데스크톱 환경을 위한 드롭다운 터미널 에뮬레이터로, F12 키로 호출하고 다중 탭 및 화면 분할 기능을 지원하며, 사용자 정의가 가능하다. 자동 시작, 다중 모니터 지원, DBus 명령 제어, 훅 포인트 설정 등의 고급 기능도 제공한다. Ubuntu나 Debian 기반 시스템에서 간단한 명령으로 설치할 수 있다."
+description: "Guake는 GNOME 데스크톱 환경을 위한 드롭다운 터미널 에뮬레이터로, 단일 단축키로 호출 가능하며 다중 탭과 화면 분할을 지원합니다. 사용자 정의가 가능하고 자동 시작 설정이 가능하며, 여러 모니터에서 사용이 가능합니다. 설치는 Ubuntu나 Debian 기반 시스템에서 간단한 명령으로 수행할 수 있습니다."
 notion_id: "1871bab9-e3f8-80d6-a601-e6be1c02d27d"
 notion_url: "https://www.notion.so/guake-Linux-1871bab9e3f880d6a601e6be1c02d27d"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/guake-Linux-1871bab9e3f880d6a601e6be1c02d27d"
 # guake - Linux 터미널 드롭다운 에뮬레이터
 
 > **Summary**
-> Guake는 GNOME 데스크톱 환경을 위한 드롭다운 터미널 에뮬레이터로, F12 키로 호출하고 다중 탭 및 화면 분할 기능을 지원하며, 사용자 정의가 가능하다. 자동 시작, 다중 모니터 지원, DBus 명령 제어, 훅 포인트 설정 등의 고급 기능도 제공한다. Ubuntu나 Debian 기반 시스템에서 간단한 명령으로 설치할 수 있다.
+> Guake는 GNOME 데스크톱 환경을 위한 드롭다운 터미널 에뮬레이터로, 단일 단축키로 호출 가능하며 다중 탭과 화면 분할을 지원합니다. 사용자 정의가 가능하고 자동 시작 설정이 가능하며, 여러 모니터에서 사용이 가능합니다. 설치는 Ubuntu나 Debian 기반 시스템에서 간단한 명령으로 수행할 수 있습니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/575d3c04-bdd8-41ed-b8ce-38c1e92285be/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466ZTX23CGX%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101641Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJGMEQCIDPJyl1QeB6psWnkvLLEwfO1sUKX05JqIXf87sVK8AZlAiBG%2BYQnPW0oS9HEUz5%2BTqcXQGeViDzlarTcUOFEMSMC1yr%2FAwgqEAAaDDYzNzQyMzE4MzgwNSIM%2FWP6smj5wtCfGzIgKtwDCheWRx0VlCZ0MIrhVvALUi813SJhrYvxX7%2Fgh5YDLhhQROFQx9vEIFx5ezt%2BLHDy4Ta78H2ejbcCn2H4xdge6xWuJh4xl7KsJp%2BBQAsRNQ4RN1HQCNyt6oyiqYSbvyoL1ggKOxyaHj9%2BICcc0Sk8m5LVjdy45vCqKQn626aPs%2BqYexwJCYR4x9TxhVDVvm1UH5OYG3%2Fcby5mFdhYoH1qHKSYL%2F90G%2B12Lh1sIwtFPtxaZyjqWg0vWO7JVW5989B%2BFEQeslDKbonJZmEpwpmLFM7Ec7DUzkd2mnttbijIFfIh927USCMGGJmCjsPlM%2FhiO5oUtbj8ldCGGIpycFgQ4dZTVHtVozB9UTBkDdhP6b8drDQjbiDQAouXpEc1cO2wuQtni8Kh1LMt8wJcAe6t%2F359u6A4mFR2B2JY9xfzqs%2FwYqtUiejWea%2BZL%2FiIq%2BVeoC6H1mRFaJ2oUBplBVYRYEG6%2BgXCgzFvKeFHlYzUmEwLHPSi7SkyiOtzfcobWw0uNDLaLnbewx9XFNV23CkqHfbOXVH8c2%2B0jxLANmYyQ1g8eGHuXRLIDtF%2F2Lh4M4VlQ57emQGUWp03dWLLqvEnjeQwBFHWFcNBEsxgXmP%2BaHnTimpLskp3b1u5hhYwufWHxAY6pgElTjHp8uSqFjez62Z43kT7Ps9cRTDstTUSLMPRVEOoVaa4UxEjP8QC0Zug9lnsx6pcJvH%2BzJDH%2BvSJ0tlRWlVYV5CvPlDin8bUE%2BBvyfF5z4pEfSmbhqDThC9lmuVD%2BKKth8w9%2FZsa3fmjPyV5hS3v95rU%2B6RuGWIbmG6%2FWrDDdT5hkL0M2jzRDHxbbRcQ70GtUTbT%2BkDYslBkw2%2FElIZwNtozYs5F&X-Amz-Signature=f8f0d0154820117b8bda0213291720a8e134ca391f7f21486334c6fc4e5dcd96&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/575d3c04-bdd8-41ed-b8ce-38c1e92285be/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466R6PH2DV7%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115451Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJGMEQCIHT5DdGH5hcYIu1ea%2FciTi60w2OqOK4xUeVw9qqP3D%2FKAiAqtWK7YtVZJK1RkoIJDx5n2LwwYy9eTvNqVvIU%2FeyYNCr%2FAwgsEAAaDDYzNzQyMzE4MzgwNSIMRETb1lTkYgQJGfq8KtwDfzmpoR5fg%2FwvHE4GwVRXpJW3ILbcJ5%2BDCKuly4Eb%2F8z4%2FdcLURVgHyu6Vl3v9Q%2B2bTC8B%2FAm0yUb0RZT7gJjQ%2BOnWY43Bu8z1x0arlyVdwE8LR0YtCfb3DVVaN1B5ztue3wQ0%2Bi7VcehY8J5Ot588zQVqWu1fXgIXlHd4LJNEUyrYUsrTzLqQ6Iq01J0wokJyZcxaSJyZd0sCvVd%2F597zaXxhTE6lq%2Fc3iRX%2BAjKtHnPS5FFAgF3j6pUbbXJqvht%2FBDNEz%2BkRl7vyC5vVg%2BHx0LrvS8kpghAPErIQk4qxGRn2hFG%2F1sDntmr8wCtNiFSWIHDnk1h1%2FQil9spvzCYXYg%2B3nndhRJt6LMkU2J%2BbSzvHJx%2F%2B%2BAZtSsyjXLl7TxEArXDvIasBezpbs6h6Mo0i4%2FHpziyZ%2F0mwnqQP2hZT9CEkUEb8GLTYBpymmWf7VMWcExOg27fR9v1DXQ30fEjEeKikS8eSE%2BF2kTGBYxexginiTovFnl7PV1HQwen6d8izgolgTlZEqEExV6%2FLzK09aP1QLezeSz4Z7JCRnUt9A2cEmxsJBjTSpjMaKlGMO5Bef8IsTMNpvltEbQg0ZO%2B5wBoyAXZXQPzzvaN6so6aBBMTGq%2F2ka5jkAHq9sw75uIxAY6pgEj%2BP1oHhjL%2Bq%2FSln8ffAaw17yULY9nzQqzPVejuHiKdEmoAtID6CBrVz%2FWmnvlsZ1SivCySQokvPFhEqa340jsWEctwF98nKphY3AGIIBNa5YpRyQDU1o6LqsmwYXzzHsnuNPfBdWNXHjpfUo336ETWAbE8fMgID8CSF8aSUZ%2FtSC0WrqsDulMCvqvuSZbCj44%2BQnuN37Z6oZNf4i9ufVGbniSA3go&X-Amz-Signature=3f591775b66c8cb8766dbd3be300f8dc1d97897d73c6293f5a59e08d196e544f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 Guake는 GNOME 데스크톱 환경을 위한 강력하고 사용자 정의가 가능한 드롭다운 터미널 에뮬레이터입니다. 주요 특징과 기능은 다음과 같습니다:
 

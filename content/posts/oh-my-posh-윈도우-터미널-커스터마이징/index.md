@@ -4,7 +4,7 @@ date: 2024-03-15T15:32:00.000Z
 draft: false
 tags: ["WINDOWS"]
 series: ["Don't Hate Windows!"]
-description: "윈도우 터미널에서 Oh My Posh를 설치하고 커스터마이징하는 방법에 대해 설명합니다. Scoop을 통해 설치하고, Nerd Font를 다운로드하여 설치한 후, PowerShell에서 테마를 설정하는 방법을 안내합니다. 시작할 때마다 테마가 적용되도록 $PROFILE을 수정하는 방법도 포함되어 있습니다."
+description: "Oh My Posh를 윈도우 터미널에 설치하고 커스터마이징하는 방법을 설명합니다. Scoop을 사용하여 설치하고, Nerd Font를 다운로드하여 설치한 후, Powershell에서 테마를 설정하는 방법을 안내합니다. 테마 적용을 위해 $PROFILE 파일을 수정하는 과정도 포함되어 있습니다."
 notion_id: "4537e5ec-748a-4e25-90aa-05849af7338d"
 notion_url: "https://www.notion.so/oh-my-posh-4537e5ec748a4e2590aa05849af7338d"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/oh-my-posh-4537e5ec748a4e2590aa05849af7338d"
 # oh my posh 윈도우 터미널 커스터마이징
 
 > **Summary**
-> 윈도우 터미널에서 Oh My Posh를 설치하고 커스터마이징하는 방법에 대해 설명합니다. Scoop을 통해 설치하고, Nerd Font를 다운로드하여 설치한 후, PowerShell에서 테마를 설정하는 방법을 안내합니다. 시작할 때마다 테마가 적용되도록 $PROFILE을 수정하는 방법도 포함되어 있습니다.
+> Oh My Posh를 윈도우 터미널에 설치하고 커스터마이징하는 방법을 설명합니다. Scoop을 사용하여 설치하고, Nerd Font를 다운로드하여 설치한 후, Powershell에서 테마를 설정하는 방법을 안내합니다. 테마 적용을 위해 $PROFILE 파일을 수정하는 과정도 포함되어 있습니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/02dacd6c-c3c0-461b-a799-18cf12448ecc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466UYVFQ4KA%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101918Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQD5%2FFeMClSjBo97Z2kHMVlHHMc85CwvZipjXWJzJ7JFxQIhANWGapZZs%2FBWIGCJkLX4joMrxa5Pq9bbGDAVOEEgaI6iKv8DCCoQABoMNjM3NDIzMTgzODA1Igzw5kz%2FQ0iJrLDLyaAq3AO2AhSFBf2nUxkO5YD9eOVssQZ%2FGZ9GeE64SKnL9Pee%2FfFs%2BUUMQqiW7VrzcQDqd6lCLg1wJkoPGCZsXx%2B1YRXk%2FGXKIegHoSpAulhG1zIMcu674HX7cWYWD%2Btphy6dyDORYGDXTabwlA7Wel9nrq6fMrnygF02YpmtAbVws5Qb6ToKKuYdq3xVYr2JujivTZ1iT59xve1ba3fO0X38j%2BuhXt9SSnH5d%2BPvlvlpIckXWgE%2F8R59ZobvmytlLwT%2BB9m6Em%2BQgRfvDz4O8Q68i0GadoQ9GDR2Yqe09JgSCpgC83gRgSQe250zQrsrB4geCXkQfmUif2CB1NsQfIYYDzc2i2Efr09XN9rYozlxh0IaCVs56jbNMwm23J5J1dthMaB0lriFFZNMBJPzE%2BZVAbwJYvWeekp%2Bh5WCkmCrUSlar5Imeb%2Fm%2BIkkjeUw%2FxoJm6xnhm4OlvBVR8R7Z0K%2BwyuF3zF%2BG%2BwXwaUg6H8la%2FiB9wE16uv6jiBoei9GKO84dCLcpgs3RLIHhoIaMad3UmSAKNGTLlzot7VBUifz4VqPsu%2BvHzbmZn%2FPCbKCCabDHaCBTTo9vzUXrzAoiIROSxw09cLEMUojVuROqWseMyGFhLf0vF3Bx1%2FJDSoigDDO9ofEBjqkAZW4H8FqmwRYAo5AmV%2BBmmYLORjwmAbkZH6%2FBNd2C9ldaIszsZZLjCDW2lzFKmNy7Q6f6%2BMnGkHzQ8FEOeePlbEhcxWpRZKrJ0yVVVf9qawUxE4IzkOlhBxRmWYiLxOQEm%2B2vlySMVrqBM2f%2FokwHHWVSLn7QzByh5%2BMf%2F6YMjxwX8chdmgIh4SfEBFfz1MKHQtYLVbVnhoN%2FrzinVz22oKyjfD1&X-Amz-Signature=1080498da9d623e236bb055b7fdb50840ad8da168f2fd57f85c6598a7c82d81e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/02dacd6c-c3c0-461b-a799-18cf12448ecc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466SUCPCSNY%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115746Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJGMEQCIARANVc8PyiDa19krcq%2BQUBctQAc2gy1M9eQmOHTAsdyAiBRcmoij8mvMPTxzOug6trVFZwSjAwTyGnv%2FSWcQvlgRCr%2FAwgsEAAaDDYzNzQyMzE4MzgwNSIMRHYdUa9VTGidIEZKKtwDsiVJaQrlufmPh39%2BIdzp2SIKizqdBq87bUqQVgkmo96evQv2Pz6jlePJWRxGEsKJ8WohsVQDKyUBeux4%2BAtHqLmcmpfU2f40QUgFiNxZUsdUel05y3nYFlYgGmDWdvIXxUJIPp3u9YdYonN8tE%2Fx%2FxhikKYjOR%2Fev7r5MDOBlszfzi7GNlTQf4sRXO8fliTjglK5o2dMkgPSmGyxvSXeChocqc4WxPp4w%2BCuxj49MMutgQ0wDSzC6p%2FMSPEdJm7nnbxovTc2SAEpRB4JoSvsmaNhl1WSQngcfuFeAaMeRhEfkYFX6utpVuw9cPOyFzM%2B%2BexRILR8pumuf3MwzfRDq61Ole1rDJ%2FxGbR9j1HweAExmiFKsvdL0fwEVvQpQ7OZZUnXDRBaKQxl17Lp7E7J9j9HV4DQNxPfGTBjOyNQsD0ZMGa0tSNCos%2Fu7x0Qbw6CFi2X8H2SiziHfI3POzZDcm4TWukQ6%2BIjNFS2wt0EoH9tvqnvroe04uwZ0fpMSm%2B2GWXCfqxFPxve7hFk8IP2p2FZahZAyqELHQkdoVs7EqB0xrl5n7jrDomiLa9%2B5KNd44MuXOQMztb4ZNU3VULn4%2BeyxpJn%2Bgtr967s0E7sUeaxWZDNJEOoN0ghARIwlZuIxAY6pgFUDizDXUdvN3Q%2BQXpkhOakhW06xNtQv6nvUtDiZ8cKVPzhGw7mXA6H%2BuJY%2BbD5f1T1lgU6ueZ6cqQYr3MZP%2B0PPez9BfdPBU8Y0lTo3OhQG%2B%2BAakv2%2BUUwV%2BHaZJJ%2BZiQ8NCyoT73ghReZE1%2FFOIHAlUogOKkF%2BwWS3B84sLjnY1cPB05xNb8i7BtHuNxx98hRwzmQ54xeFyrOh1C71LXScgVq4RfU&X-Amz-Signature=c034c9e5557be7569276cdd69be6f1e2b3b55febe3c85eb5e23d7828d0df9dbb&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ## 설치
 

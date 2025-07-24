@@ -4,7 +4,7 @@ date: 2025-03-23T12:39:00.000Z
 draft: false
 tags: ["인사이트"]
 series: ["인문학"]
-description: "숲의 종교는 다양성과 조화를 중시하며, 동양의 순환 철학과 연결된다. 반면, 사막의 종교는 절대적 진리와 규칙을 강조하며, 서양의 극단적 가치관 형성에 기여했다. 이러한 차이는 각 종교가 발생한 자연환경에서 기인한다."
+description: "숲의 종교는 다양성과 상호관계를 강조하며, 사막의 종교는 엄격한 규칙과 절대적인 믿음을 중시한다. 동양의 숲의 종교는 자연의 순환과 조화, 윤회 사상을 통해 삶과 죽음의 연속성을 이해하며, 서양의 사막의 종교는 생존을 위한 강력한 공동체적 결속과 유일신 사상을 강조한다. 이러한 환경적 차이는 각 문화의 철학과 가치관에 깊은 영향을 미친다."
 notion_id: "1bf1bab9-e3f8-8071-a376-e0e615a54f00"
 notion_url: "https://www.notion.so/1-1bf1bab9e3f88071a376e0e615a54f00"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/1-1bf1bab9e3f88071a376e0e615a54f00"
 # 동서양을 가르는 경계에 대하여 1 - 숲의 종교와 사막의 종교
 
 > **Summary**
-> 숲의 종교는 다양성과 조화를 중시하며, 동양의 순환 철학과 연결된다. 반면, 사막의 종교는 절대적 진리와 규칙을 강조하며, 서양의 극단적 가치관 형성에 기여했다. 이러한 차이는 각 종교가 발생한 자연환경에서 기인한다.
+> 숲의 종교는 다양성과 상호관계를 강조하며, 사막의 종교는 엄격한 규칙과 절대적인 믿음을 중시한다. 동양의 숲의 종교는 자연의 순환과 조화, 윤회 사상을 통해 삶과 죽음의 연속성을 이해하며, 서양의 사막의 종교는 생존을 위한 강력한 공동체적 결속과 유일신 사상을 강조한다. 이러한 환경적 차이는 각 문화의 철학과 가치관에 깊은 영향을 미친다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/51155313-3b29-489e-b635-b6eb1d3fd812/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4666TXPI6XZ%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101457Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQDbeErFCdDpXS3GVUMVxtvGpcqnkt4adDJnvdCZPJHoHwIgUlat0mSA7Ov2d8Gz3ufBZFNIY7AYe%2Fn8TUiKa%2Fk6yv0q%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDKXNccckoHZsCzSWiyrcA0V1G4WRXxl9oeUdhu8GsK%2Flu151CoqlW6jvwrGc%2BGFKz6nALsPhZWEhpAYNK2k4jtf56MFUaNGpl%2Bz3bttH%2BrQFKDWisWoLJvtavSWkyhkTdmjC8XPWZnUEb1KTDUIQWFERIv6U039nB5mEATcOuqcPZcx1dc%2FPAAcMSc3CNDNPX69mjXUQ8fvLMim14JfzTpLX%2F2AgYIkzGU7v1opbpoN18L7k8eRBZWjiaUcp9kIEB%2FOnyf%2BkpGW1BRCGnD6cktvPkNPJvduLUN2FKxXAGfruT%2Fl3NZ5pWe0biczsVZ9LfycQFwzcnaeUXT%2BNATlPiv%2Fl%2F4NXuZJI6ScarLm%2FlGrAFu1leQ6DdqcTZN8Be4UIwpWr0%2BeR30sM0ZBpbzq3lWiJ7oVUThcWpoX2aEuAK%2Bf0c2Ze6RydtcL1E6lWWFA2k%2BkXsraBY3uRuQndPq45xoZWSfNeexXEt1qXZiGhqoLmmgICyh%2FkdLUrUQirlJuNcU7KW9CemeFkCTVobgrKyz3KVZwfGXzSE95paaIxbOIYvppah%2FAts%2FC4mf9G%2BOncsuTTwiX3Uw2fZrwrdWHxEyFuQ3YB4XA093I6roRpM9u6gfWxzyDggbF23MR%2BYQWd%2Fd8tyUNmGLlC6C%2F%2BMLz2h8QGOqUBTZvcwR5rY%2BYs7aRHWMdk2znK7oJxnFxK%2FLMerMcfGke2wsYNixidhq1wgDz9Y%2F0JU3Pi%2B10n5cCzwx%2FlbTvgeDppYlG7FhkGGE1Z2OCdxsPDHdiL5sUuyiCZ5NlYX8y5OASh2MZPoqWrHF%2BxBunWIqd1%2BvUd1uA71RubeAF%2FqHyTnM3F2y%2BJVI4tSad3pr8S8C9MvDlrQTOK90Jw3qeKL%2BEzAfxh&X-Amz-Signature=f44372dbe324ce321591a8b42caf8b66fee977f3656311ce2583c2d6e70960f7&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/51155313-3b29-489e-b635-b6eb1d3fd812/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466UATKWXAY%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115312Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIQCOMPE0EL3UhTAFlawFCsVeQ7oNK1B3pTkITHHBKVr2DwIgNl1L1McsXbvu2b7a%2FqonIxNYHpj9dp2BfzHZz5uZXaIq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDB%2Ff2w4D2KhiR5lddCrcAxbC37iFcbzOUT0Vzfw1fJPGwfJC2b7LfiB2v%2B2CEXGrFJps%2F%2FeTRr1DxId1PcNno9oYK80ARDhk2CgY5XlsprndHgkCAy58sN9kVf0c2iN6NyY1ybSXgJbfWKQWvscxC%2F%2BcxNrXAmuLe9senOCm8UUO7J%2F0Y2RVCtvbrBKOg1sk2aarw0sslGVZY7w6DvuNnnjWaBAE0DzOh9BpUpj8tkSqGweATML%2FrI%2BZ3twjHWbwosInnifj5OFZNewL5K0el%2B%2F8bILtu9A3SCT%2FlJ63PCkueXHmyFN5m%2FApSQ8TKBMGGOTpkCbBDtejOhLn7t4Df82dbRMCjlyJi%2F%2FeW1THMW%2Bap4oJRzXoZwIbbblzXji72q8kXGwb06ospANYb0OdJADKOAw%2BSNkJbUAwQCoz6aqsgpSAEWHbdu4rwhO0%2FwZqsJkHcttvoac2yeUO9bMS2lLosUgCheTVu4%2FQ%2FsXq0BUad4u5WGYgP3UrJPhFXTIvfTf195lABAdqGn%2BGUMUFTXfTAcXtOLxPRdaWoZBOGbNHWiGp8G2zB3Xbvz2PlYnCmkK%2Fgzb4nTYmeg9SfG4Rr25Y%2FSwz5TodUeyzm5BIc2acd9fAKmORB5elSWVl7X%2BR4nB2JRBPerSNxXMaML%2BbiMQGOqUBIkcmVhXGDDm825GPziVCXQTCVA74R77TE4AElepMmlvBg7yAcsZ6aXcICwZrgebDLPxwge6CdXm%2Bc3WQmxB7CTwVVLcbD2U5Gq8EPpyqshlGFktVk8ekvNV7OovDJHqsv5ppGpCUcwhcKrfnpvvqTwtnlYaFcVG4pLXmH1wBDD6F86aeqK8mx41D4KB6iDC66kDxvfRg2BVeAl6nXYFiBn6bmJ8c&X-Amz-Signature=a14991e4db87da5b12fb7244e631a204061fde4c3fae5ec074e89ca5d5d5159b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ```plain text
 서양과 동양을 가르는 경계는 어디서 오는가? 

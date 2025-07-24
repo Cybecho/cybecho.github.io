@@ -4,7 +4,7 @@ date: 2025-02-27T09:31:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Infra & Network"]
-description: "DNS 캐시가 있을 때와 없을 때의 패킷 분석을 통해, 캐시가 있는 경우 DNS 서버가 직접 응답하고, 캐시를 지우면 다른 DNS 서버에 요청을 보내는 과정을 설명합니다. 실습에서는 public DNS와 private DNS 간의 요청 및 응답 흐름을 분석하며, 캐시가 DNS 요청에 미치는 영향을 강조합니다."
+description: "DNS 캐시의 영향을 분석한 실습에서는, 캐시가 있을 때는 DNS 서버가 저장된 정보를 직접 제공하여 다른 DNS 서버에 요청하지 않고, 캐시를 지운 후에는 요청을 다른 DNS 서버에 전달하는 과정을 확인했다. 이를 통해 DNS 요청과 HTTP 요청의 흐름을 이해하고, 캐시의 유무가 DNS 조회에 미치는 영향을 정리하였다."
 notion_id: "1a71bab9-e3f8-807f-ba7c-f36368903ced"
 notion_url: "https://www.notion.so/DNS-vs-1a71bab9e3f8807fba7cf36368903ced"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/DNS-vs-1a71bab9e3f8807fba7cf36368903ced"
 # DNS 캐시를 지우기전 vs 지운 후 패킷분석
 
 > **Summary**
-> DNS 캐시가 있을 때와 없을 때의 패킷 분석을 통해, 캐시가 있는 경우 DNS 서버가 직접 응답하고, 캐시를 지우면 다른 DNS 서버에 요청을 보내는 과정을 설명합니다. 실습에서는 public DNS와 private DNS 간의 요청 및 응답 흐름을 분석하며, 캐시가 DNS 요청에 미치는 영향을 강조합니다.
+> DNS 캐시의 영향을 분석한 실습에서는, 캐시가 있을 때는 DNS 서버가 저장된 정보를 직접 제공하여 다른 DNS 서버에 요청하지 않고, 캐시를 지운 후에는 요청을 다른 DNS 서버에 전달하는 과정을 확인했다. 이를 통해 DNS 요청과 HTTP 요청의 흐름을 이해하고, 캐시의 유무가 DNS 조회에 미치는 영향을 정리하였다.
 
 ---
 

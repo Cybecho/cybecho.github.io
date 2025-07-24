@@ -4,7 +4,7 @@ date: 2023-09-15T00:00:00.000Z
 draft: false
 tags: ["obsidian"]
 series: ["Tips"]
-description: "Obsidian을 실시간으로 git 동기화하기 위해 Working Copy 앱을 사용하여 GitHub 리포지토리를 생성하고, Obsidian-git 플러그인으로 자동으로 push 및 pull을 설정하는 방법을 설명합니다. iCloud의 느린 동기화 문제를 해결하기 위해 Working Copy를 통해 모바일 기기에서도 실시간으로 문서를 수정하고 동기화할 수 있는 환경을 구축하는 과정이 포함되어 있습니다. 무료 버전으로도 기본적인 동기화가 가능하지만, 모바일에서의 수정이 많을 경우 유료 결제를 고려해야 합니다."
+description: "옵시디언을 실시간으로 git으로 동기화하기 위해, 모바일 기기에 Working Copy를 설치하고, 개인 Github 계정에서 Private Repository를 생성한 후, Obsidian-git 플러그인을 통해 자동으로 push와 pull을 설정한다. 이 과정을 통해 여러 기기에서 문서를 동기화하고, iCloud의 느린 동기화 문제를 해결할 수 있다. Working Copy는 무료로 git commit과 pull이 가능하며, 유료 버전을 통해 push 기능을 사용할 수 있다. 최종적으로, Obsidian, Obsidian-git, Working Copy를 통해 쾌적한 메모 생태계를 구축할 수 있다."
 notion_id: "a4df1243-89ff-4750-ad90-c679111dd1d0"
 notion_url: "https://www.notion.so/git-a4df124389ff4750ad90c679111dd1d0"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/git-a4df124389ff4750ad90c679111dd1d0"
 # 옵시디언 실시간 git 동기화
 
 > **Summary**
-> Obsidian을 실시간으로 git 동기화하기 위해 Working Copy 앱을 사용하여 GitHub 리포지토리를 생성하고, Obsidian-git 플러그인으로 자동으로 push 및 pull을 설정하는 방법을 설명합니다. iCloud의 느린 동기화 문제를 해결하기 위해 Working Copy를 통해 모바일 기기에서도 실시간으로 문서를 수정하고 동기화할 수 있는 환경을 구축하는 과정이 포함되어 있습니다. 무료 버전으로도 기본적인 동기화가 가능하지만, 모바일에서의 수정이 많을 경우 유료 결제를 고려해야 합니다.
+> 옵시디언을 실시간으로 git으로 동기화하기 위해, 모바일 기기에 Working Copy를 설치하고, 개인 Github 계정에서 Private Repository를 생성한 후, Obsidian-git 플러그인을 통해 자동으로 push와 pull을 설정한다. 이 과정을 통해 여러 기기에서 문서를 동기화하고, iCloud의 느린 동기화 문제를 해결할 수 있다. Working Copy는 무료로 git commit과 pull이 가능하며, 유료 버전을 통해 push 기능을 사용할 수 있다. 최종적으로, Obsidian, Obsidian-git, Working Copy를 통해 쾌적한 메모 생태계를 구축할 수 있다.
 
 ---
 

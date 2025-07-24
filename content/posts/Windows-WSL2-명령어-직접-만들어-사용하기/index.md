@@ -4,7 +4,7 @@ date: 2023-09-14T00:00:00.000Z
 draft: false
 tags: ["WINDOWS", "ubuntu"]
 series: ["Don't Hate Windows!"]
-description: "Ubuntu에서 자주 사용하는 명령어를 alias로 설정하는 방법과 AWS 접속 명령어 단축키 설정, zsh 플러그인 설치 방법에 대해 설명합니다. "
+description: "Ubuntu에서 자주 사용하는 명령어를 alias로 설정하는 방법과 zsh 플러그인 설치 방법을 설명합니다. "
 notion_id: "de719076-4d87-414a-9cb2-3ac4dbc73514"
 notion_url: "https://www.notion.so/Windows-WSL2-de7190764d87414a9cb23ac4dbc73514"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Windows-WSL2-de7190764d87414a9cb23ac4dbc73514
 # Windows WSL2 명령어 직접 만들어 사용하기
 
 > **Summary**
-> Ubuntu에서 자주 사용하는 명령어를 alias로 설정하는 방법과 AWS 접속 명령어 단축키 설정, zsh 플러그인 설치 방법에 대해 설명합니다. 
+> Ubuntu에서 자주 사용하는 명령어를 alias로 설정하는 방법과 zsh 플러그인 설치 방법을 설명합니다. 
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f01f2d3b-078b-4f40-bed7-3a8c010cffbc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4666UTLBJ35%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102049Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJGMEQCIGLVXaiNCYVMOlZJXhZVY7iEBT15v6iapsiniR%2FX130oAiAc6pJ3ckknMjDsLWofJ1sAQTOU7o%2By9FEiaqHluLXhnSr%2FAwgqEAAaDDYzNzQyMzE4MzgwNSIMwokxMM2gErm%2BBS0%2FKtwDbzfi5rBkmGliH934Q51Wur7%2FCwmYuvGt39xaByRTJdYI%2F7AiLSpgdwSZQG1AqwMRFnfXIg4wjd%2BvM5Q3xryMss6RfBiibFfuo6aJD0kzL%2F2oNEi0ep1qNdJHraIOM395O%2FLfQuqnEARmP6q1yaGH9ApzML9AG1odhH3b%2BQ7ZcDb%2BVLkma1MmOduTFg7xbtnk%2F09pkkwyW6mMm1UYtpA8poEAtFg0Tz4x1qgYgsT4LFusrlDm3e6qgH7BK6AXB3HAWcBzxxL6iPqvR7c25EEadzRDjR3dsHMdlWqB5tKYjRIxVhr%2FPEKsu0qR7Ue4C77AWO%2B2ucQiRfKYakPvr0Yig5kd9xjL5XIsoc6t3qga4swGAKGUTD9VdY8QOqd0MmOWiuNIj0aao9FFtUP76NrksC23q8Jhlf6b5fFO8DhRKe7l1%2F7jm2XEZGPItWs133usxykK8PgUhQ7SKaRmlkXw6qglL3oxMIeXR%2BlJvvtQ6ydjgPA1wniejnD8oVgAY5tzNcDbyQF3XEcr54RuxgmNHszzWXhoYhffkVz6b%2BNg4xOSRyQgm4KORyB6mlRa%2BIae6PfpwXvoJlUDDsadSIob%2FV3hrimKtsAKTvSO%2FKLcoTUv7jxPeBD0VGpdMMowtfaHxAY6pgEpQ5Ul6xu4C%2BtJyI0U3cvgKhGIwHh0tkpcSTsKwtdT9Lww4LjOBwfZITp5JhdwewsHxF6fmN2c0%2B5iVh9XOMwtHdzq0YFi91%2FvM4u4DHhy4mvQwpOWl7IGZr88P2einoKLwyqsjSllO8PS5hSquVuvjiZrDzuFQGKnkau%2BbBnS5gcuRcXnHuo6vmp%2BjePNd0Pg9%2BcmQL3xRavHlk%2BMiC6vt1PkqkFc&X-Amz-Signature=f3fc63b9e747949618af9a17b06dcc6bfb9a4e8aeb229d486bb157280389b342&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f01f2d3b-078b-4f40-bed7-3a8c010cffbc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TECJDDCR%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115930Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIQDlloTGf9Lbp829ah%2FQ32DVyDWcqHSCrzCH2cCIz3iV4wIgQrD2G5HpeFjU8L02jKM3iccZTQ89%2FGiwSliVFdpY%2Biwq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDO2oGJMDFW3wkHztMSrcA1tomHlItWwNyoub0YnoQTJXivsyUDxS0biWdXxjUz1CJLkLCKSFkxzf1L4f5Y2%2FtHX6F94UozBNT%2FBKTpjApbakGDxWg93N1HEdsqRWd0Uvd0XrXYgB5QZZst1205jN3PdEvjiNl7ruvB47OkXsJLh%2BCNtN2ZKfe4QFWHK%2BcGjrr3XdHCDamkEqJZlvWzAnj3TE5L8EGhkQfN4IkiHUqi4dm1xAjdOnD17z0ZY8LjKZJKbrvILG4nGRbJFNcFsFxJz%2Bwka0yuQdJyRGA3aaM39brgC25cNco3jgM1WUqyT9Wlso9ecqVrL3cH44Ie3V4z3DJ3ikvFhUqx36i7TKRbFr%2F1ekzbfMI2yQ0CkLT4PhP028mRE4iM59jO5iSpgbtiOhE9f3ejgb0ffw%2F3kSSyF833EcDuqscfPAAVjPP46CiFONMLVuw4DUHNer4%2FUFzI3GV8AdrYyoGaTu4z%2F1D2Zbhtr0%2B7lfvxrjGN34qEpM%2FibXDSbY%2F5EpSC8cpSorZWZhv4AxFBCDp7%2FPXjbjQhU5I8nvMytBXMxtp%2BO4M6yPaRY5%2BIPyExEIvWutTYPlrQotbDUogsN0lq98bTspCN7S7hoiuiAGrSIsN3SBZFcf%2BrjYzzAc19OO%2BbLWMLibiMQGOqUBE3Sjosjoj%2FhjiC3Yrr3wuKxL0VfsJoZ4eCe2NSuI5X93YrA5uWyTL56kTvbNEiLLauTdMP%2FKpYGmAzR93j%2BNlUaw%2BhFSPhFcJH2HClgJeYPmp1jUSI%2BUzM4nh8Dfo4BC%2BuMEmg4HvwVFoJVAds1x4qv53KckHxVkzc%2BGPs6T%2BgMoiW9%2BXhMkvmWqgzGfVv20Q%2FuEDqPLZDNzsEheJNUMamxuI6hw&X-Amz-Signature=5e99f0b796fbc4beab7c9d7f9df1c60d5fe2e34d1d93cbd5945f959078799e28&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # 단순 명령어 alias 명칭 설정
 

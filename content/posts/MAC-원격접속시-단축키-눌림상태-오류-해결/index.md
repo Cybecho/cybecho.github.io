@@ -4,7 +4,7 @@ date: 2023-06-01T00:00:00.000Z
 draft: false
 tags: ["MAC"]
 series: ["원격 라이프!", "Let's MAC!"]
-description: "JUMP DESKTOP 앱을 사용하면서 Intel MAC과 M1 MAC에서 원격 접속 시 'F' 입력이 'cmd + F'로 인식되는 오류가 발생했다. 이 문제는 두벌식 입력 방식에서 영문자 입력으로 변경함으로써 해결할 수 있었다. 또한, ios2mac 환경에서는 Cmd c를 그대로 사용할 수 있어 편리하다."
+description: "JUMP DESKTOP 앱을 사용하여 원격으로 MAC에 접속할 때 'F' 키가 'cmd + F'로 인식되는 오류가 발생한다. 이 문제는 두벌식 입력에서 영문자 입력으로 변경함으로써 해결할 수 있다. MAC 환경에서 단축키 사용이 편리해진다."
 notion_id: "a1f07d60-3fce-4087-b1c2-ad32e913fafc"
 notion_url: "https://www.notion.so/MAC-a1f07d603fce4087b1c2ad32e913fafc"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/MAC-a1f07d603fce4087b1c2ad32e913fafc"
 # MAC 원격접속시 단축키 눌림상태 오류 해결
 
 > **Summary**
-> JUMP DESKTOP 앱을 사용하면서 Intel MAC과 M1 MAC에서 원격 접속 시 'F' 입력이 'cmd + F'로 인식되는 오류가 발생했다. 이 문제는 두벌식 입력 방식에서 영문자 입력으로 변경함으로써 해결할 수 있었다. 또한, ios2mac 환경에서는 Cmd c를 그대로 사용할 수 있어 편리하다.
+> JUMP DESKTOP 앱을 사용하여 원격으로 MAC에 접속할 때 'F' 키가 'cmd + F'로 인식되는 오류가 발생한다. 이 문제는 두벌식 입력에서 영문자 입력으로 변경함으로써 해결할 수 있다. MAC 환경에서 단축키 사용이 편리해진다.
 
 ---
 
@@ -30,7 +30,7 @@ JUMP DESKTOP 을 애용하는데, 해당 앱은 IOS to WINDOWS 와 상성이 매
 
 문제해결은 다음과 같았다
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/802025d5-90ec-4189-892f-5dbed1978f30/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46655I6PGUF%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102121Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIAx2g5i6TdEq3gx6PWELdOWvBaAt4vNySbWcnGMRNJawAiEAn6Ctc7cjBxe4e30MzLWVHdITInglTn%2Fx8HyD2%2FBbX1gq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDIsuD7Q9RNwthPa2aircA%2FhMiYt4CYp95GueX3sAGgaNWbTajCPRu0fZGip7JiX0AAp9pTonAjlCWNZJdJ6o6FD%2BRdFgxoOODGs7G9GJcqZH0cfaDSC%2FZQ%2BuX%2FsUda0AbW664BqHFKIHHfJLDTVBRTUFh5c75J208vLLMYsRY%2FiPoie85SIhMUslDY%2FckoQ%2BJ2ZLnU9W8aUq6SiTYpTQEeWvQkf0wWCrzVMB6KW6JUPsF8QmSTO%2BqqScc8M6M%2FgDJ5MRUQfcinwfxrAEtTnMuxeyJqZ8sd%2FmSrQwuEoUopwskfne%2Bks6e6dZU6BpmXWYLkikbqxaAZgi0Gu4YlzffXCwrh%2FlV8Q4G8Hr2Up3O8g9H3tIiSwqq1ulpsOyL%2FZ8MBCACsxHWGCr8HzJYZEsh6mgAnYSKNcxIIY20vT9fZFFepDSddaMM6%2BQRhp04AiG7qUp68JXGmSn0waqa76FI1hLoWP1Kk5srP0Uqjq6AhX%2FTEVFCeXZf%2Bp5PaIc4nQlF7opCKc7OiwB9j6bp%2BwoD4AIN%2Fad8OP8Q8TqpIPUMG2z0OKwQKUFPs9RPGED5QvOaJcLMXpI7pbkdWucLM9hZkSrxIkLd3qTtGzN%2BK4mUXofcEl0Eibop91A67JwGc3CCCNlbEESnRGd7kEgMOD2h8QGOqUBMLZe7oSk6U8HcmeCCT%2FZSKSL23VgHocS6cNhhuLTDfHQGkqgEXmyoFv0JcrI1shi22HbcU8wcWn5690iS7sSDS5xCHlM1m3Bj9Hg9lrYvEq%2FLOkuWQ1JQ%2B5V7K1xGU1J4%2BY0OdUYM40P0At4QfgagaD3IUhF%2FcmpKbZzznxq4rBNcIsRWV9gnaOjL9eNHK4yXgnFhrs7cnWtHrghAwu2AakjgtHU&X-Amz-Signature=54926f18879877842699254476ba0d42a572da216cd77649c040bf64c5311a38&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/802025d5-90ec-4189-892f-5dbed1978f30/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466ZSWPDUEC%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T120004Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLXdlc3QtMiJHMEUCIEJjMBPirymS%2BWSvSgDIHfcLfP57UhSc8nXLF3JhduSJAiEAjfwdARj%2BTd%2FIQpyF9IGu1vdpcBIzSBaWb3dUmoXRfbAq%2FwMILRAAGgw2Mzc0MjMxODM4MDUiDBntl%2Fugkb60c8VlhircA1g1PH31c1UqWG2672t5jBA6IViQb1mFcMyaXlSd8ZEiAkm91U6XTo93viS9ZOJdZYwvo4DR2mf9GN3d8fM3Yy4AVM0rG45vgwg9UY6J9y94oEFVaAwFcyiwxOoDn6HJu11jYmI62acLarJVaKGa1pzIzlTrVdZ%2BMGs0Axf44gAOVqIkqOQOqFCfbshBcoSoEJmWhmILd%2FZiSnL8Az7I7UNqBeu00CQzNE2dzkaPe2pMYhBuG8QcxySShM7K3JY8yyyxE4Zs3AYDopVfvCf%2B2jzICTVXScDSEkHqjPatxMB%2F9ue6Ce%2BYQTVjdre7apRnV58ihoaTO1Vo7G3PriMVWkrAalffj8aOOGDNeJMFX1OUjyRmQtZfasQdohtfWWwnE8U3yTYzMpzL8vhk1%2FP70uW%2F8Ss%2B1SSbjSeO4d%2FJJs5qenahSLesgDAF%2BPwskZBzn%2B09nhhCAdxTzocZ2YtR0onpWx2uSP%2Fsj%2By0oZ2bEadwD6MDWshCtTCjDoV3TzUuWzHPI5G8ww91lLKbTlTGkm2TH60uxitNNN3MgsQr77LVr1Hr5UBwr7OWbwltZcJL%2BHjCoVtsZ9fb6Y7T4tAmjCVc1AK1hG0eEHpbJ6yaZlFXm4DREdgRhPNoDbL%2FMJq%2FiMQGOqUBhsG%2BR0ZkOfqbgYJazpBDwPkoHRlZAzCgoyeIbJNqp9hQGJ6dKGBqMOu2vmvAsLHnwbtVo%2FPEtBbws0HZ0Q8fdgYgyKAzQ8ky%2FQyyFcy909PqxEhubeNzn9zgKD77c89hZ1ixkdTjx5QORSi4ghEtvXty3OO2H5p0QzUfWhzMAuysLzDfifaAtb4DzbrMgN8n9yz9QB1PG8L0jU1NAdxEhZVdNCzn&X-Amz-Signature=ac843c5e2bebf5dd521cbb3607ee2fc7760af28fe893bbb7504e0df4977762a5&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 바로 두벌식 입력으로 되어있을때 그랬던거라 영문자 입력으로 다시 변경해주면 문제를 해결할 수 있다

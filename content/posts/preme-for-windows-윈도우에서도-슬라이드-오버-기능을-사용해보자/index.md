@@ -4,7 +4,7 @@ date: 2024-08-04T10:53:00.000Z
 draft: false
 tags: ["WINDOWS"]
 series: ["Don't Hate Windows!"]
-description: "Windows용 Preme은 터치슬라이드 기능을 제공하며, 창을 항상 위에 표시할 수 있습니다. glazeWM과의 충돌을 피하려면 Preme을 먼저 실행하고, 사용할 프로세스를 glazeWM의 ignore 목록에 등록해야 합니다. 다운로드 링크와 사용 방법도 안내되어 있습니다."
+description: "Windows용 Preme의 터치슬라이드 기능을 사용하여 창을 항상 위에 표시할 수 있습니다. GlazeWM과의 충돌을 피하려면 Preme를 먼저 실행하고, 사용할 프로세스를 GlazeWM 구성의 무시 목록에 등록해야 합니다. 다운로드 링크와 사용 방법에 대한 주의사항도 포함되어 있습니다."
 notion_id: "6a56e7eb-06ba-4936-9aad-049d6b1da7c1"
 notion_url: "https://www.notion.so/preme-for-windows-6a56e7eb06ba49369aad049d6b1da7c1"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/preme-for-windows-6a56e7eb06ba49369aad049d6b1
 # preme for windows - 윈도우에서도 슬라이드 오버 기능을 사용해보자
 
 > **Summary**
-> Windows용 Preme은 터치슬라이드 기능을 제공하며, 창을 항상 위에 표시할 수 있습니다. glazeWM과의 충돌을 피하려면 Preme을 먼저 실행하고, 사용할 프로세스를 glazeWM의 ignore 목록에 등록해야 합니다. 다운로드 링크와 사용 방법도 안내되어 있습니다.
+> Windows용 Preme의 터치슬라이드 기능을 사용하여 창을 항상 위에 표시할 수 있습니다. GlazeWM과의 충돌을 피하려면 Preme를 먼저 실행하고, 사용할 프로세스를 GlazeWM 구성의 무시 목록에 등록해야 합니다. 다운로드 링크와 사용 방법에 대한 주의사항도 포함되어 있습니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/376c4829-07b9-439e-b0fa-00caeb8098fc/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466RDNIZFDC%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101738Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQDfvYHnfzNZx%2FXAWdRrfZdWxy38xVVIvYGUZgX4M%2B4SzgIhAMgutnCucBdF2FdjFLvtbq7gAEie47iohP%2FjdWTZPm4kKv8DCCoQABoMNjM3NDIzMTgzODA1IgyaS0hAnEv6Lghi15Uq3APrrVL4iSro4VX4QaN1Dl%2Bj7q5aHtgzc1E1roKDimC7Kh1JivuU6wkDASQG4k7SmGiHwQWQ4%2B1gO43titRs2%2BQgYTDL7Lh9CStBSSuUJhE5p3vk0YsY16agJQGBfb5cxqSYbSeUA4U9uXGET9HZM%2B05yFgbkbpd4SbKLO52kNBP7LP5QKEdPvNWwMv6WMPiuFd42x3nw9wJVrZyJCeRd9J3SjmMsZlACjg3PMlaQlIJtvFezAuSMKAHEpTI2EmTSi%2FsciZ5IevBB2yCCh8UAJYJA4q4OYwnb4FUHXV0axy%2Bvylq3br6P40BRd8fDuea7Ymy6p2gAWNgB3%2FsBbVSHFsKCZqaD5Tde19myl%2FFLnShovndjlBhxCxum%2BIvOJ3YtpRlCscOEMNZl0tXmYj1ZU%2Fk2Ms%2BU1rbo2V1yW9g5HY7XX3OYdwWX4NmErMkgjDQbMQjRVGGMV3%2BJy5rDVH4jZjEbcXbvAQ1GaQHIp%2BdjEGSNibNHv5gZfEtP47LKmjX4E%2BwNEP1MqtOGbQeYUoMxPeQzIYgFPcBpYi5EcnyY3dMndxnNdUrnTbOqPcy5DS510lMYA2eQbaXuRLFekC5Kt%2Favj%2BThvWAN3f%2BkJh8STcg1sSSqQSbrqSOjMHarTDe9YfEBjqkAcVv0k04%2BuyzV%2FXPBSbFADBFjxjhNfHQSyM7vT3y4JS5kfUs25hjHkIRf8o6vq3RM0tO6W2ioRu23C8RSrVkpNIMZigczRu9AvUUVa7rhDJjJigbeh7X3i8JyLgsR9SNbTfRUNcx8uVmas0AWn%2F8yix%2BEdreZ8BY9ZuJdNgSfKKl9fOtbnMsfE%2BxxVlzx%2BDnOO0ybLi17viTUZ6tnRQ2bkp8bmDK&X-Amz-Signature=d132cf314ffbc53bd3991ec52127a9101f852cac28de795a63c1144fe11cb6d9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/376c4829-07b9-439e-b0fa-00caeb8098fc/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466QVOZJOZV%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115558Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIQDo3K7oqYNIs8dC1HpOSsIIuWliVLxUoBOzbKexSEp3TAIgEx7xwJVCGuU6od8A5r0cwm0lBIpzC6G6M9qAdDihrwoq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDP94JtjxfVvjDD9E8SrcAxWRdXhCZ0JVseQpSz6173wqtZHETJIiP%2BnDdxyZCbrzoeznaJsE%2BGZfn1uujA9h7v4LFVmy%2BiLaai1GigbIgJtVB6nm82f7sL7VTkq%2B3pV22Z9OXiDe9%2B9fPqn8Rej8odJOPhCPf7GERXRYXSC9u2BX%2BcOvCaqp12NHgmtIpHYE1QhaLw77exEtYryPU3lVSUfYnhmFhL0syZlZmFog7q9eIxNRYpdTQ8eO9vIdHlIlYl8hrct5GvOmBezi8lw8BuCu0sG0OJEz3Q13mWX5r0P1tmzMV4n%2BuFzw1PdAal7Nb1HSsskM1pKju%2FSeo8MhOiQPpL0yUqBTxSKsXNaBU2Tc4rrx5XSxtxMLnYG50MThbBE0yiN2yE6nDX22u8VPb1%2FrAidgJP7TCNMFEuGGoJkO8nCDoxGOqWks1LoIcxub5e1NruYI3F0pwDD%2F%2B5qOGnyHI%2Bh0ljSoXJ0FiIyevI%2FZi7jqZHQHeMCPuVPmXaVAfL6iCMeWM1GJh93a6XdhYsKg%2Bx0jKBPAOYLUSMo%2F4PEVAj%2FLEV1%2FTi3vTyuBT5A4B8Y0%2BodyVlALFeYN3gTwEjUp8mMYX3ynwlQWc%2BVfgUSww8lvNa21nrYQ5MkUfEsTFQe%2FMzahJyF3hgUyMLibiMQGOqUBmxRpw2KG8vchxbH9gREobyOeD68AR64fF3%2BBWkiM9Zjghl5WefI5UaCqnfCT0ow7ioYKb%2FQEjvTEE5og54Uw5LDiMNhbhfV2qajr6OulkG%2BKjp%2FXhl0hEHNO2tPOASx1ZoRQKlrHhokQ7nQf%2FtCBuKvfc6nPPnse2lhKpEglSJjJkkrm27jVRu3TxLU3XM5ynDH5fpY42S7xKFjzf6uO4L5XlMth&X-Amz-Signature=d3a951b057d5fc7d1eed9a56d538e927b0d35aaeb52f0d36e5be9e538182a9fc&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=dPIrhbhEVng)
 

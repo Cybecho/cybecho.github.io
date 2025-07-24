@@ -4,7 +4,7 @@ date: 2025-07-17T09:00:00.000Z
 draft: false
 tags: ["fedora", "Arch", "ubuntu", "Debian"]
 series: ["Let's Linux!"]
-description: "라즈베리파이에서 LineageOS를 설치하여 안드로이드를 사용할 수 있으며, KonstaKANG이 개발한 다양한 기능이 포함된 Android 시스템을 활용할 수 있다. 설치 과정은 LineageOS 이미지 다운로드, SD카드에 플래싱, 초기 설정, Google Apps 설치로 구성된다. MindTheGapps를 사용하여 Google Play 서비스를 대체할 수 있으며, Revanced를 통해 Google Photos의 무제한 백업 기능을 활성화할 수 있다."
+description: "라즈베리파이에 LineageOS를 설치하여 Android 환경을 구축하는 방법을 설명하며, KonstaKANG이 개발한 LineageOS를 통해 Raspberry Pi에서 Android를 사용할 수 있는 가능성을 제시합니다. 설치 과정, Google Apps 설치 방법, 문제 해결 방법 등을 단계별로 안내하며, Revanced 및 MicroG를 활용한 Google Photos 무제한 업로드 방법도 포함되어 있습니다."
 notion_id: "2331bab9-e3f8-801f-af43-e085b9c24e07"
 notion_url: "https://www.notion.so/LineageOS-2331bab9e3f8801faf43e085b9c24e07"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/LineageOS-2331bab9e3f8801faf43e085b9c24e07"
 # 라즈베리파이에
 
 > **Summary**
-> 라즈베리파이에서 LineageOS를 설치하여 안드로이드를 사용할 수 있으며, KonstaKANG이 개발한 다양한 기능이 포함된 Android 시스템을 활용할 수 있다. 설치 과정은 LineageOS 이미지 다운로드, SD카드에 플래싱, 초기 설정, Google Apps 설치로 구성된다. MindTheGapps를 사용하여 Google Play 서비스를 대체할 수 있으며, Revanced를 통해 Google Photos의 무제한 백업 기능을 활성화할 수 있다.
+> 라즈베리파이에 LineageOS를 설치하여 Android 환경을 구축하는 방법을 설명하며, KonstaKANG이 개발한 LineageOS를 통해 Raspberry Pi에서 Android를 사용할 수 있는 가능성을 제시합니다. 설치 과정, Google Apps 설치 방법, 문제 해결 방법 등을 단계별로 안내하며, Revanced 및 MicroG를 활용한 Google Photos 무제한 업로드 방법도 포함되어 있습니다.
 
 ---
 

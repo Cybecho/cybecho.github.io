@@ -4,7 +4,7 @@ date: 2025-03-05T06:41:00.000Z
 draft: false
 tags: ["쿠버네티스"]
 series: ["Infra & Network"]
-description: "워커 노드는 레스토랑, 팟은 테이블, 컨테이너는 음식에 비유되며, 각각의 구조가 서로 연결되어 있습니다. 워커 노드는 PC, 팟은 VM, 컨테이너는 VM 속의 컨테이너로 생각할 수 있습니다."
+description: "워커 노드는 레스토랑, 팟은 테이블, 컨테이너는 음식에 비유되며, 각 구성 요소가 함께 작동하여 전체 시스템을 형성하는 구조를 설명합니다. 워커 노드는 PC, 팟은 VM, 컨테이너는 VM 내의 컨테이너로 생각할 수 있습니다."
 notion_id: "1ad1bab9-e3f8-80f2-bcca-c8246aecb2e6"
 notion_url: "https://www.notion.so/Pod-Container-1ad1bab9e3f880f2bccac8246aecb2e6"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Pod-Container-1ad1bab9e3f880f2bccac8246aecb2e
 # 워커노드 , Pod , Container 의 차이점
 
 > **Summary**
-> 워커 노드는 레스토랑, 팟은 테이블, 컨테이너는 음식에 비유되며, 각각의 구조가 서로 연결되어 있습니다. 워커 노드는 PC, 팟은 VM, 컨테이너는 VM 속의 컨테이너로 생각할 수 있습니다.
+> 워커 노드는 레스토랑, 팟은 테이블, 컨테이너는 음식에 비유되며, 각 구성 요소가 함께 작동하여 전체 시스템을 형성하는 구조를 설명합니다. 워커 노드는 PC, 팟은 VM, 컨테이너는 VM 내의 컨테이너로 생각할 수 있습니다.
 
 ---
 

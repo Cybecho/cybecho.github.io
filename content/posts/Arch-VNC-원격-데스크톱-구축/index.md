@@ -4,7 +4,7 @@ date: 2023-12-02T00:00:00.000Z
 draft: false
 tags: ["Arch"]
 series: ["Let's Linux!"]
-description: "Arch 리눅스에서 원격 데스크톱 구축을 위한 자료로, Tiger VNC가 추천되며, 여러 원격 데스크톱 클라이언트에 대한 링크가 포함되어 있습니다."
+description: "Arch Linux에서 원격 데스크톱 구축을 위한 Tiger VNC가 추천되며, 다양한 원격 데스크톱 클라이언트에 대한 링크가 제공됩니다."
 notion_id: "6fea5550-031e-4b9a-8809-2916eb17d1cb"
 notion_url: "https://www.notion.so/Arch-VNC-6fea5550031e4b9a88092916eb17d1cb"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Arch-VNC-6fea5550031e4b9a88092916eb17d1cb"
 # Arch VNC 원격 데스크톱 구축
 
 > **Summary**
-> Arch 리눅스에서 원격 데스크톱 구축을 위한 자료로, Tiger VNC가 추천되며, 여러 원격 데스크톱 클라이언트에 대한 링크가 포함되어 있습니다.
+> Arch Linux에서 원격 데스크톱 구축을 위한 Tiger VNC가 추천되며, 다양한 원격 데스크톱 클라이언트에 대한 링크가 제공됩니다.
 
 ---
 

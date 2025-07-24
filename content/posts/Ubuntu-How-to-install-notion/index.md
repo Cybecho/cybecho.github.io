@@ -4,7 +4,7 @@ date: 2024-02-11T03:37:00.000Z
 draft: false
 tags: ["ubuntu"]
 series: ["Let's Linux!"]
-description: "To install Notion on Ubuntu, open the terminal and add the repository with the command "
+description: "To install Notion on Ubuntu, open the terminal and add the Notion repository with the command "
 notion_id: "aa4988ac-00af-4391-9b62-30e80b8c8bfb"
 notion_url: "https://www.notion.so/Ubuntu-How-to-install-notion-aa4988ac00af43919b6230e80b8c8bfb"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Ubuntu-How-to-install-notion-aa4988ac00af4391
 # Ubuntu - How to install notion
 
 > **Summary**
-> To install Notion on Ubuntu, open the terminal and add the repository with the command 
+> To install Notion on Ubuntu, open the terminal and add the Notion repository with the command 
 
 ---
 

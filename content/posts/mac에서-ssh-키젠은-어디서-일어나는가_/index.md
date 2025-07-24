@@ -4,7 +4,7 @@ date: 2025-03-03T02:02:00.000Z
 draft: false
 tags: ["MAC"]
 series: ["Infra & Network"]
-description: "맥 보안칩에서 ssh 키젠이 작동하며, 이 칩 안에 private 키가 저장되어 있어 사용자가 확인할 수 없다. 인증은 지문을 통해 이루어지며, 지문 인증 후 public 키가 전송되어 ssh 인증이 완료된다."
+description: "맥 보안칩에서 ssh 키젠이 작동하며, 이 칩 안에 private 키가 저장되어 있어 확인할 수 없다. 인증은 지문을 통해 이루어지며, 지문 인증 후에만 public 키가 전송되고 ssh 인증이 완료된다."
 notion_id: "1ab1bab9-e3f8-80c9-9e87-d5c097f63c36"
 notion_url: "https://www.notion.so/mac-ssh-1ab1bab9e3f880c99e87d5c097f63c36"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/mac-ssh-1ab1bab9e3f880c99e87d5c097f63c36"
 # mac에서 ssh 키젠은 어디서 일어나는가?
 
 > **Summary**
-> 맥 보안칩에서 ssh 키젠이 작동하며, 이 칩 안에 private 키가 저장되어 있어 사용자가 확인할 수 없다. 인증은 지문을 통해 이루어지며, 지문 인증 후 public 키가 전송되어 ssh 인증이 완료된다.
+> 맥 보안칩에서 ssh 키젠이 작동하며, 이 칩 안에 private 키가 저장되어 있어 확인할 수 없다. 인증은 지문을 통해 이루어지며, 지문 인증 후에만 public 키가 전송되고 ssh 인증이 완료된다.
 
 ---
 

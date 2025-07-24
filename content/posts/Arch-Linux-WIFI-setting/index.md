@@ -4,7 +4,7 @@ date: 2024-01-08T00:00:00.000Z
 draft: false
 tags: ["Arch", "ubuntu"]
 series: ["Let's Linux!"]
-description: "Arch Linux에서 Wi-Fi 설정을 위한 방법으로, 네트워크 관리자를 사용하여 Wi-Fi에 연결하는 방법, Broadcom BCM4360 드라이버 설치, DHCP 서비스 및 netctl 사용 여부 확인 방법, SSID 확인 방법, IWD 서비스의 상태 확인 및 시작 방법을 설명합니다."
+description: "Arch Linux에서 Wi-Fi 설정을 위해 nmcli를 사용하여 연결하고, Broadcom BCM4360 드라이버를 설치하며, dhcpcd 서비스와 netctl 패키지의 설치 여부를 확인하는 방법을 설명합니다. 또한 IWD 서비스를 통해 무선 네트워크를 관리하는 방법도 안내합니다."
 notion_id: "7b644e1c-5256-4a0f-9cf6-7b5cc2ffcc52"
 notion_url: "https://www.notion.so/Arch-Linux-WIFI-setting-7b644e1c52564a0f9cf67b5cc2ffcc52"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Arch-Linux-WIFI-setting-7b644e1c52564a0f9cf67
 # Arch Linux WIFI setting
 
 > **Summary**
-> Arch Linux에서 Wi-Fi 설정을 위한 방법으로, 네트워크 관리자를 사용하여 Wi-Fi에 연결하는 방법, Broadcom BCM4360 드라이버 설치, DHCP 서비스 및 netctl 사용 여부 확인 방법, SSID 확인 방법, IWD 서비스의 상태 확인 및 시작 방법을 설명합니다.
+> Arch Linux에서 Wi-Fi 설정을 위해 nmcli를 사용하여 연결하고, Broadcom BCM4360 드라이버를 설치하며, dhcpcd 서비스와 netctl 패키지의 설치 여부를 확인하는 방법을 설명합니다. 또한 IWD 서비스를 통해 무선 네트워크를 관리하는 방법도 안내합니다.
 
 ---
 

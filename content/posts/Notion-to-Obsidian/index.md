@@ -4,7 +4,7 @@ date: 2023-09-18T00:00:00.000Z
 draft: false
 tags: ["obsidian"]
 series: ["Tips"]
-description: "Notion에서 Obsidian으로 데이터를 마이그레이션하려면 HTML 형식으로 내보내고, Obsidian의 Importer 플러그인을 설치하여 Notion 파일을 가져와야 합니다. 내보내기 과정은 설정에서 작업공간 콘텐츠를 선택하고 HTML 형식으로 내보내기를 클릭하는 것으로 시작합니다. 가져오기 과정에서는 Importer 플러그인을 활성화하고 Notion 파일을 선택하여 가져오기를 완료하면 됩니다."
+description: "Obsidian으로 Notion 데이터를 쉽게 마이그레이션할 수 있는 방법을 설명합니다. Notion에서 HTML 형식으로 데이터를 내보내고, Obsidian에서 Importer 플러그인을 설치하여 가져오는 과정이 포함되어 있습니다. 모든 Notion 데이터를 한 번에 가져오는 것이 내부 링크 조정을 위해 권장됩니다."
 notion_id: "01ad5251-f7ea-4ee2-bc28-0ba9ffe07ec1"
 notion_url: "https://www.notion.so/Notion-to-Obsidian-01ad5251f7ea4ee2bc280ba9ffe07ec1"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Notion-to-Obsidian-01ad5251f7ea4ee2bc280ba9ff
 # Notion to Obsidian
 
 > **Summary**
-> Notion에서 Obsidian으로 데이터를 마이그레이션하려면 HTML 형식으로 내보내고, Obsidian의 Importer 플러그인을 설치하여 Notion 파일을 가져와야 합니다. 내보내기 과정은 설정에서 작업공간 콘텐츠를 선택하고 HTML 형식으로 내보내기를 클릭하는 것으로 시작합니다. 가져오기 과정에서는 Importer 플러그인을 활성화하고 Notion 파일을 선택하여 가져오기를 완료하면 됩니다.
+> Obsidian으로 Notion 데이터를 쉽게 마이그레이션할 수 있는 방법을 설명합니다. Notion에서 HTML 형식으로 데이터를 내보내고, Obsidian에서 Importer 플러그인을 설치하여 가져오는 과정이 포함되어 있습니다. 모든 Notion 데이터를 한 번에 가져오는 것이 내부 링크 조정을 위해 권장됩니다.
 
 ---
 

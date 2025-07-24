@@ -4,7 +4,7 @@ date: 2024-01-08T00:00:00.000Z
 draft: false
 tags: ["Arch", "ubuntu"]
 series: ["Let's Linux!"]
-description: "Arch Linux에서 Bluetooth를 설정하는 방법은 유틸리티 설치, Bluetooth 서비스 활성화, 장치 페어링의 세 가지 주요 단계로 구성됩니다. 사용자는 루트 사용자로 로그인할 수 있는 sudo 권한이 필요하며, 필요한 유틸리티를 설치한 후 Bluetooth 서비스를 시작하고 장치를 페어링하여 오디오 기능을 사용할 수 있습니다. GDM 사용자에게는 추가적인 설정이 필요할 수 있습니다."
+description: "Arch Linux에서 Bluetooth를 설정하는 과정은 유틸리티 설치, Bluetooth 서비스 활성화, 장치 페어링의 세 가지 주요 단계로 구성됩니다. 사용자는 sudo 권한을 가진 계정으로 로그인해야 하며, 필요한 유틸리티인 bluez, bluez-utils, blueman을 설치해야 합니다. Bluetooth 서비스를 활성화한 후, 장치를 페어링하고 PulseAudio를 통해 오디오 기능을 설정할 수 있습니다. 이 가이드는 초보자가 Arch Linux에서 Bluetooth를 구성하는 데 도움을 주기 위해 작성되었습니다."
 notion_id: "134a9801-45ca-4f93-8fc1-382d46d5a583"
 notion_url: "https://www.notion.so/Arch-Linux-Bluetooth-setting-134a980145ca4f938fc1382d46d5a583"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Arch-Linux-Bluetooth-setting-134a980145ca4f93
 # Arch Linux Bluetooth setting
 
 > **Summary**
-> Arch Linux에서 Bluetooth를 설정하는 방법은 유틸리티 설치, Bluetooth 서비스 활성화, 장치 페어링의 세 가지 주요 단계로 구성됩니다. 사용자는 루트 사용자로 로그인할 수 있는 sudo 권한이 필요하며, 필요한 유틸리티를 설치한 후 Bluetooth 서비스를 시작하고 장치를 페어링하여 오디오 기능을 사용할 수 있습니다. GDM 사용자에게는 추가적인 설정이 필요할 수 있습니다.
+> Arch Linux에서 Bluetooth를 설정하는 과정은 유틸리티 설치, Bluetooth 서비스 활성화, 장치 페어링의 세 가지 주요 단계로 구성됩니다. 사용자는 sudo 권한을 가진 계정으로 로그인해야 하며, 필요한 유틸리티인 bluez, bluez-utils, blueman을 설치해야 합니다. Bluetooth 서비스를 활성화한 후, 장치를 페어링하고 PulseAudio를 통해 오디오 기능을 설정할 수 있습니다. 이 가이드는 초보자가 Arch Linux에서 Bluetooth를 구성하는 데 도움을 주기 위해 작성되었습니다.
 
 ---
 

@@ -4,7 +4,7 @@ date: 2025-01-26T10:56:00.000Z
 draft: false
 tags: ["ubuntu"]
 series: ["Let's Linux!"]
-description: "Caps Lock 기능을 비활성화하면서 키 자체는 유지하려면 "
+description: "Caps Lock 기능을 비활성화하려면 "
 notion_id: "1871bab9-e3f8-805f-9781-c4d1e143aa9b"
 notion_url: "https://www.notion.so/Linux-capslock-1871bab9e3f8805f9781c4d1e143aa9b"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Linux-capslock-1871bab9e3f8805f9781c4d1e143aa
 # Linux 에서capslock 기능 끄기
 
 > **Summary**
-> Caps Lock 기능을 비활성화하면서 키 자체는 유지하려면 
+> Caps Lock 기능을 비활성화하려면 
 
 ---
 

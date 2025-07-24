@@ -4,7 +4,7 @@ date: 2023-07-25T00:00:00.000Z
 draft: false
 tags: ["Docker", "WINDOWS", "ubuntu"]
 series: ["개발환경"]
-description: "도커를 사용하여 파이썬 개발환경을 구축하는 방법을 설명하며, 이미지 다운로드, 컨테이너 실행, Dockerfile 작성 및 Visual Studio Code와의 통합 방법을 다룹니다. 또한, 도커를 활용하여 C++ 프로젝트의 라이브러리 관리를 용이하게 하고, 개발 환경을 깔끔하게 유지하는 방법을 제안합니다."
+description: "도커를 사용하여 파이썬 개발환경을 구축하는 방법을 설명하며, 도커 이미지를 다운로드하고 실행하는 과정, Dockerfile 작성법, 그리고 VSCode에서 도커 컨테이너에 접근하는 방법을 안내합니다. 이를 통해 C++ 프로젝트에서 필요한 라이브러리를 관리하고, 재현 가능한 개발 환경을 만드는 데 도움을 줍니다."
 notion_id: "36137e08-2f6a-4281-b300-e4020ed659f4"
 notion_url: "https://www.notion.so/36137e082f6a4281b300e4020ed659f4"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/36137e082f6a4281b300e4020ed659f4"
 # 도커로 개발환경 구축하기
 
 > **Summary**
-> 도커를 사용하여 파이썬 개발환경을 구축하는 방법을 설명하며, 이미지 다운로드, 컨테이너 실행, Dockerfile 작성 및 Visual Studio Code와의 통합 방법을 다룹니다. 또한, 도커를 활용하여 C++ 프로젝트의 라이브러리 관리를 용이하게 하고, 개발 환경을 깔끔하게 유지하는 방법을 제안합니다.
+> 도커를 사용하여 파이썬 개발환경을 구축하는 방법을 설명하며, 도커 이미지를 다운로드하고 실행하는 과정, Dockerfile 작성법, 그리고 VSCode에서 도커 컨테이너에 접근하는 방법을 안내합니다. 이를 통해 C++ 프로젝트에서 필요한 라이브러리를 관리하고, 재현 가능한 개발 환경을 만드는 데 도움을 줍니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/c84ffdfa-ad3c-40ca-8228-2e96fec1f73e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662N4XOVHX%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102102Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQDD5jQY3fEPGWEni480u1upOzULQL0zKsUF74RuhkAvngIhAJc6eSZY3TRzNlh8GoRusxsVpPCJmexUNtrz52c8xRJ7Kv8DCCoQABoMNjM3NDIzMTgzODA1IgwE0WhgHoNiDdcKvkMq3ANbZwN%2BKX1fezf%2BtUHO66tjKkX0%2FcpSz7cPJaBL5NqgvSmAgf7qFlPnhz8nJwqbZZnfsAONsl3lDTo8E3UlSdLVdtTEeRthEMd7%2BmdXIUrsQDR%2BnV%2FfvhatyixLoBbCOV0KMdOG%2FxeegzjBm05pkfxl9ovYOcMpgNaXf6t5PPKlSF8mX3p2W3MFbtVIGmYMFWiNIunDSl8nqSJomlSbnzUq%2FyIU82WW%2B4vXIUu%2B1biSWmisWCAUFTisByDg69Pcuz439IoJRD%2Bv7QI3UvV9rNazHCQE%2FFszhshlfw1%2FRo%2B8TbZEMGid23I4HbcViDrSScHd8wZLFDcL%2BHba0BSSDVH4KQW5r%2Fk21mZqqWQD7HOdJq%2FBnxniZK0BgvjgoAbttcFkZj1imi4jv5A8bJTWnsoNZ9Fq9bqnoHoSTRBLkxwtFw%2B5AcKtlE6JZBJgftHQokUCdpIgh%2FSoZ%2F9cfDhMCc8sb6F7C8Ek45jhVmh%2BvUrOU%2Bn9urPDyPLb7AfaBz5PkH8uXE8v%2B7CTxTc%2B8q11bXsuULMK7vvbpxKYY7acE4KByzuV6pyqpct9BW8RWY%2BGzHEN2MCqL9deNpFLsoSpptSGgdyVWZmNxtisP6j%2FucDIGkHkaU1QHZCUpdvypzCR9ofEBjqkAQbK11beVyIWISTvfsXsAEGnE1kW4fg1VSj7%2F8Ai4m9E%2Fe%2BFA4R8un3tziXy7GWkb7XZY3Kv7DDajyT1eB4kBkHErIPcyZ6ius2l3FF7Ai5adu2nPueGacOsueM%2FKRb%2FlWWzI7I8uxAVWQNvGBKU7Rn0%2Bq6NK4TeiYTLdeuXYsXMOk7TKBSAQH9jDvUVlfc829w1A5WHfbElusJvdAozUHr19yGl&X-Amz-Signature=4fb16e15e72e606c2882572a3ffd46724104fd3b1523f5c52896d6e09c092e59&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/c84ffdfa-ad3c-40ca-8228-2e96fec1f73e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466XO3ESXYB%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115947Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLXdlc3QtMiJHMEUCIC6kx3Skf5uuVuo53N4OsPwwuMbw5%2BIb9Mf4XX75kyrLAiEA8kxVUUlKjeh%2BxoCbeHRLsb%2FOf81EgKm4XFUQQNx4Zz8q%2FwMILRAAGgw2Mzc0MjMxODM4MDUiDMM33xV53GtB4o23ySrcA9fnRYoeqrJp0eIoK%2F09yJyS7YRcTpTNHksnXzjrzUYRGpXFpcFEqFUT%2BzoLzLxDzOUH%2Bn0wjHGPlT3omAQFmuJCED8Z7YNM0AEKS1kyzGhhxsu6yYl6MvN8d4Ajw%2FYeiPDc0FgQLwkURNQnipdFCuuZvs%2BlFM1XO2pZuQir8s8Hx%2Bw5G0xC6fWvr%2B9KX2ZwtMEg63r3c8jiFETBkMISxlqnmca6OtFnyaYfffD8xOVFllrYZFkuZgvRo6nkeNGt0IrxHxerSJKXUV0%2F9vxNHrIU0G95pkJZvP4rikb50GhOpD87RRzeujpXMoB61vSLNKGXp%2B4tE7cyQlJ3c3DpKRZ6WJkMN2imxEgOT0MU%2Bu4C%2BtT2eJtjk2HkRKl%2BQ%2BJ3QY0nXd7vCDThxmj2zf3kCXCGgkhjKVs74AR1BsuUSxvUQZ4J5BzWA0ZD256XVntR3D3RcmjePirH%2FULqvfiGBLglR%2F3GQl2qwD8EHb2ULv9ZXXJ25ptBrrgqvMRGgP%2FcsGdl6%2BkJyxLOSqwH4VJrII4NwAWzQddtqS7dTOLZblT%2BvqMm7X%2Bu%2BRbDqV4vCj1p0qgTmuM2FkI8CVLz%2BEvtyw8aGf4oZEYnqdK2rNk1sQhDsumVs4uoU50Zq5UOMLi%2FiMQGOqUBuImABR2G7uz9V%2BvfYxrJj8uHF3U8gdvSYo5FOJPcWXQdohroIGAZcJ93bPft%2BFRx18VqncysfrzkkKhyhXjD3SfN3o2jmUY5bcnyfh3k6vht2LYAuIyyVPj1iiO9AizmNnj7elHJTON%2FgTCsJsWglDmkZXDuFtHNd1OJCCglmtCrrrDUY5cZDbRBas4gdW%2FJLIbCS%2BNUhDNsIm3UyVU8bq0Ro5Sl&X-Amz-Signature=82cd9d8e3f15c1ccfe1c6a74760ec436dbc925b063efeec0c19072ad01741055&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🔗 [https://labs.brandi.co.kr//2021/01/20/hwangsg.html](https://labs.brandi.co.kr//2021/01/20/hwangsg.html)
 

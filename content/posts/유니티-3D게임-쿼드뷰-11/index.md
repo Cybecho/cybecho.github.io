@@ -4,7 +4,7 @@ date: 2023-02-22T00:00:00.000Z
 draft: false
 tags: ["C#", "UNITY"]
 series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
-description: "카메라 쉐이크 기능을 구현하고, 충돌 시 발생하는 에러를 해결했으며, 미사일 폭발 효과를 추가했습니다. 각 기능은 C# 코드로 구현되었습니다."
+description: "카메라 쉐이크 기능을 구현하고, 탄피와 몬스터 충돌 시 발생하던 에러를 해결했으며, 미사일 피격 시 폭발 효과를 구현했습니다. 카메라 흔들림은 플레이어가 데미지를 입었을 때 발생하고, 특정 조건에서 객체를 삭제하는 코드의 중복 문제를 수정했습니다."
 notion_id: "56f24504-34fb-4ec5-bafc-b29ddb4258ba"
 notion_url: "https://www.notion.so/3D-11-56f2450434fb4ec5bafcb29ddb4258ba"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/3D-11-56f2450434fb4ec5bafcb29ddb4258ba"
 # 유니티 3D게임 쿼드뷰 11
 
 > **Summary**
-> 카메라 쉐이크 기능을 구현하고, 충돌 시 발생하는 에러를 해결했으며, 미사일 폭발 효과를 추가했습니다. 각 기능은 C# 코드로 구현되었습니다.
+> 카메라 쉐이크 기능을 구현하고, 탄피와 몬스터 충돌 시 발생하던 에러를 해결했으며, 미사일 피격 시 폭발 효과를 구현했습니다. 카메라 흔들림은 플레이어가 데미지를 입었을 때 발생하고, 특정 조건에서 객체를 삭제하는 코드의 중복 문제를 수정했습니다.
 
 ---
 
@@ -123,7 +123,7 @@ notion_url: "https://www.notion.so/3D-11-56f2450434fb4ec5bafcb29ddb4258ba"
 >
 
 > 🔥 **미사일 피격시 폭발구현**
-> ![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/75a3dc15-4b6b-4dec-8dab-2623d6ea77e9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46656JSCN5J%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102311Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQDbcDd9HCjGWjaGAJLylTxLqj5utTxZL46pxEmvPiaPZAIgL6HugLwy%2FahjxPClKnntKDbQFwdV3QYWiuOtCtGRHzYq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDIhrKeCXEeK3r2lCcCrcA%2Fe%2F5RNr6kR7YfKb97wZFPzgrMNVvje8pId5gZthJkoI2yr3y3alqOeD%2FP8K0C3p5Ky9XgXENnlrpoIQIXNv7jv4ehbIeJ01OlsYFORGei1aqzzUAxPDx10gsYHGjXv7RjDPmLvH2bxeM7%2BLVcFNshva2f3sDZikHTpLMFXGj2AuqwlT1lbLI1%2BNkmLRctNG6jdddt7976NtLLhLJY6z8Why0x6tOrwttV%2FOVk%2BZnKBsr8gweZtj%2ByV569XKz2NH3lbb2UaPwoejD2Ye68fdi67iwAa3wH499tl6KrWsDYJvESqJM7eI4v%2BhsT4VSNYd0dMkdluQf2XQ4Pyll8yxLVqbpkpr5UAqnMhqX1H71O%2BP7PzI%2BO3%2Bhc6wNlIp%2FD3UwRWqthGhO6Z6Q5gZHTvGJd2hKpddRftmQxhC1xmdHFMh9PLyTmcyQS5Tc7St8Z1fAdcXTTcn6gcuSDvdpUAKCtqymthApGAq5mYiizAiRqz%2BQOZhJ0CsjjqADHuyjb5o3s73Pp%2FICS9vlRitcTyYtnmZB3hI8JC6hhd0rkVXI5PxAUzx7Z6LZ6SZIpJgRPP%2FX22jM%2B38swQOEliar5VO2D7e2X%2FYqumiuhEiFkmWPt9Fem13Xf%2FXfXv%2FcsoDMNb2h8QGOqUBP5u1J3E6CwCdbm65zvznKY4nAFKstNQx8ui2ys7lbq%2B1IPP70%2BGPUpsUxdJO6IB1S6S9otYezwXpyQV8BlJw3g5Jenci77r7IzvQ5X8yOp4rTHc0aRKNbNnEKpi5FQAdyFDkuR%2FLntm1cpKxlE5JhPEPOgxFFdbOvNJhhXU9zuNUj9KtNB4RaIP%2BB71bMRL%2F%2F4Z45hTHgJtvKwz9kz1NqniGla%2FL&X-Amz-Signature=b5b2b8813bdccb9338c6e56b531d384670d839a20b4f9dfbd94b6e8f4a27ee3a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+> ![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/75a3dc15-4b6b-4dec-8dab-2623d6ea77e9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466RXSIECHO%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T120216Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLXdlc3QtMiJHMEUCIF6tqFrZ7Y%2Bjsyf%2FOfwW4ygZsBtvWQpuogCnGQ8%2FwFDXAiEAuVs073yl20MBPq71NtL4O%2Bu9%2FdFkBQuFimGp1Oa2X2Aq%2FwMILRAAGgw2Mzc0MjMxODM4MDUiDNSUnmDvDPVH1gzeoCrcA7EfAi9WFEXS8IWMYZPkMfaT99jjAJufMj%2FdaZ%2BgteGl47MSToLGvHVCogoZ1Tb93t9%2B7cdj9BiR4u9oWMx0Lj5eAZz2X1DXY0mfizGGHkRb91%2BDrj5O845k2DcylOeoWIudYLp0FfQhOfplrwGl9VefFl9Qnl93QxRHp%2Fe9HlMdAtu%2FzWFs4aj5jGD6h9k3fIpKimnbbMlZO0RrTtLdCA6ZDO45KTBz5TXomS5UbEYtMpD15ODBAJKKY0dnXdDfSxPF9e4MEDh0IZ8S9FSzfrUOygspxthSnbLkaI2KDOcYRRiAuBMIcAQ0b5dAqbHpMCcTj0rYFuh%2FfNHWO8qDvP7%2Bz64NTcSNpWzT8kAp47Dhpw1YNTjvZpTw%2F%2BArsGO%2FazsL%2Bj80PTbAaxEQ0zS7fvVAQb4fU%2FYTy1JQjIc7VkSWqc90jiRiGiiCOvQpOVGlFVTNiMvkryfZEWKvbrEhsMuuDH69BbRoxUS3AC9WN7BVyQhn1e9d05xMzMKjUnJVsuLEQfSHjiEyvvA1l2UGtPNsi9tXVS5EOm8yVZeG%2F%2BeDEEpmYDLUjCWcFhrf0fHtR8EWQFOXICWNo42WfvBz7rL6P9CW9Zh4ZiUs7QTKlJESibhuzXzH1bZulCWaMM%2B%2FiMQGOqUBOqJYxT0rWKu6LbZtBHusd%2BoxnWE%2BDMvr1I52UCnAAOjt7u5bYguLTeFU%2FRk52MT0QXRN2BZ4xf60fSKPtUlcd0pFP5%2BTgJ%2BcBeO2OhI4wefCuqYm4VHRLCbsc8%2FjPt67jV%2BFXedm0oeQEyuEEDj%2FEy6HB8xMW9EVMRHCZAZCC3OaY9CBEGrzlsfgXkMKj0EexAXZIRKXvQawUFC2KD%2BMy6Ehi1SP&X-Amz-Signature=f809b0925d244efca1dbe7ce2e67b6d8e206a7463f7441ed00e07b5b755e057f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 >
 > Grenade에서 사용했던 파티클을 그대로 사용했고 Simulation Space를  Local에서 Word로 바꿨고 Emission의 Rate Over Distance를 조절해서 폭발을 구현했다
 >

@@ -4,7 +4,7 @@ date: 2025-03-05T08:31:00.000Z
 draft: false
 tags: ["ProxMox"]
 series: ["Infra & Network", "Let's Homelab!"]
-description: "ProxMox의 네트워크 모드에는 브리지, 라우팅, NAT, 본딩이 있으며, 각 모드는 가상 머신의 네트워크 연결 방식에 따라 다릅니다. 브리지는 가상 스위치로 작동하여 실제 네트워크에 직접 연결되며, 라우팅은 서버가 모든 네트워크 신호를 처리하여 여러 가상 머신을 인터넷에 연결합니다. NAT는 내부 IP를 사용하여 호스트의 IP를 통해 외부 인터넷에 접속하게 합니다. 본딩은 여러 네트워크 포트를 묶어 안정성과 속도를 향상시키는 기술입니다."
+description: "ProxMox의 네트워크 구성 방식에는 브리지, 라우팅, NAT 및 본딩이 있다. 브리지는 가상 머신이 실제 네트워크에 직접 연결된 것처럼 작동하며, 라우팅은 서버가 모든 네트워크 연결을 처리하여 여러 가상 머신을 인터넷에 연결한다. NAT는 내부 IP를 사용하여 호스트의 IP로 외부에 접속하게 하며, 본딩은 여러 네트워크 포트를 묶어 안정성과 속도를 높이는 기술이다."
 notion_id: "1ad1bab9-e3f8-80d8-b1f7-e01b801ed27c"
 notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e01b801ed27c"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e
 # ProxMox 네트워크 모드 - Bridge , NAT , Bond
 
 > **Summary**
-> ProxMox의 네트워크 모드에는 브리지, 라우팅, NAT, 본딩이 있으며, 각 모드는 가상 머신의 네트워크 연결 방식에 따라 다릅니다. 브리지는 가상 스위치로 작동하여 실제 네트워크에 직접 연결되며, 라우팅은 서버가 모든 네트워크 신호를 처리하여 여러 가상 머신을 인터넷에 연결합니다. NAT는 내부 IP를 사용하여 호스트의 IP를 통해 외부 인터넷에 접속하게 합니다. 본딩은 여러 네트워크 포트를 묶어 안정성과 속도를 향상시키는 기술입니다.
+> ProxMox의 네트워크 구성 방식에는 브리지, 라우팅, NAT 및 본딩이 있다. 브리지는 가상 머신이 실제 네트워크에 직접 연결된 것처럼 작동하며, 라우팅은 서버가 모든 네트워크 연결을 처리하여 여러 가상 머신을 인터넷에 연결한다. NAT는 내부 IP를 사용하여 호스트의 IP로 외부에 접속하게 하며, 본딩은 여러 네트워크 포트를 묶어 안정성과 속도를 높이는 기술이다.
 
 ---
 
@@ -43,7 +43,7 @@ notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e
 
 ### NAT 구성
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/a85efdae-4b2a-48b3-8b2c-ba675eb68545/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466QAAUMTTZ%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101537Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQCFL6IMklnVky%2BY5TVK3JU0QDK%2FkqcyCxP0uk53ZkMiNQIgEmmXbRp9obri20qKdBnUUR5RfmYxoBTem9PzfMk%2BNWUq%2FwMIKxAAGgw2Mzc0MjMxODM4MDUiDOjBUn2xiDhJhlIIjCrcA6NDnbJw8AVdCntmiE19vJWYs64qloqAeqOZZRhmiBMtBKbZdXCi%2Fu3emEZOjwAQd7i9JitO1w83xci1986v6zQcpV22ditrXOA0g0NRrDHmWZn1BvGktRjwzw02AlvvBvVkAb6NUdoXKkzNgJQBwVD97pQSS7TFLiexXh5R53B7VP0eJiIjPGya6k305mgVMZhLUfpkwkW1oy2wI3LKmnJP4TcXOFeFADQ9ds8jMy8ZdbWerInQO59LX2xD3lOmPk%2F5HBmNzugfKcleOTQUJODp63NLE7EItvLv8t6zB7JXBkz%2FqByBQ%2BwIlHnw5%2FlZriYnJCZwyyezJGp3kmJmXdAOnb3uaBB7w7U81afokUHM%2Fw21RP%2FW2CMl3p1qPmvDHXg2wwnLhuB0lxTTSTbjB%2FeX04sW5xMBTpMoWgpDtxSBBCG2TtsiZX2e4rIC67K4BhnoX1zJUYrZc6Y7IdL7AVJC6oPil2kexB6p%2BXQAGlFlD0kh4ejE%2Fo3H0B2Vs3D%2Bm17gKl%2F0uKG3d73284rLPTYA1qjFMs%2BXkD3FTKm33r7%2Fg25pXIXBiLRk%2F1Hp2nZtnXk3PdiXRZULUpYJ%2BZo%2F6PtirN9XAesifNMZRxzaCXgwq22VYF95iIfhapZrMN%2F2h8QGOqUBw2npIXvjA%2FaFf48yIBe0%2BGV4yN%2BSaEZZW5LVqPIiLbqiAxZrpDDjzeco6joaTnewmZ9AGgje6sEs8TqojzQ57QIasZYbXtwnUvssnEe%2BIedZFJDNyBpwskeLAzb1dnbKMqhQwyUEPFYuqQltVyPF0vAYnfyak1O45Byx4XbcZx8ZFmnevStzWYqDsO3Kz7vsuxMS1%2BF9gzIhlEgbCy1X1EEG%2Bq5w&X-Amz-Signature=5d30347089aff15629e1b55c226267b665cded89bf517ae06854d8baf394c070&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/a85efdae-4b2a-48b3-8b2c-ba675eb68545/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466XFFR2TXB%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115350Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIEgj3D7tLC05xBuu%2Bpwj9T0cBhJFEv0i9VxxGoow66mHAiEAs8Epm80toNzKX20LQFQLWdFP2MflJJJ8j5%2F2R5blOoIq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDAvOJ0brwbo0u7fKdSrcA150pjTgFO1JvAnxGH3B9mPyFeIldPSuDFv5UIFF76Dd%2BjAFFY%2BFEFywRvpBY1FcCyAWY4gbM1axowavJCyO6L%2Fo6xekp%2BSUYJTwL1iAIkmls4yovI2OAHWcAfZuLvOahySQfU4XSVNAWVIDZSDAE9oVepA8x%2F3tsvQjvzEXmEBz782NwVjj3Z790N%2BwZZlrmZnpwBBsj6QPFX3lfhiM%2Bx60SyBBsh5vrqYFnBYxQ2hu%2BfPIqI56NlsQMf8P6%2FBTfVc2GxLe5AlSn4yLpDMofwF%2FL8KVrGYNJ8SoD2XQv9JxF%2BXbA9i14ljhaqcc0%2FQRfGEnUOf2fwtKZBSHXJ%2FNJNALVr1DYvk0TgIrjloYAMCzNsV%2FbihH8va5c9afSUaJL1dslVA0bpi3OM5kATKHhfmtxexdUI7f9zog8jU6C%2B6xEerV5rMH2PF%2B54yt9Fgk5Ux7yOiIEIXvdvuEP4wp%2B%2BfYw8IHMJzI03DcRn7WTaL%2FW8M2kzXIkTussrScaB7Z23p%2BMjJJlu7f%2FZCTEYrVcBNAJoOtP%2FCQpjdtM2QpDKg5ncEId2%2FqCYo3%2FtV6EjKv1zfG%2FcE%2B%2F0kpWL867JId1%2BQQdvJjepCDwL7U%2BbEneERQU2tsPthpVZJ9GSdqMISbiMQGOqUBay%2BJdjfUSg38Ykem6%2BW8HK3u%2FXjMmwuFnQPw%2BkMsU%2BfEIJKGd%2FMWnhyPeKEJMcm8xtdWKKoEGEOSw6aom27MmY7BtGiPakNsU3oVMm%2F4psVa4x%2B9r9h1frAyrk5NOnyXR44fCHE5oNrZLTptiwI0WsF3fFMKiWsOEh2QD6kmYjPgvHJVBCCuWI%2FBiSa1CvPbTKNAnwagY3tXZyHa8xJpLGwHUsI6&X-Amz-Signature=b052fc327a8ad2131290d9ebecb71b56b0ab4b3c06dd0a4f25d8bf3425d4874d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 - NAT를 사용하면 가상 머신이 내부 IP 주소를 써도 호스트 컴퓨터의 IP를 통해 외부 인터넷을 사용할 수 있습니다.
 - 방화벽 설정에 따라 추가로 conntrack 설정이 필요할 수 있습니다.

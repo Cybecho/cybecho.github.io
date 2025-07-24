@@ -4,7 +4,7 @@ date: 2023-06-21T00:00:00.000Z
 draft: false
 tags: ["Git", "AWS", "shell"]
 series: ["Git"]
-description: "커밋이 GitHub 기여도 그래프에 표시되지 않는 문제를 해결하기 위해, 커밋이 독립형 저장소에서 이루어지고, 기본 브랜치에서 생성되며, GitHub 계정과 연결된 이메일 주소를 사용해야 한다. 로컬 Git 이메일 주소를 확인하고 GitHub 이메일 주소와 일치하도록 변경하면 기여도가 올바르게 표시된다."
+description: "MacBook Pro에서 커밋이 GitHub 기여도 그래프에 표시되지 않는 문제를 해결하기 위해, 로컬 Git 이메일 주소와 GitHub 계정의 이메일 주소가 일치해야 한다. 이를 위해 GitHub 설정에서 이메일 주소를 확인하고, 터미널에서 로컬 Git 이메일을 확인한 후, 두 주소를 일치시키면 기여도 그래프에 커밋이 표시된다."
 notion_id: "e13d33b8-ddfa-4201-8b7e-72cad16ab217"
 notion_url: "https://www.notion.so/e13d33b8ddfa42018b7e72cad16ab217"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/e13d33b8ddfa42018b7e72cad16ab217"
 # 터미널에서 커밋 박스 미적용 오류 해결법
 
 > **Summary**
-> 커밋이 GitHub 기여도 그래프에 표시되지 않는 문제를 해결하기 위해, 커밋이 독립형 저장소에서 이루어지고, 기본 브랜치에서 생성되며, GitHub 계정과 연결된 이메일 주소를 사용해야 한다. 로컬 Git 이메일 주소를 확인하고 GitHub 이메일 주소와 일치하도록 변경하면 기여도가 올바르게 표시된다.
+> MacBook Pro에서 커밋이 GitHub 기여도 그래프에 표시되지 않는 문제를 해결하기 위해, 로컬 Git 이메일 주소와 GitHub 계정의 이메일 주소가 일치해야 한다. 이를 위해 GitHub 설정에서 이메일 주소를 확인하고, 터미널에서 로컬 Git 이메일을 확인한 후, 두 주소를 일치시키면 기여도 그래프에 커밋이 표시된다.
 
 ---
 

@@ -4,7 +4,7 @@ date: 2024-02-11T15:00:00.000Z
 draft: false
 tags: ["ubuntu"]
 series: ["Let's Linux!"]
-description: "Ubuntu 22.04에 Visual Studio Code를 설치하는 방법은 다음과 같다: 시스템 업데이트, 필요한 패키지 설치, Visual Studio Code 리포지토리 추가, 시스템 업데이트 다시 수행, 마지막으로 Visual Studio Code 설치. 설치 후 검색창에 'code'를 입력하여 설치 여부를 확인할 수 있다."
+description: "Ubuntu 22.04에 Visual Studio Code를 설치하는 방법은 시스템 업데이트, 필요한 패키지 설치, Visual Studio Code 리포지토리 추가, 시스템 업데이트 재실행, 마지막으로 Visual Studio Code 설치의 5단계로 구성된다. 각 단계에 필요한 명령어와 절차가 설명되어 있다."
 notion_id: "9a43b4f0-2a01-4cba-bae8-fc2104de46e0"
 notion_url: "https://www.notion.so/Ubuntu-How-to-install-VS-code-9a43b4f02a014cbabae8fc2104de46e0"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Ubuntu-How-to-install-VS-code-9a43b4f02a014cb
 # Ubuntu - How to install VS code
 
 > **Summary**
-> Ubuntu 22.04에 Visual Studio Code를 설치하는 방법은 다음과 같다: 시스템 업데이트, 필요한 패키지 설치, Visual Studio Code 리포지토리 추가, 시스템 업데이트 다시 수행, 마지막으로 Visual Studio Code 설치. 설치 후 검색창에 'code'를 입력하여 설치 여부를 확인할 수 있다.
+> Ubuntu 22.04에 Visual Studio Code를 설치하는 방법은 시스템 업데이트, 필요한 패키지 설치, Visual Studio Code 리포지토리 추가, 시스템 업데이트 재실행, 마지막으로 Visual Studio Code 설치의 5단계로 구성된다. 각 단계에 필요한 명령어와 절차가 설명되어 있다.
 
 ---
 

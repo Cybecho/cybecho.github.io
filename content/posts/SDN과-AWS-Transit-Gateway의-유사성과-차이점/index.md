@@ -4,7 +4,7 @@ date: 2025-04-08T01:18:00.000Z
 draft: false
 tags: ["AWS", "AI Generate"]
 series: ["Infra & Network"]
-description: "SDN과 AWS Transit Gateway는 중앙 집중식 네트워크 관리와 연결성을 공유하지만, SDN은 온프레미스와 클라우드 환경에서 사용 가능한 광범위한 개념인 반면, AWS Transit Gateway는 AWS 클라우드에 특화된 서비스입니다. AWS Transit Gateway는 SDN 원칙을 일부 구현할 수 있으며, SD-WAN과 통합하여 동적 라우팅을 지원합니다. 그러나 AWS Transit Gateway는 SDN의 전체 아키텍처를 대체하지 않으며, 특정 클라우드 환경에서만 최적화되어 작동합니다."
+description: "SDN과 AWS Transit Gateway는 중앙 집중식 네트워크 관리와 연결성을 공유하지만, SDN은 다양한 환경에서 사용 가능한 광범위한 아키텍처인 반면, AWS Transit Gateway는 AWS 클라우드에 특화된 서비스입니다. AWS Transit Gateway는 SDN 원칙을 클라우드 환경에서 부분적으로 구현할 수 있으며, SD-WAN과의 통합을 통해 동적 라우팅을 지원합니다. 그러나 AWS Transit Gateway는 SDN의 전체 아키텍처를 대체하지 않으며, 주로 트래픽 라우팅에 초점을 맞추고 있습니다."
 notion_id: "1cf1bab9-e3f8-8098-b34a-e4bf431c8687"
 notion_url: "https://www.notion.so/SDN-AWS-Transit-Gateway-1cf1bab9e3f88098b34ae4bf431c8687"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/SDN-AWS-Transit-Gateway-1cf1bab9e3f88098b34ae
 # SDN과 AWS Transit Gateway의 유사성과 차이점
 
 > **Summary**
-> SDN과 AWS Transit Gateway는 중앙 집중식 네트워크 관리와 연결성을 공유하지만, SDN은 온프레미스와 클라우드 환경에서 사용 가능한 광범위한 개념인 반면, AWS Transit Gateway는 AWS 클라우드에 특화된 서비스입니다. AWS Transit Gateway는 SDN 원칙을 일부 구현할 수 있으며, SD-WAN과 통합하여 동적 라우팅을 지원합니다. 그러나 AWS Transit Gateway는 SDN의 전체 아키텍처를 대체하지 않으며, 특정 클라우드 환경에서만 최적화되어 작동합니다.
+> SDN과 AWS Transit Gateway는 중앙 집중식 네트워크 관리와 연결성을 공유하지만, SDN은 다양한 환경에서 사용 가능한 광범위한 아키텍처인 반면, AWS Transit Gateway는 AWS 클라우드에 특화된 서비스입니다. AWS Transit Gateway는 SDN 원칙을 클라우드 환경에서 부분적으로 구현할 수 있으며, SD-WAN과의 통합을 통해 동적 라우팅을 지원합니다. 그러나 AWS Transit Gateway는 SDN의 전체 아키텍처를 대체하지 않으며, 주로 트래픽 라우팅에 초점을 맞추고 있습니다.
 
 ---
 

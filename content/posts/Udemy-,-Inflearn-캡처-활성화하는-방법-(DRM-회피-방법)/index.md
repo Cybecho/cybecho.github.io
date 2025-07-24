@@ -3,7 +3,7 @@ title: "Udemy , Inflearn 캡처 활성화하는 방법 (DRM 회피 방법)"
 date: 2024-07-28T14:28:00.000Z
 draft: false
 series: ["Tips"]
-description: "유데미 웹사이트에서 스크린샷을 찍을 때 검은 화면 문제를 해결하려면 Chrome 브라우저의 하드웨어 가속 기능을 끄고 브라우저를 재시작해야 합니다. 설정에서 '하드웨어 가속 사용' 옵션을 찾아 끄면 스크린샷 기능이 정상 작동합니다. 문제가 계속되면 다른 브라우저를 사용하거나 유데미 고객 지원팀에 문의하는 것이 좋습니다."
+description: "유데미 웹사이트에서 스크린샷을 찍을 때 검은 화면이 나오는 문제를 해결하려면 Chrome 브라우저의 하드웨어 가속 기능을 끄고 브라우저를 재시작해야 합니다. 설정에서 \"하드웨어 가속 사용\" 옵션을 비활성화하면 문제를 해결할 수 있습니다. 문제가 지속되면 다른 브라우저를 사용하거나 고객 지원팀에 문의하는 것이 좋습니다."
 notion_id: "4f1fa16c-e765-442e-964e-9a103c1d1531"
 notion_url: "https://www.notion.so/Udemy-Inflearn-DRM-4f1fa16ce765442e964e9a103c1d1531"
 ---
@@ -11,11 +11,11 @@ notion_url: "https://www.notion.so/Udemy-Inflearn-DRM-4f1fa16ce765442e964e9a103c
 # Udemy , Inflearn 캡처 활성화하는 방법 (DRM 회피 방법)
 
 > **Summary**
-> 유데미 웹사이트에서 스크린샷을 찍을 때 검은 화면 문제를 해결하려면 Chrome 브라우저의 하드웨어 가속 기능을 끄고 브라우저를 재시작해야 합니다. 설정에서 '하드웨어 가속 사용' 옵션을 찾아 끄면 스크린샷 기능이 정상 작동합니다. 문제가 계속되면 다른 브라우저를 사용하거나 유데미 고객 지원팀에 문의하는 것이 좋습니다.
+> 유데미 웹사이트에서 스크린샷을 찍을 때 검은 화면이 나오는 문제를 해결하려면 Chrome 브라우저의 하드웨어 가속 기능을 끄고 브라우저를 재시작해야 합니다. 설정에서 "하드웨어 가속 사용" 옵션을 비활성화하면 문제를 해결할 수 있습니다. 문제가 지속되면 다른 브라우저를 사용하거나 고객 지원팀에 문의하는 것이 좋습니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/6c126562-f660-40b5-89d3-3d8a9da17ffc/Untitled.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664DDW2Y7E%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101742Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQDvQk1eE9TWPKUvblfyTS9AMJikey4T70iBgVJvPVmyQAIhAIPvLSxpFPHQZtytk9g62gIWTdQL7pF9zdxPYhg7r3oZKv8DCCoQABoMNjM3NDIzMTgzODA1IgyI0WlF5LSBQ%2FMMWFMq3AOFdlH8cYWb%2BeL7rKy4%2B0hxjoxL4L%2B3KFdRznfrJPvpde4T68bwRYPvoiHrsb9JWL4hK8%2FUdOqmFxfGApONXG5dnZuC7Zz62VY4njVa96vUPQ%2Fb9y%2BE%2Btg9f%2BpsfxMa6p0JRs4aO1ke%2BOQ5CBSXXhmXsFMWGYRGWJsG%2FtQGxFFnB0qm77YUR%2FCAYHkdx3bHfqyXUd%2B7bp%2FSHyL%2B4oo5AAwdWq98YyCPpocCuraidIzzZ9jl22Q9rrvEq3n3IDCNzvWbVkBRDuTrBsxZt9zRvJiPtZ2fjbJzEQFKdLGhTBmAiK7hpOKIGOZhIOGATpV29ONpmTXcNkdue6KWuzYqGmkr0m1Kgd8et6noM01AM%2BdGOTtOQ%2FAzu3iupKNlticyprvnqwDeOkU%2BWnc6h7YDtU4q6B8F%2FQMpJeNg6G%2BibhTN7TjCUQOT6k5z7WOgfn%2FMYjBrWn4Xy2PTQu9jNeARDNbPGlBbEgWIACHvuPVky6Gw7wltaioDtBV4y1ayxxCo2vCmCphCVBua6qTzb1pyZWpTZ5xMDX6q85M0I003ENwvsDmx4ntowGdZzchkqkhDDHF9W%2BmHAxC7zNX6Ooo6vibKeHZ752DfyWyjTMj2behQj0nZmuC3xQxF3bGM%2BjC89ofEBjqkAULhd68Embl90DCC78B3a8vTVsWS2mnL%2BbzsGVZjetQpI1tTUObrGTYCD1l25PpKkLulYzewtM5yEQx9WACF6n5Svkh0Wg899aRFcefSp6AejD8hElTcbOl1q0zxSd2ItWL46Pt9EbYJ8LNV4nABme80U0VFGtrvDBxIym9FEh2Ut8cD2Q4kriMhLMpDRmTXr4g1ucZy%2B6dkeIZXfK4H5Xj96OH3&X-Amz-Signature=6b739d065ebf742ed1ce382c53983bfa04a95237fd15e52f4318acc1a0d699b9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/6c126562-f660-40b5-89d3-3d8a9da17ffc/Untitled.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TN6R6WQX%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115606Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJGMEQCIENxzWciZowa4pzPN%2Fv426YFzm42w4JjfYFahCntihxnAiAGVlTFczVd5JRP3Fl4%2B4uWKtObKNoi0j2xuFenEiz%2BWCr%2FAwgsEAAaDDYzNzQyMzE4MzgwNSIMoDvlg9rWchMJ19sZKtwDM9MB9PF91H07QPhU5D9jGcvcOTFRAqH4piMZ2%2FCd4nyQ8IiFmdsc16fPsc9wsflEMe8NOu3QaV%2BKI%2FSepjz3qT%2FAkgKjkxnrWWXjSrjQR%2BJ9xiBQbcy7kuQ14HWrmFfIV8rPJ7t8b7xnfskaWsT2YJMlmIeUCTWJw5UpbWM73SgPs6d2nnj9Sv2ymFPr3GEovx0rAu86OvWglHl0LVfwbdFlTH3fdGHItBMeLthfwYUx0krkQis9dw2t6OuGoPxXFth0rPmkUcCreyMxOPSxhAfjI9l2jxGeuYA7GzJX9OLaNQxcmYoTuC%2FQV49bp7jgDKgan84NgRy8Gf2qvEo2ffaCjVy6n1hkULIXpiS8VF9ZUJTopRuicp1H0zP4x2aafCl6klStM7njXN28OhlT1spoLNW54M8YTEPmRnEzamMILx9Ju6oRJop6phTAgSMY2NB2msT4R79jTVbt41Y95MXMrbeTc6sD8Jj%2B30Ym4X1L2OnqtRwjY5AN2aG7BiOSaFgo4hfRNwfVF6BrxU%2BA3VNwSPfhTZI9AjntjPUTUNhL6pVDOXZpSnkWc7cpvGTI1M17Vfm1VwWB06%2Fad%2FqCeq1oxldbH8NKsWl1S6h2DV2aFQUzT%2BKd9rdVRG0wtpuIxAY6pgHAV4hxf4STgSR%2FLRXZ7yOu4FQUqy3I3nRZc8CXI2t3EKtCyUfi9KwuIMmu4bZ608AHwXRQmUzJzUdtv6rfA2zgSBETvBMa9MLg8wtigbV6ht%2B4rQ7xOT1Wo3lXEVoYALg4DKG1TsIV7YiXQ1j%2BnGM3vGgUp11oOeURF1ApAr55EmohVMBuVagn7TirYQt06liU%2BuhJib59Qh%2Bn1D78ZvC3wHn0P%2Fod&X-Amz-Signature=69934aa188f0cb789e7c58e53b5229023a7fc0a297b54baad13156f7c6cf9cdc&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=DNf4Lm2y4CI)
 

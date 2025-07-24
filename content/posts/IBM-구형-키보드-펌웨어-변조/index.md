@@ -4,7 +4,7 @@ date: 2025-02-10T03:09:00.000Z
 draft: false
 tags: ["Other"]
 series: ["HW", "Tips"]
-description: "구형 IBM 키보드의 "
+description: "구형 IBM 키보드에서 "
 notion_id: "1961bab9-e3f8-805d-a851-fe877c67eb03"
 notion_url: "https://www.notion.so/IBM-1961bab9e3f8805da851fe877c67eb03"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/IBM-1961bab9e3f8805da851fe877c67eb03"
 # IBM 구형 키보드 펌웨어 변조
 
 > **Summary**
-> 구형 IBM 키보드의 
+> 구형 IBM 키보드에서 
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/26315cb6-5d8a-4dd9-8e5a-57e73d263ed9/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466QTVRKMGG%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101621Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQCNk5mrcCzVttLbIQYeBKCL71M5aFQSa3sWH%2B9hLFl86wIhALgsIKopH%2BVd3t7VL5anCETLapmJI97r1FN2Ju0C3WVWKv8DCCoQABoMNjM3NDIzMTgzODA1IgxjmtMmBUWfqmI0ZzQq3APWk9h48Nan0ktLM1fRRImS0Hej49t%2FPjd7IBKDiItOkAlwNtkSG01GVLFxmmZmcETstAq3A%2Fm3jdrV4w6HHxATg581uyuqrgdL35OXTklpVvp4DzEB%2FIoWwK1I%2BWjIhhr8RKfQntZJbott5Ka4yMq4TGq0EpslyHXLtvnSblv11HPpQLhiRwLp8%2FQh5s6%2FB%2FiUMMOGHJuysgMkYBm99S%2Feh0BnA6mETfS3xdeq02rNwGG0A0SE8WJpL2S85jpfnJPvGyPzdfZ5aIp3T8j%2FN28CBs3k6wAdw4Wk3z%2FHPZiAlRVXZISTvU8uhSSkiyfRlmaiztVXpom2EDvGOnNsfIgmhCaHy%2F%2Fc5yh4dExi1JPXGzawhsYMUbUf4DH1BZszInhYsHHMNQ110YA7ddzlFuTpXJ2I0TrnuIqgc%2FzQguR4P0LpRDxdlV8IUYssa1RFFYiceql93HaPlMwz2ldO%2FJ%2FuIdnTC7fmZCcP5JBlfXvDg0U00%2BgVL90ubOorH%2FKfiO10rfAI9G9%2B0tbhEc3nJf9ieg5%2FgBJk0BaGT8oZ3O2kbTqS7LJVS1P%2FHbcrfGlbLZCRd2D%2BYLt%2F8GI1rBudOTzByZiqD8rnE%2BR7tBUrhBVO5ADqBdZ5VZgv9PQE2TCU9ofEBjqkAU%2BSW7Go%2B1XYfOgc6Q4ePj2b4cqh9MLDvThp1dmkC%2BYhrL7XkrNn8NxrBRlaz%2FiOlJXPOoA8Qp3D6FFp3Gn3hiIIlE67vgfdHJHvK2Iir4f2Wo%2F0gat8eMOZ%2Bc1BQ5kD7JZjxeUtEd67k6zpv9%2BccVAmEawjwTkeeE4Jk4E%2Fe5bLcIST6lClmaAEriHzF5DChT8%2B3oJ21h3PdyWMLjVkKwRWwJ7P&X-Amz-Signature=f9759be371489d0619e6def1d5e519e53c264fca01821cfbfd1fc4b82b64dd1f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/26315cb6-5d8a-4dd9-8e5a-57e73d263ed9/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466ZEJFSRTW%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115434Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJIMEYCIQDUJS6%2BmU54JGrhsGucYErbwv6x2AKJqqoh8jgAT0yijgIhALn2QgUWhTjpRp9wmeWWhNa9pc4Bpt6QePyFVkFC3RTiKv8DCCwQABoMNjM3NDIzMTgzODA1IgzxBJMvR5BZZb%2F9f3oq3AMkoqUo9%2BubgvxJbVvODdOQFfvul99spGL5lrDX%2FkwjC6Qf3YiqDYjuNlsPB2JiYY1oFczI6ibHAEBiEh1NOIUdOZnKgmwbykIndx%2FZE8Jwbw75wMVmKS%2BuTBHNocve2Y0%2BbX%2B47z5hexElni2qj%2Bx%2FeOI23QqYk1ZVFXg5X0Btkqo%2FcetQ2sZwQwFh6NgHW2fgHVzFvmSU56vLuilnJn4i1kJbOgujQ2MRAcraKlZM9xv%2BzumBnlSDQUSPtt%2Buycg2tKKIJoUKcOms9k3GcEIao3X98N71c8GrbmPMEnNku1f9sKudstwDmZmyjrruQkEoWNyU52oWhcB2zurc38Sg85DZ3qv0ORTODq1Ao9zlcRVx%2FLtx02Nr%2BBpT5wVBztaMkYn9L4BXqN9TR1t9MhVeJI8clnhV%2BJyCn14CppGV%2F6URD5%2Fnp2P3kwXdFoUh%2FfhsAHHK%2FMTc8ZdjIJ%2FKjanWwrTnVQr7Tw4YxgobXAMtPRCLeAqoCPZXwYm%2F9OSJHI9blTTQUQjLhYbbc1lLScBFfVbYaiW5T9AWFczITPw6sV89GKAf5UH%2B4IKcgF3zYvySvvt01lzTW3D77myEumjWclP7dec%2ByTzccqlAiCLbLDVF4zLYcDFd%2F%2FvRpzClm4jEBjqkARLNQfPpf144ZIeDpNA0rIqy%2Bsl3RE463%2BX%2FCMHtUv8dAEd58NttP6Z9tAYINPpe1nIti%2BnVAoqGZSaSQ%2FLswVgYqTfLyBT8IDj38VM7nY6ZINjq921P5Dtv5BMPBIsnM8e3LSXB0EyrKHRYTA%2BL1q8Cr1BI1bqchiI6k0b2%2Bjk7ioRLY%2Bu9MxxfI5W5lV5TVscrYI%2Fe9G3xwTwQ91dnWfLjIgsu&X-Amz-Signature=a82824a6bdc3354b93f3499da4f7443fe781211619bf602469ffc24de444a03c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 [https://www.reddit.com/r/thinkpad/comments/ondeco/how_to_swap_the_fn_ctrl_keys_on_the_sk8845_sk8835/](https://www.reddit.com/r/thinkpad/comments/ondeco/how_to_swap_the_fn_ctrl_keys_on_the_sk8845_sk8835/)
 

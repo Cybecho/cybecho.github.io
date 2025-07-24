@@ -4,7 +4,7 @@ date: 2024-03-10T15:32:00.000Z
 draft: false
 tags: ["WINDOWS"]
 series: ["Don't Hate Windows!"]
-description: "윈도우 운영체제를 사용하는 사용자들을 위해 맥 OS 마우스 커서를 설치하고 변경하는 방법을 설명합니다. 파일을 다운로드하고 압축을 풀어 설치한 후, 마우스 속성에서 새 커서를 선택하여 적용하는 절차를 안내합니다."
+description: "윈도우 운영체제를 사용하는 사용자들을 위해 맥 OS 마우스 커서를 설치하는 방법을 설명합니다. 파일을 다운로드하고 압축을 풀어 설치한 후, 마우스 속성에서 새로운 커서를 선택하여 적용하면 됩니다."
 notion_id: "82c31900-393a-43f7-a172-aa9d3bfa0644"
 notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 # 윈도우 마우스 커서 MAC처럼 변경
 
 > **Summary**
-> 윈도우 운영체제를 사용하는 사용자들을 위해 맥 OS 마우스 커서를 설치하고 변경하는 방법을 설명합니다. 파일을 다운로드하고 압축을 풀어 설치한 후, 마우스 속성에서 새 커서를 선택하여 적용하는 절차를 안내합니다.
+> 윈도우 운영체제를 사용하는 사용자들을 위해 맥 OS 마우스 커서를 설치하는 방법을 설명합니다. 파일을 다운로드하고 압축을 풀어 설치한 후, 마우스 속성에서 새로운 커서를 선택하여 적용하면 됩니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/76cf1be8-f73f-40c3-8858-26b106fb746a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466T3FQNSCA%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101920Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQDFPMfc12tOpSMI7gFJwq3bP7Lj%2BwT2vJCenm6JtbqwcgIgaVZ4295ojjJYkZhLglSW57PGohZuxHBm%2FoQnq0U2ulsq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDD2JVcLZcu5IvVCxoCrcA897Pvn%2Bm8wQBkEMCKkgvgmy8DH2ci5M71SDRnzP7pepIbfFtPOIAU4JRG6MtVEVCrUrAoIP9fFDCU0zAZjLbpVTpP%2B3ZoWjfggZBjOM%2FV%2FD2q6t64qJ3ljUTIbj0%2FjgekggCAFa92sErAVsjiKrcKfQpg7EzY2Bvhf8zuRMAsZBa4qNgjacFjvzmJSwFzoFg3tqdzvv0i266XTbm9WZ%2Fa4mncvxC38GTIBgwSRYMHpIF61nqGESMfjBC49D%2FbjV3WJ7tJ3ZotBvknzW9eXJehOo0zVcNVGH2nKeg1S2lHpSXLmwPaPCZwOFy4AJ1E2TPrD21n5OlD8x8v35P%2BeKE1YSn55MYue%2FzA8q9GT6mNWWoyfEzlpA50Hdf8rF8es8Wo6VoywL%2FYedm2hX%2BdSMxWB8e6N1Nl8be9IH3thc9w2tZmNBfTJYvFMjW0tEAQt%2FURsj0pE9JNr0R18d2899XboRmrIx0hVWGC6vAeEGDK6aEyiM6xGDxAJ7tW98SynI2bKLf040XeyfTUbcNAQ7%2Bhi%2BH4x1ELFY7oWnWiI6CLb1oWZY8DgjtPlmvzbHsar4%2F0YMyhHyYuVGKfVB2kkuUAJI4rAW5Oyamxl87k3RhbLHGqfypUlbeflIzvZiMJX1h8QGOqUBaZNUqgD9MsqF5y8myVsrx18MWslgS64%2FRJ8MuSDF5cRB0mEnFtkUTnlXr7eLGhtcuD%2B6IlVdpB%2BEMgs37eDKSCy0GMVwQ6qSPo3v8RTcK0%2Bx9lAjkw8PJ9prsVE7qfmXtOAJifAaDT9VvJy%2ByiSgju%2FLU9z5TQarTlKiiizWTivvnFDBfgeskh6dIVLI8al7Q39u6Q9vl97pmsO9XJtWuH32WgWy&X-Amz-Signature=66d216e09c12e4c72af9b0bae741b84224223f7393b1cb7e75b4f9ff9f201053&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/76cf1be8-f73f-40c3-8858-26b106fb746a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46646UQ7B7T%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115748Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIQCWE4v6h7y2kKm9Rg3wDINtd6oQwM5r4fn0u3QCiyLIjQIgMXYLbiwTczRPpe4PrBLRddunlWr6EDRl%2B%2FjE6ZpjF0Aq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDGtSC2SzUj%2FhQONj7SrcA%2BIfhPMDPOCKRiHYUCLO2o%2FHgDIEJzH0iYi8IiXXnvB6Ksm9OKaH0iThdv7ymdi%2Bj2FyBpZqfhgZBvXzO9d8hm2NFU05ApDmaftZaKBLp%2FKPX9l1sSp5Okkt3INjgD0ruNGnKcxv7XeFh2U9XztJrwUg6bUTqe6%2F21KHIgO14WBMRkDx3fGDEM%2BrfVDUfwBnFSuAZNZS4L5aRPcdHIYyCLesOXGDHUybGJLAH%2BiYaQNJCmLtqFYRsP6%2F1fJVXW6xpAiY9zaQTbj%2Fm1%2BEEn7WcwpbFvrg7ppiw7%2FKoaC0uObW86qbFbkQI1RNGFCn8EtLJdN0wzOB6DIFoOnQZqa%2B3YABAFkLnOzTfcgnMII%2F2wEuQFlvu8Ffox4kp52pvQwYome8n7OSBp5XwAyKlkunu%2BdB04SeQFkqfqt6q396r6WwEOsSXRH8jVPOwBBiXwlPo54whEDy%2B5xCLC%2FxP2iKyvTL20P%2BPy1t5J956n8LDhCBlFA%2BGST9j%2BTf4nNOk0JRlSZqIj5P58BmGsAkPY8UX5foWxG0vFH35NTABjdxILB3UZJo2%2FcVhiv48bmR%2B0bhBFhLZkGAOezFoAaYLQuWa1O%2BD3JbPouBRrykWTTHIMVNMHVEnU9jevMgYTEHMKWbiMQGOqUB%2FKxG5ZSzRP27Xlio4GUOpHHkGzWWhZ4wPWnkkfyejeRvLMQk%2FjdXSMT7D6HzQiErcbAAew2Yd%2Fz8sMI0FY%2B8DJAPjiAH3K22Pu%2FMbmKKeD73aWdBP8Ok9rddX8XF5bA%2Bag0%2FQv1d8aStwjus748sJ%2BuQyFt%2BlOsTQAA%2BoRsrzGFSXa8LNkicNTiO2eXWPfJOUPBnhEOMQeeeXuZaatlKU0Es82JF&X-Amz-Signature=a131a334948878e0962ef741a19924ebc8d09f6a64fa7710b8feaa1616e2a672&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # 윈도우 커서 MAC처럼
 

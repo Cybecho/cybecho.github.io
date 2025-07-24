@@ -4,7 +4,7 @@ date: 2025-02-17T23:39:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Let's Homelab!"]
-description: "TinyPilot KVM을 원격으로 안전하게 액세스하기 위해 Cloudflare와 Nginx Proxy Manager를 활용하는 방법을 설명합니다. 도메인 등록, DNS 설정, HTTPS 구성 및 보안 강화 단계를 포함하며, 향후 공식적인 방법도 공개될 예정입니다."
+description: "TinyPilot KVM을 원격으로 안전하게 접근하기 위해 Cloudflare와 Nginx Proxy Manager를 활용하는 방법을 설명하며, HTTPS 설정과 보안 강화를 포함한 단계별 가이드를 제공합니다. 도메인 등록과 DNS 설정이 필요하며, 여러 장치 연결 테스트와 보안 검토도 강조됩니다. 향후 공식 지원 방법이 추가될 예정입니다."
 notion_id: "19d1bab9-e3f8-8013-a1bc-c99bf6b2b85b"
 notion_url: "https://www.notion.so/Cloudflare-tinykvm-19d1bab9e3f88013a1bcc99bf6b2b85b"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Cloudflare-tinykvm-19d1bab9e3f88013a1bcc99bf6
 # Cloudflare 활용한 tinykvm도메인 등록
 
 > **Summary**
-> TinyPilot KVM을 원격으로 안전하게 액세스하기 위해 Cloudflare와 Nginx Proxy Manager를 활용하는 방법을 설명합니다. 도메인 등록, DNS 설정, HTTPS 구성 및 보안 강화 단계를 포함하며, 향후 공식적인 방법도 공개될 예정입니다.
+> TinyPilot KVM을 원격으로 안전하게 접근하기 위해 Cloudflare와 Nginx Proxy Manager를 활용하는 방법을 설명하며, HTTPS 설정과 보안 강화를 포함한 단계별 가이드를 제공합니다. 도메인 등록과 DNS 설정이 필요하며, 여러 장치 연결 테스트와 보안 검토도 강조됩니다. 향후 공식 지원 방법이 추가될 예정입니다.
 
 ---
 

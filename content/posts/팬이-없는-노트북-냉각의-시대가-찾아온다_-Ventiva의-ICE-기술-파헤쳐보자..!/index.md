@@ -4,7 +4,7 @@ date: 2025-03-23T04:44:00.000Z
 draft: false
 tags: ["Other", "Util", "AI Generate"]
 series: ["HW"]
-description: "Dell의 Ventiva Ice 9 기술은 팬 대신 이온화된 공기를 사용하여 노트북을 냉각시키며, 소음이 적고 디자인 유연성을 높입니다. 그러나 고전압 전원 공급과 오존 문제 해결이 필요합니다. 이 기술은 팬리스 냉각 솔루션으로서 큰 잠재력을 지니고 있습니다."
+description: "Dell의 Ventiva Ice 9 기술은 이온화된 공기를 사용하여 노트북을 냉각하는 혁신적인 팬리스 솔루션으로, 소음이 적고 디자인의 유연성을 높입니다. 이 기술은 5,000V의 전압을 이용해 공기를 이온화하고, 기존 팬 방식보다 더 조용하게 작동하지만, 오존 발생과 고전압 전원 공급 문제 등 해결해야 할 과제가 있습니다. Ventiva는 인텔과 델과 협력하여 이 기술을 상용화하고 있으며, 팬리스 냉각의 미래를 열어갈 가능성이 큽니다."
 notion_id: "1bf1bab9-e3f8-80d9-9681-f01712226d22"
 notion_url: "https://www.notion.so/Ventiva-ICE-1bf1bab9e3f880d99681f01712226d22"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Ventiva-ICE-1bf1bab9e3f880d99681f01712226d22"
 # 팬이 없는 노트북 냉각의 시대가 찾아온다? Ventiva의 ICE 기술 파헤쳐보자..!
 
 > **Summary**
-> Dell의 Ventiva Ice 9 기술은 팬 대신 이온화된 공기를 사용하여 노트북을 냉각시키며, 소음이 적고 디자인 유연성을 높입니다. 그러나 고전압 전원 공급과 오존 문제 해결이 필요합니다. 이 기술은 팬리스 냉각 솔루션으로서 큰 잠재력을 지니고 있습니다.
+> Dell의 Ventiva Ice 9 기술은 이온화된 공기를 사용하여 노트북을 냉각하는 혁신적인 팬리스 솔루션으로, 소음이 적고 디자인의 유연성을 높입니다. 이 기술은 5,000V의 전압을 이용해 공기를 이온화하고, 기존 팬 방식보다 더 조용하게 작동하지만, 오존 발생과 고전압 전원 공급 문제 등 해결해야 할 과제가 있습니다. Ventiva는 인텔과 델과 협력하여 이 기술을 상용화하고 있으며, 팬리스 냉각의 미래를 열어갈 가능성이 큽니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/a5414508-93eb-45f7-af62-a84574ed33f5/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466SRHA3LMY%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101500Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIBIYmSqEwQwG6FUXb1K66s2S2p9Ylj%2FjMXr279bFT%2BhLAiEA2%2FdFGmpyWYNVRknXp37mE%2FfhkcN7K%2BJYRxc%2Fa5RczrMq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDEutyxtXlg5TXoCX3ircAxeBS1qa3CtXYRgqQGxV7GED8lfvbE3sbxSHy6Gko9HcftNjoVj4B6elVic91uXayA66PSUV6TSGhhVOpEoIeAt05k4euifw%2FxBknCCpj8m3AonbH9r9aFdLy%2BjcexcoZ91qmrrxq7it1jKl8ao%2FaA7QEdFKRnua3sxgOpuNXX1pUNT%2B59UP3FGA97ViHAnZzFWqT9wTT72qONnvl3TV3da0T6mv8N1VBO8I0nk1Fx1598cersELlvKueS0dGu34HpOMIIpPfbucbZ0%2F0g500Yw7GiygX1yGhRIJoz%2BN3qePQwTp1q8Y%2BkzqCGnpfBiyRH5%2FMcUOvzQM8DPCFEVdRHO24ArUMU1a4U5tvBjdi3ywhVwPzNaTpGTMN8NwSF95lP3wxMscuqRTgsHYMET83z%2BmkyFxarLMV26IhN9L2%2FLlWuGehp7nyxKHNwOxenlebHCHb5QcIa93T3CZ2fQp4hXaIm583%2FWV2wM7ugoI6nnNhv5EzvgsTUMdCa4Jw8SxJbHUWFHPl52hijVQOJ%2B67jQtPq%2FuKDHPA4qHbFQQPej%2BeTIBquWsXU6FzhRRbuaa2Y1eA60L9%2FQwPdIcX31PKk8YgNXKp%2BEtDkvEhSdLI8SZSMZp%2FrEhhHmn5vqxMKr2h8QGOqUBZ3%2FrybopC%2FmxJyfyL2hQmC4iXOASiBEtf8fLPg2pcwCo5XwhbbxyQhSOC8p4A%2FijFqZKAtAojq%2F%2BQVSQzlvWBEyZiXSTjr64Cr248yHnnU18e%2Fm4edmkqTylA%2BUZ2VACBvodVOgIMCQTJduwMVC58iR6MTfu8SCYTYWPpVo%2BfHgtV4qioTAe3fkUCGhxXdC6WvgcebpHGDW%2Fi2%2BxDqHir08OmvRW&X-Amz-Signature=a794863edcf34ac25dd1f3c0ab5f32819efabc70b74964e37a4202a58b202c65&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/a5414508-93eb-45f7-af62-a84574ed33f5/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46672DM2G2G%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115317Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJIMEYCIQDWIrhoMgKjTIzUoPTKbZybnY3dx0F%2B1UwDdymM%2BD4dpQIhAOtyNmAGH1ANzGUal0m8zWjP3IC55c5IrEiC%2BBeh9Ne%2BKv8DCCwQABoMNjM3NDIzMTgzODA1Igw%2FkocFNC0L%2FMRv9Voq3AOo42BEUvBDN%2Bud4B1PZelCon9u431stED6jE5DGHqIkpwFyuikALiO5ZWDsWFxy%2FMCIY2c9wzSg1r77wTU9xq0K%2F0G7TEgTlbzvpA9LQlL2AIDVWHzZKC8nCQEA38mtQYdRnHgLZkdGrkipokHcXSJh4CZ3dhBE5q%2BTZA2OTDxzlPZ6YFeZVBmfr70Vpu6pH02LSPPpYa1mrpstM9yYhpgnO1R4bQp4WgwrHqDqEE3eTPpWxWvmDH%2BbmfVA4AvvMx2iuE%2BzF231g1zqcwKW4TyxAzx%2B4eDDT%2B9NZxalM%2FEGOk1RG8%2BFHOMtJ1Dp2%2FNp%2Fa7aun1UJdz%2FE26cpNng6jjTtxwjdhX1WUC086YMoBvhnrKj3YXCZwc0gFKwvEv0geOlsjWKytNqCEK2Ce1qKtxPG14GQWHP8YCSrAdkct1getGomHV8eXohQcsjep7OmqEZSCeepFuOjtO2HXBCDPw6q3Ai2xsqs2lO2426qywCsBebYvr035rjTSG2SWNgUlc5HAPwvmZOQJzNgF%2Blgv047NRPH%2BW7Dj3mWLFEv8Rwfg%2FTLI3NBqEWCqJRn%2BmJLHaT5rIsWg46yuU944DJU1F88G66mJ0qZ4IAQsJGd%2F72%2FtDed%2B8TFfsckJnzzDKm4jEBjqkAWg%2BTFQzrhSoQ%2FQbBUWtSSmCJVKgXWBiyM1fVHUZbEwZ8zSN4iie05xOVs9dE788K8JxaLBDDJwPlMsJ%2FfuYdjkgBBcx6GOjRnEMhkoj1zA90vEoVmjna2h%2F%2FW2Pp9Nc6VJXrbg3sJNV9ixKzWurhi8XG0M%2F65ad0XOBmAKGwrs%2BvbWTFDXSmZ7YB0zZmhiuzP6wL4jxE1CQ0uxFyP2p7kcuJT1x&X-Amz-Signature=61b9487e4763ffd9752592db318cc4ef43c9cc1064262cace529858d0a56088f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=2lTWI7kfkt0)
 

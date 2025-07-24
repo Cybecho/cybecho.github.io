@@ -4,7 +4,7 @@ date: 2025-01-26T11:53:00.000Z
 draft: false
 tags: ["ubuntu"]
 series: ["Let's Linux!"]
-description: "Gnome에서 Albert 프로그램을 부팅 시 자동으로 실행하려면 GUI를 이용한 방법, "
+description: "Gnome에서 Albert 프로그램을 부팅 시 자동 실행하도록 설정하는 방법에는 GUI를 이용한 간단한 방법, 수동으로 "
 notion_id: "1871bab9-e3f8-8040-a9bb-d69d940550bc"
 notion_url: "https://www.notion.so/Gnome-1871bab9e3f88040a9bbd69d940550bc"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Gnome-1871bab9e3f88040a9bbd69d940550bc"
 # Gnome에서 프로그램 부팅 시 자동 실행되도록 설정하는 방법
 
 > **Summary**
-> Gnome에서 Albert 프로그램을 부팅 시 자동으로 실행하려면 GUI를 이용한 방법, 
+> Gnome에서 Albert 프로그램을 부팅 시 자동 실행하도록 설정하는 방법에는 GUI를 이용한 간단한 방법, 수동으로 
 
 ---
 

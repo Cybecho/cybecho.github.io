@@ -4,7 +4,7 @@ date: 2025-06-14T00:56:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Infra & Network"]
-description: "VirtualBox에서 DHCP IP 할당 문제는 MAC 주소 변경으로 해결할 수 있습니다. DHCP 서버의 리스 캐시 때문에 기존 IP를 계속 받아오는 문제가 발생하며, 새로운 MAC 주소를 생성하여 DHCP 서버가 새로운 클라이언트로 인식하게 하면 새로운 IP를 할당받을 수 있습니다. MAC 주소 변경 후 Rocky Linux에서 네트워크 인터페이스를 재연결하기 위해 추가 명령어 실행이 필요합니다."
+description: "VirtualBox에서 DHCP 캐시 문제를 해결하기 위해 MAC 주소를 변경하는 방법을 설명합니다. DHCP 서버가 클라이언트의 MAC 주소를 기억하여 이전 IP를 재할당하는 문제를 피하기 위해, VM 종료 후 VirtualBox에서 네트워크 어댑터의 MAC 주소를 새로 생성하고 VM을 재시작해야 합니다. 추가로, Rocky Linux에서 새로운 MAC 주소를 인식시키기 위해 "
 notion_id: "2121bab9-e3f8-8030-8218-c7854078f965"
 notion_url: "https://www.notion.so/VirtualBox-DHCP-MAC-2121bab9e3f880308218c7854078f965"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/VirtualBox-DHCP-MAC-2121bab9e3f880308218c7854
 # VirtualBox에서 DHCP 캐시문제, 그냥 MAC주소 바꾸니까 편안~
 
 > **Summary**
-> VirtualBox에서 DHCP IP 할당 문제는 MAC 주소 변경으로 해결할 수 있습니다. DHCP 서버의 리스 캐시 때문에 기존 IP를 계속 받아오는 문제가 발생하며, 새로운 MAC 주소를 생성하여 DHCP 서버가 새로운 클라이언트로 인식하게 하면 새로운 IP를 할당받을 수 있습니다. MAC 주소 변경 후 Rocky Linux에서 네트워크 인터페이스를 재연결하기 위해 추가 명령어 실행이 필요합니다.
+> VirtualBox에서 DHCP 캐시 문제를 해결하기 위해 MAC 주소를 변경하는 방법을 설명합니다. DHCP 서버가 클라이언트의 MAC 주소를 기억하여 이전 IP를 재할당하는 문제를 피하기 위해, VM 종료 후 VirtualBox에서 네트워크 어댑터의 MAC 주소를 새로 생성하고 VM을 재시작해야 합니다. 추가로, Rocky Linux에서 새로운 MAC 주소를 인식시키기 위해 
 
 ---
 

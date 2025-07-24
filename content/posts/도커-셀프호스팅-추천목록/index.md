@@ -4,7 +4,7 @@ date: 2024-07-10T02:52:00.000Z
 draft: false
 tags: ["Docker", "ProxMox"]
 series: ["Let's Homelab!"]
-description: "셀프호스팅에 유용한 도커 이미지 추천 목록으로, Wireguard VPN, Bitwarden, Plex, Guacamole, Portainer, Nextcloud, Gitea, Joplin Server 등 다양한 서비스를 포함하고 있습니다. 각 서비스는 파일 동기화, 원격 접속, 비밀번호 관리, 미디어 스트리밍 등 다양한 기능을 제공합니다."
+description: "셀프호스팅에 적합한 도커 이미지를 추천하며, Wireguard VPN, Bitwarden, Plex, Nextcloud, Gitea 등 다양한 유용한 서비스를 소개합니다. 각 서비스는 파일 동기화, 원격 접속, 비밀번호 관리, 미디어 스트리밍 등 다양한 기능을 제공합니다."
 notion_id: "8ff44965-eb1d-4582-bd93-11a9deffa0db"
 notion_url: "https://www.notion.so/8ff44965eb1d4582bd9311a9deffa0db"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/8ff44965eb1d4582bd9311a9deffa0db"
 # 도커 셀프호스팅 추천목록
 
 > **Summary**
-> 셀프호스팅에 유용한 도커 이미지 추천 목록으로, Wireguard VPN, Bitwarden, Plex, Guacamole, Portainer, Nextcloud, Gitea, Joplin Server 등 다양한 서비스를 포함하고 있습니다. 각 서비스는 파일 동기화, 원격 접속, 비밀번호 관리, 미디어 스트리밍 등 다양한 기능을 제공합니다.
+> 셀프호스팅에 적합한 도커 이미지를 추천하며, Wireguard VPN, Bitwarden, Plex, Nextcloud, Gitea 등 다양한 유용한 서비스를 소개합니다. 각 서비스는 파일 동기화, 원격 접속, 비밀번호 관리, 미디어 스트리밍 등 다양한 기능을 제공합니다.
 
 ---
 

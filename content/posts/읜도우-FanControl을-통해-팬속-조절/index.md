@@ -4,7 +4,7 @@ date: 2024-03-08T15:32:00.000Z
 draft: false
 tags: ["WINDOWS"]
 series: ["Don't Hate Windows!"]
-description: "FanControl을 사용하여 팬 속도를 조절하는 방법에 대한 정보를 제공하며, 관련 링크와 동영상 자료를 통해 추가적인 도움을 받을 수 있습니다."
+description: "FanControl을 사용하여 팬 속도를 조절하는 방법에 대한 정보를 제공하며, 관련 링크와 동영상도 참고할 수 있습니다."
 notion_id: "47684b53-fd0e-4d26-b7dc-e60105df33f5"
 notion_url: "https://www.notion.so/FanControl-47684b53fd0e4d26b7dce60105df33f5"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/FanControl-47684b53fd0e4d26b7dce60105df33f5"
 # 읜도우 FanControl을 통해 팬속 조절
 
 > **Summary**
-> FanControl을 사용하여 팬 속도를 조절하는 방법에 대한 정보를 제공하며, 관련 링크와 동영상 자료를 통해 추가적인 도움을 받을 수 있습니다.
+> FanControl을 사용하여 팬 속도를 조절하는 방법에 대한 정보를 제공하며, 관련 링크와 동영상도 참고할 수 있습니다.
 
 ---
 

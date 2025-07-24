@@ -4,7 +4,7 @@ date: 2025-02-18T01:36:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Let's Homelab!"]
-description: "Tailscale VPN의 32비트 버전은 구형 하드웨어와의 호환성을 위해 제공되며, 안정적인 연결을 위해 CPU를 더 단독으로 사용한다고 주장되지만, 실제로는 경량화된 메모리 요구와 넓은 호환성이 주된 이유이다. 32비트 시스템은 제한된 환경에서도 안정적으로 작동할 수 있도록 설계되었으며, VPN의 안정성은 네트워크 프로토콜과 소프트웨어 최적화에 달려 있다."
+description: "Tailscale VPN은 32비트 버전을 제공하는 이유는 구형 하드웨어와의 호환성 및 경량화된 메모리 요구 때문이며, 안정성은 네트워크 프로토콜과 소프트웨어 최적화에 달려있다. 32비트 방식이 CPU를 더 단독으로 사용한다는 주장은 현대 시스템 설계 관점에서 근거가 부족하다. 32비트 환경은 다양한 운영체제에서 잘 작동하며, 메모리 사용량이 낮아 배포와 유지보수에 유리하다."
 notion_id: "19e1bab9-e3f8-8061-9405-e82e85ad04c9"
 notion_url: "https://www.notion.so/tailscale-VPN-32-19e1bab9e3f880619405e82e85ad04c9"
 ---
@@ -12,13 +12,13 @@ notion_url: "https://www.notion.so/tailscale-VPN-32-19e1bab9e3f880619405e82e85ad
 # tailscale VPN은 왜 32비트로 돌까?
 
 > **Summary**
-> Tailscale VPN의 32비트 버전은 구형 하드웨어와의 호환성을 위해 제공되며, 안정적인 연결을 위해 CPU를 더 단독으로 사용한다고 주장되지만, 실제로는 경량화된 메모리 요구와 넓은 호환성이 주된 이유이다. 32비트 시스템은 제한된 환경에서도 안정적으로 작동할 수 있도록 설계되었으며, VPN의 안정성은 네트워크 프로토콜과 소프트웨어 최적화에 달려 있다.
+> Tailscale VPN은 32비트 버전을 제공하는 이유는 구형 하드웨어와의 호환성 및 경량화된 메모리 요구 때문이며, 안정성은 네트워크 프로토콜과 소프트웨어 최적화에 달려있다. 32비트 방식이 CPU를 더 단독으로 사용한다는 주장은 현대 시스템 설계 관점에서 근거가 부족하다. 32비트 환경은 다양한 운영체제에서 잘 작동하며, 메모리 사용량이 낮아 배포와 유지보수에 유리하다.
 
 ---
 
 ### 근데 다 조사하고 찾아보니 tailscaled GUI만 x86이고 실제 VPN은 Arm64 로 도네 ㅋㅋㅋ
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/dd23cf6c-4cc5-435b-8607-20fc57f31ae6/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466QKDFM35Q%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101604Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJGMEQCICS6Fg3dNeUZuOOgCLacb5HCRR7gyleYZILv12OinZpSAiAK3cTuckK4Ee0zv1ll1Lu84ZLnpK9JGmTe9axwl0niCCr%2FAwgrEAAaDDYzNzQyMzE4MzgwNSIML6tjfs2CvGLf0EF2KtwDi%2BaDY4qELMIu3yLmjAivACMNa7UQfZRS1dnjX6Wcf4S0oweX7FEkTKIN4fNgtVmsblk9n8cmyVk%2BBocyB7hmB%2FpN%2F5FG%2FYI1P9pRWl1Pwku8n3iBXFHx5pRqn6e399pgp3kcUWVMy3undP9hE1i3pJfhKkdx4e0rkfAjr8fc2VBUoOFlL9uJRvBNP4DE84thRCnrdptT2FrT4FFVZvrdSIBU3W9H6E16hS9ixWs%2FDJ%2FijukKmKV%2FSKNNPyYg%2FTWPrU1f%2BddJp111CQXrCGzpl%2FCh1HSSd2RaiGKt%2FhM0P3mdWXYxy9YVCH0rk%2Fg1yGlmdB4fdn3EBvC%2Fdp8EzjvkJBCzB7EAA32L9NI3x4fhZlvUEeFdFaysI34DvoNYQk5AU446ZAr%2Bo6m5djZ3XLz%2FK9mmtsibNCnf0A%2FWHrA7owJPkJeuyZwkbV6ugoq0ZJwxpruPwZ6UhJxIw8D32joOafh9im5bZ1rSUaGu59EaZ3UiRX2BuSx7BkgeQh%2B8tdccOZOhxMYEqMIF4oywut1iaRyqP3bYwPD%2BfCFmkEgF7UFlKUVHCFgL80AS%2BDJbGq7yMu32dvfMT4FMO0DBBZMneA%2Bg7pExNvZPHCMWnvYImj%2FpVaLtE4E31OiHqsMw4faHxAY6pgGEt%2BxIPPAeG1g%2BToamUIiJhgrLfVUriXr0bLH45PfKjGO7zy%2FG6e96I75FE4ZlXmEoZZqEGf80Jpe3JkbWGuandoQZLqeK5AkDeyxHGEJ%2BidFGBo9%2FLvmvQCRInxMtUWaw5HsPuqydO9pqeSahJOUbMKfnx4jXNFNp%2FY2IVaCfIYi5CNMW%2FcbfzDdOx8FEi8o1Bv%2F13WvRyswmUlq3haXKnNBb1wSi&X-Amz-Signature=7b6cb56788d70e97e4253b3e1a68edde23d626220d30d1c8749ad82fc5627993&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/dd23cf6c-4cc5-435b-8607-20fc57f31ae6/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46634BYP3NY%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115420Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJGMEQCIAYp7WifRWaYnX1%2BBAr%2BZ5dXmqEDsJO0KJ%2BJEB95FQoXAiALM87i6Y2OdO9oy9FRZIpxvsSkIHmkeiXQVZ9Km%2Bvhyyr%2FAwgsEAAaDDYzNzQyMzE4MzgwNSIMwqZzJKPUni%2BayEZYKtwDfOfUvpo8Y24tgGSt6e9VZBS5MG%2BOgvq%2B2jEJUe%2B9yC55Bamwx5A57PqYGiJ5YVNiE18eS539qpmntVrfM7%2FbOs5gNEU72O%2BfOBKRQd3wqevBRjp%2BuRla5oeYoWhJMOuvD0A1s4MvYHzw84rvX1dZJBZWTTv3QRqUrSSqSOkGmlFaqsFNy0kKPIpAnYQWwL1gIiHzmodWD6%2F1DR78HrI1r0DbDrnop29R%2FlkpUMQhWPd1KKxYmowDweTqQKAZcBkUCxXMlqVgrMlj4sUgrposAV9YycUATpire%2FkmDGImNu3paAk4SkFQjG9WkTlJN2f1niT422%2FyKvAW%2F9SwxqKSoyxwdgGcNU3Z7jbckPUmEkDBZNg1tuomBLMi4bfQxMJcro9kiT%2FNyqyCGL3VRextXS2B6xL2aBxL%2BJ%2BtJCfyImlYeJFfk5ypl0ZM8j%2Fvt93SkSw9fA0JT8hbYRNeBU8O%2B5RrinAlv5HxJLeII7MLlmijWxEc%2BX4OrY8%2FZeeNjxd3%2BYd%2BmR7LgAm1verZ%2FsJ0%2FTPWQefxrMGgn3XlH%2F%2FFHvFCxKX%2Bevr%2B6o93ZK29RkrQKqM7uG2zDGSxxHHO8mEsR3LNOoYhQExdCxdM6DKqUW7lSuZiKtgjv2xFbkcwzpuIxAY6pgF0w%2BaurxTTHhgI6z85Bo85r1SRW3TZQ9TTVg9GWZZvsSF7A%2Barl5eWaRcVB3NHmsvKDZnBvaVrywJErrAFoyrSKMmHjzsXAdQVGUc8tTBXd9sRDcY0%2BlnQKTQjfBnwvd0%2Fc0g%2BbZG6wzm8ULbB74GpWC0SXOJ8%2FmEcbNvFPj6pLFqi3%2FcrsXHLwOnosTidbKWK4YI3OlArKpOp%2BEsyfOHAk2KEagHx&X-Amz-Signature=1e95d14b899ea82c19fcad99588fee623e14de7df0be627a71c4ed69a9b4ba54&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ### CPU 자원을 더 단독사용하여 안정적인 연결을 위해
 

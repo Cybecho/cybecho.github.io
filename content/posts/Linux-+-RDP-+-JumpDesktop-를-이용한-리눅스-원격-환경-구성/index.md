@@ -4,7 +4,7 @@ date: 2024-12-15T12:55:00.000Z
 draft: false
 tags: ["ubuntu"]
 series: ["Let's Linux!"]
-description: "RDP를 통해 XFCE 환경의 리눅스 데스크탑에 원격 접속하는 방법을 설명하며, Xorg, XRDP, XFCE 설치 및 설정 과정, Jump Desktop과 Windows 원격 데스크톱 클라이언트 설정, 문제 해결 방법을 포함합니다. 최종적으로 성능이 우수한 원격 접속 환경을 구성할 수 있습니다."
+description: "RDP를 통해 리눅스 XFCE 데스크탑 환경에 원격으로 접속하는 방법을 설명합니다. Xorg, XRDP, XFCE 설치 및 설정, GNOME 원격 설정 비활성화, 방화벽 설정, Jump Desktop 및 Windows 원격 데스크탑 클라이언트 설정을 포함하여 문제 해결 방법도 안내합니다."
 notion_id: "15d1bab9-e3f8-80b3-a07e-e634f87cf817"
 notion_url: "https://www.notion.so/Linux-RDP-JumpDesktop-15d1bab9e3f880b3a07ee634f87cf817"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Linux-RDP-JumpDesktop-15d1bab9e3f880b3a07ee63
 # Linux + RDP + JumpDesktop 를 이용한 리눅스 원격 환경 구성
 
 > **Summary**
-> RDP를 통해 XFCE 환경의 리눅스 데스크탑에 원격 접속하는 방법을 설명하며, Xorg, XRDP, XFCE 설치 및 설정 과정, Jump Desktop과 Windows 원격 데스크톱 클라이언트 설정, 문제 해결 방법을 포함합니다. 최종적으로 성능이 우수한 원격 접속 환경을 구성할 수 있습니다.
+> RDP를 통해 리눅스 XFCE 데스크탑 환경에 원격으로 접속하는 방법을 설명합니다. Xorg, XRDP, XFCE 설치 및 설정, GNOME 원격 설정 비활성화, 방화벽 설정, Jump Desktop 및 Windows 원격 데스크탑 클라이언트 설정을 포함하여 문제 해결 방법도 안내합니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f0b8d2a7-6665-4de6-9a39-f43ce1b82c75/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662S3C23AE%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101718Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJGMEQCIEeTVgF6nEOniDk5xs%2FsUFb7UwzsEJpfJpcuNK0XNx5LAiA%2F4QTcIUIE3dCaRByEYn9xonkSOHC84xFJu97gctLwwyr%2FAwgqEAAaDDYzNzQyMzE4MzgwNSIMT%2BhoHY8Q3NpAcDggKtwDQFWHy4vauaK3QUdyyIbKQJu%2F5gvLFh8Mh1Gis%2BQOOM9AYbb7CYqT6fSspQlF6A5QQ1I%2FDZgjfXzOIH9sRXeZZ8FSxW6cEt3gNfQA1Su%2F6aHVHSJycvuc5BUnCc85LTQMnypfiGxmkkHzV3XmAIczq3AO6nVTnu%2FNxslVeeeUpOEfWDNpIBJZKgnUStYsuaA4u5SEjGm434AvAaVYyxXqmRZ0TD89EOG9fShG5nM01gjX4xCiBDEfGaK2UVL%2B3VeBU9qkXVl9Z8KOodEPzQ1zCTa1vgvtObMhHzkUXyyoPxrOMB%2B0yvDoTeZsM%2FVAQVHO3F4VecjvIJcljAOgdI%2B9N1NK6x2IrFMP0UTw5Y6QbCJu35QzMSVb8Z1ubYaExQuOwFdKYhtR2Ekl4ZYzh7BZegyVCkWaQnD%2FjzHE9ELnefyB%2BAt0nmLsvpgx6h0RGcXulOBRU6kh98li8XS4UY9R%2BrFYG%2F34fZJjTZ1Kaf%2Fn64NtdzqM4UnxPh0l4QGVu6bCejdMFlmJdwzLVzCK0iOntR6QyVpgyldFkypwsuzgxtAttCc9InA8KEQtHBovVgoiNKANIn38JUdxGlHj2dBqwBWXq2auDnNsgJzQC%2BuicGDjliTCzrMMu1jmPTAwnvaHxAY6pgE8nchOTacdacbUnKYdJ4jYG3JGGZ6TONMvMenKRHL%2FivBeG775UFdkt9zAv9xvX%2BOkSyAs3OB1mTd8SOKA1zKdDLEZorCYpWjOHP2pQwNE2MliBN43CZaXj6akl6W0QXAuYPcOO95m%2FNVx8f6Nyq7uajts9ngABffdVPB6kFZidlAgesa0JmaPyXlg3YmcsoCcobGdxLNaXkLTX%2Bp9UJzW3bvMOKSW&X-Amz-Signature=fe4b504135667d2c26f464e61393aff774ea5ff0b179a1cdb124844dbe43483d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f0b8d2a7-6665-4de6-9a39-f43ce1b82c75/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466SXHH2PL3%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115535Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIAuJGmdNVFLfsCWoNfjOIHfyNmq9b08zHGrfdO7smNOYAiEA3EEg66iul%2BOo2FlkvDoqknt7Wp0C69lWBL%2BdOgyg4fAq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDJivYjJPejyzyTLQzyrcA2KrfdA8zhVPBLLNWESfaXiI5PlkztGUZaKcaZKURBpnKKfH954p0oxXCZJo1R5PR5alkiccuVVc0UNp1erlb49F584wsfetr9uBlha%2FjGhVtAmjhwYtIPe1g0Cgyj6JeQKogy4S7SiMZm5uAbNDGs6LjmBj3msTaqTUl6gz2uO83%2FI%2BbEYeamprTijePSnxtS6GQ57%2BfJGec4%2F%2BN3sJL4cJDHm7jPvKwPFC1m99X5bKeZ8orgEzAlJ9ZxZ%2FQRnbAOikgjsWx0ZhXk284B9saLM9JjdeiSUSzk2kXSpYEPX5faT2GAGyFMv2Muu7dpSCM2E9wWCMX8KGY93FdXa9OcvH2tZJH9dix03NkKhkjkQiP00oSd8E8itGor1VV3dbvA3EwgFfQTQQicWUqQKtFxpDiiDpUxwLxZgbL%2FEersFSa2f5e3rjkmq%2FWl%2BxVRA1S7GSKiuwhNt7BugeYoumL%2BHBcNFLOg6lVmWJbjC4K1WmiZlmfTEsBM8nvOtB0%2B%2BT%2FP7ZGb6GYrdOa0Zr1w90LiruOz3zgHXCap1hmEdnre%2F%2Bt2zW2Zpgc1ojc2MSNRy9%2BhSfhfCEyPJaw0jG5%2FGb9oqGY3yv2sLhcoKf89TCzY1NOIbqF4dJnKh%2FqG40MMqbiMQGOqUBQXXY1%2BEZ7o42ea7NcYM0mhOUQS136%2BrlIfnOXNjrTjmEuLYjoWT50jai%2FF96DVGhcfntjicgK4G8biwQKxGKFtPmqrCqQzmrqyPPd%2FT421PtXikk7Hr7GtJYRLvCptZBlvmYVYhQtHvvbUu2pe%2FsTwdBAkK4Rl1qqF3gHbw9dPhRdAy3LrwT9iYGPkFDztsD2a4Oe1YkLmQknKSLFDJkGC7q%2FZNx&X-Amz-Signature=af937d7e566e0001d543490fdad198397951af4d5e383d8492cbb45872007bda&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # RDP를 이용한 XFCE 환경의 원격 데스크탑 구축기
 

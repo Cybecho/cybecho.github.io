@@ -4,7 +4,7 @@ date: 2025-07-09T01:34:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Infra & Network"]
-description: "VMware에서 OpenStack으로의 VM 마이그레이션을 위한 가이드는 철저한 계획 수립, 기존 환경 감사, 낮은 중요도의 서버부터 시작, 다운타임 고려, DNS TTL 조정, 스플릿 브레인 방지 등을 강조합니다. VMware에서 VM을 내보내고, 디스크 이미지를 QCOW2 포맷으로 변환한 후, OpenStack에 이미지를 업로드하고 인스턴스를 실행하여 마이그레이션을 검증하는 과정이 포함되어 있습니다. 성공적인 마이그레이션을 통해 비용 효율적인 클라우드 환경으로 전환할 수 있습니다."
+description: "VMware에서 OpenStack으로의 VM 마이그레이션을 위한 상세 가이드를 제공하며, 마이그레이션 계획 수립, 기존 환경 감사, VM 내보내기, 디스크 이미지 포맷 변환, OpenStack으로의 이미지 가져오기 및 인스턴스 실행, 마이그레이션 검증 단계를 포함합니다. 성공적인 마이그레이션을 위해 철저한 준비와 소통이 중요하며, 다운타임 최소화를 위한 DNS TTL 조정과 데이터 불일치 방지를 위한 주의가 필요합니다."
 notion_id: "22b1bab9-e3f8-80a3-a573-dad07bf0f583"
 notion_url: "https://www.notion.so/VMware-EXSi-OpenStack-VM-22b1bab9e3f880a3a573dad07bf0f583"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/VMware-EXSi-OpenStack-VM-22b1bab9e3f880a3a573
 # VMware EXSi의 대안, OpenStack으로의 VM 마이그레이션 가이드
 
 > **Summary**
-> VMware에서 OpenStack으로의 VM 마이그레이션을 위한 가이드는 철저한 계획 수립, 기존 환경 감사, 낮은 중요도의 서버부터 시작, 다운타임 고려, DNS TTL 조정, 스플릿 브레인 방지 등을 강조합니다. VMware에서 VM을 내보내고, 디스크 이미지를 QCOW2 포맷으로 변환한 후, OpenStack에 이미지를 업로드하고 인스턴스를 실행하여 마이그레이션을 검증하는 과정이 포함되어 있습니다. 성공적인 마이그레이션을 통해 비용 효율적인 클라우드 환경으로 전환할 수 있습니다.
+> VMware에서 OpenStack으로의 VM 마이그레이션을 위한 상세 가이드를 제공하며, 마이그레이션 계획 수립, 기존 환경 감사, VM 내보내기, 디스크 이미지 포맷 변환, OpenStack으로의 이미지 가져오기 및 인스턴스 실행, 마이그레이션 검증 단계를 포함합니다. 성공적인 마이그레이션을 위해 철저한 준비와 소통이 중요하며, 다운타임 최소화를 위한 DNS TTL 조정과 데이터 불일치 방지를 위한 주의가 필요합니다.
 
 ---
 

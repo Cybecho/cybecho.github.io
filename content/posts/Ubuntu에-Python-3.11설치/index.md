@@ -4,7 +4,7 @@ date: 2023-11-24T00:00:00.000Z
 draft: false
 tags: ["AWS"]
 series: ["Let's Linux!"]
-description: "Ubuntu에 Python 3.11을 설치하는 방법으로는 소스 코드 다운로드 및 설치 또는 PPA를 통한 설치가 있으며, pip 설치 후 beautifulsoup4와 requests 라이브러리를 설치할 수 있습니다. 설치 후 버전을 확인하는 방법도 안내됩니다."
+description: "Ubuntu에 Python 3.11을 설치하는 방법은 소스 코드 다운로드 또는 PPA를 통해 설치할 수 있으며, pip 설치 후 beautifulsoup4와 requests를 추가로 설치하는 방법도 설명되어 있습니다. 설치 후 버전 확인을 통해 정상 설치 여부를 확인할 수 있습니다."
 notion_id: "7044422c-73d2-41e4-ae0b-1ede52538da7"
 notion_url: "https://www.notion.so/Ubuntu-Python-3-11-7044422c73d241e4ae0b1ede52538da7"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Ubuntu-Python-3-11-7044422c73d241e4ae0b1ede52
 # Ubuntu에 Python 3.11설치
 
 > **Summary**
-> Ubuntu에 Python 3.11을 설치하는 방법으로는 소스 코드 다운로드 및 설치 또는 PPA를 통한 설치가 있으며, pip 설치 후 beautifulsoup4와 requests 라이브러리를 설치할 수 있습니다. 설치 후 버전을 확인하는 방법도 안내됩니다.
+> Ubuntu에 Python 3.11을 설치하는 방법은 소스 코드 다운로드 또는 PPA를 통해 설치할 수 있으며, pip 설치 후 beautifulsoup4와 requests를 추가로 설치하는 방법도 설명되어 있습니다. 설치 후 버전 확인을 통해 정상 설치 여부를 확인할 수 있습니다.
 
 ---
 
@@ -131,7 +131,7 @@ sudo apt-get update
 > python3 -m pip list
 > ```
 >
-> ![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/62f52828-5dac-47b7-93fc-16646626d61b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YBHR75K6%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102014Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJGMEQCIGk28ebA9fnJc3Ivp5DVtBYpQNk5BA6fEUbVJ4j1sismAiBlgZ8OVYl8VROxIr5H%2BdAsLjiB19beDoeWhuwYSgTMTSr%2FAwgqEAAaDDYzNzQyMzE4MzgwNSIMoO%2BRgCE5MYWtelNWKtwDsoNjNPIHsjJooRCpgAqLtWPHj2HJfTqOSQ9uoTyE%2FT%2FATsAj9Yw43BWnmRk3g4wA6wcZhzdcPV8TF7zQi1uyWLTN%2BX6KqoW8R6jK5I8Tl71lIfPsEIih%2BsdSkXqO8D90Pj5fH1o6JiegNcFbYdemXYxxBeQo3OZjs2GgwgLgbLR%2BiyCy8h4KW7tMxZnilQ6wCt1NOQPhLl9nH6FcKC0dfsAI%2B2ZfiFJiwAzFpcQGi6pJsuWIUY7xwwR8e9owX0mQdwwud3Q7CAkJxIJBwWeqrkbp2NBplasBEdIivcPipeEgDjz7Cq6hj0APR6wPv490SNArXcLfhZsiLWiB1ersF63n5PRdNDOO7fhZtRNdRUc4CINehQbK01dkke3vuJRPcjZUWNjBXleSL%2F5ekTK8zI44R1xqDthXogomwZ28IXSWrjSn6dpiDbYpGCO7gDPqnhyGtBObNASEil0hbXovVynkbY3HKRTxHrRsi9aJTP1XYNpJzJjOuoQJ64EugvrMFxrRApMpDsDLQBc6ht9gCXX9k%2FBsQf7l4GZ84ApxmzTe44hdZYd96OB3MmBNMUaIeM2gvOXJHTaBDeyRfDBIWwhXns80TxcusKO%2FsRsCPgNM7Q%2F1xqYfW6HY4B0wlfWHxAY6pgEX46bs5lbiTKWZ6ZRRrGBztc1zIh7hpJ1Cz1QVZZiM2DOU%2BPDnsul%2Fuy24l94yq8zFqd6gDH%2FF3fLBM6FYToiLbhXUaVJi3%2Fcagn%2Blvu5HZkJHlutmWJ%2BOHB%2FKQNXYmX61qJaeKLB7YBJPFSTMH4y2rY21w22egKw12kG%2BUDncWcWsokJjZiQt9Row1rRDLpt%2FcmDewHe%2FcySioFkY4DBV9vnNsMFx&X-Amz-Signature=4d7e30826c6d0dbcc22aad56f66403db01bf3bdc030a9c731c2511b747837c66&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+> ![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/62f52828-5dac-47b7-93fc-16646626d61b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TBAHEENT%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115851Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIEWC5O6ow0Ca7Ue9OkdFz7Zb%2BWchq2ePlepBGO%2FZ4hTfAiEA5Syne9yTY%2FqO9rV9GDVbJR3f3VdoiOiK4fltCGFw4uUq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDAPunSlu62GuVoBGcircA%2FNTlT9DDLmOcQfaI45kjFD%2FB6prhoHdcMY%2BIyTykq3Q9SfokYMkqP7r1Myz7ByIUSDbeLF3ckjqnpHnB3VWVt4TlUJ%2FW%2BKzeCF5G%2BKaE9rnbHICRXTE%2BideTLqrpCEYivEpwJMX9RTavrJA8Hgq8EEWej0AYJs26CAO68H02zIdSf58nq45FoFIZnfQElnSAFqjgcBgdYnPAVJ3hDHwYnfsdop1Y03o5Op4j966MUMx%2FeK8mnEAsir4WhSh7C5rpOZQjuEnh6vexU5j6aHt5tq1VhCJ7pwlnI6qoUw0jjhVBYJD%2BkdZumWDuGIQ%2FO5OomlEVhK2uoYmjwS%2FDELxujp0ZfAZxv04OkyreSRdM96uVXFeMJf8JySa12E3lN7YMh3gPhFR7UpchPXHMCf%2BEAuRfMrq9qUcgsQ0zODc7zNOCtdiUxQxZxkyn3wjjuqZKZPZjzg3MLOiyKn4ZFtlC3oW%2BaSvp6c3YZtZPuqdo%2FCLKGmmy%2FphqjEGZREsiM04IPUEV2IgXNxx2JNkRkqcUz1FK%2BVCes7wxjaGhldQBzWMUqre0O7lsTyoI3dj9%2Fo%2B5Jm50CoPNqs8KqzzDe3AMjcaMtQlGwFGFp6O7S4iArVp4uVpptDWa9VZvwXhMLabiMQGOqUBZEALjeY%2F6Iv4yujr48mHjTIOfm8CmkMTSAtiTVheuhXPnL1etrZHoolDoUvtIrM6y0jUvCWAKN8te8A2WIHLD%2BxEDEpRuWMfR0eY6%2FhFoEBufadeFtUNA9WQ0Pp0xIq0%2BtRmy1fWt199%2Bmgod4NSBhEN26DQMT75Q%2BUqAVZX9L9SuwJWT2CNovutkQhNA%2FNjLKvW0K4pP43NmXkNeDOXsrD4%2FZ60&X-Amz-Signature=14c29e4301f548182cefc3eebad5adca3d98e6138dc44a81f94c8f11db2f821c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 >
 >
 > <details>

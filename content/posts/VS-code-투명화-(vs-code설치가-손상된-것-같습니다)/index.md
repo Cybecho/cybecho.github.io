@@ -4,7 +4,7 @@ date: 2023-12-03T00:00:00.000Z
 draft: false
 tags: ["MAC", "WINDOWS", "Arch", "ubuntu"]
 series: ["개발환경"]
-description: "VS Code의 투명화 방법에 대한 안내로, Windows와 Linux는 링크를 통해 설정할 수 있으며, Mac은 특정 확장을 설치해야 합니다. 설치 후 경고 메시지가 나타날 수 있지만 무시해도 안전하며, 다양한 옵션과 설정 방법이 제공됩니다. 문제 해결을 위한 FAQ도 포함되어 있습니다."
+description: "VS Code의 투명 배경 설정 방법에 대한 안내로, Windows와 Linux는 특정 링크를 통해 설정할 수 있으며, Mac에서는 추가 확장을 설치해야 합니다. 설치 후 경고 메시지가 나타날 수 있으나 무시해도 안전하며, 다양한 설정 옵션과 문제 해결 방법도 제공됩니다."
 notion_id: "3738fece-05c5-471d-83f6-3f99a0edf40a"
 notion_url: "https://www.notion.so/VS-code-vs-code-3738fece05c5471d83f63f99a0edf40a"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/VS-code-vs-code-3738fece05c5471d83f63f99a0edf
 # VS code 투명화 (vs code설치가 손상된 것 같습니다)
 
 > **Summary**
-> VS Code의 투명화 방법에 대한 안내로, Windows와 Linux는 링크를 통해 설정할 수 있으며, Mac은 특정 확장을 설치해야 합니다. 설치 후 경고 메시지가 나타날 수 있지만 무시해도 안전하며, 다양한 옵션과 설정 방법이 제공됩니다. 문제 해결을 위한 FAQ도 포함되어 있습니다.
+> VS Code의 투명 배경 설정 방법에 대한 안내로, Windows와 Linux는 특정 링크를 통해 설정할 수 있으며, Mac에서는 추가 확장을 설치해야 합니다. 설치 후 경고 메시지가 나타날 수 있으나 무시해도 안전하며, 다양한 설정 옵션과 문제 해결 방법도 제공됩니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/e424f792-fe9f-4f2e-a84e-a1fe3f64ef2c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466XUXDTEDJ%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101959Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQDMHwOsvrwCYXJsWAMJCe98TXI488sAr5YDxTmRM8YF%2BgIhAN4OvL5qFkRjIr1ss8zRiGQkH0l%2BJ9UF7qEd6kiLgNynKv8DCCoQABoMNjM3NDIzMTgzODA1IgzPSPpzXul7o5zSiXEq3AP6HHxZAeJcn2OKWOD1Ty%2FtRkgJfD1v%2BJKljza5eaMp3LoAkLc%2F6v94JUyRBmOLZfqBAxw7PIc%2BG0xhONTghvfyUXMSGlQMWDVR%2FJJO6jZGCUU1f0q4olSXPEBZW0T1EcdISRpKct0k2f0bjpo2xKDOoXHZ3wAD9iusg5EzdKpC1Womeu6H3TkIoC86CFMo9FeuNdV7QWJb5lPQTddZNhKN4ZmjUyoOv%2FeB0Dew033mOz5Gn8u3wszIgzxsAuFqmNlRcx1l3XeCbYBr3WT0Nz5Xte%2Fg4iTMqoNVxgGBq4%2F4uBJafwmYvOtxA5HaHYYDBYuytSjFvsZnwZNHfq5dbjjvAdEeQYQvK%2BbwOZ0Yig%2BR3AN%2BqiuPQSLMp993qi0x%2BWQzOXQx4W9ZcTVWpVe2TUi%2BXJWlADcG2e6uCFTuSf7KDr9Dkv6dMU4XbLjWT9Evz8L9uiWwzgEx07PEvTxLOvoNSFBcELlpp1hNibJki%2B3XrXSGXCfjscQlW6TNrPo6QoX0a5LJPEQ6tewQ3CVXu0uMGLiDzni6qV4QOiD%2BFjQdnWWu%2BWplxCPRrmFL0exnlkcwMIyJ488xxRrj0qOjlOBkLow%2BsdRmDb2fqyJOw%2F1wXOsu4XaZh%2BUMG2%2By1DDK9ofEBjqkAQWdxnI2mrK3r0fxSBbHZj2g6h7kk33hjYNwhiFoe%2Bq5NO1ycDduNRsTRvJESf1uKfJDvAevkxyG9BLKyakGkAEcxL19g99MO%2FJMwluq%2FAZzQa3mmWcpvf6tkS6UKiy6MLJJocZuJnnB6ZQm9s4%2FLKMlfemsYmDiY%2BD8qUPMUrnIAZbbsIThyZ8aSD31Z8hsKSVBb6YgqqvXASLVNPhh62rtk7IS&X-Amz-Signature=f0429fb750efd4b89ad0892c5b00abfc3f42068952c65b3a249c4435dc25b964&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/e424f792-fe9f-4f2e-a84e-a1fe3f64ef2c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466XGJVIY6N%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115835Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIHhp3Q2R0P6loL0GX74AtoPtMhV7LRqjR%2BMoccHd9%2FHrAiEAsxN50fCz2q1oUdqsgk%2Bu%2FiOq4TdFM2MguMOQenyLKiIq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDPnfHss%2FfDbLp7t0fSrcA2Zi1PXfT5To7%2F7rnz2T0by1DxCZ9iSaI4iuEPnquotjwxz4XuVu4dq4%2FEGY6n4Q5Aj7CBH8nbSOvqUs6Bap3rjMEbVUJibwoHVEr4DqKfwIKMeaWleG%2FbLGR2Sv%2Fw7%2FjWWQ2DLWu8VGcUcVgAMAi88Biue06y9PJBZEyl%2B0fl7kF3DHCJzn%2BEtcIi6lXTy0wKzKTQDf0dLyz6hdu1VI7r44L%2BpbdV19nA3%2BA8fRXuazpt9gsX8b%2FBS0oIHh77cIDuXlti10GiJRAsSUcQohGeyzAJTSwwCJdVio2iS6%2FYLzQ2sdYqoN2qTeY%2FfN%2B0nZDdJOtNbpm9aWJo81QAli1GBK7QAtB1TGdhgytTyKfIDZKvHgufsp9vldkfc2uano25RNbZDpQH%2FJocz3PYnlR4HYiFd6EoBfy2EpguVURPWrQ2i0wdE%2FgEzQleXWXhmCaQvDsKqaC%2Bdrp9XSi2YWvPCZO1QOVbtUh8XcIXqhfstJ7M8UduovuKkO7EaZTFrO8bwq6sM9WLkkAeDk7ITiogOxlzmWpf9GlJo%2BWCCDsF3JGxF8RuMh2bCdi4Oo2hy1xAGEIN6aag7H1Oe%2BTfh74Jq%2B4AOmJmZZB%2BTQvPcSEAaw%2Fcs5cUyo2wegKKs6MI2biMQGOqUBcD0hwfkklkz%2FCVT3scfQxTJ8%2BGY1WWtpJZnRlaWuryeu6FMdNZVj2O96vmcCATJ6zqkWUROn1iPoqtrDK2fCs3%2BF1qQbTV71fzqvONkO1Zy4D3IyD3dvLtXB3KL6hJoJLlSAak6io2vqN5C8n1eDYA9V5x5DA8atOd8LJpdFqDsA13z%2FqaYWpOtunAhIEAd2d91evL1qlifEDF73dFXaBDE7xVJT&X-Amz-Signature=22855497aa3adb3f3f5ee669413dafd97fb19f9451abb474f7b7f32a30f5058a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ## 윈도우,Linux는 아래 링크 따라하면 돼
 

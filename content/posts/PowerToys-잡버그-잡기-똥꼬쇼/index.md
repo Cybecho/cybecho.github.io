@@ -4,7 +4,7 @@ date: 2023-11-04T00:00:00.000Z
 draft: false
 tags: ["WINDOWS", "POWER_TOYS"]
 series: ["Don't Hate Windows!"]
-description: "키보드 핫키 버그 문제를 해결하기 위해 다양한 단축키 조합을 시도했으며, Alt + U와 O를 번갈아 누르면 문제가 해결되는 것으로 보인다. 버전 다운그레이드(0.74.1) 후에도 동일한 문제가 발생했지만, 일부 개선이 있었던 것으로 나타났다."
+description: "키보드 핫키 버그 문제를 해결하기 위해 Alt + U와 O를 사용하여 맵핑하는 방법을 제안하며, 특정 명령어가 작동하지 않는 버그를 언급합니다. 버전 0.75.1에서 발생하는 문제는 버전 다운그레이드로도 해결되지 않으며, 0.74.1로 다운그레이드할 경우 상황이 개선된 것으로 보입니다."
 notion_id: "f5eebcb5-be9a-4bfe-8531-9af9a14b63d4"
 notion_url: "https://www.notion.so/PowerToys-f5eebcb5be9a4bfe85319af9a14b63d4"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/PowerToys-f5eebcb5be9a4bfe85319af9a14b63d4"
 # PowerToys 잡버그 잡기 똥꼬쇼
 
 > **Summary**
-> 키보드 핫키 버그 문제를 해결하기 위해 다양한 단축키 조합을 시도했으며, Alt + U와 O를 번갈아 누르면 문제가 해결되는 것으로 보인다. 버전 다운그레이드(0.74.1) 후에도 동일한 문제가 발생했지만, 일부 개선이 있었던 것으로 나타났다.
+> 키보드 핫키 버그 문제를 해결하기 위해 Alt + U와 O를 사용하여 맵핑하는 방법을 제안하며, 특정 명령어가 작동하지 않는 버그를 언급합니다. 버전 0.75.1에서 발생하는 문제는 버전 다운그레이드로도 해결되지 않으며, 0.74.1로 다운그레이드할 경우 상황이 개선된 것으로 보입니다.
 
 ---
 
@@ -48,7 +48,7 @@ notion_url: "https://www.notion.so/PowerToys-f5eebcb5be9a4bfe85319af9a14b63d4"
 
 🔗 [https://github.com/microsoft/PowerToys/issues/9018](https://github.com/microsoft/PowerToys/issues/9018)
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/dc8a481e-de1e-41fb-9e59-922e342cdedc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466QDQX4OU3%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102020Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQCebYjn%2FQiY96VvQUeyxFunkpdh%2BgmdTr%2FrJGYDudpLmwIgeCWNSlX53Xvt8K6bNURePY0l9P4vncoOXgrI59L7jaEq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDHmbF0O9UzCCyoJFNircA8D5pc4KFBHUgybPkJvr1Pygn0W02%2BrH2vXhSWMEwMiqMYmzgqiKEJnG5Eum0LIn5%2FphnWZI%2BZVVetLOwJ%2FIrxDt5Vxma5UMv%2BFgHX9LL6pCCqsaBSeAz%2BlNnSUPmFsRuaycx9a3m%2BgVrczBx282P%2BdMgIFLP9qLOJdkBaBRLJQcPboktn0loV0wPB7KEUkhZ4LY58xtg%2FnSBZJedaI58Bnb3GgfP3Ermjq%2BaBq73YYAXvGYBL06RIo%2Fe%2FG7%2FViqh2N776isFmRBaUkrzKsx4tp%2FQlcZyI6meJfaP%2F6vPwl9hseysbcGjJLM4nB2X2xHUSYozvcFZ1h%2FMdusKYGVrhpQXupqPvI9Kney2oLhHpTma95T6eqv0SZgb4yCT2JoqvEb97rPIeWPThilrktcmhJznnSyQRhZ2Yd0CzNuaJK3iAcbHre5b9m%2BjqplwZG0NIouA4vyIYWTma3gzUtnUqMLbj0hNOf4ot6lrYkB1ESxQ3DjsldUIEvm6PTuVVt02AZXUXboAqCRx9xHe7JAO0f9mX6ITL9R%2Bi%2Ba%2F3CJD5PUy53N3pC%2BAFHF5Bf25HpIrT1XZj2S3Wxkdu%2B2USL39oxaUUGe51bc1eGw6pu%2FeuSbQaaHN5meAf98Sue7MMf2h8QGOqUBcouPFnQOeuEIam%2Fu5PDLiT3FnG4eC4n%2F293UHwGdFqq4fbs5nvKbVZw7JjogtSraKRYmXDmg2zVfEYBNnhF2AxCFhIXk6dIBObwa%2Bj1JUTygtY6x99loPs0SaAl8CbxmoeCi09tlaIjAwhEXOACQzp%2BO23SIOiF8Xd1FQ9dUJwm%2BXLN6pr6ICMAOFpafMazkFMx8OfVPhFPmm8QvBVKdwMcYdxht&X-Amz-Signature=e9aefac82bc4421f45381cef89705c022ff9973d4af27fc03e3b0e5287b86f3c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/dc8a481e-de1e-41fb-9e59-922e342cdedc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4667J5JHLMN%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115856Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIQCzI81X%2FZIkdrjQ0pIX0ybrcGqgg%2B6iY%2FfpQ%2F9n3f4rWwIgbsMUL%2Bb4BvJdZ1CtRoA0erEDikFqXvJ0pn4luLkTrNMq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDDLi6MEBM213QLht1ircA3ksAfEUONi%2FCLAEUo1y40EOjJdPM26n1wmRwmfSzEBvotxRLHnKWH%2FQKXrQr2GZwm5KDrOQIkNyO8Bdr4PmGTGPHrENvpF0w%2FDCNrkK3ewhUybGk1lJxQO7Mv4BwNRa%2FlOORReWQlEHcDvXNNsToPNRy%2BPT6LP8ZfFPGYtAaIXDFSbUluRWsAaWFHZyWry8cBH%2BvTbbeK0GUVCTqpHJP8zjMptLbyNERIEbgXh4VAPwXCOb0uDPJ7IIXClvywQ43twJpqQxDO0dqhOGvZdQa5RbDa%2BPAiILgcEY6cdLyxr0bDaeFaK4vZjuf1PEyWTb1MzO8Lfhgc2mHMckjdwCfwaxc%2FZEoTmOwSnUPVqLltnBF7Mjq9ZQN4M%2FS%2B0cttLCFAx%2FDqJy8lMHTuGDWWj%2FZBEWZQk8ryoTouZ4h0vh%2BcsGmFWTjqkvmFhSBhECP0LDU06SrNVIqY9LgcZBmwgHH3gw1Adoe6%2BayQQq7IUET1XcglSTSSPEPfH9DXTpihpDweGYpvcUwNA3a1dTQSEO2icsxQDjsuTCnvuqlePeYt62kS%2BHp3iBJmg1xH5N%2BCS%2F6LGbOhp2wetKQJPiFTNQFSyt1VRia0p8wzN%2BWFdLTLAy%2FjUlOOkfvSew55%2FeMOKbiMQGOqUBq2QEEZCUPzwVCbenBfcEaE3F5F7Zr6wrPgGvCOfjAD9LWyqEWdLI8VA0W3Vtf4Oz7DqZ3OiOwuEJ4qMn23Bj8M2p854%2BSq6BCw2L96GJE1QllgeBsvypTAnP0V%2BsrUTRd5PeWNj35bIJo%2F4QaEMeAYIBaCdjsj4nhUKTnswJJ9jNz7zvWDqg91nOLVSvTQy%2BVR1a41QeYQH4rx6bTJF%2Fc6YcVbZZ&X-Amz-Signature=b2a1316c342c9ff19b3f81b4e9aad1fbaf0979584dc167ef20db5323425f0b93&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 # 버전이 문제? (버그발생 빌드 0.75.1)

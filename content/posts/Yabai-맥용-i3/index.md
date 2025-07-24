@@ -4,7 +4,7 @@ date: 2024-02-18T00:00:00.000Z
 draft: false
 tags: ["MAC"]
 series: ["개발환경"]
-description: "Yabai는 macOS에서 타일링 창 관리자를 사용하는 방법에 대한 가이드를 제공하며, 관련 링크와 리소스도 포함되어 있습니다."
+description: "Yabai는 Mac에서 타일링 창 관리자를 사용하는 방법에 대한 가이드를 제공하며, 관련 링크와 리소스가 포함되어 있습니다."
 notion_id: "8cb7c4ce-b63f-4193-b5b3-ff9863070628"
 notion_url: "https://www.notion.so/Yabai-i3-8cb7c4ceb63f4193b5b3ff9863070628"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Yabai-i3-8cb7c4ceb63f4193b5b3ff9863070628"
 # Yabai 맥용 i3
 
 > **Summary**
-> Yabai는 macOS에서 타일링 창 관리자를 사용하는 방법에 대한 가이드를 제공하며, 관련 링크와 리소스도 포함되어 있습니다.
+> Yabai는 Mac에서 타일링 창 관리자를 사용하는 방법에 대한 가이드를 제공하며, 관련 링크와 리소스가 포함되어 있습니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/92663737-6cb9-4940-b407-c494152bcb13/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TLM3EZXL%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101929Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIBZRrO2jcsLc43a5ylQ%2BUeibP%2FxYk8SWHjKfgcsdoUKOAiEAj%2FDFRN7Hm31Gk3jlJroRZsnv8roFLwRDQZuIrRjW86Aq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDOzFnDTvfbppS52bSyrcA0cw359zhgWIZmovr96pWLpyARVOe%2F2hDPYJeZlYzrirsLEuFvx%2Btb5Jba6Gq4ToJA1SK1Gi64Jzxc1E8vHpZutQ3cdgjTZ0nV1ZK5RS0OR9C%2Fj8Nvt88IA%2BmsYWuCyNHQOsqhdMOWNQtMVwptONYVM5PouRU8eUm5CaYxiGin2ANo6oUm5%2FRUVyzbPqk5hBHSs8FIeiTYHsCObXvGS6BXNlxVQwbTfGYW7s20PFTbepaIel1pciUzBqmapcuTkuyidkXzHioiShYLYINQhVSWVaszgWoN7iENz1eOgMMY1bT%2BU7bmCuJxqx0UJMYRcSXcAEQjdVZtQfMKk2QUf2omDEIoDaRY5pevw0WU1H6LqjF2Qr15a0TXdsDf3EO%2FNEU64r7lWga%2BqlcZT4yOW6fHC3us5oNnJmHmnQutbIh7PKE858LG4zHSW%2BBH0IUA%2F7K6M%2FOPp%2FTkdbLGwPkufv%2FEI4x2AiRF2ApfefW7iRuxQYL%2BVA1fesFpvjRlXe1tkvisWeGAR95Lq%2FjR5I6bX8n%2BBOP%2BITY9gpHrsz0%2FXOeINMtVOkzKfN7e4Zx9vbOtwlmGdLvKcX8tYdyWlJ5wf%2FytZF4eXanD5jDU9El7S6Ai4tTIziFS1s8b7xecH3MML1h8QGOqUBgJwbKe73ofqLbhT16zLe2JaZSMuAW34a79IZepJWylPjgR%2FjIzc4h2TorwQ52TWGDXCeephO%2FX8NO4X3O4o%2BAQb4k73ocpTqeM5Hw7El5%2Bc90PHCEoWOjS3XAMI%2BLY6KAiTR5kNCyZNXLyljTX5l%2F4nKHYiDuOiJQepT6OPAcC8j9Ggs%2BxjY1GwhHNKx8bwtO4%2Bj1TCz7UiKCbf6WXr0gNG6ZTOA&X-Amz-Signature=58733954926f6952a910f9b29bc1852b1927fd036749763f59d2e52cc0cefb7b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/92663737-6cb9-4940-b407-c494152bcb13/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466T4QD6ZW7%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115759Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJFMEMCHxzF3SWMR%2FeFC8xkVGhDxm%2BSJI%2B6MwGxrAKPjniq1EgCIFZJBHMsov4sv9aUhDiJGcig51dBUTZukTwHiUvKi9KwKv8DCCwQABoMNjM3NDIzMTgzODA1Igx8Z%2Fm0W%2FVOlK9vKvYq3AOGiPfVr57nRM%2FPKY4iobGXpGQQZP4fcRRB9tP3akr24kRmoX5q%2FgDs8ug1AoZYA8aFYcu%2F0v%2FmElw3kWG5W%2FXwCYLH03nFE9zSFX2bSoNG0PoZN6oRcElfgJqw50gEX7ZlpPtyvccooaoRv%2FVV9OV0GJragN%2B6eOxZldtfxy3jY8GTGBvKyoXcUIhQYrrL26j%2Fv90qQBViY6t3%2FcSAiuGaaoWACj7Y%2Fg0XzE6dRTgGTgIipAOaK7MOBW5MlBoGOJqOvVUKWCqWbrfSFf41b8xP7LDJbLwR1q%2F5iZlQBzolvsGG5XsE7TxPydVWQHnq3VEr7T4yQVFw7AMQXv2JUliJEkZBhtg1fSZxm7iE8%2F%2BuEXMsIvxCP1jAaz09JW7nfnGqklH8WGZgfJOpWge1%2BxWTC5zbiY3JS4Oy5weFHAB%2BhZGWqiRJmnyg2HgRu9JCU%2F7KG7vc8%2Fkh0S%2FAC4fWlCZGHKP96wwvQ3WztVgGcP8xrD2jlV6bjFuLMKMWhUoYryq3vSIdyVJJt7ngBpvuZr7XCR4fPVBenW%2FNmitwub6v5TA8KIo3ixmQ0OTN6gXYBdWG6%2FYp236W1Di20eY5rooV4b57dTAc6WCH7h5%2Fy4Nf93JPEL9TDiVHZ1mZ0jCsm4jEBjqnAWyc4URDs9HoJRjTeDPzxSPox2Qsap1VtVDzy57POC%2FCsWqDH6Rj5u%2BVbHEuZUGMbAIFSS9FeBJsKnVFN%2BcdVJZASnkfM1vbIQmbkAB1MCy85x4PRMd38Y4CQ7JisI2M3rob3Qnq1GjepXxr56BW39LIP0WJVjejLfERFgvY415MlELTaKDR7ecRMOPZxMttJPnjXTwktkW43QLnXCVielTcxVdVpfyM&X-Amz-Signature=9dc70d343ff0874d435976465c55e24f9192a8245aa6875f0f0eab87242daa06&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 

@@ -4,7 +4,7 @@ date: 2025-04-14T05:34:00.000Z
 draft: false
 tags: ["ProxMox"]
 series: ["Let's Homelab!"]
-description: "Proxmox 서버를 원격으로 부팅하기 위해 BIOS/UEFI에서 WOL 기능을 활성화하고, Proxmox의 네트워크 인터페이스를 확인한 후, ethtool을 사용하여 WOL 기능을 설정하며, 재부팅 시 자동으로 활성화되도록 네트워크 설정 파일을 수정한 후, 서버를 종료하고 WOL 패킷을 전송하여 부팅합니다."
+description: "Proxmox 서버를 원격으로 부팅하기 위해 BIOS/UEFI에서 WOL 기능을 활성화하고, 네트워크 인터페이스를 확인한 후 "
 notion_id: "1d51bab9-e3f8-8093-bf92-fedb75cbd69d"
 notion_url: "https://www.notion.so/ProxMox-WOL-1d51bab9e3f88093bf92fedb75cbd69d"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/ProxMox-WOL-1d51bab9e3f88093bf92fedb75cbd69d"
 # ProxMox WOL 설정하기
 
 > **Summary**
-> Proxmox 서버를 원격으로 부팅하기 위해 BIOS/UEFI에서 WOL 기능을 활성화하고, Proxmox의 네트워크 인터페이스를 확인한 후, ethtool을 사용하여 WOL 기능을 설정하며, 재부팅 시 자동으로 활성화되도록 네트워크 설정 파일을 수정한 후, 서버를 종료하고 WOL 패킷을 전송하여 부팅합니다.
+> Proxmox 서버를 원격으로 부팅하기 위해 BIOS/UEFI에서 WOL 기능을 활성화하고, 네트워크 인터페이스를 확인한 후 
 
 ---
 

@@ -4,7 +4,7 @@ date: 2024-02-11T03:37:00.000Z
 draft: false
 tags: ["ubuntu"]
 series: ["Let's Linux!"]
-description: "Ubuntu에 Chrome을 설치하는 방법은 deb 파일을 사용하는 것으로, wget을 설치한 후 Chrome 패키지를 다운로드하고 dpkg를 사용하여 설치하는 절차로 이루어져 있습니다."
+description: "Ubuntu에서 Chrome을 설치하는 방법은 deb 파일을 사용하는 것으로, 먼저 wget을 설치한 후 Chrome 패키지를 다운로드하고 dpkg를 사용하여 설치하는 절차로 진행됩니다."
 notion_id: "860bc866-25df-4387-8bd1-3baa193fc8d1"
 notion_url: "https://www.notion.so/Ubuntu-How-to-install-chrome-860bc86625df43878bd13baa193fc8d1"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Ubuntu-How-to-install-chrome-860bc86625df4387
 # Ubuntu - How to install chrome
 
 > **Summary**
-> Ubuntu에 Chrome을 설치하는 방법은 deb 파일을 사용하는 것으로, wget을 설치한 후 Chrome 패키지를 다운로드하고 dpkg를 사용하여 설치하는 절차로 이루어져 있습니다.
+> Ubuntu에서 Chrome을 설치하는 방법은 deb 파일을 사용하는 것으로, 먼저 wget을 설치한 후 Chrome 패키지를 다운로드하고 dpkg를 사용하여 설치하는 절차로 진행됩니다.
 
 ---
 

@@ -4,7 +4,7 @@ date: 2024-04-20T00:00:00.000Z
 draft: false
 tags: ["Docker", "ubuntu"]
 series: ["Let's Homelab!"]
-description: "crontab보다 celery를 사용하는 것이 더 좋다는 내용과 도커에서 주기적인 작업을 처리하는 방법에 대한 링크가 포함되어 있습니다."
+description: "crontab보다 celery를 사용하는 것이 더 낫다는 내용과 도커에서 주기적인 작업을 처리하는 방법에 대한 링크가 포함되어 있습니다."
 notion_id: "66cfd67a-6ed6-4ead-8cc3-7d7eac85d578"
 notion_url: "https://www.notion.so/crontab-66cfd67a6ed64ead8cc37d7eac85d578"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/crontab-66cfd67a6ed64ead8cc37d7eac85d578"
 # 도커에 crontab돌아가게하기
 
 > **Summary**
-> crontab보다 celery를 사용하는 것이 더 좋다는 내용과 도커에서 주기적인 작업을 처리하는 방법에 대한 링크가 포함되어 있습니다.
+> crontab보다 celery를 사용하는 것이 더 낫다는 내용과 도커에서 주기적인 작업을 처리하는 방법에 대한 링크가 포함되어 있습니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/c84ffdfa-ad3c-40ca-8228-2e96fec1f73e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466W4JE2D7L%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101909Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJGMEQCIFBDCCzv21mN2DFIgCG21MMadP%2FXGo46zwGQoNAqm5o3AiAv%2FPqzPaYwLPI6Lsji1XG%2BtFgp20maIea66P3vEQBDpyr%2FAwgqEAAaDDYzNzQyMzE4MzgwNSIM1XTKgnQnuCI195twKtwDVO66IxndxSAATlH3xNws56i7D%2BYkx5oF8Enozg85KHkInmIJvbg6OdMNqC4ufMO%2BdTIltockkoMvIa9nNYIoujO9oS8%2B4AdO7UWv2%2FNTaHxiPEGPmtD6Cfr81TP0ko2NcPUHiaQhFntQ9xyaGI1q5NakBkDdLpGuN4MnKQbQkRTnv%2Bd7Gss0kwCc%2BeBOnvlq2pXyIqoSjlefFGNK1XAPGwi3KWn%2B7dJ5fiMM1LRi9fYFGPKkzL%2Fp3Y0FALfT1sxg%2FZzr3afixWwqRB8EkquMVRtpM9MF14regsNsrvHfHSSSYPc0tcvOqENVcOU4Z8Zfnuzd8Odsiktr05cr3rWEMPp4xYHDtrPk85ftrRtHuFwQFr42KIdv%2BZjTv1J9pUDLSm8vWEY1PN0YFrVMsAp1sWGysLo26M7XZ1JAg2NjBWcfoNU8Czqb28aV2FIBHAayTzl6fXuUYA%2FRImGaC1qHgLkaJCV5PpwXlT6FJplFCqX4vQNsh2qXnZpOYay5xmglNuThUvEYaBmFbE2Kr62nvc1dHUBVhW%2FSkA1OmJ1mnmmN3Tv0Voz9JGlQ68aMmiggvlsZt9Qrb%2FOd1T141CNsNV7YYtCOpgAd2eezgXRxlsizXbxLxt%2BwY1J0uHEwofaHxAY6pgHFDX1WR8rwnB0SfaOvC%2Bhubh3biESy9ZoUB98Uv212Vj8oJfrBtsGAPAGsQpaCKz6XBrVS6vQ5VSdqFgkb0lTSE14vnXiozFZ7lrZhgHr6lXmqHis8zWExuZJKW9NXIZTslctmcqTCDHxR8h42y8jfDh7Mjl2MWdBwmgwSoT2tA%2FNzs60%2F740OAJh6whl554TPZrzK8PUTS45j9RqdvbIW8SnwV9oD&X-Amz-Signature=bdf8f10f9a40a54937c436485aaacace5689de4a39d57e94c24ee8eceecc489d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/c84ffdfa-ad3c-40ca-8228-2e96fec1f73e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466XGJVIY6N%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115732Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIHhp3Q2R0P6loL0GX74AtoPtMhV7LRqjR%2BMoccHd9%2FHrAiEAsxN50fCz2q1oUdqsgk%2Bu%2FiOq4TdFM2MguMOQenyLKiIq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDPnfHss%2FfDbLp7t0fSrcA2Zi1PXfT5To7%2F7rnz2T0by1DxCZ9iSaI4iuEPnquotjwxz4XuVu4dq4%2FEGY6n4Q5Aj7CBH8nbSOvqUs6Bap3rjMEbVUJibwoHVEr4DqKfwIKMeaWleG%2FbLGR2Sv%2Fw7%2FjWWQ2DLWu8VGcUcVgAMAi88Biue06y9PJBZEyl%2B0fl7kF3DHCJzn%2BEtcIi6lXTy0wKzKTQDf0dLyz6hdu1VI7r44L%2BpbdV19nA3%2BA8fRXuazpt9gsX8b%2FBS0oIHh77cIDuXlti10GiJRAsSUcQohGeyzAJTSwwCJdVio2iS6%2FYLzQ2sdYqoN2qTeY%2FfN%2B0nZDdJOtNbpm9aWJo81QAli1GBK7QAtB1TGdhgytTyKfIDZKvHgufsp9vldkfc2uano25RNbZDpQH%2FJocz3PYnlR4HYiFd6EoBfy2EpguVURPWrQ2i0wdE%2FgEzQleXWXhmCaQvDsKqaC%2Bdrp9XSi2YWvPCZO1QOVbtUh8XcIXqhfstJ7M8UduovuKkO7EaZTFrO8bwq6sM9WLkkAeDk7ITiogOxlzmWpf9GlJo%2BWCCDsF3JGxF8RuMh2bCdi4Oo2hy1xAGEIN6aag7H1Oe%2BTfh74Jq%2B4AOmJmZZB%2BTQvPcSEAaw%2Fcs5cUyo2wegKKs6MI2biMQGOqUBcD0hwfkklkz%2FCVT3scfQxTJ8%2BGY1WWtpJZnRlaWuryeu6FMdNZVj2O96vmcCATJ6zqkWUROn1iPoqtrDK2fCs3%2BF1qQbTV71fzqvONkO1Zy4D3IyD3dvLtXB3KL6hJoJLlSAak6io2vqN5C8n1eDYA9V5x5DA8atOd8LJpdFqDsA13z%2FqaYWpOtunAhIEAd2d91evL1qlifEDF73dFXaBDE7xVJT&X-Amz-Signature=e42da6f0edf1be91222c8099d5fb96a90f6c99ffbff20e0753f7e6709c334aeb&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🔗 [https://blog.raccoony.dev/cron-job-with-uwsgi-in-docker-container/](https://blog.raccoony.dev/cron-job-with-uwsgi-in-docker-container/)
 

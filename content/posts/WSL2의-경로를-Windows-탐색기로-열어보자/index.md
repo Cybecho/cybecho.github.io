@@ -4,7 +4,7 @@ date: 2023-09-15T00:00:00.000Z
 draft: false
 tags: ["WINDOWS", "ubuntu"]
 series: ["Don't Hate Windows!"]
-description: "WSL2에서는 Windows 탐색기를 사용하여 현재 작업 중인 디렉토리를 열 수 있으며, 이를 위해 WSL에서 "
+description: "WSL2에서는 Windows 탐색기를 직접 사용할 수 없지만, "
 notion_id: "4d0f25cc-d7c8-4706-b1a7-49562669b27c"
 notion_url: "https://www.notion.so/WSL2-Windows-4d0f25ccd7c84706b1a749562669b27c"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/WSL2-Windows-4d0f25ccd7c84706b1a749562669b27c
 # WSL2의 경로를 Windows 탐색기로 열어보자
 
 > **Summary**
-> WSL2에서는 Windows 탐색기를 사용하여 현재 작업 중인 디렉토리를 열 수 있으며, 이를 위해 WSL에서 
+> WSL2에서는 Windows 탐색기를 직접 사용할 수 없지만, 
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f01f2d3b-078b-4f40-bed7-3a8c010cffbc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4663DKRC6VO%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102046Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJGMEQCICofC5q54bGI%2BDejkIpSbjUyTTnUsWGJSxNSXWP6lkLeAiBqjcU56RL5fHzcoJWiDPpQ9cOuj1veKGoclk0o%2BahjWCr%2FAwgqEAAaDDYzNzQyMzE4MzgwNSIMc85aBwGEY0t%2FEKEbKtwDvQI7er9%2By3h%2Bte1nQJdzqE9V8r3N5Tig05iJoQ5LLHBy2GTMKJQu0STEc0KpDYSK8GELJMwdOKF%2BmR1KWJTqEZWhBtZf03opILpyGxDpUaRd1eRx%2B2pAbR%2Fljoxw%2Fw%2F4ZfZk%2FfsEHz8ZclVjcZENZTgDCQ8InqZYhGzpxr5ZK3PvNmXoHEO%2BumoCnj29GfoWkfSItxDqignNaRq1o2uXMywjO5ka2V3dqmxW%2F%2F3rtproOH9vfyeVvNKG%2Fub7iVWISCox2l8RExn4o7FDjxXSFfY003Jbbn8pZUZJ7EXTjNhfTuViS7QGq5FrzSsaTFmDc24pYULKqydIFLIxJ7hnH5u61HEVYKOd1jc0%2BSAS4epjeZ5ao%2BbNDOAw5dAn1yltfvot3bf7akK%2F62NWnm7ppzWnm2KE3GnVXtjGndMwpQMCFVbkIeB5QuqHTcJN2DdVcbQa5Mw4paKG4UIm2ZzU3EWeknlvMoflXSwZnWLBWswa2Ul%2BzjmGA0gMZp%2Fgf9Qtr92l5az3CRFEOkXKRLjFR12iYQZ%2BSFeKkTt3nI02EgfezSoHrbrSO%2BDuR0udNtBOo6%2Bd%2B5p%2FB%2Bdo2x5TfBOCYsCJ%2BAJOhZVsfs0cqgJuq3vigZkTIk9YJldVTeYwxvaHxAY6pgGuqpgwk84G8Cs2zV0VZt2vm2SKfPDn2CRGmj26tQDCOfVMr6aPhjOY67ibdhIpFA%2Bb9FG27VS3t8eIRBWu4gUE7s0PYLXMg1i57pyG0KZ5O6CBM5FD%2Bx990djxF3x84wyLJhQCpzKKH6t6sooFnU7QELGSG25fQSYXNrfTuJqatSOlGQVHG0%2Bny72qudjG9IB3u2jINyGtEP2eonfHO%2FijnEn040SY&X-Amz-Signature=762deb63157314f2101232f2a2c5dce0b59a01600b26eae84d7c19535cd4e3a0&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f01f2d3b-078b-4f40-bed7-3a8c010cffbc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4667AROSSPJ%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115927Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLXdlc3QtMiJIMEYCIQCnfydVanB8UvPXlo57isUMCO7SwAQUo1hH9FWvDMvGgAIhAIyxcilhtIJHobrrbgN2yJtG3fa7hzt9jSFCPamg3OvdKv8DCC0QABoMNjM3NDIzMTgzODA1IgyoTehkkdcn3WIWTxsq3ANYxPyud9tOBRJMYcBla6ef4zuwS6VFBs1vv8nh5Y%2BM8JMkaqon3Xp58uj9zKedWA8RNylg7mUHIUpbOSWIuBMdjZTH67F28afRcZgb7v22b%2Bhk%2B2akQF%2FfotsjzSflfbUpJzI%2BS%2Bj9Z8INj%2F2cMfr%2Bp1lQg9Uc1rLLwnu6FXcJcI0kEU1V8wzkAnM8j2ml7ZoPxQfAkAKw5ymkucMh8ubLnFqYunzTfZOPhjWl9SdvCerHTltj5TbPPuz5P2xv%2B5exIsBVwklLR3UdqHseRW8L79%2ByMPGOY%2FZ9UKigbtCVRz7nLr0Zv%2BZ3c%2BUad8shlnllHZKWR0TXJQDqLtrHYAnHvh6xsdlpt%2BkF%2BGL2VfIchfyhT%2BKHE4PtF%2BcCDSDJb4y0CqABZDB4qPFY17ANGXtvn1wmxcd9OC%2Bx602ZatMVnWe%2FpQcRk00rBkKyUlTQk3jUSElBAcQQSeYPQBwhqKEnqSLszzWNA5V5yWAWWrv7qyXiM2pjRk%2BRQ5uKB2jNw2tsBesLlwxVMUAD6ju6nUlZlpfivppEDwSRvhOm1Wfps9siREUFQRDVw0lu3v2Ad%2B7dOgQHotMWQ1r8bhmIl%2BAGJ6hmFu%2BXwvETlx4L41eR5HM8cNwoUoQurPOr6TDov4jEBjqkAU%2FndAH%2Bkl9onyFj36XAkdh0XmC8iDAtKjZHHHn7u0OMm%2FsCFmGNa4CqycC0VqBdhCSbQnyrVpf%2BV6%2F9tCRzbvytxYeFt4BzHFpO3ICx65VxjzKi%2FOBZmrJq%2FTkoeRyIPO4B8VObYzjm%2FGaIkAj1hhxdU15uNjWOOo45duJ5tVXy4a4nn8qgGGaXvxO9Rmo%2BcyQ1crilB%2BOvocfCHgQ7kBy2Drgf&X-Amz-Signature=f1c4c31200fcceffd4ce06781e58f1f8629f3a3be49d135ee993e4e02cf2f43e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🔗 [https://coding-groot.tistory.com/101](https://coding-groot.tistory.com/101)
 

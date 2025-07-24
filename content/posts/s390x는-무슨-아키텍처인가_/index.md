@@ -4,7 +4,7 @@ date: 2025-02-24T08:37:00.000Z
 draft: false
 tags: ["Other", "Util"]
 series: ["HW"]
-description: "s390x는 IBM 메인프레임의 64비트 아키텍처로, 금융 및 의료 산업에서 신뢰성과 성능으로 널리 사용되며, AI와 컨테이너 기술을 통해 현대화되고 있습니다. 포춘 500대 기업의 71%가 메인프레임을 사용하고, 신용카드 거래의 90%를 처리합니다."
+description: "s390x는 IBM 메인프레임에서 사용되는 64비트 아키텍처로, 금융, 의료 등에서 신뢰성과 성능으로 널리 활용됩니다. 포춘 500대 기업의 71%가 메인프레임을 사용하며, 신용카드 거래의 90%를 처리합니다. 최근 AI와 머신러닝 작업을 지원하기 위해 진화하고 있으며, TensorFlow와 같은 도구가 s390x에서 사용 가능합니다. 하이브리드 클라우드와 AI 통합을 통해 미래에도 중요한 역할을 할 것으로 기대됩니다."
 notion_id: "1a41bab9-e3f8-8068-a912-c68aa2a93a02"
 notion_url: "https://www.notion.so/s390x-1a41bab9e3f88068a912c68aa2a93a02"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/s390x-1a41bab9e3f88068a912c68aa2a93a02"
 # s390x는 무슨 아키텍처인가?
 
 > **Summary**
-> s390x는 IBM 메인프레임의 64비트 아키텍처로, 금융 및 의료 산업에서 신뢰성과 성능으로 널리 사용되며, AI와 컨테이너 기술을 통해 현대화되고 있습니다. 포춘 500대 기업의 71%가 메인프레임을 사용하고, 신용카드 거래의 90%를 처리합니다.
+> s390x는 IBM 메인프레임에서 사용되는 64비트 아키텍처로, 금융, 의료 등에서 신뢰성과 성능으로 널리 활용됩니다. 포춘 500대 기업의 71%가 메인프레임을 사용하며, 신용카드 거래의 90%를 처리합니다. 최근 AI와 머신러닝 작업을 지원하기 위해 진화하고 있으며, TensorFlow와 같은 도구가 s390x에서 사용 가능합니다. 하이브리드 클라우드와 AI 통합을 통해 미래에도 중요한 역할을 할 것으로 기대됩니다.
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/0547a0d3-4f8f-4791-bbf5-45af1bc0dcea/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TA2VTLI6%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101557Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQCJfK87FFtYqwbO6lHB6Gi1YSbnqKRSLG2juxDgYpuofwIhANx14%2BREF1i0QcrFZKII2FslyJwlg9VlNBacm0i4iEGlKv8DCCoQABoMNjM3NDIzMTgzODA1Igw8dqBmTmoeES6ZGLAq3AOm6RAf9DtlP1SnXs0ALGQ0tkn52k3UULGrrabaWpRaxwfBT%2FiexbBhFMlrdafnWaTa3w0fNBKucUTPyEw95FlpInioE6ZAAnbbxV3uMcPwNTshSKOPqvV5TJi8RxVnKc2Ehr4LRlM%2F9wZ1dO7o24OhNIzjknJHdITZDp9lUgefH0Go9EuMpVb6VydcgrundlmkGaEo0grZDbfVmPwE%2BCc6muuWW95HbAM9u%2BV%2FaygQbrAqIohUSYRWCRXBDczvVLFhclQdd1lN2eAdNlM8MmzKloiEXWkRjvXWIPvzijTg3UFMEXRQzBt0AMYhwcgoYtDEET7NWM7XyjXYWXWs6w1k6k9K1R4b8XONyZbnVHd1Sd3eWgTOOtC0%2BpHIoa4JS9CelwnE8qVkGABhQCqOYNQl25PgzDYJg036nY4yBQgxYmI8jZ%2FOo135MTCpfOJq3vfRxmb6JIphfr7k2rCLLSqb1kQLRJ1HeB6kv4yZaOHFM6JK5FAOc8fWwHP%2FZS3W8OmnOcscYaCvcaWB0pA46b0PpfKOzV7TE3q29xn3cergjfaLGz%2BE%2B3jqVX4iNH5j3M%2BgT3i5J6SitgkLDqLDVWCScDrF%2FRIFGCPFx2%2BCcfY0h7Vak6U4TE1E8WaNLjC99ofEBjqkAfTMYdg9TnjGdUhcAiFagk2Sq8va%2Fo%2Bbf4IFsJUqN1ANjLTrATtmG7anpyX9FYkYQ57%2BT4ciN2fBt25XKrZmiKfN%2FjxUPeQeDv0ov4OY9yRQ50Tr6gC1%2FopW%2BE2Z%2Bqv6Mp%2Ffhw2eFT7VnURhIcWn%2BI6CiA0eHe%2FoCAPAE8nBhYRMHmFfq6xaBGMq%2BDC22DyC%2FBtiG5zGch%2BsHfK49yS6FvdrBpQD&X-Amz-Signature=1ad0a1534421bc19ac3a1c2c8223b274bf7ba434145011dfb290e9f5fc44fbae&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/0547a0d3-4f8f-4791-bbf5-45af1bc0dcea/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46632ZEKFVE%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115413Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIA1MOdbrSyYEsqqJ%2BzVf97k73z8jxWUF1t%2FDUh41Z6%2F0AiEAraf5ovNsDynxQSClDpA3hIp89YyNoxmTMa1GQ9905Bcq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDGGhbQHO04r4dM9cMSrcA0DZkkytKkVDair93jLy%2Fxz3%2BKTRHSkRb6MvufROx1unLwNe9rwm0vnHpARvsjQ3Jlh8pI5Op0dRB9ItbHV1pc4QdO0ChyQa%2BzkJVky2k8s3bFg8ZO6uLteh4DpcGc5bxaON7BnIQ1NarFz2mgQsb8%2F65%2BzWNUbRFtV8lns4%2BSeZ9It0mcfIhqcxg29dXwfxxigQsuc%2BfIcP1hFfXh9rdv7%2BFnboVDRgQ8LQiep42ixMx7f9GuUAOFvyfYR237GKYqYORoYNsOJO%2F5alT%2F33HmX82U4NcbqX4VP%2FCTY4duYNuZ%2B2EksW8WBLJn%2F6ANLPor%2Fe3An6PKQ4vnTqiR9E7Vr5byyoNTXhROtxnQX4fkEZLhfRM%2F%2FUGbfGo1Z3u7f%2BEkKiauHqx%2BfbjUcUAMKHyw1rTJb4uCzI9ZTtKuZOIKa6z3l9P3IE5tDyCdufQWWJQRL6N8ZmEjoPAdYu0WUAF1paY6G6uv60Hi%2BkjGHUHeZGWkDoeRafGZr6eZyqtupCRzRSLjZg1yaitX7fAJUuQFk9w6BlVL7OjW%2B22Em0TnMKQ0aUnoJ3EFb%2BCSPV0Gn1GBpiIafmOFekf43fEjwuF%2Bgvgx%2FShaXMm7dHZGNNExq8hDw9ULTNa6PAzc3mMOObiMQGOqUBGOyug2zIGCcxzryQNOw2Rt2LJt9jCLIp4z4rhWnauvSV68c60ESHOkgVT7B3yaiVDa1CV8k57bQTXFBwpJQDyruQ4wZPmAeUu6JuktQJKANze8KgzzVnmH2JbkbI2o3ZDVrEzL6y5qJk7q22j3t%2FlVfOe8M2GPJV5Jr91MwYY1RimgmDJqiVxGu7r0U76V5QTiI0sD6sOT61kl23vgXyOUNIzxgK&X-Amz-Signature=3c74f0fc4bb271f3508d02f6928b969a5cd551edbc8ac8f4ff824a79deb489cf&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 도커 공식문서를 읽다가, s390x 라는 처음보는아키텍처가 있어 이게뭔고~ 하고 조사하게되었다.
 
