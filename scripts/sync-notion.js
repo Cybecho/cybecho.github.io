@@ -80,7 +80,7 @@ function convertRichText(richTextArray) {
   }).join('');
 }
 
-async function convertBlocks(pageId) {
+async function convertBlocks(pageId, indentLevel = 0) {
   try {
     const blocks = await notion.blocks.children.list({
       block_id: pageId,
@@ -88,11 +88,13 @@ async function convertBlocks(pageId) {
     });
 
     let content = '';
+    const indent = '  '.repeat(indentLevel); // 들여쓰기용 공백
+    
     for (const block of blocks.results) {
       switch (block.type) {
         case 'paragraph':
           if (block.paragraph?.rich_text?.length > 0) {
-            content += convertRichText(block.paragraph.rich_text) + '\n\n';
+            content += indent + convertRichText(block.paragraph.rich_text) + '\n\n';
           } else {
             content += '\n';
           }
@@ -118,13 +120,40 @@ async function convertBlocks(pageId) {
           
         case 'bulleted_list_item':
           if (block.bulleted_list_item?.rich_text?.length > 0) {
-            content += '- ' + convertRichText(block.bulleted_list_item.rich_text) + '\n';
+            content += indent + '- ' + convertRichText(block.bulleted_list_item.rich_text) + '\n';
+            
+            // 중첩된 불릿포인트 처리
+            if (block.has_children) {
+              const childContent = await convertBlocks(block.id, indentLevel + 1);
+              content += childContent;
+            }
           }
           break;
           
         case 'numbered_list_item':
           if (block.numbered_list_item?.rich_text?.length > 0) {
-            content += '1. ' + convertRichText(block.numbered_list_item.rich_text) + '\n';
+            content += indent + '1. ' + convertRichText(block.numbered_list_item.rich_text) + '\n';
+            
+            // 중첩된 번호 목록 처리
+            if (block.has_children) {
+              const childContent = await convertBlocks(block.id, indentLevel + 1);
+              content += childContent;
+            }
+          }
+          break;
+          
+        case 'toggle':
+          if (block.toggle?.rich_text?.length > 0) {
+            const toggleText = convertRichText(block.toggle.rich_text);
+            content += '<details>\n<summary>' + toggleText + '</summary>\n\n';
+            
+            // 토글 내부 컨텐츠 처리
+            if (block.has_children) {
+              const childContent = await convertBlocks(block.id, 0);
+              content += childContent;
+            }
+            
+            content += '</details>\n\n';
           }
           break;
           
@@ -146,7 +175,19 @@ async function convertBlocks(pageId) {
           if (block.callout?.rich_text?.length > 0) {
             const icon = block.callout.icon?.emoji || '💡';
             const calloutText = convertRichText(block.callout.rich_text);
-            content += '> ' + icon + ' **' + calloutText + '**\n\n';
+            content += '> ' + icon + ' **' + calloutText + '**\n';
+            
+            // Callout 내부 컨텐츠 처리
+            if (block.has_children) {
+              const childContent = await convertBlocks(block.id, 0);
+              // callout 내부 컨텐츠를 인용구 형태로 변환
+              const quotedChildContent = childContent.split('\n').map(line => 
+                line.trim() ? '> ' + line : '>'
+              ).join('\n');
+              content += quotedChildContent + '\n';
+            }
+            
+            content += '\n';
           }
           break;
           
