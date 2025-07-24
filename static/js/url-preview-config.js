@@ -26,9 +26,8 @@ window.URLPreviewConfig = {
     /\.pdf$/i,
     /\.zip$/i,
     /\.exe$/i,
-    /\.(jpg|jpeg|png|gif|svg|webp)$/i,
-    /youtube\.com\/watch/i,  // YouTube는 별도 임베드로
-    /youtu\.be/i
+    /\.(jpg|jpeg|png|gif|svg|webp)$/i
+    // YouTube 링크는 임베딩 플레이어로 처리하므로 제외하지 않음
   ],
   
   // 캐시 설정

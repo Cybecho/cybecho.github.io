@@ -195,6 +195,78 @@
   opacity: 0.6;
   margin-left: auto;
 }
+
+/* 🎯 YouTube 임베딩 플레이어 스타일 */
+.youtube-embed-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 비율 */
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  background: #000;
+}
+
+.youtube-embed-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+.youtube-embed-info {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.youtube-embed-title {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.youtube-embed-channel {
+  color: var(--text-color-secondary);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.youtube-embed-channel::before {
+  content: "🎥";
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .youtube-embed-container {
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+  
+  .youtube-embed-info {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .youtube-embed-title {
+    font-size: 0.85rem;
+  }
+  
+  .youtube-embed-channel {
+    font-size: 0.75rem;
+  }
+}
 </style>
 </div>
 
@@ -292,7 +364,7 @@ class URLPreview {
       }
     }
     
-    // 제외 패턴 확인
+    // 제외 패턴 확인 (유튜브는 제외하지 않음)
     if (this.config.excludePatterns) {
       if (this.config.excludePatterns.some(pattern => pattern.test(url))) {
         return false;
@@ -300,6 +372,30 @@ class URLPreview {
     }
     
     return true;
+  }
+
+  // 유튜브 링크 감지
+  isYouTubeUrl(url) {
+    const patterns = [
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/,
+      /youtube\.com\/watch\?.*v=([a-zA-Z0-9_-]{11})/
+    ];
+    
+    return patterns.some(pattern => pattern.test(url));
+  }
+
+  // 유튜브 비디오 ID 추출
+  extractYouTubeVideoId(url) {
+    const patterns = [
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/,
+      /youtube\.com\/watch\?.*v=([a-zA-Z0-9_-]{11})/
+    ];
+    
+    for (const pattern of patterns) {
+      const match = url.match(pattern);
+      if (match) return match[1];
+    }
+    return null;
   }
 
   // 외부 링크 판별
@@ -342,6 +438,14 @@ class URLPreview {
   // 프리뷰 카드 생성
   async createPreviewCard(linkElement) {
     const url = linkElement.href;
+    
+    // 유튜브 링크인지 확인
+    if (this.isYouTubeUrl(url)) {
+      const youtubeEmbed = await this.createYouTubeEmbed(url);
+      linkElement.parentNode.replaceChild(youtubeEmbed, linkElement);
+      return;
+    }
+    
     const loadingCard = this.createLoadingCard(url);
     
     // 링크를 로딩 카드로 교체
@@ -356,6 +460,69 @@ class URLPreview {
       const errorCard = this.createErrorCard(url, error.message);
       loadingCard.replaceWith(errorCard);
     }
+  }
+
+  // 유튜브 임베딩 생성
+  async createYouTubeEmbed(url) {
+    const videoId = this.extractYouTubeVideoId(url);
+    if (!videoId) {
+      return this.createErrorCard(url, '유효하지 않은 YouTube URL입니다');
+    }
+
+    const container = document.createElement('div');
+    container.className = 'youtube-embed-wrapper';
+    
+    try {
+      // YouTube oEmbed API를 사용하여 비디오 정보 가져오기
+      const oembedUrl = `https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`;
+      const response = await fetch(oembedUrl);
+      
+      let videoInfo = {};
+      if (response.ok) {
+        videoInfo = await response.json();
+      }
+
+      const embedUrl = `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&showinfo=0`;
+      
+      container.innerHTML = `
+        <div class="youtube-embed-container">
+          <iframe 
+            class="youtube-embed-iframe"
+            src="${embedUrl}"
+            title="${videoInfo.title || 'YouTube 동영상'}"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        ${videoInfo.title || videoInfo.author_name ? `
+          <div class="youtube-embed-info">
+            ${videoInfo.title ? `<div class="youtube-embed-title">${this.escapeHtml(videoInfo.title)}</div>` : ''}
+            ${videoInfo.author_name ? `<div class="youtube-embed-channel">${this.escapeHtml(videoInfo.author_name)}</div>` : ''}
+          </div>
+        ` : ''}
+      `;
+    } catch (error) {
+      console.warn('YouTube embed failed:', error);
+      // 기본 임베딩으로 폴백
+      const embedUrl = `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&showinfo=0`;
+      container.innerHTML = `
+        <div class="youtube-embed-container">
+          <iframe 
+            class="youtube-embed-iframe"
+            src="${embedUrl}"
+            title="YouTube 동영상"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      `;
+    }
+
+    return container;
   }
 
   // 로딩 카드 생성
