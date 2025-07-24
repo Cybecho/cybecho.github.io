@@ -5,6 +5,14 @@ theme = 'hugo-blog-awesome'
 
 enableRobotsTXT = true
 enableEmoji = true
+enableGitInfo = true
+canonifyURLs = true
+
+# SEO 최적화
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
 
 # 🎯 Hugo v0.148+ 호환 페이지네이션 설정
 mainSections = ["posts"]
@@ -19,6 +27,15 @@ mainSections = ["posts"]
 
   title = "삽질 저장소"
   subtitle = "본질에 몰입하는 엔지니어 입니다. HW 및 OS에 관심이 많습니다."
+  
+  # SEO 설정
+  keywords = ["프로그래밍", "개발", "기술블로그", "Hugo", "GitHub", "엔지니어링"]
+  
+  # Google Analytics (설정 시 추가)
+  # googleAnalytics = "G-XXXXXXXXXX"
+  
+  # Google Search Console (설정 시 추가)  
+  # googleSiteVerification = "XXXXXXXXXXXXXXXXXXXX"
 
   
   postSectionName = "블로그"

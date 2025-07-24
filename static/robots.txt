@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+Disallow: /search/
+Disallow: /_next/
+Disallow: /api/
+
+# 사이트맵 위치
+Sitemap: https://cybecho.github.io/sitemap.xml
+
+# 주요 검색엔진 허용
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# 크롤링 빈도 제한 (선택사항)
+Crawl-delay: 1
