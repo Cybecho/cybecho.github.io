@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Ubuntu-18ecb698f49140b9abb3535689d1531f"
 
 ---
 
-![Image](image_9a8ca43c8b06.png)
+![Image](image_52c5a4b02a4b.png)
 
 🔗 [https://yohanpro.com/posts/docker/tutorial](https://yohanpro.com/posts/docker/tutorial)
 

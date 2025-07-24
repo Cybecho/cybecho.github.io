@@ -18,7 +18,7 @@ notion_url: "https://www.notion.so/02-8f5e0db5c75c4700997d1b35a3411446"
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=YAu4yWU5D5U)
 
-![Image](image_aaae83c51e97.png)
+![Image](image_3339c891f281.png)
 
 > 🔥 **`FixedUdate`는 물리 연산 프레임마다 호출되는 함수다**
 

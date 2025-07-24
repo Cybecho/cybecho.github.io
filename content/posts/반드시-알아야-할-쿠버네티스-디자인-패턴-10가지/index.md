@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/10-e86728031caf41918415c6298cca8d3a"
 
 ---
 
-![Image](image_593959a1dfbc.png)
+![Image](image_1cc98ebb47d6.png)
 
 🔗 [https://elky84.github.io/2020/07/05/difficult_operate_a_socket_server_with_docker/](https://elky84.github.io/2020/07/05/difficult_operate_a_socket_server_with_docker/)
 

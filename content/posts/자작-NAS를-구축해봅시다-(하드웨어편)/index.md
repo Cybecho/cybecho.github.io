@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/NAS-f270ca5caee84ea1a6bc20f5303e5c96"
 
 ---
 
-![Image](image_f80bd5e8438c.png)
+![Image](image_77fb9087accf.png)
 
 # NAS로 할 수 있는것들
 
@@ -164,7 +164,7 @@ notion_url: "https://www.notion.so/NAS-f270ca5caee84ea1a6bc20f5303e5c96"
 <details>
 <summary>[**H110M DGS (지금 컴)**](https://www.asrock.com/mb/Intel/H110M-DGS/index.kr.asp)** M ATX 최대 램 32GB (6,7세대 지원함)**</summary>
 
-![Image](image_0f7a32c59ac2.jpeg)
+![Image](image_cd434b582442.jpeg)
 
 </details>
 
@@ -202,9 +202,9 @@ notion_url: "https://www.notion.so/NAS-f270ca5caee84ea1a6bc20f5303e5c96"
 <details>
 <summary>[**Antec VP500P V2 A-PFC**](https://prod.danawa.com/info/?pcode=2529647)** **(지금 내 파워) ATX 규격임…</summary>
 
-![Image](image_5eb37a612a0d.png)
+![Image](image_e1428fcd16a8.png)
 
-![Image](image_540f7accd385.jpeg)
+![Image](image_f639b5dfdeff.jpeg)
 
 </details>
 
@@ -246,15 +246,15 @@ WD외장 하드를 직구한 다음. 적출해서 끼우시면 17만원에 8TB�
 
 # 결과물
 
-![Image](image_71391fb12586.jpeg)
+![Image](image_282d8f192eb1.jpeg)
 
-![Image](image_959f66425b25.jpeg)
+![Image](image_1601de030ec7.jpeg)
 
-![Image](image_a5ea0d637bd0.jpeg)
+![Image](image_d9bceaa294a2.jpeg)
 
-![Image](image_676eee9ac1e7.jpeg)
+![Image](image_90dc761168e2.jpeg)
 
-![Image](image_180aa70ea7fc.jpeg)
+![Image](image_57529f646bb6.jpeg)
 
-![Image](image_0cb4a35367f7.jpeg)
+![Image](image_181424794821.jpeg)
 

@@ -18,7 +18,7 @@ notion_url: "https://www.notion.so/02-c2294260e7cb45d5bdde56cb7f503298"
 
 # HTML에서 바로 xpath 뽑을걸… able하니까 클릭가능하게 바뀌네…
 
-![Image](image_36499fb6d99a.png)
+![Image](image_1fff02d2899c.png)
 
 //*[@id="headlessui-tabs-panel-:r1a:"]/div/div[1]/ul/li/div[2]/div/button
 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/oh-my-zsh-88066d6294b445b5909da248df0b4e91"
 
 ---
 
-![Image](image_2930d2cfe11c.png)
+![Image](image_5e1595824170.png)
 
 🔗 [https://tasddc.tistory.com/41](https://tasddc.tistory.com/41)
 

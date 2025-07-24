@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Scrcpy-PC-5356393b46df442294c25024287f66db"
 
 ---
 
-![Image](image_bb29e94f83f3.webp)
+![Image](image_491e09f65455.webp)
 
 [https://blog.soobinpark.com/242](https://blog.soobinpark.com/242)
 

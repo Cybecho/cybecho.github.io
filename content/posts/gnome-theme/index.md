@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/gnome-theme-c3907a9f97ba4de596c13f13af385830"
 
 ---
 
-![Image](image_38c42c2c7da4.png)
+![Image](image_fbb35b1c77c4.png)
 
 🔗 [https://memoa.tistory.com/1](https://memoa.tistory.com/1)
 

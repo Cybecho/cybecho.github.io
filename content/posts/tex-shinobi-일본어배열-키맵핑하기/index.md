@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/tex-shinobi-d7660270d1f64065bf0e7837c66271a1"
 
 ---
 
-![Image](image_721a8009cfd7.png)
+![Image](image_cbe2f84eaf5d.png)
 
 🔗 [https://program.tex.com.tw/shinobi/#layout](https://program.tex.com.tw/shinobi/#layout)
 
@@ -34,7 +34,7 @@ MAC은 카라비너 만져야한다
 
 ### MAC - 카라비너 설정
 
-![Image](image_4ee3ea5e7136.png)
+![Image](image_be5f021b117a.png)
 
 
 ### 윈도우는 레지스트리 만져야합니다…

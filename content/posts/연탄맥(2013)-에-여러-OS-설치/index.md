@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/2013-OS-acef8a38d071491f89f2f981070e9b7d"
 
 ---
 
-![Image](image_4b3c7122ca62.png)
+![Image](image_1d7e76289c69.png)
 
 # 연탄맥에 윈도우 설치 후 d300 활성화
 

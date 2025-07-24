@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VScode-C-SDL2-5302ed71b1cb4236b7104d7e980ba79
 
 ---
 
-![Image](image_ecc7612edf4a.png)
+![Image](image_77e660d69c0f.png)
 
 🔗 [https://www.youtube.com/watch?v=Dyz9O7s7B8w](https://www.youtube.com/watch?v=Dyz9O7s7B8w)
 

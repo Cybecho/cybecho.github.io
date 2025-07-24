@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/JUMP-TUNNEL-ssh-1b71bab9e3f88022849fce52c62d7
 
 ---
 
-![Image](image_422934ccdf6d.png)
+![Image](image_b9cb9ea467ac.png)
 
 🔗 [https://github.com/Cybecho/JumpTunnel](https://github.com/Cybecho/JumpTunnel)
 

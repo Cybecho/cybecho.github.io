@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/all-for-one-1d01bab9e3f880f9af00c0a2aac6bc44"
 
 ---
 
-![Image](image_a5715291cd77.png)
+![Image](image_7e4405c2db7f.png)
 
 # 분산컴퓨팅 - Distributed Computing
 

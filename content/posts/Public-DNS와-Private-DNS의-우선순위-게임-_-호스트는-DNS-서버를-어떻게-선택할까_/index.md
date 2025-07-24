@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Public-DNS-Private-DNS-DNS-1bf1bab9e3f8805cae
 
 ---
 
-![Image](image_bd568b242a07.png)
+![Image](image_d6c1c2c9d884.png)
 
 > 💡 **목차**
 > ---
@@ -109,7 +109,7 @@ flowchart LR
 
 > 참고로 아래 튜토리얼은 단순히 VirtualBox 기준이기에, Proxmox 용으로 실습하시려면 알잘딱으로 네트워크 설정을 다르게 가져가야하는데… 
 
-![Image](image_03c9cba672aa.png)
+![Image](image_321536882e8c.png)
 
 ## >> VM 정리
 

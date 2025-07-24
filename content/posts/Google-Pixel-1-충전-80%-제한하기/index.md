@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Google-Pixel-1-80-f36d494bd65848dcaad0da5de26
 
 ---
 
-![Image](image_ac5ce4ca1a00.webp)
+![Image](image_9e8be01e4bae.webp)
 
 # **Tasker + 스마트 플러그**
 

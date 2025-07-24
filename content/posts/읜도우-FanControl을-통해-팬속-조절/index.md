@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/FanControl-47684b53fd0e4d26b7dce60105df33f5"
 
 ---
 
-![Image](https://github.com/Rem0o/FanControl.Releases/raw/master/Images/logo.gif)
+![Image](image_4e637d01b796.gif)
 
 🔗 [https://github.com/Rem0o/FanControl.Releases](https://github.com/Rem0o/FanControl.Releases)
 

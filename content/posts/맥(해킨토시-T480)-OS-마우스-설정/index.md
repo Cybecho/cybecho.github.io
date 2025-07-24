@@ -17,9 +17,9 @@ notion_url: "https://www.notion.so/T480-OS-1b27ab31817e44959d8075990db369b7"
 ---
 
 
-![Image](image_3bc0e0b6e420.png)
+![Image](image_4069c4d02e04.png)
 
-![Image](image_d55386ec3c85.png)
+![Image](image_df79bc3389e3.png)
 
 ### 스크롤 리버서 앱 설정 (아래 ScrollReverser 깔아야함)
 
@@ -27,7 +27,7 @@ notion_url: "https://www.notion.so/T480-OS-1b27ab31817e44959d8075990db369b7"
 brew install scrollReverser
 ```
 
-![Image](image_0cf6da0abb6e.png)
+![Image](image_64ffd817d4ec.png)
 
 
 이제 쾌적한 환경 사용 가능~

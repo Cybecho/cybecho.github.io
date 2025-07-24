@@ -17,7 +17,7 @@ notion_url: "https://www.notion.so/usb-mounty-1681bab9e3f88048a0e9f064ab796d13"
 ---
 
 
-![Image](image_b1fa3613d9f0.png)
+![Image](image_a977e4d381fe.png)
 
 [https://www.clien.net/service/board/lecture/16197901](https://www.clien.net/service/board/lecture/16197901)
 

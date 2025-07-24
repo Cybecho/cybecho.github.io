@@ -43,39 +43,39 @@ Bluetooth는 서버와의 무선 오디오 연결을 위해 광범위하게 사�
 
 *$ *sudo pacman -S bluez
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_1.jpg)
+![Image](image_ba8cf8365c05.jpg)
 
 *$ *sudo pacman -S bluez-utils
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_2.jpg)
+![Image](image_89dbd1e94666.jpg)
 
 *$ *sudo pacman -S blueman
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_3.jpg)
+![Image](image_44c514c3f235.jpg)
 
 이제 btusb 모듈의 로드를 설정하려면 터미널에서 다음 명령을 실행하십시오.
 
 *$ *lsmod | grep btusb
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_4.jpg)
+![Image](image_6ffafa15465d.jpg)
 
 이 프로세스의 마지막 단계는 어댑터를 찾는 것입니다. 시스템에서 어댑터를 찾으려면 다음 명령을 입력하십시오.
 
 *$ *sudo nano /etc/bluetooth/main.conf
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_5.jpg)
+![Image](image_f7ad3a8dea03.jpg)
 
 다음 명령은 어댑터가 연결되었는지 또는 차단되었는지 알려줍니다.
 
 *$ *sudo rfkill list
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_6.jpg)
+![Image](image_63588c5e7fe6.jpg)
 
 어댑터가 연결을 차단하는 경우 다음 명령을 입력하여 연결 차단을 해제하십시오.
 
 *$ *sudo rfkill unblock bluetooth
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_7.jpg)
+![Image](image_045ed820798c.jpg)
 
 ## **블루투스 활성화**
 
@@ -83,7 +83,7 @@ Bluetooth 서비스를 활성화하려면 두 가지 명령만 필요합니다. 
 
 $ sudo systemctl start bluetooth.service$ sudo systemctl enable bluetooth.service
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_8.jpg)
+![Image](image_8eab3a17e46f.jpg)
 
 이 명령을 실행하면 Bluetooth 시스템이 Arch Linux에서 시작됩니다. 이 명령은 시작 및 활성화 기능 모두에 액세스합니다.
 
@@ -93,27 +93,27 @@ $ sudo systemctl start bluetooth.service$ sudo systemctl enable bluetooth.
 
 *$ *sudo pacman -S pulseaudio
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_9.jpg)
+![Image](image_f2b296c66498.jpg)
 
 *$ *sudo pacman -S pulseaudio-bluetooth
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_10.jpg)
+![Image](image_3720610bd8da.jpg)
 
 위의 명령은 Bluetooth용 PulseAudio 확장 프로그램을 설치합니다. 기능을 시작하려면 다음 명령을 실행하십시오.
 
 *$ *sudo systemctl start pulseaudio
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_11.jpg)
+![Image](image_163ecac78413.jpg)
 
 두 번째 명령을 실행하여 PulseAudio의 기능을 자동 시작합니다. 앞뒤 기능에 쉽게 액세스할 수 있는 유틸리티를 얻으려면 다음 명령을 입력하십시오. 이렇게 하면 키를 사용하지 않고도 노래나 음악을 이동하고 볼륨을 제어할 수 있습니다. 이 유틸리티는 뛰어난 기능이며 Bluetooth 기능을 사용할 때 유용합니다.
 
 *$ *sudo pacman -S pavucontrol
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_12.jpg)
+![Image](image_22fb29e13345.jpg)
 
 *$ *pavucontrol
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_13.jpg)
+![Image](image_b7f53784985c.jpg)
 
 
 

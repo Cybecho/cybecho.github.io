@@ -41,14 +41,14 @@ notion_url: "https://www.notion.so/Ubuntu-ssh-for-Ipad-4b5fa5b287034745b0cbcc3a5
 sudo apt update
 ```
 
-![Image](image_b38c8a5b7ffa.png)
+![Image](image_4751026e3733.png)
 
 
 ```shell
 sudo apt install openssh-server
 ```
 
-![Image](image_93945f8c1f07.png)
+![Image](image_b2f2f644a831.png)
 
 
 # 서버 IP 확인
@@ -64,7 +64,7 @@ ifconfig
 >
 >
 
-![Image](image_00b100d7e242.png)
+![Image](image_f72f4ed0999b.png)
 
 
 # **SSH 서버의 포트 설정하기**
@@ -88,7 +88,7 @@ sudo nano /etc/ssh/sshd_config
 systemctl restart sshd
 ```
 
-![Image](image_d3690b8511a5.png)
+![Image](image_a38a140aaded.png)
 
 
 ```shell
@@ -99,7 +99,7 @@ ssh -p 12345 당신계정이름@당신의IPv4
 ssh -p 12345 sbu@10.0.2.15
 ```
 
-![Image](image_3003323362a7.png)
+![Image](image_f49e17d245a7.png)
 
 
 **SSH 키 비밀번호 없이 이용하기**

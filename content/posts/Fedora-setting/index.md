@@ -18,15 +18,15 @@ notion_url: "https://www.notion.so/Fedora-setting-17366fb7a91c4404ba17f644010cb2
 
 # set terminal shortcut
 
-![Image](image_336a7fd7849b.png)
+![Image](image_01b4b00cb401.png)
 
 # set screenshot shortcut
 
-![Image](image_cebab3baed7f.png)
+![Image](image_c4bd2518c7c5.png)
 
 # 조종
 
-![Image](image_55e1577f44a9.png)
+![Image](image_e8dbff76bd17.png)
 
-![Image](image_0367b7d3b00b.png)
+![Image](image_b640b3d08290.png)
 

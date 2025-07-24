@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MCP-Super-Assistant-Google-AI-Studio-Notion-M
 
 ---
 
-![Image](image_6ee9c26e0937.png)
+![Image](image_01a15cda7f3e.png)
 
 [https://mcpsuperassistant.ai/](https://mcpsuperassistant.ai/)
 

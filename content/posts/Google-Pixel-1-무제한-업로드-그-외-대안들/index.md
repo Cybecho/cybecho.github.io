@@ -20,9 +20,9 @@ notion_url: "https://www.notion.so/Google-Pixel-1-2311bab9e3f88006872fcf8f734a4f
 
 🔗 [https://www.reddit.com/r/homelab/comments/1m04ix4/android_service_for_unlimited_google_photos/](https://www.reddit.com/r/homelab/comments/1m04ix4/android_service_for_unlimited_google_photos/)
 
-![Image](image_adb0bbfbd87c.png)
+![Image](image_6d6a4f0f6a86.png)
 
-![Image](image_73b4c916994e.webp)
+![Image](image_33404a4f0569.webp)
 
 ```plain text
 	•	Google Pixel 1은 무제한 원본 화질 이미지 업로드를 지원합니다.

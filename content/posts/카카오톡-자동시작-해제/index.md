@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/45956b72abc84a759657f6cbd002fc19"
 
 ---
 
-![Image](image_ce8ed60a3075.png)
+![Image](image_114fbd0ab5e1.png)
 
 🔗 [https://m.ppomppu.co.kr/new/bbs_view.php?id=freeboard&no=6583345](https://m.ppomppu.co.kr/new/bbs_view.php?id=freeboard&no=6583345)
 

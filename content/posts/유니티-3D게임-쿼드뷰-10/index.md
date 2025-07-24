@@ -21,12 +21,12 @@ notion_url: "https://www.notion.so/3D-10-4824ce1e9ddb457c8f926bbcb1deeaa5"
 > 🔥 **왜 공격 애니메이션이 한번만 작동할까…**
 > ## 단순했다.. Entry에 있는 모든 애니메이션에 Has Exit Time을 비활성화시키니까 애니메이션이 정상작동한다
 >
-> ![Image](image_1df6a05380c8.png)
+> ![Image](image_b5fff18bf998.png)
 >
 >
 
 > 🔥 **에러발생**
-> ![Image](image_e424b757bb66.png)
+> ![Image](image_2ed77880b618.png)
 >
 > ```c#
 >
@@ -57,12 +57,12 @@ notion_url: "https://www.notion.so/3D-10-4824ce1e9ddb457c8f926bbcb1deeaa5"
 >
 
 > 🔥 **애니메이터를 그대로 복사해서 해당 애니메이터는 Enemy B의 Mesh Object 내부에 넣어준다**
-> ![Image](image_0fd271df782c.png)
+> ![Image](image_9a7d775c8448.png)
 >
 >
 
 > 🔥 **Nav Mesh Agent 설정**
-> ![Image](image_49f64c7765db.png)
+> ![Image](image_151a730e2901.png)
 >
 >
 
@@ -96,7 +96,7 @@ notion_url: "https://www.notion.so/3D-10-4824ce1e9ddb457c8f926bbcb1deeaa5"
 >
 
 > 🔥 **BoxCollider 와 Destroy 충돌 오류**
-> ![Image](image_903f27c09c09.png)
+> ![Image](image_3ab867d55d3c.png)
 >
 > ```c#
 > void OnTriggerEnter(Collider other) 
@@ -214,7 +214,7 @@ notion_url: "https://www.notion.so/3D-10-4824ce1e9ddb457c8f926bbcb1deeaa5"
 >     }
 > ```
 >
-> ![Image](image_378f98712afa.png)
+> ![Image](image_4eda16bb9a26.png)
 >
 > # 선생님의 디버깅 방법(그냥 bool값 추가)
 >

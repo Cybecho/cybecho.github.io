@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Runtipi-478a4e238c104d1e854ed83cb1708cf8"
 
 ---
 
-![Image](image_c2ebe1a9b29d.png)
+![Image](image_ef727221e0d9.png)
 
 [https://runtipi.io/](https://runtipi.io/)
 

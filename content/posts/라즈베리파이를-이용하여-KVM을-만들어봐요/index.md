@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/KVM-2111bab9e3f880a68557ffa3ff921a60"
 
 ---
 
-![Image](image_ddbd5a02a6fa.png)
+![Image](image_1ac490b80c44.png)
 
 > 아… 취업하고나니, 집에있는 윈도우 서버가 원인모를 문제로 다운될때마다, 직접 키는게 참 곤혹이다…
 

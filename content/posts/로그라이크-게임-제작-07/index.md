@@ -22,12 +22,12 @@ notion_url: "https://www.notion.so/07-eaeb11697c03468291a6e17c748f7710"
 
 ## OBJ 내부에 머터리얼은 인스펙터에서 수정할수가 없어서 머터리얼만 따로 복사해옵니다
 
-![Image](image_bb58a7f72e50.png)
+![Image](image_2754466c8542.png)
 
-![Image](image_29e024bc6bb8.png)
+![Image](image_8ff8d1c99cec.png)
 
 
-![Image](image_6cee01a58b00.png)
+![Image](image_b5b7d150709d.png)
 
 
 > 🔥 **플레이어와 기둥 오브젝트가 겹쳤을 때 기둥 오브젝트의 material 값을 수정하는 방**
@@ -35,11 +35,11 @@ notion_url: "https://www.notion.so/07-eaeb11697c03468291a6e17c748f7710"
 
 ## 박스 콜라이더를 카메라에 추가하여 카메라와 닿는 특정 태그의 콜라이더의 MeshRender를 잠시 비활성화 할겁니다
 
-![Image](image_f9ed09270cce.png)
+![Image](image_064717068019.png)
 
-![Image](image_338b5fc71c1b.jpeg)
+![Image](image_f96ba48ec214.jpeg)
 
-![Image](image_c5cb75b641f6.png)
+![Image](image_7b911fe89eab.png)
 
 ```c#
 **void OnTriggerEnter(Collider other)**

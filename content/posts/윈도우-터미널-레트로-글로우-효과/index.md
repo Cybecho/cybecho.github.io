@@ -16,15 +16,15 @@ notion_url: "https://www.notion.so/f8e5ce5861ba481dafe8312f1dfd58f0"
 
 ---
 
-![Image](image_c908df604772.png)
+![Image](image_aa9eb681b0f0.png)
 
 ### 1. ctrl + shift + p 누르고 설정 열기
 
-![Image](image_48b41c5123f9.png)
+![Image](image_001cafea1613.png)
 
 ### 2. 기본값 → 모양
 
-![Image](image_cfdf2600ee59.png)
+![Image](image_97ee897c471a.png)
 
-![Image](image_04a6cda30475.png)
+![Image](image_0c1ab2c2a41f.png)
 

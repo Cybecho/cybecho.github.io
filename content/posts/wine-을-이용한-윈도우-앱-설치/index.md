@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/wine-6d0d033175ee4c7387070be5d3d992f4"
 
 ---
 
-![Image](image_821f600aae1f.png)
+![Image](image_31c69ffe43e6.png)
 
 [https://hamonikr.org/used_hamonikr/82280](https://hamonikr.org/used_hamonikr/82280)
 
@@ -37,9 +37,9 @@ sudo dnf install playonlinux
 > 💡 **버전관리**
 > ---
 >
-> ![Image](image_9d88d3df7623.png)
+> ![Image](image_4d4ff289e7c3.png)
 >
-> ![Image](image_214e34d7a18e.png)
+> ![Image](image_9af9f3a979cd.png)
 >
 >
 

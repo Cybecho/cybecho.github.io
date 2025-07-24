@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Copilot-Twinny-11ad1a5015414e19ba9db038b3f221
 
 ---
 
-![Image](image_fcd5a2450725.png)
+![Image](image_e6b6cee6b2f5.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=2Nj1W3CP9mM)
 
@@ -28,7 +28,7 @@ notion_url: "https://www.notion.so/Copilot-Twinny-11ad1a5015414e19ba9db038b3f221
 
 먼저, 전체 시스템의 아키텍처를 살펴보겠습니다:
 
-![Image](twinny-codestral-architecture.svg)
+![Image](image_39773dfca7ab.png)
 
 이 아키텍처는 다음과 같은 주요 컴포넌트로 구성됩니다:
 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/1-13eab0d8288144948c2a5433567082ca"
 
 ---
 
-![Image](image_277896870cdc.png)
+![Image](image_67cfc3b0ec6a.png)
 
 ### 강의영상
 

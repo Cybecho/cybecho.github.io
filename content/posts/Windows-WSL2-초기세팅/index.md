@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Windows-WSL2-13ed931f1f3548aeb236afd1cbda26d2
 
 ---
 
-![Image](image_4e568af25237.png)
+![Image](image_4ee47a1c126c.png)
 
 🔗 [https://nomadcoders.co/windows-setup-for-developers](https://nomadcoders.co/windows-setup-for-developers)
 

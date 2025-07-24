@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Albert-Linux-1871bab9e3f8808793d3e380ba759f22
 
 ---
 
-![Image](image_0a836f5ce314.png)
+![Image](image_4bbc4e60e27c.png)
 
 [https://blog.naver.com/jaydee88/221320589728](https://blog.naver.com/jaydee88/221320589728)
 

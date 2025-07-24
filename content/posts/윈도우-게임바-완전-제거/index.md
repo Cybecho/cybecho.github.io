@@ -16,12 +16,12 @@ notion_url: "https://www.notion.so/a9053087eff24e22aaa928f62f00c140"
 
 ---
 
-![Image](image_76388bb26dd3.png)
+![Image](image_2396c4ea3ff4.png)
 
 
 🔗 [https://lifenourish.tistory.com/2040](https://lifenourish.tistory.com/2040)
 
 🔗 [https://m.blog.naver.com/toruin84/223011747728](https://m.blog.naver.com/toruin84/223011747728)
 
-![Image](image_d07ffae4e53b.png)
+![Image](image_54dd6c02b8aa.png)
 

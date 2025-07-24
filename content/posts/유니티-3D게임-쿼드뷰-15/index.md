@@ -18,7 +18,7 @@ notion_url: "https://www.notion.so/3D-15-ea201c1ac47047d58f203173ded9577a"
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=r27DFyivQCY&list=PLO-mt5Iu5TeYkrBzWKuTCl6IUm_bA6BKy&index=15)
 
-![Image](image_5c249199cc46.png)
+![Image](image_ae101c7e95a7.png)
 
 > 🔥 **도넛모양으로 회전하는 파티클시스템**
 > 1. 파티클시스템생성
@@ -27,12 +27,12 @@ notion_url: "https://www.notion.so/3D-15-ea201c1ac47047d58f203173ded9577a"
 > 1. Shpae에서 Radius와 Donut Radius 조절
 > 1. Shape - Mode - Loop 로 변경하여 빙글빙글 돌게
 > 1. 그 다음에 시간에따른 크기변화와 색상변화를 주다보면 예쁜 파티클시스템이 완성된다UI
-> ![Image](image_b58e289e7500.png)
+> ![Image](image_e970c3ef836d.png)
 >
 >
 
 > 🔥 **UI에서 Create Empty를 만들고Image 컴포넌트를 추가해서 버튼이나 특정이미지를 삽입할수도 있다 굳이 Image를 생성하지 않아도…**
-> ![Image](image_40ec14b4b483.png)
+> ![Image](image_81554988556e.png)
 >
 >
 
@@ -65,7 +65,7 @@ notion_url: "https://www.notion.so/3D-15-ea201c1ac47047d58f203173ded9577a"
 > }
 > ```
 >
-> ![Image](image_644d3dda4438.png)
+> ![Image](image_2bf99de038a3.png)
 >
 >
 
@@ -123,7 +123,7 @@ notion_url: "https://www.notion.so/3D-15-ea201c1ac47047d58f203173ded9577a"
 > 🔥 **버튼에 특정 스크립트에 특정 함수 실행시키는 방법**
 > ## 해당 버튼에 들어가서 On Click 버튼에 + 버튼 눌러주고 스크립트가 담겨있는 오브젝트를 박스안에 넣어주고 public으로 설정된실행될 함수를 넣어준다
 >
-> ![Image](image_e4d82578a8af.png)
+> ![Image](image_cf6e97c0a5e4.png)
 >
 >
 
@@ -148,7 +148,7 @@ notion_url: "https://www.notion.so/3D-15-ea201c1ac47047d58f203173ded9577a"
 >     }
 > ```
 >
-> ![Image](image_5a0e7f579926.png)
+> ![Image](image_b1370d8726e2.png)
 >
 >
 

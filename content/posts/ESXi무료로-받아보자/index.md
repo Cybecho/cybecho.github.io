@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/ESXi-2111bab9e3f880719c1fe2d33faebce7"
 
 ---
 
-![Image](image_8793e6953615.png)
+![Image](image_0ea4483d08a8.png)
 
 🔗 [https://svrforum.com/itnews/2301976](https://svrforum.com/itnews/2301976)
 

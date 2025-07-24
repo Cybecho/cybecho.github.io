@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Update-FixedUpdate-LateUpdate-68007877d2e64e8
 
 ---
 
-![Image](http://2.bp.blogspot.com/-oiA6GKz_rO8/VCoGUjgaIBI/AAAAAAAABEA/x_ckOzgK0aQ/s1600/Unity-Fixed-Update-Loop.gif)
+![Image](image_7fd1687e17d8.gif)
 
 🔗 [http://developug.blogspot.com/2014/09/update-fixedupdate-lateupdate.html](http://developug.blogspot.com/2014/09/update-fixedupdate-lateupdate.html)
 
@@ -27,5 +27,5 @@ notion_url: "https://www.notion.so/Update-FixedUpdate-LateUpdate-68007877d2e64e8
 ![Image](image_7fd1687e17d8.gif)
 
 - **LateUpdate()** - 모든 Update 함수가 호출된 후, 마지막으로 호출됩니다. 주로 오브젝트를 따라가게 설정한 카메라는 LateUpdate 를 사용합니다(카메라가 따라가는 오브젝트가 Update함수 안에서 움직일 경우가 있기 때문).
-![Image](http://2.bp.blogspot.com/-hE4Ax8_ltjI/VCoGUjBQBEI/AAAAAAAABEE/HgNgArAm4oU/s1600/Unity-Update-Loop.gif)
+![Image](image_a7c61d8a348d.gif)
 

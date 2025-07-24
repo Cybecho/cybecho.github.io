@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/e9027896b8df47168e02d21c39fa635c"
 
 ---
 
-![Image](image_b33dbe0be622.png)
+![Image](image_636e0edec641.png)
 
 
 WIN + {J I K L} 조합으로 만들려면 몇가지 작업이 필요하다… 이유는 바로

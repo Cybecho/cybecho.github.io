@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Notion-Git-c9ce520a19654cfba9db23acb77de99a"
 
 ---
 
-![Image](https://miro.medium.com/max/1400/1*i5kspLfcTfk1NjmJUYJJaQ.png)
+![Image](image_faa87f6679a3.png)
 
 # 버전1
 

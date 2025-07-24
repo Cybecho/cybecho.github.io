@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/1f116f3bd12e427ba1c50ff9ecd4500c"
 
 ---
 
-![Image](image_32ad148ce289.png)
+![Image](image_a33ee01a88ae.png)
 
 🔗 [https://github.com/uyu423/TIL/blob/master/MacOS/MacOS%20%EC%B4%88%EA%B8%B0%ED%99%94%20%ED%9B%84%20%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%20%EC%84%B8%ED%8C%85.md](https://github.com/uyu423/TIL/blob/master/MacOS/MacOS%20%EC%B4%88%EA%B8%B0%ED%99%94%20%ED%9B%84%20%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%20%EC%84%B8%ED%8C%85.md)
 

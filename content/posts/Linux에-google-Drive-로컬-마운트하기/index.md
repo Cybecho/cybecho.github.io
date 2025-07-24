@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Linux-google-Drive-c807bfda4256432fa6e0add51b
 
 ---
 
-![Image](image_fe7b58ec4d92.png)
+![Image](image_4dcca929e6b9.png)
 
 [https://fedoramagazine.org/connect-your-google-drive-to-fedora-workstation/](https://fedoramagazine.org/connect-your-google-drive-to-fedora-workstation/)
 
@@ -26,8 +26,8 @@ notion_url: "https://www.notion.so/Linux-google-Drive-c807bfda4256432fa6e0add51b
 
 설정 - 온라인계정 - 구글 추가하면
 
-![Image](image_c037de16e49b.png)
+![Image](image_5424fdb79a88.png)
 
-![Image](image_b0a2e0553499.png)
+![Image](image_013207824c24.png)
 
 

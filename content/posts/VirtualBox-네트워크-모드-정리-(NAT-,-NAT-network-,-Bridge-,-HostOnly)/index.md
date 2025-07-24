@@ -16,5 +16,5 @@ notion_url: "https://www.notion.so/VirtualBox-NAT-NAT-network-Bridge-HostOnly-1a
 
 ---
 
-![Image](image_91877eb149d6.png)
+![Image](image_c58d5010f07b.png)
 

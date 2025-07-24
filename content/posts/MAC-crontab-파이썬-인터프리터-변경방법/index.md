@@ -40,7 +40,7 @@ GCP와 다르게 맥 터미널에선 코드가 실행되어도 GUI적으로 실�
 
 코드가 수정되고 실행된 결과는 다음과 같았다
 
-![Image](image_102fc0a4c48e.png)
+![Image](image_ed1ed44dfc14.png)
 
 urllib3 v2.0 버전 이상이 필요하다는데… 아마 이 문제때문은 아니고 파이썬 버전이 3.9로 설정되어있어 생긴 버그였다. 셀레니움은 3.9 버전에서 지원되지 않기 때문이다. 처음 MAC 을 설정할때, 개발자를 위한 패키지를 한번에 다운받은적이 있는데, 당시에 파이썬 3.9.6 이 자동으로 설치되어 말썽을 부린것이다.
 
@@ -56,7 +56,7 @@ urllib3 v2.0 버전 이상이 필요하다는데… 아마 이 문제때문은 �
 which python3.11
 ```
 
-![Image](image_08579735d0d9.png)
+![Image](image_d92b3528e6f5.png)
 
 나는 홈브류로 새롭게 파이썬을 설치했기때문에 다음과 같은 경로를 얻을 수 있었다.
 
@@ -81,9 +81,9 @@ which python3.11
 # 팁
 
 
-![Image](image_cb961c01d6eb.png)
+![Image](image_fa9df636c0b5.png)
 
-![Image](image_b8ea802eb881.png)
+![Image](image_42523fda1c72.png)
 
-![Image](image_2e68aadb9e77.png)
+![Image](image_a232395a7fd5.png)
 

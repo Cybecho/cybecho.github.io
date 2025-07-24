@@ -32,7 +32,7 @@ notion_url: "https://www.notion.so/3D-04-a8e0b9c3cf5c4fd68ca2ff49fad8c5a2"
 >     public int maxHasGrenades;
 > ```
 >
-> ![Image](image_b38f2653afd9.png)
+> ![Image](image_55956b9f8b3e.png)
 >
 >
 
@@ -69,16 +69,16 @@ notion_url: "https://www.notion.so/3D-04-a8e0b9c3cf5c4fd68ca2ff49fad8c5a2"
 > ```
 >
 > > 🔥 **수류탄을 먹어도 아이템이 먹어지지않고 아이템도 사라지지않는 현상은 내가 수류탄의 태그를 웨폰으로해뒀기 떄문에 `other,tag == “Item”` 코드가 작동하지 않았던것 또, 타입도 Granade로 변경해줘야한다**
-> > ![Image](image_b82e25d55139.png)
+> > ![Image](image_8e08c7627f89.png)
 > >
-> > ![Image](image_d6997af0534d.png)
+> > ![Image](image_651d6cba25cc.png)
 > >
 > >
 >
 >
 
 > 🔥 **Null Empty 에서 아이콘을 추가해줄수있다**
-> ![Image](image_f965bfc4c8dc.png)
+> ![Image](image_c86bbe1bbb99.png)
 >
 >
 >
@@ -86,9 +86,9 @@ notion_url: "https://www.notion.so/3D-04-a8e0b9c3cf5c4fd68ca2ff49fad8c5a2"
 > 🔥 **Rate of Distance : 파티클 위치변화에 따라 입자 생성 (잔상효과)
 
 그리고 Simulation Space에서 World로 설정해서 잔상효과처럼 만듭니다**
-> ![Image](image_7bf37ccae2de.png)
+> ![Image](image_6d08281f71a3.png)
 >
-> ![Image](image_50e223eced9c.png)
+> ![Image](image_3f7870d7955e.png)
 >
 >
 
@@ -113,7 +113,7 @@ notion_url: "https://www.notion.so/3D-04-a8e0b9c3cf5c4fd68ca2ff49fad8c5a2"
 >     }
 > ```
 >
-> ![Image](image_9a3c9bd6cd99.png)
+> ![Image](image_72b0f987e699.png)
 >
 > ```c#
 > //Player.cs

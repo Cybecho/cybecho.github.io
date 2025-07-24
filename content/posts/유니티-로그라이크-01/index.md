@@ -21,25 +21,25 @@ notion_url: "https://www.notion.so/01-bda7e6da79594f02a4e4d561ee769b61"
 > 🔥 **URP로 프로젝트 생서할것임**
 > ## URP는 유연하고 확장성이 좋으며 다양한 플래폼(모바일, 콘솔, PC, VR)에 최적화된 그래픽을 제공한다.
 >
-> ![Image](image_4f8660a76be8.png)
+> ![Image](image_753d8159c5cd.png)
 >
 >
 
 > 🔥 **캐릭터 스프라이트 다음과 같이 설정**
-> ![Image](image_3d408b4144af.png)
+> ![Image](image_d4e76dc2a060.png)
 >
 > ### Sprite에서 설정
 >
-> ![Image](image_5d477323c2d4.png)
+> ![Image](image_62a0759a3cde.png)
 >
 > ### Slice 하고 알파값보고 잘 잘렸는지 확인하고 Apply
 >
-> ![Image](image_67a0cc7668ad.png)
+> ![Image](image_bc62ee82808c.png)
 >
 >
 
 > 🔥 **유니티 씬 내부에서 기즈모 크기 변경방법**
-> ![Image](image_378660556e38.png)
+> ![Image](image_03baf696b5c3.png)
 >
 >
 
@@ -47,14 +47,14 @@ notion_url: "https://www.notion.so/01-bda7e6da79594f02a4e4d561ee769b61"
 >
 > Edit - Projecy Settings - Physics2D 에서확인이가능하다
 >
-> ![Image](image_9915b41b9e7d.png)
+> ![Image](image_e0401c6a9d47.png)
 >
-> ![Image](image_4a56a3bb25ab.png)
+> ![Image](image_214f3a2b42fe.png)
 >
 >
 
 > 🔥 **이미지 레이어 순서 설정**
-> ![Image](image_6efe1beaa34d.png)
+> ![Image](image_9af04a26ba4d.png)
 >
 >
 

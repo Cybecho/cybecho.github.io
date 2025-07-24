@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Excalidraw-7cb30c5e770e4971b422ccb1404f0ec9"
 
 ---
 
-![Image](image_2685b0724853.png)
+![Image](image_0e88eb8f29a4.png)
 
 🔗 [https://hattbatt.tistory.com/entry/개발자-다이어그램-툴-추천-Excalidraw](https://hattbatt.tistory.com/entry/개발자-다이어그램-툴-추천-Excalidraw)
 

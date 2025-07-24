@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VS-code-vs-code-3738fece05c5471d83f63f99a0edf
 
 ---
 
-![Image](image_a725eafdac78.png)
+![Image](image_3b57d90eb7e5.png)
 
 ## 윈도우,Linux는 아래 링크 따라하면 돼
 
@@ -35,9 +35,9 @@ notion_url: "https://www.notion.so/VS-code-vs-code-3738fece05c5471d83f63f99a0edf
 
 이 확장은 VS Code의 체크섬 확인 CSS 파일을 편집하여 작동합니다. 즉, Vibrancy Continued를 설치하고 활성화한 후 경고 메시지가 나타납니다. 이 경고는 무시해도 안전하며 모든 변경 사항은 되돌릴 수 있습니다. 톱니바퀴를 클릭하고 **다시 표시 안 함을** 선택하여 숨깁니다.
 
-![Image](https://github.com/illixion/vscode-vibrancy-continued/raw/HEAD/warn.png)
+![Image](image_1c9bcc3b635e.png)
 
-![Image](https://github.com/illixion/vscode-vibrancy-continued/raw/HEAD/warnfix.png)
+![Image](image_ecda80eefa3b.png)
 
 VS Code 제목 표시줄의 "[지원되지 않음]" 경고를 수정하려면 [VSCode 체크섬 수정](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums) 확장 기능을 참조하세요 .
 
@@ -54,11 +54,11 @@ VS Code 제목 표시줄의 "[지원되지 않음]" 경고를 수정하려면 [
 # 시작하기
 
 1. 선택한 VSCode 테마가 'Dark+' 또는 [지원되는 테마 중 하나인지 확인하세요.](https://marketplace.visualstudio.com/items?itemName=illixion.vscode-vibrancy-continued#vscode_vibrancy.theme)
-![Image](https://github.com/illixion/vscode-vibrancy-continued/raw/HEAD/step-1.png)
+![Image](image_e677e286f0c6.png)
 
 1. [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=illixion.vscode-vibrancy-continued) 에서 확장을 설치합니다 .
 1. F1을 누르고 "Reload Vibrancy" 명령을 활성화하세요.
-![Image](https://github.com/illixion/vscode-vibrancy-continued/raw/HEAD/step-3.png)
+![Image](image_36ddce2a1701.png)
 
 1. 메시지가 표시되면 VSCode를 다시 시작합니다.
 VS Code가 업데이트될 때마다 동일한 단계를 사용하여 Vibrancy를 다시 활성화하세요.

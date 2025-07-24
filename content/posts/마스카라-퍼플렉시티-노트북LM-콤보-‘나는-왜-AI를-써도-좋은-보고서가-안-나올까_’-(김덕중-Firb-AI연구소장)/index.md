@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/LM-AI-Firb-AI-1dd1bab9e3f88089a15bce47ad64fa6
 
 ---
 
-![Image](image_c4fc15bdaaee.png)
+![Image](image_3babe34fba31.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=Mpk4LNZ_P4c&t=994s)
 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/07583846d6504f69aca2588429d0405a"
 
 ---
 
-![Image](image_30511b9cc9e7.png)
+![Image](image_d5596b0ac306.png)
 
 
 윈도우 wsl 추가이후로 참 좋은데…
@@ -34,7 +34,7 @@ start explorer.exe
 exit
 ```
 
-![Image](image_3fb38228b091.png)
+![Image](image_73a3f891c6e9.png)
 
 > 💡 **귀찮으면 다운 ㄱ**
 > ---

@@ -20,9 +20,9 @@ notion_url: "https://www.notion.so/4b-ProxMox-1ad1bab9e3f88097b72cf26d7149316e"
 
 🔗 [https://github.com/pimox/pimox7](https://github.com/pimox/pimox7)
 
-![Image](image_54763e7eb7eb.png)
+![Image](image_63aaa48d34bd.png)
 
-![Image](image_163aaf7e877f.png)
+![Image](image_680e2a44af91.png)
 
 라즈베리파이 4B에 Proxmox를 설치하는 방법을 알아보겠습니다. 먼저 환경을 설명하자면, 라즈베리파이에는 64비트 우분투 라이트가 설치되어 있고 IP 주소는 192.168.45.42입니다.
 

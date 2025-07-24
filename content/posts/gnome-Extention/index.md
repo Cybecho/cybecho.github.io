@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/gnome-Extention-b38fe92a74254ac18d3af074fd5a3
 
 ---
 
-![Image](image_a9ff14b22604.png)
+![Image](image_616a0c768d88.png)
 
 # 설치방법
 

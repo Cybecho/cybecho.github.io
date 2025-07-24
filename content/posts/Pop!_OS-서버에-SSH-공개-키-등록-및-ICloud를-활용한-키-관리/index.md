@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Pop-_OS-SSH-ICloud-15d1bab9e3f88077898adfe448
 
 ---
 
-![Image](image_1e29efcca8fc.png)
+![Image](image_a23e3e4c3845.png)
 
 # Pop!\_OS 서버에 SSH 공개 키 등록 및 접속 튜토리얼
 

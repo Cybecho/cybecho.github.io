@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Cyberduck-Mac-1681bab9e3f880849f5ef988bb8f354
 
 ---
 
-![Image](image_b40fee8a5efe.png)
+![Image](image_620886a6ddde.png)
 
 [https://codegear.tistory.com/64](https://codegear.tistory.com/64)
 

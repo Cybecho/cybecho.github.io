@@ -45,7 +45,7 @@ ip a
 
 ### 맥미니 서버
 
-![Image](image_0bb5987e0dc5.jpeg)
+![Image](image_9e10effbc508.jpeg)
 
 ### MacPro 6,1
 

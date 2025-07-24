@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/04-1302b43580ac4e1b8512ef23e7e5a0f8"
 
 ---
 
-![Image](image_f245a6ab09d0.png)
+![Image](image_32978eec1f78.png)
 
 
 ## Raycast가 True인 상황에서도 True가 반환이 안되어 머리를 싸매고 그 이유를 알았다
@@ -24,7 +24,7 @@ notion_url: "https://www.notion.so/04-1302b43580ac4e1b8512ef23e7e5a0f8"
 
 ## 바로 Rigidbody도 추가되어야 Raycast가 제대로 충돌을 감지할 수 있다는걸…
 
-![Image](image_a9df753a666f.png)
+![Image](image_56e2e6565cd7.png)
 
 
 그리고 Player.cs에 다음과 같은 코드를 추가해줍니다 (고마워요 GPT맨)

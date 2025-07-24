@@ -34,5 +34,5 @@ choco install angryip
 
 # 실행 후 스캔을 뜨고, 정렬을 통해 활성화된 ip를 확인할 수 있음
 
-![Image](image_72934818ec4a.png)
+![Image](image_28bacac9afd5.png)
 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/for-mac-tex-shinobi-ANSII-5dc1aa70914641b6992
 
 ---
 
-![Image](image_4e70101e319d.png)
+![Image](image_e83feeb181f4.png)
 
 🔗 [https://matdulgi.tistory.com/124](https://matdulgi.tistory.com/124)
 

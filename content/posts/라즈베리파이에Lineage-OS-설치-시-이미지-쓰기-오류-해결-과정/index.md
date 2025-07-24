@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Lineage-OS-2331bab9e3f88019a0b2f53b1d89c0af"
 
 ---
 
-![Image](image_045c864a3ded.png)
+![Image](image_0631c736e8a7.png)
 
 라즈베리파이 4b에 Lineage OS 22를 설치하기 위해 Raspberry Pi Imager를 사용하여 이미지 쓰기를 진행하는 과정에서 “디스크에 파일을 쓰는 동안 액세스 거부 오류가 발생했습니다”라는 메시지가 지속적으로 나타났다.
 

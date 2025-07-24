@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VS-code-C-58e389d13eb640fe95fc1a38d8f66c55"
 
 ---
 
-![Image](image_0a12c408b1bf.png)
+![Image](image_82e092dd005e.png)
 
 🔗 [https://stackoverflow.com/questions/66408814/running-c-jupiter-notebook-in-vscode-insiders](https://stackoverflow.com/questions/66408814/running-c-jupiter-notebook-in-vscode-insiders)
 

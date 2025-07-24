@@ -38,9 +38,9 @@ notion_url: "https://www.notion.so/NAS-4d542bc360064b0f80b11738bcb274b0"
 
 # 플러그인도 동기화하기
 
-![Image](image_845cab17ac25.png)
+![Image](image_0bb6c8f86a39.png)
 
-![Image](image_6e23cefebe66.png)
+![Image](image_3b4c94a3e6ac.png)
 
 숨겨진 디렉토리인 obsidian도 함께 동기화하면, 플러그인도 정상적으로 동기화된다!
 

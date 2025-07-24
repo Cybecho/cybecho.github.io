@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Docker-fb47975bf04b40f2a01a6abe851a8d03"
 
 ---
 
-![Image](image_83e9583cc094.png)
+![Image](image_9ae37dcebcae.png)
 
 [https://selfh.st/apps/](https://selfh.st/apps/)
 

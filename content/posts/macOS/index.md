@@ -20,7 +20,7 @@ notion_url: "https://www.notion.so/macOS-Slidepad-e3fd09ecd3bb4b40b1bdb9e2ab1b51
 
 # Slide Pad
 
-![Image](image_f7969ff13db4.png)
+![Image](image_b33aee5def9c.png)
 
 [https://slidepad.app/](https://slidepad.app/)
 

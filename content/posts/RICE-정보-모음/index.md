@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/RICE-6e42bc6748a14689b2e5ebf6dd52e3f5"
 
 ---
 
-![Image](image_fcdee2e3f4eb.png)
+![Image](image_cb44e174110d.png)
 
 # Hyprland
 

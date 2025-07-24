@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-OS-98ccd93277fc489a9908fc688fda44ed"
 
 ---
 
-![Image](image_c7b9a17df832.png)
+![Image](image_5167e75c65c5.png)
 
 🔗 [https://dortania.github.io/OpenCore-Install-Guide/](https://dortania.github.io/OpenCore-Install-Guide/)
 
