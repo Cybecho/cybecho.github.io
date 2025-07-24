@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Dotfiles-16b1bab9e3f880308829f44f2a03ad4d"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/1ecfc459-c75d-4226-8f1c-93633309722f/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46634TDOIBQ%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083448Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJHMEUCID7pVx1vWu3nTkxdpwpkS1yrV4gKUY8WShyMC24P8KhRAiEAyojAsp6MDMo5ByeadOKgWWHRG4cNtMMLS0msRsk30m8q%2FwMIKRAAGgw2Mzc0MjMxODM4MDUiDIVc5JSWcZc5UUM5MCrcA6LXW3yPPfIigjbqAHuZ45PHlzPDuCQuGYMQkHUXb54eoPphUYUNp9SbhSsuqBemVWwOfP2XVw4MDF%2BEHCLThZcVYw4YgwryIlGsgF3wX31b30nTsui52H2HKvUtbmxBC037JF5JnR8sJ5dv6noRkIAtLRFcNSWCNI1ABNEJ%2B2GJYE2BsyRk7xBTgZA%2BfhEX2vxFwG%2FoodSt300aBMzve3LPzuy%2B9fXtI0clOJDSvuR6ktdamRlWoqFoFtWLdE2NYkgS6wqIMLRmxuMfuEK%2FVUhSBHOMVaIaHjiIKhcFr2zzj0bEYXmdcbEteMkPZYHgsya2I%2FNM2m1OpQ2%2BMsqX3E%2FfsgX%2F1MWNiiOn58XBtkk30oUrp55dZgjaCBcjfj5EjKIF5fCieSOr8foXoHLgQqD0vw4kHwMQuR56EG%2FO8L5kpTfFDkiaA5AL0k6rZrvtOU6mkt%2BHM35gh06HxVNb72pYpkzEZmGQOdP6mF9Y81R33EOxlT4rVXA8swbXgDTsGRyQ7s0e1sjzIP3nv6WmGb6TQGA%2Bm3SRkYKNYXCbIgxJdHvh6JKh%2FoS77cvbF6bwrQgQKNEXNRswjMKY7HrRQYHmO8bk2P6vkqKWQUoLTkFGeovYYvNhAjovog7HMPjPh8QGOqUBs%2FEiiXKFZW2ezvmxNLXXc28k0twspOOX9938g7lmfMm29Dm%2Ft8detn5QKAKtwAxsLm1ZX6cqUdzHn9RhaYo8XvlOZtVCh0XeNkShJjbdecuQUFNyBaNDslfUrqXz1KUD4RFaOkn1Z0Is8W1MR71e3Gk3Jfv9Rt0Uug86SO3%2FXRLSnUBXTPmTIA9ETBS5hOqwdcQfUTKNhoqIYGuEBUTtrBbP2Bgv&X-Amz-Signature=d381d1e1555d304ccf556cb9475bd921207f69e7c01f1cf66b97caf6a5049599&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/1ecfc459-c75d-4226-8f1c-93633309722f/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665DJ6X3CP%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101703Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQDURmUQWOw2sg%2BLd0DCf3z2%2BahWHD%2FUNZ64%2FnnJE88TyAIgKLcQBuTtOOGoe3lQfz0C9qHZTaQmsUbhaOnXKvNFd7cq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDGdtFO%2BbCkQ86spw6ircAwd70vvf4TXT1LC4xfR8xaC1qAOfSUHdDuiQt34TVBGDbTZmy2inQ9UXD3W%2FI0kBCt01pIy4pYK0t6Z%2BltB3WY7DmgeITCgp2zHDeeGcWTH3ojnIbnjb2njdxx16IeyZ8P4HpFIF6pfQYGpRJ1mA%2FnQ45MHfdIblbQRjQk781nRwSbM46puLCALdQA%2B%2BPQbCuGHrvoZT3BS9ZQvz3%2FIpn%2BtMEpBOFeDQQrcehYmxFkwCGFZM6ssPnLG2aGhy6vqRm66lrczgOJmV3xO8omsRsShLEVU3zko2BpYNvF08E57sPhblDs%2BcOhlHwukxUrlZqFyOZSgPsteMGO3V0IAmW%2BEGDdnkdmmzIedwWWmU8ie3MKvSHeGqcynm4gBtKrO9oRR2nUsjqD7%2FGJ1JRHuME2DNw%2Fb1Gnd5xgPKL21cuyhseKyCVAgbmrPKGFOmAUpWVl2JKvMqasGtPvrWpxMPzp3QHVVFjbZDUdu8o6K1gWjflaDys07AXZ9BXI%2FrQMJOOUv640jDMlgzx03BeYReo7y3WSrGg3ObGJSve7b%2BKcIryki4lPI7%2FgsNgwge7a%2F62I08TypxJi6lWkprTiDS6u851dxH1vr6gcL2pLGK0YFRiHiZ40g933optq1aMIr2h8QGOqUBuWIXanOCmjCpZ6hT%2Bh6jt5fQY3kjC0yxg6ECopTFB8aYhx3U2eCLv3IMm%2F5voB4R8w%2BMClSwTr2Ozz0YRwbZQBTDevJQobJ1bJBncUOaVYw7OUlKfEkqybvEO%2F4mpoLxnHWLPwg7WreMGX%2FCwbFuJqsQ9w8GUkEGW68v3juUy%2FkhuJqywkKHO1yT1Hag9AAN9sSQEACmJZ48Z%2Bk%2FXaSyWZRk3sf6&X-Amz-Signature=b3dc6e8ed67f4235609c17a1856b4f954929f806a7e9b6ae83d8a71308ee67be&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=Xegs1fhS3I8)
 
@@ -53,26 +53,82 @@ Dotfiles를 관리하는 효과적인 방법은 Git 리포지토리에 저장하
 
 - 홈 디렉토리 또는 원하는 위치에 Dotfiles를 저장할 디렉토리를 생성합니다.
 - 예시:
+```shell
+mkdir ~/dotfiles
+cp ~/.bashrc ~/.vimrc ~/dotfiles/
+```
+
 ### 2단계: 설치 스크립트 작성
 
 - `bin/sh`를 사용하는 POSIX 호환 스크립트를 작성합니다.
 - 기본 구성:
+```shell
+#!/bin/sh
+echo "Setting up Dotfiles..."
+```
+
 ### 3단계: 주요 함수 구현
 
 1. **프로그램 설치**:
+  - 시스템의 패키지 관리자를 확인하고, 필요한 소프트웨어를 설치합니다.
+  - 예시:
+```shell
+if command -v apt > /dev/null; then
+    sudo apt update && sudo apt install zsh git
+elif command -v pacman > /dev/null; then
+    sudo pacman -Syu zsh git
+fi
+```
+
 1. **기존 Dotfiles 제거**:
+  - 충돌을 방지하기 위해 기존 파일을 삭제하거나 백업합니다.
+```shell
+[ -f ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.bak
+```
+
 1. **심볼릭 링크 생성**:
+  - Dotfiles를 지정된 위치에 심볼릭 링크로 연결합니다.
+```shell
+ln -s ~/dotfiles/.bashrc ~/.bashrc
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+```
+
 1. **플러그인 설치**:
+  - 필요한 플러그인을 자동으로 다운로드합니다.
+```shell
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\
+    <https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim>
+```
+
 1. **완료 메시지**:
+  - 설치가 완료되었음을 사용자에게 알립니다.
+```shell
+echo "Dotfiles setup complete!"
+```
+
 ### 4단계: Git 리포지토리로 푸시
 
 - Dotfiles를 Git 리포지토리에 업로드합니다.
+```shell
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin <리포지토리 URL>
+git push -u origin main
+```
+
 ---
 
 ## 실습과 테스트
 
 1. **스크립트 실행**:
+  - 새 시스템에서 스크립트를 실행하여 Dotfiles를 복원합니다.
+```shell
+sh setup.sh
+```
+
 1. **호환성 테스트**:
+  - 다양한 Linux 배포판 및 MacOS에서 테스트하여 호환성을 확인합니다.
 ---
 
 ## 결론

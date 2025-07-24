@@ -43,7 +43,7 @@ notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e
 
 ### NAT 구성
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/a85efdae-4b2a-48b3-8b2c-ba675eb68545/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466623EGPFS%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083357Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJHMEUCIQDYZ58EjRENBG2q37%2B%2BzDqER%2FJTFCf5HMA72t84GzF%2B%2BgIgQA%2FrPgb1raQp%2BC7SkpTlFdR2YZ%2Bh%2FvEwwEbrHUiW738q%2FwMIKRAAGgw2Mzc0MjMxODM4MDUiDDcvvYtziScLCJ4hnCrcA%2FwFs%2FpJTweXyZCKOUK%2BHS9w3PWBPVQCm2Cs3XhMpYXH5Uq2WDNLyyKY53V2sSKs7OL75LCo1vtKc%2BifWW%2FmGWTBnyxRmjAIPR9kwn3XGl78rKSzH5YH70IGq%2BT2HZqbZlfULx70c4CuxN4kt5h%2FZ1AmpxKMZKtdAD8G1INS9QDUw1AkM6lCVQwl3Nz2cvO07lnGywb7kDEuemGgvjvgOZuK25nYt5dvrQGl823i9lxrpFw%2FYIq0ZxQN%2FGOpLcEqXhoCAlMtwYA9ysSHaOjB8t%2BT16IddjKo8C8sCulFblpS7VPPTTR59BDB3XfGWmKplg9S1J7G4KZVz3fP8i3CJbMhUrwBjUTSz%2BhphL866WiCQQXlYaV5l0LKvuOi0UtvddYXDXfU4%2FVX6npmn%2BlDynJC6QmXSoMsJ2EnrNmdeBhUlI0XKPShPZVwh%2BJPg4sRNuUY771Tgr7ecJ%2Bds1yxnePk9QVUW0KLOpebsXMg6DSwIdHhEJmCF6eatuOlSAR5h92EycfAzs86feezfx9tDm04uQIf%2Fw39XhHvqBW1dj2CsizQjqNvo9OmWdvR2JbsX1iX204guZ16gpYglXDW0ary7TAcFlLHLoSFCo%2FMzVceeLDDrrIBL5rpDZTPMIjPh8QGOqUBMdfpByzi15mYee0KY%2BI4bZptEd1kBCPCjB2WEGHrDYI5EFyxH%2BIARLKiULa8ugcL5dst5syBY1k4BVZec6HCFIp9BVvoGyEBsfMNJZvFneNWXOC46BHYabHbZNaQRlLAl3nvYFSmd5M22y4LQgtMQ6lai0nWYAFhNJtypwDCNZgVeKXY2GplD%2FgXfqZOur59fpdimrr2C1ROLYrYmiZmvBt0MJGi&X-Amz-Signature=5deb6cf6dd3d0f582b991d827d6e7186f93ce3b5829c0f133dda9fed6c5c04ae&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/a85efdae-4b2a-48b3-8b2c-ba675eb68545/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466QAAUMTTZ%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101537Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQCFL6IMklnVky%2BY5TVK3JU0QDK%2FkqcyCxP0uk53ZkMiNQIgEmmXbRp9obri20qKdBnUUR5RfmYxoBTem9PzfMk%2BNWUq%2FwMIKxAAGgw2Mzc0MjMxODM4MDUiDOjBUn2xiDhJhlIIjCrcA6NDnbJw8AVdCntmiE19vJWYs64qloqAeqOZZRhmiBMtBKbZdXCi%2Fu3emEZOjwAQd7i9JitO1w83xci1986v6zQcpV22ditrXOA0g0NRrDHmWZn1BvGktRjwzw02AlvvBvVkAb6NUdoXKkzNgJQBwVD97pQSS7TFLiexXh5R53B7VP0eJiIjPGya6k305mgVMZhLUfpkwkW1oy2wI3LKmnJP4TcXOFeFADQ9ds8jMy8ZdbWerInQO59LX2xD3lOmPk%2F5HBmNzugfKcleOTQUJODp63NLE7EItvLv8t6zB7JXBkz%2FqByBQ%2BwIlHnw5%2FlZriYnJCZwyyezJGp3kmJmXdAOnb3uaBB7w7U81afokUHM%2Fw21RP%2FW2CMl3p1qPmvDHXg2wwnLhuB0lxTTSTbjB%2FeX04sW5xMBTpMoWgpDtxSBBCG2TtsiZX2e4rIC67K4BhnoX1zJUYrZc6Y7IdL7AVJC6oPil2kexB6p%2BXQAGlFlD0kh4ejE%2Fo3H0B2Vs3D%2Bm17gKl%2F0uKG3d73284rLPTYA1qjFMs%2BXkD3FTKm33r7%2Fg25pXIXBiLRk%2F1Hp2nZtnXk3PdiXRZULUpYJ%2BZo%2F6PtirN9XAesifNMZRxzaCXgwq22VYF95iIfhapZrMN%2F2h8QGOqUBw2npIXvjA%2FaFf48yIBe0%2BGV4yN%2BSaEZZW5LVqPIiLbqiAxZrpDDjzeco6joaTnewmZ9AGgje6sEs8TqojzQ57QIasZYbXtwnUvssnEe%2BIedZFJDNyBpwskeLAzb1dnbKMqhQwyUEPFYuqQltVyPF0vAYnfyak1O45Byx4XbcZx8ZFmnevStzWYqDsO3Kz7vsuxMS1%2BF9gzIhlEgbCy1X1EEG%2Bq5w&X-Amz-Signature=5d30347089aff15629e1b55c226267b665cded89bf517ae06854d8baf394c070&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 - NAT를 사용하면 가상 머신이 내부 IP 주소를 써도 호스트 컴퓨터의 IP를 통해 외부 인터넷을 사용할 수 있습니다.
 - 방화벽 설정에 따라 추가로 conntrack 설정이 필요할 수 있습니다.
@@ -54,8 +54,14 @@ notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e
 Routed Configuration과 NAT는 비슷해 보이지만 세 가지 중요한 차이가 있습니다:
 
 1. IP 주소 방식
+  - Routed: 가상 머신이 실제 인터넷 IP 주소를 직접 사용합니다.
+  - NAT: 가상 머신은 내부용 IP 주소를 사용하고, 호스트 컴퓨터의 IP를 빌려서 인터넷에 접속합니다.
 1. 설정의 어려움
+  - Routed: 실제 IP를 바로 사용해서 비교적 쉽게 설정할 수 있습니다.
+  - NAT: 내부 IP를 외부 IP로 바꾸는 과정이 필요해서 설정이 좀 더 복잡합니다.
 1. 외부에서의 접속
+  - Routed: 가상 머신이 실제 IP를 사용하므로 외부에서 직접 접속이 가능합니다.
+  - NAT: 가상 머신이 내부 IP를 사용하므로 외부에서 직접 접속이 어렵습니다. 포트 포워딩이라는 추가 설정이 필요합니다.
 정리하면, Routed는 실제 인터넷 IP를 직접 사용하는 방식이고, 
 
 NAT는 내부 IP를 사용하면서 호스트 컴퓨터의 IP를 통해 인터넷에 접속하는 방식입니다.

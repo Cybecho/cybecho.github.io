@@ -17,6 +17,18 @@ notion_url: "https://www.notion.so/ec1402ab723d41dbb6e7511400cb7401"
 ---
 
 > 💡 **이 방법이 성공함**
+> ---
+>
+> 아치리눅스는 업데이트가 잦은만큼, 설치 튜토리얼도 자주올라와서 
+>
+> 나중에 만약 다시 설치할 일이 있으면, 이걸보고 그대로 따라하는게 아니라 새로운 튜토리얼을 찾아보는걸 추천.
+>
+>
+> 이  채널 사람이 자주 올려주는거같음
+>
+> 🔗 [https://youtu.be/e-4YOymosJo?si=L0Ripi1mFfoXTvSI](https://youtu.be/e-4YOymosJo?si=L0Ripi1mFfoXTvSI)
+>
+>
 
 🔗 [https://www.youtube.com/watch?v=d5rquFPwh-Y](https://www.youtube.com/watch?v=d5rquFPwh-Y)
 

@@ -29,6 +29,9 @@ notion_url: "https://www.notion.so/Synology-NAS-29851d7142ec4ef6a20dec41c03fdfa0
 
 1. 나스의 제어판 > 로그인 포털 > 고급 설정으로 이동
 1. 새로운 역방향 프록시 규칙 생성
+  - 이름: Router
+  - 소스: HTTPS, 포트 443
+  - 대상: HTTP, 공유기 내부 IP 주소, 포트 80
 ```mermaid
 graph LR
     A[외부 네트워크] -->|HTTPS 443| B[나스]
@@ -41,6 +44,7 @@ graph LR
 
 1. 나스의 제어판 > 외부 액세스 > 라우터 구성으로 이동
 1. UPnP 규칙 생성
+  - 443 포트 선택
 1. 역방향 프록시 규칙 생성 (위와 동일)
 ```mermaid
 graph LR

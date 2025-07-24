@@ -23,8 +23,25 @@ notion_url: "https://www.notion.so/Linux-capslock-1871bab9e3f8805f9781c4d1e143aa
 Caps Lock 키를 물리적으로는 유지하되, Caps Lock 기능이 절대 작동하지 않도록 하려면 `udev` 규칙을 활용할 수도 있습니다.
 
 1. `udev` 규칙 파일을 만듭니다:
+```shell
+sudo nano /etc/udev/hwdb.d/99-disable-capslock.hwdb
+
+```
+
 1. 다음 내용을 추가합니다:
+```plain text
+evdev:atkbd:dmi:*
+  KEYBOARD_KEY_3a=reserved
+```
+
+  (`3a`는 Caps Lock 키의 keycode입니다.)
+
 1. 설정을 적용합니다:
+```shell
+sudo udevadm hwdb --update
+sudo udevadm trigger
+```
+
 ---
 
 # 복구방법

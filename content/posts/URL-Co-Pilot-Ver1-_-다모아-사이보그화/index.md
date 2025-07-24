@@ -25,5 +25,51 @@ pyinstaller -F -w -n=URLcopilot --icon=./icon2.ico --onefile HalfAuto_UrlCopiler
 ```
 
 > 🔥 **참고 코드**
+> 🔗 [https://insubkim.tistory.com/68](https://insubkim.tistory.com/68)
+>
+> ```python
+> import os
+> import sys
+>
+> def restart():
+>     os.execl(sys.executable, sys.executable, *sys.argv)
+>
+> print("Program Started")
+>
+> y_or_n = input("Are you gonna restart the program? y/n\n")
+>
+> if y_or_n == "y":
+> 	restart()
+> ```
+>
+> ---
+>
+> 🔗 [https://amureo.tistory.com/30](https://amureo.tistory.com/30)
+>
+> ```python
+> from tkinter import *
+>
+> tk = Tk()
+>
+> tk.wm_attributes("-topmost", 1)
+> ```
+>
+> ---
+>
+> 🔗 [https://www.delftstack.com/ko/howto/python/python-get-screen-size/](https://www.delftstack.com/ko/howto/python/python-get-screen-size/)
+>
+> ```python
+> from tkinter import *
+>
+> root = Tk()
+>
+> monitor_height = root.winfo_screenheight()
+> monitor_width = root.winfo_screenwidth()
+>
+> print("width x height = %d x %d (pixels)" %(monitor_width, monitor_height))
+> mainloop()
+> ```
+>
+>
 
 

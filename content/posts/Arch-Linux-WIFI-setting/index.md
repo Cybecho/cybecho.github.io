@@ -63,3 +63,137 @@ sudo pacman -S broadcom-wl-dkms
 ```
 
 
+<details>
+<summary>If you can’t found dhcp service?</summary>
+
+`*$ *``sudo systemctl disable dhcpcd.service` 이거 안될때
+
+dhcpcd 패키지 설치 여부 확인:
+
+
+```javascript
+sudo pacman -Qs dhcpcd
+```
+
+설치되어 있지 않다면, 다음 명령어로 설치합니다.
+
+```javascript
+sudo pacman -S dhcpcd
+
+```
+
+서비스 파일 확인:
+
+```javascript
+sudo systemctl status dhcpcd.service
+```
+
+파일이 존재하지 않는다면, 다음 명령어로 생성합니다.
+
+```javascript
+sudo systemctl enable dhcpcd.service
+```
+
+다른 DHCP 관리 서비스 확인:
+
+```javascript
+sudo systemctl status systemd-networkd
+```
+
+systemd-networkd가 활성화되어 있다면, dhcpcd를 사용하려면 먼저 비활성화해야 합니다.
+
+```javascript
+sudo systemctl disable systemd-networkd
+
+```
+
+이 후, 다시 dhcpcd 서비스를 비활성화 시도해보세요.
+
+</details>
+
+<details>
+<summary>If you can’t netctl?</summary>
+
+`*$ *``sudo netctl-auto list` 이거 안될때
+
+1. **netctl 패키지 설치 여부 확인:**
+  **Bash**
+
+```plain text
+sudo pacman -Qs netctl
+
+```
+
+  **Use code with caution. **[**Learn more**](https://bard.google.com/faq#coding)**content_copy**
+
+  설치되어 있지 않다면, 다음 명령어로 설치합니다.
+
+  **Bash**
+
+```plain text
+sudo pacman -S netctl
+
+```
+
+  **Use code with caution. **[**Learn more**](https://bard.google.com/faq#coding)**content_copy**
+
+1. **netctl-auto 명령어 경로 확인:**
+  **Bash**
+
+```plain text
+which netctl-auto
+
+```
+
+  **Use code with caution. **[**Learn more**](https://bard.google.com/faq#coding)**content_copy**
+
+  경로가 출력되지 않는다면, 다음 명령어로 경로를 설정합니다.
+
+  **Bash**
+
+```plain text
+export PATH=$PATH:/usr/bin/netctl
+
+```
+
+  **Use code with caution. **[**Learn more**](https://bard.google.com/faq#coding)**content_copy**
+
+  (해당 경로는 배포판에 따라 다를 수 있습니다.)
+
+**이 후, 다시 netctl-auto list 명령어를 시도해보세요.**
+
+</details>
+
+<details>
+<summary>How can I know SSID?</summary>
+
+🔗 [https://happycode.tistory.com/550](https://happycode.tistory.com/550)
+
+</details>
+
+<details>
+<summary>iwctl로 접속하는방법</summary>
+
+IWD 서비스는 Arch Linux에서 무선 네트워크를 관리하는 데 사용되는 서비스입니다.
+
+다음 단계에 따라 이 문제를 해결할 수 있습니다.
+
+1. **IWD 서비스가 시작되었는지 확인합니다.**
+```c++
+sudo systemctl status iwd.service
+```
+
+출력에 "Active: active (running)"이 표시되면 IWD 서비스가 시작되었습니다. 그렇지 않은 경우 다음 단계로 진행합니다.
+
+1. **IWD 서비스를 시작합니다.**
+```c++
+sudo systemctl start iwd.service
+```
+
+1. **iwctl을 다시 실행합니다.**
+```c++
+iwctl
+```
+
+</details>
+

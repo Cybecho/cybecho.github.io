@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Copilot-Twinny-11ad1a5015414e19ba9db038b3f221
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f25083ae-cf65-4618-abbd-b6cfb79278a1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46656F6AJFP%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083516Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIEQ3EXzNwm%2BkYpusKiYVmxt7PqH8BZXV1PEC9VFCz0tvAiAvhGATPVIcdFlJ5P%2FE7oXzduG35sOQ4Ps%2Fkx47CK%2FC1yr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMhnFFr%2But8di%2BuSA%2BKtwDKBsUjBeClJoBY8pk%2B%2FQroygPLD%2BoBMSx5jw0Kr0uJxb%2Ffa2GlQC5h1nfINjpnxSadXOg29mfNzVv7ABrFSP%2Bnq50VdUiXILY4kcQSpdTwdt1HBSUeFZ5WHT8VBvpbhd1%2B1wZkSbCPgMRCIJHwytOj6CF4uFzNvmZ7LcMsq%2FHRW9XFecWrQUUxDIBYwUbqJcaXfRX93VHsHiPZM3mNSSZsFzUxNSUrtfL5sPG0vU9BciBnSmS%2FlPopPD%2FHh52AvxK16lLizZv9q9OGCnXd2yu2rIepaKzWySuZnb5chuDm5PzpTX%2BRdr7GgGBYEA2tSA%2F%2BjjxMrHczdQHZAvRsN9VS6Ji8msUaIVGKfWghEZY5c1ZFtZbG7kxnotKHnC1lmELDmtZSNreh84i5%2BFBX%2Bq3TEVlVrIh7Br8esXIheAEq8NPl%2FH5bKZ11YVd%2BEDd7hDqhFkLBoVNQFCZzYRiHXINzVrb1qPUd089juz5owF8ni0dQtqgqlKhE%2FpnmW48VBnJkiRv7ZuQs3XA9i3bMsRbv5cacZO2woZ8cD4E5pDKRd2cNrIKeTae7Lr7Ce214V3rUkcc9XuPuHPAi5PC%2BfDfMREE6OzWeI%2BwFAqaC8vJkawo0xSQhJR4IbtSNsEwhNCHxAY6pgHOalq8SnH9kF2Wit2BnncpeZT40dVZdi5H34VthxcqH0h4P97IDOJGvmk8sp%2F3dFOdIgAn85rzOGtlPQ%2F2cOvz7vvd4dKcu%2BdQQ8hPi2uP02xRxhwkrnl91WrJRnZtKS03Sg8ngkJWd%2FFV8pvqb7GQ1YZWFdc7Bh6Lm3Cv0JoUCI04kj7dkmf3kM5%2Bg5RCg1tcUvwMzQYkUXEoWTsFd5ry2kf6bwyj&X-Amz-Signature=3790c0c091642e4f37e2e711c093257c17364abee12bbc1511525213635a2561&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f25083ae-cf65-4618-abbd-b6cfb79278a1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46653RAMYWG%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101744Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJGMEQCIDTm7mDhL7Eeheqmlys%2BSZzrZZbjhqM3eQyi%2FKlMtQX8AiBAjqd4xFVWYfyg3SR90o1ryOAyBVF7ptjf2DEauoON0Sr%2FAwgqEAAaDDYzNzQyMzE4MzgwNSIM8ItsqnMJyg4rwhj7KtwDPPFiHNsS3HsCdp4DXl5Suu%2B0MIRw4UUvV9em3DpfnY6HOpHCntjuOfopUDSdBY0j%2BW%2Fz6XUSe0GnevNwu2ipMzzCDR3eS08ckmLAjfxXqjnWhMbJrvXLpUsHH311a%2BFyh1QfFP2cNRPmQj29kv6%2BzQs6W8XYZuLCUkGss%2B9O2sx1OtTUo0WKE1CS6dFYpAqbOCoqYK5%2FEMosiftOG3bSSedY%2FgzNAYi2x1OWJSvSkhorvjbpOjVbEbU49pBFw4RGDgwloOoEj8fTXUYYQwvEytElHBejXRH8QXzniNFth6UlfwfmQ3mV%2FLhthJJQ3rcGtQQKRU8jEWYdYVrrU%2BQDwZCDkuMFDhbwwE4oNDfka9Y%2BvM565d6X7t4A0X1WoM5yYSwMYod66YmTTdqllQwFDJXv%2BUGADzqRdy9W6%2B83zYZjK%2FmVqjj%2FuWt%2Fy8UlD%2F2q%2FHR76MKjYgvRO0ZxG%2F7ntTDZJe6R54VMweZBazSCjTlHzTjvNk09E1Fhr%2FE82eKmyoub4kbTzi3py3V1HXwEaMyiBeoQ%2F%2B%2FKzbVAcf9TKRBYiM1F4kp12nsCZk3ogCnHrUDy404Gzz0zLtiPT2GvxxmrKHGbUO2PbP6IkYk1f6CwXlvt0tiS1M%2F%2FGrMwkvaHxAY6pgEw82iXG3d%2F6YQqGMPbgA39wYqtWgR4PafY4zwQI8a3peVGaQzkv4NqGDZDRSEvn%2BHp%2BKMGEoX2QUPRQUtnxACXisVVSNtnHuMxl3Hv6mvatKMPKEsMSsg6tWPUQrSnwMPDN6tTXc7DtKblr2K9EEHwT7hIlmdqooOtJLHzuGstmo%2F3P8PH6%2FAlAdUYtpQ5SOTVSfZwSfCouXEw5qzduGeoFMhj1yQs&X-Amz-Signature=3b83e92a0a679936acab6b6c2f67db5cbd12db335af67e0ebbfa3ff636158729&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=2Nj1W3CP9mM)
 
@@ -44,19 +44,81 @@ Mistral AI의 Codestral은 다음과 같은 기술적 특징을 가진 최신 �
 - **훈련 데이터**: 80개 이상의 프로그래밍 언어로 구성된 대규모 코드 코퍼스
 - **아키텍처**: Transformer 기반 모델로, 인코더-디코더 구조 채택
 - **주요 기능**:
+  - Fill-in-the-middle (FIM) 기능으로 코드 중간 부분 생성 가능
+  - 지시 기반 (Instruction-tuned) 모델로 다양한 코딩 작업 수행
+  - 대화형 (Conversational) 인터페이스 지원
 ## Twinny: 고급 VS Code 통합
 
 Twinny는 다음과 같은 기술적 특징을 가진 VS Code 확장 프로그램입니다:
 
 - **로컬 실행**: 100% 로컬에서 동작하여 높은 보안성과 낮은 지연시간 제공
 - **모델 호환성**:
+  - LM Studio 호환 모델 지원
+  - OpenAI API 호환 모델 지원
 - **성능 최적화**:
+  - 비동기 처리를 통한 UI 반응성 유지
+  - 효율적인 컨텍스트 관리로 메모리 사용 최적화
 - **고급 기능**:
+  - AST(Abstract Syntax Tree) 기반 코드 분석
+  - 정규표현식을 활용한 고급 텍스트 처리
 ## 구현 및 최적화 방법
 
 1. **Ollama 설치 및 구성**
+```shell
+curl <https://ollama.ai/install.sh> | sh
+ollama run codestral
+
+```
+
 1. **Twinny 설정 최적화**
+  - 모델 응답 시간 조정: `settings.json`에서 `"twinny.responseTimeout": 30000` 설정
+  - 컨텍스트 크기 최적화: `"twinny.maxContextLength": 2048` 설정으로 메모리 사용 조절
 1. **고급 사용 사례**
+  - **코드 리팩토링**:
+```python
+# Twinny 프롬프트: "Refactor this code for better performance"
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+# Twinny 응답
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+```
+
+  - **복잡한 알고리즘 설명**:
+```python
+# Twinny 프롬프트: "Explain the time complexity of this sorting algorithm"
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + middle + quicksort(right)
+
+# Twinny 응답
+"""
+퀵소트 알고리즘의 시간 복잡도:
+- 평균 케이스: O(n log n)
+- 최악의 케이스: O(n^2)
+
+설명:
+1. 분할(Partition) 단계: O(n)
+2. 재귀 호출: 평균적으로 log n 번
+3. 따라서 평균 시간 복잡도: O(n) * O(log n) = O(n log n)
+
+최악의 경우(이미 정렬된 배열)에는 매 재귀마다 n-1개의 요소를 처리하게 되어 O(n^2)가 됩니다.
+"""
+
+```
+
 ## 성능 벤치마크
 
 Codestral과 Twinny의 조합을 다른 솔루션과 비교한 벤치마크 결과:

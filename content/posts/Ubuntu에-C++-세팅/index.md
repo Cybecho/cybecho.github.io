@@ -17,6 +17,10 @@ notion_url: "https://www.notion.so/Ubuntu-C-32b957a2d1194fa989e5e4d722ed4dbd"
 ---
 
 > 💡 **목차**
+> ---
+>
+>
+>
 
 
 🔗 [https://roytravel.tistory.com/381](https://roytravel.tistory.com/381)
@@ -25,6 +29,9 @@ notion_url: "https://www.notion.so/Ubuntu-C-32b957a2d1194fa989e5e4d722ed4dbd"
 
 
 > 💡 **목차**
+> ---
+>
+>
 
 # Terminal에서 C++ 및 CMake 설치
 

@@ -26,11 +26,107 @@ notion_url: "https://www.notion.so/Fedora-firefox-aurora-e7e897a7609448d2bdcb62d
 
 🔗 [https://youtu.be/KSglGG8_PoE?si=7ySCLR0GJwoDoOTm](https://youtu.be/KSglGG8_PoE?si=7ySCLR0GJwoDoOTm)
 
+<details>
+<summary>과정</summary>
+
+```javascript
+sudo gnome-text-editor /etc/dnf/dnf.conf
+```
+
+```javascript
+clean_requirements_on_remove=True
+best=False
+skip_if_unavailable=True
+max_parallel_downloads=10
+fastestmirror=True
+```
+
+```javascript
+sudo dnf upgrade
+```
+
+```javascript
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm E %fedora).noarch.rpm
+```
+
+```javascript
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-nonfree-release-$(rpm E %fedora).noarch.rpm
+```
+
+```javascript
+sudo dnf upgrade --refresh
+```
+
+```javascript
+sudo dnf groupupdate core
+```
+
+```javascript
+sudo dnf install dnf5 dnf5-plugins
+```
+
+### Firmware
+
+```javascript
+sudo fwupdmgr refresh --force
+```
+
+```javascript
+sudo fwupdmgr get-updates
+```
+
+```javascript
+sudo fwupdmgr update
+```
+
+### Gnome Tweaks?
+
+```javascript
+sudo dnf install gnome-tweaks
+```
+
+### Lapop User only
+
+```javascript
+sudo dnf install tlp tlp-rdw
+```
+
+</details>
+
 🔗 [https://youtu.be/01tFhnlA-5I?si=6ecUbjPfGfBWgpt8](https://youtu.be/01tFhnlA-5I?si=6ecUbjPfGfBWgpt8)
 
 🔗 [https://youtu.be/a3ePEjpg3lU?si=OWbvNDf_Ic58ZBka](https://youtu.be/a3ePEjpg3lU?si=OWbvNDf_Ic58ZBka)
 
 🔗 [https://www.youtube.com/watch?v=te1AEj_RA64](https://www.youtube.com/watch?v=te1AEj_RA64)
+
+<details>
+<summary>grubby (faile)</summary>
+
+```javascript
+sudo su -
+```
+
+```javascript
+dnf install grubby
+```
+
+```javascript
+sudo rpm-ostree upgrade
+```
+
+```javascript
+sudo systemctl reboot
+```
+
+```javascript
+grubby --version
+```
+
+```javascript
+grubby --args="radeon.si_support=0 amdgpu.si_support=1" --update-kernel=ALL
+```
+
+</details>
 
 # Package
 

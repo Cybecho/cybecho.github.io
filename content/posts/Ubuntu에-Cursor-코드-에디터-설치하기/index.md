@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Ubuntu-Cursor-15d1bab9e3f880f49348d3d27881399
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/9bab5ec5-7a5f-4788-ab4f-a944cf8c856a/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665GTKJ3BA%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083459Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIBu22Yz1M7SXhGC31gGZlY2ZRWdi41vs8kfU67hOBaN%2BAiBx5vbho0YrttjHc%2FUyRerERFQ0%2B16dhlWOSZv5SO0XNir%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMLovRmXGNv%2BdskPJBKtwDLth%2BFWH%2Bjiyh3RfZf3QFPrUDVUbCWz76TQ9rPnPL2008UOIapr0%2F0fcONPV8kruPU%2BSQcpxdclmzCBYl2NS0XO904CmnkSfJVXeBaTBEdqdEMGlBEDWwFJe2UE3r6rAnnHNuolZKEfz%2FXcpexnmvzkX5aKG%2BHdWfCGiZusvN%2BuFy2SrVNURt645F9XLcT1K833naERYKIdW6OtA6p4kuao5S%2FKX%2FjgJzFEmcRHoZI1KcsIv%2BY42K0uwFXqZskPH60wqxWFRc1L0RE0ibciZF459k%2FJiRzguAvUnFZuo9LNz%2FGaEF5RgoU%2FJTEmR1bJjVu2bkj%2B5dhOMpH3jlPKm%2F3V3Hbtn2%2FHVlKm2dMzB1xsATnlX%2FZ%2BJKpSM1wMAp0IW1CPDCZYW5YuHsZBlOsmIkcZrWkiPLrh%2F2rDysfqB5%2BDRUkcPvZK4lFhH0DisQ5779lqTvSx6%2BeZuA1ygeLaEUVZLhu0HP8NubrItd10xHdUaX087px0pXbNB%2B8FrripB0MFPOI5sKgzoc2f0G3oa2kGqHcjtI%2Bn9ZvXF4k08rmmiv8zAzEsGWPj6k57AbO1R2l%2FJW0ad7zz1wGKOaXKk0aZhY%2BhnLMNK%2BNld4514pQjYsRG%2FoCt1koCX3oSwwzs6HxAY6pgHRbiHnFc9QdQdwkF9Px%2FvvkN1r6PSYHydb3RA%2FCxwgm0GaF4wJpUICdJOSnK8dFlUDngD43xRSa%2FZCGRnwsfDC%2FYmZbz5G7yohINGJ8V3pS4ro3RjFfzhzU35LQoRmVmjJmm%2Bgafv1mr%2FRxMvX03t%2BOOrdpkSqcwmfrCj1WkijuYs%2BbnJFJ6OTsorD5h8wVcJY1589NKTw4%2FUSjWL0XwOdkqNsyFHW&X-Amz-Signature=a7ce1479d251923043732079910d327712e24a9c8796715b58667840babddaa1&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/9bab5ec5-7a5f-4788-ab4f-a944cf8c856a/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VHBWCLA3%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101720Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQCQp3QioWzinS88CatIYvvxo7RhGazKEwESNOcyka1aXQIhAIMYiBQVsChqfM1XM9i%2FLLn7xltKKbiNIY%2B7KCAXOuFuKv8DCCoQABoMNjM3NDIzMTgzODA1Igwfma3f0ElL6Z%2FKII8q3ANp5Fdu2ZnEyHRkZ%2BAc1S8kI5zu6ffrjWACop7xH8cVe2eM12glrkaXguKMDOaG47Nq67AqMvbTGgfmwXEhzWnHjzUBUMdZ%2FY5pw8t8DbpGmxUdpOLyu2CxYZopRx7wrsqr0XMycR6bWf8WveQj8yec%2BWB7yJrfSSzwBaf8JizuQGNyVLMJlPiR9d4Koh8fPwAkk6P8GE5EQdVTSVIpY%2BLOrPxW8hVVmf1wzWl3Ww8X0bP1eLQzCIF7x5ukT6pP7oUZ9DOOy4XVrvcBsaQ9Pdzzzb30aUbVytbyxAhzB8DiXOSTlcLGmGoHGbpoIzLS6RqMzpMJeojifaOEXT4kuqmblzELFzGxQursTnDXZKiHYW3PHbjxqrAeq0TCFXvy8i1ZM41iwtJ9HdHMeLKkz2YWV0sTRzU0xJZs%2B%2Bm3uoQNyD95ZltjgSzL72ShmN5vamtjVejW9XsHpl7DYBkW5qmF%2BELTcytW8bs7ZJumlmOgVsloAtdl2isVV8rOFcxMh%2BPLyaltZeHILWaI6PXdfEF3ytR6LQC8n%2FCyZwwWYumQvmNn9v07o1AbszP%2FjEcQoLl%2Fm6jeJdWEuQ5KPSLO1i2I65yQltXoQCxNXRBnccGxGdHSWZ7mycR4vdRcpTDe9YfEBjqkAWOFQgLmf%2BrvrxDYlR2Og45m%2B1OqVxDx8dZsWP1DYXuxuC%2FLqDCf1FS6AEPJ1kDaun9ElnOPMI7z2RqLnNG1fkjC2F9reBLk7IyJLRFHUJ5Givq8Sdry9bq7UJagI2j%2BT%2FS3503wTgNOGiUs%2FAPig2X1UscwhwuAL4NN8dLZQMeghdRjn2SE0eEzuJs82S49jhjdBIThWW3Shxt8htMr6ThgjF%2F5&X-Amz-Signature=e563e1c94eb56b9b6df5c60f418270b815706716906795eafdbdd651028d10fa&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # Ubuntu에 Cursor 코드 에디터 설치하기
 
@@ -32,7 +32,17 @@ Cursor는 AI 기반 코드 에디터로, 코드 자동 완성, 버그 수정 제
 
 1. **터미널 열기**: `Ctrl + Alt + T`
 1. 다운로드된 AppImage 파일이 있는 디렉토리로 이동:
+```shell
+cd ~/Downloads
+
+```
+
 1. 실행 권한 부여:
+```shell
+chmod +x Cursor.AppImage
+
+```
+
 ---
 
 ## **3. Cursor 실행하기**
@@ -55,7 +65,18 @@ Cursor는 AI 기반 코드 에디터로, 코드 자동 완성, 버그 수정 제
 ### **AppImageLauncher 설치**
 
 1. **PPA 추가 및 업데이트:**
+```shell
+sudo add-apt-repository ppa:appimagelauncher-team/stable
+sudo apt update
+
+```
+
 1. **AppImageLauncher 설치:**
+```shell
+sudo apt install appimagelauncher
+
+```
+
 ### **AppImage 통합하기**
 
 1. Cursor.AppImage 파일을 **두 번 클릭**합니다.

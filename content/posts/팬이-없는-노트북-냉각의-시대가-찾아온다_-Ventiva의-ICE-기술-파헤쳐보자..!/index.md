@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Ventiva-ICE-1bf1bab9e3f880d99681f01712226d22"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/a5414508-93eb-45f7-af62-a84574ed33f5/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YAJAZGYY%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083343Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJHMEUCIH30exUJ3uGwioWCFPJTPuwGIUew6b9EDFUULxvt0QmMAiEAj1C5OviWu90hnatCb%2BlAkdfDQiZOcinHWqyPj8Y%2FWGUq%2FwMIKRAAGgw2Mzc0MjMxODM4MDUiDMLxa5BZvf4ZIymqTSrcAxqUpmjqgtYtgIBI4KWKdmvU5VaHZT31zuADIBTnPjfXFOUYr9nJslXjs9%2FVuPVpBWAmRuCih0PEt0u2H9VEBOaNEyIDTrXQuwG2gw50IPrwsWLgpnyBGLivVF0kBq2O65JRVhxBpL8nOLDS%2BP1LDwSe5qj3PVdabd33Ny6IrXcPKfLdpcybOKPsMdDCxrHUPh%2F0vcrwQPEVcJ6l2vbC5JyY86uBrtfunYedmPHLgCGMBvkddFfidN4qTG2%2FeIfiaQYUXsuE6U8IvrIQA9EWoCRsaxl%2FBLeeyB48e5FuNOOFV7lErw8Yt%2BwuxoDZh3mEGYSdoEsIPQLrWluSt0SJPmnQxFhYAgRKKE8N4cJHa1kcdGjNIBx5eBeq0rqNN4XvCqXFlh4NsgjdVYjVxpk4%2BZ28EMmUsBLh3dk810HUxvlJTp8%2Bm6YkMtp5naYcZlpXYM6LS3uZPRPXNlumPJdirP8d2hAGTpVEpd9t5sNoLGebV%2Bmw%2B%2FeZOZlzV64QlQ%2B7w9K3wweS6mHGW45OO9qr6rnsCCz2TtxzKzDOGq8jOCllMOlCt%2F0ayDxmuuvPZ5WShnHeYK%2F4JVnFsZMMu3H3EQ%2FlO%2Bh%2FOPvA%2B%2BygabbR9iM3YlK3EC4Sdp695moKMLnPh8QGOqUBKauvHgS2jQrj5ox%2FttaXTR45OQ762kX7MTlZBSp05xICzHL7bAdFrRi4NG7Lk%2BdJ%2FSEXrEmi9wuqv%2BN57y%2BsFz1IXocEDWtPGcWUhZ%2BFh0G5R6NytNiAEuRk2UWUtLfV5xANjPaCD9Y6MEr2wv3orJQvQ8TYxZGLofvOLqg9Qe2nhki7TSSJtCtTyPlEep57BJygm3Nk72u79tJsmAyScNmjKE3J&X-Amz-Signature=23f4ced236f6d4a43fdeb92e3ed4817a2edb317dc7df0e0e26da18624bc5e64a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/a5414508-93eb-45f7-af62-a84574ed33f5/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466SRHA3LMY%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101500Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIBIYmSqEwQwG6FUXb1K66s2S2p9Ylj%2FjMXr279bFT%2BhLAiEA2%2FdFGmpyWYNVRknXp37mE%2FfhkcN7K%2BJYRxc%2Fa5RczrMq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDEutyxtXlg5TXoCX3ircAxeBS1qa3CtXYRgqQGxV7GED8lfvbE3sbxSHy6Gko9HcftNjoVj4B6elVic91uXayA66PSUV6TSGhhVOpEoIeAt05k4euifw%2FxBknCCpj8m3AonbH9r9aFdLy%2BjcexcoZ91qmrrxq7it1jKl8ao%2FaA7QEdFKRnua3sxgOpuNXX1pUNT%2B59UP3FGA97ViHAnZzFWqT9wTT72qONnvl3TV3da0T6mv8N1VBO8I0nk1Fx1598cersELlvKueS0dGu34HpOMIIpPfbucbZ0%2F0g500Yw7GiygX1yGhRIJoz%2BN3qePQwTp1q8Y%2BkzqCGnpfBiyRH5%2FMcUOvzQM8DPCFEVdRHO24ArUMU1a4U5tvBjdi3ywhVwPzNaTpGTMN8NwSF95lP3wxMscuqRTgsHYMET83z%2BmkyFxarLMV26IhN9L2%2FLlWuGehp7nyxKHNwOxenlebHCHb5QcIa93T3CZ2fQp4hXaIm583%2FWV2wM7ugoI6nnNhv5EzvgsTUMdCa4Jw8SxJbHUWFHPl52hijVQOJ%2B67jQtPq%2FuKDHPA4qHbFQQPej%2BeTIBquWsXU6FzhRRbuaa2Y1eA60L9%2FQwPdIcX31PKk8YgNXKp%2BEtDkvEhSdLI8SZSMZp%2FrEhhHmn5vqxMKr2h8QGOqUBZ3%2FrybopC%2FmxJyfyL2hQmC4iXOASiBEtf8fLPg2pcwCo5XwhbbxyQhSOC8p4A%2FijFqZKAtAojq%2F%2BQVSQzlvWBEyZiXSTjr64Cr248yHnnU18e%2Fm4edmkqTylA%2BUZ2VACBvodVOgIMCQTJduwMVC58iR6MTfu8SCYTYWPpVo%2BfHgtV4qioTAe3fkUCGhxXdC6WvgcebpHGDW%2Fi2%2BxDqHir08OmvRW&X-Amz-Signature=a794863edcf34ac25dd1f3c0ab5f32819efabc70b74964e37a4202a58b202c65&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=2lTWI7kfkt0)
 
@@ -49,9 +49,19 @@ Dell이 CES 2025에서 새로운 노트북 냉각 기술 'Ventiva Ice 9'를 공�
 ### 그 전에,,, 이온화에 대해 간단히 살펴보고 갈까요?
 
 1. **이온화, 도대체 뭘까? 번개와 공기청정기 속에 숨겨진 비밀!**
+  "이온화"라는 단어를 들으면 왠지 어렵고 과학적인 느낌이 들죠? 하지만 알고 보면 우리 생활 속에서도 이온화 현상을 쉽게 찾아볼 수 있답니다. 초보자도 이해하기 쉽도록, 실생활 속 예시를 통해 이온화가 무엇인지 함께 알아볼까요?
+
 1. **번개, 자연이 만들어내는 짜릿한 이온화 현상!**
+  하늘에서 번개가 치는 순간을 상상해 보세요. 엄청난 에너지가 순간적으로 방출되면서 빛과 소리를 만들어내죠. 이때 번개는 공기 중의 질소나 산소 분자에 강한 에너지를 가합니다. 이 에너지 때문에 질소나 산소 분자는 가지고 있던 전자를 잃거나 얻게 되는데, 이렇게 **전자를 잃거나 얻어서 전기적 성질을 띠게 된 입자를 "이온"이라고 부릅니다.** 그리고 이온이 만들어지는 과정을 바로 "이온화"라고 하는 것이죠!
+
 1. **공기청정기, 쾌적한 공기를 위한 이온화의 역할!**
+  최근 많은 가정에서 공기청정기를 사용하고 있죠. 일부 공기청정기는 "음이온 발생 기능"을 가지고 있는데, 이것 역시 이온화 현상을 이용한 것입니다. 공기청정기 내부에서 전기적인 에너지를 가해 공기 중의 산소 분자를 이온화시킵니다. 
+
+  이렇게 만들어진 음이온은 공기 중의 먼지나 세균과 결합하여 무게를 무겁게 만들고, 바닥으로 가라앉게 합니다. 결과적으로 공기 중의 오염 물질이 줄어들어 공기가 깨끗해지는 것이죠.
+
 1. **정리하자면, 이온화란?**
+  이온화란, 물질이 에너지를 받아 전기를 띠는 현상입니다. 이온화된 입자들은 서로 밀고 당기는 힘을 이용해 공기를 움직이게 하고, 이로 인해 공기의 흐름을 만들 수 있습니다.
+
 ### 팬 대신 이온으로 냉각한다? ICE 기술의 작동 원리
 
 자, 그럼 이온화에 대한 개념을 간략히 잡았으니, 이제 본격적으로 ICE기술에 대해 알아봅시다. ICE 기술은 기존의 팬을 사용하는 방식과는 완전히 다른 원리로 작동합니다. 마치 공기청정기에서 음이온을 발생시켜 공기를 정화하는 것처럼, ICE는 공기 분자를 **이온화**시켜 공기의 흐름을 만들어냅니다.

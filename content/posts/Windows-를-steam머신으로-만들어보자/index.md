@@ -16,7 +16,47 @@ notion_url: "https://www.notion.so/Windows-steam-492feb6b0d124b89af7c2c4a6f0cf33
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/dff7bdc4-508b-4594-b532-61878ab4ad34/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466UVRUFT5D%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083506Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIAdhnR%2FZvrzELJj%2FWziqCj5TAoerNpfUOUt%2Bo3mfRH%2FXAiBKIdFtU53NeFdwr99GgIh0%2FK6vDUO6cp%2FoXX1koGhW%2Fir%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMIOjeQ9vyLQ%2FEt6ZNKtwDBfH5WBsdYytPMnAWkKbl782GyRyTl619q1cM3%2BJE18yHalZNirvx0ZimDkIlgCbBPR1KI%2Ba7yiTDfi%2Bjj%2Bq%2FrrA4fqDXbihsR6LRuszb405UyCYHgrPfC8a%2FNwrRN9muTtS9Po%2BMbgSnqnWzHdwpOi4wKlu0V84zuLPQOSf%2B7t4xogjNyZJgR5034XIYApdjkaACOLwi%2FBJCi%2F%2FDt83DXn7FrqL6%2BMpmR8tneXeR%2BcAs0daCqDF6UM6tdzbuW7jKqzTBxur9LsPG5izz6uxkDmYXMYhUrtfkNXMIHKrhO7BQ9iQowlGQE9HtJu0YeocsZRx0FyBwMdXaiz0Gn5QiF64%2Bkhq6RYuVsVMDIiXm7i6InZTLme9t3pWeFFnx8qnvgGHNrcvzmcfgfLFgH6atvhDA6iCLUggjhN4mT%2FFAl2A%2Fv%2F0SlNwQNG4zDSxlyW3aj12L4XyzX7aaPvQczE%2BIq3eufShfErxPbWY28vlvdcgFH18u%2BoW%2FhANLR3woiTZXObhu0Pi5Z2%2BkmM35mkcTvdnI3khn1MkifPT7Wb7plLTXR7hdGfsdB1HKT1eDCNjPwNic7hzCLA9qXdnjvSkDR44ZxsNBc0apvoEEea9lSeTdmBEppAv1d48HH0wwsM%2BHxAY6pgHWl%2F4wJ%2BXiZsXLHw9GLVGqpV5p7NrUAsZn2Z4yddzUM2jf16r6YosCqXBllyEFjAIRos3kO7B28Q7J7ETo0gPRUmnBLJcFS8AQQgbgQkiIDDlTbt707HcveO1xMBD2iji9iKNs3MTTdJptujuUovu9RFgq%2BdSq4Wcd5KVAldXNU8ZVzZaKz295vehp9Aj7eEmYNyBBZ0ytGFLjE0pIhadEK55q7%2FJu&X-Amz-Signature=c4ceba6399b8f2fb34c8f180a3bc898e64a1cf23b7becdc744a2276f82fdc851&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/dff7bdc4-508b-4594-b532-61878ab4ad34/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466UWHOSPUD%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101736Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIDVlsRt5zJAbei5AEoyN7M%2F%2Ft%2BpKVzvIEoO1C6eqreV8AiEAqNZVySIIKHCYvB2JjWX8BIzDxGZnm8vOzNLzc684U%2Bwq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDLhP0rrqJfoN7Kip0ircAxMO%2B3YjCbOww6v%2FGgPGHQvd8MUcQSzZf%2FFtyGwOnZF9HRpQPxyau%2BIXm458P7Tle3iGz1D6GiSeFTVlV12zOA6KGHkfZarIqjcu8YBRf4kwK9bh9gIp%2BY3khqWAvZj3q8jpqcZUy9VQRyqEDD2yBQG%2Fdq%2Bm65zVi0a49prZhk4SPOFlDF59%2FyVh36S3lgid4imkJSKqEY%2F%2B%2F2IZixTKHJaMXdkjuAI4oKxTlq7s5OVUGjBRxpvHyzjQvSleyVU3zyY%2FHV%2Fmvuc8%2FajGed%2F6UHQwg58vFqQ%2FmGSbYrOIia86DHGK39NZqnH%2FTfpfza4xHxS0WLDMBtYzoeHmPMM4B6IbcHjW%2FQZT4uaEVI%2BEIAu5VBQz44Sjk8UARQ1ygBpZEqJXKlkE%2Bm5yGyW%2Fg219cqaTKXUsUkKqN3E6TE222pkSgXYrW0GuuKhLNvvnp06oRZRwhvprhUuw4EgGEustQMpOGFifc%2FtvXmtQxD1TsutBJ1v6pSK0pi6hu3xTSnvQn8P5AAzIVpmoFpLxkr7YDM5tfbTY5oW%2BaxKXtSpO27qZ3a5mG%2Faer0ezg5pf8ObkTLMhPMXR6P5i0y3onCUkwPyNs4naOrS0u5kwmsJubWge8nITD6mcLrn1%2B%2BVeMIL2h8QGOqUBGmEdkg5b%2BzwyewkM6Gr9xrlTA3zEZqm1fnZCqXwuDHn6cEFzMwFPXOFoj0G%2B5Q9hcNqRyFQGwC9cM8vBO1OSiEy1wCOc7P3b7g%2BHoAd%2F6zTulwP4hMi6c4kL7z4xXsCTq0FZKvLvG0mZMwAyzRXmLpQFoweYxKxys7DZYB%2FDI%2BeDw9G4NnxCfzFRHAyztcR752lzALQzirG0FN1KzgUlz7BFKpBk&X-Amz-Signature=d8de18aa46ac509642ee49916390d012844f37c6a6f3c637e3268686d58ea80e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+
+<details>
+<summary>[https://www.tumblr.com/bugbear5/135763151126/윈도우-pc를-스팀-머신으로-만들기](https://www.tumblr.com/bugbear5/135763151126/윈도우-pc를-스팀-머신으로-만들기)</summary>
+
+비디오 게임기인 스팀 머신이 일반적인 컴퓨터와 다른 점은 바로 사용자 경험입니다. PC는 세팅하는데만해도 꽤 복잡한 과정이 필요합니다. 특히 PC에서의 게임을 하려면 하드웨어 부품, 드라이버, 운영체제 등 컴퓨터에 대한 상당한 지식이 없다면 하기 매우 어렵습니다. 더욱이 모니터 앞이 아니라 TV 앞에서 하는 게임이라면 PC에서는 더욱 힘듭니다.
+
+스팀 머신은 이런 경험을 매우 간단하게 만들었는데요, 하드웨어를 사서 TV에 연결하고 스팀 아이디와 네트워크 정도만 잡아주면 모든게 끝납니다. 처음 세팅뿐 아니라 게임을 구동하는 것도 간단한데요, 스팀에 있는 빅픽쳐 인터페이스 덕분에 어제 밤에 하던 게임을 패드의 A 버튼을 두번 눌러서 바로 이어서 할 수 있습니다.
+
+여러가지 장점이 있는 스팀머신이지만 아직 단점이라면 스팀 OS용으로 나오는 게임들이 많지 않다는 점입니다. 밸브에서 제작한 게임, 일부 인디 게임, 오래된 게임들이 있지만 아무래도 대작 게임들은 아직도 윈도용으로 많이 나오고 있습니다. 저도 사실 이런 이유 때문에 스팀 머신의 윈도 변종(?)인 에일리언 웨어 알파를 샀지요.
+
+알파도 Hivemind UI라는, 티비에 적합한 인터페이스를 갖고 있지만 윈도 기반이기 때문에 사용자 경험이 완전히 편하지 않습니다. 스팀을 빅픽쳐로 구동할 수도 있지만 Hivemind UI 위에서 실행하기 때문에 뭔가 편하지 않습니다. 무엇보다도 Hivemind UI에서 걸어놓은 보안 정책 때문에 GTA5 같은 게임은 실행하지 못하기도 합니다.
+
+전 이것을 해결하기 위해 Hivemind UI를 스팀 빅픽쳐로 대체하는 작업을 하기로 했습니다. 단순히 윈도 시작시 스팀을 자동 실행하게 하는 것이 아니라 윈도의 기본 쉘을 탐색기가 아니라 스팀으로 대체하는 것입니다. 이렇게 세팅을 해두면 스팀 머신과 거의 동일한 경험을 누릴 수 있습니다.
+
+(만약 에일리언웨어 알파 사용자라면 정신 건강을 위해 원격 조종이나 키보드 연결을 권장합니다.)
+
+(안전한 삽질을 위해 아래 설정은 새로운 윈도 사용자 계정을 만들어서 하실 것을 권장합니다.)
+
+1. 가장 먼저 스팀을 실행하여 설정을 실행합니다.
+1. 설정에 인터페이스 탭으로 이동하여 “컴퓨터를 시작할 때 Steam 자동 실행”과 “Big Picture 모드로 스팀 시작”을 클릭합니다.
+1. 스팀 라이브러리에서 “스팀에 없는 게임 추가”를 클릭하여 explorer.exe 를 추가합니다.
+1. 스팀을 종료한 다음 윈도키 + R을 클릭한 다음 regedit을 실행합니다.
+1. 레지스트리 편집기가 실행되면 다음 키를 찾습니다.
+`컴퓨터\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon`
+
+1. 해당 키에서 오른클릭한 다음 새 문자열을 클릭하여 “Shell”이란 값을 등록합니다.
+1. Shell을 더블 클릭한 다음 값으로 스팀 실행 경로를 입력합니다. 예) "C:\Program Files (x86)\Steam\Steam.exe”
+1. 여기까지하면 해당 계정으로 로그인할 때마다 스팀이 빅픽쳐 모드로 자동 실행됩니다만, 좀 더 완벽한 콘솔 경험을 위해 자동 로그인 세팅까지 해주면 완벽합니다.
+1. 윈도키 + R을 눌러 실행 창을 띄운 다음 netplwiz 를 실행합니다.
+1. 고급 사용자 설정 창이 실행되면 자동 로그인을 원하는 계정을 클릭한 다음 “사용자 이름과 암호를 입력해야 컴퓨터를 사용할 수 있음” 항목을 해제합니다.
+1. 해당 항목을 해제하면 자동 로그인을 원하는 계정의 암호를 한번 더 입력해주어야 합니다.
+1. 여기까지 하면 다음부터는 완벽하게 스팀을 기본 쉘로 실행하여 스팀 머신과 비슷한 경험으로 컴퓨터를 사용할 수 있게 됩니다.
+1. 만약 다시 데스크탑 인터페이스로 사용하고 싶다면 아까 3번에서 등록시켰던 explorer.exe를 실행한 다음, 빅픽쳐 모드를 종료하면 됩니다. 영구적으로 데스크탑 인터페이스를 사용하고 싶다면 5번에서 등록했던 Shell 값을 삭제해주시면 됩니다.
+스팀을 기본 쉘로 사용할 경우 윈도 인터페이스 구동에 사용되는 자원까지 끌어모아 게임 실행에 사용할 수 있다는 장점이 있습니다. 윈도 인터페이스가 자원을 얼마나 소모할까 싶지만 PC가 저사양일수록 게임 프레임에 눈에 띄는 영향을 미칩니다.
+
+윈도 10으로 오면서 이렇게 쓰는 것의 또 다른 장점은 엑박 패드의 가이드 버튼을 스팀에서 사용할 수 있다는 점입니다. 윈도 10은 엑박 패드 연결시 가이드 버튼(중앙의 엑박 버튼)을 누르면 엑스 박스 지원 기능이 실행되는데요, 스팀을 기본 쉘로 사용하고 있으면 엑스박스 앱이 실행되는 대신에 스팀의 Overlay가 실행됩니다.
+
+또한 Alt Tab을 눌러도 스팀 외에 다른 것들이 실행되지 않기 때문에 게임의 집중도가 높아지는 것도 장점입니다. 무엇보다 PC 게임을 즐기기가 훨씬 간편해진다는 장점이 있죠. 바로가기로 Kodi(구 XBMC) 같은 것을 등록해두면 동영상이나 음악 같은 미디어도 어느정도 해결할 수 있습니다.
+
+</details>
 
 # 스팀 머신과 유사한 PC 게임 환경 구축하기
 
@@ -71,6 +111,8 @@ graph TD
 
 1. 스팀 실행 후 설정으로 이동
 1. 인터페이스 탭에서 다음 옵션 활성화:
+  - "컴퓨터를 시작할 때 Steam 자동 실행"
+  - "Big Picture 모드로 스팀 시작"
 1. 스팀 라이브러리에 `explorer.exe` 추가
 ### 2. 레지스트리 편집
 

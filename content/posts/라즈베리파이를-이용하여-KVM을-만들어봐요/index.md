@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/KVM-2111bab9e3f880a68557ffa3ff921a60"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/eaa8a3c5-4740-4ddd-856f-16a85f0fcce9/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466ZZ2PUPIQ%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083309Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIEDL%2FV8ZX67rRRzG9%2BrMZSx2qvnMqvy3BnzLBQ2rwSDmAiBDDyzAhGa7rinnvyYvr7zfwq6zBoRIxrBrFc%2BSQy%2F3sCr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMcc%2F%2B6SIyG2FYWBOvKtwDHTSft8%2B58%2FVPh9iO0bneHtzxWASjKkB04rd8YGPvLehCnGoB2alXZiwd8rSKlQZe7W1HQ5dgGXpglx7vFl3I4rPkrlYXtBxx0Xk%2FDNBeMEm0%2FeyC4Bmq%2F8XBbqEu3WueUDQ0tZEy4qZH1ln7hzKzUePPGRCtIGrf8G0DDlntGJax5USGXz0gV%2FM2iPZw%2FjriO9VX45E7BUNCpon6XZqnwKgeZVpb%2BItnz6yy2gtzysip0qlV3rEv1IlP6Y0KilC9xw0nDvqAHdA8sKAPAKIizeh9tyLpeO2ydMPx%2FtSBQJsD%2FipoDkaWV9jhmqNcinhBrTzytJu7XnZuFwJFkQmg7u6O4%2BGd%2FqgEycfjScyskbChEGwMcy%2BW3sSZAouV9OXx1T%2B%2BZtC2UTU9HXWteusczuInTxHMbYSGBr9AH04RItvM1wp5s%2F5E4iWATT4BQZS9NOqvyU38RwnnqM3Gt%2FkFJ74a4ydASNTbERiDQX5PvSOZCIS2Sdm4NYgdfY8SJpjP4voRup8mlwvZ1uf5pYQ0TapHThLUaaoptAmPFqDLKZbp7hldjwBl48v1dK760W6Bh44RcwefXrbqnkkKE66IG%2BaelkpI5ma%2BrCBcWAcxgGbEfFF2NTwboAvPyOkwlc%2BHxAY6pgHdWFYPefVJj919XVlpc1y6jZ6oM6bEVdGo7N3RC23bIpkXXSXaQkv6c1cglorIjRSf5ElrdZ6AFscN%2BBe1bmttYXgCz6ZJLct37FQNFj0rbcmp5POXgiG4ctoBS9fMVYpGC6uYIVsrXC5CFFFk6EWzd%2FfGVg%2Bkit24WvBMOiSssITemDJcH%2BGtjNEoFyeCngF2xtf5qA3j4ydNlET7YpeFM6XIaKHL&X-Amz-Signature=a115e2f226be7bfac7a2180d4a11306e9eb7b9e8440594a361c1f98eb7b2320b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/eaa8a3c5-4740-4ddd-856f-16a85f0fcce9/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466ZZZOJHUF%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101359Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQDNpRT%2BRqpMWq6A9N0btZF9PU4CMYLTKNGYMvHQNpUxVwIgCp7ub5K2iP6N8m9ayqdDselPd89OFn6rXpE%2BdiezPqoq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDGJIOm8vRgbVlkIPNSrcA4aAljnClBjjLt3tZml2ecERYnADYx0Q9R7PMNB1nUtq85pA28kIGMoRkuz1IO%2BX39YJMs8fBOQ6wNZXdqIyer0V2Wbm9Omq%2F%2BH47RNe3ALZ6PtGebOhOckJOrN35jCRRBYBKWnY2SywEWH%2FtmZXghmEqXK2sojeLvzcFgc1HmmgIvhBej9ywe%2BlG83XVQjdX5Rt3q4N6FkaljS7Wl%2BqZ5l8mkvGaHE%2BmxLpXr2rqZQFtI7TQ0%2BuAT%2BV%2FraxQx1dG3trzsOLFSc1VCgBUjNXQ8DQEpi8A%2BvTH5Oi%2FUQWrHst442FU94ax8v%2Bl89io0U9OIBbQaPzd7nAopbAGTgx8TnaU6Yw1G62DIDiZF7mspgo4QBzPmqxv%2BP9WcHrXVFeNyRo5%2FRHgF26%2BVQypRI9COhkHy1%2FErjC7SjQ569s0x8bqYGRdKj5FtjUDztJohCWpXvOOwFyRULs3tM0a3s%2FiE5%2BuXcIRI4NT2t%2FNUE3fTPQYypLs9%2Fd77SyNhXO2hVbwcKRxYiny1vTMbqS6F0lHSIYrpYJyi1ri9qYVG1fsY1OBSeP39yIWkN%2FdAanfq1HAttgeAOb6v5D64Ih7wGBcY0O8nWSwLlsmLOA6Er%2FF0%2Fak6NYG0pJjs1w82FwMLL1h8QGOqUBNaLA7ZE80Vt8OniSIryr0%2FUycEf5gTL%2Fl%2Bp9G8TAMXReY6GccV2qxZhY4wGDyczh8GupKDNx3hV%2Beagft4bCmax3LYFcSOWUVAygCFKYGjR1INb7KMShMiHMvml5kS9oOahcUT55x9EAmaU8PIO1sMhwFaiaVGYhK2POPNuB1MnsrW36lB7pspb8tC3il0V7zqJf9ZjiSIFy5wdEQMwM%2FQmDGBwh&X-Amz-Signature=3c158cc2a0d247565854e565b5be58bc84a91999005d90ca63285d35eb1395ab&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 > 아… 취업하고나니, 집에있는 윈도우 서버가 원인모를 문제로 다운될때마다, 직접 키는게 참 곤혹이다…
 
@@ -46,8 +46,14 @@ notion_url: "https://www.notion.so/KVM-2111bab9e3f880a68557ffa3ff921a60"
 > 왜 USB 분배기(스플리터)가 필요한가?
 
 1. **전원 연결**
+  - 라즈베리파이를 켜려면 5V 3A의 안정적인 전원이 필요해요.
+  - PC의 USB 포트는 이만큼의 전원을 공급할 수 없어요.
 1. **USB OTG 데이터 연결**
+  - PiKVM은 라즈베리파이를 USB 기기로 인식시켜 서버에 연결합니다.
+  - 이를 위해 USB-C 포트로 데이터(OTG) 연결이 필요합니다.
 1. **전원과 데이터 신호 분리**
+  - 일반 USB-C 케이블만 사용하면 전원과 데이터가 섞여 장치가 손상될 수 있습니다[3](https://docs.pikvm.org/faq/).
+  - 따라서 **전원 어댑터**와 **OTG 케이블**을 Y자형 USB 스플리터로 분리해야 합니다[1](https://www.reddit.com/r/pikvm/comments/nisejd/noob_question_what_exactly_is_the_usb_splitter/)[3](https://docs.pikvm.org/faq/).
 1. **공식 PiKVM HAT(V3/V4)는 자동으로 처리**하지만, DIY나 V2 방식은 별도 스플리터가 필요합니다[3](https://docs.pikvm.org/faq/).
 ## 자, 그럼 최소 부품을 정리해보자
 
@@ -55,12 +61,56 @@ notion_url: "https://www.notion.so/KVM-2111bab9e3f880a68557ffa3ff921a60"
 
 (라즈베리파이 4B는 이미 보유한 것으로 가정)
 
+<details>
+<summary>1. HDMI to CSI-2 캡처보드 (TC358743XBG 칩, Pi 4B 호환)</summary>
+
+- **상품명:** X630 HDMI to CSI-2 Module for Raspberry Pi 4B/3B/Zero
+- **최저가/신뢰 판매자:**
+  - [Geekworm X630 HDMI to CSI-2 (공식 스토어, Aliexpress)](https://www.aliexpress.com/item/1005003330255168.html)
+  - [C790 HDMI to CSI-2 Adapter (Aliexpress, 공식/평점 4.9)](https://www.aliexpress.com/item/1005004551600405.html)
+- **국내 대체:**
+  - [디바이스마트 라즈베리파이 HDMI To CSI-2 캡처보드 (TC358743XBG)](https://www.devicemart.co.kr/goods/view?no=14583828)
+- **참고:** TC358743XBG 칩, Pi 4B 호환, FFC 케이블 포함
+---
+
+</details>
+
+<details>
+<summary>2. USB-C OTG/파워 스플리터 (Y케이블, Pi 4B OTG/전원 동시 지원)</summary>
+
+- **상품명:** PiKVM USB-C OTG Splitter for Raspberry Pi 4B
+- **최저가/신뢰 판매자:**
+  - [PiKVM USB-C OTG Splitter (Aliexpress, 평점 4.9)](https://www.aliexpress.com/item/1005004113986862.html)
+</details>
+
+<details>
+<summary>3. USB A to USB A 케이블 (PC와 Pi 연결, 키보드/마우스 신호용)</summary>
+
+- **상품명:** USB A to USB A Male Cable
+- **최저가/신뢰 판매자:**
+  - [USB A to USB A Male Cable (Aliexpress, 평점 4.8)](https://www.aliexpress.com/item/1005002953886752.html)
+</details>
+
+<details>
+<summary>4. 5V 3A USB-C 파워 어댑터 (공식/호환, EU 플러그)</summary>
+
+- **상품명:** Raspberry Pi 4 Power Supply 5V 3A USB-C
+- **최저가/신뢰 판매자:**
+  - [Official Raspberry Pi 4 Power Supply (Aliexpress, 평점 4.9)](https://www.aliexpress.com/item/4001234567890.html)
+</details>
+
 ### 요약: 최소 부품 리스트 및 바로가기
 
 1. **HDMI to CSI-2 캡처보드**
+  - [Geekworm X630 HDMI to CSI-2](https://www.aliexpress.com/item/1005003330255168.html)
+  - [C790 HDMI to CSI-2 Adapter](https://www.aliexpress.com/item/1005004551600405.html)
+  - [국내: 디바이스마트 캡처보드](https://www.devicemart.co.kr/goods/view?no=14583828)
 1. **USB-C OTG 스플리터**
+  - [PiKVM USB-C OTG Splitter](https://www.aliexpress.com/item/1005004113986862.html)
 1. **USB A to A 케이블**
+  - [USB A to USB A Male Cable](https://www.aliexpress.com/item/1005002953886752.html)
 1. **5V 3A USB-C 파워 어댑터**
+  - [Official Raspberry Pi 4 Power Supply](https://www.aliexpress.com/item/4001234567890.html)
 ## 결론
 
 그냥 이거 사는게 나을수도…

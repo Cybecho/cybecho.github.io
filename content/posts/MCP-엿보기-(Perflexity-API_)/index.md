@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MCP-Perflexity-API-2301bab9e3f88051aee6c038ca
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/71395649-a043-4b30-bb7b-ff4ce4787efd/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466ZF6AVXLZ%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083254Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJIMEYCIQCWl2IVGFXVHrAII1VgTpkQ8KmIhDRVMehU1QaoaSY8XwIhAJuwhmUAHbC2SjzZ5270kMVRH7tVKsCjpr8aVDcaJKAIKv8DCCkQABoMNjM3NDIzMTgzODA1IgwEgwcEPxCGwQbU6dkq3AN6qXMGVr6mrHwvhu4rcpTzYuXTphqefe2ZBoTAZURXr3ReYYuBuF8gSDrwdmF50jHoFl%2BVCn0AtwuiTk8RjQ8bs8QpEjw89yUiCPwpjpGrtFz%2B%2F%2FhRDRES%2FN5S2TW42AOmV56JQ2kqbhb8MuFzJxT%2BXFwAJ0PuD6eXu5Ur6k2Gg5HcZ%2BhFMFTLxUfVgDDZ2iYF5CBnD5ZIBesLGJI6G0nHaZvwER2IKseh8%2F4gUN7keJEdsUYvr6Aab8Wr5fvMhJjP78IkOJgBXJxNv8FLDdITV78GzClrmvN8Hq%2FpubkE0d1bzpAZMle9ztwy55OSkgwCSXuAyWrf4a5Rkvar2Y9db7W1awsUXb15wqMMOWbNEOvLfR8evlhCCxTKRoB3ic%2BzcDIMfNHXLPNQuDEFp%2Buj8iva0PX7ozAZ1CxCsK0hFEY3SxOxTwoVrXdINdwmmf0FfG%2Fi9HjQAB0F7toXuAvDO7uCY21Cdnkji%2Fl%2BNwNET8Z0O0t2cwE3jQ1UXXD%2FtjAmilzbilqYDvazbGFPdYitFS3WmcGPcvMJDiDY58Ow7OpkuBqXtwETl%2BeGJ8HDTuGtxaM1AO%2FQgJQBouyG5A%2Fkj8sEUVFSJhtpBvf6jVaZ98cbt4KTsnk8Sxb0ZTCE0IfEBjqkAZzLZXH8oz%2FyifFGGepsBpdZVzud2AzU4FlH%2BzGL2Yo5l6ZEI9LcbcTBtg%2Bi6ECD%2F4DF4LLvyQSOGcaWFkcYMok2FX06movANovPIJaqnpki3xHYubA611UQP%2F9vHJuxUKw1T3mECjw4VErl6jHhnGF%2BC9V4eW4cxrhWCA7EAMq6wpFeuCze5S%2FAB47u4f%2BvXICRM8XNxiIRQifMOe2uYjezVC5x&X-Amz-Signature=18ecaa8365be810a4957daf648578608f5316311ec28648c35755704ca34786e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/71395649-a043-4b30-bb7b-ff4ce4787efd/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665HYTBCV4%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101341Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIAis%2FpPWJ75oJlKwHieH66%2Bg6v2SbtreeDP7o0BPUDBWAiEAux422vXpDHNCnNBeSR2irNnaSYf5b2PXiWlfQJLeuo8q%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDEDk7UsMK%2Bc7rPm0jircAyrA4WqgYlgGCwwsd9dGSNJtnkZ8fDE5w0pbdt%2BwIkbj8J1xz%2FA2WVVSBX7ryDusI6UKuIwulhjncxrmRTF63VCXDafnpIoWKBNag0XaU%2F816bZ5u%2FjggH%2BH9Mcp1jNlQh59UlDci5J17IfjW%2FssWraOTdbQcywDE9lEgJNnXJv1a2Ta8S1ZUZQJLKK1DhB1us97Zklv8lW%2FsTom6frrzKPppJ0Z%2B9RGuPrpGWaD2odNtexfw%2Frp8yEVGegS7p4BZEf4JXPPxIzgVS6jL27sbmoJxQ%2FQyHbEo405A7N8%2BgL1OwyfPa7grO6IaR%2ByoHUinKM%2F3nURjH%2FEUbh%2FbDSAe2tut5pcQlQTAfyTjKiiic1M%2B7N%2FrUMgBLzLS%2Foe%2B1NxS%2FqUNRmowZaSWqYSYQaDNywqfhUfpJqnVsb7QCTfrrOeGwL5BkUGFUMG5UpQnyhtndthkBveqzkiHMNoG%2FRW7kObxfxyI9DFWICcBrrUla0ufMia38ABiOvl7s8f6e64IYxui0%2B0f9M9tBvSLVnY4Tb0YY7%2FpATakv%2BYpozhI0xqNgtLEI8N6pbanUBKUZ7EE%2BCwru%2BMaB%2Ba6ea%2FNYoUnEzPKCwVAchMfYYu28iXBaXXJurjXlPHlNmAottMMMX2h8QGOqUBjC8XwSUgKVr5F1voQKY47JhT9mWoD5f5XTN2CFQXUKsxqYYzNaGDjNynnRgeTY1tAOl0skq1awx2fS1MTca%2FtWet9%2BhfcFrZQ147GKgd7pVrcySvcCa9be27S1MkvHo6Zr4bfH5ExcWHzPnrZi0KcJ2tSenFOazNKMNXrpLotOA0YAJN1mYjPKvTLW2lDxTno2L0Pqd8zQYQcKZwu9kGQnmoF19e&X-Amz-Signature=d569b334b55049519a496beb94dd3b795f7856618eece7e25cce04898aa9907b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🔗 [https://chatgpt.com/share/687513b3-8b8c-8007-acfb-610c80d0d032](https://chatgpt.com/share/687513b3-8b8c-8007-acfb-610c80d0d032)
 
@@ -46,6 +46,14 @@ notion_url: "https://www.notion.so/MCP-Perflexity-API-2301bab9e3f88051aee6c038ca
 이 시스템의 **활용 방안**은 다음과 같습니다:
 
 1. **개인 지식 관리 시스템:**
+  - **예시:** "지난 주 회의록에서 AI 프로젝트 관련 내용 찾아줘"
+  - **작동:** Query Analyzer가 단순 쿼리로 판단하여 Sonar Pro를 통해 Google Drive 및 Obsidian에서 관련 문서를 검색하고 요약 제공.
 1. **연구 보조 도구:**
+  - **예시:** "LLM의 환각 현상을 줄이는 방법들을 종합적으로 분석해줘"
+  - **작동:** Query Analyzer가 연구 쿼리로 판단하여 Sonar Deep Research를 통해 웹, 개인 노트, 논문 등을 포괄적으로 검색하고 분석하여 보고서 생성.
 1. **자동화된 워크플로 실행:**
+  - **예시:** "매주 금요일 팀 성과 리포트 만들어줘"
+  - **작동:** Query Analyzer가 복잡 쿼리로 판단하여 Sonar Reasoning Pro를 통해 n8n 워크플로를 트리거하여 데이터 수집, 분석, 리포트 생성을 자동화.
 1. **비즈니스 인텔리전스 플랫폼:**
+  - **예시:** "경쟁사 분석 데이터와 우리 매출 데이터를 비교분석해줘"
+  - **작동:** Query Analyzer가 복잡 쿼리로 판단하여 Sonar Reasoning Pro를 통해 다중 데이터 소스를 통합 분석하여 인사이트 및 액션 아이템 제안.

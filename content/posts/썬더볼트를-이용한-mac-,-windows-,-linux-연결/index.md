@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/mac-windows-linux-1961bab9e3f88039bba8ca70524
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/662ac2da-9af5-417d-81a8-a8e840d1e5cb/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466UKOES6OS%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJIMEYCIQCqZE37Kds%2F3ojAsXxmQ%2BV7zO0bV%2BxQeFV%2BEObHBScllAIhALvpG1dDHK6whcMvLxanEJvB%2B4bgRpkTg%2BVFJOeLbzoMKv8DCCkQABoMNjM3NDIzMTgzODA1IgzZlUvX2%2FcT2dLRqhEq3AMQtE1dHRTSr3BSZW7dUPX%2FT48UzetumEUJDNC8R7qLKi8%2FfqNCRPDf%2BT%2Byl9hkSHTMl9wli3cUm2C1eIWNBbmbsL38wyf3x9Qyz67J2DUuJEewGutsiYfnGxs%2FUmX7F%2BSwvjB1YP1qejyz8jDItdTed0gQxKxjcqEfgQimKMYAjkUBW%2Fu7gDPB44kHARVwUzkzbP%2FCswku3gSFBBx%2BQtFEX8mxaIBvyQ4TQu890M7ybox3%2BhiWT0rdWn1Nj8kkTDplmF9WDSn2KCTfpLwFFpyNie3iydtBUlaK22Rp7anhugFhS6AC02rXbnCLY%2Fu0k2T6iAPSR7EA28GLqbodzPh6NumuddEtSIitUA69fvyTvD3IrRU9xLceVwIUdONb4NWlR3%2B%2B17XrtQ4XSuq9EmgvVncQX22z53qWiR%2BCFY%2BhYItXH6yab0OCNysPYAp3%2FzbczZtxFKTOcjgR0EqaBHlOmWS2zWGnadEaLhi1Hvx1NXQ9Ks8%2FAMsnPmSmMsMgXU7GMMCgRcFaggCa4MKrb1Uc2u3y7Dh2W6VkkLnzIiFfEUnUSolt%2BnEbp1LuDa3wfSoQwOQjyd5QuBBzAmD51qLAr3tFdy0uNX7sa0LdPwTvtUk5lNYNxjw6brPElTDazofEBjqkAXbbqQi6DFrJTsOegnu%2BJRlArmHhr%2FrhgBcD%2FIvCoxI9er0qRdl8mj7w9zeRHzyPvJQeeVhg6J2QwwUo2ed9QturJktzXj%2FaSM41Lwlmddi%2Bqc1lZ%2BqtOhMIIsbejcLfMOEiAdqhv%2F9sEXQT%2FqLjg521lVCNm0YnSqUds8oVLel40NA5b%2F5QYyaow5NJKJQHYW7Kfqbu%2B7ZEIsyRfYeUsQ%2FvD7sj&X-Amz-Signature=dd4b876c1f40b3b3ea36709ffb08f531f9ec234b015ba320eb988d81212e718d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/662ac2da-9af5-417d-81a8-a8e840d1e5cb/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4666BTJRQG4%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101606Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQCmDGYjTp23W4%2Bx1ESKw9oKc3pd398X4BWCfc0JGzR%2B%2BAIhAMRlAUw%2BYfeC2DzAuMFG4wVJEqoZFMWM0t43%2FhsGaDDaKv8DCCoQABoMNjM3NDIzMTgzODA1IgyIX1SpIy864a36taIq3AO3qQQA7xC9J%2FZsF%2FV2q%2FXgFeZDPs2esFtkVO74LpWJXX0asqK%2BUrltrMvvgvOGvbptMMxndEMR3v2eNDSIYv%2B4uNeFU8tk4CPx20%2BXZPTXhoO0cHVfgzBn0vKBbUj0XZWM8WHPbnyh4jN7AQGixm%2FYIQWhw8mzEEEhyy7QDRURnL0AYBm4Cqge4uai704azYFxS9rp77njVdzENUEV8ie%2FaYYE1CSXQFqksf%2FkmaoqH7lMg7%2BwJtn8xDWDt%2BghVI88LkJF3VM6T6E5X6gYNeZu1WUfLeBeUR7PtPHoLrubdVdDK9lDOxXqlZiyEW%2BP9n3T475vsSwoMLN2MtXt6qCvzVwJKz%2F21xapsw0u0xFZRNshiOY%2Fzq08k%2BHtPW0D%2FAQxYXJiV2mFnZv0TeduPM5lDSwBr63KiTWIkcDeQUzlpVc37qiGYayAcTkiHZKO3t4AC%2FXYseXqtUprcPkrIjeD7wkhkJV%2BLFenvWn4uDjm6KxL2tn4Dnr7dL%2F0XvxPuedQyGhfxrdESMnMCGtBnSlKO8STft7sgKXTMOWA126c0uL4CtfmQwJZLwidAX98ixnpBhXOi0rE2JxthFGkkMV0wofT0pnlOJMMKCJmmkx1ntTrAxlJYTuaEMaiEDCg9ofEBjqkATpXyUBAhVncgbAGHd%2BrhKC9fRfawOKsr1btYhQd82e4JnW%2F5rCy3Nd4uZih3DMTu7UCA0Bw2qW6KcWM3yVQN4IDobjYS4ei3J4um2L0fGEjagkIIRQdixo2oXmLo5UrzqAamMCSscWPFfTkokYXx1ZWeuxjGRY4c7R9sK8fSONxLw51nPgX%2FNhUm9XUzh9HB7sc51MOBo9ORfem%2FDjg9nwZRSjS&X-Amz-Signature=83c4b735c91a796ff6b43e499acc86252b16f215b932c88a865971be25217624&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # Windows ↔ Windows
 
@@ -35,7 +35,10 @@ notion_url: "https://www.notion.so/mac-windows-linux-1961bab9e3f88039bba8ca70524
 설정 방법은 다음과 같습니다:
 
 1. **Thunderbolt 네트워크 연결 설정**
+  - Mac에서는 시스템 설정 > 네트워크에서 Thunderbolt Bridge 인터페이스를 활성화하고 IP 주소를 할당합니다.
+  - Windows에서는 Thunderbolt 네트워킹을 지원하는 경우 자동으로 어댑터가 인식되며, IP 설정을 진행합니다.
 1. **원격 데스크톱/화면 공유 소프트웨어 사용**
+  - 두 컴퓨터가 네트워크로 연결되면, VNC, TeamViewer, AnyDesk 등의 원격 화면 공유 프로그램으로 서로의 화면을 공유할 수 있습니다.
 이 방법으로 Thunderbolt의 고속 데이터 전송을 활용할 수 있지만, 네트워크 설정과 추가 소프트웨어 설치가 필요합니다.
 
 # Linux ↔ macOS
@@ -47,7 +50,11 @@ Mac과 Ubuntu Linux 데스크탑(Thunderbolt 카드 장착)은 Thunderbolt 네�
 설정 순서는 다음과 같습니다:
 
 1. 두 컴퓨터를 Thunderbolt 케이블로 연결합니다.
+  - Mac에서는 시스템 설정 > 네트워크에서 "Thunderbolt Bridge" 인터페이스를 확인합니다.
+  - Ubuntu에서는 Thunderbolt 카드가 인식되면 'ip addr' 또는 'ifconfig' 명령어로 새 네트워크 인터페이스를 확인할 수 있습니다.
 1. 네트워크를 설정합니다.
+  - Mac과 Ubuntu에서 자동으로 링크 로컬 IP가 할당되지만, 필요한 경우 수동으로 IP 주소를 지정할 수 있습니다(예: Mac: 10.0.0.1/24, Ubuntu: 10.0.0.2/24).
+  - Ubuntu에서는 터미널에서 "sudo ip addr add 10.0.0.2/24 dev [인터페이스명]" 및 "sudo ip link set [인터페이스명] up" 명령으로 설정합니다.
 1. 연결이 완료되면 두 시스템이 같은 네트워크에 있게 되어, SCP, NFS, Samba, VNC 등의 도구로 파일 전송, 원격 제어, 화면 공유가 가능합니다.
 이 방법으로 Thunderbolt의 고속 데이터 전송을 활용하여 Mac과 Ubuntu Linux 간 직접 네트워크를 구성할 수 있습니다. 단, Ubuntu에서 Thunderbolt 드라이버와 보안 설정이 올바르게 구성되어 있어야 합니다.
 

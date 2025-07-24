@@ -22,15 +22,15 @@ notion_url: "https://www.notion.so/01-a3bc990885bd4f8e921f13019d832dd9"
 
 ## 이미지 레이어 순서
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/d3a64ec6-654b-4340-b75a-5a0e2a3189a8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466V6SWHPK4%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083844Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIHs4DPsWzahKavjJvcMWKfNzA%2FlO1s7IvACc%2F5mJvQCkAiAt1VFw5EYrsriTY9Kdip0ch%2FCWgrO5TDOlOrTvyieoySr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMKAXEZ%2B8rUt3OhBNUKtwDpIG2vfysesOegAf7EKZlvaBXfhJaUIYUElCUdowP0tt0mGRW4GuINLYFgjCJV5S3v4QvmCg0Njjzfbuq5QUsQepWPnofIjNnzKyfkxT8SVLcPLJuwa15SdDdFcYP3hBFnBVs08k%2B%2B4D13offRQqy9VH%2B6IU9IJ2n2Mii8srJ7mX2Zh6LdDd%2BCPmGRg59wPbmh0dfH7jiKgIp5f3DHsCsQAq4rRuwNZt2TlVryhB1QVTCtYA%2FQmlOWWjYQCoSMiJHprtAYEmRlbSX6wxIC6K99ICF%2BayCfGhCDbTodHmNLGp%2F%2BMatyOh240XtSQzIA0Vutj29R7D5dzpD2yyjxMsPpcaY9bQkoUTedHEok2yENrc7ZHMefP6MNgS9AZGWfqoO3vdrmOYeygJxuUWU4zgS82tjoDj5%2FIXY7shg4VgYr6u53R29IdSQG4LkLraBA58Df8Q5qMk69by4ZCjpho8vPZe%2FXR7QmlVqMTGeU%2Bz%2BdxCRog17Zv53OPGTZsb0He3Q9nxU73NUzOdVo4%2ByhzOCDqcTo3gSvBTxqg3wZrQO5PnebsVReQL6uW1sAY2zOfLBgmJH8X2n0yDJ1x0ihLZ0bGE%2BMyuzZdgq%2BITkmNSw6XjKbFSKDXcbUA2s%2FWcwuc%2BHxAY6pgG4eePwM9suffvZx2vh5XBEgd4PYyL5sqTlo0RIlNLK1KGhkf0z9F3TpFYV1Ac9UjiTKNLxI0NkrsOzZBlUzrrSIrKrWrX2MubbCXtPJ1XVsXi79OI8k6r7XWXrTHQeNosUdRnmYoAFY%2BiBdUKChBV%2FFwV2aArrkMoaFsLKLcQMkICFCJuDZdmgHRxoLaFwM0rmk0a6VYs4PiMcrFBh1GH63IPB9IAb&X-Amz-Signature=fa16cacee2973792b2c415d34d82e2eb7cbd808ba3fa4e15e42183c3c655d7b1&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/d3a64ec6-654b-4340-b75a-5a0e2a3189a8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664QXWF5WO%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102400Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIAGXqRwjohoYgA8UccQEcIdohx%2B1uG2q1y%2F18CIcvFlXAiEAx4xOIViyqaMu1xujnLxNQ4otaMP62DWOCHGcLCVVC%2BAq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDNfcSXGmdK9QoMjnrSrcA0%2BBGYQAsDjYKB4UrBEOKMpKVilihaXq1bIv1PJzbH3freldC39K6i3hQEksUnl1y7y%2BgGK2DWJeFlT%2BTMkYjXAd7yVbVg%2FUa49wfDfoMT%2BeJQ8Pa99uJVur%2B7HePqoDlBHfOyDLoGZWdS2YRYDiXZ7%2BxKv21R%2BJzk4pdWqh7CnjJOzaOhTTwp5ZR5CriNXzTAsDfB0NO2TGiEasGe2sDdrsksQODS7n5Rip6l7t9YLjM4mYpMnfbXvSxCLXplFlUPxxRiR68Hads4FfoMFt8y2Ca04cdoyItNoWiUjBkCdVGIc4dfGmu6zQcGabexagy4eKOJCygBqSrNbkW9qiISVP%2BN67x1UsR0SB7UZTlmf8lj5AO%2FqL1S2gMhxVgf1iAX4gEqdNzm2a8Yfk9q1wyQ8OFtOucVTGYtPCU3cSuAaNjpyQyIHTCUDjN9TH6XMSE%2F%2Ba0l7o544c2lO2ubMvT%2FFiYpba7kyokLb%2FyYCndwh%2Fx1mxsE6%2BZaV5Zd2b9lwxIiQAY87yrlHCdMfJWWFOEpeaBUjc%2FmyT0tei5KEsClCyENtPw77X2dRPO8zfSsvTveJ0nRxFbzPFwudGUzj9rJLbctjFSe2rzzD1R%2FBiMbfsVnsUDcHh1wRh76LHMLj1h8QGOqUBPDrJ9nsuYojstb59ndcwRUYKaYVPYXFV1EaGrH9rQxL1GrAoQo%2BFKcjPMJe4WT%2BOjEamp1zQ5SItZFwwXgrktERLsMslLIEMTq6xPXJfbxr9LCijbb26uaQ3bXODWQEjfrlakZkNAJPC90o90UhhfmGtji9cMZ%2FyoUJitfRPscWE0%2B7nhNcoobL%2Bncy7nbXCDman37iAHQMbyzTBIc6vzl3lvdbo&X-Amz-Signature=da634c61fc9f5888b5df3ddaa5496017a6be2b315f5026e5bf50d8ee0155ae88&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ## 이미지 타일화
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/7f9af15f-9986-48cf-8fcf-8dcb6004dafb/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466V6SWHPK4%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083844Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIHs4DPsWzahKavjJvcMWKfNzA%2FlO1s7IvACc%2F5mJvQCkAiAt1VFw5EYrsriTY9Kdip0ch%2FCWgrO5TDOlOrTvyieoySr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMKAXEZ%2B8rUt3OhBNUKtwDpIG2vfysesOegAf7EKZlvaBXfhJaUIYUElCUdowP0tt0mGRW4GuINLYFgjCJV5S3v4QvmCg0Njjzfbuq5QUsQepWPnofIjNnzKyfkxT8SVLcPLJuwa15SdDdFcYP3hBFnBVs08k%2B%2B4D13offRQqy9VH%2B6IU9IJ2n2Mii8srJ7mX2Zh6LdDd%2BCPmGRg59wPbmh0dfH7jiKgIp5f3DHsCsQAq4rRuwNZt2TlVryhB1QVTCtYA%2FQmlOWWjYQCoSMiJHprtAYEmRlbSX6wxIC6K99ICF%2BayCfGhCDbTodHmNLGp%2F%2BMatyOh240XtSQzIA0Vutj29R7D5dzpD2yyjxMsPpcaY9bQkoUTedHEok2yENrc7ZHMefP6MNgS9AZGWfqoO3vdrmOYeygJxuUWU4zgS82tjoDj5%2FIXY7shg4VgYr6u53R29IdSQG4LkLraBA58Df8Q5qMk69by4ZCjpho8vPZe%2FXR7QmlVqMTGeU%2Bz%2BdxCRog17Zv53OPGTZsb0He3Q9nxU73NUzOdVo4%2ByhzOCDqcTo3gSvBTxqg3wZrQO5PnebsVReQL6uW1sAY2zOfLBgmJH8X2n0yDJ1x0ihLZ0bGE%2BMyuzZdgq%2BITkmNSw6XjKbFSKDXcbUA2s%2FWcwuc%2BHxAY6pgG4eePwM9suffvZx2vh5XBEgd4PYyL5sqTlo0RIlNLK1KGhkf0z9F3TpFYV1Ac9UjiTKNLxI0NkrsOzZBlUzrrSIrKrWrX2MubbCXtPJ1XVsXi79OI8k6r7XWXrTHQeNosUdRnmYoAFY%2BiBdUKChBV%2FFwV2aArrkMoaFsLKLcQMkICFCJuDZdmgHRxoLaFwM0rmk0a6VYs4PiMcrFBh1GH63IPB9IAb&X-Amz-Signature=ac969f3afb5140abd038eef30ff0f28714225caf5c723f6d1ed38b9fe17c6f63&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/7f9af15f-9986-48cf-8fcf-8dcb6004dafb/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664QXWF5WO%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102400Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIAGXqRwjohoYgA8UccQEcIdohx%2B1uG2q1y%2F18CIcvFlXAiEAx4xOIViyqaMu1xujnLxNQ4otaMP62DWOCHGcLCVVC%2BAq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDNfcSXGmdK9QoMjnrSrcA0%2BBGYQAsDjYKB4UrBEOKMpKVilihaXq1bIv1PJzbH3freldC39K6i3hQEksUnl1y7y%2BgGK2DWJeFlT%2BTMkYjXAd7yVbVg%2FUa49wfDfoMT%2BeJQ8Pa99uJVur%2B7HePqoDlBHfOyDLoGZWdS2YRYDiXZ7%2BxKv21R%2BJzk4pdWqh7CnjJOzaOhTTwp5ZR5CriNXzTAsDfB0NO2TGiEasGe2sDdrsksQODS7n5Rip6l7t9YLjM4mYpMnfbXvSxCLXplFlUPxxRiR68Hads4FfoMFt8y2Ca04cdoyItNoWiUjBkCdVGIc4dfGmu6zQcGabexagy4eKOJCygBqSrNbkW9qiISVP%2BN67x1UsR0SB7UZTlmf8lj5AO%2FqL1S2gMhxVgf1iAX4gEqdNzm2a8Yfk9q1wyQ8OFtOucVTGYtPCU3cSuAaNjpyQyIHTCUDjN9TH6XMSE%2F%2Ba0l7o544c2lO2ubMvT%2FFiYpba7kyokLb%2FyYCndwh%2Fx1mxsE6%2BZaV5Zd2b9lwxIiQAY87yrlHCdMfJWWFOEpeaBUjc%2FmyT0tei5KEsClCyENtPw77X2dRPO8zfSsvTveJ0nRxFbzPFwudGUzj9rJLbctjFSe2rzzD1R%2FBiMbfsVnsUDcHh1wRh76LHMLj1h8QGOqUBPDrJ9nsuYojstb59ndcwRUYKaYVPYXFV1EaGrH9rQxL1GrAoQo%2BFKcjPMJe4WT%2BOjEamp1zQ5SItZFwwXgrktERLsMslLIEMTq6xPXJfbxr9LCijbb26uaQ3bXODWQEjfrlakZkNAJPC90o90UhhfmGtji9cMZ%2FyoUJitfRPscWE0%2B7nhNcoobL%2Bncy7nbXCDman37iAHQMbyzTBIc6vzl3lvdbo&X-Amz-Signature=f8c8d5347693ac27efd319c35b60dfc44064aa476ec22247298bdaa5d0913d77&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ## 애니메이션 커브설정
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/a276fe47-b856-46e4-bb05-f35d69c31526/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466V6SWHPK4%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083844Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIHs4DPsWzahKavjJvcMWKfNzA%2FlO1s7IvACc%2F5mJvQCkAiAt1VFw5EYrsriTY9Kdip0ch%2FCWgrO5TDOlOrTvyieoySr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMKAXEZ%2B8rUt3OhBNUKtwDpIG2vfysesOegAf7EKZlvaBXfhJaUIYUElCUdowP0tt0mGRW4GuINLYFgjCJV5S3v4QvmCg0Njjzfbuq5QUsQepWPnofIjNnzKyfkxT8SVLcPLJuwa15SdDdFcYP3hBFnBVs08k%2B%2B4D13offRQqy9VH%2B6IU9IJ2n2Mii8srJ7mX2Zh6LdDd%2BCPmGRg59wPbmh0dfH7jiKgIp5f3DHsCsQAq4rRuwNZt2TlVryhB1QVTCtYA%2FQmlOWWjYQCoSMiJHprtAYEmRlbSX6wxIC6K99ICF%2BayCfGhCDbTodHmNLGp%2F%2BMatyOh240XtSQzIA0Vutj29R7D5dzpD2yyjxMsPpcaY9bQkoUTedHEok2yENrc7ZHMefP6MNgS9AZGWfqoO3vdrmOYeygJxuUWU4zgS82tjoDj5%2FIXY7shg4VgYr6u53R29IdSQG4LkLraBA58Df8Q5qMk69by4ZCjpho8vPZe%2FXR7QmlVqMTGeU%2Bz%2BdxCRog17Zv53OPGTZsb0He3Q9nxU73NUzOdVo4%2ByhzOCDqcTo3gSvBTxqg3wZrQO5PnebsVReQL6uW1sAY2zOfLBgmJH8X2n0yDJ1x0ihLZ0bGE%2BMyuzZdgq%2BITkmNSw6XjKbFSKDXcbUA2s%2FWcwuc%2BHxAY6pgG4eePwM9suffvZx2vh5XBEgd4PYyL5sqTlo0RIlNLK1KGhkf0z9F3TpFYV1Ac9UjiTKNLxI0NkrsOzZBlUzrrSIrKrWrX2MubbCXtPJ1XVsXi79OI8k6r7XWXrTHQeNosUdRnmYoAFY%2BiBdUKChBV%2FFwV2aArrkMoaFsLKLcQMkICFCJuDZdmgHRxoLaFwM0rmk0a6VYs4PiMcrFBh1GH63IPB9IAb&X-Amz-Signature=8b16c3e36b623599d64b8d4ec8499e9e44b5c1b68430ae9bcb064aec2ec774b2&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/a276fe47-b856-46e4-bb05-f35d69c31526/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664QXWF5WO%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102400Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIAGXqRwjohoYgA8UccQEcIdohx%2B1uG2q1y%2F18CIcvFlXAiEAx4xOIViyqaMu1xujnLxNQ4otaMP62DWOCHGcLCVVC%2BAq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDNfcSXGmdK9QoMjnrSrcA0%2BBGYQAsDjYKB4UrBEOKMpKVilihaXq1bIv1PJzbH3freldC39K6i3hQEksUnl1y7y%2BgGK2DWJeFlT%2BTMkYjXAd7yVbVg%2FUa49wfDfoMT%2BeJQ8Pa99uJVur%2B7HePqoDlBHfOyDLoGZWdS2YRYDiXZ7%2BxKv21R%2BJzk4pdWqh7CnjJOzaOhTTwp5ZR5CriNXzTAsDfB0NO2TGiEasGe2sDdrsksQODS7n5Rip6l7t9YLjM4mYpMnfbXvSxCLXplFlUPxxRiR68Hads4FfoMFt8y2Ca04cdoyItNoWiUjBkCdVGIc4dfGmu6zQcGabexagy4eKOJCygBqSrNbkW9qiISVP%2BN67x1UsR0SB7UZTlmf8lj5AO%2FqL1S2gMhxVgf1iAX4gEqdNzm2a8Yfk9q1wyQ8OFtOucVTGYtPCU3cSuAaNjpyQyIHTCUDjN9TH6XMSE%2F%2Ba0l7o544c2lO2ubMvT%2FFiYpba7kyokLb%2FyYCndwh%2Fx1mxsE6%2BZaV5Zd2b9lwxIiQAY87yrlHCdMfJWWFOEpeaBUjc%2FmyT0tei5KEsClCyENtPw77X2dRPO8zfSsvTveJ0nRxFbzPFwudGUzj9rJLbctjFSe2rzzD1R%2FBiMbfsVnsUDcHh1wRh76LHMLj1h8QGOqUBPDrJ9nsuYojstb59ndcwRUYKaYVPYXFV1EaGrH9rQxL1GrAoQo%2BFKcjPMJe4WT%2BOjEamp1zQ5SItZFwwXgrktERLsMslLIEMTq6xPXJfbxr9LCijbb26uaQ3bXODWQEjfrlakZkNAJPC90o90UhhfmGtji9cMZ%2FyoUJitfRPscWE0%2B7nhNcoobL%2Bncy7nbXCDman37iAHQMbyzTBIc6vzl3lvdbo&X-Amz-Signature=8a4bd3a3dc40e65111ac661a89dd96b96a5f3432831101715aa577d7584ac8cf&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ## 오브젝트 물리법칙적용
 
@@ -44,11 +44,11 @@ notion_url: "https://www.notion.so/01-a3bc990885bd4f8e921f13019d832dd9"
 
 `Capsule Colider 2D - Direction 방향설정 - Edit Colider`**   **
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/3052d5a2-924d-4612-b8e8-1c23d76e76cf/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466V6SWHPK4%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083844Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIHs4DPsWzahKavjJvcMWKfNzA%2FlO1s7IvACc%2F5mJvQCkAiAt1VFw5EYrsriTY9Kdip0ch%2FCWgrO5TDOlOrTvyieoySr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMKAXEZ%2B8rUt3OhBNUKtwDpIG2vfysesOegAf7EKZlvaBXfhJaUIYUElCUdowP0tt0mGRW4GuINLYFgjCJV5S3v4QvmCg0Njjzfbuq5QUsQepWPnofIjNnzKyfkxT8SVLcPLJuwa15SdDdFcYP3hBFnBVs08k%2B%2B4D13offRQqy9VH%2B6IU9IJ2n2Mii8srJ7mX2Zh6LdDd%2BCPmGRg59wPbmh0dfH7jiKgIp5f3DHsCsQAq4rRuwNZt2TlVryhB1QVTCtYA%2FQmlOWWjYQCoSMiJHprtAYEmRlbSX6wxIC6K99ICF%2BayCfGhCDbTodHmNLGp%2F%2BMatyOh240XtSQzIA0Vutj29R7D5dzpD2yyjxMsPpcaY9bQkoUTedHEok2yENrc7ZHMefP6MNgS9AZGWfqoO3vdrmOYeygJxuUWU4zgS82tjoDj5%2FIXY7shg4VgYr6u53R29IdSQG4LkLraBA58Df8Q5qMk69by4ZCjpho8vPZe%2FXR7QmlVqMTGeU%2Bz%2BdxCRog17Zv53OPGTZsb0He3Q9nxU73NUzOdVo4%2ByhzOCDqcTo3gSvBTxqg3wZrQO5PnebsVReQL6uW1sAY2zOfLBgmJH8X2n0yDJ1x0ihLZ0bGE%2BMyuzZdgq%2BITkmNSw6XjKbFSKDXcbUA2s%2FWcwuc%2BHxAY6pgG4eePwM9suffvZx2vh5XBEgd4PYyL5sqTlo0RIlNLK1KGhkf0z9F3TpFYV1Ac9UjiTKNLxI0NkrsOzZBlUzrrSIrKrWrX2MubbCXtPJ1XVsXi79OI8k6r7XWXrTHQeNosUdRnmYoAFY%2BiBdUKChBV%2FFwV2aArrkMoaFsLKLcQMkICFCJuDZdmgHRxoLaFwM0rmk0a6VYs4PiMcrFBh1GH63IPB9IAb&X-Amz-Signature=c2d5d0583390cc9099fdcca2a7cd1124b4beae09afe7deedf841d17083a93c86&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/3052d5a2-924d-4612-b8e8-1c23d76e76cf/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664QXWF5WO%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102400Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIAGXqRwjohoYgA8UccQEcIdohx%2B1uG2q1y%2F18CIcvFlXAiEAx4xOIViyqaMu1xujnLxNQ4otaMP62DWOCHGcLCVVC%2BAq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDNfcSXGmdK9QoMjnrSrcA0%2BBGYQAsDjYKB4UrBEOKMpKVilihaXq1bIv1PJzbH3freldC39K6i3hQEksUnl1y7y%2BgGK2DWJeFlT%2BTMkYjXAd7yVbVg%2FUa49wfDfoMT%2BeJQ8Pa99uJVur%2B7HePqoDlBHfOyDLoGZWdS2YRYDiXZ7%2BxKv21R%2BJzk4pdWqh7CnjJOzaOhTTwp5ZR5CriNXzTAsDfB0NO2TGiEasGe2sDdrsksQODS7n5Rip6l7t9YLjM4mYpMnfbXvSxCLXplFlUPxxRiR68Hads4FfoMFt8y2Ca04cdoyItNoWiUjBkCdVGIc4dfGmu6zQcGabexagy4eKOJCygBqSrNbkW9qiISVP%2BN67x1UsR0SB7UZTlmf8lj5AO%2FqL1S2gMhxVgf1iAX4gEqdNzm2a8Yfk9q1wyQ8OFtOucVTGYtPCU3cSuAaNjpyQyIHTCUDjN9TH6XMSE%2F%2Ba0l7o544c2lO2ubMvT%2FFiYpba7kyokLb%2FyYCndwh%2Fx1mxsE6%2BZaV5Zd2b9lwxIiQAY87yrlHCdMfJWWFOEpeaBUjc%2FmyT0tei5KEsClCyENtPw77X2dRPO8zfSsvTveJ0nRxFbzPFwudGUzj9rJLbctjFSe2rzzD1R%2FBiMbfsVnsUDcHh1wRh76LHMLj1h8QGOqUBPDrJ9nsuYojstb59ndcwRUYKaYVPYXFV1EaGrH9rQxL1GrAoQo%2BFKcjPMJe4WT%2BOjEamp1zQ5SItZFwwXgrktERLsMslLIEMTq6xPXJfbxr9LCijbb26uaQ3bXODWQEjfrlakZkNAJPC90o90UhhfmGtji9cMZ%2FyoUJitfRPscWE0%2B7nhNcoobL%2Bncy7nbXCDman37iAHQMbyzTBIc6vzl3lvdbo&X-Amz-Signature=0a575443e4f0e36812001236d26484a565d4b02751193ac1711e66c164914ba5&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ## 코드 에디터 설정
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/15a31f43-0666-4ab2-a7b8-270efd2c81c6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466V6SWHPK4%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083844Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIHs4DPsWzahKavjJvcMWKfNzA%2FlO1s7IvACc%2F5mJvQCkAiAt1VFw5EYrsriTY9Kdip0ch%2FCWgrO5TDOlOrTvyieoySr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMKAXEZ%2B8rUt3OhBNUKtwDpIG2vfysesOegAf7EKZlvaBXfhJaUIYUElCUdowP0tt0mGRW4GuINLYFgjCJV5S3v4QvmCg0Njjzfbuq5QUsQepWPnofIjNnzKyfkxT8SVLcPLJuwa15SdDdFcYP3hBFnBVs08k%2B%2B4D13offRQqy9VH%2B6IU9IJ2n2Mii8srJ7mX2Zh6LdDd%2BCPmGRg59wPbmh0dfH7jiKgIp5f3DHsCsQAq4rRuwNZt2TlVryhB1QVTCtYA%2FQmlOWWjYQCoSMiJHprtAYEmRlbSX6wxIC6K99ICF%2BayCfGhCDbTodHmNLGp%2F%2BMatyOh240XtSQzIA0Vutj29R7D5dzpD2yyjxMsPpcaY9bQkoUTedHEok2yENrc7ZHMefP6MNgS9AZGWfqoO3vdrmOYeygJxuUWU4zgS82tjoDj5%2FIXY7shg4VgYr6u53R29IdSQG4LkLraBA58Df8Q5qMk69by4ZCjpho8vPZe%2FXR7QmlVqMTGeU%2Bz%2BdxCRog17Zv53OPGTZsb0He3Q9nxU73NUzOdVo4%2ByhzOCDqcTo3gSvBTxqg3wZrQO5PnebsVReQL6uW1sAY2zOfLBgmJH8X2n0yDJ1x0ihLZ0bGE%2BMyuzZdgq%2BITkmNSw6XjKbFSKDXcbUA2s%2FWcwuc%2BHxAY6pgG4eePwM9suffvZx2vh5XBEgd4PYyL5sqTlo0RIlNLK1KGhkf0z9F3TpFYV1Ac9UjiTKNLxI0NkrsOzZBlUzrrSIrKrWrX2MubbCXtPJ1XVsXi79OI8k6r7XWXrTHQeNosUdRnmYoAFY%2BiBdUKChBV%2FFwV2aArrkMoaFsLKLcQMkICFCJuDZdmgHRxoLaFwM0rmk0a6VYs4PiMcrFBh1GH63IPB9IAb&X-Amz-Signature=1a8af535d1924497a3a733d6677df62b5f855ec885653db187918e6b0f48edff&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/15a31f43-0666-4ab2-a7b8-270efd2c81c6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664QXWF5WO%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102400Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIAGXqRwjohoYgA8UccQEcIdohx%2B1uG2q1y%2F18CIcvFlXAiEAx4xOIViyqaMu1xujnLxNQ4otaMP62DWOCHGcLCVVC%2BAq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDNfcSXGmdK9QoMjnrSrcA0%2BBGYQAsDjYKB4UrBEOKMpKVilihaXq1bIv1PJzbH3freldC39K6i3hQEksUnl1y7y%2BgGK2DWJeFlT%2BTMkYjXAd7yVbVg%2FUa49wfDfoMT%2BeJQ8Pa99uJVur%2B7HePqoDlBHfOyDLoGZWdS2YRYDiXZ7%2BxKv21R%2BJzk4pdWqh7CnjJOzaOhTTwp5ZR5CriNXzTAsDfB0NO2TGiEasGe2sDdrsksQODS7n5Rip6l7t9YLjM4mYpMnfbXvSxCLXplFlUPxxRiR68Hads4FfoMFt8y2Ca04cdoyItNoWiUjBkCdVGIc4dfGmu6zQcGabexagy4eKOJCygBqSrNbkW9qiISVP%2BN67x1UsR0SB7UZTlmf8lj5AO%2FqL1S2gMhxVgf1iAX4gEqdNzm2a8Yfk9q1wyQ8OFtOucVTGYtPCU3cSuAaNjpyQyIHTCUDjN9TH6XMSE%2F%2Ba0l7o544c2lO2ubMvT%2FFiYpba7kyokLb%2FyYCndwh%2Fx1mxsE6%2BZaV5Zd2b9lwxIiQAY87yrlHCdMfJWWFOEpeaBUjc%2FmyT0tei5KEsClCyENtPw77X2dRPO8zfSsvTveJ0nRxFbzPFwudGUzj9rJLbctjFSe2rzzD1R%2FBiMbfsVnsUDcHh1wRh76LHMLj1h8QGOqUBPDrJ9nsuYojstb59ndcwRUYKaYVPYXFV1EaGrH9rQxL1GrAoQo%2BFKcjPMJe4WT%2BOjEamp1zQ5SItZFwwXgrktERLsMslLIEMTq6xPXJfbxr9LCijbb26uaQ3bXODWQEjfrlakZkNAJPC90o90UhhfmGtji9cMZ%2FyoUJitfRPscWE0%2B7nhNcoobL%2Bncy7nbXCDman37iAHQMbyzTBIc6vzl3lvdbo&X-Amz-Signature=4c6caf3ea23a9d7ba74fb51debda2c4706a48dd712edc5fcf09e49f71c8a58b0&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # 코딩부분
 
@@ -134,6 +134,9 @@ void Update()
 
 
 > 🔥 ****deltatime?****
+> 한프레임당 걸린 시간
+>
+>
 
 # Prefab 이란?
 
@@ -147,4 +150,79 @@ Prefab을 만드는 방법은 그냥 Hieararchy에 올라가있는 오브젝트�
 > 🔥 **Prefab을 찍어내기위한 생산공장… Hirerachy에서 Empty를 생성한 후 컴포넌트를 추가하는 식으로 활용**
 
 > 🔥 **사용방법**
+> 제네레이터 내부에서 컴포넌트 추가하고 스크립트 내에서 public으로 GameObject자료형을 가진 변수 설정
+>
+> ![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/3721c553-3c82-4873-b4a1-c97fee47f53b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662VK2LIB2%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102403Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCID6q3dbGhkXArmVTg6DyUBfTTTbpez%2FmC4E%2F00ytW2cMAiEAj5jn3Hbj%2Fb1l6wz2FSwWYY0b4iIPeV%2Bb60gTxApPPrkq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDKIWSLIMpxUM16W%2BeCrcA3QK3rX1T3%2FeDA3LIXyAgQO5gtXXaYOrbV%2FPK6GCBw9plhTr6G1JZ7elSxqH5NkpqxxPK5JiD8oKerxj695WqkpGrWh3mr3oSxQfLEdJ9wIOHWJ6eaGrTYCMvCLZu7puDFIOW2aNRrH%2F%2BZYoQafM%2F8xKDXCJKFQSfj2vfRwYEbd0A6dZboxHy6heTZn32kbk517Fa5AkPZKsD%2FivRS6P%2BpBNenEGExNnBBWMzOCz1eup%2FU742Z3aMw7aKkLNc3vLsxhAld8vK3Cl0yuTmXzjHS666%2FGqvpO0C2EJKGxqFQ7tomFBcdUuYTn%2FQJgi%2B2UYx9E1OC2NFSfQ8gWmwWncobKtZHquZ4YwiX2iTY%2FqhtqT8O3resNJ8r9zX79C195s%2F%2BxplgAPLAoLMWk9sV6mbP8B0q8U2KC%2F53NS%2BE8YigbB%2F6kFsD5pswBRocgp0gg5JZGqDOfveumV5SlrmyxFwZbyuzq%2BItU7Yav5W9l3Z%2FthLKska6f%2FI%2FYuZ2wOdfn7YlF7VD%2F4C8YiLbcLKUdHkcWODaHiTwQxe64yhDV4jN5u4uSTkqhJtDnMH4pPa76xeN5Wwe8R5XsH%2BTOXLe8cTKnYCrZ%2Bvedyf4UfcuyAJNtHxB6UaQDfdr9X4nRlMIH2h8QGOqUBSHS6zvdfRgKqlWjLnIaL1s8646H29KuHsruHG7kQEbCgWw%2BhfXeKcMIKZrvHpl45iWxGd3c451b14sNP2saeNjKnGCplhRhL6re3JwKUGymBgCnm5F62pPGfzufbPRsmziyzvQnHHR%2FusoXNitC8nA73BwLC1rPH8daOepKfiwXwHHdR9LYqnu%2B1s6%2Bu1I6C12hXdA8kLY5hMZJsNhRLVlXMDkr1&X-Amz-Signature=afcb1fa8e7ea76c9ac7401e40d4c50ae8c08df6d370ab5cfefd805cc7db4bbf9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+>
+> 그 후 하이하이어라키에서 생산할 프리팹을 드래그앤 드롭 혹은 직접 선택하여 변수내부에 할당 가능
+>
+>
+> 그 후 다음과 같은 코드를 작성한다
+>
+> ```javascript
+> public class MakePipe : MonoBehaviour
+> {
+>     public GameObject pipe;
+>     // Start is called before the first frame update
+>     void Start()
+>     {
+>
+>     }
+>
+>     // Update is called once per frame
+>     void Update()
+>     {
+>         Instantiate(pipe);
+>         //유니티 내부에서 등록한 pipe prefab이 Instantiate를 통해 생성된다
+>     }
+> }
+> ```
+>
+> ```c#
+> //timeDiff 로 유니티에서 값 조절할 수 있게 해두고
+> //deltaTime이용하여 파이프를 특정 시간에 한번 생성되게 코드를 짠다
+> //이때 newpipe를 생성하여 게임오브젝트를 생성시킨다
+>
+> public class MakePipe : MonoBehaviour
+> {
+>     public GameObject pipe;
+>     public float timeDiff;
+>     float timer = 0;
+>
+>
+>     // Start is called before the first frame update
+>     void Start()
+>     {
+>
+>     }
+>
+>     // Update is called once per frame
+>     void Update()
+>     {
+>         timer += Time.deltaTime;
+>         //deltaTime을 계속 더해주면서 1이 되었을때가 1초가흐른것이다
+>         if (timer > timeDiff)
+>         {
+>             //y3.3 ~ y-3.3
+>
+>             GameObject newpipe = Instantiate(pipe);
+>             //유니티 내부에서 등록한 pipe prefab이 Instantiate를 통해 생성된다
+>             //Instantiate한 GameObject를 newpipe로 받아준다
+>             newpipe.transform.position = new Vector3(0,0,0);
+>             timer = 0;
+>         }
+>
+>     }
+> }
+> ```
+>
+> ```c#
+> //벡터부분에 랜덤값을 추가하여 생성시킨다
+> //x부분 벡터에 정수를 조절함으로서 프리팹 생성 위치를 설정할 수 있다
+>
+> newpipe.transform.position = new Vector3(0,Random.Range(-3.3f,3.3f),0);
+> ```
+>
+>
+>
 

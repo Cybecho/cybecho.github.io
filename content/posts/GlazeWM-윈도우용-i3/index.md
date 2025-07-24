@@ -16,11 +16,22 @@ notion_url: "https://www.notion.so/GlazeWM-i3-e197a8a316584a1c9fbe25f3c16f1317"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/c65d015d-f261-4c58-9deb-a277202e4378/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466XOF4AIYC%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083632Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJHMEUCIQD%2FHhuI57DNpGKLuHQBvH8M82JNiAufIBlmvXyCtA2tIgIgbSghvNefwvGG5tJKA3%2BOSgRBV2oLv6nGWXiZSq%2F%2F7R8q%2FwMIKRAAGgw2Mzc0MjMxODM4MDUiDKv3XUsZ7LSxVWUMTSrcA%2FBlwlD8bLmWJdZFVq0dts1qSIXXMRxTv%2FF50s%2BiqPoi2iSv%2BLNIxpOEBakpJBbi6aZfAwdeIIKs%2FIdErI7ad6qsQNULDKv2t0XBzeCxixpbd3Q0EBi5raFH6C1fPe7hTA6k0wc6GTfSmBPBV9tZw%2FyEvhPgFOsX3gH9iiLNq%2BjYRYZf39cwnB5D0h7RlltJwsErImS%2FgzDteGdEdvriKwUwWHG0SwsmU8enb81%2B%2FyVQXGofA2n9CRbg4Opl9u9BW8YfgPo4YANkNS1WGvl%2Fy4V7QoQyRsKaTdQlLp5ZJNyCJaw7kijhgb0k4z9d2o5BNlvCcyv6Xvzz9gDbWSNPtfE6LM8nEWNIIj1uO3pY2FLnIgBMqMrjEdGX3ax0h%2B6S8bAHBLgL689GPQPppVzNNGgbSs8EHFqwdD641HnUlX3zwrFhImIN4PtxD98V4w5NWxKH0B%2FodCOGBJBaFskJMDDYvFowHu9aunu1Ao5HfC3CC62I7G5ORbVJhO6QEwMVgs0zWzsn5L2DWJBpXqfkwP%2BcAgO7YzLvP%2FSfehXdc8pbkrWZ2bIRpOEpkM3e9oabuE0e4UAp8vk19T30KvRxnIy6z9zp4rC6r1ItnR%2Bw59uNp9X%2Bh5mTB5BhCFlcMJjQh8QGOqUBdZ34bw2aufC7NHu4qijl%2FXQkry9104lKm1kalxha0Nr2nmI5DlwWViudnPhPPIkIRZpGsPdLvDJQee3%2B%2B7cGtSdWq%2F2Lc3MhItkoUHV8SX3%2FG%2BaYMHH02eUF4UN3IeaM88hNgayULGjhPjQt38pBFy8%2FpOoDS8Io89%2FlQ9KrsnUtm5LfMoEZiduHdvBO%2FXiHsg0hUQHXgkASGrHxzHWFtgFvObVM&X-Amz-Signature=816e810d2476891cc6be19f937c2dd45db3c681bb1e3cd3aa0ebf8347e7d9f39&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/c65d015d-f261-4c58-9deb-a277202e4378/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664MBJZ5ZA%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101931Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJGMEQCIAcgVr3auQM%2BYnOJVstjgXUpUL96yWIhtLMP%2BVXYJ5ZTAiAVZhcUyGYYp4EJMe3Tw18esL96TAf6nQ2zVCAjsLKUbir%2FAwgqEAAaDDYzNzQyMzE4MzgwNSIMVxpOYC18dh5Obl6oKtwDGkREhkmy44ydnApbUCuEarJoPc2PYFwwb6Bc38x9I21MisRAzIRcWkdztVdT0CTdf1JTPPl46OEbmHaJotbKROStiua0CQyC86TCNaBXyaz%2FimH0UpD%2FxJqQMrJ6Uw7kV6S0XzxLuTNJC5rx6s%2BR0a5yG8wKJS37zE2dHusH4ixxBnMpZEgV0AdkgKlV%2BrCxl82RZR32opec%2FzgVuXP51tz39c8Ie%2Bz656dGc6rJU2tjsmRYUs6JtMH6TsYA2czs2xCa2EU09Adu54GaCv21%2FOrXQr24Lrk%2BdwXqEXmYwvsEPWo9wAZzIDIJo7jdfWTo%2F2ZUwmQ7HSQ3AWa7Wjm%2BhdLIC%2FMC%2Bk4AH%2BWmMgFa7Lox9VK7xTEWgZQpOT3SvB%2BxxhYIRMXVO8d3S7WeheJYBDNjer4ob7Y4bmLrAHb7uijVbyyFlz7Ek%2By7pfccEuYLjJJOzms%2BPLh16x3fMaZ%2FT25ZQ%2FO5AZUY9ZdIV0jYFt8vyQCMbkrL6g089jhkPqy1%2F%2BNrYt1m%2BVJNSyu%2F6r9xK2dFSTRyAaKes3K51YjtEUoBEbGfvkJu0NFw10iw1M3OqHSOM7ZIBe8H%2Bhzjt1jwhbUB8WIJkg2LkW90QBC6gPfBhPvTU7yJuHHv7nYw%2FvWHxAY6pgEpkNPQuQHOi2CIYEX4lafI401J2uZgSy1rdFOIifneTu2p1AWajfglkRTqwFVUkJPlw47X1LKL0lAyye1jk1w1QSD061x780c%2Bx%2F3k5xQU9IM7Hp1mocLosJz7A2g92e5wlP2%2BkEoaHL35a8Rr2isAdEFksUq301XnrUZ679LwwSD9%2FIWhNc90JCud6Bwg1Zd8yVHJaggwdKEK1PNpov6jX6SK1O%2Bz&X-Amz-Signature=e4f3a21eb7f7b11b61a464ce64db883845b314ea39aac8350a93f6c50e810fa2&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🔗 [https://github.com/glzr-io/glazewm](https://github.com/glzr-io/glazewm)
 
 > 💡 **`Scoop` 으로 설치해주세요!**
+> [윈도우 패키지 관리자 scoop 설치](https://www.notion.so/85c8c41652704cfc9b25a72a32ce190b) 
+>
+>
+> ## **Scoop**
+>
+> ```javascript
+> scoop bucket add extras # Ensure bucket is added first
+> scoop install glazewm
+> ```
+>
+>
 
 # GlazeWM 이랑 비슷한놈들
 

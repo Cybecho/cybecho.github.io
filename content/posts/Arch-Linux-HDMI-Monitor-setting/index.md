@@ -19,6 +19,13 @@ notion_url: "https://www.notion.so/Arch-Linux-HDMI-Monitor-setting-0982450816f44
 🔗 [https://velog.io/@chooslife/만자로-i3-듀얼모니터](https://velog.io/@chooslife/만자로-i3-듀얼모니터)
 
 > 💡 **AUR이 활성화 되어 있어야 합니다**
+> yay 및 pacaur
+>
+> ---
+>
+> [Arch Linux AUR 활성화 (pacaur)](https://www.notion.so/cb4ee06d30274b8598a0d84638fe1126) 
+>
+>
 
 # 원본 글
 
@@ -109,9 +116,38 @@ sudo pacman -S mesa
 **AUR에는 **`**amdgpu-pro**`**라는 이름의 패키지가 없지만, 필요한 AMDGPU Pro 드라이버 기능을 제공하는 개별 패키지들이 있습니다.  다음 단계에 따라 필요한 패키지를 설치하세요:**
 
 1. **OpenGL 지원이 필요한 경우:**
+  **Bash**
+
+```plain text
+yay -S amdgpu-pro-oglp
+
+```
+
+  **Use code with caution. **[**Learn more**](https://bard.google.com/faq#coding)**content_copy**
+
 1. **Vulkan 지원이 필요한 경우:**
+  **Bash**
+
+```plain text
+yay -S vulkan-amdgpu-pro
+
+```
+
+  **Use code with caution. **[**Learn more**](https://bard.google.com/faq#coding)**content_copy**
+
 1. **OpenCL 지원이 필요한 경우:**
+  - 최신 버전을 사용하려면 `opencl-amdgpu-pro-orca` 또는 `opencl-amdgpu-pro-pa` 패키지 중 하나를 사용하세요(AUR에서 확인 가능).
+  - 레거시 버전을 사용하려면 `opencl-legacy-amdgpu-pro` 패키지를 사용할 수 있지만 이 패키지는 더 이상 유지되지 않습니다.
 1. **Advanced Multimedia Framework(AMF) 지원이 필요한 경우:**
+  **Bash**
+
+```plain text
+yay -S amf-amdgpu-pro
+
+```
+
+  **Use code with caution. **[**Learn more**](https://bard.google.com/faq#coding)**content_copy**
+
 **필요한 기능에 따라 해당 패키지를 설치하세요. 예를 들어, OpenGL과 Vulkan 지원이 모두 필요하다면 다음 명령을 실행하세요:**
 
 **Bash**

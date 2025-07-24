@@ -4,7 +4,7 @@ date: 2025-07-09T01:34:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Infra & Network"]
-description: "VMware에서 OpenStack으로의 VM 마이그레이션을 위한 상세 가이드를 제공하며, 마이그레이션 계획 수립, 기존 환경 감사, 다운타임 고려, VM 내보내기, 디스크 이미지 포맷 변환, OpenStack으로 이미지 가져오기 및 인스턴스 실행, 마이그레이션 검증의 전 과정을 설명합니다. 이 과정을 통해 비용 효율적이고 유연한 클라우드 환경으로의 전환을 이끌 수 있습니다."
+description: "VMware에서 OpenStack으로의 VM 마이그레이션을 위한 가이드는 철저한 계획 수립, 기존 환경 감사, 낮은 중요도의 서버부터 시작, 다운타임 고려, DNS TTL 조정, 스플릿 브레인 방지 등을 강조합니다. VMware에서 VM을 내보내고, 디스크 이미지를 QCOW2 포맷으로 변환한 후, OpenStack에 이미지를 업로드하고 인스턴스를 실행하여 마이그레이션을 검증하는 과정이 포함되어 있습니다. 성공적인 마이그레이션을 통해 비용 효율적인 클라우드 환경으로 전환할 수 있습니다."
 notion_id: "22b1bab9-e3f8-80a3-a573-dad07bf0f583"
 notion_url: "https://www.notion.so/VMware-EXSi-OpenStack-VM-22b1bab9e3f880a3a573dad07bf0f583"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/VMware-EXSi-OpenStack-VM-22b1bab9e3f880a3a573
 # VMware EXSi의 대안, OpenStack으로의 VM 마이그레이션 가이드
 
 > **Summary**
-> VMware에서 OpenStack으로의 VM 마이그레이션을 위한 상세 가이드를 제공하며, 마이그레이션 계획 수립, 기존 환경 감사, 다운타임 고려, VM 내보내기, 디스크 이미지 포맷 변환, OpenStack으로 이미지 가져오기 및 인스턴스 실행, 마이그레이션 검증의 전 과정을 설명합니다. 이 과정을 통해 비용 효율적이고 유연한 클라우드 환경으로의 전환을 이끌 수 있습니다.
+> VMware에서 OpenStack으로의 VM 마이그레이션을 위한 가이드는 철저한 계획 수립, 기존 환경 감사, 낮은 중요도의 서버부터 시작, 다운타임 고려, DNS TTL 조정, 스플릿 브레인 방지 등을 강조합니다. VMware에서 VM을 내보내고, 디스크 이미지를 QCOW2 포맷으로 변환한 후, OpenStack에 이미지를 업로드하고 인스턴스를 실행하여 마이그레이션을 검증하는 과정이 포함되어 있습니다. 성공적인 마이그레이션을 통해 비용 효율적인 클라우드 환경으로 전환할 수 있습니다.
 
 ---
 
@@ -46,7 +46,18 @@ notion_url: "https://www.notion.so/VMware-EXSi-OpenStack-VM-22b1bab9e3f880a3a573
 OpenStack은 주로 `qcow2` 포맷의 디스크 이미지를 사용하므로, 다운로드한 `.vmdk` 파일을 변환해야 합니다.
 
 1. **변환 유틸리티 설치:** 이 작업은 리눅스 시스템에서 `qemu-img`라는 도구를 사용합니다. 배포판에 따라 아래 명령어로 설치할 수 있습니다.
+  - **Fedora/RHEL/Rocky:** `sudo dnf install qemu-img`
+  - **Debian/Ubuntu:** `sudo apt install qemu-utils`
 1. **변환 명령어 실행:** 터미널에서 다운로드한 `.vmdk` 파일이 있는 디렉토리로 이동한 후, 다음 명령어를 실행합니다.
+```shell
+qemu-img convert -f vmdk -O qcow2 debian-server-1.vmdk debian-server.qcow2
+
+```
+
+  - `convert`: 변환 작업을 수행합니다.
+  - `f vmdk`: 입력(Source) 파일 포맷을 지정합니다.
+  - `O qcow2`: 출력(Output) 파일 포맷을 지정합니다.
+  - 마지막 두 인자는 각각 원본 파일명과 생성될 파일명입니다.
 이 과정이 완료되면 OpenStack에 업로드할 준비가 된 `debian-server.qcow2` 파일이 생성됩니다.
 
 ### **4. OpenStack으로 이미지 가져오기 및 인스턴스 실행**
@@ -55,7 +66,21 @@ OpenStack은 주로 `qcow2` 포맷의 디스크 이미지를 사용하므로, �
 
 1. **OpenStack 대시보드 로그인:** OpenStack 환경(영상에서는 OpenMetal 클라우드 사용)에 로그인합니다.
 1. **이미지 업로드:**
+  - **[Compute] → [Images]** 메뉴로 이동합니다.
+  - **[+ Create Image]** 버튼을 클릭합니다.
+  - **Image Name:** `debian-server`와 같이 식별하기 쉬운 이름을 입력합니다.
+  - **File:** **[Browse]**를 클릭하여 3단계에서 생성한 `debian-server.qcow2` 파일을 선택합니다.
+  - **Format:** 드롭다운 메뉴에서 **QCOW2 - QEMU Emulator**를 선택합니다.
+  - **Minimum Disk (GB):** 원본 디스크 크기(32GB)와 동일하거나 더 큰 값으로 설정합니다.
+  - **[Create Image]** 버튼을 눌러 이미지 업로드를 시작합니다.
 1. **인스턴스(VM) 실행:**
+  - 이미지가 성공적으로 업로드되면 **[Compute] → [Instances]** 메뉴로 이동합니다.
+  - **[Launch Instance]** 버튼을 클릭합니다.
+  - **Details 탭:** `Instance Name`을 `debian-server`로 입력합니다.
+  - **Source 탭:** **Boot Source**를 **Image**로 설정하고, 방금 업로드한 `debian-server` 이미지를 선택(화살표 아이콘 클릭)합니다.
+  - **Flavor 탭:** VM에 할당할 CPU, RAM, 디스크 사양을 선택합니다. 원본 VM과 유사한 사양을 선택하는 것이 좋습니다.
+  - **Networks 탭:** VM이 사용할 네트워크를 선택합니다.
+  - 모든 설정이 완료되면 **[Launch Instance]** 버튼을 클릭합니다.
 ### **5. 마이그레이션 검증**
 
 인스턴스 생성이 완료되고 상태가 'Running'으로 변경되면, 마이그레이션이 성공했는지 확인합니다.

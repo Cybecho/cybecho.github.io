@@ -30,6 +30,8 @@ notion_url: "https://www.notion.so/e13d33b8ddfa42018b7e72cad16ab217"
 
 - 기준 1: 커밋은 포크가 아닌 독립형 저장소에서 만들어졌습니다.
 - 기준 2: 커밋이 이루어졌습니다: **리포지토리의 기본 브랜치(일반적으로 마스터) 또는**
+  gh-pages 브랜치(프로젝트 사이트가 있는 리포지토리용)
+
 - 기준 3 **: 커밋에 사용되는 이메일 주소는 GitHub 계정과 연결되어 있습니다.**
 [따라서 기준 1과 2를 충족하는 경우 로컬 Git 이메일 주소와 GitHub](https://github.com/) 계정의 이메일이 일치하지 않을 수 있습니다 .
 
@@ -64,6 +66,8 @@ soufiane.dev@example.com
 
 - 내 로컬 git 이메일은 soufiane.dev@example.com이었습니다.
 - 내 원격 [Github](https://github.com/)
+  이메일은 soufiane@example.com입니다.
+
 내 기여도 그래프에 커밋이 표시되지 않는 이유가 바로 여기에 있습니다.
 
 **4단계:** 아래 명령을 실행하여 로컬 Git 이메일 주소를 [GitHub](https://github.com/) 계정 이메일 주소와 일치하도록 변경합니다.

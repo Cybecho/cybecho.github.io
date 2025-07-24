@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Vim-8cfdb875ba1f4b0cbd55d2d5f1f4d9db"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/c22e7e68-d7ad-4af4-944b-b0506ec74a17/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4663A6QWE3X%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083613Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJHMEUCIGOPIo%2F39dAOmOCMek5EBqMHWhZZu4jgRxKSG2tFvp%2B4AiEA3nHRi%2FNFxNexBwxbKmK0IXPp1LpQfFweFgeUONu8ykAq%2FwMIKRAAGgw2Mzc0MjMxODM4MDUiDEXew9F5juR4X9nX7CrcA4HWGxy7Fy7KOco%2FjbB%2FkrOW5C18GsGShCxthLXClYF11PqGZVxG%2Fb2pngFQlqmX89nYz1huVROFF3X5%2B0W2Z9HE%2B0LZzAzZ94FBK90INkBLLa3igq0WB4%2BkJQGKav6h7VKVN%2Fgpbg4mo%2FTzr7%2BS6K1jOZgU8i1VMEiEi8Q01mUmyTdCe8V4qxer4waTdTioUw3eZg7O7zpHHUY%2FhxkU7ULjkrwY73rgVFc%2FjBoX9cRBf%2BoRYKQOwHJNM6%2Bd7PbdtXMDvvh57aO1MQ4mHX21ROYh5XZxM0U3NqJsv7NCRXDKAtTlCcYArKswzRd6diibBGU75aE%2FHf0%2FpjKPNmEjA6ZCjvmwC3deumxcH9vPIKepQtKdNIYDOLz%2F7%2BV%2B70NcW%2FrPloVUqIU1e%2BKCLBxXB%2FviL35VnTWMG2demqhwEbslfAljruaTgl12P%2BHtTDFmsFJup93SUy3rMLGXmkHbg1MQL6PDnT3IZ1mlJ5iFW%2FNK%2BLQ2%2BE7L6Pi9eRxizfdM6EeMMxPK87iNAw%2BBqbHOiO2aOA3d9A2EFDC%2FMPQoLG%2FDGTFcicdClFyTVcPje%2F7f0ISTv9rw4TN1BbMNc8FNzB65Epo3KjjG8h5RfOjeoYewLvbEuIM59romk4OKMPPOh8QGOqUB2rM1HOEHZfekS%2FZeXoo2AnoLBDjibXkYmeRDvhbcLiSMpYShxwV%2FJ0rqBkas1SHauxwt54cSnHlh6Krh4%2B1eAAQztMBWtb7Qpzmfc0ARsnXDcO6dsFjiy802jyCZmsPtkgD4kX30GuJ2XE0vIwOzG6WSaZxdvi9MN9Z%2FUaDb%2FGzpUuhYh0yTNBM8c4IlhXFekkkukk1o%2B3LRTREdG6wBfv89JE5j&X-Amz-Signature=22cccd8d8bc665819367e8c536a4af52290044fb7b91671a49dba4d0e601fad3&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/c22e7e68-d7ad-4af4-944b-b0506ec74a17/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466R6R3UEM3%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101911Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQDzb%2FB4qMjsb5jpqu4tmDBgc5NAnmpL0zT9jvs9Vg2UNwIgIulR5OHHG9m41BRDERZ9KjB5EXkHvz%2FHGu%2BnYu8c1Rwq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDPVMkt78dPAH9q4ELCrcAwztY7S%2FuN0ZZAifD549nX6ImA8Vu1XrzP2ZAJ%2FYlYPQK8ToRzCxpisW70AfUeY%2FH%2BJjCwyW67ROfkcwEomgYYTpJ8JgqwM8nTxduTeavnpMQavNQQ6hQe3iKX0gluyYP5nw4C%2FUPXwHWbWNq0kdIFVan7Vlf8IdLd1c2GHJp3sMInO%2BBPjkerkfaZU6VY6Snvxo4X3nBy%2BYZyw%2Bi22Z4WS%2FBdUzBnSz2M6c%2BhToV5USNp3MXYs7uiccpyUbu1Shpn5LHgvkugY06XOFl6QZmovVugc115kj1C8InL7sxweMfBCtpi7D%2FjUx%2FiL5H9AlSIUYmyQdd0m2vHGfuX1xgcqi47B0M1ZcYtHO1%2FTKQd4TUPj71GMxDYMwRD6sna%2BocjRQgbyvr2j315CHb3Ck8H%2BOnQ2TiM927HELdd8iRPgnpXlXrIqVarmaeLpwPA%2BMi2daFMJFfK2HdYsC%2FKCLbLE9Fu6LwrU8vuD0W8c29LcYVSud1zMAUfNuf6xhmF5RTAjdfowvXs317lCtPTXXTF6P2D8V023%2F9cgmJBltTrF3f%2B2ox%2B8e%2FdOD3g0q3QJ3YAW0F8YqT%2FVwOPNZy5oDXQEN13QocgxtcN5iS%2Fd1JXiFmmeeKNNkD3HeRyJQMJL1h8QGOqUBe5FKvsdjnTGsf54IhO1UOz1k%2BgKy3GTlGddKqxsTxaXUakefMQ6fnGVbWNDZDcWWY0ucCKDe1wzCFtdwF%2FXK11nSQQgeh9WvuBpnSHSSb4GUE1qBnrQiO0Kg5CstL7g2nBVx%2BqUgtGa0vWpwBq8e5zux5UoUl%2FeQ7ZAvn7sw0bUzJRioK%2FQnLUBEpSKcRhoBlkvv%2FW%2F6%2BQ3R0495ix88cKt8ZdW6&X-Amz-Signature=6c58f5a02853d21284d9ef98c51772eb028630c6817d8c8335d3d3654598f1be&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=ONcFKXoJ7uQ&t=323s)
 
@@ -50,6 +50,13 @@ nvim init.txt
 ```
 
 > 💡 **이후 설정은 알아서~**
+> ```latex
+> set number
+> set relativenumber
+> set mouse=a
+> ```
+>
+>
 
 ### Debian 계열 에서 init.vim 설정하는법
 

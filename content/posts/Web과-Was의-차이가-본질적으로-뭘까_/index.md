@@ -34,7 +34,10 @@ notion_url: "https://www.notion.so/Web-Was-1b21bab9e3f880a5a1cac6b0d093e41c"
 ### Web과 Was의 본질적 차이
 
 - **핵심 차이점: 함수 실행의 “깊이”**
+  - **Web**: 단순 내장 함수처럼 바로 실행되어 단일 출력(예: `echo "ASDF"`)
+  - **Was**: 여러 단계(예: include, 내부 함수 탐색 및 추가 연산)를 거쳐 실행되어 출력 결과 도출
 - **결론**
+  - 결국 차이는 실행 시 호출 깊이와 점프 횟수에 따른 함수 실행 방식의 차이로 이해할 수 있음
 ## 결국 스택(정적) 힙(동적) 사용 여부 차이점 아닐까?
 
 [Untitled](https://www.notion.so/4b845da9196f400f8a16ebd55cbd8612) 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Google-Pixel-1-Pixel1-2311bab9e3f880eb87eae27
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f76881f6-006b-47a3-b913-e07e1a043609/Untitled.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466WFAR5N5O%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083252Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJHMEUCIE9En7vU0s1DIA3UGd2DSBZlutK6rxvq%2FBYtrLt40oFcAiEAgebnmx%2BztICkJSyKsFoWjwfcMv2BeH8GQelGnXYJBhcq%2FwMIKRAAGgw2Mzc0MjMxODM4MDUiDCrLeMMCVUgYP8d0vyrcA6%2FuEXwSrE6PEs7Aju1oFg8PpvotUndFnmx7xjgKdA7jqNJSTrz8h6QT1C4Z8DIBy1dzyOoCmTXhtFOTXUwJFipa%2BNpp7YRwKtg2kovFptTs296ee%2BtXm0wjpVbR%2FkqBIls8Qd1WHiFUxIapadxXyALXug7larj7L5lfnwLoUL%2Bf5WSe23BkCnDvpzafAZ116eQvG3OXYbbHKduex7jim2wiE42sHjJI9ZqYrwun8s88TSXNcP%2BaS7Qc83yRe%2Fo0Iik0myKurCutghggOKKpt6d4B9Wo7q6G3prdqq6v6VslSOEEu9mRhZiZVJvXjfteHrMpQbEqMpaNo7xKMdq0NCD1NOXj%2BJmZXNEFjrw30dDtXWZeyrlTghAFqG3ooYKBhK5D70tpTW623NyNBg5nOjwC10VyKtydzxGa8xbRAsdNFmEKxWwXTqZunDqXFHCbymqBWG%2BKM%2FLJyjoQSZ4CwrO8vKjl7Y32IQg0QNdEn%2Fx4DSAGfWT7uVf3ZMKoZhSC7jdFxHibKYhqt9xWPIpQ6RBOdk0PfB3tESDglgZLj%2FvigzHxaE66uVyzGEu78xagxeOwdgvH5ZcGHgKiJQR1gc48zHQTs11ARLd0%2FjRMc5f387Nb606B%2FqPk86SPMMDQh8QGOqUBzYTof8bR5YFNokricW8snCTirttLzwXMK5AWMfYeMVxAVtU5pJ1%2FkUmw25p6GQNGfFsinC8l2qnlyPXYZlsWp7capLCNE3gs3dcp6l5rgjNehB7D6Mb5XCgrLmu3wZycIbakxpW9ZYOCBKO5eVbtivQeykwRaLm8KQ2bbjH8346c4gEzInmYegLvZJv2xVcyXi8VZaVe4i7AgyOPsvRn5WoIcgW%2F&X-Amz-Signature=93474aa941e615c972357617ab44b3fdea68ccaf9e692de8547afe6c4c46f981&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f76881f6-006b-47a3-b913-e07e1a043609/Untitled.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VRA7AHMO%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101338Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIDiHfK8AbN0WxlVjC784EcRApwOKv4a6U7KgxgZK6tNNAiEA8mCwPsHS3vJkGHPDRJ%2F%2FRR%2F0jaZN%2BwbB9HKRhtLDeEQq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDA85SS28EC%2F5tRAYtyrcA2diI4%2F8IpCLy%2FDdGusgVwOckXgeT9SiNN5KgsieAVhf1BG7XsNlxXrrNjetvI9hE5VH4%2B%2FckdkNkBPC7rhpUSUmwPNVTFYegyfgRvtfUB3gGbGaA%2FnbWRx%2BF8o7goLPjwXTPVyHYBNFcPzenOBiMa37uHbKEJ5lUdzjjle9ZqKHAT7Tm2vpgGc81nvJuICLEd29CP8sSSgWnFFUjLHzV2sj2o%2B7PkQxD9MzGfwWemRahNsAn3lqo9BJx2SpkfCZ0PrjcJiL51F0n8Oh%2FYv9%2B%2B9wZvc1T4xdQP%2FDjapRe5i7jOFUUrId%2Bv21rR3MOCnAKK4OVKOq5CYclAz1YrivgFh%2F3Dt5VuA%2BkTVInBT6haE%2F4iWarsTyINSQZSfJjAHbQEkytsQaHHb4fB7XPYr3Gky89mwr5tPwipyUriUwGnq6oibXgx2OXSj1%2F90PktARGTtQgaHIpPfEyoOwhrG%2Fr2ehOJggxVMc6VoK7%2FJP0iWH6zENyuushAhfWH3EiMPiRwIbJySlE8y0qncKgwpJa%2BjRE%2BZfXTBDGHUF%2BLs7%2FJEeq%2BIELj%2FkNje5%2FC9x%2BLt1yxptyHvYvHZHMkr%2BZQRLlus9H2ruPfCwHbwn91qtPVnDyNJ8KdzLysLlLdl2MJf1h8QGOqUBp5D4XOfpI7I2Wsov97jHGMmbmLNtxcQOxXze1lREIg1tI0bqgs4HSSQdP54s9yUilGeEQz6W5Y%2Fzoi6uyC4V2L230ek5o1oe%2BcI%2B2oEzPXueOVS4C1rG146GIvLG3ufdK9d5igAJTpY6QkWOPSD3pJKVXQrWUXmEbdwTgdqOwNbsikXBuE%2ByyebeXKE%2F8qF1Th2DjC%2FKWYve3%2FTRHR2e4jc3OAWu&X-Amz-Signature=7f22aaa52c54c3aec4d0351a5ce7eb5d525ff53093db443506cb54d0880c7624&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # 제야의 고수들이 나에게 조언해줬음
 
@@ -73,15 +73,20 @@ Revanced Manager를 이용해 Google Photos 앱을 패치하면 루트 권한이
 ### **1. 기존 앱 제거**
 
 1. 기기 설정의 **앱(Apps)** 메뉴에서 “Google Photos”를 선택하고, **제거** 또는 **사용 안 함**을 실행합니다.
+  - 이 과정을 통해 패치된 APK 설치 시 충돌을 방지합니다 .
 ### **2. Revanced Manager 설치**
 
 1. 공식 웹사이트나 GitHub 릴리스 페이지에서 최신 **Revanced Manager APK**를 다운로드합니다 .
 1. 다운로드한 APK를 클릭해 설치합니다.
+  - 보안 설정에서 “출처를 알 수 없는 앱” 설치를 허용해야 할 수 있습니다.
 ### **3. Google Photos APK 로드 및 패치**
 
 1. Revanced Manager를 실행하고, **“Select App”** 메뉴에서 “com.google.android.apps.photos (nodpi)” APK를 불러옵니다 .
 1. **“Custom patches”** 목록에서
+  - **Spoof Unlimited Photos Backup** (또는 유사 명칭)
+  - **Disable DCIM folder auto backup** 등 필요 패치를 선택합니다 .
 1. **“Patch”** 버튼을 눌러 새 APK를 생성합니다.
+  - 패치 과정이 끝나면 /sdcard/Download/ 등에 패치된 APK가 저장됩니다.
 ### **4. GmsCore 설치**
 
 1. ReVanced MicroG(GmsCore)를 GitHub 릴리스에서 다운로드해 설치합니다 .
@@ -91,6 +96,7 @@ Revanced Manager를 이용해 Google Photos 앱을 패치하면 루트 권한이
 1. 생성된 APK를 설치합니다.
 1. 앱을 처음 열 때 Google 계정을 선택하고 인증 과정을 완료합니다.
 1. **Unlimited Original Quality** 백업 기능이 활성화된 것을 확인합니다.
+  - 초기 실행 시 계정을 다시 선택해야 할 수 있으며, 이후에는 백그라운드 자동 백업이 작동합니다 .
 ---
 
 ## **내부 동작 원리**

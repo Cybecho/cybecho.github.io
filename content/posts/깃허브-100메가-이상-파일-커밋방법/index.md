@@ -38,20 +38,63 @@ Git Desktop만 있으면 안돼!
 - [Git LFS 설치](https://git-lfs.com/)
 
 > 🔥 ****Proshell을 관리자 권한으로 실행하여 다음 명령어 입력 (그냥 CMD도 가능)****
+> A  (LFS 파일을 커밋할 프로젝트 가장 상위에 git이 존재하는 폴더로 이동)
+>
+> ```plain text
+> cd C:\Unityprojects\UnityVamSuLikeGame
+> ```
+>
+> B
+>
+> ```plain text
+> git lfs install
+> ```
+>
+> C  (.zip확장자를 가진 모든 파일을 lfs에 포함하겠다는 뜻) (혹은 파일명을 적어도 된다)
+>
+> ```plain text
+> git lfs track "*.zip"
+>
+> or
+>
+> git lfs track "직박구리.zip"
+> ```
+>
+> D
+>
+> ```plain text
+> git add .gitattributes
+> ```
+>
+>
+>
+> CMD 내부에서 입력한 명령어는 다음과 같다
+>
+> ```python
+> cd C:\Unityprojects\UnityVamSuLikeGame
+>
+> git lfs install
+>
+> git lfs track "*.dylib"
+>
+> git add .gitattributes
+> ```
+>
+>
 
 
 ## CMD에서 다음과 같이 명령어를 입력하고 다음과 같은 멘트가 나온다면 성공…
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/1e716274-e666-45b0-947c-08ba440f7bf2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665KR6RGF3%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083825Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIHUQqA8NG5bYVEy7kdlxO%2BQmMDmWfwTXoZmLV1117%2FuWAiAX7S5W9M8935YxexhuehCrVDxL3VR%2FmenGeJ9xkRaxXCr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIM0SggDlKvHIHK25j6KtwDRk8YedIdp8BSpUUYJ2hI1SmDZ%2FF47gYob098xvilxy03aSG6myMP1hmTPeWxyHbwYdEZQVvuXmFLmF80X32cN752SQqVB2g64nV%2BZCVbla4%2FHosRb%2FgGxSGjFfXInRpSDlwpBuoEAGY0Ku2M6ZfO50nE2MN%2FdP2v8RQdu1UbBRffGzjZHith27%2FRUGif1qGDGPbW7cGJv27SH2TAfeRXq0Pao%2FGusRN%2B2Vg4y8BJTIwYvl0lRfP0YM%2BqPtsg%2BkjkMjfWFjPqITVXQjAkET4Gv9hAIuwHdwrf9rn5ZYtZXK2iI%2BnnHOu6ODYb0Vaz%2Br6%2FGEPCy44pVAD%2Bl9ueToRtwSnl2jRwnChRGyyMwHhvuhulRcFYy9YxcsdEW9bIodtkorLbJU4Ubj9LjFzSBD7RGNR5gu6f2UYJj98BtG8aXbLyHrLVU3vxA6RQqGMzdDGPwsYQJxmNq4FOnp5fcDU7m%2BbfMHEL5gcQDlJkueba0QaKxMxj%2BWQ4ojYsFhWc5g2VgVq%2Frn3isfw4BLbdr8O9BsMgH5jNwgBX0240Ck%2B54uGBA4t4HHH4CKe15cjNgVanXQv5WDpfVIfbuwOyqdETcArqk5fznqlLYkD73zzfr9WiwyyOwP0r5qc5aPww2c6HxAY6pgHHYHpHQi98bX%2BMrZ3m06aVWN64%2BCgDD6XRM4XsZ9N5qIclRFDr1tJnasHqwYGQ5bFLeKKk4aJ0g4t40%2Fu0W7jtt0N0QFvp5bYH%2FEZS0G37UX9xIe1zORot%2BmgV8StT8KEpEYkFtD36rN2hLaJTnbyp5Fx%2FgdiIltrHC97LgR0cEj4iZLXjR8waOIeTtMQjtT20aKCNsX%2FKcct6aEl1XA%2Fg21CUxgjM&X-Amz-Signature=69d653d246a3ba147626c5e1690b0ef90d4e38d6f8ed3cfab7d5a100348e3bc7&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/1e716274-e666-45b0-947c-08ba440f7bf2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466443ZRQTE%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102240Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQCEN6zmZb5Ry39t06K3sZ%2B85YOrxSDesyZeYARlOsnD%2BAIhAMr3cJcG%2F5ienUMnZR5lwxQdrNoAeoLCfC3C9IBnivKcKv8DCCoQABoMNjM3NDIzMTgzODA1IgxRsREkGvUygb7oWboq3APFnR2WlBldj1ZmilB6MtvWsVxVs1Mig1i0oFuyEzVitZqNXjCuyXgFTtSQB9s%2BMH5MnTuSjKpShgRo5715INxoXalsBoFnFoFSxfqkDKys3Yn1oVVL7oahybletcPl6HlWXGATjbZypWRNbog5v2ZQqUZS9ob3zPEq7FXEaN0Wko%2BrbTn7gAXHpZeA2QTyg40oPSHt1acb9uCaCK8DKEpt3lwXTgPs%2B9aCIvMMBbq3UUt7LajUhkvEfoDIG%2BQTRfy3zRp9NECDOjXz84bC0KUFUjqpkfkd0T9UkozQD0Fb7rW9R74RE9TVtdoTXmrMtWbcmwW%2FFMx9qaMGDfkgHRB4jYIOjkg9TcT0Bz7GzxoPC0Ul549pZiN3fQ6lg2hQJuaRzrCtTM0U6BlnMsPfa%2FCCzDVPmqca2vbzmlKCWGmFam8cAyjiAekW80u2uyMghQ%2FvWL88%2FL%2BM6lTYq8zhT0JIuox23lk%2BuFgr%2BRZqBy5HsoFV1v03P5bwCvaCJgoJch7vcxSmK1RuHqqauE3Gj9oFpIPr%2FN0%2Br25v%2BXbctxTwTThyzpRGcBE4P6tH81yVNfVu4HTi%2FUb4bulE6ZKnLDdnBoElj7mmpKQCW8tMdrrbUb2jIoFPuu9tqGxNgTCX9YfEBjqkAbFCXexnaQ6kF3dVBFB%2B%2FHMqYB4%2FMaHTY1wRXrRtfoakoDeBtU7rMw2KuibiLHV6rczxCvdxESyEEVdDnPCQonxzqGzEQR94Wj1MQQWNg9%2FfZKMABn2NgbDjWZeSDpUegQwsSGElSExVFlYuQuOjVNNNL8ax0xkXMwsURWFARqX91XJGdZ1wURyDq%2FT45J5mvEIAa0lPOajO%2B6Bf7mWfc2UeUsiM&X-Amz-Signature=0044bab6642688a6590dd03daf2f210d7824b3813a0a9dc9f3efd276d8d06512&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # 후에 Commit Error가 난 지점까지 Undo 해준다
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/5cc37d79-beda-4fdf-bb59-e20c16a9147c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665KR6RGF3%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083825Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIHUQqA8NG5bYVEy7kdlxO%2BQmMDmWfwTXoZmLV1117%2FuWAiAX7S5W9M8935YxexhuehCrVDxL3VR%2FmenGeJ9xkRaxXCr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIM0SggDlKvHIHK25j6KtwDRk8YedIdp8BSpUUYJ2hI1SmDZ%2FF47gYob098xvilxy03aSG6myMP1hmTPeWxyHbwYdEZQVvuXmFLmF80X32cN752SQqVB2g64nV%2BZCVbla4%2FHosRb%2FgGxSGjFfXInRpSDlwpBuoEAGY0Ku2M6ZfO50nE2MN%2FdP2v8RQdu1UbBRffGzjZHith27%2FRUGif1qGDGPbW7cGJv27SH2TAfeRXq0Pao%2FGusRN%2B2Vg4y8BJTIwYvl0lRfP0YM%2BqPtsg%2BkjkMjfWFjPqITVXQjAkET4Gv9hAIuwHdwrf9rn5ZYtZXK2iI%2BnnHOu6ODYb0Vaz%2Br6%2FGEPCy44pVAD%2Bl9ueToRtwSnl2jRwnChRGyyMwHhvuhulRcFYy9YxcsdEW9bIodtkorLbJU4Ubj9LjFzSBD7RGNR5gu6f2UYJj98BtG8aXbLyHrLVU3vxA6RQqGMzdDGPwsYQJxmNq4FOnp5fcDU7m%2BbfMHEL5gcQDlJkueba0QaKxMxj%2BWQ4ojYsFhWc5g2VgVq%2Frn3isfw4BLbdr8O9BsMgH5jNwgBX0240Ck%2B54uGBA4t4HHH4CKe15cjNgVanXQv5WDpfVIfbuwOyqdETcArqk5fznqlLYkD73zzfr9WiwyyOwP0r5qc5aPww2c6HxAY6pgHHYHpHQi98bX%2BMrZ3m06aVWN64%2BCgDD6XRM4XsZ9N5qIclRFDr1tJnasHqwYGQ5bFLeKKk4aJ0g4t40%2Fu0W7jtt0N0QFvp5bYH%2FEZS0G37UX9xIe1zORot%2BmgV8StT8KEpEYkFtD36rN2hLaJTnbyp5Fx%2FgdiIltrHC97LgR0cEj4iZLXjR8waOIeTtMQjtT20aKCNsX%2FKcct6aEl1XA%2Fg21CUxgjM&X-Amz-Signature=3aeb21ed043ba16a8632fd310b4befe19919b35ae56119b2af22f95b4572f824&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/5cc37d79-beda-4fdf-bb59-e20c16a9147c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466443ZRQTE%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102240Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQCEN6zmZb5Ry39t06K3sZ%2B85YOrxSDesyZeYARlOsnD%2BAIhAMr3cJcG%2F5ienUMnZR5lwxQdrNoAeoLCfC3C9IBnivKcKv8DCCoQABoMNjM3NDIzMTgzODA1IgxRsREkGvUygb7oWboq3APFnR2WlBldj1ZmilB6MtvWsVxVs1Mig1i0oFuyEzVitZqNXjCuyXgFTtSQB9s%2BMH5MnTuSjKpShgRo5715INxoXalsBoFnFoFSxfqkDKys3Yn1oVVL7oahybletcPl6HlWXGATjbZypWRNbog5v2ZQqUZS9ob3zPEq7FXEaN0Wko%2BrbTn7gAXHpZeA2QTyg40oPSHt1acb9uCaCK8DKEpt3lwXTgPs%2B9aCIvMMBbq3UUt7LajUhkvEfoDIG%2BQTRfy3zRp9NECDOjXz84bC0KUFUjqpkfkd0T9UkozQD0Fb7rW9R74RE9TVtdoTXmrMtWbcmwW%2FFMx9qaMGDfkgHRB4jYIOjkg9TcT0Bz7GzxoPC0Ul549pZiN3fQ6lg2hQJuaRzrCtTM0U6BlnMsPfa%2FCCzDVPmqca2vbzmlKCWGmFam8cAyjiAekW80u2uyMghQ%2FvWL88%2FL%2BM6lTYq8zhT0JIuox23lk%2BuFgr%2BRZqBy5HsoFV1v03P5bwCvaCJgoJch7vcxSmK1RuHqqauE3Gj9oFpIPr%2FN0%2Br25v%2BXbctxTwTThyzpRGcBE4P6tH81yVNfVu4HTi%2FUb4bulE6ZKnLDdnBoElj7mmpKQCW8tMdrrbUb2jIoFPuu9tqGxNgTCX9YfEBjqkAbFCXexnaQ6kF3dVBFB%2B%2FHMqYB4%2FMaHTY1wRXrRtfoakoDeBtU7rMw2KuibiLHV6rczxCvdxESyEEVdDnPCQonxzqGzEQR94Wj1MQQWNg9%2FfZKMABn2NgbDjWZeSDpUegQwsSGElSExVFlYuQuOjVNNNL8ax0xkXMwsURWFARqX91XJGdZ1wURyDq%2FT45J5mvEIAa0lPOajO%2B6Bf7mWfc2UeUsiM&X-Amz-Signature=cd4adf7c9118b6961aaad45951700a7188ef9c43e8239b125e630ed17891734a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 ## 그 후에  다시 Commit 및 Push를 해보면
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/25c960fb-ec66-4e64-bb23-642fe55b91e1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665KR6RGF3%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083825Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIHUQqA8NG5bYVEy7kdlxO%2BQmMDmWfwTXoZmLV1117%2FuWAiAX7S5W9M8935YxexhuehCrVDxL3VR%2FmenGeJ9xkRaxXCr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIM0SggDlKvHIHK25j6KtwDRk8YedIdp8BSpUUYJ2hI1SmDZ%2FF47gYob098xvilxy03aSG6myMP1hmTPeWxyHbwYdEZQVvuXmFLmF80X32cN752SQqVB2g64nV%2BZCVbla4%2FHosRb%2FgGxSGjFfXInRpSDlwpBuoEAGY0Ku2M6ZfO50nE2MN%2FdP2v8RQdu1UbBRffGzjZHith27%2FRUGif1qGDGPbW7cGJv27SH2TAfeRXq0Pao%2FGusRN%2B2Vg4y8BJTIwYvl0lRfP0YM%2BqPtsg%2BkjkMjfWFjPqITVXQjAkET4Gv9hAIuwHdwrf9rn5ZYtZXK2iI%2BnnHOu6ODYb0Vaz%2Br6%2FGEPCy44pVAD%2Bl9ueToRtwSnl2jRwnChRGyyMwHhvuhulRcFYy9YxcsdEW9bIodtkorLbJU4Ubj9LjFzSBD7RGNR5gu6f2UYJj98BtG8aXbLyHrLVU3vxA6RQqGMzdDGPwsYQJxmNq4FOnp5fcDU7m%2BbfMHEL5gcQDlJkueba0QaKxMxj%2BWQ4ojYsFhWc5g2VgVq%2Frn3isfw4BLbdr8O9BsMgH5jNwgBX0240Ck%2B54uGBA4t4HHH4CKe15cjNgVanXQv5WDpfVIfbuwOyqdETcArqk5fznqlLYkD73zzfr9WiwyyOwP0r5qc5aPww2c6HxAY6pgHHYHpHQi98bX%2BMrZ3m06aVWN64%2BCgDD6XRM4XsZ9N5qIclRFDr1tJnasHqwYGQ5bFLeKKk4aJ0g4t40%2Fu0W7jtt0N0QFvp5bYH%2FEZS0G37UX9xIe1zORot%2BmgV8StT8KEpEYkFtD36rN2hLaJTnbyp5Fx%2FgdiIltrHC97LgR0cEj4iZLXjR8waOIeTtMQjtT20aKCNsX%2FKcct6aEl1XA%2Fg21CUxgjM&X-Amz-Signature=ff31c7bf25e0590d39cb027fb79bca47362369ea11f9ddb89993aaf45d66ce3d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/25c960fb-ec66-4e64-bb23-642fe55b91e1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466443ZRQTE%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102240Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQCEN6zmZb5Ry39t06K3sZ%2B85YOrxSDesyZeYARlOsnD%2BAIhAMr3cJcG%2F5ienUMnZR5lwxQdrNoAeoLCfC3C9IBnivKcKv8DCCoQABoMNjM3NDIzMTgzODA1IgxRsREkGvUygb7oWboq3APFnR2WlBldj1ZmilB6MtvWsVxVs1Mig1i0oFuyEzVitZqNXjCuyXgFTtSQB9s%2BMH5MnTuSjKpShgRo5715INxoXalsBoFnFoFSxfqkDKys3Yn1oVVL7oahybletcPl6HlWXGATjbZypWRNbog5v2ZQqUZS9ob3zPEq7FXEaN0Wko%2BrbTn7gAXHpZeA2QTyg40oPSHt1acb9uCaCK8DKEpt3lwXTgPs%2B9aCIvMMBbq3UUt7LajUhkvEfoDIG%2BQTRfy3zRp9NECDOjXz84bC0KUFUjqpkfkd0T9UkozQD0Fb7rW9R74RE9TVtdoTXmrMtWbcmwW%2FFMx9qaMGDfkgHRB4jYIOjkg9TcT0Bz7GzxoPC0Ul549pZiN3fQ6lg2hQJuaRzrCtTM0U6BlnMsPfa%2FCCzDVPmqca2vbzmlKCWGmFam8cAyjiAekW80u2uyMghQ%2FvWL88%2FL%2BM6lTYq8zhT0JIuox23lk%2BuFgr%2BRZqBy5HsoFV1v03P5bwCvaCJgoJch7vcxSmK1RuHqqauE3Gj9oFpIPr%2FN0%2Br25v%2BXbctxTwTThyzpRGcBE4P6tH81yVNfVu4HTi%2FUb4bulE6ZKnLDdnBoElj7mmpKQCW8tMdrrbUb2jIoFPuu9tqGxNgTCX9YfEBjqkAbFCXexnaQ6kF3dVBFB%2B%2FHMqYB4%2FMaHTY1wRXrRtfoakoDeBtU7rMw2KuibiLHV6rczxCvdxESyEEVdDnPCQonxzqGzEQR94Wj1MQQWNg9%2FfZKMABn2NgbDjWZeSDpUegQwsSGElSExVFlYuQuOjVNNNL8ax0xkXMwsURWFARqX91XJGdZ1wURyDq%2FT45J5mvEIAa0lPOajO%2B6Bf7mWfc2UeUsiM&X-Amz-Signature=c0af1bde160c4b512218071a04e8b408ec81828033faf9e9088bbfd589c3241c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 
 

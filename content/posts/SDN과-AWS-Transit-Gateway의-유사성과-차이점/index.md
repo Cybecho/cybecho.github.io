@@ -63,13 +63,24 @@ AWS Transit Gateway는 AWS가 제공하는 서비스로, 여러 VPC(Virtual Priv
 ### 유사점 분석
 
 1. **중앙 집중식 네트워크 관리**:
+  - SDN은 중앙 컨트롤러를 통해 네트워크 트래픽을 관리하며, AWS Transit Gateway도 중앙 허브를 통해 여러 네트워크 간 연결을 관리합니다.
+  - 이는 네트워크 관리의 효율성과 가시성을 높이는 공통 목표를 가집니다.
 1. **SDN 원칙의 부분적 구현**:
+  - AWS Transit Gateway는 SD-WAN과 같은 SDN 기반 솔루션과 통합될 수 있습니다. 예를 들어, AWS Transit Gateway Connect는 SD-WAN 장치를 AWS와 연결하여 GRE(Generic Routing Encapsulation)와 BGP(Border Gateway Protocol)를 통해 동적 라우팅을 지원합니다 ([Simplify SD-WAN connectivity with AWS Transit Gateway Connect](https://aws.amazon.com/blogs/networking-and-content-delivery/simplify-sd-wan-connectivity-with-aws-transit-gateway-connect/)).
+  - 이는 SDN의 중앙 관리와 동적 라우팅 원칙을 클라우드 환경에서 구현하는 데 기여합니다.
 1. **연결성과 확장성**:
+  - SDN은 네트워크의 확장성과 유연성을 강조하며, AWS Transit Gateway도 여러 VPC와 네트워크를 연결하여 확장성을 제공합니다. 특히, AWS Cloud WAN과 통합 시 글로벌 SD-WAN 구축을 지원합니다 ([Build Global SD-WANs with AWS Cloud WAN Tunnel-less Connect](https://aws.amazon.com/blogs/networking-and-content-delivery/build-global-sd-wans-with-aws-cloud-wan-tunnel-less-connect/)).
 ### 차이점 분석
 
 1. **범위와 적용성**:
+  - SDN은 네트워크 아키텍처의 일반적 개념으로, 온프레미스, 클라우드, 하이브리드 환경 등 다양한 곳에서 적용 가능합니다. 반면, AWS Transit Gateway는 AWS 클라우드 환경에 특화되어 있으며, AWS 외부에서는 사용이 제한됩니다.
+  - 이는 AWS Transit Gateway가 SDN의 하위 집합적 도구로 작동할 수 있음을 시사합니다.
 1. **기능성**:
+  - SDN은 제어 평면과 데이터 평면의 분리를 통해 네트워크를 프로그래밍 가능하게 만듭니다. 이는 네트워크 장비를 중앙 컨트롤러로 제어하며, 동적 정책 적용이 가능합니다.
+  - AWS Transit Gateway는 주로 트래픽 라우팅에 초점을 맞추며, SDN의 전체 아키텍처를 대체하지는 않습니다. 예를 들어, AWS Transit Gateway Connect는 GRE 터널과 BGP를 지원하지만, SDN의 광범위한 프로그래밍 가능성은 제공하지 않습니다.
 1. **사용 환경**:
+  - SDN은 다양한 네트워크 환경에서 유연하게 적용될 수 있으며, 특정 클라우드 제공업체에 종속되지 않습니다. 반면, AWS Transit Gateway는 AWS 클라우드 내에서만 최적화되어 작동하며, 다른 클라우드 제공업체에서는 사용이 불가능합니다.
+  - 이는 AWS Transit Gateway가 SDN의 특정 구현에 국한된 도구임을 보여줍니다.
 ### 기술적 세부 사항
 
 AWS Transit Gateway의 특정 기능은 SDN과의 통합에서 중요한 역할을 합니다. 예를 들어, AWS Transit Gateway Connect는 SD-WAN 장치와의 연결을 단순화하며, 최대 20Gbps의 대역폭을 지원하고, BGP를 통해 동적 라우팅을 가능하게 합니다 ([Introducing AWS Transit Gateway Connect to simplify SD-WAN branch connectivity](https://aws.amazon.com/about-aws/whats-new/2020/12/introducing-aws-transit-gateway-connect-to-simplify-sd-wan-branch-connectivity/)). 또한, AWS Cloud WAN의 Tunnel-less Connect 기능은 터널 없이 BGP를 사용하여 SD-WAN 장치와 연결하며, 최대 100Gbps의 처리량을 제공합니다 ([Build Global SD-WANs with AWS Cloud WAN Tunnel-less Connect](https://aws.amazon.com/blogs/networking-and-content-delivery/build-global-sd-wans-with-aws-cloud-wan-tunnel-less-connect/)).

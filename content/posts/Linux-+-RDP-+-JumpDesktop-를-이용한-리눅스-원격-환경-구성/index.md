@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Linux-RDP-JumpDesktop-15d1bab9e3f880b3a07ee63
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f0b8d2a7-6665-4de6-9a39-f43ce1b82c75/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VMJQIUBI%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083457Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIArQ7nTalubMpmSVTab0klESQwnTjfAfe7oJF75LU81VAiBsynOteDrE4yR85e9QBFkZhOUSLiYpg60p%2BIXopylHVir%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMHb0cN5zemdCj%2FKu0KtwDJtLbqzBh1vPT7GUnihzJSP%2FeWNaXD0gQz7Ycul%2BSWhy%2Bk%2FC5aEw9OkIMbIPi8VKCxyuIAIqGfGToUDDPTNbwRcAmICfohHuB%2B6Q3KW3LA0b3Uovih71safMA%2BL66R4Xj2TybFcLp8NNCl8eCOoAn60M2a00neOGkLFAGNU9gGL6epaS%2BA%2BcrLszauFgVXTSOyIdllSo3as%2FrErugygmbJBk%2Fij8VygBf3IyeFSqPQfwo4QdE5on8xbaWK1m2OcbiEVK%2BhEKkWYE%2FqpDaBLRziU8wld0pcUfoAo%2BZFsKzEFQXuOD%2FPW4lCZ08Dn%2F1isbMMrJG5caycawJTcPr9ig2caobUVGP9GOu%2FOIVn8bB4gSxkqGsqgUWk8nHW7GWFOAhcW1DFTWtLjFG1pULi8LadqtywZBWhsRG9ocPBYzK2xFaTFX%2BfWheQcd2M48ZiJHGCCBdot4Ol2EK8m6WgUHLw52OmneGVf7FGjcC7DDILMcQYN5DPwG%2BS%2FNSphL0QHdk2mXkabk3VgOpBXXfZQ1Cxh6Jb%2F%2FHCUu%2BrmZKa9dVBS15fam8UM5XabNBfQJ6qY0lpy1Sz%2BgCLoioAJ03%2Byd4GfuE4QFFA2c%2BVRev0iZJIoV3ikY0WhP7xl8Hhmkwxs6HxAY6pgExii2njMKk1Rqv4XO3WBbyTMVZYiag16CNogVJsYz%2Ftwr1dqQQADhMEhXm9ZEPwzZxq%2BIW2CkDj%2Fg38c5vFQgJtxU84OYUDqI%2B0mU1%2FKqO8YpszXSGmfEa0GdsTjj5QWL1cbibD0eznt5n3xpR3e4XkgPktN4%2FiHYe0%2F7ZuqbMhdTeEhj1HDu%2F4hVb6mE4LcnrxAWquEjDejkGHWspx7JZd7JMkHTR&X-Amz-Signature=c1bcf50f7d01d52248a921cf35fb99c0c9be5e218255a59bc2c564c3f7c5bf06&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f0b8d2a7-6665-4de6-9a39-f43ce1b82c75/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662S3C23AE%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101718Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJGMEQCIEeTVgF6nEOniDk5xs%2FsUFb7UwzsEJpfJpcuNK0XNx5LAiA%2F4QTcIUIE3dCaRByEYn9xonkSOHC84xFJu97gctLwwyr%2FAwgqEAAaDDYzNzQyMzE4MzgwNSIMT%2BhoHY8Q3NpAcDggKtwDQFWHy4vauaK3QUdyyIbKQJu%2F5gvLFh8Mh1Gis%2BQOOM9AYbb7CYqT6fSspQlF6A5QQ1I%2FDZgjfXzOIH9sRXeZZ8FSxW6cEt3gNfQA1Su%2F6aHVHSJycvuc5BUnCc85LTQMnypfiGxmkkHzV3XmAIczq3AO6nVTnu%2FNxslVeeeUpOEfWDNpIBJZKgnUStYsuaA4u5SEjGm434AvAaVYyxXqmRZ0TD89EOG9fShG5nM01gjX4xCiBDEfGaK2UVL%2B3VeBU9qkXVl9Z8KOodEPzQ1zCTa1vgvtObMhHzkUXyyoPxrOMB%2B0yvDoTeZsM%2FVAQVHO3F4VecjvIJcljAOgdI%2B9N1NK6x2IrFMP0UTw5Y6QbCJu35QzMSVb8Z1ubYaExQuOwFdKYhtR2Ekl4ZYzh7BZegyVCkWaQnD%2FjzHE9ELnefyB%2BAt0nmLsvpgx6h0RGcXulOBRU6kh98li8XS4UY9R%2BrFYG%2F34fZJjTZ1Kaf%2Fn64NtdzqM4UnxPh0l4QGVu6bCejdMFlmJdwzLVzCK0iOntR6QyVpgyldFkypwsuzgxtAttCc9InA8KEQtHBovVgoiNKANIn38JUdxGlHj2dBqwBWXq2auDnNsgJzQC%2BuicGDjliTCzrMMu1jmPTAwnvaHxAY6pgE8nchOTacdacbUnKYdJ4jYG3JGGZ6TONMvMenKRHL%2FivBeG775UFdkt9zAv9xvX%2BOkSyAs3OB1mTd8SOKA1zKdDLEZorCYpWjOHP2pQwNE2MliBN43CZaXj6akl6W0QXAuYPcOO95m%2FNVx8f6Nyq7uajts9ngABffdVPB6kFZidlAgesa0JmaPyXlg3YmcsoCcobGdxLNaXkLTX%2Bp9UJzW3bvMOKSW&X-Amz-Signature=fe4b504135667d2c26f464e61393aff774ea5ff0b179a1cdb124844dbe43483d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # RDP를 이용한 XFCE 환경의 원격 데스크탑 구축기
 
@@ -153,6 +153,10 @@ sudo ufw reload
 
 1. **Jump Desktop**을 설치합니다 ([https://jumpdesktop.com](https://jumpdesktop.com/)).
 1. 새로운 RDP 연결을 추가하고 다음 정보를 입력합니다:
+  - **IP 주소**: 리눅스 호스트의 IP 주소
+  - **포트**: 3389
+  - **사용자 이름**: 리눅스 계정 사용자 이름
+  - **비밀번호**: 리눅스 계정 비밀번호
 1. 연결을 저장하고 접속합니다.
 ### 6.2 Windows 원격 데스크탑 설정
 

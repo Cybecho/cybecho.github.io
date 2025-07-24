@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/IBM-1961bab9e3f8805da851fe877c67eb03"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/26315cb6-5d8a-4dd9-8e5a-57e73d263ed9/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466SYDRMCWO%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083426Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJHMEUCIHjZTdPeUAdASvZh4DlBS8eNL69f17DkJCItf5zmZOm7AiEA10NWjLHwm8iqZoYjzwu6slbpywg6B0bsVv1Equw5Wzwq%2FwMIKRAAGgw2Mzc0MjMxODM4MDUiDEPNHJAg6SX%2FwCZaoSrcA5H5y%2BBHKVEvK9DjZfVq4xcGu0B1cqLs1XOAqVMeTOfC4cKTG%2Ft%2FSuSJlPJXS2uzuiniAvEa0MP4oDUy4LXrLhlz6OCOBUryL1%2BrWVJg0JTAOMulM210ZJsWycCtd1a4f3QyycfDMYtEuQ94RDTahtsdPpwlml6PWVVfwhGwhHw01JiCCQ1qkoKXVljcQf701mKGJAP00CNM7nNOFAMHqGu9ftuwlQTup9%2BNLOQmCPGYuueEyVN0%2FxUYaIH%2FNIX0rVY7sZ95aaLi3fP%2Fg1TqEM8Ci6OTmeutJhvK2%2FiLA8agfluKlpMmE3TehilVxghs%2Bmn27zW6pFkU1LLSTHGrLAaX%2BhW%2Bvl1vhvIVufZFG38p4RBhbhl78kcTv%2FWUItbtKcSJMyTn3Fod%2B0E%2FvhWC4%2BOCmwBHvIw428cNdL76jgdqtshnyupPL%2FZXrV6n1Lk5vp%2BmLToGAaS0c9t%2FMPK1gcyKB21l0RKA8aC0Z0zZJp4p0sO12KlA%2BDjQxTCoyqPt4vI4FJjpZ19SSMWVDf%2BAzJV78mTot3wehwnNKExWp5poT9Yf28yrdPJ1VtelL4tpidx6LnOGQScFkolpsr2TScr8wsOWK4MEvyNx1Ur8ha66q8EsZcN1U0HXxCdLMPjPh8QGOqUBDOvy7Uz%2Bf2DmiT%2FU8eld%2BrJy59k3HU95gyYy7gpHMYL0llYUumU6mUbKDukhcGZWKXSSv20tjI%2FHU0d6Se3lI7C17ocSX6fI4P18boMW2EKkZMbO3uv1%2FIuct0hA0CLr%2FgnN8n%2BOR3xSOywpPX2ZXCukFNOTd4SoyaCFk8XasBtGz7Muays2oII%2Bs59Fk8VTwB0oMQr3YQO7TL2ozztNB%2FzxUbHg&X-Amz-Signature=cc19ffb5f3cc86b9baa3d6da471300f17298bd0b981caf293e64de3f2f541963&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/26315cb6-5d8a-4dd9-8e5a-57e73d263ed9/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466QTVRKMGG%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101621Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJIMEYCIQCNk5mrcCzVttLbIQYeBKCL71M5aFQSa3sWH%2B9hLFl86wIhALgsIKopH%2BVd3t7VL5anCETLapmJI97r1FN2Ju0C3WVWKv8DCCoQABoMNjM3NDIzMTgzODA1IgxjmtMmBUWfqmI0ZzQq3APWk9h48Nan0ktLM1fRRImS0Hej49t%2FPjd7IBKDiItOkAlwNtkSG01GVLFxmmZmcETstAq3A%2Fm3jdrV4w6HHxATg581uyuqrgdL35OXTklpVvp4DzEB%2FIoWwK1I%2BWjIhhr8RKfQntZJbott5Ka4yMq4TGq0EpslyHXLtvnSblv11HPpQLhiRwLp8%2FQh5s6%2FB%2FiUMMOGHJuysgMkYBm99S%2Feh0BnA6mETfS3xdeq02rNwGG0A0SE8WJpL2S85jpfnJPvGyPzdfZ5aIp3T8j%2FN28CBs3k6wAdw4Wk3z%2FHPZiAlRVXZISTvU8uhSSkiyfRlmaiztVXpom2EDvGOnNsfIgmhCaHy%2F%2Fc5yh4dExi1JPXGzawhsYMUbUf4DH1BZszInhYsHHMNQ110YA7ddzlFuTpXJ2I0TrnuIqgc%2FzQguR4P0LpRDxdlV8IUYssa1RFFYiceql93HaPlMwz2ldO%2FJ%2FuIdnTC7fmZCcP5JBlfXvDg0U00%2BgVL90ubOorH%2FKfiO10rfAI9G9%2B0tbhEc3nJf9ieg5%2FgBJk0BaGT8oZ3O2kbTqS7LJVS1P%2FHbcrfGlbLZCRd2D%2BYLt%2F8GI1rBudOTzByZiqD8rnE%2BR7tBUrhBVO5ADqBdZ5VZgv9PQE2TCU9ofEBjqkAU%2BSW7Go%2B1XYfOgc6Q4ePj2b4cqh9MLDvThp1dmkC%2BYhrL7XkrNn8NxrBRlaz%2FiOlJXPOoA8Qp3D6FFp3Gn3hiIIlE67vgfdHJHvK2Iir4f2Wo%2F0gat8eMOZ%2Bc1BQ5kD7JZjxeUtEd67k6zpv9%2BccVAmEawjwTkeeE4Jk4E%2Fe5bLcIST6lClmaAEriHzF5DChT8%2B3oJ21h3PdyWMLjVkKwRWwJ7P&X-Amz-Signature=f9759be371489d0619e6def1d5e519e53c264fca01821cfbfd1fc4b82b64dd1f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 [https://www.reddit.com/r/thinkpad/comments/ondeco/how_to_swap_the_fn_ctrl_keys_on_the_sk8845_sk8835/](https://www.reddit.com/r/thinkpad/comments/ondeco/how_to_swap_the_fn_ctrl_keys_on_the_sk8845_sk8835/)
 
@@ -43,6 +43,8 @@ notion_url: "https://www.notion.so/IBM-1961bab9e3f8805da851fe877c67eb03"
 **2. 레지스트리 경로 이동:**
 
 - 다음 경로로 이동합니다:
+  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout`
+
 **3. **`**Scancode Map**`** 값 생성:**
 
 - 오른쪽 빈 공간에서 마우스 오른쪽 버튼을 클릭하고, `새로 만들기` > `이진 값`을 선택합니다.
@@ -51,6 +53,19 @@ notion_url: "https://www.notion.so/IBM-1961bab9e3f8805da851fe877c67eb03"
 
 - `Scancode Map` 값을 더블 클릭하여 편집 창을 엽니다.
 - 아래의 이진 데이터를 입력합니다:
+```plain text
+00 00 00 00 00 00 00 00
+02 00 00 00
+5B E0 1D 00
+00 00 00 00
+
+```
+
+  **데이터 설명:**
+
+  - 첫 번째 줄과 마지막 줄은 헤더와 종료를 나타내며, 고정된 값입니다.
+  - 두 번째 줄의 `02 00 00 00`은 매핑할 키의 개수 + 1을 나타냅니다. 여기서는 한 개의 키를 매핑하므로 `02`입니다.
+  - 세 번째 줄의 `5B E0 1D 00`은 왼쪽 `Ctrl` 키(`1D 00`)를 왼쪽 `Win` 키(`5B E0`)로 매핑한다는 의미입니다.
 **5. 레지스트리 편집기 종료 및 시스템 재부팅:**
 
 - 모든 작업을 완료한 후, 레지스트리 편집기를 닫고 시스템을 재부팅합니다.
@@ -79,26 +94,39 @@ notion_url: "https://www.notion.so/IBM-1961bab9e3f8805da851fe877c67eb03"
 ### 1. **BIOS 설정을 통한 Fn 키 기능 변경**
 
 - **SK-8845 키보드**는 일부 레노버/씽크패드 제품과 유사한 BIOS 설정을 지원할 수 있습니다.
+  - 부팅 시 `Del` 키 연타 → BIOS 진입 → `Advanced` 탭 → **Fn/Ctrl 키 스왑 옵션** 활성화[(출처17)](https://support.lenovo.com/bo/ko/solutions/ht074187).
+  - **주의**: 일부 모델에서는 **Win 키 직접 변경** 옵션이 없을 수 있으나, Fn 키를 Ctrl로 변경 후 추가 설정 가능[(출처16)](https://blog.naver.com/PostView.nhn?blogId=mk235&logNo=221192783459)[(출처19)](https://kr.msi.com/support/technical_details/NB_KB_Setting).
 ---
 
 ### 2. **전용 유틸리티 활용 (레노버 공식 도구)**
 
 - 레노버 제공 **키보드 설정 유틸리티** 사용:
+  - `Fn + Ctrl 키 스왑` 기능을 활성화한 후, **Ctrl 키를 Win 키로 재맵핑**하는 방식[(출처5)](https://support.lenovo.com/us/en/solutions/ht074187-how-to-swap-the-fn-function-and-ctrl-control-keyboard-keys-in-bios)[(출처20)](https://ko.aliexpress.com/item/1005001474701365.html).
+  - 유틸리티 설치 후 **키맵핑 탭**에서 대상 키 선택 → `Win 키`로 설정[(출처6)](https://support.microsoft.com/en-us/topic/how-do-i-reassign-hot-keys-for-my-keyboard-703f897c-ad72-db5d-8e64-0928873d712f).
 ---
 
 ### 3. **KeyTweak 또는 레지스트리 편집**
 
 - **KeyTweak** 프로그램으로 Fn 키를 Win 키로 재할당:
+  - 프로그램 실행 → **Fn 키 선택** → `Win 키`로 매핑 후 적용[(출처3)](https://forum.thinkpads.com/viewtopic.php?t=38326).
+  - 레지스트리 직접 편집 시 `HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout`에서 키 값 수정[(출처8)](https://stackoverflow.com/questions/48986359/identify-and-remap-fn-key-to-win-key).
 ---
 
 ### 4. **AutoHotkey 스크립트 작성**
 
 - **Fn 키를 Win 키로 변환하는 스크립트** 예시:
+```plain text
+Fn::LWin  ; Fn 키를 왼쪽 Win 키로 매핑
+
+```
+
+  - 단, **Fn 키가 하드웨어 수준에서 입력되지 않는 경우** 작동하지 않을 수 있음[(출처7)](https://www.autohotkey.com/boards/viewtopic.php?t=92676)[(출처8)](https://stackoverflow.com/questions/48986359/identify-and-remap-fn-key-to-win-key).
 ---
 
 ### 5. **키보드 하드웨어 딥스위치 확인**
 
 - 일체형 키보드의 경우 **딥스위치(DIP Switch)** 로 Fn 키 기능 변경 가능 여부 확인[(출처21)](https://brunch.co.kr/@ruseupi/88).
+  - 키보드 하단 또는 측면에 위치한 스위치 조합으로 **Win 키 활성화**.
 ---
 
 ### 요약
@@ -118,26 +146,43 @@ Fn 키가 **하드웨어/펌웨어 레벨에서 처리**되는 경우, 소프트
 ### 1. **BIOS/UEFI에서 Fn ↔ Ctrl 키 스왑 후 Ctrl을 Win 키로 재맵핑**
 
 - **Fn 키를 Ctrl 키로 먼저 변경**:
+  - BIOS 설정 진입 → `Advanced` → `Keyboard/Mouse` → **Fn and Ctrl Key Swap** 활성화[(출처39)](https://support.lenovo.com/bo/ko/solutions/ht074187).
+  - 변경 후 Ctrl 키를 소프트웨어(KeyTweak, 레지스트리)로 **Win 키로 재할당**.
+  - **장점**: 하드웨어 지원 변경으로 안정적입니다.
+  - **단점**: SK-8845 모델에 해당 BIOS 옵션이 있는지 확인이 필요합니다[(출처25)](https://www.reddit.com/r/thinkpad/comments/ondeco/how_to_swap_the_fn_ctrl_keys_on_the_sk8845_sk8835/)[(출처29)](https://www.thinkpads.com/forum/viewtopic.php?t=130672).
 ---
 
 ### 2. **키보드 DIP 스위치 활용 (하드웨어 레벨)**
 
 - **DIP 스위치로 Fn 키 동작 변경**:
+  - 키보드 하단 또는 측면에 위치한 **DIP 스위치** 조합을 통해 Fn 키 기능을 Win 키로 변경.
+  - 예: 시노비 키보드의 경우 DIP 스위치로 Fn/Ctrl 스왑 후 추가 설정 가능.
+  - **확인 방법**: 제품 매뉴얼 또는 제조사 지원 문의.
 ---
 
 ### 3. **외부 컨트롤러 또는 프로그래머블 키보드 활용**
 
 - **커스텀 PCB 또는 컨트롤러 장착**:
+  - 아두이노, QMK/VIA 지원 컨트롤러를 키보드에 연결해 **Fn 키 입력을 Win 키로 변환**.
+  - **전제 조건**: 키보드 분해 및 납땜 기술 필요.
 ---
 
 ### 4. **Fn 키 조합 + 다른 키를 Win 키로 대체**
 
 - **AutoHotkey로 Fn 조합 키 설정**:
+```plain text
+Fn & LCtrl::LWin  ; Fn + LCtrl을 Win 키로 매핑
+
+```
+
+  - **한계**: Fn 키 단독 입력은 여전히 불가능하며, 반드시 **다른 키와 조합**해야 합니다.
 ---
 
 ### 5. **물리적 하드웨어 개조 (극단적 방법)**
 
 - **키보드 회로판 직접 수정**:
+  - Fn 키와 Win 키의 **전기적 신호 라인을 교체**합니다.
+  - **위험성**: 키보드 고장 가능성이 높으며, 전문 지식과 장비 필요[(출처34)](https://lobste.rs/s/nl96zm/what_keyboards_do_you_use_do_you_program).
 ---
 
 ### **요약: 방법별 비교**

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/1-1bf1bab9e3f88071a376e0e615a54f00"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/51155313-3b29-489e-b635-b6eb1d3fd812/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YRIHXT5K%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083340Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJHMEUCIGXsNEBE4meRSDkLk7wa7mivs38SIU3Ure%2F%2FmhO3fTKfAiEAsf9%2FFziJ0%2Fne5imnpwI1%2FnKd%2FxuvBOVvb9BMesU6uDQq%2FwMIKRAAGgw2Mzc0MjMxODM4MDUiDKAtb4TtXuZ7dsmnsCrcA7BdG6pwmQVx3%2F4NNACJsmb9hsvSOzkYqjEOgAACs2f84egErk8CLQzboEFeKDpLgRjRGvyPGoY1BzdG2abobYopo9kd3GgMyrH97RzLZRfkVXWXf1DO0VZd%2FMX2tZU8j1HfjPwKXdpKQyTqQ0DY%2BUwZRFgI0ru%2FMkSTtYfllRUEz8KAGpWaII5AXM9%2Bwq0kOslCFUp%2BeU2L6tCNqRe%2Bvjdk3IM%2BkrsH4X4m6JwZ%2BOqnvBl3xTXCjIxI9FJxDn%2BQ53%2BRJBeKwHLa5Bs%2FSO8zMIak6sPWXPhRT3V8gtsrc8Mu5BRwvSsjMUJG3vB%2F14A0excjO%2BlMx7ZmzBypK8ncyg9WWceCGrPTW6sheceMLuohRZ612cTwNh4t5ULIEs77lLJdnqMkrUd2lySDFfJe1J5Yzszd0i3pfBrEx7IUYaItU9%2Bj2SU1YncRRIjW9WLWRjG%2Bvz%2F2gTajAtq9YFfQrf2%2F7kMTijB0ZcpBv3KpHsC6k5XQpBaDfpAj50iylCHEpG64PNd8NnXGkzGmSjesQz9mZHoi8JjwFyMNExD8xjDXnDBTwFzlR2FYVO%2FF5x0GXWrtC1rcRBw%2FThPaIgzANPBzU6wNACHaJTu1v9mOziQcfdbOfRIhxnX9VK1LMLnPh8QGOqUBp6gg1IKFdXXbWWK%2BzcsihVxd5rOj4bLqm7HAhygu4jihwlJBQJmAYRzdgRPYtcLrG5Qj4iTyKzzFVo4AANSTDgNutHkQahTgHEXVM4aH1naiLNla3Ep05pfdDZJ5wzHhIyAiV%2BzU%2F%2BjyfqBv%2FAwb0REkitzIQefQrDxycXd0eZ1x1XpEe0aYkv5m2De%2FisrKO%2FrUVGWaodfvzhPL7ZO6X1iTg7aG&X-Amz-Signature=19a14897a71d0d0281de7a33269706fe6bca053979e180114b9dd896c48a89ae&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/51155313-3b29-489e-b635-b6eb1d3fd812/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4666TXPI6XZ%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101457Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQDbeErFCdDpXS3GVUMVxtvGpcqnkt4adDJnvdCZPJHoHwIgUlat0mSA7Ov2d8Gz3ufBZFNIY7AYe%2Fn8TUiKa%2Fk6yv0q%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDKXNccckoHZsCzSWiyrcA0V1G4WRXxl9oeUdhu8GsK%2Flu151CoqlW6jvwrGc%2BGFKz6nALsPhZWEhpAYNK2k4jtf56MFUaNGpl%2Bz3bttH%2BrQFKDWisWoLJvtavSWkyhkTdmjC8XPWZnUEb1KTDUIQWFERIv6U039nB5mEATcOuqcPZcx1dc%2FPAAcMSc3CNDNPX69mjXUQ8fvLMim14JfzTpLX%2F2AgYIkzGU7v1opbpoN18L7k8eRBZWjiaUcp9kIEB%2FOnyf%2BkpGW1BRCGnD6cktvPkNPJvduLUN2FKxXAGfruT%2Fl3NZ5pWe0biczsVZ9LfycQFwzcnaeUXT%2BNATlPiv%2Fl%2F4NXuZJI6ScarLm%2FlGrAFu1leQ6DdqcTZN8Be4UIwpWr0%2BeR30sM0ZBpbzq3lWiJ7oVUThcWpoX2aEuAK%2Bf0c2Ze6RydtcL1E6lWWFA2k%2BkXsraBY3uRuQndPq45xoZWSfNeexXEt1qXZiGhqoLmmgICyh%2FkdLUrUQirlJuNcU7KW9CemeFkCTVobgrKyz3KVZwfGXzSE95paaIxbOIYvppah%2FAts%2FC4mf9G%2BOncsuTTwiX3Uw2fZrwrdWHxEyFuQ3YB4XA093I6roRpM9u6gfWxzyDggbF23MR%2BYQWd%2Fd8tyUNmGLlC6C%2F%2BMLz2h8QGOqUBTZvcwR5rY%2BYs7aRHWMdk2znK7oJxnFxK%2FLMerMcfGke2wsYNixidhq1wgDz9Y%2F0JU3Pi%2B10n5cCzwx%2FlbTvgeDppYlG7FhkGGE1Z2OCdxsPDHdiL5sUuyiCZ5NlYX8y5OASh2MZPoqWrHF%2BxBunWIqd1%2BvUd1uA71RubeAF%2FqHyTnM3F2y%2BJVI4tSad3pr8S8C9MvDlrQTOK90Jw3qeKL%2BEzAfxh&X-Amz-Signature=f44372dbe324ce321591a8b42caf8b66fee977f3656311ce2583c2d6e70960f7&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ```plain text
 서양과 동양을 가르는 경계는 어디서 오는가? 
@@ -141,6 +141,19 @@ CS를 전공한 분들이라면 공감하겠지만, 생각보다 CS에는 객체
 어쨌든 동양의 특성을 설명하며 부가적으로 철학적 논의를 설명하든, 불교의 이야기를 예시로 설명하든, 결과적으로 동양의 윤회 사상과 숲의 종교관이 우리에게 건네는 메시지는 한결같다. **“모든 것은 돌고 돌아 다시 만난다.”** 자연의 사계절처럼 우리의 삶도 흘러가 다시 돌아오고, 오늘 피어난 꽃은 언젠가 다른 모습으로 또 피어난다. 이러한 순환의 관점을 통해 동양 문화권 사람들은 **생명을 바라보는 깊은 공경심**과 **겸손한 태도**를 배워왔다. 
 
 # 사막의 종교 - 선과 악의 명확한 구분
+
+<details>
+<summary>**해당 챕터 결론 스포일러 (토글 열기)**</summary>
+
+```plain text
+출애굽기의 사례처럼 유럽인들의 대이동 또한 환경적 요인과 생존의 필연성 때문에 시작되었고, 그 과정에서 강력한 집단 정체성과 극단적 신앙적·사상적 가치가 형성되었다. 이것이 바로 유럽인들의 독특한 역사적, 문화적 특성의 근본을 이루게 된 것이다.
+
+지금의 유럽인들의 기원은 메소포타미아와 중앙아시아에서 시작되었으며, 그들은 환경적 요인과 생존의 필요성에 따라 끊임없는 대규모 이동을 거쳐 현재 유럽 대륙에 정착하게 되었다.
+
+이러한 민족 대이동 과정은 출애굽기의 이야기처럼 극단적인 생존 상황에서 강력한 단결과 명확한 선과 악의 구분을 필연적으로 요구했고, 그 결과 유럽인들 특유의 명확하고 극단적인 가치관과 정체성이 형성된 것이 아닐까?
+```
+
+</details>
 
 그렇다면, 서양의 `천국 아니면 지옥’ 과 같은 흑백논리적 세계관 형성은 과연 어디에서 기인했을까?
 

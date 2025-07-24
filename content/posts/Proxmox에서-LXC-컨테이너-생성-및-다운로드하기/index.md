@@ -29,9 +29,35 @@ LXC(Linux Containers)에 대해 간단히 설명하자면, 이는 호스트 OS �
 pveam 사용법을 간단히 알려드릴게요:
 
 1. 이미지 목록 업데이트:
+```plain text
+pveam update
+```
+
+  이 명령어로 최신 이미지 목록을 받아올 수 있습니다.
+
 1. 사용 가능한 이미지 확인:
+```plain text
+pveam available
+```
+
+  특정 카테고리만 보고 싶다면 --section 옵션을 쓰세요. 예를 들어:
+
+```plain text
+pveam available --section system
+```
+
 1. 이미지 다운로드:
+```plain text
+pveam download local ubuntu-20.04-standard_20.04-1_amd64.tar.gz
+```
+
+  이렇게 하면 Ubuntu 20.04 이미지를 local 스토리지에 받아옵니다.
+
 1. 다운로드된 이미지 목록 보기:
+```plain text
+pveam list local
+```
+
 이렇게 하면 LXC 컨테이너를 위한 기본 준비는 끝납니다. 이제 이 이미지들을 이용해 실제 컨테이너를 생성하고 관리할 수 있게 되었네요!
 
 ---

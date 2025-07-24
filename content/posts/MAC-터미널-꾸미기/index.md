@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-63e097ada26544faaf8a4fa0267323b8"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/241098b0-b934-4c4b-b6d5-6273fd53c0be/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662W53WJVC%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083804Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJHMEUCIQCok5pnvlLlkRUqXc494nZqsx3eqBou8q%2By6moOmY3krQIgF%2Bt0AYERQ6NjD%2BFUx5R%2Ft5LtYB%2BZhYTDQ6nFvjTa9Xoq%2FwMIKRAAGgw2Mzc0MjMxODM4MDUiDABBuHX4ZefNo0YKuSrcA%2BXnDFL9bJTeUq0O6BRYy8Z0ol5NnejQaTDf%2ByADf73qTiJwd4UuLAWMv%2B3h3C0WOgYIgELR5%2F%2F7PDO5VFyzrHvLBTncVPeH86q4dQElio2f0oHUUufXqhM2p4WTejmwZXC7rnKr01qgSOV95rbXK2L1TEMehmLQn2uQeV3l5MSEVBsQjRfLYyfo3XBxRUsb8SnScIgk98euNGXDW3nBYvKlhhWx10rDmuT05%2FdOErzbgcIfkYXeH5yEx2fdnh3cnf1Rz4M1FCTKRRjT4VC7MXW7DKvQ5eGevx6AW4A%2FfLofXieIJZ6rc3HSnrYtMf3Jkh0kkoQICGZUFuDCBZC0U3VxLXNKprPcU6t0CO7gfQvNSv5l9IC8II9PyaNsQaxIZtOUrw7yuccNdRlUL0sIKyTvC3mbndxq%2FZxsiEJppAxq3Is%2BprWj73B4P9%2BImhqf0ViIJU1oVtV8K4YSdFYhTIVCCoScCixbnr2rPFKZiMvRds%2B0cphMYR0pQ8rMa1L37aNyECf0RNcRF5OQ60WpDYQzKI8LxL8wDGS2jKIvSdHp9W%2F7QmWpzUl3LZ3an%2Be5sbWRcwmRnVl87IAklwVemMxnuiXqDppJelLitb4jFQ1pz7IHs2Tczx4Lluz3MMbOh8QGOqUBucrX3znofVGby696KvSZbW%2Fz8FHZ29VG1gbvNzdnisYOEO32eh6Q1se01ZJhGQEXfu0K37pVMCpi3Ok9HBXdJzxSYPOMOwD5krDITUdNu4K0rVasLNtxxIqMuinH3PBzoSBxtgEWJcwzWWwbzjm0R6hEwArXHFxVf0AputBojiIN%2BHN9NB1iXiAYMg5CyARmdeAuvmEG%2BvO49jC8u1nsrryCqXF%2B&X-Amz-Signature=58019031ed74b791e2524af322421b2f0b68e2bb4f4e5970e07efbead4a19639&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/241098b0-b934-4c4b-b6d5-6273fd53c0be/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4667CN7NLI7%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102125Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQCrAgdVxfSJfWogOUEUan134aS%2FR47ii%2BMl71Ctd2Z0ZQIgK95VWnx%2B8FG2wA1fBdTa8l%2Ft68guycvwrM3g%2Bcqk9bgq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDBHpMSyOjBkTtVfnayrcA5vmY4zpLYLAq5mj%2FGiSwQ3koWPFCGXkdTL0CR6FI3FsXj010oIVauUKZ62uU8b1YAbT%2BlLdPvTaIKaPqOtDzjH4Q56Pj7c5azh%2BjIzMnQSD83RyMhAp1v5h7gKui7bfoi3BfjtEXftSFINWfhO4QjmYvl3BS5GXWndlyuMTnVlU31IUwIta91jN1Pp6z%2BK4PjUaBITdQxqjdUo4VrrpKQS9ile1SvgI1iS%2BlqZ0AWFiPU8khsFIZOl5sLk63LmJRj51lYHr%2FijBItMIP8BQ0z3P0Z8%2F9N9Uokrrz%2BBajvbzW7VjZvAUhgDOndbhqLX%2BqqpAKw3BaDTMz%2B6fUiwfysks3lzPOYXrpPEEuTmxr62aoTFbVOIHey2A5chs5xlLZHkASqCly7bJvAxP0cHR30%2B3vbBsMquaoQMq4ff4VqnXDJnpz5eOw8iWvwsGy1ppMlrsSekDD%2BFK4dnamuPYCayZFM3jJgtlCWyonDQFFs4r%2FXn24MlMciwNw%2Bqm%2F1rWVC%2F97J8fCQN7ktsNxL1QGPctRMQImQLVCb8Svbuj%2BfAETevv4pcl9s%2FaZ%2FEKB6jwNM3Mmz5RJWYZSc1o4zYii9n5n%2BQ257905ZlHnJvVvzq%2F6pf9AEPbDz%2FtwiSBMJb2h8QGOqUB20tiUtH7O4F1P%2BqouanNTKBsfc8Wmxi705ZF0656oZitH8lFcrUyTr7tYbNL6Di6Jrh7C6P8XKE8ut%2BGShxLV960DI8k7leI7ixpFzCySQViOmRuaITsu%2FiG7fgFLCeVrsWHPBn98FquQoPIt0Y5TJ0Dtt1EDJXfas27ZO11R2OzREf8z5Poj7CWgnsfA2tGzUgT%2F3JJkJXafcfDIdwumbDM6XjX&X-Amz-Signature=cf072ee06941b4feb96cec6ca87d01eb980a39587fce0dd0797d532a44b0d5b5&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🔗 [https://velog.io/@saemsol/Oh-My-Zsh](https://velog.io/@saemsol/Oh-My-Zsh)
 
@@ -124,11 +124,15 @@ git clone https://github.com/powerline/fonts.git --depth=1
 2️⃣ `#install` 부분 진행하기
 
 - 이전단계가 완료되면, `cd fonts` 를 입력해줍니다.
+![Image](https://velog.velcdn.com/images%2Fsaemsol%2Fpost%2F4c476910-035a-43ce-ac35-4d90cd079250%2Fimage.png)
+
 - 완료되면 이제 초록색 부분이 생기는데, 이어서 `./install.sh` 를 입력해줍니다.
 3️⃣ `# clean-up a bit` 부분 진행하기
 
 - `cd ..` 를 입력해줍니다.
 - 이어서 `rm -rf fonts` 도 입력해줍니다.
+![Image](https://velog.velcdn.com/images%2Fsaemsol%2Fpost%2F1c10f889-e530-4d68-abab-1deb72c07a52%2Fimage.png)
+
 ### ④ 위에서 설치한 폰트 적용
 
 설치한 폰트를 적용시키기 위해 `iTrem2` > `Preferences...` 로 들어간다.
@@ -140,11 +144,17 @@ git clone https://github.com/powerline/fonts.git --depth=1
 `iTerm` → `Preferences` → `Profiles` → `Text` → `Font` 로 이동한다!
 
 - Font 를 **Source Code Pro for Powerline** 로 설정해준다!
+![Image](https://velog.velcdn.com/images%2Fsaemsol%2Fpost%2F581294d7-80dd-4a6b-838d-7676be1acf46%2Fimage.png)
+
 - 그럼이제 물음표 박스도 사라지고, 모양도 조금 비슷해진다.
+![Image](https://velog.velcdn.com/images%2Fsaemsol%2Fpost%2F5b037801-d4b2-4d09-abc4-dee38fcfccde%2Fimage.png)
+
 ### ⑤ 색상 테마 변경
 
 - 이번에는 다시 `iTerm` → `Preferences` → `Profiles` → `Colors` 로 이동한다.
 - 그리고 하단의 `**Color Presets...**` 를 변경해주거나, 색상을 변경시켜준다.
+![Image](https://velog.velcdn.com/images%2Fsaemsol%2Fpost%2F58cd772a-f40f-4262-9663-1fbddbe219f0%2Fimage.png)
+
 # 3. 완성 🥳
 
 ![Image](https://velog.velcdn.com/images%2Fsaemsol%2Fpost%2Fd639201e-315c-429c-9647-babfc2682421%2Fimage.png)
@@ -158,6 +168,8 @@ git clone https://github.com/powerline/fonts.git --depth=1
 ✨ **VSC 터미널에서도 폰트를 변경**해줘야한다!
 
 - `setting` 에서`"terminal.integrated.fontFamily": "Source Code Pro for Powerline",`를 붙여넣어준다.
+![Image](https://velog.velcdn.com/images%2Fsaemsol%2Fpost%2F1dc08f5e-21a6-49a1-bf10-1069f318072e%2Fimage.png)
+
 # 5. Syntax Highlight 적용
 
 명령어에 **하이라이트**가 된다! ✨

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Google-Pixel-1-80-f36d494bd65848dcaad0da5de26
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f76881f6-006b-47a3-b913-e07e1a043609/Untitled.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664F6QNT4A%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083526Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJHMEUCIFsXeiP9%2BuggYaJjFH9%2F%2FYQDJxzX9kqf9209oXU02wAYAiEAzin5k6Yxg2h6tTWbE3mbZeVJyWsVlCGU0WrK1fiitiwq%2FwMIKRAAGgw2Mzc0MjMxODM4MDUiDKHmSqpjYSlq7qcDsyrcA4%2BrVyHQbzZcfd9ar%2BL49DVL1apZxC7CdI3j%2FLzu6Noz%2FZiIpTMXf2VqRKINlhstwGhEVjccMPQUWch%2By1wm7vTMf%2BfVmO1oO39zPkrczvadrYKTs21k0NbCXNcKypn18K1lQDPUd2KBU3fJEMOZ6ZMeBUMLKCmX0UJbLE3Kh8nXqiN9z7XCF3tKk7MJteC69q8qqew52O8JfbBjB9aPfC7NoPW6TSC4HpgO9JPzne5VA80CaYZm1vsYfg90L%2FeO2JMwcnfVDft1i%2BRQN2y9FjiCsHbVFuL4CRXnWgrPi4YOM6d8oBHoJ2vjkOykNWdg2XQBM8YXLZCxoddua8em4zFxGK0A8jJQ8jzJioh7143HuBuO9T2E2Zdoh75FiWAu2DvUpz%2BvraqMO3yM7TVn90RVe16CjKh3n%2BAqF03yquLhyg37Mt02bRvCD8sUngUTD9B%2FgOfXYgZ7dyyiPptn8IPRI0jnHc9BjmUVeHAq6kmh2neI5P8IEe9tVZdb3ha%2BtlBYonP1tF%2FkeaZUkh3xgJTGPUY8G7ccbUQ1Fp2i3M8bz3Hju7JESSRHE5Db1BmOhj79IzQ5bTg1hY8LH6svhGwtx7a42EF7wfnW3HNl068SbjzQ6wMe92xPp%2BqsMKHQh8QGOqUB61R04C%2B2dP1IPyMfRzMupAsRCQhnczwf9lPp7XzMXBNffbt%2Bzd5K8tEXpIQzMYR6ucfDtuVF3RfQp1ZFnzgX1T4A4B24WkUeeFc6rRkktKxhxR%2FS9zUN6Ij1iZY8ITFDQFfnCWFZUo1dc%2FI5XjzUG5JgyDzdLjkfW10kM6sX%2BuEcUM5SELeherW5BPtoO3YrT9lmbaY9tNLqd6EXaZPzp%2FRDFQE%2F&X-Amz-Signature=78eca97010bfb83aaebc450b0b64575b6896007dffd4bf699930a7c4a26e96d6&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f76881f6-006b-47a3-b913-e07e1a043609/Untitled.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4663G2PJ5DL%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101800Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIH7vK%2FXuZqxFaPA7ZPgHCf7OXw%2FepJMCe7x5OiTIve3nAiEA2ZdokHFSeXnA6J2a109LLKzz8Xr6%2FxCx42ZcSChK4%2BUq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDHqb5xuQiK8yT7NffSrcA2TXx55vbUj8o0FWdWmZu2Q9Wxspy5QRmetcwPfFEwDKPH4Vsg99Zatbfn%2BNboAB%2B74dHP9w6UWtzvJbsAyGwsNK894GWHa7JfY%2FOZkWMdb9OwljnMvWLci05QlqbW%2FH%2F0%2FQ6C3NCSPWfxHWJLy9OSNbKiuVgJsRhu0OGsSW%2Fz2%2FOqniDBuIYhXtMpQIkluQFdxvyAA07OlcC4bnA%2Fouxh7n%2FdCCmHfrJSL2vZPZCnBHo9EFUe%2BS1GBOgiXTzsdZ9piW7ygpBYqZfK14NooUrBEw2oXniJsUevrfhWZWV5NE5HpupVXc0vukD%2BNsllYqsl0ko5v%2BzBDt0DPAH9IA4f8rEYNYI2Wpo4nrAyUKmJae8q5HlvKpKlsXiJ5yzWmMROEKa4gfxqKwitcdPnSn20zKB7Yx9uUOnAED8SSARq%2FHhq%2F8Pcd5g3exxe21Rz6OGU2lAG1DNakJ1Z3C3if5iJQ8Zbtca%2BLVfmoKDwRzH4oCbz3J2fU0zEkM23SC2Mf2nglfpNyNn1Lg1Im1E2EpIei5mkvBRGtd0%2BPLX3Zr0FxG70Kp38Jjy%2B0iJ5SBCokRGhhY%2FkOEeUDGVNi4G6d6FptSsueJxvawU1KNg0TQhRa9j%2FAsp9wQjLBErfebMMn2h8QGOqUBUvfGqzefa6aX9Wxzxftn%2FAd0gClTVv4A%2BSMCveejHmqwC6uJ%2BnJLzfhFbfiE9k6%2BD%2B1%2BdYbMAKSstPX8jpoQWSXC%2FnE%2Fj034rrcJrihR8Z%2BQxTqeLzymCx1NtP50KSRBLvslbadL753wFzDM%2FY8d2IMtz6%2BXcHkSjAHVbh8Q4tk5qB84dImcL45Sgd7RZQDTIlf2BENdlMnWsQ8jVergyasQycoE&X-Amz-Signature=c27199bad3ae3d443fec5653b90a7efd406440db35d634c6d909891612dd53dd&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 # **Tasker + 스마트 플러그**
 
@@ -57,6 +57,9 @@ IFTTT를 사용하여 AccuBattery 알림을 트리거로 스마트 플러그를 
 
 1. IFTTT 앱을 설치하고 계정을 만듭니다.
 1. 새로운 Applet을 만듭니다:
+  - This: "Android Device" 선택 후 "Notification received from a specific app" 선택
+  - 앱 선택: AccuBattery
+  - 알림 텍스트: "80%" (AccuBattery 알림 텍스트에 맞게 설정)
 1. That: "Smart Plug" 선택 후 "Turn off" 또는 "Power off" 선택 (스마트 플러그 브랜드에 따라 다름)
 ### 3. 스마트 플러그 설정
 
@@ -70,7 +73,12 @@ Tasker를 사용하여 AccuBattery 알림을 감지하고 IFTTT를 트리거합�
 
 1. Tasker 앱을 설치하고 엽니다.
 1. 새로운 프로파일을 만듭니다:
+  - Event: "Notification" 선택
+  - Owner Application: AccuBattery 선택
+  - Title: "80%" (AccuBattery 알림 제목에 맞게 설정)
 1. 새로운 작업을 만듭니다:
+  - Plugin: IFTTT 선택
+  - Action: "Turn off smart plug" (IFTTT에서 설정한 Applet과 일치)
 ## 작동 원리
 
 배터리 충전 제한 시스템의 작동 원리는 다음과 같습니다:

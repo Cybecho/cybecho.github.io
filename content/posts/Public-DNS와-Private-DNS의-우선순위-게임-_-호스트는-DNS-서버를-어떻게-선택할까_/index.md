@@ -16,9 +16,12 @@ notion_url: "https://www.notion.so/Public-DNS-Private-DNS-DNS-1bf1bab9e3f8805cae
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/080f5de4-64db-44ca-b230-37ec5438ee50/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662EKSMYMH%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083345Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIEcWikf4lWK1S9gyT4wuAaAxFDp4tOCFNOmhyRD84aX3AiB2%2FjXnXrv7LO%2BaSPc2WnOUBPuKz3zrALneJt7yxU6jKCr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMTui1hqFrgTRjErMwKtwDbDtdzwBIgnCVkj99lwqYBKv%2FM%2B3BkXxOS6iPPxPtVd%2BrIR0qZhOax9QOdG%2BG9hvJlKMRWJF%2FhC4zm%2B2RYbhXY0ymEe1GTXkwboeuLXIYaGaCWlJwbW7FOpWpUOkQNl7MeamED9au0yC0C9TV66chVl0PuPviMlBkvipFoxzLccO6QO%2FMJZ9OR1hnnlSEAxK590B%2BbfJpDSS21DXkumLLW2yXNg3%2BA6gVUQZdd0MRZkHChTOz3CXQrSZKeYYWJ0UHrs1lOVf0Bq8Ql3MGUyjUzLQk1ok%2FseE8R%2FYa%2BxFazQa%2FK7SNNSB8w%2Fa1rjI1N4g4%2Fau%2FW9XdvFBN8d3%2Bv322stu3sYBQJHTbCcq0%2FtFVJWOtB%2BAFeDAijOSv3FnscDPPVvbThQPz%2FZuPFw64jzO0yBKSukqvddFnRKZ5dZnERYa1yzizJP6KQQOX%2F8h51mJjylFpv%2Bv59jT6tviBVTRyQR33zYwYSbjyDI4OCYMMwbmHTxEHSGU81I4chDozrCchnnue5PG1LrrvAq35byqJLMkoMT6J4bqhX3mSk37KNN%2BM9wk310YB3v4usstKy9t8nARQg6nJ9R8DGp7cSJBpI7iU5wdybljMIhde1bmWADmvlfT11EoAXTsRqdcwiM%2BHxAY6pgFSSbs6z0ByROEfrh1XSrnTSKTbYdssgcTDLqFyh4i0VjyWVO7S6qFAYlkrJ0kWkvlfSYGJWUnFOK%2BPVzvX80%2FdRdybHsgisJlsjcpkLLltgM4PxOqiwt%2FCzEdqjJNp98%2BT%2FI%2F7v1TteVEoz%2FWhT%2FiFW3ml3wNU1nbMLDelcwHQhLBL2A9lkLhFqzT4GM%2FAdn6u1VZWljXbyjxylcDgAYzY1JHTBdt5&X-Amz-Signature=966183e88f515583eca546286830d6aa13c77257cc4708d342044729993c776c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/080f5de4-64db-44ca-b230-37ec5438ee50/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466UGEV7TK2%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101503Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIBLswyjzNZbagX03HDhSQMHdP3yoNWPPZbKk5CcjsMiAAiEAlhDAWVQq4hIJOfA1XltvrHre%2BrlnTK2nh0CqTApZZKsq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDGAh%2FVuqitaWlHhH%2BSrcA%2Fo9NyXXTxpxcT5Q57HKR0PiGFq5F8V%2Fd0RWEtUub67RsxJR5ubJOgTcTm5ELoOOugTuDA2ybsjm%2BwvybeES1qo4xExU64cJom%2Fy2UVekN3FgcE4XYjYU2HYSLLWJjDsRbRfSbIlgIepUm6tMqX%2FY%2BGGzlptFHocCU%2BE8vRHkKa3dM3mRNsCVHwiZA1xcNgsFFscskIx4LTWeImbnqTa9rrtAaxv1okYfpVJZm3OIttqpfIwiEBhf7Hf5NiG9%2FOs0KnMsI%2FKqab2GdaZdOhkjiBa55F0HPJgPVNbMhvOASV3NevbjVFJLXXIOOXQFk3LMl1Uov25ad%2BMDztCAx2fyMnp6qVWzRb6DA6Pkt1o5hVBOaRQztreElmRJgesW3r1sDhMw7Vaop7xenTMLY5KYlTE85cxn6aKgCGWIexrn9YqbrNjisouUrs%2F9MdQTNnxkmJq1Ura03DgmAPY3z%2B%2B0dPfecLd9pQrk5wUPn6wfQ7u5k0SNR%2FqS9b8MG%2Ffu1cHbzPLEyQeVBVzNS4IIWK52SsM%2F%2B5GgXGoW7Y9bHYK%2BmRmf%2F3OSgkLwOipVvgJhttUGJNM9h0L4h7mmU9EaH5k0eCJLdFIEh8P0b%2BvVhJLbtuSMdVtR%2Bc76aaoENAvMOL1h8QGOqUBBizHJbxl11GKgijpQ8n6iys2vXsjB2DTEB%2BFK1J6bBN58UNx7BiB2u%2B2WVkUoO8UhNN3sNwv2%2FAK8yYBHX5AJOodSwvD7ldXIc33TL%2BP0VieZu8ioRNBq7chU%2F8VU%2FHVF%2B0CN4vk4YLpFFF6a8r3tTHruD50oGRgn4K6SH3z4HcmsCwS8olbNfXVyNyRxIVG9t%2F9MoD6prgPXHloIJoDNw9IHIVf&X-Amz-Signature=cf63196c1718177bf60c916e1613367ef1bdfb021e567ac9e1d8154c11288a55&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 > 💡 **목차**
+> ---
+>
+>
 
 # DNS 동작 방식을 직접 이해해 봅시다!
 
@@ -44,8 +47,15 @@ DNS는 웹사이트 주소(예: google.com)를 컴퓨터가 이해할 수 있는
 이번 문제에서는 Public DNS와 Private DNS가 함께 사용되는 환경에서, 호스트는 어떤 DNS 서버를 먼저 참조하는지 확인하는 것이 핵심입니다. 아래와 같은 환경을 가정합니다.
 
 1. **윈도우 VM:** 기본 DNS 서버로 우분투 서버1을 사용합니다. 
+  - (윈도우든, 우분투 데스크탑이든 상관 없습니다)
 1. **우분투 서버1:**
+  - 기본 DNS 서버로 우분투 서버2(Public DNS)를 사용합니다.
+  - Apache 웹 서버가 설치되어 있습니다.
+  - 내부 DNS 서버(bind)가 설치되어 있지만, 존 파일은 설정되어 있지 않고, naver.com 또는 google.com에 대한 응답만 하도록 설정되어 있습니다.
 1. **우분투 서버2:**
+  - Private DNS 서버(컨테이너 기반)로 동작합니다.
+  - Nginx 웹 서버가 설치되어 있습니다.
+  - 존 파일 정보를 가지고 있습니다.
 이 상황에서 윈도우 VM이 특정 도메인에 접속하려고 할 때, 어떤 DNS 서버를 거쳐 최종 IP 주소를 얻게 되는지, 각 서버의 역할은 무엇인지 이해하는 것이 중요합니다.
 
 
@@ -80,6 +90,12 @@ flowchart LR
 - **우분투 서버 1 (중간 서버 & 웹 서버):** 윈도우 VM의 DNS 서버 역할을 하며, 자체 DNS 서버 (bind)가 특정 도메인 (naver.com, google.com)에 대해서만 응답하도록 설정되어 있습니다. 만약 요청된 도메인이 자체적으로 응답할 수 없으면 우분투 서버 2로 쿼리를 전달합니다. Apache 웹 서버도 호스팅합니다.
 - **우분투 서버 2 (Public DNS & 웹 서버):** Private DNS 서버로, 전체 존 파일 정보를 가지고 있으며, 외부 DNS 요청에 응답합니다. Nginx 웹 서버도 호스팅합니다.
 - **흐름:**
+  1. 윈도우 VM이 특정 도메인에 대한 IP 주소를 요청합니다.
+  1. 요청은 우분투 서버 1의 DNS 서버로 전달됩니다.
+  1. 우분투 서버 1의 DNS 서버가 해당 도메인에 대한 정보를 가지고 있지 않으면 우분투 서버 2로 쿼리를 전달합니다.
+  1. 우분투 서버 2 (Private DNS)가 존 파일 정보를 기반으로 IP 주소를 찾아 응답합니다.
+  1. 우분투 서버 1은 응답을 윈도우 VM에 전달합니다.
+  1. 윈도우 VM은 얻은 IP 주소를 사용하여 해당 웹 서버에 접속합니다.
 
 ### **그래서, 이 문제의 의의는 무엇일까요?**
 
@@ -93,7 +109,7 @@ flowchart LR
 
 > 참고로 아래 튜토리얼은 단순히 VirtualBox 기준이기에, Proxmox 용으로 실습하시려면 알잘딱으로 네트워크 설정을 다르게 가져가야하는데… 
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/7b1e00a3-9862-4e3b-b630-8a10ee4eca8c/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662EKSMYMH%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083345Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIEcWikf4lWK1S9gyT4wuAaAxFDp4tOCFNOmhyRD84aX3AiB2%2FjXnXrv7LO%2BaSPc2WnOUBPuKz3zrALneJt7yxU6jKCr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMTui1hqFrgTRjErMwKtwDbDtdzwBIgnCVkj99lwqYBKv%2FM%2B3BkXxOS6iPPxPtVd%2BrIR0qZhOax9QOdG%2BG9hvJlKMRWJF%2FhC4zm%2B2RYbhXY0ymEe1GTXkwboeuLXIYaGaCWlJwbW7FOpWpUOkQNl7MeamED9au0yC0C9TV66chVl0PuPviMlBkvipFoxzLccO6QO%2FMJZ9OR1hnnlSEAxK590B%2BbfJpDSS21DXkumLLW2yXNg3%2BA6gVUQZdd0MRZkHChTOz3CXQrSZKeYYWJ0UHrs1lOVf0Bq8Ql3MGUyjUzLQk1ok%2FseE8R%2FYa%2BxFazQa%2FK7SNNSB8w%2Fa1rjI1N4g4%2Fau%2FW9XdvFBN8d3%2Bv322stu3sYBQJHTbCcq0%2FtFVJWOtB%2BAFeDAijOSv3FnscDPPVvbThQPz%2FZuPFw64jzO0yBKSukqvddFnRKZ5dZnERYa1yzizJP6KQQOX%2F8h51mJjylFpv%2Bv59jT6tviBVTRyQR33zYwYSbjyDI4OCYMMwbmHTxEHSGU81I4chDozrCchnnue5PG1LrrvAq35byqJLMkoMT6J4bqhX3mSk37KNN%2BM9wk310YB3v4usstKy9t8nARQg6nJ9R8DGp7cSJBpI7iU5wdybljMIhde1bmWADmvlfT11EoAXTsRqdcwiM%2BHxAY6pgFSSbs6z0ByROEfrh1XSrnTSKTbYdssgcTDLqFyh4i0VjyWVO7S6qFAYlkrJ0kWkvlfSYGJWUnFOK%2BPVzvX80%2FdRdybHsgisJlsjcpkLLltgM4PxOqiwt%2FCzEdqjJNp98%2BT%2FI%2F7v1TteVEoz%2FWhT%2FiFW3ml3wNU1nbMLDelcwHQhLBL2A9lkLhFqzT4GM%2FAdn6u1VZWljXbyjxylcDgAYzY1JHTBdt5&X-Amz-Signature=6f4157f9961a9ae797530604be2d6feb645eb0c34faa46ae2a1c6462b03c13ca&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/7b1e00a3-9862-4e3b-b630-8a10ee4eca8c/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466UGEV7TK2%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T101503Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIBLswyjzNZbagX03HDhSQMHdP3yoNWPPZbKk5CcjsMiAAiEAlhDAWVQq4hIJOfA1XltvrHre%2BrlnTK2nh0CqTApZZKsq%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDGAh%2FVuqitaWlHhH%2BSrcA%2Fo9NyXXTxpxcT5Q57HKR0PiGFq5F8V%2Fd0RWEtUub67RsxJR5ubJOgTcTm5ELoOOugTuDA2ybsjm%2BwvybeES1qo4xExU64cJom%2Fy2UVekN3FgcE4XYjYU2HYSLLWJjDsRbRfSbIlgIepUm6tMqX%2FY%2BGGzlptFHocCU%2BE8vRHkKa3dM3mRNsCVHwiZA1xcNgsFFscskIx4LTWeImbnqTa9rrtAaxv1okYfpVJZm3OIttqpfIwiEBhf7Hf5NiG9%2FOs0KnMsI%2FKqab2GdaZdOhkjiBa55F0HPJgPVNbMhvOASV3NevbjVFJLXXIOOXQFk3LMl1Uov25ad%2BMDztCAx2fyMnp6qVWzRb6DA6Pkt1o5hVBOaRQztreElmRJgesW3r1sDhMw7Vaop7xenTMLY5KYlTE85cxn6aKgCGWIexrn9YqbrNjisouUrs%2F9MdQTNnxkmJq1Ura03DgmAPY3z%2B%2B0dPfecLd9pQrk5wUPn6wfQ7u5k0SNR%2FqS9b8MG%2Ffu1cHbzPLEyQeVBVzNS4IIWK52SsM%2F%2B5GgXGoW7Y9bHYK%2BmRmf%2F3OSgkLwOipVvgJhttUGJNM9h0L4h7mmU9EaH5k0eCJLdFIEh8P0b%2BvVhJLbtuSMdVtR%2Bc76aaoENAvMOL1h8QGOqUBBizHJbxl11GKgijpQ8n6iys2vXsjB2DTEB%2BFK1J6bBN58UNx7BiB2u%2B2WVkUoO8UhNN3sNwv2%2FAK8yYBHX5AJOodSwvD7ldXIc33TL%2BP0VieZu8ioRNBq7chU%2F8VU%2FHVF%2B0CN4vk4YLpFFF6a8r3tTHruD50oGRgn4K6SH3z4HcmsCwS8olbNfXVyNyRxIVG9t%2F9MoD6prgPXHloIJoDNw9IHIVf&X-Amz-Signature=add1c3a36712c40f10fe3ac1202531205f636b7bbea4168b3bc3b5e27dd8fc32&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 ## >> VM 정리
 

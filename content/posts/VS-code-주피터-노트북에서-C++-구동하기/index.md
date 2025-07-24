@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VS-code-C-58e389d13eb640fe95fc1a38d8f66c55"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/372d0e51-adcd-426f-b3a9-d7271a9765c4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665WFFPSUO%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T083751Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIEKCRpZiG%2BozQ1yQa7TuCQmpJ695byNOhXqurChXmI9FAiBvYyNJ3T7IooDov3v4Q5n70187cNKbX%2Fj7pOqkpXMyyyr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMCqBqcdh3ayOmER7xKtwDbRPAZQpmfDss1H9G4n4wdfBTVXM5MN0W7cAjT9QHUmWtK6Pu6d2OQKU0R4Hb1YiV5zOc2rgBn005bA9OMy0dHuNsLMg9r1nAbwfW6GcSh9J3mXSCXH2sUwNeRMEPnDH8l4NPycu6PIYfwKCC8yPx%2FUs1VQbOsGS8jVj7yKhEbJI08mEE53Fm1MdBrJoH8MMGaKztiQcp3Bp5m%2FbN%2BJF3FHjiDn6fTbDpl5UPpzse9vafZ4kF3HOAaVbCbF3D1Kzn8zLIr3ioNC0Ii2deqNrUhBoxTp9PnR5WtCoDUCzU%2BRI4h0oLhirCni1FJoZt5bDnZACm9OFsz3DdE%2BI%2BO1IbAwHw7ZhIxXmIDeqMAefA1WhLEjv2zv%2F7QE4N1zfrcp%2BvD%2Fuc8MQAJLC951k3RVpzJhHBLGATjtZ%2FWtkuL0ORa2C8k0BOoC4Ljx2Bl%2FxVknZwwEdR3TJN31kkD43Vg7hXr%2FdrLJmXjCDccVXbtiTHPpaBMsE%2BFPmpBNBst%2BiVD47wgCTUVr5VufkNSkC49eS2e4j3wjKLwp2VlknxirvDInOtScnrbhFluGmMcJ9vGgxcjpa8rc5w0qpAFd7tYlspYtcJBwbI7N49YYIFn0Fx%2F47Ugfv1EkZqVx34cZAwgtCHxAY6pgF3MBfUZDONzWI76vWIfReEI1K3vYAQjBtGy3V6gjYLS1cyk6jAN6sXdkC52MjrxliP2b7F3OAoN%2B9sPWhpikZjJmAl%2B4Da8dsbz3qLeJisiMgaEl%2F%2FFWm%2B1mjzmPNNz9o6hLtbddT%2FVx%2B4XFU3KPHDXz44NDw2%2FXQtLMEK5uUfU1rTTEDkE%2BJkAzZT9m8BjxWsrCvuF3ckhxJIwXjKGY5f8U6q4cCZ&X-Amz-Signature=321b1e29f5aa294d4665fe815ccb06806c836717175c4ce205746df8851362ce&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/372d0e51-adcd-426f-b3a9-d7271a9765c4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665GGZRT3R%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T102106Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAIaCXVzLXdlc3QtMiJHMEUCIQCuAqj82Wkt%2BGYiYMq%2F%2BdL6VMsN9w%2FauT2N2wE9Cb2hQgIgXNjb%2B4iKwY%2B3u91xekgYmeqIae68oOiIzT4L%2BC%2BB9e8q%2FwMIKhAAGgw2Mzc0MjMxODM4MDUiDNEHXyeArwi8xSzjWyrcA%2BnxhG2PQlAUvEh%2BwvAURWXoIungu5XUMgAmQoSHmrihnnAIGJWd1WH0xbtWYvJxTxadz7y8T101rhzoBYuRYm2omFURqiF8ZukEth%2B7Xc%2FTWrbTlV2MdnyZ5%2B3uRHwF%2BihYZVvV8gW%2B%2FXJFh3NT%2FkV9hrCTnRnruBQE12vRTUIdso1LdEK714G7s4EVrXDVkMkuZ5LfHO23lp%2BOlhILU2t22gGaBuTHZwG6qXTs8ecrLoD65jwjuS9Z6KxIC3O25GJ0P7RHrZPgZ1kLyY3n%2BBeUiD9l%2F7xqtEpyxzr2rYT0rSRfVGjgOPtIVEa5WDQXykjWhKmo%2BNoCiPjJG%2Buw6NmWog60LYtG3nu%2FOTLbtsQASiWd7c7p63DzMcmlJw92zbmbvK0pnNsz9AgsNy3zTVaoOc8RbU3H5223o5EuerfRj7JCXgOqb7VmiFlhE4ISb3h%2BQGBn%2BkIoJ6%2FeZwiPEBEqLtYRWDuBLbe1iwKW%2Ffxw443ZM9IBxPlGsWmR4nnM58JqPELzvZznP33ZO8tMhFhdYYIwQeetbDtvJ2BGyaVnOc1Z2X%2BytO%2B8znd%2F59%2BN1eZDefUqZOpJuU%2Fc9rE9YOFe8%2BuCBfSenMVhGUBTlZEbw6si7VZdGpbAyzhgMMf2h8QGOqUB%2B5%2F099k%2FuOU%2FbIcoaaw7Rnqd2ympJPoJkTm4j2xsmPcL6axZ4v3wk2se84YXRT1RzxTYhw9%2BVefajGItDSwWbqCEKeHuZRmPLZE9Tk6tdA6xBFFm%2B2YNdOaotcY9u9udHhoIgj6c0URFv2NlSzX%2BoFDWsdjBIiKarAYfVL4cljKbw0%2F3H563pm9xbaA9iWwsvCH9vfEjlwMJLAU8tBcP8ygmhXNi&X-Amz-Signature=fe5305e5b4e6d0d6d3721e1836190684210e2c97b8a72b07c94fcd84a33bdc27&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 
 🔗 [https://stackoverflow.com/questions/66408814/running-c-jupiter-notebook-in-vscode-insiders](https://stackoverflow.com/questions/66408814/running-c-jupiter-notebook-in-vscode-insiders)
 
@@ -54,6 +54,19 @@ brew install --cask anaconda
 
 
 > 💡 **homebrew로 설치한 anconda 디렉토리 위치 확인하는방법**
+> → 다음 명령어로 디렉토리 위치 확인하기
+>
+> ```shell
+> brew info anaconda
+> ```
+>
+> → 과감하게 다음 멍령어로 conda 디렉토리 위치를 확인할수 있다
+>
+> ```shell
+> brew uninstall acanonda
+> ```
+>
+>
 
 
 ### → 다음명령어를 통해 zsh를 적용합시다

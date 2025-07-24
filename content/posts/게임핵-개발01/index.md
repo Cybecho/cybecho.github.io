@@ -20,10 +20,55 @@ notion_url: "https://www.notion.so/01-de67bf6d84c3449db372f957558064a6"
 
 
 > 🔥 ****코드에서 빨간줄 생길때 대처법****
+> 비주얼스튜디오에서 오류나는곳에서 `alt + enter` 하면 `using System.Diagnostics `라고 옵션이 뜨는데 이거 클릭하면 자동으로 라이브러리 추가해줌
+>
+>
 
 > 🔥 ****활성화 되어있는 프로세스 불러와 리스트화 시키는 방법****
+> ```c#
+> using System.Diagnostics;
+>
+> Process[] MyProcess; //프로세스 목록을 저장할 장소로 리스트로 설정한다
+>
+> Process_comboBox.Items.Clear();  //기존의 프로세스 목록을 초기화
+>   MyProcess = Process.GetProcesses(); //프로세스 목록을 아주 쉽게 Process[] 에 넣을 수 있다
+>
+>   for (int i = 0; i < MyProcess.Length; i++) 
+>   {
+>       String text = MyProcess[i].ProcessName + "-" + MyProcess[i].Id; //프로세스 리스트에 들어간 프로세스 이름을 text에 저장한다
+>   }
+> ```
+>
+>
 
 > 🔥 ****Spit 기능을 활용한 프로세스 ID만 불러오기****
+>
+> Split이란 인자 ‘n’ 을 기준으로 나누는것
+>
+> 만약
+>
+> ```c#
+> selectedItem.Split('-')[Hello-World-000]
+> ```
+>
+>
+> 이라면 결과값은 `Hello` , `World` , `000` 으로 3개로 나뉘는것이다
+>
+> 즉 ‘-’ 기준으로 문자열을 가른것.
+>
+> 그리고 해당 split 코드는 정수 `3` 을 반환한다.
+>
+> `[’Hello’.’World’,’000’]`
+>
+> 하지만 우리에게 필요한건 마지막에 붙는 ID 000 마지막만 불러오는 방법은 다음과 같다
+>
+> ```c#
+> int pid = int.Parse(selectedItem.Split('-')[selectedItem.Split('-').Length - 1]);
+> ```
+>
+> `selectedItem.Split('-').Length - 1` 의 값은 2를 가진다. Split의 총 길이는 3을 가지고 배열은 0부터 시작하니 Length 에서 1을 빼주어 배열의 길이에 맞출 수 있도록 2를 반환시키는 것이다 (0, 1,  2 순이기 때문에 2로 만들어줘야함) 
+>
+>
 
 > 🔥 **C#에선 예외처리를 try / catch (Exption ex) 로 하는구나**
 
