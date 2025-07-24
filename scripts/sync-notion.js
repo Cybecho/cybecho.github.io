@@ -1,6 +1,8 @@
 const { Client } = require('@notionhq/client');
 const fs = require('fs');
 const crypto = require('crypto');
+const https = require('https');
+const path = require('path');
 
 const notion = new Client({ auth: process.env.NOTION_SECRET });
 const CACHE_FILE = 'notion_cache.json';
@@ -66,6 +68,45 @@ function createSlug(title) {
   return slug;
 }
 
+// 이미지 다운로드 함수
+async function downloadImage(imageUrl, imagePath) {
+  return new Promise((resolve, reject) => {
+    const file = fs.createWriteStream(imagePath);
+    
+    https.get(imageUrl, (response) => {
+      if (response.statusCode !== 200) {
+        reject(new Error(`HTTP ${response.statusCode}: ${response.statusMessage}`));
+        return;
+      }
+      
+      response.pipe(file);
+      
+      file.on('finish', () => {
+        file.close();
+        resolve(imagePath);
+      });
+      
+      file.on('error', (err) => {
+        fs.unlink(imagePath, () => {}); // 실패시 파일 삭제
+        reject(err);
+      });
+    }).on('error', (err) => {
+      reject(err);
+    });
+  });
+}
+
+// 이미지 파일명 생성 함수
+function createImageFilename(imageUrl) {
+  const urlHash = crypto.createHash('md5').update(imageUrl).digest('hex').substring(0, 12);
+  const extension = imageUrl.includes('.png') ? '.png' : 
+                   imageUrl.includes('.jpg') ? '.jpg' : 
+                   imageUrl.includes('.jpeg') ? '.jpeg' : 
+                   imageUrl.includes('.gif') ? '.gif' : 
+                   imageUrl.includes('.webp') ? '.webp' : '.png';
+  return `image_${urlHash}${extension}`;
+}
+
 function convertRichText(richTextArray) {
   if (!richTextArray || !Array.isArray(richTextArray)) return '';
   return richTextArray.map(textObj => {
@@ -80,7 +121,7 @@ function convertRichText(richTextArray) {
   }).join('');
 }
 
-async function convertBlocks(pageId, indentLevel = 0) {
+async function convertBlocks(pageId, postDir, indentLevel = 0) {
   try {
     const blocks = await notion.blocks.children.list({
       block_id: pageId,
@@ -124,7 +165,7 @@ async function convertBlocks(pageId, indentLevel = 0) {
             
             // 중첩된 불릿포인트 처리
             if (block.has_children) {
-              const childContent = await convertBlocks(block.id, indentLevel + 1);
+              const childContent = await convertBlocks(block.id, postDir, indentLevel + 1);
               content += childContent;
             }
           }
@@ -136,7 +177,7 @@ async function convertBlocks(pageId, indentLevel = 0) {
             
             // 중첩된 번호 목록 처리
             if (block.has_children) {
-              const childContent = await convertBlocks(block.id, indentLevel + 1);
+              const childContent = await convertBlocks(block.id, postDir, indentLevel + 1);
               content += childContent;
             }
           }
@@ -155,7 +196,7 @@ async function convertBlocks(pageId, indentLevel = 0) {
               
               // 제목 토글 내부 컨텐츠를 일반 컨텐츠로 처리
               if (block.has_children) {
-                const childContent = await convertBlocks(block.id, 0);
+                const childContent = await convertBlocks(block.id, postDir, 0);
                 content += childContent;
               }
             } else {
@@ -164,7 +205,7 @@ async function convertBlocks(pageId, indentLevel = 0) {
               
               // 토글 내부 컨텐츠 처리
               if (block.has_children) {
-                const childContent = await convertBlocks(block.id, 0);
+                const childContent = await convertBlocks(block.id, postDir, 0);
                 content += childContent;
               }
               
@@ -201,7 +242,7 @@ async function convertBlocks(pageId, indentLevel = 0) {
             
             // Callout 내부 컨텐츠 처리
             if (block.has_children) {
-              const childContent = await convertBlocks(block.id, 0);
+              const childContent = await convertBlocks(block.id, postDir, 0);
               // callout 내부 컨텐츠를 인용구 형태로 변환
               const quotedChildContent = childContent.split('\n').map(line => 
                 line.trim() ? '> ' + line : '>'
@@ -218,10 +259,27 @@ async function convertBlocks(pageId, indentLevel = 0) {
           break;
           
         case 'image':
-          if (block.image?.file?.url) {
-            content += '![Image](' + block.image.file.url + ')\n\n';
-          } else if (block.image?.external?.url) {
-            content += '![Image](' + block.image.external.url + ')\n\n';
+          if (block.image?.file?.url || block.image?.external?.url) {
+            const imageUrl = block.image.file?.url || block.image.external?.url;
+            
+            try {
+              // 이미지 다운로드 및 로컬 저장
+              const imageFilename = createImageFilename(imageUrl);
+              const imagePath = path.join(postDir, imageFilename);
+              
+              // 이미지가 이미 존재하지 않으면 다운로드
+              if (!fs.existsSync(imagePath)) {
+                console.log('Downloading image:', imageFilename);
+                await downloadImage(imageUrl, imagePath);
+              }
+              
+              // 상대 경로로 마크다운에 추가
+              content += '![Image](' + imageFilename + ')\n\n';
+            } catch (error) {
+              console.warn('Failed to download image:', error.message);
+              // 다운로드 실패시 원본 URL 사용 (fallback)
+              content += '![Image](' + imageUrl + ')\n\n';
+            }
           }
           break;
           
@@ -332,7 +390,12 @@ async function syncNotionDatabase() {
         const themes = page.properties['Thems']?.multi_select?.map(theme => theme.name) || [];
         const aiSummary = page.properties['AI 요약']?.rich_text?.[0]?.plain_text || '';
 
-        const blockContent = await convertBlocks(page.id);
+        // 포스트 디렉토리 먼저 생성 (이미지 다운로드에 필요)
+        if (!fs.existsSync(postDir)) {
+          fs.mkdirSync(postDir, { recursive: true });
+        }
+
+        const blockContent = await convertBlocks(page.id, postDir);
 
         // 🎯 YAML Front Matter (시리즈 지원)
         let frontMatter = '---\n';
@@ -381,10 +444,6 @@ async function syncNotionDatabase() {
         }
 
         const fullContent = frontMatter + mainContent;
-
-        if (!fs.existsSync(postDir)) {
-          fs.mkdirSync(postDir, { recursive: true });
-        }
 
         fs.writeFileSync(postFile, fullContent, 'utf8');
 
