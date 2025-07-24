@@ -69,7 +69,7 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: |
           echo "Building Hugo site..."
-          hugo --gc --minify
+          hugo --gc --minify --buildFuture
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
