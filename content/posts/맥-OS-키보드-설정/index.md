@@ -1,0 +1,23 @@
+---
+title: "맥 OS 키보드 설정"
+date: 2023-11-28T00:00:00.000Z
+draft: false
+tags: ["MAC"]
+series: ["개발환경", "Let's MAC!"]
+description: "맥 OS 키보드 설정에 대한 내용이 포함되어 있으며, 관련된 테마와 태그가 언급되어 있습니다."
+notion_id: "70f005d7-f3bb-426f-bde7-01c7b129740c"
+notion_url: "https://www.notion.so/OS-70f005d7f3bb426fbde701c7b129740c"
+---
+
+# 맥 OS 키보드 설정
+
+> **Summary**
+> 맥 OS 키보드 설정에 대한 내용이 포함되어 있으며, 관련된 테마와 태그가 언급되어 있습니다.
+
+---
+
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/c1fa1ff1-2438-467f-abe3-44c0ca0e946d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466XVNI5CVB%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T081014Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIAYLrBraX2dT36yIKXunHdG8up9MlQOldBcgM77nf4VqAiAwJAbtxabdZqVdnPYT9w7qvGaGZH22xlmUyK45C0rL%2BCr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMnTtMA6kDLs9MyFldKtwDMZzJDHdMC1L9PUGIlkh%2F3Wpf1T7Og%2Fn3BHy1D0coO1solfXAYuvY4rCJXtga32amLpApAtVTzKMqbFzY08KYFvxK4hIC8lRmJwEHZWYMhQNTDOtxT9hU0o7jslPmtWW5YmFRFqEJDuW6Oh7C8IBWE8WC4ZCHP%2B%2FUuOSEN8JkZSaRL4w%2FPpIRfFs5gaQpLvEi%2B40Cyg5OrUIYZ7qc6U41eKzlgWwe72rc9p71FJ5st2HuTpIvOV5IpWHuNod3zK%2BjSAqDaleLWi8%2FaST1OOzshXA7xvGdHk4g21hKZo1Fuep9qUof0UbKs0HlApXiIfXws1cpETG5cFpew3ufAa1ogSYc%2FiODxSvNWXA3H4BawG%2F7XgUxiRS4na9u%2Fc08KxtJxn4H2dGUb%2BiunT4nUwJIpagbjY%2FfEiDtH%2B3sLtynmPPmwJjKBwpnhxSrAd5crcbQ3oWmNimxBuNrFLLC%2FnFcZ6QjHN6k7fpILkDfNP1Rt92vx0IfzYTk%2BFQcm%2BfE8bZiiVwt0K5vP%2Fa05gdFA9%2B0G%2BJudtZhgB7ds8F7w7t2Mxjo0tm%2BYvLY72vuJvKAdqWWpQ3buB68UmRE%2FmEAVUgdhS%2BvQpciyjtnEJBiqg%2F5h6z%2BWVB1No3Kyr%2BllzIwiM%2BHxAY6pgFZCJYn5cXSS2b5lYAYcQwiM8A3cWQ%2FySnrMz8%2F0dCGFnfWfbAAZBjwC61bjSVFfJ63a73Qxd7480Wc9smfSGundncYY0AFVPc5vO35yj0tJoSkaYEQiFo01Lgff6OpLhkiJwWUlnl1l0LEUgCOuOzaOgs%2BGaZhONkF6r%2BS%2BXbCT3dLogdGSnWZz6UHfCHpEjH82EHWg%2BWUWeJbicWohjyouC4RpKZf&X-Amz-Signature=a96bce542a382322cb6f673c6bb0fd1b0b4d8240b8f2004a993dc3736740bee6&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/69609c17-133d-42e0-bda0-ad34686e17f1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466XVNI5CVB%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T081014Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIAYLrBraX2dT36yIKXunHdG8up9MlQOldBcgM77nf4VqAiAwJAbtxabdZqVdnPYT9w7qvGaGZH22xlmUyK45C0rL%2BCr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIMnTtMA6kDLs9MyFldKtwDMZzJDHdMC1L9PUGIlkh%2F3Wpf1T7Og%2Fn3BHy1D0coO1solfXAYuvY4rCJXtga32amLpApAtVTzKMqbFzY08KYFvxK4hIC8lRmJwEHZWYMhQNTDOtxT9hU0o7jslPmtWW5YmFRFqEJDuW6Oh7C8IBWE8WC4ZCHP%2B%2FUuOSEN8JkZSaRL4w%2FPpIRfFs5gaQpLvEi%2B40Cyg5OrUIYZ7qc6U41eKzlgWwe72rc9p71FJ5st2HuTpIvOV5IpWHuNod3zK%2BjSAqDaleLWi8%2FaST1OOzshXA7xvGdHk4g21hKZo1Fuep9qUof0UbKs0HlApXiIfXws1cpETG5cFpew3ufAa1ogSYc%2FiODxSvNWXA3H4BawG%2F7XgUxiRS4na9u%2Fc08KxtJxn4H2dGUb%2BiunT4nUwJIpagbjY%2FfEiDtH%2B3sLtynmPPmwJjKBwpnhxSrAd5crcbQ3oWmNimxBuNrFLLC%2FnFcZ6QjHN6k7fpILkDfNP1Rt92vx0IfzYTk%2BFQcm%2BfE8bZiiVwt0K5vP%2Fa05gdFA9%2B0G%2BJudtZhgB7ds8F7w7t2Mxjo0tm%2BYvLY72vuJvKAdqWWpQ3buB68UmRE%2FmEAVUgdhS%2BvQpciyjtnEJBiqg%2F5h6z%2BWVB1No3Kyr%2BllzIwiM%2BHxAY6pgFZCJYn5cXSS2b5lYAYcQwiM8A3cWQ%2FySnrMz8%2F0dCGFnfWfbAAZBjwC61bjSVFfJ63a73Qxd7480Wc9smfSGundncYY0AFVPc5vO35yj0tJoSkaYEQiFo01Lgff6OpLhkiJwWUlnl1l0LEUgCOuOzaOgs%2BGaZhONkF6r%2BS%2BXbCT3dLogdGSnWZz6UHfCHpEjH82EHWg%2BWUWeJbicWohjyouC4RpKZf&X-Amz-Signature=e2f257b92eaa36f6a8fc66e8e5b84843320992bae90e24f8341dddd8265d27b9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+
+

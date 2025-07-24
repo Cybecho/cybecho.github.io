@@ -1,0 +1,34 @@
+---
+title: "서버 구축하여 아이패드로 코딩하기"
+date: 2023-02-28T00:00:00.000Z
+draft: false
+tags: ["Other"]
+series: ["Let's Homelab!"]
+description: "아이패드로 코딩하기 위한 서버 구축 방법과 관련된 여러 링크를 제공하며, 구글 클라우드에서 서버를 무료로 사용하는 방법과 SSH 접속 방법에 대한 정보를 포함하고 있습니다."
+notion_id: "b289db91-3b32-4d81-aed6-cae6de823dda"
+notion_url: "https://www.notion.so/b289db913b324d81aed6cae6de823dda"
+---
+
+# 서버 구축하여 아이패드로 코딩하기
+
+> **Summary**
+> 아이패드로 코딩하기 위한 서버 구축 방법과 관련된 여러 링크를 제공하며, 구글 클라우드에서 서버를 무료로 사용하는 방법과 SSH 접속 방법에 대한 정보를 포함하고 있습니다.
+
+---
+
+![Image](https://arslan.io/content/images/2022/09/image-19.jpeg)
+
+🔗 [https://boxnwhis.kr/2020/01/11/coding_with_ipad.html](https://boxnwhis.kr/2020/01/11/coding_with_ipad.html)
+
+🔗 [https://brunch.co.kr/@topasvga/705](https://brunch.co.kr/@topasvga/705)
+
+🔗 [https://brunch.co.kr/@topasvga/168](https://brunch.co.kr/@topasvga/168)
+
+🔗 [https://nhj12311.tistory.com/317](https://nhj12311.tistory.com/317)
+
+🔗 [https://fourz.tistory.com/28](https://fourz.tistory.com/28)
+
+🔗 [https://fourz.tistory.com/29?category=953211](https://fourz.tistory.com/29?category=953211)
+
+🔗 [https://nhj12311.tistory.com/318](https://nhj12311.tistory.com/318)
+

@@ -1,0 +1,75 @@
+---
+title: "GCP Ubuntu 설정 Export방법"
+date: 2023-06-04T00:00:00.000Z
+draft: false
+tags: ["GCP", "shell", "ubuntu"]
+series: ["Let's Linux!"]
+description: "GCP에서 Ubuntu VM을 다른 계정으로 복사하기 위해 스냅샷을 생성하고 관리하는 방법을 설명합니다. gcloud CLI를 설정하고, 스냅샷 목록을 확인하며, 프로젝트 간 또는 조직 간 스냅샷 데이터를 공유하는 절차와 필요한 권한에 대해 안내합니다."
+notion_id: "deef1c00-6580-46f2-8a0c-e30c5d06bb91"
+notion_url: "https://www.notion.so/GCP-Ubuntu-Export-deef1c00658046f28a0ce30c5d06bb91"
+---
+
+# GCP Ubuntu 설정 Export방법
+
+> **Summary**
+> GCP에서 Ubuntu VM을 다른 계정으로 복사하기 위해 스냅샷을 생성하고 관리하는 방법을 설명합니다. gcloud CLI를 설정하고, 스냅샷 목록을 확인하며, 프로젝트 간 또는 조직 간 스냅샷 데이터를 공유하는 절차와 필요한 권한에 대해 안내합니다.
+
+---
+
+![Image](https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/BlogHeader_Set2_D.png)
+
+🔗 [https://nangman14.tistory.com/42](https://nangman14.tistory.com/42)
+
+🔗 [https://cloud.google.com/compute/docs/disks/create-snapshots?hl=ko#gcloud_5](https://cloud.google.com/compute/docs/disks/create-snapshots?hl=ko#gcloud_5)
+
+
+## 스냅샷 나열
+
+1. 다음 개발 환경 중 하나에서 gcloud CLI를 설정합니다.
+1. 특정 프로젝트에서 사용할 수 있는 스냅샷 목록을 보려면 [`gcloud compute snapshots list`](https://cloud.google.com/sdk/gcloud/reference/compute/snapshots/list?hl=ko)[ 명령어](https://cloud.google.com/sdk/gcloud/reference/compute/snapshots/list?hl=ko)를 사용합니다.
+여기서 **PROJECT_ID**는 프로젝트의 ID입니다.
+
+## 스냅샷에 관한 정보 보기
+
+생성 시간, 크기, 소스 디스크와 같은 특정 스냅샷의 정보를 나열하려면 [`gcloud compute snapshots describe`](https://cloud.google.com/sdk/gcloud/reference/compute/snapshots/describe?hl=ko) 명령어를 사용합니다.
+
+```plain text
+gcloud compute snapshots describe SNAPSHOT_NAME
+
+```
+
+여기서 **SNAPSHOT_NAME**은 스냅샷의 이름입니다.
+
+## 동일 조직에서 프로젝트 간 스냅샷 데이터 공유
+
+**이 태스크에 필요한 권한**
+
+이 태스크를 수행하려면 다음과 같은 [권한](https://cloud.google.com/iam/docs/overview?hl=ko#permissions)이 있어야 합니다.
+
+- 프로젝트의 모든 스냅샷에 액세스가 필요한 경우 프로젝트에 대한 `compute.storageAdmin` 권한
+- 대상 프로젝트에 대한 `compute.snapshots.create` 권한
+- 소스 디스크에 대한 `compute.disks.createSnapshot` 권한
+한 프로젝트의 디스크에서 동일 조직 내에 있는 다른 프로젝트의 디스크로 데이터를 이동하려면 다음 프로세스를 사용합니다.
+
+[gcloud](https://cloud.google.com/compute/docs/disks/create-snapshots?hl=ko#gcloud)[API](https://cloud.google.com/compute/docs/disks/create-snapshots?hl=ko#api)
+
+1. 다음 개발 환경 중 하나에서 gcloud CLI를 설정합니다.
+1. [`gcloud compute snapshots create`](https://cloud.google.com/sdk/gcloud/reference/compute/snapshots/create?hl=ko)[ 명령어](https://cloud.google.com/sdk/gcloud/reference/compute/snapshots/create?hl=ko)를 사용하여 대상 프로젝트에서 디스크 스냅샷을 만듭니다. 예를 들어 영역별 영구 디스크의 스냅샷을 만들려면 다음 명령어를 사용합니다.
+1. 대상 프로젝트에서 영역 또는 리전 영구 디스크나 [`gcloud compute disks create`](https://cloud.google.com/sdk/gcloud/reference/compute/disks/create?hl=ko)[ 명령어](https://cloud.google.com/sdk/gcloud/reference/compute/disks/create?hl=ko)를 사용하여 스냅샷을 기준으로 하이퍼디스크를 만듭니다.
+## 여러 조직에서 프로젝트 간 스냅샷 공유
+
+**이 태스크에 필요한 권한**
+
+이 태스크를 수행하려면 다음과 같은 [권한](https://cloud.google.com/iam/docs/overview?hl=ko#permissions)이 있어야 합니다.
+
+- 프로젝트의 모든 스냅샷에 액세스가 필요한 경우 프로젝트에 대한 `compute.storageAdmin` 권한
+- 대상 프로젝트에 대한 `compute.snapshots.create` 권한
+- 소스 디스크에 대한 `compute.disks.createSnapshot` 권한
+한 조직의 프로젝트에서 다른 조직의 다른 프로젝트로 스냅샷을 공유하려면 다음 프로세스를 사용합니다.
+
+[gcloud](https://cloud.google.com/compute/docs/disks/create-snapshots?hl=ko#gcloud)[API](https://cloud.google.com/compute/docs/disks/create-snapshots?hl=ko#api)
+
+1. 다음 개발 환경 중 하나에서 gcloud CLI를 설정합니다.
+1. 소스 프로젝트에서 [`gcloud compute disks create`](https://cloud.google.com/sdk/gcloud/reference/compute/disks/create?hl=ko)[ 명령어](https://cloud.google.com/sdk/gcloud/reference/compute/disks/create?hl=ko)를 사용하여 스냅샷을 기반으로 디스크를 만듭니다.
+1. 대상 프로젝트에서 [`gcloud compute snapshots create`](https://cloud.google.com/sdk/gcloud/reference/compute/snapshots/create?hl=ko)[ 명령어](https://cloud.google.com/sdk/gcloud/reference/compute/snapshots/create?hl=ko)를 사용하여 스냅샷을 만듭니다. 예를 들어 1단계에서 만든 영역 디스크를 사용하여 스냅샷을 만들려면 다음 명령어를 사용합니다.
+1. [`gcloud compute disks delete`](https://cloud.google.com/sdk/gcloud/reference/compute/disks/delete?hl=ko)[ 명령어](https://cloud.google.com/sdk/gcloud/reference/compute/disks/delete?hl=ko)를 사용하여 1단계에서 만든 임시 디스크를 삭제합니다.

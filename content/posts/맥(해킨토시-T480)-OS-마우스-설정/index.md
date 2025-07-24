@@ -1,0 +1,34 @@
+---
+title: "맥(해킨토시 T480) OS 마우스 설정"
+date: 2023-11-28T00:00:00.000Z
+draft: false
+tags: ["MAC"]
+series: ["개발환경", "Let's MAC!"]
+description: "트랙패드와 빨콩 방향을 조정하고, 자연스러운 스크롤을 꺼야 하며, ScrollReverser 앱을 설치하여 쾌적한 환경을 사용할 수 있다."
+notion_id: "1b27ab31-817e-4495-9d80-75990db369b7"
+notion_url: "https://www.notion.so/T480-OS-1b27ab31817e44959d8075990db369b7"
+---
+
+# 맥(해킨토시 T480) OS 마우스 설정
+
+> **Summary**
+> 트랙패드와 빨콩 방향을 조정하고, 자연스러운 스크롤을 꺼야 하며, ScrollReverser 앱을 설치하여 쾌적한 환경을 사용할 수 있다.
+
+---
+
+
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/63fa7f7b-b997-4a55-be5f-bceb30ba77c9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665UJYUOED%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T081014Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIBlR%2FrbeJY4yiozeMrGYgCcyc0K7eLyyhtlcdo%2BKFjIUAiBdq2b2fGT4UhuLjEv4deF7jb79kEm5rgV2WbtQJDdTqCr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIME5VPL7dTnEkHr96JKtwDNWqh2TB2A%2B1DPtfS3s1%2F7pRbQcu2VwP5vedkrKYUPNq7ZKqDytnq43B6fagC7by%2BOkUCH091%2BK8tAzVLapoXo%2F0WvEgpvBxxE2azfs5ycum9Cwhzp9Zb1nJcsT5Q70wREE1lhGiMnnheNJhHKJbfW9esEkbS4HSxjr1uQYMXVOCGwMEinrChhyOvl%2FnmCh%2Fv49mN1lbD3896%2FjFBpJ2txE9FKcJSP9mhbdLQ45CAeMcjtC09VFbUWH1h%2F0YIG3Xe0%2F46Ob21WVBcLGwsGjwpytM5JOJhuKHEaFvGuW6lQ%2FCpDnow%2FuGvtcuoTqLcUdkMQUveF%2FeCAE2AzYW0z3IobtD2UpQETK%2BB8QyD5Tf0vrM%2FY8yxCeR2O9b0iAaOQ50jdT5SvTfddmRgFL0BSRYm%2FK46zNcEVRWeAlG%2FmAPb7Gt6XB7TCQZkrncd%2Fq8azVJ6nLvzqkXCpUNr4IF5td3aFY1afVXDKquUWeg0JIKfnFn5q2alJkVs6%2F2JEQHcSZAaDx9UyD5C5QhMtJCvJUcjl1Yg%2BU%2FeG8WMliwuTTPOCs3w9w%2F4rBKL17niG0z7okD%2FRPZV9fUw8wOyDGoZcKglL2rXkSaGqzYVHU4WaivCEb5G8wUPvUxkoUOfVTswzM%2BHxAY6pgHL7kthvDRy1LkxCljxQkPTuPJ4%2BnUI1zJJ67YIf8xF24Eb5g7NhXrDzwjMyjuyk6w9DpBcBbeZRuhaUDYkVX%2BhTi8OZCb2uZRK1lLuJ2FoDYwTweuXhM8gl4unRt30wJ96tbl4foG4sGcQKHp4hWhFfYh92lxhG8bvEhqZN6vJrLMaFtoGGgA95%2B6EqLkLBBuukp9l29j7sPyoFyxRsVn5pnLXKfFt&X-Amz-Signature=aed2d74ea37c2d83635ad7aad0e13ffb50c90d8ba43ef502f6f7d273b3795545&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/95d3e146-1725-4d50-b010-2aeabd9dc484/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665UJYUOED%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T081014Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIBlR%2FrbeJY4yiozeMrGYgCcyc0K7eLyyhtlcdo%2BKFjIUAiBdq2b2fGT4UhuLjEv4deF7jb79kEm5rgV2WbtQJDdTqCr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIME5VPL7dTnEkHr96JKtwDNWqh2TB2A%2B1DPtfS3s1%2F7pRbQcu2VwP5vedkrKYUPNq7ZKqDytnq43B6fagC7by%2BOkUCH091%2BK8tAzVLapoXo%2F0WvEgpvBxxE2azfs5ycum9Cwhzp9Zb1nJcsT5Q70wREE1lhGiMnnheNJhHKJbfW9esEkbS4HSxjr1uQYMXVOCGwMEinrChhyOvl%2FnmCh%2Fv49mN1lbD3896%2FjFBpJ2txE9FKcJSP9mhbdLQ45CAeMcjtC09VFbUWH1h%2F0YIG3Xe0%2F46Ob21WVBcLGwsGjwpytM5JOJhuKHEaFvGuW6lQ%2FCpDnow%2FuGvtcuoTqLcUdkMQUveF%2FeCAE2AzYW0z3IobtD2UpQETK%2BB8QyD5Tf0vrM%2FY8yxCeR2O9b0iAaOQ50jdT5SvTfddmRgFL0BSRYm%2FK46zNcEVRWeAlG%2FmAPb7Gt6XB7TCQZkrncd%2Fq8azVJ6nLvzqkXCpUNr4IF5td3aFY1afVXDKquUWeg0JIKfnFn5q2alJkVs6%2F2JEQHcSZAaDx9UyD5C5QhMtJCvJUcjl1Yg%2BU%2FeG8WMliwuTTPOCs3w9w%2F4rBKL17niG0z7okD%2FRPZV9fUw8wOyDGoZcKglL2rXkSaGqzYVHU4WaivCEb5G8wUPvUxkoUOfVTswzM%2BHxAY6pgHL7kthvDRy1LkxCljxQkPTuPJ4%2BnUI1zJJ67YIf8xF24Eb5g7NhXrDzwjMyjuyk6w9DpBcBbeZRuhaUDYkVX%2BhTi8OZCb2uZRK1lLuJ2FoDYwTweuXhM8gl4unRt30wJ96tbl4foG4sGcQKHp4hWhFfYh92lxhG8bvEhqZN6vJrLMaFtoGGgA95%2B6EqLkLBBuukp9l29j7sPyoFyxRsVn5pnLXKfFt&X-Amz-Signature=fc4860e86e75797f0dc4b929aad9cf1b29973ea8a4e33a4a48b17da55bcb5ce9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+
+### 스크롤 리버서 앱 설정 (아래 ScrollReverser 깔아야함)
+
+```bash
+brew install scrollReverser
+```
+
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/5549ad15-f560-4f9e-a688-34ba249930c5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665UJYUOED%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T081014Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJGMEQCIBlR%2FrbeJY4yiozeMrGYgCcyc0K7eLyyhtlcdo%2BKFjIUAiBdq2b2fGT4UhuLjEv4deF7jb79kEm5rgV2WbtQJDdTqCr%2FAwgpEAAaDDYzNzQyMzE4MzgwNSIME5VPL7dTnEkHr96JKtwDNWqh2TB2A%2B1DPtfS3s1%2F7pRbQcu2VwP5vedkrKYUPNq7ZKqDytnq43B6fagC7by%2BOkUCH091%2BK8tAzVLapoXo%2F0WvEgpvBxxE2azfs5ycum9Cwhzp9Zb1nJcsT5Q70wREE1lhGiMnnheNJhHKJbfW9esEkbS4HSxjr1uQYMXVOCGwMEinrChhyOvl%2FnmCh%2Fv49mN1lbD3896%2FjFBpJ2txE9FKcJSP9mhbdLQ45CAeMcjtC09VFbUWH1h%2F0YIG3Xe0%2F46Ob21WVBcLGwsGjwpytM5JOJhuKHEaFvGuW6lQ%2FCpDnow%2FuGvtcuoTqLcUdkMQUveF%2FeCAE2AzYW0z3IobtD2UpQETK%2BB8QyD5Tf0vrM%2FY8yxCeR2O9b0iAaOQ50jdT5SvTfddmRgFL0BSRYm%2FK46zNcEVRWeAlG%2FmAPb7Gt6XB7TCQZkrncd%2Fq8azVJ6nLvzqkXCpUNr4IF5td3aFY1afVXDKquUWeg0JIKfnFn5q2alJkVs6%2F2JEQHcSZAaDx9UyD5C5QhMtJCvJUcjl1Yg%2BU%2FeG8WMliwuTTPOCs3w9w%2F4rBKL17niG0z7okD%2FRPZV9fUw8wOyDGoZcKglL2rXkSaGqzYVHU4WaivCEb5G8wUPvUxkoUOfVTswzM%2BHxAY6pgHL7kthvDRy1LkxCljxQkPTuPJ4%2BnUI1zJJ67YIf8xF24Eb5g7NhXrDzwjMyjuyk6w9DpBcBbeZRuhaUDYkVX%2BhTi8OZCb2uZRK1lLuJ2FoDYwTweuXhM8gl4unRt30wJ96tbl4foG4sGcQKHp4hWhFfYh92lxhG8bvEhqZN6vJrLMaFtoGGgA95%2B6EqLkLBBuukp9l29j7sPyoFyxRsVn5pnLXKfFt&X-Amz-Signature=29bd8d07ae99a3c4f25ae932654552cdbc0205312feb6657478bf2cb1ca9c6ba&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+
+
+이제 쾌적한 환경 사용 가능~
+

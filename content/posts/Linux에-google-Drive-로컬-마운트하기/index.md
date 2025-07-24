@@ -1,0 +1,33 @@
+---
+title: "Linux에 google Drive 로컬 마운트하기"
+date: 2024-06-11T13:54:00.000Z
+draft: false
+tags: ["fedora", "Arch", "ubuntu", "Debian"]
+series: ["Let's Linux!"]
+description: "리눅스에서 구글 드라이브를 로컬로 마운트하는 방법은 매우 간단하며, 설정에서 온라인 계정을 추가하면 쉽게 연결할 수 있다."
+notion_id: "c807bfda-4256-432f-a6e0-add51b1010af"
+notion_url: "https://www.notion.so/Linux-google-Drive-c807bfda4256432fa6e0add51b1010af"
+---
+
+# Linux에 google Drive 로컬 마운트하기
+
+> **Summary**
+> 리눅스에서 구글 드라이브를 로컬로 마운트하는 방법은 매우 간단하며, 설정에서 온라인 계정을 추가하면 쉽게 연결할 수 있다.
+
+---
+
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/32e6f3c3-96c0-4180-8211-f2d86c1da253/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665FWXKQGV%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T080900Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJHMEUCIQCX2rRs4PigC0KTNQMVjWFRshrLZPX9%2BErUyemgtklnsgIgXAQ9wLnZ%2BP2T2tPhot6Lk%2FdbusX1GHooZmjmeiD2FQ0q%2FwMIKRAAGgw2Mzc0MjMxODM4MDUiDCjzic6leKp7Fy1ezCrcA9h8W7FekdBHpTOwOElhHnNTdmTuK1gQhTrXhoYVaofjyifQA2JWCBa3R0%2Bg1MrWGkkP66no846vHXM3ZqaQlTZadkmONE4sSyID6V95j9jwHm1FbOQcPOiakSZdLqDFcV%2Fc0%2FFU3N4Eh5moZEhPMo%2BYAZNFrwpCwOCjOKhxVVhFYuwcKVnyazxI79pZZwDSRC1jmQnS3Hbq%2BEfG23sKrurYhqqRbynHzGTaeT7I%2FCsVJ2n5WYqvMZMAknjqe817Iszqa%2BPgmZ1PjAqLTBRnROsuNlbRqJvmePcA5vwc%2Bm101tyC0YeoFgfRR7ivGY3%2FCx7%2BqluhG9CaMC%2F9luAdo0%2FdIAYlPRntsLE9Edl1xWnMIBE%2Fd0xK%2FkVSOxcuFcmJbLGiXmoFxbBpmYL1M0Qd8OEsI%2FQAD%2F5fSRJtJ2RU%2BDnzha0Ary2jqI0AoGzYlcbyr17EepmsCgIv9spv17d28oFKHnLbH4GzN1aGPXdE66A0PStGwHhk6rqgXbIPRWvAuRnASD4T02f7JtdpkAdHLySLDKnYGCTcpdcSOXV9fCIG2sYK%2F5rb9%2BWGbJV%2BWjnFe9gFKeNbqarIstaimF7C%2FqWWEVEr8pvdpH4eoZl6ny0Zndm5PAXuYJoY9hMVMIfPh8QGOqUBo7MQechsmNNCXbqhDVoLFXDqpAhu%2Bxe3Q%2Bp70hbKz81jotlxO%2FKYmrak7eAVEvVraffRkf5zPjZYivb4q6xaB2IfH5L6BFEQQUBUi%2F4nYQNjX0uaBbqjRSWCzhn4OgQf0HSueWwvGYBS5IF3y9XIyADBawH08EeHHrW3YaLDviKt98zjcBht21rccVZjZD5IPDh7yAoeT%2B0aSt6fdRLJjTdUwiTS&X-Amz-Signature=97ec147948a5be773cda1baeecb5111cd215519d92462b5e38d6f2de8494bc6d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+
+[https://fedoramagazine.org/connect-your-google-drive-to-fedora-workstation/](https://fedoramagazine.org/connect-your-google-drive-to-fedora-workstation/)
+
+너무나도 간단했다…
+
+그냥 
+
+설정 - 온라인계정 - 구글 추가하면
+
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/cc800e66-0b27-4d82-8334-d53024e8b8ed/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665FWXKQGV%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T080900Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJHMEUCIQCX2rRs4PigC0KTNQMVjWFRshrLZPX9%2BErUyemgtklnsgIgXAQ9wLnZ%2BP2T2tPhot6Lk%2FdbusX1GHooZmjmeiD2FQ0q%2FwMIKRAAGgw2Mzc0MjMxODM4MDUiDCjzic6leKp7Fy1ezCrcA9h8W7FekdBHpTOwOElhHnNTdmTuK1gQhTrXhoYVaofjyifQA2JWCBa3R0%2Bg1MrWGkkP66no846vHXM3ZqaQlTZadkmONE4sSyID6V95j9jwHm1FbOQcPOiakSZdLqDFcV%2Fc0%2FFU3N4Eh5moZEhPMo%2BYAZNFrwpCwOCjOKhxVVhFYuwcKVnyazxI79pZZwDSRC1jmQnS3Hbq%2BEfG23sKrurYhqqRbynHzGTaeT7I%2FCsVJ2n5WYqvMZMAknjqe817Iszqa%2BPgmZ1PjAqLTBRnROsuNlbRqJvmePcA5vwc%2Bm101tyC0YeoFgfRR7ivGY3%2FCx7%2BqluhG9CaMC%2F9luAdo0%2FdIAYlPRntsLE9Edl1xWnMIBE%2Fd0xK%2FkVSOxcuFcmJbLGiXmoFxbBpmYL1M0Qd8OEsI%2FQAD%2F5fSRJtJ2RU%2BDnzha0Ary2jqI0AoGzYlcbyr17EepmsCgIv9spv17d28oFKHnLbH4GzN1aGPXdE66A0PStGwHhk6rqgXbIPRWvAuRnASD4T02f7JtdpkAdHLySLDKnYGCTcpdcSOXV9fCIG2sYK%2F5rb9%2BWGbJV%2BWjnFe9gFKeNbqarIstaimF7C%2FqWWEVEr8pvdpH4eoZl6ny0Zndm5PAXuYJoY9hMVMIfPh8QGOqUBo7MQechsmNNCXbqhDVoLFXDqpAhu%2Bxe3Q%2Bp70hbKz81jotlxO%2FKYmrak7eAVEvVraffRkf5zPjZYivb4q6xaB2IfH5L6BFEQQUBUi%2F4nYQNjX0uaBbqjRSWCzhn4OgQf0HSueWwvGYBS5IF3y9XIyADBawH08EeHHrW3YaLDviKt98zjcBht21rccVZjZD5IPDh7yAoeT%2B0aSt6fdRLJjTdUwiTS&X-Amz-Signature=785b97bceb5516e72f2e1440d73846aac99ea3d3ffb22d2008aa3725d10b50c9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+
+![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/70235bd5-87ff-4a55-b8e4-da6fd0f24d6b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665FWXKQGV%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T080900Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAAaCXVzLXdlc3QtMiJHMEUCIQCX2rRs4PigC0KTNQMVjWFRshrLZPX9%2BErUyemgtklnsgIgXAQ9wLnZ%2BP2T2tPhot6Lk%2FdbusX1GHooZmjmeiD2FQ0q%2FwMIKRAAGgw2Mzc0MjMxODM4MDUiDCjzic6leKp7Fy1ezCrcA9h8W7FekdBHpTOwOElhHnNTdmTuK1gQhTrXhoYVaofjyifQA2JWCBa3R0%2Bg1MrWGkkP66no846vHXM3ZqaQlTZadkmONE4sSyID6V95j9jwHm1FbOQcPOiakSZdLqDFcV%2Fc0%2FFU3N4Eh5moZEhPMo%2BYAZNFrwpCwOCjOKhxVVhFYuwcKVnyazxI79pZZwDSRC1jmQnS3Hbq%2BEfG23sKrurYhqqRbynHzGTaeT7I%2FCsVJ2n5WYqvMZMAknjqe817Iszqa%2BPgmZ1PjAqLTBRnROsuNlbRqJvmePcA5vwc%2Bm101tyC0YeoFgfRR7ivGY3%2FCx7%2BqluhG9CaMC%2F9luAdo0%2FdIAYlPRntsLE9Edl1xWnMIBE%2Fd0xK%2FkVSOxcuFcmJbLGiXmoFxbBpmYL1M0Qd8OEsI%2FQAD%2F5fSRJtJ2RU%2BDnzha0Ary2jqI0AoGzYlcbyr17EepmsCgIv9spv17d28oFKHnLbH4GzN1aGPXdE66A0PStGwHhk6rqgXbIPRWvAuRnASD4T02f7JtdpkAdHLySLDKnYGCTcpdcSOXV9fCIG2sYK%2F5rb9%2BWGbJV%2BWjnFe9gFKeNbqarIstaimF7C%2FqWWEVEr8pvdpH4eoZl6ny0Zndm5PAXuYJoY9hMVMIfPh8QGOqUBo7MQechsmNNCXbqhDVoLFXDqpAhu%2Bxe3Q%2Bp70hbKz81jotlxO%2FKYmrak7eAVEvVraffRkf5zPjZYivb4q6xaB2IfH5L6BFEQQUBUi%2F4nYQNjX0uaBbqjRSWCzhn4OgQf0HSueWwvGYBS5IF3y9XIyADBawH08EeHHrW3YaLDviKt98zjcBht21rccVZjZD5IPDh7yAoeT%2B0aSt6fdRLJjTdUwiTS&X-Amz-Signature=3c1718ee73594557f5072981be216f846983924d06e54ed23c1209db9ae5233f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+
+
