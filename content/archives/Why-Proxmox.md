@@ -2,7 +2,7 @@
 title: "나는 어떻게 Proxmox까지 도달하게 되었는가?"
 date: 2025-06-12
 description: "개인적인 불편함에서 시작된 Proxmox 홈서버 구축이 Type1 하이퍼바이저의 효율성과 유연성을 깨닫고, 시스템 전반을 이해하는 엔지니어로서 성장하게 된 과정과 고민을 담은 회고록입니다."
-featured_image: "https://media.licdn.com/dms/image/v2/D5612AQEsIJzq-JKYsg/article-cover_image-shrink_720_1280/B56ZftgbftG0AI-/0/1752036392444?e=1758758400&v=beta&t=mzI0Cm9u70TWNAbhNoCHTUoyJBEhf4OBW9XwW7FDiw4"
+featured_image: "https://i.ytimg.com/vi/UlMMQDJUF8s/maxresdefault.jpg"
 tags: ["Homelab", "Proxmox", "Server", "Virtualization", "Hypervisor", "KVM", "LXC", "Networking", "Self-hosting", "회고"]
 categories: ["Homelab"]
 ---
