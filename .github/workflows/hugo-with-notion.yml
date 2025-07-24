@@ -49,6 +49,19 @@ jobs:
 
           NOTION_SECRET="${{ secrets.NOTION_SECRET }}" DATABASE_ID="${{ secrets.DATABASE_ID }}" node scripts/sync-notion.js
 
+      # 동기화된 파일들을 저장소에 커밋
+      - name: Commit Notion sync changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add content/posts/
+          git add notion_cache.json || true
+          
+          if ! git diff --staged --quiet; then
+            git commit -m "feat: Notion 포스트 동기화 업데이트"
+            git push
+          fi
+
       
 
       - name: Build with Hugo
