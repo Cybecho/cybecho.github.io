@@ -145,3 +145,9 @@ Go 언어로 커스텀 모니터링 시스템을 만들어보는 것도 재미�
 앞으로도 이 여정은 계속될 것이다. 다음에는 어떤 새로운 도전이 기다리고 있을지 기대된다. 분산 시스템일 수도 있고, 더 고도화된 AI 시스템일 수도 있고, 아니면 아직 상상하지 못한 완전히 새로운 영역일 수도 있다.
 
 하지만 어떤 도전이 와도, 이 삽질의 여정에서 쌓은 경험과 자신감이 있다면 해낼 수 있을 것이라 믿는다. 왜냐하면 이미 증명했으니까. 모르는 걸 알게 만들고, 안 되는 걸 되게 만드는 것. 그게 바로 엔지니어의 본질이 아닐까.
+
+## 참고자료
+
+[효율적인 VMWare 인프라 운영을 위한 최적의 VM 집적도 테스트 - tech.kakao.com](https://tech.kakao.com/posts/634)
+
+[Dynamic Memory Management - Proxmox VE](https://pve.proxmox.com/wiki/Dynamic_Memory_Management)
