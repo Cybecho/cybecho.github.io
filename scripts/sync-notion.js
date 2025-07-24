@@ -6,11 +6,21 @@ const path = require('path');
 
 const notion = new Client({ auth: process.env.NOTION_SECRET });
 const CACHE_FILE = 'notion_cache.json';
+const GIT_CACHE_FILE = '.notion_cache_git.json'; // Git에 저장될 캐시
 
 function loadCache() {
   try {
+    // Git 캐시 파일을 우선 시도 (지속적 캐시)
+    if (fs.existsSync(GIT_CACHE_FILE)) {
+      const gitCache = JSON.parse(fs.readFileSync(GIT_CACHE_FILE, 'utf8'));
+      console.log('Loaded persistent cache with', Object.keys(gitCache).length, 'entries');
+      return gitCache;
+    }
+    // 임시 캐시 파일 (현재 세션용)
     if (fs.existsSync(CACHE_FILE)) {
-      return JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
+      const tempCache = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
+      console.log('Loaded session cache with', Object.keys(tempCache).length, 'entries');
+      return tempCache;
     }
   } catch (error) {
     console.log('Cache load error:', error.message);
@@ -20,8 +30,10 @@ function loadCache() {
 
 function saveCache(cache) {
   try {
+    // 세션 캐시와 Git 캐시 모두 저장
     fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
-    console.log('Cache saved successfully');
+    fs.writeFileSync(GIT_CACHE_FILE, JSON.stringify(cache, null, 2));
+    console.log('Cache saved successfully (session + persistent)');
   } catch (error) {
     console.error('Cache save error:', error.message);
   }
@@ -373,17 +385,26 @@ async function syncNotionDatabase() {
         const postDir = 'content/posts/' + slug;
         const postFile = postDir + '/index.md';
 
-        // 캐시 + 파일 존재 확인
-        if (cache[pageId] && 
-            cache[pageId].last_edited_time === lastEditedTime && 
-            fs.existsSync(postFile)) {
-          console.log('Skipped (no changes):', originalTitle);
+        // 향상된 캐시 검증 로직
+        const isCacheValid = cache[pageId] && 
+                           cache[pageId].last_edited_time === lastEditedTime &&
+                           cache[pageId].slug === slug &&
+                           fs.existsSync(postFile);
+        
+        if (isCacheValid) {
+          console.log('✅ Skipped (cached):', originalTitle);
           newCache[pageId] = cache[pageId];
           skippedCount++;
           continue;
         }
-
-        console.log('Processing:', originalTitle);
+        
+        // 부분 업데이트 확인 (파일은 있지만 캐시 정보가 다름)
+        const isPartialUpdate = cache[pageId] && fs.existsSync(postFile);
+        if (isPartialUpdate) {
+          console.log('🔄 Updating:', originalTitle, '(cache mismatch)');
+        } else {
+          console.log('📝 Processing:', originalTitle, '(new post)');
+        }
 
         const dateValue = page.properties['Date']?.date?.start || page.created_time;
         const tags = page.properties['Tags']?.multi_select?.map(tag => tag.name) || [];
@@ -449,9 +470,12 @@ async function syncNotionDatabase() {
 
         newCache[pageId] = {
           last_edited_time: lastEditedTime,
-          title: originalTitle, // 원본 제목 저장
+          title: originalTitle,
           slug: slug,
-          processed_at: new Date().toISOString()
+          processed_at: new Date().toISOString(),
+          tags: tags,
+          themes: themes,
+          has_content: blockContent.trim().length > 0
         };
 
         if (cache[pageId]) {
@@ -472,10 +496,12 @@ async function syncNotionDatabase() {
     saveCache(newCache);
 
     console.log('\n🎯 동기화 완료:');
-    console.log('📝 성공:', successCount + '개');
+    console.log('📊 전체 포스트:', allPages.length + '개');
+    console.log('✅ 캐시 적중:', skippedCount + '개');
     console.log('🔄 업데이트:', updatedCount + '개');  
-    console.log('⏭️ 스킵:', skippedCount + '개');
+    console.log('📝 신규 생성:', (successCount - updatedCount) + '개');
     console.log('⚡ 캐시 효율:', Math.round((skippedCount / allPages.length) * 100) + '%');
+    console.log('💾 지속적 캐시: 활성화');
     console.log('🏷️ 시리즈 지원: 활성화');
 
   } catch (error) {
