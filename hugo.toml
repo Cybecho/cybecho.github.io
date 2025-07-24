@@ -34,8 +34,8 @@ mainSections = ["posts"]
   # Google Analytics (설정 시 추가)
   # googleAnalytics = "G-XXXXXXXXXX"
   
-  # Google Search Console (설정 시 추가)  
-  # googleSiteVerification = "XXXXXXXXXXXXXXXXXXXX"
+  # Google Search Console 
+  googleSiteVerification = "Qo0OxfN5ruMcndy9ZDJD0ldtj-8gqSZkhc_0C2bx6Po"
 
   
   postSectionName = "블로그"
