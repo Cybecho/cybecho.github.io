@@ -17,7 +17,7 @@ notion_url: "https://www.notion.so/Notion-to-Obsidian-01ad5251f7ea4ee2bc280ba9ff
 ---
 
 
-![Image](https://obsidian.md/images/2023-06-logo.png)
+![Image](image_49f5a6ca9beb.png)
 
 🔗 [https://help.obsidian.md/import/notion](https://help.obsidian.md/import/notion)
 
@@ -33,7 +33,7 @@ Obsidian은 Notion의 HTML 내보내기 형식을 사용합니다. [Notion 웹�
 4. **내보내기 형식** 에서 **HTML을** 선택합니다 .
 5. `.zip`이메일을 통해 또는 브라우저에서 직접 파일을 받게 됩니다 .
 
-![Image](https://publish-01.obsidian.md/access/f786db9fac45774fa4f0d8112e232d67/Attachments/notion-export.png)
+![Image](image_2d6035bc6ba4.png)
 
 ## Notion 데이터를 Obsidian으로 가져오기
 

@@ -48,7 +48,7 @@ DNS를 Oracle 서버로 연결
 
 모두 Tailscale이 설치되고 연결되어있어야합니다.
 
-![Image](https://svrforum.com/files/attach/images/2023/11/13/2e4a75447f6d8f557f9e2120d72453ec.jpg)
+![Image](image_08a2ffc30071.jpg)
 
 ## 구성방법
 
@@ -64,11 +64,11 @@ DNS를 Oracle 서버로 연결
 
 그리고 나서 내부 서비스용 tailscale ip를 확인해줍니다.
 
-![Image](https://svrforum.com/files/attach/images/2023/11/13/ab9e8b7a72c6630cf7634ebd64fde333.jpg)
+![Image](image_6ecec80ca3a2.jpg)
 
 오라클클라우드에서 아래처럼 ping이 잘되면 통신도 잘되는것 입니다.
 
-![Image](https://svrforum.com/files/attach/images/2023/11/13/081e614af2a5eeb43c129a095bddf468.jpg)
+![Image](image_51d08dc8c450.jpg)
 
 이제 npm으로 프록시만 잘해주면 되겠죠?
 
@@ -80,11 +80,11 @@ NPM에서 새로운 프록시를해주시면 되는데요.
 
 Foward IP만 아래처럼 Tailscale ip를 넣어주시면됩니다.
 
-![Image](https://svrforum.com/files/attach/images/2023/11/13/92beb33fdaa774611d17376db7e7f597.jpg)
+![Image](image_30f6a64db88f.jpg)
 
 그리고나서 연결해보면 짠! 잘됩니다.
 
-![Image](https://svrforum.com/files/attach/images/2023/11/13/094ec90030627bd1e91d3f976606054a.jpg)
+![Image](image_924c5c7118ed.jpg)
 
 잘 응용하시면 NAS도 연결가능하고 여러가지로 활용가능하니~ 참고해주시면 되겠습니다!
 

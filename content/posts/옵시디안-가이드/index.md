@@ -17,7 +17,7 @@ notion_url: "https://www.notion.so/f44f605dea1f4c4fa732f9e11042ff5a"
 ---
 
 
-![Image](https://obsidian.md/images/2023-06-logo.png)
+![Image](image_49f5a6ca9beb.png)
 
 ---
 

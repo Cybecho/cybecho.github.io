@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/chat-GPT-5d9039593822443a8dcf23915d63dfaa"
 
 ---
 
-![Image](https://media.smallbiztrends.com/2023/01/what-is-chatgpt.png)
+![Image](image_b7225019578e.png)
 
 # 참고 사이트
 

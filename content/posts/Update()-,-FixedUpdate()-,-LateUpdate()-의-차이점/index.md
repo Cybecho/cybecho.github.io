@@ -24,7 +24,7 @@ notion_url: "https://www.notion.so/Update-FixedUpdate-LateUpdate-68007877d2e64e8
 
 - **Update()** - 스크립트가 enabled 상태일때, 매 프레임마다 호출됩니다. 일반적으로 가장 빈번하게 사용되는 함수이며, 물리 효과가 적용되지 않은 오브젝트의 움직임이나 단순한 타이머, 키 입력을 받을 때 사용됩니다.
 - **FixedUpdate()** - 프레임을 기반으로 호출되는 Update 와 달리 Fixed Timestep에 설정된 값에 따라 일정한 간격으로 호출됩니다. 물리 효과가 적용된(Rigidbody) 오브젝트를 조정할 때 사용됩니다(Update는 불규칙한 호출임으로 물리엔진 충돌검사 등이 제대로 안될 수 있음).
-![Image](http://2.bp.blogspot.com/-oiA6GKz_rO8/VCoGUjgaIBI/AAAAAAAABEA/x_ckOzgK0aQ/s1600/Unity-Fixed-Update-Loop.gif)
+![Image](image_7fd1687e17d8.gif)
 
 - **LateUpdate()** - 모든 Update 함수가 호출된 후, 마지막으로 호출됩니다. 주로 오브젝트를 따라가게 설정한 카메라는 LateUpdate 를 사용합니다(카메라가 따라가는 오브젝트가 Update함수 안에서 움직일 경우가 있기 때문).
 ![Image](http://2.bp.blogspot.com/-hE4Ax8_ltjI/VCoGUjBQBEI/AAAAAAAABEE/HgNgArAm4oU/s1600/Unity-Update-Loop.gif)

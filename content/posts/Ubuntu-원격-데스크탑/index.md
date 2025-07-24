@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Ubuntu-054d2f616e1a41019b6021cbc937e203"
 
 ---
 
-![Image](https://i.ytimg.com/vi/RPBnyAFJ6gQ/maxresdefault.jpg)
+![Image](image_ef39336d0ce0.jpg)
 
 팀뷰어나 애니데스크를 쓰라고하네요 혹은 freenx
 

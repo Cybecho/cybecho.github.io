@@ -80,9 +80,9 @@ View other drafts
 
 **volume_up**
 
-![Image](https://www.gstatic.com/lamda/images/sparkle_resting_v2_darkmode_2bdb7df2724e450073ede.gif)
+![Image](image_ae68abad0a23.gif)
 
-![Image](https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/emoji.svg)
+![Image](image_9b0d0a2d54a1.png)
 
 이 에러는 pacaur가 텍스트 편집기를 찾을 수 없다는 것을 의미합니다. pacaur는 패키지를 설치하거나 업데이트할 때 텍스트 편집기를 사용하여 패키지 설명서를 편집해야 합니다.
 

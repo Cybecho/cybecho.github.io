@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-RAM-d11311fd70704e519538cc5e7f3dc13a"
 
 ---
 
-![Image](https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/2281811189/B.jpg?980000000)
+![Image](image_c7649e0f494e.jpg)
 
 🔗 [https://blog.naver.com/si1si2si3/221615738585](https://blog.naver.com/si1si2si3/221615738585)
 

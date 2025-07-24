@@ -46,7 +46,7 @@ Contents:
 $ sudo apt update && sudo apt upgrade -y
 ```
 
-![Image](https://junorionblog.co.kr/wp-content/uploads/2023/10/image-90-optimized.png)
+![Image](image_d9a85cb7f07d.png)
 
 ## Step 2: 패키지 설치 (Package Install)
 
@@ -56,7 +56,7 @@ $ sudo apt update && sudo apt upgrade -y
 $ sudo apt install software-properties-common apt-transport-https wget -y
 ```
 
-![Image](https://junorionblog.co.kr/wp-content/uploads/2023/10/image-91-1024x297-optimized.png)
+![Image](image_14cd70645122.png)
 
 ## Step 3: 저장소 가져오기
 
@@ -66,33 +66,33 @@ Visual Studio Code 설치를 위해 Visual Studio Code 리포지토리를 추가
 wget -O- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscode.gpg
 ```
 
-![Image](https://junorionblog.co.kr/wp-content/uploads/2023/10/image-98-1024x188-optimized.png)
+![Image](image_5623a21c03f1.png)
 
 ```plain text
 echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main | sudo tee /etc/apt/sources.list.d/vscode.list
 ```
 
-![Image](https://junorionblog.co.kr/wp-content/uploads/2023/10/image-99-1024x46-optimized.png)
+![Image](image_e73301a4dec8.png)
 
 ## Step 4: 시스템 업데이트 다시
 
 패키지를 설치하고, 저장소를 추가 했으므로, 시스템 업데이트를 다시 수행한다.
 
-![Image](https://junorionblog.co.kr/wp-content/uploads/2023/10/image-94-optimized.png)
+![Image](image_3e88e52a7494.png)
 
 ## Step 5: Visual Studio Code 설치
 
 Visual Studio Code를 설치한다.
 
-![Image](https://junorionblog.co.kr/wp-content/uploads/2023/10/image-95-1024x295-optimized.png)
+![Image](image_5b2d9bf0e66c.png)
 
 설치가 완료되었으면, 검색창에 code를 입력하여 Visual Studio Code가 install 되어 있는지 확인한다.
 
-![Image](https://junorionblog.co.kr/wp-content/uploads/2023/10/image-96-optimized.png)
+![Image](image_0d89b2cb5200.png)
 
 아래는 설치된 Visual Studio Code를 실행한 화면이다.
 
-![Image](https://junorionblog.co.kr/wp-content/uploads/2023/10/image-97-1024x562-optimized.png)
+![Image](image_8e4bf897e90b.png)
 
 ## 참조
 

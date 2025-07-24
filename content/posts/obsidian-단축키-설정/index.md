@@ -17,7 +17,7 @@ notion_url: "https://www.notion.so/obsidian-4003008f6f1c4be0a6c9bcf5dad94569"
 ---
 
 
-![Image](https://obsidian.md/images/2023-06-logo.png)
+![Image](image_49f5a6ca9beb.png)
 
 🔗 [https://www.reddit.com/r/ObsidianMD/comments/kaqyvb/shortcut_for_collapsing_side_panels/](https://www.reddit.com/r/ObsidianMD/comments/kaqyvb/shortcut_for_collapsing_side_panels/)
 

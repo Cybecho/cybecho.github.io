@@ -22,7 +22,7 @@ notion_url: "https://www.notion.so/e13d33b8ddfa42018b7e72cad16ab217"
 
 저는 최근에 MacBook Pro를 포맷하고 개발 환경을 설정했으며 현재 작업 중인 개인 프로젝트에 몇 가지 변경 사항을 적용했습니다. 놀랍게도 내 모든 새 커밋이 내 기여도 그래프에 표시되지 않았습니다! 얼마나 실망스럽습니까?
 
-![Image](https://miro.medium.com/v2/resize:fit:1400/1*i5kspLfcTfk1NjmJUYJJaQ.png)
+![Image](image_b7fb08e870a0.png)
 
 기여도는 내 기여도에 포함되지 않습니다.
 
@@ -39,13 +39,13 @@ notion_url: "https://www.notion.so/e13d33b8ddfa42018b7e72cad16ab217"
 
 **1단계:** Github 계정에서 페이지 오른쪽 상단에 있는 설정 섹션으로 이동하거나 다음 URL -> [https://github.com/settings/profile 로 간단히 이동할 수 있습니다.](https://github.com/settings/profile)
 
-![Image](https://miro.medium.com/v2/resize:fit:828/1*FIIVmq2-T-ql_7vG60isSA.png)
+![Image](image_3e437cceeb82.png)
 
 **2단계:** 그런 다음 이메일 섹션으로 이동합니다.
 
 기본 이메일 주소는 로컬 Git의 주소와 일치해야 합니다.
 
-![Image](https://miro.medium.com/v2/resize:fit:1400/1*OFeKGCF2B10fDe-MzStExw.png)
+![Image](image_94018f300f51.png)
 
 # "좋아, 그럼 내 로컬 Git 이메일 주소를 어떻게 알 수 있지?"
 
@@ -86,7 +86,7 @@ git config --global user.email
 
 **5단계:** 모든 준비 완료! [이제 Github](https://github.com/) 에 변경 사항을 커밋하고 푸시할 수 있으며 기여도 그래프에 표시됩니다!
 
-![Image](https://miro.medium.com/v2/resize:fit:1400/1*m2Gb6IvZLENmpyhN1ucUiw.png)
+![Image](image_8db747d03757.png)
 
 > 이게 도움이 되길 바란다
 

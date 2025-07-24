@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Windows-WSL2-Vmmem-RAM-db3cfd373d6e4353a5067c
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/f01f2d3b-078b-4f40-bed7-3a8c010cffbc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466ZPATLIOG%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115935Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLXdlc3QtMiJIMEYCIQCJgsvls7%2B3vF%2B0qiV85oa1LbGAfpuIrMIYPfwptZISqAIhAMIpDvuM40MoQKvhvu9sRdANZJLiJf05TY9Zl2SsvXojKv8DCC0QABoMNjM3NDIzMTgzODA1IgyZEBnluDmo5V5ULNAq3APXmYPrEj2qC2vGv1ISWdmZaZKJKcbIWBOTK0%2FkHXOy7Wm44yMDD4z5%2FnL9qSp7dOc5CR6LAQ5vnUzNvgs%2B2mLpY9LJ4HHabkhAxtoYMjI5gVM4GYj6Ptz%2FdlqUwKBvjF250gmqrPowlX5Hfbxf9AecjhgFsK3bLyr2xJRcTIf8%2Bo2moZ4dEtCgNkcYPLMVzPC96MK%2BigYdhtpvP2nUmZWANjx7cZw1XqfX5QoarEdds5mn2gQgTRqc7c964GQnqs8EBcgxBuFU0s%2FXcY%2FAkiXMWnHvlXXFM%2Fu16%2F3oqORnoQgeBhm8GgnzqrkQOmpNw6aIyTOp0%2BPbqdG2Wixib6M%2Fy4qqEiY0k46YF30DAWYYqcRi%2BEfeTEW266QY8asag2Fbhvj4pyv44%2BAMEV7ZrU%2BeNt0t1xhOb%2BNJEvYZToBww3N32gybSbC8maA7p5eJNPBdneSRaRn7HKtbX%2F2ZRz%2FQU%2BPV8GMjd9SkdW9Z79ynurVr7xZNjRl7yqlq8T06k8XslYdfOfKVMG3J0LQcDc6u7cAOQS02GzE4fiIbfVkdikCW5kpVdwdTXVWKN36BONHJEYcKP33qXorGb4KHA1rqWVYWVdTcxw1DxAf2TvRNUgsC9qd%2FDqqoQlgVRjCBv4jEBjqkAeEu4Pdas%2BKYqpivBq%2FyKPKJeYzbINHqJkPVb7onlsIK2LEoMUh0fNnMKfOaTIKo0P8DWjSsOHzc%2BlwfYA6SO%2BO%2B1oz7H3n613a6%2F1SqEvOp5F5BeQFeVlYievQnlTfaoDkQI7k0g94BQMfsJpJKskA7hTjMUkMqKrySbS%2F1pRhNaitJfViUVoR6fTGpsE8SQBi5LedmxOKuVoM8MtQg0lJLeCEV&X-Amz-Signature=b3a957d8b41f8ccebaa87bb951805bbf1520a6446ec9467da419cd42f9ec6e1d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](image_9046107fa3a9.png)
 
 🔗 [https://xpectation.tistory.com/216](https://xpectation.tistory.com/216)
 
@@ -28,7 +28,7 @@ notion_url: "https://www.notion.so/Windows-WSL2-Vmmem-RAM-db3cfd373d6e4353a5067c
 $ free -h
 ```
 
-![Image](https://blog.kakaocdn.net/dn/PRx0T/btrHpDDAGA1/ose8j40BOvHaVkeQk4sHM0/img.png)
+![Image](image_9da48f637947.png)
 
 보시다시피, 물리 메모리가 7.6GB, Swap기술을 통해 SSD에서 땡겨온 메모리가 2.0GB. 도합 8.6GB 되시겠다.
 
@@ -52,7 +52,7 @@ WSL은 어디까지나 Windows의 하위 시스템이므로 WSL의 설정은 WSL
 
 앞서 살펴보았을 때, 실제 사용 RAM이 2.1GB 였다는 점에서 이 사용공간을 기준으로 2배 정도로 설정 해주었다. 아래는 위 설정을 해준 이후의 모습.
 
-![Image](https://blog.kakaocdn.net/dn/7UjU3/btrHowSdDT9/TA2kLa9jkrvYIwehst0KUK/img.png)
+![Image](image_533cd0e38bc1.png)
 
 swap 기능은 SSD 용량을 땡겨와서 가상RAM으로 활용하는 기술인데, SSD 사용량이 증가하고 Read/Write 횟수가 많아진다는 단점은 있지만, 요즘은 SSD 기술이 많이 발전하여 일반적으로 많이 쓰이는 기술이라는 점에서 켜두었다. 또한, 4GB로 설정해둔 점이 그리 넉넉한 세팅은 아니라고 생각하기에 RAM이 갑작스럽게 부족해지면 예기치 못한 문제가 발생할 수 있다는 점에서 급할 때 땡겨쓸 수 있는 Swap 기능을 켜두었다.
 
@@ -72,7 +72,7 @@ swap 기능은 SSD 용량을 땡겨와서 가상RAM으로 활용하는 기술인
 
 위 링크에 들어가면 아래과 같은 짤도 볼 수 있다.
 
-![Image](https://blog.kakaocdn.net/dn/yGG75/btrHrMTWzDL/yt0ojHAKKwtUlmrLT0hKN1/img.png)
+![Image](image_e959b114b120.png)
 
 나보다 더 하다.
 

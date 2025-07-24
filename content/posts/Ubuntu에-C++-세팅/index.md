@@ -72,35 +72,35 @@ sudo apt install cmake
 
 # VSCode에서 C/C++ extension 설치
 
-![Image](https://blog.kakaocdn.net/dn/zuhwk/btsjj8mzzF2/oNg9ly4ed9BuSYB3K3K9bK/img.png)
+![Image](image_702d9a919ca6.png)
 
 3. Ctrl + Shift + P로 구성 편집(UI) 선택
 
-![Image](https://blog.kakaocdn.net/dn/M2aD7/btsjkNa4EOH/zLbeAFH4t65R160BK5KmQk/img.png)
+![Image](image_b4d472323616.png)
 
 4. 컴파일러 선택 (C: gcc, C++: g++)
 
-![Image](https://blog.kakaocdn.net/dn/wdmCy/btsjj96QQm4/oyVWkmWoOwSZRfThbvV8l1/img.png)
+![Image](image_46442a6b4b5d.png)
 
 5. IntelliSense 모드
 
-![Image](https://blog.kakaocdn.net/dn/bR7UD3/btsjjzqSA53/QljTKMzk4NuKhXbklNWlY1/img.png)
+![Image](image_f0f39b0d9252.png)
 
 6. 설정파일 확인
 
 - 위 설정한 값들이 아래 json 파일 형태로 저장됨을 확인
-![Image](https://blog.kakaocdn.net/dn/X7xL9/btsjtzoMKvT/mUkwlZGyNhiGHnJUM9dDw1/img.png)
+![Image](image_200d3cfdd2a1.png)
 
 7. 템플릿에서 task.json 파일 만들기
 
 - 터미널 → 작업 구성 → 템플릿에서 tasks.json 파일 만들기 → Others
-![Image](https://blog.kakaocdn.net/dn/bo0XqZ/btsjnIzPMVF/I8sf8HmCdZ3uaR67fBMxC1/img.png)
+![Image](image_773f843fcebe.png)
 
-![Image](https://blog.kakaocdn.net/dn/5PThu/btsjkLK5s3y/jwcbquNxL3ckBXqQTtw7L0/img.png)
+![Image](image_0f69a4a6c637.png)
 
-![Image](https://blog.kakaocdn.net/dn/AyfMI/btsjtBfPJTG/qKrKnz1ZCHVgN9eXsGHBM0/img.png)
+![Image](image_d309a76f18d5.png)
 
-![Image](https://blog.kakaocdn.net/dn/dhStO2/btsjseZlIyE/krVmENyY3SiG8RJtMkQStk/img.png)
+![Image](image_208cbffd8f0f.png)
 
 8. 코드 복사 수정
 
@@ -198,15 +198,15 @@ sudo apt install cmake
 9. 단축키 설정
 
 - 파일 → 기본 설정 → 바로 가기 키 [Ctrl+K, Ctrl+S]
-![Image](https://blog.kakaocdn.net/dn/biE3NZ/btsjk53YmYK/KkksKc9UowPRUHIFPXkk51/img.png)
+![Image](image_c4d7dd86931f.png)
 
 우측 상단 마우스 포인터가 가리키는 아이콘 클릭
 
-![Image](https://blog.kakaocdn.net/dn/bQr5Ll/btsjlFKGKIS/VlJ1MLWBPNa0izp7iD8ts1/img.png)
+![Image](image_dda8a8ebd155.png)
 
 빈 파일 확인
 
-![Image](https://blog.kakaocdn.net/dn/cGQLYb/btsjlWrNBHL/TZzBgcViMZ3CwzF0ZYLWN1/img.png)
+![Image](image_58ed176320ba.png)
 
 아래 내용 복사 붙여넣기
 
@@ -221,17 +221,17 @@ sudo apt install cmake
 ]
 ```
 
-![Image](https://blog.kakaocdn.net/dn/FdFGI/btsjpGPmsVK/JUt0VBgOn4VgCzJSQ1zsU0/img.png)
+![Image](image_12da25c41a87.png)
 
 Ctrl + Alt + C
 
-![Image](https://blog.kakaocdn.net/dn/qdls5/btsjlZvostZ/7EsJXLDQDYksTPpp7rpQ90/img.png)
+![Image](image_1bc3de638fad.png)
 
 save and compile for C++ 선택
 
-![Image](https://blog.kakaocdn.net/dn/JsNnS/btsjlEE252g/OP4yrcKOu54bPSuWkG2ov0/img.png)
+![Image](image_924c26a195d6.png)
 
 Ctrl + Alt + R
 
-![Image](https://blog.kakaocdn.net/dn/b9YCJt/btsjlEyhjWn/b95k5VawKHxRDga44RTfIk/img.png)
+![Image](image_597d399c98d0.png)
 

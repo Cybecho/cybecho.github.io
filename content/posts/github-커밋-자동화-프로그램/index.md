@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/github-de7dbe887e274d6493b646269b476e7d"
 
 ---
 
-![Image](https://github.blog/wp-content/uploads/2020/08/87471037-50ad3c80-c5e3-11ea-9f1b-7963f4615b28.png?fit=1200,630)
+![Image](image_7694b81670ff.png)
 
 
 > 끝났으니까 컴터 꺼버리고 잠이나 주무십쇼.

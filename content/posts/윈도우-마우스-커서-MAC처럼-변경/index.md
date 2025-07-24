@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/76cf1be8-f73f-40c3-8858-26b106fb746a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46646UQ7B7T%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115748Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIQCWE4v6h7y2kKm9Rg3wDINtd6oQwM5r4fn0u3QCiyLIjQIgMXYLbiwTczRPpe4PrBLRddunlWr6EDRl%2B%2FjE6ZpjF0Aq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDGtSC2SzUj%2FhQONj7SrcA%2BIfhPMDPOCKRiHYUCLO2o%2FHgDIEJzH0iYi8IiXXnvB6Ksm9OKaH0iThdv7ymdi%2Bj2FyBpZqfhgZBvXzO9d8hm2NFU05ApDmaftZaKBLp%2FKPX9l1sSp5Okkt3INjgD0ruNGnKcxv7XeFh2U9XztJrwUg6bUTqe6%2F21KHIgO14WBMRkDx3fGDEM%2BrfVDUfwBnFSuAZNZS4L5aRPcdHIYyCLesOXGDHUybGJLAH%2BiYaQNJCmLtqFYRsP6%2F1fJVXW6xpAiY9zaQTbj%2Fm1%2BEEn7WcwpbFvrg7ppiw7%2FKoaC0uObW86qbFbkQI1RNGFCn8EtLJdN0wzOB6DIFoOnQZqa%2B3YABAFkLnOzTfcgnMII%2F2wEuQFlvu8Ffox4kp52pvQwYome8n7OSBp5XwAyKlkunu%2BdB04SeQFkqfqt6q396r6WwEOsSXRH8jVPOwBBiXwlPo54whEDy%2B5xCLC%2FxP2iKyvTL20P%2BPy1t5J956n8LDhCBlFA%2BGST9j%2BTf4nNOk0JRlSZqIj5P58BmGsAkPY8UX5foWxG0vFH35NTABjdxILB3UZJo2%2FcVhiv48bmR%2B0bhBFhLZkGAOezFoAaYLQuWa1O%2BD3JbPouBRrykWTTHIMVNMHVEnU9jevMgYTEHMKWbiMQGOqUB%2FKxG5ZSzRP27Xlio4GUOpHHkGzWWhZ4wPWnkkfyejeRvLMQk%2FjdXSMT7D6HzQiErcbAAew2Yd%2Fz8sMI0FY%2B8DJAPjiAH3K22Pu%2FMbmKKeD73aWdBP8Ok9rddX8XF5bA%2Bag0%2FQv1d8aStwjus748sJ%2BuQyFt%2BlOsTQAA%2BoRsrzGFSXa8LNkicNTiO2eXWPfJOUPBnhEOMQeeeXuZaatlKU0Es82JF&X-Amz-Signature=a131a334948878e0962ef741a19924ebc8d09f6a64fa7710b8feaa1616e2a672&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](image_0ba9918139d4.png)
 
 # 윈도우 커서 MAC처럼
 
@@ -55,7 +55,7 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 
 
 
-![Image](https://mblogthumb-phinf.pstatic.net/MjAyMDA5MDRfMTIx/MDAxNTk5MTU1MzQ2ODY4.drilqpj4CR494lv0bG3RHSMuKUpgTsS2qPy4OHs8pwog.9QJ7tuqSTQ6Bt4erfRty_TPBktbqu5rkDOb_kE4zRmUg.PNG.minidexon/5.PNG?type=w800)
+![Image](image_b583c924a10c.png)
 
 
 
@@ -75,7 +75,7 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 ](https://blog.naver.com/minidexon/222079790460)[맥 OS 마우스커서 스킨입니다.적용 방법 및 사용방법은 아래 링크로 걸어두었습니다 :)다운...](https://blog.naver.com/minidexon/222079790460)[
 ](https://blog.naver.com/minidexon/222079790460)[blog.naver.com](https://blog.naver.com/minidexon/222079790460)
 
-![Image](https://dthumb-phinf.pstatic.net/?src=%22https%3A%2F%2Fblogthumb.pstatic.net%2FMjAyMDA5MDRfMTc2%2FMDAxNTk5MTU1MjM2MjQ2.ycnnl2vw1mgTRJfcAB5z42jQeqCrnPQuVfrku1v6_fIg.GCtBHAeTy9tYVtxfaE9Ra9vXPDdgoF6MIhICUVGSPCMg.PNG.minidexon%2F1.PNG%3Ftype%3Dw2%22&type=ff500_300)
+![Image](image_312f4e71ebfa.png)
 
 
 
@@ -89,7 +89,7 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 
 
 
-![Image](https://mblogthumb-phinf.pstatic.net/MjAyMDA5MDRfNDcg/MDAxNTk5MTU0Njc0MTMy.nq0T43Udu1v24wltIlmPaF2YMYjqqKjINuoK12TlZlkg.J5RqoqZNMiYYyTQTd_ZVRyw5d4l7g-41yEil0mG-E5Mg.PNG.minidexon/2.PNG?type=w800)
+![Image](image_471a55f7ab8f.png)
 
 
 
@@ -99,7 +99,7 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 
 
 
-![Image](https://mblogthumb-phinf.pstatic.net/MjAyMDA5MDRfOTEg/MDAxNTk5MTU0NzQxMjM5.oru4Uu2hCD2CoJOvfYV6JD8CoR8Wa7GzS9afK__I33Ig.hjPMAUyYpMs18XcLGcdykW7gt1MiLJMJlU6HY9P4X3wg.PNG.minidexon/3.PNG?type=w800)
+![Image](image_dd3892fdd48f.png)
 
 
 
@@ -109,7 +109,7 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 
 
 
-![Image](https://mblogthumb-phinf.pstatic.net/MjAyMDA5MDRfMjMg/MDAxNTk5MTU0Nzk0Mjc0.VUxAsqNHT_AaZH6RInWZSFI3CZ13Ps0KU9Z0hQqHC3gg.7bYzkki36DwTFENNfR4Ox5ZMzBc6PDdQaRHvnIDG8jMg.PNG.minidexon/4.PNG?type=w800)
+![Image](image_a936330d8bd4.png)
 
 
 

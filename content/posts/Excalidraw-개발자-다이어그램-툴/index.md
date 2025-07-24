@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Excalidraw-7cb30c5e770e4971b422ccb1404f0ec9"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/73789a5a-9013-49ba-b1a8-30913623f5d9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664WREH6JP%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115943Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLXdlc3QtMiJHMEUCIQC3B1JN1VO5788gauU8%2BUp5QLIiYRSPvdMmI2UoHfq7pwIgK4Fd%2BjoTpkwlqT6eghQ%2FQfR76J1e4wvwzAQifSb5WcUq%2FwMILRAAGgw2Mzc0MjMxODM4MDUiDLNZan4uJnqvGchWUSrcA0tfPMJl9OmqdBJobpEjoFdxJTDqghD7wLgM8EQuNpzGH8w3rIF0QPqwEt5sVhV0Q95Oo%2F%2B5Q363Wg7jWUt1TXPv9ReBtVB0gWcKYGHPEjT5jGwbURUrpGDqBzKlaCZxhh%2FzHc1FELZ6k6WaI9ozNseY7V1tlkoJceOyi8SQG4vAZllfDZNiwq69usjzdDcNu9Mz4eQsNcDifNzsqQeoPUCMkK3Qztio9T6lZAhx%2BWFqw%2FXBL6TVN%2F1lV9zGx%2B7MsP1N0q4EHIHansKL9YIk2zybQ57ejIxMmhW7BjO80hyVTzvWBvaSfGVOitSwF2dgKqEoWJdJZM%2F9d%2Bd%2BPE9vMzCW3esP9m2uWiEVW1g%2B2OtmNN3b8ZaW59gxlyH0S6jSGxgpn8M3KwDn98Cir9K%2FFGEfCDOTXrKwGpeLNA5lkhgeSBj9jhhr5804tg5hYVJHpxO%2BI%2F0Nl2THSYnskSzv4o8lDp2YzJgmtm4jEJfu8ov4Jkq0WPfhEYNLySuYT3YeCT%2FK3D78ULF%2FYAv45LhWls3QW0nsLVqbMMKsA7ZsCxoiwwba1iOCEdiEptmzwwOJ5W9wjn72zJLtKWHbfnLwbGnXVYvLfIMuzWqdb59%2F2M7vP%2FJhG%2BP3Vkdnm%2FacMJa%2FiMQGOqUBFfJhARye77cBSozP3HgNYMLvdXnZ2DpzopsnESLc5oy3wU79BUb%2BVSRH%2FfL%2BSLkP5XYlhosl%2BSorZBGUs0gC%2B43UtGau7ATKtd%2BBF%2F%2BjXtBy8jLvdLN3y4HnVFC9IFseRLmg%2FBqFz1v6WfQo6crPnqrrVoOmnoRfMcQbmtN2dnO%2FBUj0PWlVZkQblccqTnDLVSLOvy7UwVXBaeAI2btvCIz4gR9O&X-Amz-Signature=99c0603a5bcf66ed03f9532db4f530f9a38805f3ea2a599c7655a60c3c017313&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](image_2685b0724853.png)
 
 🔗 [https://hattbatt.tistory.com/entry/개발자-다이어그램-툴-추천-Excalidraw](https://hattbatt.tistory.com/entry/개발자-다이어그램-툴-추천-Excalidraw)
 
@@ -33,7 +33,7 @@ notion_url: "https://www.notion.so/Excalidraw-7cb30c5e770e4971b422ccb1404f0ec9"
 
 우선 예시로 Docker 공식 페이지에 나와있는 그림을 제가 다시 그려봤는데요, 어렵지않게 아래와같은 이미지를 만들어 낼 수 있습니다.
 
-![Image](https://blog.kakaocdn.net/dn/bf3mYs/btrLZy3GYpb/2PtfSWkHUuCG21q1iBy2Q0/img.png)
+![Image](image_1b18779d24a1.png)
 
 이미지들은 Excalidraw의 라이브러리에서 가져와서 사용하였습니다.
 
@@ -43,7 +43,7 @@ notion_url: "https://www.notion.so/Excalidraw-7cb30c5e770e4971b422ccb1404f0ec9"
 
 Excalidraw가 다이어그램 그리기에 최적화 되어있지는 않지만, Excalidraw libraries에서 필요한 이미지를 제공하고있어서 5분도 안걸린 것 같네요.
 
-![Image](https://blog.kakaocdn.net/dn/bvdK8y/btrLSuA97zo/0BWFWDDuSYEnoKU9hKkyPK/img.png)
+![Image](image_2ec8bb28e650.png)
 
 ### How To Use
 
@@ -55,7 +55,7 @@ Excalidraw가 다이어그램 그리기에 최적화 되어있지는 않지만, 
 
 위 웹페이지에 접속하면 바로 작업을 할 수 있습니다.
 
-![Image](https://blog.kakaocdn.net/dn/kThsw/btrLVX3YYHP/Ysy3W2frgcsWFoL2O4Wlj0/img.png)
+![Image](image_af1f87c30d9c.png)
 
 UI는 따로 설명해드리지 않아도 사용하기 어렵지 않을 만큼 직관적으로 구성되어있습니다.
 
@@ -63,7 +63,7 @@ UI는 따로 설명해드리지 않아도 사용하기 어렵지 않을 만큼 �
 
 ### **모드**
 
-![Image](https://blog.kakaocdn.net/dn/bAeXhC/btrLNvHPBj6/Tph812p1PUNhwlHJXpkld1/img.png)
+![Image](image_b719e460d80f.png)
 
 1 : 선택모드
 
@@ -71,7 +71,7 @@ UI는 따로 설명해드리지 않아도 사용하기 어렵지 않을 만큼 �
 
 5, 6 : 화살표와 직선, 선 더블클릭시 꼭짓점 추가하여 곡선 그리기 가능
 
-![Image](https://blog.kakaocdn.net/dn/bHyGuN/btrLZQQKg6b/TBtTfuFniObI4wkhVyLXs1/img.png)
+![Image](image_c8d7322579b2.png)
 
 7 : 자유 그리기 모드
 
@@ -79,7 +79,7 @@ UI는 따로 설명해드리지 않아도 사용하기 어렵지 않을 만큼 �
 
 폰트는 Virgil, 일반, Cascadia 세가지중 하나로 밖에 선택이 안됩니다.
 
-![Image](https://blog.kakaocdn.net/dn/rDphE/btrLQyjyfMB/nwS6e05hY73AkmqB1NMtkk/img.png)
+![Image](image_c6cc92003207.png)
 
 9 : 사진 첨부
 
@@ -87,13 +87,13 @@ UI는 따로 설명해드리지 않아도 사용하기 어렵지 않을 만큼 �
 
 가장 우측의 책 모양을 선택하면 라이브러리 창이 나오는데, 여기서 다운로드해둔 항목들을 확인하고 쉽게 사용할 수 있습니다.
 
-![Image](https://blog.kakaocdn.net/dn/bs3zKM/btrLVXwacoV/zkiE5LW78STMVJYyJ4j3JK/img.png)
+![Image](image_149586b7129c.png)
 
 하단의 "Browse libraries"를 누르면 다른사람이 올려둔 라이브러리를 추가해 둘 수 있습니다.
 
 파일로 저장하는것도 가능하지만 "Add to Excalidraw" 버튼을 클릭해서 바로 작업창에 추가할 수 있습니다.
 
-![Image](https://blog.kakaocdn.net/dn/cwHJxE/btrLPn3CKq5/8PGH78oQ9KpTljcE7KBMK0/img.png)
+![Image](image_7653760e6b4f.png)
 
 저는 "Dev Ops Icon", "Shapes for UML & ER Diagrams" 등을 추가하여 사용중입니다.
 

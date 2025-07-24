@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VPN-bc4c874c5da54797aea507aac90246d6"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/b6b1a443-6818-461f-a471-41cfdbe46783/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665XLJLL72%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115731Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIGny%2BKnNJM16qx1ItuV5%2B6XSnMDJrgmftkS%2F5biKhaBiAiEA4dBJcmbFFIb001ppojdMIZehfYelOgnpZEVqlXL4WBwq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDAKST3%2FKvieRh5ZDDSrcAwPtwCxz9TbHnNBHSVZfaxTUeDfVWGpRvIuGaQk4opd3lGikemoInQt40sMoB%2Bm2xytDCzj0mWAX9cBLqRYO0zWdeTPTQETSlbG3lzlHikiQmRWbsjPQr41367TZ%2F7bgHxLhKSsSmqMXNAHZrUcRG36AftFS86KkHSxOfHU8BURlmndx2Nvd21dRsCreVWU2nVvhrE6w8pTjbQi12rf0lBsRYY1xyiTQ0eEPnsBBDUsMoZsedxHf3GM6JkPUahuMlNkjqSzG1oW20achOx398exFI%2B4w7gH1ak6ttZLGoclC13R3RzuE4Wz3LgrZDnjyXHxaK97sWyBxjXzma8z%2BgF0Dj0sCofHzw20MpLL0%2FmTz7H4h6EcOA21mvQDo38024q9g4WZf3awcFSOC4CCwb03o8bNW2X17Fs11piayLGscHyQFVptEY8jLN4qJhnHCLWHIAYrh48e4OLHJ6vZJSXunIQ4JfxMv7GEIhgEBoABuV8TijiPjsBLAdrbNJJvyJ4UZcM0EwRm7Dc%2FPsyPKNetXVHwsROapx1077XWc5ebjAsbZlGbt48OM8ReJXBqW7tKQuSiwAggl3yN6NCNBmTsQABshgAr5hyqrcpOfDsyl1cHkcoKpYfC1Nu%2FKMOSbiMQGOqUBFMx%2FdFDWLOY2UEPA4KbS8%2BSr3pfmrA38ILdKwwBimSMbVi%2FGBMKblqIol%2FKFERJeO1VuokSzCs%2FaaP%2Bc6OzLc168QLgPyzi5ak4edaqqu2vdl4WLpRJi5bRfBz93H4cyK0XNMzjIFUIyceu3EHnMKS5qLEEiUaMsOLppTulo1gWFVMJQD0IFAtRrEU0VIqC5FeOyXNprNL5gpWZdrlVK5osRU7%2FL&X-Amz-Signature=6e7be51b3f7b76896e0d413f8e6bc7d1360405652842605efc618373097a9c8b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](image_a4b4773a9775.png)
 
 ```latex
 Tailscale이나 PiVPN 하나 설정해두시고 VPN 접속해서 SSH 접속하시는걸 추천합니다.
@@ -51,7 +51,7 @@ Tailscale이나 PiVPN 하나 설정해두시고 VPN 접속해서 SSH 접속하�
 journalctl -f
 ```
 
-![Image](https://blog.ny64.kr/posts/setting-up-fail2ban-on-raspberry-pi/images/journalctl%20-f.png)
+![Image](image_985e2d54abe9.png)
 
 **journalctl -f 실행 결과**
 

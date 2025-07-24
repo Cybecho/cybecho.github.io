@@ -17,7 +17,7 @@ notion_url: "https://www.notion.so/git-a4df124389ff4750ad90c679111dd1d0"
 ---
 
 
-![Image](https://obsidian.md/images/2023-06-logo.png)
+![Image](image_49f5a6ca9beb.png)
 
 🔗 [https://velog.io/@joshuara7235/옵시디언-사용해-보실래요](https://velog.io/@joshuara7235/옵시디언-사용해-보실래요)
 
@@ -74,7 +74,7 @@ notion_url: "https://www.notion.so/git-a4df124389ff4750ad90c679111dd1d0"
 
 그랬다.. 그리하였다.. `Obsidian-git` 을 통해 백업을 시도하고, 자동 실시간 `pull, push` 환경을 구축하기 전까지는..
 
-![Image](https://velog.velcdn.com/images/joshuara7235/post/b920ae19-cbf4-4bea-aaa6-63fb031a8921/image.png)
+![Image](image_7bccd6545dbb.png)
 
 *ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ*..🤬
 
@@ -125,7 +125,7 @@ notion_url: "https://www.notion.so/git-a4df124389ff4750ad90c679111dd1d0"
 
 ### Working Copy 도 사실 유료랍니다 허허허허
 
-![Image](https://velog.velcdn.com/images/joshuara7235/post/91a3bca6-9704-4c94-b338-69f089ef6db8/image.PNG)
+![Image](image_c20372dd79cc.png)
 
 > 무료버전에서는 git commit과 pull 까지만 가능하고, push 는 하지 못한다.즉, 무료로 사용해도 PC로 작업한 Obsidian 문서는 실시간으로 동기화하여 확인이 가능하다는 것이다. 💡
 

@@ -22,7 +22,7 @@ notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e
 
 ### 브리지 구성
 
-![Image](https://pve.proxmox.com/pve-docs/images/default-network-setup-bridge.svg)
+![Image](image_5d7fba8ff5d4.png)
 
 - 브리지는 컴퓨터 안에서 만든 가상 스위치입니다. 실제 네트워크 스위치처럼 작동합니다.
 - 가상 머신들이 하나의 브리지를 같이 쓸 수도 있고, 여러 개의 브리지로 나눠서 쓸 수도 있습니다.
@@ -33,7 +33,7 @@ notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e
 
 ### 라우팅 구성
 
-![Image](https://pve.proxmox.com/pve-docs/images/default-network-setup-routed.svg)
+![Image](image_801941cf4a03.png)
 
 - 일부 서비스에서는 한 네트워크 장치에 여러 개의 주소를 사용할 수 없어서 브리지를 쓸 수 없습니다.
 - 이런 경우에는 라우팅을 사용해서 모든 네트워크 신호를 한 곳으로 모아서 처리할 수 있습니다.
@@ -43,7 +43,7 @@ notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e
 
 ### NAT 구성
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/a85efdae-4b2a-48b3-8b2c-ba675eb68545/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466XFFR2TXB%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115350Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIEgj3D7tLC05xBuu%2Bpwj9T0cBhJFEv0i9VxxGoow66mHAiEAs8Epm80toNzKX20LQFQLWdFP2MflJJJ8j5%2F2R5blOoIq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDAvOJ0brwbo0u7fKdSrcA150pjTgFO1JvAnxGH3B9mPyFeIldPSuDFv5UIFF76Dd%2BjAFFY%2BFEFywRvpBY1FcCyAWY4gbM1axowavJCyO6L%2Fo6xekp%2BSUYJTwL1iAIkmls4yovI2OAHWcAfZuLvOahySQfU4XSVNAWVIDZSDAE9oVepA8x%2F3tsvQjvzEXmEBz782NwVjj3Z790N%2BwZZlrmZnpwBBsj6QPFX3lfhiM%2Bx60SyBBsh5vrqYFnBYxQ2hu%2BfPIqI56NlsQMf8P6%2FBTfVc2GxLe5AlSn4yLpDMofwF%2FL8KVrGYNJ8SoD2XQv9JxF%2BXbA9i14ljhaqcc0%2FQRfGEnUOf2fwtKZBSHXJ%2FNJNALVr1DYvk0TgIrjloYAMCzNsV%2FbihH8va5c9afSUaJL1dslVA0bpi3OM5kATKHhfmtxexdUI7f9zog8jU6C%2B6xEerV5rMH2PF%2B54yt9Fgk5Ux7yOiIEIXvdvuEP4wp%2B%2BfYw8IHMJzI03DcRn7WTaL%2FW8M2kzXIkTussrScaB7Z23p%2BMjJJlu7f%2FZCTEYrVcBNAJoOtP%2FCQpjdtM2QpDKg5ncEId2%2FqCYo3%2FtV6EjKv1zfG%2FcE%2B%2F0kpWL867JId1%2BQQdvJjepCDwL7U%2BbEneERQU2tsPthpVZJ9GSdqMISbiMQGOqUBay%2BJdjfUSg38Ykem6%2BW8HK3u%2FXjMmwuFnQPw%2BkMsU%2BfEIJKGd%2FMWnhyPeKEJMcm8xtdWKKoEGEOSw6aom27MmY7BtGiPakNsU3oVMm%2F4psVa4x%2B9r9h1frAyrk5NOnyXR44fCHE5oNrZLTptiwI0WsF3fFMKiWsOEh2QD6kmYjPgvHJVBCCuWI%2FBiSa1CvPbTKNAnwagY3tXZyHa8xJpLGwHUsI6&X-Amz-Signature=b052fc327a8ad2131290d9ebecb71b56b0ab4b3c06dd0a4f25d8bf3425d4874d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](image_75c6cbd8ce7c.png)
 
 - NAT를 사용하면 가상 머신이 내부 IP 주소를 써도 호스트 컴퓨터의 IP를 통해 외부 인터넷을 사용할 수 있습니다.
 - 방화벽 설정에 따라 추가로 conntrack 설정이 필요할 수 있습니다.
@@ -70,7 +70,7 @@ NAT는 내부 IP를 사용하면서 호스트 컴퓨터의 IP를 통해 인터�
 
 ## Linux Bond
 
-![Image](https://pve.proxmox.com/pve-docs/images/default-network-setup-bond.svg)
+![Image](image_e6f1cb9942cf.png)
 
 ### 본딩
 

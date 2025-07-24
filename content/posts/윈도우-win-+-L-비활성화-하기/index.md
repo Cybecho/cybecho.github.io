@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/win-L-e2e4269d107f413eac708099bd840641"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/11cd1f3c-70bb-4ab7-9e2c-2f1936e43f10/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4667J5JHLMN%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115903Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJHMEUCIQCzI81X%2FZIkdrjQ0pIX0ybrcGqgg%2B6iY%2FfpQ%2F9n3f4rWwIgbsMUL%2Bb4BvJdZ1CtRoA0erEDikFqXvJ0pn4luLkTrNMq%2FwMILBAAGgw2Mzc0MjMxODM4MDUiDDLi6MEBM213QLht1ircA3ksAfEUONi%2FCLAEUo1y40EOjJdPM26n1wmRwmfSzEBvotxRLHnKWH%2FQKXrQr2GZwm5KDrOQIkNyO8Bdr4PmGTGPHrENvpF0w%2FDCNrkK3ewhUybGk1lJxQO7Mv4BwNRa%2FlOORReWQlEHcDvXNNsToPNRy%2BPT6LP8ZfFPGYtAaIXDFSbUluRWsAaWFHZyWry8cBH%2BvTbbeK0GUVCTqpHJP8zjMptLbyNERIEbgXh4VAPwXCOb0uDPJ7IIXClvywQ43twJpqQxDO0dqhOGvZdQa5RbDa%2BPAiILgcEY6cdLyxr0bDaeFaK4vZjuf1PEyWTb1MzO8Lfhgc2mHMckjdwCfwaxc%2FZEoTmOwSnUPVqLltnBF7Mjq9ZQN4M%2FS%2B0cttLCFAx%2FDqJy8lMHTuGDWWj%2FZBEWZQk8ryoTouZ4h0vh%2BcsGmFWTjqkvmFhSBhECP0LDU06SrNVIqY9LgcZBmwgHH3gw1Adoe6%2BayQQq7IUET1XcglSTSSPEPfH9DXTpihpDweGYpvcUwNA3a1dTQSEO2icsxQDjsuTCnvuqlePeYt62kS%2BHp3iBJmg1xH5N%2BCS%2F6LGbOhp2wetKQJPiFTNQFSyt1VRia0p8wzN%2BWFdLTLAy%2FjUlOOkfvSew55%2FeMOKbiMQGOqUBq2QEEZCUPzwVCbenBfcEaE3F5F7Zr6wrPgGvCOfjAD9LWyqEWdLI8VA0W3Vtf4Oz7DqZ3OiOwuEJ4qMn23Bj8M2p854%2BSq6BCw2L96GJE1QllgeBsvypTAnP0V%2BsrUTRd5PeWNj35bIJo%2F4QaEMeAYIBaCdjsj4nhUKTnswJJ9jNz7zvWDqg91nOLVSvTQy%2BVR1a41QeYQH4rx6bTJF%2Fc6YcVbZZ&X-Amz-Signature=b0600aaac2451f4198bd41e53ba0f9c595ae668b9a567f4d30b191d355ceadd6&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](image_0c2116aa356b.png)
 
 🔗 [https://www.maketecheasier.com/disable-lock-screen-shortcut-key-windows/](https://www.maketecheasier.com/disable-lock-screen-shortcut-key-windows/)
 
@@ -30,33 +30,33 @@ Windows를 잠시라도 사용한다면 Windows 컴퓨터를 잠그는 가장 �
 
 Windows에서 "Win + L" 단축키를 비활성화하는 것은 매우 쉽습니다. 당신이 해야 할 일은 레지스트리 키를 편집하는 것뿐입니다. 그렇게 하려면 Win+를 눌러 R실행 대화 상자를 열고 `regedit`Enter 키를 눌러 Windows 레지스트리를 엽니다.
 
-![Image](https://www.maketecheasier.com/assets/uploads/2015/06/disable-win-l-shortcut-run-dialog-box.jpg)
+![Image](image_aabd686eaec3.jpg)
 
 Windows 레지스트리가 열리면 다음 키로 이동하십시오.
 
 `HKEY_CURRENT_USER`` \Software\Microsoft\Windows\CurrentVersion\Policies`
 
-![Image](https://www.maketecheasier.com/assets/uploads/2015/06/disable-win-l-shortcut-policies-key.jpg)
+![Image](image_4311ca2a4546.jpg)
 
 이제 새로운 키를 생성해야 합니다. 그렇게 하려면 왼쪽에 나타나는 "정책" 키를 마우스 오른쪽 버튼으로 클릭하고 "새로 만들기" 옵션을 선택한 다음 "키"를 선택하십시오.
 
-![Image](https://www.maketecheasier.com/assets/uploads/2015/06/disable-win-l-shortcut-new-key.jpg)
+![Image](image_c01dfaf20a92.jpg)
 
 키 이름을 "System"으로 지정하고 Enter 버튼을 누릅니다. 이 작업을 수행하면 필요한 키가 생성됩니다. 키가 생성되면 다음과 같습니다.
 
-![Image](https://www.maketecheasier.com/assets/uploads/2015/06/disable-win-l-shortcut-system-key.jpg)
+![Image](image_93e06b938bd8.jpg)
 
 키를 만든 후에는 새 DWORD 값을 만들어야 합니다. 그렇게 하려면 오른쪽 창을 마우스 오른쪽 버튼으로 클릭하고 "새로 만들기" 옵션을 선택한 다음 "DWORD(32비트) 값"을 선택합니다.
 
-![Image](https://www.maketecheasier.com/assets/uploads/2015/06/disable-win-l-shortcut-new-dword.jpg)
+![Image](image_f6751f4dffc0.jpg)
 
 키 이름을 "DisableLockWorkstation"으로 지정하고 Enter 버튼을 누릅니다. 키가 생성되면 다음과 같습니다. 기본값 데이터는 "0"으로 설정되어 있습니다.
 
-![Image](https://www.maketecheasier.com/assets/uploads/2015/06/disable-win-l-shortcut-disable-workstation-value.jpg)
+![Image](image_81541b297147.jpg)
 
 "Win + L" 단축키를 비활성화하려면 새로 생성된 값을 두 번 클릭하고 값 데이터를 "1"로 입력한 다음 "확인" 버튼을 클릭하여 변경 사항을 저장합니다.
 
-![Image](https://www.maketecheasier.com/assets/uploads/2015/06/disable-win-l-shortcut-disable-workstation-value-data.jpg)
+![Image](image_3b5e234d6c4d.jpg)
 
 이제 로그오프하거나 시스템을 다시 시작하면 됩니다. "Win + L" 바로가기를 다시 가져오려면 방금 만든 DWORD 값을 삭제하면 됩니다.
 
@@ -64,15 +64,15 @@ Windows 레지스트리가 열리면 다음 키로 이동하십시오.
 
 물론 원한다면 전체 Win+ Key단축키를 비활성화할 수도 있습니다. 그렇게 하려면 "정책" 아래에 "Explorer"라는 새 키를 생성하세요.
 
-![Image](https://www.maketecheasier.com/assets/uploads/2015/06/disable-win-l-shortcut-explorer-key.jpg)
+![Image](image_87b9b211a237.jpg)
 
 이제 오른쪽 창에 새 DWORD 값을 만들고 이름을 "NoWinKeys"로 지정한 다음 Enter 버튼을 누릅니다.
 
-![Image](https://www.maketecheasier.com/assets/uploads/2015/06/disable-win-l-shortcut-NoWinKeys-key.jpg)
+![Image](image_d1ea8c12be2f.jpg)
 
 새 값을 생성한 후 해당 값을 두 번 클릭하고 값 데이터를 "1"로 입력합니다. 이제 "확인" 버튼을 클릭하여 변경 사항을 저장하세요.
 
-![Image](https://www.maketecheasier.com/assets/uploads/2015/06/disable-win-l-shortcut-NoWinKeys-value-data.jpg)
+![Image](image_0f4a672b3324.jpg)
 
 시스템을 다시 시작하거나 로그오프하면 모든 "Win + 키" 단축키가 비활성화됩니다. 변경 사항을 롤백하려면 방금 생성한 키를 삭제하면 됩니다.
 

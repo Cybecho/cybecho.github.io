@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/36137e082f6a4281b300e4020ed659f4"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/c84ffdfa-ad3c-40ca-8228-2e96fec1f73e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466XO3ESXYB%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115947Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLXdlc3QtMiJHMEUCIC6kx3Skf5uuVuo53N4OsPwwuMbw5%2BIb9Mf4XX75kyrLAiEA8kxVUUlKjeh%2BxoCbeHRLsb%2FOf81EgKm4XFUQQNx4Zz8q%2FwMILRAAGgw2Mzc0MjMxODM4MDUiDMM33xV53GtB4o23ySrcA9fnRYoeqrJp0eIoK%2F09yJyS7YRcTpTNHksnXzjrzUYRGpXFpcFEqFUT%2BzoLzLxDzOUH%2Bn0wjHGPlT3omAQFmuJCED8Z7YNM0AEKS1kyzGhhxsu6yYl6MvN8d4Ajw%2FYeiPDc0FgQLwkURNQnipdFCuuZvs%2BlFM1XO2pZuQir8s8Hx%2Bw5G0xC6fWvr%2B9KX2ZwtMEg63r3c8jiFETBkMISxlqnmca6OtFnyaYfffD8xOVFllrYZFkuZgvRo6nkeNGt0IrxHxerSJKXUV0%2F9vxNHrIU0G95pkJZvP4rikb50GhOpD87RRzeujpXMoB61vSLNKGXp%2B4tE7cyQlJ3c3DpKRZ6WJkMN2imxEgOT0MU%2Bu4C%2BtT2eJtjk2HkRKl%2BQ%2BJ3QY0nXd7vCDThxmj2zf3kCXCGgkhjKVs74AR1BsuUSxvUQZ4J5BzWA0ZD256XVntR3D3RcmjePirH%2FULqvfiGBLglR%2F3GQl2qwD8EHb2ULv9ZXXJ25ptBrrgqvMRGgP%2FcsGdl6%2BkJyxLOSqwH4VJrII4NwAWzQddtqS7dTOLZblT%2BvqMm7X%2Bu%2BRbDqV4vCj1p0qgTmuM2FkI8CVLz%2BEvtyw8aGf4oZEYnqdK2rNk1sQhDsumVs4uoU50Zq5UOMLi%2FiMQGOqUBuImABR2G7uz9V%2BvfYxrJj8uHF3U8gdvSYo5FOJPcWXQdohroIGAZcJ93bPft%2BFRx18VqncysfrzkkKhyhXjD3SfN3o2jmUY5bcnyfh3k6vht2LYAuIyyVPj1iiO9AizmNnj7elHJTON%2FgTCsJsWglDmkZXDuFtHNd1OJCCglmtCrrrDUY5cZDbRBas4gdW%2FJLIbCS%2BNUhDNsIm3UyVU8bq0Ro5Sl&X-Amz-Signature=82cd9d8e3f15c1ccfe1c6a74760ec436dbc925b063efeec0c19072ad01741055&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](image_4975f9815400.png)
 
 🔗 [https://labs.brandi.co.kr//2021/01/20/hwangsg.html](https://labs.brandi.co.kr//2021/01/20/hwangsg.html)
 
@@ -138,21 +138,21 @@ ae8c95956ee6  ubuntu-dev:1.0  "bash"   2 minutes ago  Up About a minute       ub
 
 vscode에서 컨테이너에 접근하기 위해서는 **Remote Development** 확장이 필요하다.
 
-![Image](https://goodgodgd.github.io/ian-flow/assets/2019-12-21-vscode-tutorial/remote-devel.png)
+![Image](image_221020934fea.png)
 
 설치하면 왼쪽에 Remote Explorer 패널이 생긴다. [Command Palette] (`Ctrl+Shift+P`) - [Remote-Containers: Attatch to Running Container…] 를 선택하면 현재 활성화된 컨테이너 목록이 뜨고 이 중에 [ubuntu-remote]를 선택하면 된다.
 
 새 창이 뜨면 컨테이너 내부에서 /work 디렉토리를 연다. 그곳의 파일들은 호스트의 **code_cmake** 프로젝트 파일과 동일하지만 이제는 컨테이너에서 그 파일들을 접근하고 있는 것이다. 왼쪽의 Remote Explorer 패널을 보면 다음과 같이 나올 것이다.
 
-![Image](https://goodgodgd.github.io/ian-flow/assets/2019-12-21-vscode-tutorial/remote-panel.png)
+![Image](image_98386c11092b.png)
 
 각 컨테이너를 우클릭하면 `Start container`나 `Stop container` 메뉴가 떠서 UI로 컨테이너를 실행하고 끄는 것도 가능하다. 호스트에서 했던 것과 똑같이 `Ctrl+B`를 눌러 빌드하고 `Ctrl+R`을 눌러서 실행도 가능하다.
 
-![Image](https://goodgodgd.github.io/ian-flow/assets/2019-12-21-vscode-tutorial/terminal-execute.png)
+![Image](image_0e292d9ed6b8.png)
 
 심지어 컨테이너 내부의 쉘에 접근하기 위해 따로 터미널에서 `docker exec -it ubuntu-remote bash`를 실행할 필요도 없다. 그냥 vscode의 TERMINAL 패널이 이미 컨테이너에 접속되어 있다.
 
-![Image](https://goodgodgd.github.io/ian-flow/assets/2019-12-21-vscode-tutorial/remote-terminal.png)
+![Image](image_425933185a80.png)
 
 그래서 C++로 무언가를 개발 할 때 버전에 민감하면서 지저분하게 많이 깔아야 하는 라이브러리를 쓴다면 (boost나 opencv, ros 같은…) 이를 시스템에 직접 깔지 말고 라이브러리가 설치된 도커 이미지를 만들고 컨테이너를 실행해서 쓰는 것이 좋다. 예전엔 이렇게 하면 개발과정이 불편한 점이 있었다. 아무리 폴더를 공유해서 호스트에서 vscode로 코드 편집을 한다고 하더라도 호스트 pc에는 라이브러리가 없기 때문에 자동완성이 되지 않아서 불편했다. 이제 vscode에서 도커 내부 접속까지 알아서 해주니 깔끔하면서도 편리해졌다.
 

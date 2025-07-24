@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/oh-my-zsh-88066d6294b445b5909da248df0b4e91"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/1b29ada3-3e4d-449a-aa44-4e7248a09fd9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466Y4BHX4NN%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115747Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJIMEYCIQDOCAmSfE6kgQFYtwwE5GQSVOHy9Z2ftYqRuN9T6QdjvgIhAPx74jzo0FMXj4hJTEyp05nwF1LIYZjl4JGof0NaZcj2Kv8DCCwQABoMNjM3NDIzMTgzODA1IgxzIwoV8bv8hnylrYgq3AN%2FituFBfcYwFjv%2FasK9xTaBj3fmtZug49gd6XcdD9oKmPKtd4e78zjrJa8Q7zrr24wojVvUvP8IDpHoKpFY7Xjb4ChnyX5xoxhqQIVffxhc33O781bczvxQ4V07C%2FO87x8IILYTJiWtyfx12WNPwjJCUurCneghM7cwW5zUjcRY9CNqUd4qxxY6IfDgjBeEKarvJzBUTNYGVZQqB42b%2F0xsh3u%2FHuBs2EMvU%2FnfPAiKCpsZ2fjWolS55NbhWEKisuGc7DSoemvi4YjQCQO5JcG2d8Jpzl%2Bl%2Fl4nfk6czULLO86eF2mTRfYeGGaFGP9SHsQfcQ960wMJR%2FJLggEbHBjzOeCW2raAv%2Ftfovadi2Xk%2BsC1gr5lzqUDiuGvQjBn%2Fwz0qaf61O7yX3484q9QICwC4m8AeTaMhlLYijPG7BTlC7kpwd5o52pcTH721UkGcCe1Gq%2FZmDCumYrtomuYuQbSIZf2NJ9KP1pMawDhUcpYAnr3CR%2F5yw%2BK10SxoWh9IU%2B4jEfRnqXgaqyLuuX9oO6OdXWIBnSSW55oBpYenZqk5RgAx9Fnr511Kwbo7aVQrZzCinSDlgP%2BZuJ6aIQYvk6FK3oZf%2F51qH4awSpVZXszI3lVptJszKfrL9u%2FTC4m4jEBjqkAdRnv7ujNLmHIiUeRJyFGfGQrJ0c3vzgdukdZAgbzUe9lNP0B3LJcVuHPahwSCMe9xAOh%2Fzo2rswlpOCKiM4vaBGCxt%2BzITJpon3ewnjBBV8IPeoBinEbchgfoITOnbLVZv8lr9v9q6zcEc0bjsNP84qAaCp6KE6uo%2BKyBr0zFB4euhnGZZh0APnFgSDSIP6GG4C0Jz87YoJEa1x71%2BMrSmJKY3j&X-Amz-Signature=6374854cc1b7abcc2c6b409404c8c21b6e223c573cf332bd9ca91693f4b6588d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](image_2930d2cfe11c.png)
 
 🔗 [https://tasddc.tistory.com/41](https://tasddc.tistory.com/41)
 
@@ -26,11 +26,11 @@ syntax-highlighting라는 플러그인은 말 그대로 **'구문 강조'** �
 
 바로 사진을 보시면
 
-![Image](https://blog.kakaocdn.net/dn/dsRaME/btrdJiO9nAC/IKJ0YGwOeu6VYGhvrBTjc1/img.png)
+![Image](image_f4a615ec1ad7.png)
 
 적용 전
 
-![Image](https://blog.kakaocdn.net/dn/edgyCP/btrdKVZZt6B/JQWQBtGvlnzSSOrQ8jNvrk/img.png)
+![Image](image_855dada1d2e2.png)
 
 적용 후
 
@@ -73,7 +73,7 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 바로 이런 식으로 말이죠!
 
-![Image](https://blog.kakaocdn.net/dn/Q6eiG/btrdIMJuCjK/M5s3wtiH9EK6Tcj4pUKju1/img.png)
+![Image](image_d8514a70115c.png)
 
 적용 후
 

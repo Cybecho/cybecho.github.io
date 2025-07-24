@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/b289db913b324d81aed6cae6de823dda"
 
 ---
 
-![Image](https://arslan.io/content/images/2022/09/image-19.jpeg)
+![Image](image_64c1c0aafd2d.jpeg)
 
 🔗 [https://boxnwhis.kr/2020/01/11/coding_with_ipad.html](https://boxnwhis.kr/2020/01/11/coding_with_ipad.html)
 

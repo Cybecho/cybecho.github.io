@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/win-8cc34530c5bc4147911d0ce6b54b2822"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/11cd1f3c-70bb-4ab7-9e2c-2f1936e43f10/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664HQE3DDD%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115902Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJGMEQCIFDpuHa10sQ9vyRr8KQ7cNXlZSkOB8GvfULfgRiP7GDmAiBaus%2FTkTa8w9M%2BR7MXLiBehejLgPg8iziq%2FptgxixVpyr%2FAwgsEAAaDDYzNzQyMzE4MzgwNSIMEi9kLNMzFB5m%2FgNHKtwD81vExUp6Sl%2FOsYqitXE9Nll086di67eiYWhK%2B2Q7N8HGlpy1GwE1wyxi0oEtFbF%2Fnjdv5%2FYBj2cLT1GK%2B9VcL9gxBYqiEYdBRESjfcIIzb2iAJTv0y0gq6i4k%2Fvd0WgRhs0xJ3TPT8XVwJ9X%2B3VjV4v0GWLIU2GDAAy3yjSm9tIRY7pkQtrsPu9Pr1gRRQ1Nyl8WO5FlniUOarPocvGFb%2BDMhbUY%2BJeDe412L76lV6Ye3STPhkZHuauv9rmpsUgpRdyzDPY7vyaXRUwTQJdCPTnEHw9zvkXaaEi2FP7ZIh2sqPSlDziDeOiDL6pB5HZgFmlhgt8R3O%2FsypZ%2FZf4Duak6mB77ZloCGkXsOpQjKnl7c1tWlR%2FtbIt%2Bx2PZo8RWJASPOxYC5ldZq1N36eM5sAZt%2Fg%2FHNW0KtGk1Rm3oeVTegSV5Tt2LNIRC%2FHVkGdUhlKCPJpr0oFoJ8JTKpg8QRaywOfCn%2F8VBe6xYm1pBZnMhEJT0QIhHYKAdOxuxdYjybRsI5570%2BLAwrdkProKBLLxWcxAIgOXAzsJPviAxbBBd18b0AU09LX0dlr77yGtJP4gxQEiAaZDmfeLtzCThd9qks4n1aI%2Bf3OqczElDDjVB8ivqcUQtD3CkKKMwypuIxAY6pgHQ9dENlxyCeVSbE6hPhobOYoI%2BoB7D1LhvlxFpfZoPWWgktAK59AO8HHcFLbgJ1FTruUlQJumjr6gNj1XKjjsvWhNENSMWXO0GxzLtZAbEjDwYhf3CMBuvkDe6cGJz5fdu9E344F%2BCg1xHLx68N3IeCT6pB9ZgB56TpbUJW83yYOn5kmO2CN17tY4L1Mh8ci7%2BzYY4u7DXItVditNsyarUgFQm3MCt&X-Amz-Signature=14a72d112b300dc2908d40220016d2a9f1a82a37056ccc45fbee333578736915&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](image_a1014937369c.png)
 
 🔗 [https://m.cafe.daum.net/sigmarion3/Nnp/60?svc=cafeapi](https://m.cafe.daum.net/sigmarion3/Nnp/60?svc=cafeapi)
 
@@ -74,7 +74,7 @@ Windows + V 키의 경우 매우 유용한 기능이다. (윈도우 1809 이후 
 
 4. 이렇게 되면 완료가 된 것이다.
 
-![Image](https://blog.kakaocdn.net/dn/cuHcG1/btrWw64n3zf/cahwtX19KIBqphSG6RvZS0/img.png)
+![Image](image_2eb3ca05a755.png)
 
 DisabledHotkeys 문자열을 추가해 데이터만 설정해주면 된다.
 

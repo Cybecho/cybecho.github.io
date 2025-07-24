@@ -18,7 +18,7 @@ notion_url: "https://www.notion.so/db97a14b281b4ca5ba4831e13202b15a"
 
 Windows를 사용하다가 Mac으로 넘어오면 마우스감도가... 느려터져서 설정으로 해결 못하는 경우가 많다!
 
-![Image](https://blog.kakaocdn.net/dn/z3xUa/btsjjzwPzRT/yEWo33DWfEchVnmiSZBO21/img.png)
+![Image](image_5beffdbaa10c.png)
 
 마우스 설정에 들어가서 이동속도를 빠르게 바꿔도 윈도우처럼 빠릿빠릿하지 않으니... 답답함..
 

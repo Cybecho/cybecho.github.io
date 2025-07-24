@@ -17,7 +17,7 @@ notion_url: "https://www.notion.so/git-profile-2-89a99397fa524970a8dbc161bfaaa5a
 ---
 
 
-![Image](https://github.blog/wp-content/uploads/2020/08/87471037-50ad3c80-c5e3-11ea-9f1b-7963f4615b28.png?fit=1200,630)
+![Image](image_7694b81670ff.png)
 
 > 📚 **목차**
 >

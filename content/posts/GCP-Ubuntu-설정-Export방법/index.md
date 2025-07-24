@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/GCP-Ubuntu-Export-deef1c00658046f28a0ce30c5d0
 
 ---
 
-![Image](https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/BlogHeader_Set2_D.png)
+![Image](image_c0e46a03466d.png)
 
 🔗 [https://nangman14.tistory.com/42](https://nangman14.tistory.com/42)
 

@@ -16,26 +16,26 @@ notion_url: "https://www.notion.so/aws-a040c21b3ad5480eb62445c05660d43e"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/6bffb01b-b8a2-42b8-aa43-c4467bb4ccf8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46637JGZRU6%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115942Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLXdlc3QtMiJIMEYCIQDK1DP8%2B16RRrunxS6J%2B828gmlnWdDIsDVgZfbNcEXONAIhALnZ1LZtJOpnKmNO8r4rsCfv1HvBdCe8lFnz4ZZv9eNbKv8DCC0QABoMNjM3NDIzMTgzODA1IgwRYoTHbNats9k9oucq3AP9GPH8rvUeJeCHCvc2gRrrhvZD4tGa6wZsLPvtoLrdb4OiMqIINDOt0Qr%2FXGa4yEB0Tu9NTInMB4bfxDgis53CdqaW9u2toE1r719OCaRF5ZVEu7j473wJGEsKR3S7fzGQBbeuZvrlPGepsfmaS%2BDbBR%2FgCnkkvAuQHOkPmYP84Ju9lH8ig2CYlcyMSDa0L%2FQQX8iJOzOsFX%2BakpT3KcPh4ABEdZDB8gy941hCQ%2Bh0PiQJmriFEeHQVv0iOfUJYDGaj%2F9SYdzcytsS7T4yCHr%2F8iKOsJcess8D0AUy8%2FaRee9fxA4yIybPmGTkirjTD%2Btz1sSYjCUWZQoov3YRBzrbPBFWO2GajBQjbIVhJS%2BO%2B%2FI8YMLcgv7UqZx9pi2vFd6MsHqWRfuFihSFOSnjK8ezEeAZIzh7jaWzjT7ened0zccWzmGV2uTQuI0WEDtGMqx8GAkjjGRylXRKlklel6IB%2F7Vp8h6oxegY1gxX0hZ2o87%2FDfIIg%2FQW4PhH1Nw398QbbUBYcYWWHrNdjLt0SxLtYucfG%2B7ONAz4X4quFv4W7%2BhuxrNZLMQvaJYOT6aXHa8yNHuWrK0IXrds%2BPFpSitCA1S9MUneUx7eKv0T0AGS25SAzPmYf%2BNGHCsQpTDnv4jEBjqkARyDYTqfvqYcRIpkn2C%2F13%2By%2F5RqbEA%2FbTc9mGVSOHcZm6C0ZMw5ZFIvgTHGsz%2BN4%2Fy9D%2BL7X5WYu%2F%2B7uDTV%2F5pj6mHQprjt81gqPsi1XTNxJZq3D1F2v5JNu2AEvN9ysd6QzjI%2Bq3eOfY1f1OIbudY7GM5l22o6KKAX%2BYGrzsy3xckFZDmk96OPlmBPR1b3XIP3vrDFaqUGEtf4Ia5FtUGic71l&X-Amz-Signature=5a9381137487e2ae53fd76686baed3ac0f0b2ca15d715ebffe9e25543d100edb&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](image_6f15dba302a6.png)
 
 
 🔗 [https://this-programmer.tistory.com/472](https://this-programmer.tistory.com/472)
 
 gmail에는 여러 용도로 사용할 수 있게 아이디 뒤에 +{something}을 붙여서도 사용할 수 있는 기능이 있다. 예를 들어 내 이메일주소가 jujumilk3@gmail.com인데 여기에 jujumilk3+2022@gmail.com을 붙여도 내 원래 계정으로 온다.
 
-![Image](https://blog.kakaocdn.net/dn/br7zjQ/btrtNR8uzoy/vlKnp56Ktt7ks7vZhyucaK/img.png)
+![Image](image_934b0d4206de.png)
 
 이렇게 말이다. 물론 숫자뿐만이 아니라 영어도 되므로 특정 메일을 리스팅하거나 라벨링할 때 쓰기 좋은 기능이지만 이 기능을 aws계정가입과 함께 활용하면 같은 gmail계정으로 여러개의 프리티어계정을 계속 생성할 수 있다. 프리티어계정은 1년 후에 종료되기 때문에 나 같은 경우에는 뒤에 해당년도를 붙여 새로운 계정을 만들어 사용하고 있다.
 
-![Image](https://blog.kakaocdn.net/dn/FTNDv/btrtITGwAGt/ktoBzLg9BK15ZjBxkIb530/img.png)
+![Image](image_fa53a0850cbd.png)
 
 이렇게 가입시도를 하면
 
-![Image](https://blog.kakaocdn.net/dn/CKgpD/btrtISU8UZT/eNefUIFES4jQxKC9v1dERk/img.png)
+![Image](image_3efa480b33b5.png)
 
 멀쩡히 잘 진행된다.
 
-![Image](https://blog.kakaocdn.net/dn/ltIOb/btrtKBL86SR/YlJCyK4ld13rzFUUkrbQj1/img.png)
+![Image](image_ba9ee654cd3a.png)
 
 프리티어 기능을 정상적으로 사용할 수 있다는 확인메일이 온다.
 

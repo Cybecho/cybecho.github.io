@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/git-profile-1-c2f950c741a8429b9d7bdfc4cc470d6
 
 ---
 
-![Image](https://github.blog/wp-content/uploads/2020/08/87471037-50ad3c80-c5e3-11ea-9f1b-7963f4615b28.png?fit=1200,630)
+![Image](image_7694b81670ff.png)
 
 [http://www.lomando.com/pimg/bettyeye.gif](http://www.lomando.com/pimg/bettyeye.gif)
 

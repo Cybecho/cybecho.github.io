@@ -18,13 +18,13 @@ notion_url: "https://www.notion.so/MAC-00cfa92b360245c6a08e5821c08f82ba"
 
 🔗 [https://gigglehd.com/gg/soft/12183718](https://gigglehd.com/gg/soft/12183718)
 
-![Image](https://img.gigglehd.com/gg/files/attach/images/14109/718/183/012/cbebb6889a2e482913a209a78b1bd019.png)
+![Image](image_ff2c75d7ee5d.png)
 
 이전부터 윈도우에서 맥과 리눅스와 같은 FreeType 렌더링을 사용하는 폰트로 바꾸기 위한 노력들은 계속해서 이루어졌습니다. 그중에서 제일 유명한 것이라면 아무래도 MacType이겠지요.
 
 다만, MacType은 폰트의 렌더링 엔진을 기존의 윈도우의 ClearType에서 FreeType으로 바꾸어 줄 뿐 폰트를 제대로 바꿔주진 않습니다. 폰트는 noMeiryoUI를 이용해 바꿔야 합니다.
 
-![Image](https://img.gigglehd.com/gg/files/attach/images/14109/718/183/012/d2842965a076b822bfebe413cfd048e1.png)
+![Image](image_af2f29a1b52c.png)
 
 그런데 이 내용들을 한꺼번에 정리해놓은 글을 찾기가 생각보다 쉽지 않았습니다.
 
@@ -38,7 +38,7 @@ MacType 자체는 글이 많으나 오래된 글이 많고 noMeiryoUI를 조합�
 
 > Pretendard JP
 
-![Image](https://img.gigglehd.com/gg/files/attach/images/14109/718/183/012/4420602dda18c4a29dff2244494d44da.png)
+![Image](image_b8e5cf7e8f2e.png)
 
 각 준비물의 최신 버전을 받아 둡니다.
 
@@ -46,15 +46,15 @@ MacType 자체는 글이 많으나 오래된 글이 많고 noMeiryoUI를 조합�
 
 저 셋을 각각 압축을 풀어주거나 설치를 미리 해두시면 되겠습니다.
 
-![Image](https://img.gigglehd.com/gg/files/attach/images/14109/718/183/012/847629acf70ecffc2d9b0b50a5ca2375.png)
+![Image](image_cb71797133e1.png)
 
 위의 폰트들은 다 한 세트이니 마우스를 우클릭하고 (윈11은 더 많은 옵션을 누르시고) 설치합니다. Variable이라는 하나로 합쳐진 가변 폰트 파일이 존재하긴 합니다만, 이게 윈도우에도 적용되는지를 몰라서 저는 그냥 고전적인 트루타입 폰트(.ttf) 파일을 사용하였습니다.
 
-![Image](https://img.gigglehd.com/gg/files/attach/images/14109/718/183/012/76aededdb3b8df5db24f4eae5d2f3800.png)
+![Image](image_a1bdb94e5aea.png)
 
 폰트 설치 후에는 NoMeiiyuo UI 3.0을 사용해 폰트들을 다 바꿔줍니다. 레귤러나 미디엄 굵기는 생각보다 너무 굵던 느낌이라 저는 Light를 사용했으며 모두 설정 버튼을 누르면 모든 글꼴에 전부 적용됩니다. 일단 이러면 폰트는 바뀌지만, 아직 렌더링까지 바꿔주진 못합니다.
 
-![Image](https://img.gigglehd.com/gg/files/attach/images/14109/718/183/012/8f16c91226db31554d39dd80b9265faf.png)
+![Image](image_50ad5b3deff0.png)
 
 이제 MacType에 사용하기 위한 ini 파일을 만들 겁니다. 메모장 등의 텍스트 에디터를 이용해서 이름.ini 같은 형식으로 저장해두시면 됩니다.
 
@@ -183,29 +183,29 @@ Contrast=1.22
 ClearTypeLevel=1
 ```
 
-![Image](https://img.gigglehd.com/gg/files/attach/images/14109/718/183/012/ed48c77f382459a701e7f6b1a368a1de.png)
+![Image](image_37ad29e40bd9.png)
 
 이제 폰트 렌더링을 바꿔주기 위해 MacType을 사용합니다. MacType Wizard를 실행하면 위와 같은 화면이 나옵니다. 옛날에는 레지스트리 모드가 가능했습니다만, 윈도우 10부터는 불가능하므로 서비스 모드를 선택한 후 다음을 눌러주세요.
 
-![Image](https://img.gigglehd.com/gg/files/attach/images/14109/718/183/012/eb5d9382ca4b084b13a1e67258fd4a91.png)
+![Image](image_38d04c231975.png)
 
 오른쪽 아래의 주황색 십자표를 눌러 미리 만들어뒀던 ini 파일을 찾아야합니다. 그걸 찾아 추가하고 선택한 후 완료하면 사실상 가장 중요한 작업이 완료됩니다.
 
 만일 ini 파일 적용 후 특정 프로그램들이 제대로 작동하지 않는다면 ini 파일을 다시 열어 [UnloadDll] 항목에 작동하지 않는 프로그램의 파일 이름과 확장자를 다 써주시면 되겠습니다.
 
-![Image](https://img.gigglehd.com/gg/files/attach/images/14109/718/183/012/3ce0c0699d538215a70420a5d3ac94ce.png)
+![Image](image_c89e6f8c073f.png)
 
 마지막으로 [http://gigglehd.com/gg/bbs/12043933](http://gigglehd.com/gg/bbs/12043933) 글의 댓글에서 인용해 온 부분입니다.
 
 > 1) 시작 메뉴에서 실행을 눌러 regedit를 실행합니다.
 
-![Image](https://img.gigglehd.com/gg/files/attach/images/14109/718/183/012/794bbf96a5611852db86f1de062de5e5.png)
+![Image](image_063a3368cf90.png)
 
 간혹 시작메뉴 부분이 폰트가 바뀌질 않고 기존 윈도우 폰트들로 돌아오는 경우가 있습니다. 아마도 MacType보다 explorer.exe가 먼저 실행되면서 생기는 문제가 아닐까 추정되는데 이런 경우 작업관리자에서 용량 큰 explorer.exe를 강제 종료합니다.
 
 그런 다음 파일 -> 새 작업 실행에 들어가서 explorer.exe를 실행하면 제대로 바꾼 폰트가 적용되어서 나타나더군요. 참 아쉬운 부분이긴 하나 윈도우의 기본 파일인 explorer가 우선순위가 높은 만큼 이는 어쩔 수가 없는 것 같습니다.
 
-![Image](https://img.gigglehd.com/gg/files/attach/images/14109/718/183/012/7c3adfd3f9db39c926557c724a5fdf40.png)
+![Image](image_a2b3511fa890.png)
 
 당연히 인터넷 브라우저에서도 폰트를 바꿀 수 있습니다. 다만, Pretendard가 너무 작은 글씨에서는 번짐 현상이 생기던지라 저는 글자 크기를 기본 상태보다 조금 더 크게 키운 게 맘에 들더군요. 셰리프나 고정 폭 폰트는 아니다 보니 그 둘은 다른 폰트를 썼습니다.
 

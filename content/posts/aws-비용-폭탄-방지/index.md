@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/aws-2f48bf1ab83743e6986f36193237cc47"
 
 ---
 
-![Image](https://prod-files-secure.s3.us-west-2.amazonaws.com/09ccd4d5-876c-4bba-bbdf-cc77a0a11257/6bffb01b-b8a2-42b8-aa43-c4467bb4ccf8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466QVVWTZV5%2F20250724%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250724T115940Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLXdlc3QtMiJIMEYCIQCdq7Q8XUvGv%2BR8hsoKiS0B1t0TYgVI7Y4q5p4gDQG0EwIhAKH0Kjz8MrYdHv1Yx82L2jkmnTMF%2B8opWVIZopv3UGKkKv8DCCwQABoMNjM3NDIzMTgzODA1IgyOeYeA2hPaUxJiYgcq3APcacdmwUbfjFaRp9AaZ5Qb1usdqg%2BTybb10jHQO0JAmGY12DZDIxdsn8u7NVqHDsFzTvL9Xl%2FLHjpYhzcM9R0HnPj%2FwaVq7rtqS6Yru%2FXWddlOK%2FKmTWuDQS%2FNoAqU7cFZ72W%2F0aNzNwPCsJKBZtlBZRblhf20vovjWORTyDHmvB89CHSdY2his%2BSXZPaZORGTU2ESJbpRQBoxF0YPePuG5hxWEIUWbUD8NcdQf7TWJnq3RSgGpERW1MkWIIZENGn8Fq9qEuiuY356PGrC4kGmQl8xlNveG9nWkNG7Qxj%2BE0VKenW686uvO75uG8zeH6miucC8OtNHTQFdbUNxA3he0o1qBLZZAgctpnHpcuuUvdYqBRGD%2FZzHmhanEmt7FVVSjKhWeuVKLkIl05I%2FHfNR6n8bOsLDLskcr2kFILVK471yye%2Fo%2FYXZ9iriCkhtuGyNW%2Fpb4GvAAxroDlnaoDDFCDY97ForZm3G7uqp5CcR%2FNuVnPrIEtwCjXsM8UUw7CsJzgp94MlB4r7DZvKKLJ08pgi4ptJyNOELw0Yh%2FFrYvd84JN5bjND14kkjE42Vfjl1xGuycgGjG3BBzLthu77%2Fh9KcBh6CgVG58hAjIFun18pI%2FbNF9IB%2B%2B0TruDCsm4jEBjqkAU6zb2YyLV%2FYijh5b8px%2BK%2B9MkTwZmjVsZBixupWUNLWubLbgNQ%2B7azSB8dk0lb0AMifJvg2VtrvQ8cngafT%2FZ8POdAdZpsYht8QSiEOHJ%2BUwMT71hoyJNjqXrT6E4DbIn5PARS7ev3IPmsksZ5k7owNR1FQ6K5joKRcYf4QWIL3sUJdZB6gKFEP54%2Br6nNe3AiFeDdGp3ZDUAgyA7NKfCk9OCLW&X-Amz-Signature=bc9f978c0d2096b7bcbaf00066cb44a04d8c036b1e11692676fd37aa3f69183b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+![Image](image_b37916bf9a77.png)
 
 🔗 [https://brunch.co.kr/@topasvga/342](https://brunch.co.kr/@topasvga/342)
 
@@ -78,7 +78,7 @@ AWS는  1년간  일정 용량만 무료이다.
 
 다음 달에 나올 예상 금액이 나오며, 어떤 부분에서 과금될 예정인지 표시된다.
 
-![Image](https://img1.daumcdn.net/thumb/R1280x0/?fname=https://t1.daumcdn.net/brunch/service/user/uSr/image/p6s7YXIuzDoixJ5h6jLH8q1jh28.jpg)
+![Image](image_3b81d024a304.jpg)
 
 ### 2
 
@@ -86,7 +86,7 @@ AWS는  1년간  일정 용량만 무료이다.
 
 ### 사용하지 않는 EC2 서버를 삭제하도록 한다.
 
-![Image](https://img1.daumcdn.net/thumb/R1280x0/?fname=https://t1.daumcdn.net/brunch/service/user/uSr/image/7bYffUrYNeZAQjrQooi-w59EDSU.jpg)
+![Image](image_ddbe7bf84653.jpg)
 
 ### <2> 가장 중요한 것!!! Bills 확인하라. 청구서
 
@@ -102,7 +102,7 @@ AWS는  1년간  일정 용량만 무료이다.
 
 ### 가서 지워라 ~
 
-![Image](https://img1.daumcdn.net/thumb/R1280x0/?fname=https://t1.daumcdn.net/brunch/service/user/uSr/image/DlB8l9Wz2W5x2SA-0iNDzKDs_Jg.png)
+![Image](image_6c1a8293ced8.png)
 
 ### EBS스냅셧으로 비용이 나오는 것이다.
 

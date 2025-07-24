@@ -20,5 +20,5 @@ notion_url: "https://www.notion.so/f7d81313be1a4385b47a51c4f5443591"
 
 **일반 > 키보드 > 예측에서 예측 텍스트를 다시** 켜면 실제로 수정됩니다. 어쨌든 지금 막 나를 위해 일했습니다!
 
-![Image](https://external-preview.redd.it/Q4hRFVB4M2zQE7LOvFFSpBR7R2ctjctT5dFGChZn7-Y.png?width=640&crop=smart&format=pjpg&auto=webp&v=enabled&s=40b54635660e9ce42ab24fe488f593975610acc4)
+![Image](image_0247d908c380.png)
 

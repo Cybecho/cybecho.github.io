@@ -4,7 +4,7 @@ date: 2025-07-17T09:00:00.000Z
 draft: false
 tags: ["fedora", "Arch", "ubuntu", "Debian"]
 series: ["Let's Linux!"]
-description: "라즈베리파이에 LineageOS를 설치하여 Android 환경을 구축하는 방법을 설명하며, KonstaKANG이 개발한 LineageOS를 통해 Raspberry Pi에서 Android를 사용할 수 있는 가능성을 제시합니다. 설치 과정, Google Apps 설치 방법, 문제 해결 방법 등을 단계별로 안내하며, Revanced 및 MicroG를 활용한 Google Photos 무제한 업로드 방법도 포함되어 있습니다."
+description: "라즈베리파이에 LineageOS를 설치하여 안드로이드 환경을 구축하는 방법을 설명하며, 설치 과정, Google Apps 설치, 그리고 Revanced를 통한 무제한 Google Photos 백업 활성화 방법을 포함하고 있습니다. KonstaKANG의 LineageOS는 Raspberry Pi에서 안드로이드 기능을 지원하며, 다양한 추가 기능을 통해 저전력 클라우드 폰이나 DIY Android TV 박스로 활용할 수 있습니다."
 notion_id: "2331bab9-e3f8-801f-af43-e085b9c24e07"
 notion_url: "https://www.notion.so/LineageOS-2331bab9e3f8801faf43e085b9c24e07"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/LineageOS-2331bab9e3f8801faf43e085b9c24e07"
 # 라즈베리파이에
 
 > **Summary**
-> 라즈베리파이에 LineageOS를 설치하여 Android 환경을 구축하는 방법을 설명하며, KonstaKANG이 개발한 LineageOS를 통해 Raspberry Pi에서 Android를 사용할 수 있는 가능성을 제시합니다. 설치 과정, Google Apps 설치 방법, 문제 해결 방법 등을 단계별로 안내하며, Revanced 및 MicroG를 활용한 Google Photos 무제한 업로드 방법도 포함되어 있습니다.
+> 라즈베리파이에 LineageOS를 설치하여 안드로이드 환경을 구축하는 방법을 설명하며, 설치 과정, Google Apps 설치, 그리고 Revanced를 통한 무제한 Google Photos 백업 활성화 방법을 포함하고 있습니다. KonstaKANG의 LineageOS는 Raspberry Pi에서 안드로이드 기능을 지원하며, 다양한 추가 기능을 통해 저전력 클라우드 폰이나 DIY Android TV 박스로 활용할 수 있습니다.
 
 ---
 

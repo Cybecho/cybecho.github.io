@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/76f34a7493424ecda4a9da5ee4d12b75"
 
 ---
 
-![Image](https://www.madrau.com/srx_download/files/srx_monitor_dld002blogo.jpg)
+![Image](image_05a721e19940.jpg)
 
 > 💡 **다양한 방법을 시도한 결과, SwitchResX에 2388x1668 해상도를등록하여 사용하는것이 가장 올바른방법이다. 이 해상도는 아이패드 11 프로 기준이다**
 
