@@ -393,7 +393,11 @@ async function syncNotionDatabase() {
         
         if (isCacheValid) {
           console.log('✅ Skipped (cached):', originalTitle);
-          newCache[pageId] = cache[pageId];
+          // 캐시된 항목을 그대로 유지하되 처리 시간 업데이트
+          newCache[pageId] = {
+            ...cache[pageId],
+            accessed_at: new Date().toISOString()
+          };
           skippedCount++;
           continue;
         }
@@ -495,14 +499,25 @@ async function syncNotionDatabase() {
 
     saveCache(newCache);
 
+    const cacheEfficiency = Math.round((skippedCount / allPages.length) * 100);
+    const newPosts = successCount - updatedCount;
+    
     console.log('\n🎯 동기화 완료:');
     console.log('📊 전체 포스트:', allPages.length + '개');
-    console.log('✅ 캐시 적중:', skippedCount + '개');
+    console.log('✅ 캐시 적중:', skippedCount + '개', cacheEfficiency >= 50 ? '🎉' : '');
     console.log('🔄 업데이트:', updatedCount + '개');  
-    console.log('📝 신규 생성:', (successCount - updatedCount) + '개');
-    console.log('⚡ 캐시 효율:', Math.round((skippedCount / allPages.length) * 100) + '%');
+    console.log('📝 신규 생성:', newPosts + '개');
+    console.log('⚡ 캐시 효율:', cacheEfficiency + '%', cacheEfficiency >= 80 ? '🚀' : cacheEfficiency >= 50 ? '⭐' : '');
     console.log('💾 지속적 캐시: 활성화');
     console.log('🏷️ 시리즈 지원: 활성화');
+    
+    if (cacheEfficiency >= 80) {
+      console.log('🎊 훌륭합니다! 캐시가 매우 효율적으로 동작하고 있습니다.');
+    } else if (cacheEfficiency >= 50) {
+      console.log('👍 캐시가 잘 동작하고 있습니다.');
+    } else if (skippedCount === 0) {
+      console.log('ℹ️  첫 실행이거나 모든 포스트가 업데이트되었습니다.');
+    }
 
   } catch (error) {
     console.error('❌ Notion API Error:', error.message);
