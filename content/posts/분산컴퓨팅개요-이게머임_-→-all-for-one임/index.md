@@ -16,12 +16,12 @@ notion_url: "https://www.notion.so/all-for-one-1d01bab9e3f880f9af00c0a2aac6bc44"
 
 ---
 
-![Image](image_47594628bb23.png)
+![Image](image_7e4405c2db7f.png)
 
 # 분산컴퓨팅 - Distributed Computing
 
 > 여러 컴퓨터가 네트워크로 연결되어, 서로 정보를 주고받으며, 
 하나의 공동 목표(공유된 작업)를 위해 함께 일하는 시스템이다.
 
-## 분산컴퓨팅 개요
+## >> 분산컴퓨팅 개요
 

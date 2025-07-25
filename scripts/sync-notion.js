@@ -144,6 +144,34 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
     const indent = '  '.repeat(indentLevel); // 들여쓰기용 공백
     
     for (const block of blocks.results) {
+      // 디버깅: 블록 구조 로깅
+      if (block.type === 'toggle' || block.type === 'heading_1' || block.type === 'heading_2' || block.type === 'heading_3') {
+        console.log(`\n=== DEBUG BLOCK ===`);
+        console.log(`Type: ${block.type}`);
+        console.log(`Has children: ${block.has_children}`);
+        console.log(`Block ID: ${block.id}`);
+        
+        if (block.toggle) {
+          console.log(`Toggle text: "${convertRichText(block.toggle.rich_text)}"`);
+        }
+        if (block.heading_1) {
+          console.log(`H1 text: "${convertRichText(block.heading_1.rich_text)}"`);
+          console.log(`H1 is_toggleable: ${block.heading_1.is_toggleable}`);
+        }
+        if (block.heading_2) {
+          console.log(`H2 text: "${convertRichText(block.heading_2.rich_text)}"`);
+          console.log(`H2 is_toggleable: ${block.heading_2.is_toggleable}`);
+        }
+        if (block.heading_3) {
+          console.log(`H3 text: "${convertRichText(block.heading_3.rich_text)}"`);
+          console.log(`H3 is_toggleable: ${block.heading_3.is_toggleable}`);
+        }
+        
+        // 전체 블록 구조 출력 (JSON)
+        console.log(`Raw block:`, JSON.stringify(block, null, 2));
+        console.log(`===================\n`);
+      }
+      
       switch (block.type) {
         case 'paragraph':
           if (block.paragraph?.rich_text?.length > 0) {
@@ -155,19 +183,49 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
           
         case 'heading_1':
           if (block.heading_1?.rich_text?.length > 0) {
-            content += '# ' + convertRichText(block.heading_1.rich_text) + '\n\n';
+            const headingText = convertRichText(block.heading_1.rich_text);
+            content += '# ' + headingText + '\n\n';
+            
+            // 제목 토글인지 확인 (is_toggleable 속성)
+            if (block.heading_1.is_toggleable && block.has_children) {
+              console.log(`🔍 Found H1 toggle: "${headingText}"`);
+              const childContent = await convertBlocks(block.id, postDir, 0);
+              if (childContent.trim()) {
+                content += childContent + '\n';
+              }
+            }
           }
           break;
           
         case 'heading_2':
           if (block.heading_2?.rich_text?.length > 0) {
-            content += '## ' + convertRichText(block.heading_2.rich_text) + '\n\n';
+            const headingText = convertRichText(block.heading_2.rich_text);
+            content += '## ' + headingText + '\n\n';
+            
+            // 제목 토글인지 확인 (is_toggleable 속성)
+            if (block.heading_2.is_toggleable && block.has_children) {
+              console.log(`🔍 Found H2 toggle: "${headingText}"`);
+              const childContent = await convertBlocks(block.id, postDir, 0);
+              if (childContent.trim()) {
+                content += childContent + '\n';
+              }
+            }
           }
           break;
           
         case 'heading_3':
           if (block.heading_3?.rich_text?.length > 0) {
-            content += '### ' + convertRichText(block.heading_3.rich_text) + '\n\n';
+            const headingText = convertRichText(block.heading_3.rich_text);
+            content += '### ' + headingText + '\n\n';
+            
+            // 제목 토글인지 확인 (is_toggleable 속성)
+            if (block.heading_3.is_toggleable && block.has_children) {
+              console.log(`🔍 Found H3 toggle: "${headingText}"`);
+              const childContent = await convertBlocks(block.id, postDir, 0);
+              if (childContent.trim()) {
+                content += childContent + '\n';
+              }
+            }
           }
           break;
           
