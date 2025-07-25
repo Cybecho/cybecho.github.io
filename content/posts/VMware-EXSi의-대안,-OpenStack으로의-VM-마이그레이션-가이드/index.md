@@ -4,7 +4,7 @@ date: 2025-07-09T01:34:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Infra & Network"]
-description: "VMware에서 OpenStack으로의 VM 마이그레이션을 위한 상세 가이드를 제공하며, 마이그레이션 계획 수립, 기존 환경 감사, VM 내보내기, 디스크 이미지 포맷 변환, OpenStack으로의 이미지 가져오기 및 인스턴스 실행, 마이그레이션 검증 단계를 포함합니다. 성공적인 마이그레이션을 위해 철저한 준비와 소통이 중요하며, 다운타임 최소화를 위한 DNS TTL 조정과 데이터 불일치 방지를 위한 주의가 필요합니다."
+description: "VMware ESXi에서 OpenStack으로의 VM 마이그레이션을 위한 단계별 가이드. 마이그레이션 계획 수립, 기존 환경 감사, 낮은 중요도의 서버부터 시작, 다운타임 고려, DNS TTL 조정, VM 내보내기, 디스크 이미지 포맷 변환, OpenStack으로 이미지 가져오기 및 인스턴스 실행, 마이그레이션 검증 과정을 포함하여 비용 효율적인 클라우드 환경으로의 전환을 지원합니다."
 notion_id: "22b1bab9-e3f8-80a3-a573-dad07bf0f583"
 notion_url: "https://www.notion.so/VMware-EXSi-OpenStack-VM-22b1bab9e3f880a3a573dad07bf0f583"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/VMware-EXSi-OpenStack-VM-22b1bab9e3f880a3a573
 # VMware EXSi의 대안, OpenStack으로의 VM 마이그레이션 가이드
 
 > **Summary**
-> VMware에서 OpenStack으로의 VM 마이그레이션을 위한 상세 가이드를 제공하며, 마이그레이션 계획 수립, 기존 환경 감사, VM 내보내기, 디스크 이미지 포맷 변환, OpenStack으로의 이미지 가져오기 및 인스턴스 실행, 마이그레이션 검증 단계를 포함합니다. 성공적인 마이그레이션을 위해 철저한 준비와 소통이 중요하며, 다운타임 최소화를 위한 DNS TTL 조정과 데이터 불일치 방지를 위한 주의가 필요합니다.
+> VMware ESXi에서 OpenStack으로의 VM 마이그레이션을 위한 단계별 가이드. 마이그레이션 계획 수립, 기존 환경 감사, 낮은 중요도의 서버부터 시작, 다운타임 고려, DNS TTL 조정, VM 내보내기, 디스크 이미지 포맷 변환, OpenStack으로 이미지 가져오기 및 인스턴스 실행, 마이그레이션 검증 과정을 포함하여 비용 효율적인 클라우드 환경으로의 전환을 지원합니다.
 
 ---
 

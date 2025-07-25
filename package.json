@@ -1,5 +1,15 @@
 {
   "dependencies": {
     "@notionhq/client": "^4.0.1"
-  }
+  },
+  "name": "cybecho.github.io",
+  "version": "1.0.0",
+  "description": "자동번역 기능은 현재 포기되었습니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
