@@ -1,10 +1,10 @@
 ---
 title: "Notion ↔ GitHub Pages 자동 동기화에 성공하였다."
-date: 2025-07-25T06:45:00.000Z
+date: 2025-07-25T02:00:00.000Z
 draft: false
 tags: ["Git", "Notion"]
-series: ["Git", "Tips"]
-description: "Notion 데이터베이스의 글을 자동으로 GitHub Pages에 동기화하는 방법으로, 두 가지 솔루션인 notion-site와 notion-jam을 소개합니다. 목표는 Notion에서 작성한 글을 Hugo 정적 사이트로 변환하여 GitHub Pages에 배포하는 것입니다. 최종 결과물은 편리한 글쓰기, 완전 자동화, 원본 제목 보존, 커스텀 디자인, 스마트 캐싱을 포함하며, 단계별로 Notion 설정, GitHub 저장소 설정, 프로젝트 파일 생성 및 배포 과정을 설명합니다."
+series: ["Notion ↔ Git Pages 자동화", "Git", "Tips"]
+description: "Notion과 GitHub Pages의 자동 동기화를 통해 글쓰기와 배포 과정을 완벽하게 분리하여, 기술적 마찰 없이 글쓰기에만 집중할 수 있는 환경을 구축하였다. Notion API, Hugo, GitHub Actions를 활용하여 신뢰할 수 있는 자동화 파이프라인을 설계하였고, 데이터 무결성, 효율성, 내결함성을 고려하여 시스템을 안정적으로 운영하고 있다. 이 과정은 개인의 필요에 맞춰 지속적으로 성장할 수 있는 콘텐츠 플랫폼을 만드는 여정이었다."
 notion_id: "23b1bab9-e3f8-8041-8479-d36a6f19bf5e"
 notion_url: "https://www.notion.so/Notion-GitHub-Pages-23b1bab9e3f880418479d36a6f19bf5e"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Notion-GitHub-Pages-23b1bab9e3f880418479d36a6
 # Notion ↔ GitHub Pages 자동 동기화에 성공하였다.
 
 > **Summary**
-> Notion 데이터베이스의 글을 자동으로 GitHub Pages에 동기화하는 방법으로, 두 가지 솔루션인 notion-site와 notion-jam을 소개합니다. 목표는 Notion에서 작성한 글을 Hugo 정적 사이트로 변환하여 GitHub Pages에 배포하는 것입니다. 최종 결과물은 편리한 글쓰기, 완전 자동화, 원본 제목 보존, 커스텀 디자인, 스마트 캐싱을 포함하며, 단계별로 Notion 설정, GitHub 저장소 설정, 프로젝트 파일 생성 및 배포 과정을 설명합니다.
+> Notion과 GitHub Pages의 자동 동기화를 통해 글쓰기와 배포 과정을 완벽하게 분리하여, 기술적 마찰 없이 글쓰기에만 집중할 수 있는 환경을 구축하였다. Notion API, Hugo, GitHub Actions를 활용하여 신뢰할 수 있는 자동화 파이프라인을 설계하였고, 데이터 무결성, 효율성, 내결함성을 고려하여 시스템을 안정적으로 운영하고 있다. 이 과정은 개인의 필요에 맞춰 지속적으로 성장할 수 있는 콘텐츠 플랫폼을 만드는 여정이었다.
 
 ---
 

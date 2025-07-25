@@ -3,7 +3,7 @@ title: "github 커밋 자동화 프로그램"
 date: 2023-03-23T00:00:00.000Z
 draft: false
 tags: ["Git", "ubuntu", "GCP"]
-series: ["Git", "진심글쓰기"]
+series: ["진심글쓰기", "Git", "Tips"]
 description: "구글 클라우드를 이용한 커밋 자동화 API 제작 방법을 설명하며, 무료 계정 생성, 서버 구축, Git 설치 및 로그인, 자동 커밋 스크립트 작성, GitHub 토큰 발급, 스크립트 스케줄링, 파일 생성 매크로 제작 등을 포함합니다. 최종적으로 하루에 한 번 자동으로 커밋하는 서버 API를 완성하는 과정을 안내합니다."
 notion_id: "de7dbe88-7e27-4d64-93b6-46269b476e7d"
 notion_url: "https://www.notion.so/github-de7dbe887e274d6493b646269b476e7d"
