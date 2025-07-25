@@ -4,7 +4,7 @@ date: 2025-07-25T02:00:00.000Z
 draft: false
 tags: ["Git", "Notion"]
 series: ["Notion ↔ Git Pages 자동화", "Git", "Tips"]
-description: "Notion과 GitHub Pages의 자동 동기화를 통해 글쓰기와 배포 과정을 완벽하게 분리하여, 기술적 마찰 없이 글쓰기에만 집중할 수 있는 환경을 구축하였다. Notion API, Hugo, GitHub Actions를 활용하여 신뢰할 수 있는 자동화 파이프라인을 설계하였고, 데이터 무결성, 효율성, 내결함성을 고려하여 시스템을 안정적으로 운영하고 있다. 이 과정은 개인의 필요에 맞춰 지속적으로 성장할 수 있는 콘텐츠 플랫폼을 만드는 여정이었다."
+description: "Notion과 GitHub Pages 간의 자동 동기화를 통해 글쓰기와 배포 과정을 완벽하게 분리한 시스템을 구축하였다. Notion API, Hugo, GitHub Actions를 활용하여 데이터 무결성, 효율성, 내결함성을 고려한 자동화 파이프라인을 설계하였고, 이를 통해 기술적 마찰 없이 글쓰기에만 집중할 수 있는 환경을 조성하였다. 이 과정은 개인적인 질문에 대한 엔지니어링적 해결책을 찾는 여정이었으며, 지속적으로 발전할 수 있는 플랫폼을 만들었다."
 notion_id: "23b1bab9-e3f8-8041-8479-d36a6f19bf5e"
 notion_url: "https://www.notion.so/Notion-GitHub-Pages-23b1bab9e3f880418479d36a6f19bf5e"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Notion-GitHub-Pages-23b1bab9e3f880418479d36a6
 # Notion ↔ GitHub Pages 자동 동기화에 성공하였다.
 
 > **Summary**
-> Notion과 GitHub Pages의 자동 동기화를 통해 글쓰기와 배포 과정을 완벽하게 분리하여, 기술적 마찰 없이 글쓰기에만 집중할 수 있는 환경을 구축하였다. Notion API, Hugo, GitHub Actions를 활용하여 신뢰할 수 있는 자동화 파이프라인을 설계하였고, 데이터 무결성, 효율성, 내결함성을 고려하여 시스템을 안정적으로 운영하고 있다. 이 과정은 개인의 필요에 맞춰 지속적으로 성장할 수 있는 콘텐츠 플랫폼을 만드는 여정이었다.
+> Notion과 GitHub Pages 간의 자동 동기화를 통해 글쓰기와 배포 과정을 완벽하게 분리한 시스템을 구축하였다. Notion API, Hugo, GitHub Actions를 활용하여 데이터 무결성, 효율성, 내결함성을 고려한 자동화 파이프라인을 설계하였고, 이를 통해 기술적 마찰 없이 글쓰기에만 집중할 수 있는 환경을 조성하였다. 이 과정은 개인적인 질문에 대한 엔지니어링적 해결책을 찾는 여정이었으며, 지속적으로 발전할 수 있는 플랫폼을 만들었다.
 
 ---
 

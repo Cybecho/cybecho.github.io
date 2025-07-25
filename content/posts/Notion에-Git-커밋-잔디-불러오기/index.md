@@ -4,7 +4,7 @@ date: 2023-02-16T00:00:00.000Z
 draft: false
 tags: ["Git", "Notion"]
 series: ["Git", "Tips"]
-description: "노션에 Git 커밋 잔디를 연동하는 방법에 대한 두 가지 버전이 소개되며, 각 버전은 GitHub 계정의 커밋 박스를 노션에 적용하는 방법과 관련된 링크와 코드 예제를 포함하고 있습니다. 첫 번째 버전은 Git 잔디 연동에 대한 기본적인 설명을 제공하고, 두 번째 버전은 추가적인 기능을 소개합니다."
+description: "노션에 Git 커밋 잔디를 연동하는 방법에 대한 설명으로, HTML 블록을 사용하여 GitHub 커밋 그래프를 노션에 삽입하는 방법과 관련된 링크 및 코드 예시가 포함되어 있다. 버전 2에서는 추가적인 업데이트가 언급된다."
 notion_id: "c9ce520a-1965-4cfb-a9db-23acb77de99a"
 notion_url: "https://www.notion.so/Notion-Git-c9ce520a19654cfba9db23acb77de99a"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Notion-Git-c9ce520a19654cfba9db23acb77de99a"
 # Notion에 Git 커밋 잔디 불러오기
 
 > **Summary**
-> 노션에 Git 커밋 잔디를 연동하는 방법에 대한 두 가지 버전이 소개되며, 각 버전은 GitHub 계정의 커밋 박스를 노션에 적용하는 방법과 관련된 링크와 코드 예제를 포함하고 있습니다. 첫 번째 버전은 Git 잔디 연동에 대한 기본적인 설명을 제공하고, 두 번째 버전은 추가적인 기능을 소개합니다.
+> 노션에 Git 커밋 잔디를 연동하는 방법에 대한 설명으로, HTML 블록을 사용하여 GitHub 커밋 그래프를 노션에 삽입하는 방법과 관련된 링크 및 코드 예시가 포함되어 있다. 버전 2에서는 추가적인 업데이트가 언급된다.
 
 ---
 
