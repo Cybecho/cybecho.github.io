@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Nutamix-HCI-OS-2141bab9e3f88079a1f0d8de153cc6
 
 ---
 
-![Image](image_8da3169af27f.png)
+![Image](image_8bafc075d046.png)
 
 ```plain text
 결론부터 말하자면, Nutanix의 "스토리지에 OS가 있다"는 말은 각 서버 노드(Node)가 독립적인 지능형 스토리지 컨트롤러 역할을 직접 수행한다는 의미입니다.
