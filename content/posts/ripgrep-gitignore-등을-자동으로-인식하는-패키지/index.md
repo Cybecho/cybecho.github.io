@@ -4,7 +4,7 @@ date: 2025-07-21T14:32:00.000Z
 draft: false
 tags: ["fedora", "Arch", "ubuntu", "Debian"]
 series: ["Let's Linux!", "Git"]
-description: "ripgrep은 기존의 grep보다 빠르고 효율적인 텍스트 검색 도구로, 소스 코드와 로그 파일에서 특정 문자열을 신속하게 찾는 데 유용합니다. Rust 언어로 개발되어 높은 성능을 제공하며, 고성능 정규식 엔진과 효율적인 파일 처리로 검색 속도를 극대화합니다. 기본적으로 .gitignore 파일을 인식하여 불필요한 검색을 줄이며, 간단한 명령어로 다양한 검색 작업을 수행할 수 있습니다. 설치는 Ubuntu에서 "
+description: "ripgrep은 기존의 grep보다 빠르고 효율적인 텍스트 검색 도구로, 자동으로 .gitignore 파일을 인식하여 불필요한 검색을 줄입니다. Rust 언어로 개발되어 높은 성능을 제공하며, 고성능 정규식 엔진과 효율적인 파일 처리를 통해 검색 속도를 극대화합니다. 사용자는 간단한 명령어로 다양한 검색 작업을 수행할 수 있으며, Neovim과 같은 텍스트 편집기와 통합하여 활용할 수 있습니다."
 notion_id: "2371bab9-e3f8-807f-8df2-c5394471b684"
 notion_url: "https://www.notion.so/ripgrep-gitignore-2371bab9e3f8807f8df2c5394471b684"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/ripgrep-gitignore-2371bab9e3f8807f8df2c539447
 # ripgrep - gitignore 등을 자동으로 인식하는 패키지
 
 > **Summary**
-> ripgrep은 기존의 grep보다 빠르고 효율적인 텍스트 검색 도구로, 소스 코드와 로그 파일에서 특정 문자열을 신속하게 찾는 데 유용합니다. Rust 언어로 개발되어 높은 성능을 제공하며, 고성능 정규식 엔진과 효율적인 파일 처리로 검색 속도를 극대화합니다. 기본적으로 .gitignore 파일을 인식하여 불필요한 검색을 줄이며, 간단한 명령어로 다양한 검색 작업을 수행할 수 있습니다. 설치는 Ubuntu에서 
+> ripgrep은 기존의 grep보다 빠르고 효율적인 텍스트 검색 도구로, 자동으로 .gitignore 파일을 인식하여 불필요한 검색을 줄입니다. Rust 언어로 개발되어 높은 성능을 제공하며, 고성능 정규식 엔진과 효율적인 파일 처리를 통해 검색 속도를 극대화합니다. 사용자는 간단한 명령어로 다양한 검색 작업을 수행할 수 있으며, Neovim과 같은 텍스트 편집기와 통합하여 활용할 수 있습니다.
 
 ---
 

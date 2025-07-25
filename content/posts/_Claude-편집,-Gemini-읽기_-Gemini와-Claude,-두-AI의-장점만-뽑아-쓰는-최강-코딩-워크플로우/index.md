@@ -4,7 +4,7 @@ date: 2025-07-21T14:59:00.000Z
 draft: false
 tags: ["AI", "Claude"]
 series: ["AI"]
-description: "Gemini와 Claude를 결합한 혁신적인 코딩 워크플로우는 Gemini가 대규모 코드 분석을 수행하고 Claude가 실제 코드 작성을 담당하여 개발 생산성을 극대화합니다. 각 AI의 장점과 단점을 이해하고, 설치 및 설정 방법, 효율적인 연동 설정, 실제 사용 패턴과 효과, 고급 최적화 기법을 통해 비용과 시간을 절약하며 코드 품질을 높일 수 있습니다."
+description: "Gemini와 Claude를 결합한 혁신적인 코딩 워크플로우는 각 AI의 장점을 활용하여 개발 생산성을 높입니다. Gemini는 대규모 코드 분석과 정보 수집에 특화되어 있고, Claude는 코드 작성과 구현에 뛰어납니다. 이 조합은 비용 효율성과 코드 품질을 보장하며, 설치 및 설정 방법, 효율적인 연동 설정, 실제 사용 패턴과 효과, 고급 최적화 기법을 통해 생산성을 극대화할 수 있습니다."
 notion_id: "2371bab9-e3f8-807d-9908-f17e8fa8cbd0"
 notion_url: "https://www.notion.so/Claude-Gemini-Gemini-Claude-AI-2371bab9e3f8807d9908f17e8fa8cbd0"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Claude-Gemini-Gemini-Claude-AI-2371bab9e3f880
 # "Claude 편집, Gemini 읽기" - Gemini와 Claude, 두 AI의 장점만 뽑아 쓰는 최강 코딩 워크플로우
 
 > **Summary**
-> Gemini와 Claude를 결합한 혁신적인 코딩 워크플로우는 Gemini가 대규모 코드 분석을 수행하고 Claude가 실제 코드 작성을 담당하여 개발 생산성을 극대화합니다. 각 AI의 장점과 단점을 이해하고, 설치 및 설정 방법, 효율적인 연동 설정, 실제 사용 패턴과 효과, 고급 최적화 기법을 통해 비용과 시간을 절약하며 코드 품질을 높일 수 있습니다.
+> Gemini와 Claude를 결합한 혁신적인 코딩 워크플로우는 각 AI의 장점을 활용하여 개발 생산성을 높입니다. Gemini는 대규모 코드 분석과 정보 수집에 특화되어 있고, Claude는 코드 작성과 구현에 뛰어납니다. 이 조합은 비용 효율성과 코드 품질을 보장하며, 설치 및 설정 방법, 효율적인 연동 설정, 실제 사용 패턴과 효과, 고급 최적화 기법을 통해 생산성을 극대화할 수 있습니다.
 
 ---
 

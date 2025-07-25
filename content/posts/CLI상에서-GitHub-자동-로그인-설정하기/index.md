@@ -4,7 +4,7 @@ date: 2025-07-21T01:45:00.000Z
 draft: false
 tags: ["Git"]
 series: ["Git", "Tips"]
-description: "Ubuntu에서 Personal Access Token(PAT)을 사용하여 GitHub에 자동 로그인하는 방법 두 가지를 소개합니다. 첫 번째 방법은 .netrc 파일과 Git Credential Helper를 사용하여 토큰을 저장하고 인증하는 것이고, 두 번째 방법은 GitHub CLI를 설치하고 환경변수에 토큰을 추가하여 인증하는 것입니다. 두 방법 모두 보안 주의사항을 고려해야 하며, 파일 권한 설정을 확인해야 합니다."
+description: "Ubuntu에서 Personal Access Token(PAT)을 사용하여 GitHub에 자동 로그인하는 두 가지 방법을 소개합니다. 첫 번째 방법은 .netrc 파일과 Git Credential Helper를 이용하여 토큰을 저장하고 인증 정보를 관리하는 것이고, 두 번째 방법은 GitHub CLI를 설치하고 환경 변수에 토큰을 추가하여 인증하는 것입니다. 두 방법 모두 보안 주의사항이 있으며, 파일 권한 설정을 확인해야 합니다."
 notion_id: "2371bab9-e3f8-8092-8e1f-f1b2a4a385e8"
 notion_url: "https://www.notion.so/CLI-GitHub-2371bab9e3f880928e1ff1b2a4a385e8"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/CLI-GitHub-2371bab9e3f880928e1ff1b2a4a385e8"
 # CLI상에서 GitHub 자동 로그인 설정하기
 
 > **Summary**
-> Ubuntu에서 Personal Access Token(PAT)을 사용하여 GitHub에 자동 로그인하는 방법 두 가지를 소개합니다. 첫 번째 방법은 .netrc 파일과 Git Credential Helper를 사용하여 토큰을 저장하고 인증하는 것이고, 두 번째 방법은 GitHub CLI를 설치하고 환경변수에 토큰을 추가하여 인증하는 것입니다. 두 방법 모두 보안 주의사항을 고려해야 하며, 파일 권한 설정을 확인해야 합니다.
+> Ubuntu에서 Personal Access Token(PAT)을 사용하여 GitHub에 자동 로그인하는 두 가지 방법을 소개합니다. 첫 번째 방법은 .netrc 파일과 Git Credential Helper를 이용하여 토큰을 저장하고 인증 정보를 관리하는 것이고, 두 번째 방법은 GitHub CLI를 설치하고 환경 변수에 토큰을 추가하여 인증하는 것입니다. 두 방법 모두 보안 주의사항이 있으며, 파일 권한 설정을 확인해야 합니다.
 
 ---
 
-![Image](image_9ede881174a9.png)
+![Image](image_7f1a8a5b3069.png)
 
 GitHub 자동 로그인 설정하기
 
