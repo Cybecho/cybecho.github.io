@@ -199,23 +199,33 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
           if (block.toggle?.rich_text?.length > 0) {
             const toggleText = convertRichText(block.toggle.rich_text);
             
-            // 제목 토글인지 확인 (# ## ### 으로 시작하는지 체크)
-            const headingMatch = toggleText.match(/^(#{1,3})\s+(.+)/);
+            // 제목 토글 패턴 확인 (다양한 형태의 제목 토글 지원)
+            // 패턴: "## >> 제목", "### >>>> 제목", "# > 제목" 등
+            const headingToggleMatch = toggleText.match(/^(#{1,6})\s*>+\s*(.+)/) || 
+                                     toggleText.match(/^(#{1,6})\s+(.+)/);
             
-            if (headingMatch) {
-              // 제목 토글의 경우: 토글 기능 제거하고 제목만 표시
-              content += headingMatch[1] + ' ' + headingMatch[2] + '\n\n';
+            if (headingToggleMatch) {
+              // 제목 토글의 경우: 제목으로 변환하고 내부 콘텐츠 포함
+              const headingLevel = headingToggleMatch[1]; // #, ##, ### 등
+              const headingTitle = headingToggleMatch[2].trim();
               
-              // 제목 토글 내부 컨텐츠를 일반 컨텐츠로 처리
+              console.log(`Converting heading toggle: "${toggleText}" → "${headingLevel} ${headingTitle}"`);
+              
+              // 제목 출력
+              content += headingLevel + ' ' + headingTitle + '\n\n';
+              
+              // 🔥 핵심: 제목 토글 내부 컨텐츠를 반드시 포함
               if (block.has_children) {
+                console.log(`Processing children for heading toggle: ${headingTitle}`);
                 const childContent = await convertBlocks(block.id, postDir, 0);
-                content += childContent;
+                if (childContent.trim()) {
+                  content += childContent + '\n';
+                }
               }
             } else {
-              // 일반 토글의 경우: 기존대로 details/summary 태그 사용
+              // 일반 토글의 경우: details/summary 태그 사용
               content += '<details>\n<summary>' + toggleText + '</summary>\n\n';
               
-              // 토글 내부 컨텐츠 처리
               if (block.has_children) {
                 const childContent = await convertBlocks(block.id, postDir, 0);
                 content += childContent;
