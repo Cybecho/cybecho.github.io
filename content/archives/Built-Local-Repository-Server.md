@@ -7,8 +7,6 @@ tags: ["Infra", "System", "Linux", "RHEL", "Docker", "Nginx", "Repository", "Sec
 categories: ["Infra"]
 draft: false
 ---
-
-![이미지 설명](/images/archives/0626_cj_diagram_nginx.gif)
 ![[0626_cj_diagram_nginx.gif]]
 ## 폐쇄망 운영 안정성을 위한 내부 패키지 저장소 구축 회고
 
@@ -57,7 +55,7 @@ https://drive.google.com/file/d/1NqOjRqxwE8TKazlxozB0R_Iszf7HApTB/view
 
 > WEB UI
 
-https://drive.google.com/file/d/1d_AKlAOD5sJWpmJ3xe_Zg6Aoqbfk5vJT/view?t=8
+https://drive.google.com/file/d/1d_AKlAOD5sJWpmJ3xe_Zg6Aoqbfk5vJT/view
 
 나는 ‘그냥 되겠지’라는 막연한 기대를 경계했다. ‘정말로 의도대로 동작하는가?’를 끊임없이 증명하는 과정에 집중했다. 모든 구축 단계마다 상세한 가이드 문서를 작성했고, 각 기능이 올바르게 동작함을 `tcpdump`를 이용한 패킷 캡처 등으로 증명하고 그 결과를 증명서로 남겼다. 이 과정은 단순히 기록을 넘어, 문제가 발생했을 때 원인을 추적하고, 다른 누군가가 이 시스템을 유지보수해야 할 때 명확한 지침이 되어줄 것이라 믿었다. 3주간의 프로젝트 기간 동안 가이드 15개, 증명서 10개를 포함해 총 84개의 산출물을 작성하며, 과정의 모든 발자취를 남겼다.
 

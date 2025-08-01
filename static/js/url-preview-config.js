@@ -53,6 +53,7 @@ window.URLPreviewConfig = {
     'twitter.com': '🐦',
     'facebook.com': '📘',
     'linkedin.com': '💼',
+    'drive.google.com': '📁',
     'default': '🔗'
   },
   
