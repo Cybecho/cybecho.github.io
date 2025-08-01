@@ -9,7 +9,7 @@ draft: false
 ---
 
 ![이미지 설명](/images/archives/0626_cj_diagram_nginx.gif)
-
+![[0626_cj_diagram_nginx.gif]]
 ## 폐쇄망 운영 안정성을 위한 내부 패키지 저장소 구축 회고
 
 [PPT로 보기](https://gamma.app/docs/-kzok8gnu2vh0aov)
@@ -17,17 +17,17 @@ draft: false
 모든 프로젝트는 하나의 질문에서 시작된다. 나에게 이번 프로젝트의 시작은 ‘어떻게 하면 더 안정적인 시스템을 만들 수 있을까?’라는 근본적인 질문이었다. 지난 3주간 폐쇄망 환경에서 운영 안정성을 확보하기 위한 내부 패키지 저장소를 구축하며 얻은 경험과 생각을 정리해보고자 한다. 이 과정의 핵심적인 깨달음은 한 문장으로 요약할 수 있다. **검증은 곧 신뢰이며, 제약은 곧 기회라는 것이다.**
 
 ### 왜 시작했는가? - 문제 인식과 목표 설정
-
+![[Pasted image 20250802000736.png]]
 인프라 엔지니어에게 ‘폐쇄망’은 익숙하면서도 까다로운 환경이다. 보안을 위해 외부와 단절되어 있지만, 역설적이게도 업무를 위해선 다양한 외부 소프트웨어와 도구가 필요하기 때문이다. 이 딜레마를 해결하기 위해 우리는 외부의 써드파티(Third-Party) 저장소를 사용하곤 한다. 바로 여기서 모든 문제가 시작되었다.
 
 외부 저장소는 우리가 통제할 수 없는 영역에 존재한다. 이는 곧 예측 불가능한 위험에 그대로 노출된다는 의미다. 실제로 Microsoft의 리눅스 패키지 저장소가 하루 넘게 중단되거나, XZ Utils 백도어 사건처럼 신뢰했던 오픈소스에서 심각한 보안 위협이 발견되는 사례는 외부 의존성의 위험을 명확히 보여준다. 그렇다고 각 서버마다 필요에 따라 다른 버전의 패키지를 설치하면, 시스템 전반의 표준성이 무너져 운영 복잡도는 기하급수적으로 증가한다.
-
+![[Pasted image 20250802001033.png]]
 이러한 문제의 본질을 마주하며 나는 스스로에게 질문을 던졌다. “안전하고, 예측 가능하며, 효율적인 운영 환경을 만들 수는 없을까?” 이에 대한 해답으로, 통제 가능한 우리만의 내부 패키지 저장소를 구축하자는 목표를 세웠다. 외부의 불확실성을 내부의 확실성으로 바꾸는 것, 그것이 이 프로젝트의 핵심이었다.
-
+![[Pasted image 20250802001112.png]]
 궁극적인 목표는 명확했다. 외부 인터넷 연결 없이, 사전에 보안 검수를 마친 패키지들만 존재하는 내부 저장소 서버를 통해 모든 클라이언트가 안전하고 일관된 방식으로 패키지를 공급받는 시스템을 구축하는 것이다. 이로써 **안정성, 일관성, 보안성, 효율성**이라는 네 마리 토끼를 잡고자 했다.
 
 ### 어떻게 구현했는가? - 선택, 실행, 그리고 검증의 과정
-
+![[Pasted image 20250802001537.png]]
 목표는 정해졌고, 이제는 ‘어떻게’ 구현할 것인가에 대한 고민이 시작됐다. 나는 모든 기술적 선택의 기준으로 ‘엔터프라이즈 환경의 비즈니스 연속성과 리스크 관리’라는 원칙을 세웠다.
 
 **1. 기술 선택의 이유: Nginx와 컨테이너**
@@ -40,6 +40,8 @@ draft: false
 
 실제 구축 과정은 결코 순탄치 않았다. 특히 ‘폐쇄망’이라는 제약은 모든 단계에서 도전 과제를 안겨주었다.
 
+![[Pasted image 20250802001758.png]]
+
 *   **Docker 설치:** 외부망이 막힌 환경에서 Docker를 설치하는 것부터가 난관이었다. 필요한 모든 RPM 패키지와 의존성 패키지를 외부에서 수동으로 수집한 뒤, 정확한 순서에 맞춰 하나씩 설치해야만 했다.
 *   **불변 인프라 구축:** Nginx 애플리케이션을 컨테이너 이미지로 만들고, 이 이미지를 NFS(Network File System)에 백업하여 언제든 동일한 상태로 복원할 수 있는 체계를 갖췄다. 데이터뿐만 아니라 애플리케이션 환경까지 백업의 대상으로 삼은 것이다.
 *   **하이브리드 저장소 구성:** 안정적인 OS 기본 패키지를 제공하는 ISO 저장소와, 필요한 응용 프로그램을 선별적으로 제공하는 유저 저장소를 함께 사용하는 하이브리드 전략을 택했다. 특히 유저 저장소는 `reposync`를 통해 필요한 패키지만을 동기화하여 수동으로 폐쇄망에 반영하는 방식으로 관리의 효율과 보안을 동시에 고려했다.
@@ -47,11 +49,23 @@ draft: false
 
 **3. 검증의 철학: 모든 과정을 문서화하고 증명하다**
 
+![[Pasted image 20250802001823.png]]
+
+> Packet Check
+
+https://drive.google.com/file/d/1NqOjRqxwE8TKazlxozB0R_Iszf7HApTB/view
+
+> WEB UI
+
+https://drive.google.com/file/d/1d_AKlAOD5sJWpmJ3xe_Zg6Aoqbfk5vJT/view?t=8
+
 나는 ‘그냥 되겠지’라는 막연한 기대를 경계했다. ‘정말로 의도대로 동작하는가?’를 끊임없이 증명하는 과정에 집중했다. 모든 구축 단계마다 상세한 가이드 문서를 작성했고, 각 기능이 올바르게 동작함을 `tcpdump`를 이용한 패킷 캡처 등으로 증명하고 그 결과를 증명서로 남겼다. 이 과정은 단순히 기록을 넘어, 문제가 발생했을 때 원인을 추적하고, 다른 누군가가 이 시스템을 유지보수해야 할 때 명확한 지침이 되어줄 것이라 믿었다. 3주간의 프로젝트 기간 동안 가이드 15개, 증명서 10개를 포함해 총 84개의 산출물을 작성하며, 과정의 모든 발자취를 남겼다.
 
 ### 그래서 무엇을 얻었는가? - 결과, 한계, 그리고 깨달음
 
 **1. 문제의 개선과 시스템의 가치: 안정성 확보**
+
+![[Pasted image 20250802001853.png]]
 
 결과적으로, 이 시스템을 통해 프로젝트 초기에 제기했던 문제들을 상당 부분 개선할 수 있었다.
 
@@ -63,6 +77,8 @@ draft: false
 
 **2. 솔직한 회고: 한계와 개선점**
 
+![[Pasted image 20250802002206.png]]
+
 물론 현재 시스템이 완벽하다고 생각하지는 않는다. 솔직한 마음으로, 개선이 필요한 부분들을 인정하고 싶다.
 
 *   **고가용성(HA):** 현재는 단일 서버 구조라 해당 서버에 장애가 발생하면 전체 서비스가 중단된다. HA 클러스터 구성을 통해 서버를 이중화하여 서비스 연속성을 확보해야 한다.
@@ -71,8 +87,21 @@ draft: false
 
 **3. 마지막으로, 엔지니어로서의 깨달음**
 
+![[Pasted image 20250802002250.png]]
+
 이번 프로젝트를 진행하며 "엔지니어에게 '그냥'은 없다"는 말을 마음속에 계속 되새겼다. 엔지니어의 진짜 가치는 주어진 제약 속에서도 ‘왜?’, ‘어떻게?’를 끝까지 파고들어 마침내 ‘그래서’라는 결과와 가치를 만들어내는 데 있다고 믿는다.
 
 사실 ‘폐쇄망’이라는 콘셉트조차 처음부터 의도했던 것은 아니다. 처음 할당받은 서버의 강력한 보안 정책 때문에 기본적인 접속조차 쉽지 않았다. 하지만 ‘안 된다’고 포기하는 대신, ‘어떻게든 되게 만들자’는 마음으로 이 제약을 파고들었다. 그 결과, 이 제약은 오히려 ‘폐쇄망 내부 저장소 구축’이라는 더 의미 있는 프로젝트의 기회가 되어주었다.
 
 이 경험을 통해 나는 온몸으로 깨달았다. 꼼꼼한 **검증의 과정은 시스템에 대한 신뢰를 만들고, 피할 수 없어 보이는 제약은 생각을 전환할 때 새로운 기회의 문을 열어준다**는 것을. 이 깨달음이야말로 이번 프로젝트가 나에게 남긴 가장 큰 자산이다.
+
+
+### Reference
+
+1. [Microsoft Linux repos suffer day-long outage, still recovering, BleepingComputer, 2024년 6월 17일,](https://www.bleepingcomputer.com/news/microsoft/microsoft-linux-repos-suffer-day-long-outage-still-recovering/) 
+2. [CVE-2024-3094: XZ Utils 백도어 취약점 분석, Kaspersky 블로그, 2024년 4월 2일,](https://www.kaspersky.com/blog/cve-2024-3094-vulnerability-backdoor/50873/) 
+3. [리눅스 해킹은 이렇게 하는거다..?! ,노마드 코더 Nomad Coders,2024년 4월 7일,](https://youtu.be/sJhRjWiL1VQ?si=hPbOQ_dg1DU9pY9T) 
+4. [Malicious Code Found in Arch Linux AUR Repository, Latest Hacking News, 2018년 7월 12일,](https://latesthackingnews.com/2018/07/12/malicious-code-found-in-arch-linux-aur-repository/) 
+5. [Inside NGINX: How We Designed for Performance & Scale, NGINX 블로그, Igor Sysoev, 2018년 10월 10일,](https://blog.nginx.org/blog/inside-nginx-how-we-designed-for-performance-scale) 
+6. [Ultimate Web Server Benchmark: Apache, Nginx, LiteSpeed, OpenLiteSpeed, Caddy, Lighttpd Compared, LinuxConfig.org, 2022년 8월 12일,](https://linuxconfig.org/ultimate-web-server-benchmark-apache-nginx-litespeed-openlitespeed-caddy-lighttpd-compared) 
+7. [Containers Explained, Red Hat, (작성일 정보 없음),](https:// https://www.redhat.com/en/topics/containers)

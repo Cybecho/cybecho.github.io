@@ -1,0 +1,207 @@
+{
+  "main": {
+    "id": "0f8ed5a3d37208c3",
+    "type": "split",
+    "children": [
+      {
+        "id": "38ddd97446a7e3be",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2e82c7c5290e2f95",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/archives/Built-Local-Repository-Server.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Built-Local-Repository-Server"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "87acc4d0aed40322",
+    "type": "split",
+    "children": [
+      {
+        "id": "18a5e7a54b0fc570",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "15b004e5cc8f2378",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "2578f0d2c62c9f9e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "15ceb2174d8ae675",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d9565a640310b740",
+    "type": "split",
+    "children": [
+      {
+        "id": "57065ee89eb098e2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1235604742ed1fbc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/archives/Hardware-modded-for-Google-Photos-upload-server.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Hardware-modded-for-Google-Photos-upload-server 의 백링크"
+            }
+          },
+          {
+            "id": "e7b3484e99c52617",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/archives/Hardware-modded-for-Google-Photos-upload-server.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Hardware-modded-for-Google-Photos-upload-server 의 나가는 링크"
+            }
+          },
+          {
+            "id": "e362543ecc9121a6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "cba964eaca8c6db2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/archives/Hardware-modded-for-Google-Photos-upload-server.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Hardware-modded-for-Google-Photos-upload-server 의 개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "2e82c7c5290e2f95",
+  "lastOpenFiles": [
+    "static/images/archives/Pasted image 20250802002250.png",
+    "static/images/archives/Pasted image 20250802002228.png",
+    "static/images/archives/Pasted image 20250802002206.png",
+    "static/images/archives/Pasted image 20250802001853.png",
+    "static/images/archives/Pasted image 20250802001844.png",
+    "static/images/archives/Pasted image 20250802001823.png",
+    "static/images/archives/Pasted image 20250802001758.png",
+    "static/images/archives/Pasted image 20250802001537.png",
+    "static/images/archives/Pasted image 20250802001112.png",
+    "static/images/archives/Pasted image 20250802001033.png",
+    "static/images/archives/Pasted image 20250802000736.png",
+    "content/posts/go-run의-첫-실행이-유독-느렸던-이유에-대한-고찰/index.md",
+    "content/posts/go-run의-첫-실행이-유독-느렸던-이유에-대한-고찰",
+    "content/posts/Rocky10-에서-neofetch-직접-빌드하여-사용하기/index.md",
+    "content/posts/Rocky10-에서-neofetch-직접-빌드하여-사용하기",
+    "content/posts/RST와-AHCI가-도대체-뭔데-날-이리-괴롭힐까_-Dell-XPS-13-9365에-Ubuntu-듀얼부팅하기/index.md",
+    "content/posts/RST와-AHCI가-도대체-뭔데-날-이리-괴롭힐까_-Dell-XPS-13-9365에-Ubuntu-듀얼부팅하기",
+    "content/posts/Copyparty-거의-모든-기기를-파일-서버로-만드는-오픈소스/index.md",
+    "content/posts/Copyparty-거의-모든-기기를-파일-서버로-만드는-오픈소스",
+    "CLAUDE.md",
+    "content/archives/Built-Local-Repository-Server.md",
+    "content/archives/Built-Public-Private-DNS-Integration-Analysis.md",
+    "content/archives/notion-github-sync.md",
+    "content/archives/Hardware-modded-for-Google-Photos-upload-server.md",
+    "content/archives/Cloud-Migration-for-Shipping Cost-Reduction-System.md",
+    "content/archives/Built-Home-Server-Infrastructure.md",
+    "content/archives/Built-IPSec-VPN.md",
+    "content/archives/Why-Proxmox.md",
+    "GISCUS_SETUP_GUIDE.md",
+    "content/static/images/archives",
+    "content/static/images",
+    "content/static"
+  ]
+}

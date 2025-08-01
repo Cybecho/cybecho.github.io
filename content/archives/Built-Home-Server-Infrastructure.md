@@ -6,6 +6,27 @@ featured_image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800
 tags: ["Homelab", "Proxmox", "Server", "Virtualization", "Networking", "Linux", "LXC", "Security", "Self-hosting", "RHEL"]
 categories: ["Homelab"]
 ---
+---
+title: "환경변수하고 Alias는 무슨 차이가 있는가?"
+date: 2025-02-24T08:34:00.000Z
+draft: false
+tags: ["Docker"]
+series: ["Infra & Network"]
+description: "콘텐츠 없음"
+notion_id: "1a41bab9-e3f8-804d-bb86-f63ca9263587"
+notion_url: "https://www.notion.so/Alias-1a41bab9e3f8804dbb86f63ca9263587"
+---
+
+# 환경변수하고 Alias는 무슨 차이가 있는가?
+
+> **Summary**
+> 콘텐츠 없음
+
+---
+
+*이 글은 Notion에서 가져왔습니다.*
+
+[원본 보기](https://www.notion.so/Alias-1a41bab9e3f8804dbb86f63ca9263587)
 
 # 삽질에서 깨달음으로: Proxmox 홈서버 구축 여정기
 
