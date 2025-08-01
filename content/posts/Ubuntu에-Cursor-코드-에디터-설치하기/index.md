@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Ubuntu-Cursor-15d1bab9e3f880f49348d3d27881399
 
 ---
 
-![Image](image_14a8980b532b.png)
+![Image](image_7ae674ba1154.png)
 
 # Ubuntu에 Cursor 코드 에디터 설치하기
 

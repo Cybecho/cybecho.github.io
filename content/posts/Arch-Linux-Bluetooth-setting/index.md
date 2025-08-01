@@ -119,3 +119,30 @@ $ sudo systemctl start bluetooth.service$ sudo systemctl enable bluetooth.
 
 # If you GDM USER ONLY!
 
+시스템이 고급 오디오 배포 프로필을 채택하는 경우 프로토콜로 인해 일부 연결 오류가 발생할 수 있습니다. GDM 사용자인 경우 다음 명령을 실행
+
+```javascript
+sudo pacman -S gdm
+```
+
+$ cd ~
+
+$ mkdir src
+
+$ cd src
+
+$ git clone https://aur.archlinux.org/pulseaudio-bluetooth-a2dp-gdm-fix.git
+
+$ cd (git clone 디렉토리)
+
+$ makepkg -i
+
+![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_14.jpg)
+
+그게 다야! 이제 Arch Linux 서버와 원격으로 연결된 Bluetooth 장치를 사용할 수 있습니다.
+
+## **결론**
+
+의심할 여지없이 Arch Linux 시스템에서 Bluetooth 장치를 설정하는 것은 다른 서버와 달리 코딩을 포함합니다. 그러나 이것을 Linux의 다른 응용 프로그램 구성과 비교하는 것은 여전히 액세스 가능합니다. Arch Linux를 주 운영 서버로 사용하는 사용자는 Arch Linux에서 Bluetooth를 구성하는 것이 편리할 것입니다. 이 문서에 나열된 세 가지 주요 단계를 따르기만 하면 Linux Desktop에서 Bluetooth 장치를 즐길 수 있습니다. 장치가 Arch Linux 서버 설정에 적응할 수 있는 경우 오디오 구성 후 장치 설정 구성을 건너뛸 수 있습니다. 모든 것이 순조롭게 진행된다면 어댑터 연결의 막힘을 확인하는 과정을 무시할 수도 있습니다. 이 가이드는 Arch Linux를 사용하여 서버에서 Bluetooth 구성을 설정하는 초보자를 돕기 위해 고안되었습니
+
+

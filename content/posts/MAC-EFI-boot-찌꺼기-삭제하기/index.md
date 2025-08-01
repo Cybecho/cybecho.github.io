@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-EFI-boot-7e96a6c1114c4d5f89ff5aace5ac2bff
 
 ---
 
-![Image](image_f4e928717379.png)
+![Image](image_de2fa6c46431.png)
 
 ```latex
 오늘도 어김없이 똥컴에 리눅스깔다가 삽질하는 나!

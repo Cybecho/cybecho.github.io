@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/PowerToys-fc5218a790ef441d992e5629ff8fabe4"
 
 ---
 
-![Image](image_b833461755d3.png)
+![Image](image_630372e653b0.png)
 
 
 # >> 결론적으로, 해당 방법으로는 해결이 불가능했습니다.
@@ -59,7 +59,7 @@ start "" "C:\Program Files\PowerToys\PowerToys.exe"
 exit
 ```
 
-![Image](image_184bc3ad8bd1.png)
+![Image](image_bad4d50ecdf2.png)
 
 > 💡 **귀찮으면 다운 ㄱ**
 > ---

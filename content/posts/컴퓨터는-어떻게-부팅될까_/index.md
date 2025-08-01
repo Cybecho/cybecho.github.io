@@ -20,7 +20,7 @@ notion_url: "https://www.notion.so/1f11bab9e3f880ffaca1fb94d94bcb50"
 
 # 의문 배경…
 
-클클에서 ROM에대해 설명하다가, 왜 CPU는 ROM을 통해서 RAM에 OS를 탑제하는거지? 배웠던걸 복기하고싶었음… [Untitled](https://www.notion.so/e131ef941a6e4c3487cdc870dd26d8d9) 
+클클에서 ROM에대해 설명하다가, 왜 CPU는 ROM을 통해서 RAM에 OS를 탑제하는거지? 배웠던걸 복기하고싶었음… [3-1 주차 [마이크로프로세서]](https://www.notion.so/e131ef941a6e4c3487cdc870dd26d8d9) 
 
 # 내 질문
 
@@ -70,5 +70,5 @@ NOR Flash의 주요 특징은:
 - 저전력으로 작동합니다
 ROM이 NOR Flash로 대체된 중요한 이유는, 기존 ROM은 읽기만 가능했던 반면, NOR Flash는 제한적이지만 데이터를 새로 쓸 수도 있기 때문입니다. 다만 쓰기/삭제 속도가 상대적으로 느린데, 이는 ROM을 대체하는 용도로 설계되어 자주 데이터를 수정할 필요가 없기 때문입니다.
 
-[Untitled](https://www.notion.so/a7aa8fa6d11447acaa28169b3ac33fbb) 
+[NOR Flash Memory - 특성 개요](https://www.notion.so/a7aa8fa6d11447acaa28169b3ac33fbb) 
 

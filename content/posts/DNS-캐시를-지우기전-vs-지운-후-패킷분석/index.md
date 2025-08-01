@@ -18,7 +18,7 @@ notion_url: "https://www.notion.so/DNS-vs-1a71bab9e3f8807fba7cf36368903ced"
 
  
 
-> 💡 **[Untitled](https://www.notion.so/1a71bab9e3f880fb9b9fc22d32de0e67) **
+> 💡 **[@February 27, 2025 - 컨테이너를 활용한 백업 및 공유환경 구축](https://www.notion.so/1a71bab9e3f880fb9b9fc22d32de0e67) **
 
 해당 실습에서, private DNS 와 public DNS 를 구분하여 publicDNS영역에 있는 주소를 요청했더니, private DNS로 요청이 전달되는게 아니라, public DNS에서 바로 주소를 반환하는것을 확인하였다.
 

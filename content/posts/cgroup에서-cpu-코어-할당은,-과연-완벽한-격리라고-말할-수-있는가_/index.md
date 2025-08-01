@@ -64,6 +64,10 @@ CFS 스케줄러는 cgroup cpu 서브시스템과 긴밀하게 통합되어 프�
 
 cgroup은 CPU 자원을 관리하기 위해 두 가지 주요 컨트롤러를 제공합니다: **cpu 컨트롤러**와 **cpuset 컨트롤러**. 이 둘의 차이는 다음과 같습니다:
 
+| 컨트롤러 | 목적 | 주요 파라미터 | 예시 값 | 사용 사례 |
+| CPU | 프로세스가 받는 CPU 시간의 비율을 관리, 예를 들어 파이를 나누는 것과 비슷 | - cpu.shares (기본값: 1024)<br>- cpu.cfs_period_us (기본값: 100000 µs)<br>- cpu.cfs_quota_us | - cpu.shares: 2048, 1024<br>- cpu.cfs_period_us: 100000<br>- cpu.cfs_quota_us: 20000 | - 공정성 보장<br>- 속도 제한<br>- 우선순위 설정 |
+| CPUSET | 특정 CPU(및 메모리 노드)를 프로세스 그룹에 할당, 성능 최적화 및 격리 | - cpuset.cpus<br>- cpuset.mems | - cpuset.cpus: 0-3, 2,3<br>- cpuset.mems: 0 | - NUMA 최적화<br>- 실시간 격리<br>- 보안 강화 |
+
 - **cpu 컨트롤러**: 이는 CPU 사용량을 제한하거나 비율을 설정하는 데 사용됩니다. 예를 들어, 컨테이너에 CPU 사용률 50%를 설정하면, 1초 동안 시스템의 총 CPU 시간(예: 4코어 시스템에서는 4초) 중 2초만 사용할 수 있습니다. 이는 특정 코어를 완전히 점유하는 것이 아니라, 시간 기반으로 자원을 분배하는 방식입니다.
 - **cpuset 컨트롤러**: 특정 CPU 코어를 그룹에 할당하여 해당 코어에서만 프로세스가 실행되도록 제한합니다. 예를 들어, `echo 2,3 > /sys/fs/cgroup/cpuset/realtime/cpuset.cpus` 명령으로 CPU 2와 3을 특정 cgroup에 할당할 수 있습니다. 그러나 이는 다른 cgroup이 동일한 CPU를 사용할 수 있음을 의미하며, 완전한 점유를 보장하지 않습니다.
 ### 컨테이너가 CPU 코어를 완전히 점유하는가?

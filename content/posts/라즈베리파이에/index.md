@@ -100,9 +100,22 @@ Raspberry Pi 4 Model B에서 **Lineage OS 22 (Android 15)** 를 구운 뒤 최�
 
 ## **1. 사전 확인**
 
+| **항목** | **값** |
+| --- | --- |
+| 기기 | Raspberry Pi 4 B (또는 Pi 400/CM4) |
+| ROM | Lineage OS 22.2 (Android 15) 비공식 KonstaKANG 빌드 |
+| 아키텍처 | **ARM64** (Pi 4는 64-bit 전용) |
+| Recovery | 빌드에 포함된 **TWRP 3.7 기반** |
+
 ---
 
 ## **2. GApps 패키지 선택**
+
+| **패키지** | **지원 버전** | **특징** | **비고** |
+| --- | --- | --- | --- |
+| **MindTheGapps 15.0.0 ARM64** | Lineage 22 / Android 15 | 최소 구성(Play Store, Play Services, Setup Wizard 등) | 공식 위키·KonstaKANG 모두 추천 |
+| **NikGApps Core~Full (2025-07-16)** | Android 10–16 | 변형 다수(Core, Basic, Omni, Stock, Full, Go) | 설치 스크립트 업데이트 활발 |
+| OpenGApps | Android 4.4–11 | 오래된 패키지 | Android 12 이후 중단 |
 
 > 권장
 
@@ -155,6 +168,13 @@ adb sideload MindTheGapps-15.0.0-arm64-YYYYMMDD.zip
 ---
 
 ## **7. 문제 해결 Q&A**
+
+| **증상** | **조치** |
+| --- | --- |
+| Play 스토어가 열리지 않음 | ZIP 아키텍처(ARM64)·Android 버전(15) 일치 여부 재확인 후 재플래시. |
+| OTA 후 앱 사라짐 | TWRP에서 adb shell ls /system/addon.d/ 로 스크립트 존재 확인; 없으면 GApps 재설치. |
+| 설치 중 오류 70 (파티션 공간 부족) | NikGApps Core 같이 작은 패키지로 변경하거나, 파티션 크기 확장. |
+| “signature verification failed” | TWRP > Settings > *Signature Verification* 체크 해제 후 재시도; XDA 보고 사례. |
 
 ---
 
@@ -250,6 +270,11 @@ Settings → System → Buttons → Power menu → Advanced restart
 - 기존 플레이서비스/스토어가 깔려 있다면 설치 전 제거 또는 비활성화가 필요합니다[1](https://github.com/microg/GmsCore/releases).
 ## 파일 요약표
 
+| 용도 | 일반 커스텀롬용 파일 | 화웨이 등(h/w) 기기용 |
+| --- | --- | --- |
+| 구글서비스 대체 | com.google.android.gms-250932016.apk | com.google.android.gms-250932016-hw.apk |
+| 플레이스토어 대체 | com.android.vending-84022616.apk | com.android.vending-84022616-hw.apk |
+
 **파일명과 버전을 잘 확인하고, 본인 환경(커스텀 롬/화웨이 등)에 맞는 버전을 받아주세요.**
 
 자주 묻는 질문 및 상세 설명:
@@ -315,6 +340,14 @@ Settings → System → Buttons → Power menu → Advanced restart
 - **성능**: Google Photos는 라즈베리파이4B에서도 기본 기능(사진 보기, 업로드) 정상 작동[8](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-37-0-782944147-release/google-photos-7-37-0-782944147-5-android-apk-download/)[9](https://www.linuxadictos.com/ko/como-instalar-android-11-en-la-raspberry-pi-usando-una-version-basada-en-lineageos.html)
 - **저장소**: 무제한 백업 기능은 ReVanced 패치 적용 후 사용 가능
 ## 파일 정보 요약
+
+| 항목 | 내용 |
+| --- | --- |
+| **파일명** | Google Photos 7.37.0.782944147 (nodpi) |
+| **크기** | 108MB (nodpi), 157MB (arm64-v8a) |
+| **호환성** | Android 6.0+ (LineageOS 22 지원) |
+| **Revanced 패치** | 2025년 7월 기준 지원 |
+| **다운로드** | APKMirror, Uptodown, APKPure |
 
 **이 버전은 2025년 7월 20일 기준으로 최신이며, LineageOS 22 환경에서 정상 작동하고 ReVanced 패치와의 호환성도 확인되어 안전하게 사용할 수 있습니다.**
 
@@ -383,6 +416,12 @@ Settings → System → Buttons → Power menu → Advanced restart
 - Revanced 공식 깃허브: [ReVanced Manager 최신 릴리즈](https://github.com/revanced/revanced-manager/releases)
 - 비공식 Google Photos Revanced 빌드: [Unofficial-Life/revanced-gphotos-build](https://github.com/Unofficial-Life/revanced-gphotos-build)
 - 설치 및 버그 안내: [Revanced Reddit/공식 Discussion](https://www.reddit.com/r/revancedapp/)
+| 준비물 | 설명 | 주요 링크 |
+| --- | --- | --- |
+| Revanced Manager | APK 설치 및 패치 툴 | ReVanced 공식[3](https://github.com/revanced/revanced-manager/releases) |
+| MicroG (GmsCore) | Google Play Service 대체, 계정 로그인 지원 | MicroG 공식, 영상 안내[2](https://www.youtube.com/watch?v=b0wI5_nbMY0)[4](https://www.youtube.com/watch?v=Mdv_bceH-Ls) |
+| Google Photos APK | 최신 패치 호환성 APK | Vanced/공식 미러팀, 최신 릴리즈[1](https://vanced.to/revanced-google-photos)[5](https://github.com/Unofficial-Life/revanced-gphotos-build)[2](https://www.youtube.com/watch?v=b0wI5_nbMY0)[4](https://www.youtube.com/watch?v=Mdv_bceH-Ls)[3](https://github.com/revanced/revanced-manager/releases) |
+
 ## 요약
 
 **2025년 7월 최신 Revanced & MicroG 기반 ‘구글 포토 무제한 업로드’ 솔루션은 루팅 없이 안전하게, 누구든지 10분 이내 내 폰에서 구축이 가능합니다.** 모든 자료와 최신 버전은 공식 깃허브 또는 검증된 커뮤니티 링크만 사용하세요.

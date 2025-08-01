@@ -16,21 +16,21 @@ notion_url: "https://www.notion.so/13-0637370bb32e49d3821dba6c24de5279"
 
 ---
 
-![Image](image_e60187196224.png)
+![Image](image_d479004c07af.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=ip0xffLSWlk&list=PLO-mt5Iu5TeZF8xMHqtT_DhAPKmjF6i3x&index=13)
 
 > 🔥 **캔버스를 생성하면 초반에 크기가 무지하게 큰데. 렌더보드에서 Camera로 변경해주고 렌더카메라를 Main Camera로두면 UI의 크기가 카메라에 맞게 설정됩니다**
-> ![Image](image_31359ee4cee4.png)
+> ![Image](image_f7280c9d1e21.png)
 >
-> ![Image](image_c0d40c82e7b9.png)
+> ![Image](image_9ae906c13e79.png)
 >
 >
 > 어떤 해상도든 같은 스케일을 가지는 옵션은 다음과 같습니다
 >
-> ![Image](image_39f98bb9039e.png)
+> ![Image](image_19f5ab6afb5e.png)
 >
-> ![Image](image_dc3b88172c67.png)
+> ![Image](image_8d65b81753d2.png)
 >
 >
 
@@ -38,16 +38,16 @@ notion_url: "https://www.notion.so/13-0637370bb32e49d3821dba6c24de5279"
 > 일단 HUD.cs 를 만들어줍시다
 >
 > > 🔥 **Ctrl + Space를 하면 추천 자동완성을 알려줍니다**
-> > ![Image](image_56fe66d7f1a9.png)
+> > ![Image](image_d20000ac63e0.png)
 > >
 > >
 >
 >
 
 > 🔥 **slider로 경험치 UI바를 만들어봅시다**
-> ![Image](image_8c1cc4c7f311.png)
+> ![Image](image_df3b8bab74df.png)
 >
-> ![Image](image_a6b464ac81d0.png)
+> ![Image](image_e4209d7a24f1.png)
 >
 > BackGround하고 Fill Area 둘 다 앵커포인트를 다음과 같이 변경 한 후에 Fill Area내부에 Fill에 Left와 Right를 -5라고 되어있던걸 0으로 초기화
 >
@@ -108,7 +108,7 @@ notion_url: "https://www.notion.so/13-0637370bb32e49d3821dba6c24de5279"
 > }
 > ```
 >
-> ![Image](image_e80b166ac8eb.png)
+> ![Image](image_142f55531762.png)
 >
 > Slider로 Health를 만들어주고 플레이어 아래쪽에 설정해 준 후에 Health에 Follow.cs 코드를 넣어줍니다
 >

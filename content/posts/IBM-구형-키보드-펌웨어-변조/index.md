@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/IBM-1961bab9e3f8805da851fe877c67eb03"
 
 ---
 
-![Image](image_761930fec3e4.png)
+![Image](image_c1bb8e1e5ed2.png)
 
 [https://www.reddit.com/r/thinkpad/comments/ondeco/how_to_swap_the_fn_ctrl_keys_on_the_sk8845_sk8835/](https://www.reddit.com/r/thinkpad/comments/ondeco/how_to_swap_the_fn_ctrl_keys_on_the_sk8845_sk8835/)
 
@@ -131,6 +131,12 @@ Fn::LWin  ; Fn 키를 왼쪽 Win 키로 매핑
 
 ### 요약
 
+| 방법 | 장점 | 단점 |
+| **BIOS 설정** | 안정적 | 옵션 유무 확인 필요 |
+| **전용 유틸리티** | 공식 지원 | SK-8845 호환성 확인 필수 |
+| **KeyTweak** | 즉시 적용 가능 | 관리자 권한 필요 |
+| **AutoHotkey** | 유연한 커스터마이징 | Fn 키 입력 감지 여부에 따라 제한 |
+
 🔍 **추천 순서**: BIOS/유틸리티 → KeyTweak → AutoHotkey → 하드웨어 스위치 확인
 
 출처: [(출처3)](https://forum.thinkpads.com/viewtopic.php?t=38326)[(출처5)](https://support.lenovo.com/us/en/solutions/ht074187-how-to-swap-the-fn-function-and-ctrl-control-keyboard-keys-in-bios)[(출처7)](https://www.autohotkey.com/boards/viewtopic.php?t=92676)[(출처8)](https://stackoverflow.com/questions/48986359/identify-and-remap-fn-key-to-win-key)[(출처16)](https://blog.naver.com/PostView.nhn?blogId=mk235&logNo=221192783459)[(출처17)](https://support.lenovo.com/bo/ko/solutions/ht074187)[(출처19)](https://kr.msi.com/support/technical_details/NB_KB_Setting)[(출처20)](https://ko.aliexpress.com/item/1005001474701365.html)[(출처21)](https://brunch.co.kr/@ruseupi/88)
@@ -186,6 +192,13 @@ Fn & LCtrl::LWin  ; Fn + LCtrl을 Win 키로 매핑
 ---
 
 ### **요약: 방법별 비교**
+
+| 방법 | 실행 난이도 | 안정성 | 비고 |
+| BIOS + 소프트웨어 재맵핑 | 중간 | 높음 | BIOS 옵션 확인 필수 |
+| DIP 스위치 | 낮음 | 높음 | 하드웨어 지원 필요 |
+| 외부 컨트롤러 | 매우 높음 | 중간 | 기술력 요구 |
+| AutoHotkey 조합 키 | 낮음 | 낮음 | Fn 단독 사용 불가 |
+| 물리적 개조 | 매우 높음 | 낮음 | 고장 위험 |
 
 🔍 **추천 순서**:
 

@@ -48,7 +48,7 @@ notion_url: "https://www.notion.so/PowerToys-f5eebcb5be9a4bfe85319af9a14b63d4"
 
 🔗 [https://github.com/microsoft/PowerToys/issues/9018](https://github.com/microsoft/PowerToys/issues/9018)
 
-![Image](image_6748b8706a08.png)
+![Image](image_3ce4192fa08f.png)
 
 
 # 버전이 문제? (버그발생 빌드 0.75.1)

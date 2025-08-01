@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/macOS-BTT-HotEdge-2a585f49fcb44e0a8544cecca3f
 
 ---
 
-![Image](image_87636398f3df.png)
+![Image](image_3e5670cd2e87.png)
 
 [https://imgur.com/a/bettertouchtool-hot-corners-B7zwmLb](https://imgur.com/a/bettertouchtool-hot-corners-B7zwmLb)
 

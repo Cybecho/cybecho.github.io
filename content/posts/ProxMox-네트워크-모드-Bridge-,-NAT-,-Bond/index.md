@@ -43,7 +43,7 @@ notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e
 
 ### NAT 구성
 
-![Image](image_634e47ece0f0.png)
+![Image](image_80fda84fc4bc.png)
 
 - NAT를 사용하면 가상 머신이 내부 IP 주소를 써도 호스트 컴퓨터의 IP를 통해 외부 인터넷을 사용할 수 있습니다.
 - 방화벽 설정에 따라 추가로 conntrack 설정이 필요할 수 있습니다.

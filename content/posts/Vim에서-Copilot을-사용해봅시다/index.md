@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Vim-Copilot-7b4ad31f50d74e20a89eb7361b4762d7"
 
 ---
 
-![Image](image_0aa2b2b795c2.png)
+![Image](image_5ee005bb9287.png)
 
 🔗 [https://github.com/CopilotC-Nvim/CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim)
 

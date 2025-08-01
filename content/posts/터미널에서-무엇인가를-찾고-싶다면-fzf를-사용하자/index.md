@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/fzf-92bcef57296b4996b23a3ec716b27d5e"
 
 ---
 
-![Image](image_309f3510b53f.png)
+![Image](image_c2c30a68382e.png)
 
 [https://elsainmac.tistory.com/925](https://elsainmac.tistory.com/925)
 

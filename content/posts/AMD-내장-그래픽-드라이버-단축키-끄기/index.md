@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/AMD-92873ece602c4607ae9f61290ab6230d"
 
 ---
 
-![Image](image_e4d4bd85f76e.png)
+![Image](image_b6c5611eeab9.png)
 
 🔗 [https://brokyy.tistory.com/52](https://brokyy.tistory.com/52)
 
@@ -24,5 +24,5 @@ notion_url: "https://www.notion.so/AMD-92873ece602c4607ae9f61290ab6230d"
 
 🔗 [https://www.amd.com/en/support/apu/amd-ryzen-processors/amd-ryzen-9-processors/amd-ryzen-9-7900](https://www.amd.com/en/support/apu/amd-ryzen-processors/amd-ryzen-9-processors/amd-ryzen-9-7900)
 
-![Image](image_6382fc23cb38.png)
+![Image](image_4b7643f4d774.png)
 

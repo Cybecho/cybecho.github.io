@@ -18,10 +18,10 @@ notion_url: "https://www.notion.so/04-324a28ab6122422dae6ee989ed1148c0"
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=vizfd1TeRMI&list=PLO-mt5Iu5TeZF8xMHqtT_DhAPKmjF6i3x&index=5)
 
-![Image](image_17863f80bae0.png)
+![Image](image_21d32782a879.png)
 
 > 🔥 **플레이어가 이동방향에맞게 시선을 바꾸는 코드를 구현해보자**
-> ![Image](image_a7a0e38934ad.png)
+> ![Image](image_b2071c55bca3.png)
 >
 > ```c#
 > //Player.cs
@@ -44,23 +44,23 @@ notion_url: "https://www.notion.so/04-324a28ab6122422dae6ee989ed1148c0"
 >
 
 > 🔥 **플레이어의 애니메이션을 직접 만들어보자**
-> ![Image](image_1b958cfa52ce.png)
+> ![Image](image_c38330a6a427.png)
 >
 > > 🔥 **Unity 파일 이름의 "Ac" 접두어는 "Asset Collection"을 의미합니다. Unity는 이 접두사를 사용하여 파일이 프로젝트에서 함께 사용되는 자산 집합인 자산 컬렉션의 일부임을 나타냅니다. Unity는 일관된 명명 규칙을 사용하여 개발자가 프로젝트 파일을 보다 쉽게 구성하고 관리할 수 있도록 합니다. 또한 "Ac" 접두사는 Unity가 에셋 컬렉션 파일을 프로젝트에서 사용되는 다른 유형의 파일과 구별하는 데 도움이 됩니다.**
-> > ![Image](image_a6c1c81b8382.png)
+> > ![Image](image_ed69ff6b22de.png)
 > >
 > >
 >
-> ![Image](image_4a66865769f8.png)
+> ![Image](image_4c6818ebaa15.png)
 >
-> ![Image](image_2ae58243c907.png)
+> ![Image](image_f9be417c6d4e.png)
 >
-> ![Image](image_6411cbf7ce3b.png)
+> ![Image](image_3f2dd6d181ad.png)
 >
-> ![Image](image_9371be73cf14.png)
+> ![Image](image_ebe88ee4b125.png)
 >
 > > 🔥 **What is Has Exit TIme?**
-> > ![Image](image_799d236ed841.png)
+> > ![Image](image_610d2ae6073c.png)
 > >
 > >
 >
@@ -104,20 +104,20 @@ notion_url: "https://www.notion.so/04-324a28ab6122422dae6ee989ed1148c0"
 >
 
 > 🔥 ****애니메이션 재활용하는 애니메이터 오버라이드를 알아보자****
-> ![Image](image_8b9ded69900e.png)
+> ![Image](image_699cf2f0d48d.png)
 >
-> ![Image](image_8e48fb67fc64.png)
+> ![Image](image_d0ecd06e5297.png)
 >
 > > 🔥 **애니메이션 폴더에서 Animator Override를 생성해준다**
-> > ![Image](image_b88e8d647a55.png)
+> > ![Image](image_fcac5e1a1f3e.png)
 > >
 > >
 >
-> ![Image](image_5df8caee4ac8.png)
+> ![Image](image_3ba9e4b7e44f.png)
 >
-> ![Image](image_176a9b4e1077.png)
+> ![Image](image_e82289586f0c.png)
 >
-> ![Image](image_c410709c387b.png)
+> ![Image](image_e4f75932e05c.png)
 >
 >
 

@@ -18,7 +18,7 @@ notion_url: "https://www.notion.so/4-1d01bab9e3f880dc8252e2907f9e25c4"
 
 ## 여러 노드가 데이터를 어떻게 공유할까에 대한 설계 철학임
 
-![Image](image_a6e86052d630.png)
+![Image](image_1cf2f19f6238.png)
 
 ### 공유 없음 (Shared Nothing) 방식: 각자도생허셈
 

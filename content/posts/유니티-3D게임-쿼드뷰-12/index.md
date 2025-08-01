@@ -43,12 +43,12 @@ notion_url: "https://www.notion.so/3D-12-58df85f97db2460f9d28c50ddbea8630"
 > }
 > ```
 >
-> ![Image](image_78755dac545f.png)
+> ![Image](image_5f46c941c2ee.png)
 >
 >
 
 > 🔥 **보스 바위공격 구현**
-> ![Image](image_49bae2e22639.png)
+> ![Image](image_939162a609b7.png)
 >
 >
 
@@ -171,6 +171,15 @@ notion_url: "https://www.notion.so/3D-12-58df85f97db2460f9d28c50ddbea8630"
 > >
 >
 > > 🔥 ****Vector3.one?****
+> > | Vector3.forward | new Vector3 (0,0,1) |
+> > | Vector3.back | new Vector3 (0,0,-1) |
+> > | Vector3.up | new Vector3 (0,1,0) |
+> > | Vector3.down | new Vector3 (0,-1,0) |
+> > | Vector3.right | new Vector3 (1,0,0) |
+> > | Vector3.left | new Vector3 (-1,0,0) |
+> > | Vector3.one | new Vector3 (1,1,1) |
+> > | Vector3.zero | new Vector3 (0,0,0) |
+> >
 > >
 >
 >

@@ -17,14 +17,14 @@ notion_url: "https://www.notion.so/Fedora-f67e4b6f23714817943259168ec7b953"
 ---
 
 > 💡 **gnome tweaks (기능개선)**
-> ![Image](image_b816305a5dd2.png)
+> ![Image](image_59262f1a3392.png)
 >
 >
 
 > 💡 **다음 내용을 따르시오**
-> ![Image](image_38305f1563b9.png)
+> ![Image](image_d85874131ea6.png)
 >
-> ![Image](image_e8cece6e00d7.png)
+> ![Image](image_3772007bdb6c.png)
 >
 >
 

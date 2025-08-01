@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/aws-2f48bf1ab83743e6986f36193237cc47"
 
 ---
 
-![Image](image_620e97ef04d2.png)
+![Image](image_d8f828e55b9c.png)
 
 🔗 [https://brunch.co.kr/@topasvga/342](https://brunch.co.kr/@topasvga/342)
 

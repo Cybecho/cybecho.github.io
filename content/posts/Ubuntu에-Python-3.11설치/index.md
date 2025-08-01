@@ -131,7 +131,7 @@ sudo apt-get update
 > python3 -m pip list
 > ```
 >
-> ![Image](image_c2e713dfe011.png)
+> ![Image](image_f370eb3d13ea.png)
 >
 >
 > <details>

@@ -29,5 +29,5 @@ notion_url: "https://www.notion.so/f46d1b9de90d4bb6a28ae896429c94f4"
 
 # 2. 윈도우 트랙패드 제스처 사용자 지정 키 등록
 
-![Image](image_3666c50aff59.png)
+![Image](image_5f21285b3761.png)
 

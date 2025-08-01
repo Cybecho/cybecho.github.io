@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MobaExterm-JumpHost-2151bab9e3f88068bddcd8d12
 
 ---
 
-![Image](image_0033f30ea598.png)
+![Image](image_cb55f23f7eff.png)
 
 🔗 [https://sagittariusof85s.tistory.com/316](https://sagittariusof85s.tistory.com/316)
 

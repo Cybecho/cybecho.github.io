@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Google-Pixel-1-baa1f2f990ef4a90b84e86dbcd5b5d
 
 ---
 
-![Image](image_a106b0f20e88.webp)
+![Image](image_32e22f5d2055.webp)
 
 # Google Pixel 1 간헐적 동기화 서버 설계
 
@@ -90,14 +90,14 @@ Pixel 1 이 켜졌을때, 그동안 저장되었었던 Windows에 있던 사진 
 
 1. 안드로이드 홈 화면 중앙에 'Photos - 여유 공간' 아이콘 배치
   - Photos 앱 아이콘을 길게 눌러 '여유 공간' 옵션을 홈 화면으로 드래그
-![Image](image_e991dc116b30.png)
+![Image](image_6f6d4225d5ae.png)
 
 ### → MacroDroid 설정 방법
 
 1. MacroDroid 앱 실행 후 'Add macro' 선택
-![Image](image_cd6d8a506b05.png)
+![Image](image_4a88de3c18e5.png)
 
-![Image](image_4a00eb74ca06.png)
+![Image](image_1f94ee6c9dfa.png)
 
 1. 다음 단계를 반복하여 매크로 생성 (Pixel 1 기준 클릭 좌표 사용):
   - 트리거, 동작, 제약 설정

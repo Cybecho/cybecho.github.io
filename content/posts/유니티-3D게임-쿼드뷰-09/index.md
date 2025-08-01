@@ -19,7 +19,7 @@ notion_url: "https://www.notion.so/3D-09-39ad5223d16d489ba97d4dcd626b0636"
 🎥 [동영상 보기](https://www.youtube.com/watch?v=FBY_cmtCNHw&list=PLO-mt5Iu5TeYkrBzWKuTCl6IUm_bA6BKy&index=11)
 
 > 🔥 **Enemy A에 Enemy.cs 를 넣으면 다음과같은 에러가뜨는데,  자식들의 컴포넌트값까지 받아온다는 의미로 InChildren을 추가하면 정상적으로 meshRender를 불러옵니다**
-> ![Image](image_35040e6aaf5a.png)
+> ![Image](image_fcd8ce0b473b.png)
 >
 > ```c#
 > private void Awake()
@@ -33,7 +33,7 @@ notion_url: "https://www.notion.so/3D-09-39ad5223d16d489ba97d4dcd626b0636"
 >
 
 > 🔥 **Nav Mesh Agent = 네비게이션을 사용하는 인공지능 컴포넌트**
-> ![Image](image_042f12ecee15.png)
+> ![Image](image_057008b89436.png)
 >
 > ```c#
 > //Enermy.cs
@@ -57,7 +57,7 @@ notion_url: "https://www.notion.so/3D-09-39ad5223d16d489ba97d4dcd626b0636"
 >     }
 > ```
 >
-> ![Image](image_6e723ca5802f.png)
+> ![Image](image_e77d651c261d.png)
 >
 >
 
@@ -68,25 +68,25 @@ notion_url: "https://www.notion.so/3D-09-39ad5223d16d489ba97d4dcd626b0636"
 >
 > 클릭하면 창이 뜨는데
 >
-> ![Image](image_b5f128d04917.png)
+> ![Image](image_d99e6cc5bdf7.png)
 >
-> ![Image](image_1d1587a7885e.png)
+> ![Image](image_4d291e26fe3f.png)
 >
 > > 🔥 **NavMesh는 Static 오브젝트에서만 Bake가 가능함**
-> > ![Image](image_a2391747a6d5.png)
+> > ![Image](image_c6f1c8ecfe05.png)
 > >
 > >
 >
-> ![Image](image_114280cae61f.png)
+> ![Image](image_5121fca21e7f.png)
 >
 >
 
 > 🔥 **적 애니메이션 제작**
-> ![Image](image_fbe31cf0a190.png)
+> ![Image](image_c17b738a031a.png)
 >
-> ![Image](image_bc3cd1070d3c.png)
+> ![Image](image_676a6e450158.png)
 >
-> ![Image](image_124203e8a8ec.png)
+> ![Image](image_c931ae22611f.png)
 >
 > 애니메이터 컨트롤러 제작하여 메쉬오브젝트 내부에 넣기
 >
@@ -108,9 +108,9 @@ notion_url: "https://www.notion.so/3D-09-39ad5223d16d489ba97d4dcd626b0636"
 >
 
 > 🔥 **버그발생.. 코드 다 똑같은데 왜 몬스터 상태 이따구냐**
-> ![Image](image_9e69450e67ce.png)
+> ![Image](image_89ea21f6b96a.png)
 >
-> ![Image](image_25ada8b7892f.png)
+> ![Image](image_ab3745dd647e.png)
 >
 > ## 해결 : MeshObject에만 애니메이터가 있어야했는데 내가 둘 다 넣어서 충돌문제다
 >
@@ -172,7 +172,7 @@ notion_url: "https://www.notion.so/3D-09-39ad5223d16d489ba97d4dcd626b0636"
 >     }
 > ```
 >
-> ![Image](image_2d2acf4358b6.png)
+> ![Image](image_537a078d568a.png)
 >
 >
 

@@ -40,7 +40,7 @@ notion_url: "https://www.notion.so/Web-Was-1b21bab9e3f880a5a1cac6b0d093e41c"
   - 결국 차이는 실행 시 호출 깊이와 점프 횟수에 따른 함수 실행 방식의 차이로 이해할 수 있음
 ## 결국 스택(정적) 힙(동적) 사용 여부 차이점 아닐까?
 
-[Untitled](https://www.notion.so/4b845da9196f400f8a16ebd55cbd8612) 
+[main 함수 내부에서 sub함수를 실행하면?](https://www.notion.so/ec4287c455014c798fe8ac4fb8faf19a#4b845da9196f400f8a16ebd55cbd8612) 
 
 그거 아닌데… 스택과 힙의 메모리 사용 차이는 실행 중의 메모리 할당 및 관리를 의미하지만, Web과 Was의 차이는 단순 메모리 영역의 차이뿐 아니라, 함수 호출 체계와 실행 로직의 복잡성에서도 비롯됩니다.
 

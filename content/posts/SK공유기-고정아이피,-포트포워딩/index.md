@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/SK-9479f9f17c024ad0b5366b17c5252825"
 
 ---
 
-![Image](image_7cb80c4c5dcc.png)
+![Image](image_026a9228faf3.png)
 
 🔗 [https://velog.io/@dev2820/raspberry-pi-고정-ip-할당하기](https://velog.io/@dev2820/raspberry-pi-고정-ip-할당하기)
 
@@ -26,15 +26,15 @@ notion_url: "https://www.notion.so/SK-9479f9f17c024ad0b5366b17c5252825"
 
 ## [192.168.45.1](192.168.45.1) 접속 후 네트워크 설정 이동
 
-![Image](image_234b21d5e1bd.png)
+![Image](image_7eadf7c187b0.png)
 
 ## DHCP 서버에 나의 MAC 주소와 사용할 고정 ip주소 등록
 
-![Image](image_1785a74e93dd.png)
+![Image](image_342e7d0b40cc.png)
 
 ## 포트포워딩 설정
 
-![Image](image_fb53f7e22502.png)
+![Image](image_0594ee37b90a.png)
 
 ## 이제 아래 사이트에서 내 찐 아이피 확인
 

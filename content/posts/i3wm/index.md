@@ -16,9 +16,12 @@ notion_url: "https://www.notion.so/i3wm-242197e71102495c807e0d7eb2896288"
 
 ---
 
-![Image](image_e2a4446f5e56.png)
+![Image](image_70e25d717fc9.png)
 
 ### install on Arch Linux
+
+🔗 [https://sheepjin99.tistory.com/14](https://sheepjin99.tistory.com/14)
+
 
 # 우분투 i3-wm update to 4.22.1 +
 
@@ -29,6 +32,18 @@ notion_url: "https://www.notion.so/i3wm-242197e71102495c807e0d7eb2896288"
 🔗 [https://www.youtube.com/playlist?list=PL0rXAycsylvXxyPDT5kGQ5MiHcqrZWv69](https://www.youtube.com/playlist?list=PL0rXAycsylvXxyPDT5kGQ5MiHcqrZWv69)
 
 ### hot key
+
+| `**cmd**` |   | `**d**` | search to process |
+| `**cmd**` |   | `**enter**` | new tab |
+| `**cmd**` | `**shfit**` | `**q**` | close tab |
+| `**cmd**` |   | `**arrow key**` | change tab |
+| `**cmd**` | `**shfit**` | `**arrow key**` | move tab |
+| `**cmd**` |   | `**v**` | and try **new tab** |
+| `**cmd**` |   | `**r**` | and try arrow key |
+| `**cmd**` |   | `**w**` | split - full size |
+| `**cmd**` |   | `**e**` | split - horizen size |
+| `**cmd**` |   | `**1~9**` | change desktop |
+| `**cmd**` | `**shfit**` | `**1~9**` | move desktop |
 
 ### on Terminal
 

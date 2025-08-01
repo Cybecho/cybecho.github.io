@@ -28,9 +28,9 @@ notion_url: "https://www.notion.so/03-1f0a0f5748cb46fa8a794a300f8e907d"
 >
 > 해당 포인트를 더블클릭하면
 >
-> ![Image](image_c40ac767202e.png)
+> ![Image](image_8cada16df988.png)
 >
-> ![Image](image_6ac45e50e5eb.png)
+> ![Image](image_c4ab3d15cdea.png)
 >
 > 해당 과정으로 클래스를 호출하는 포인터를 찾을 수 있다
 >

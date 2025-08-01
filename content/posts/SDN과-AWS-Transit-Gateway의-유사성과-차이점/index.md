@@ -87,6 +87,13 @@ AWS Transit Gateway의 특정 기능은 SDN과의 통합에서 중요한 역할�
 
 다음 표는 AWS Transit Gateway와 SDN의 주요 기술적 비교를 요약합니다:
 
+| **항목** | **SDN** | **AWS Transit Gateway** |
+| **범위** | 광범위한 네트워크 아키텍처, 다양한 환경 적용 | AWS 클라우드 환경에 특화된 서비스 |
+| **주요 기능** | 제어 평면/데이터 평면 분리, 프로그래밍 가능 | VPC 및 온프레미스 네트워크 연결, 트래픽 라우팅 |
+| **통합 가능성** | SD-WAN, 온프레미스, 멀티클라우드 등 | 주로 AWS SD-WAN과 통합, AWS 환경 내에서 최적화 |
+| **대역폭** | 환경에 따라 다름 | 최대 20Gbps (Connect 기준), Cloud WAN은 100Gbps |
+| **프로토콜 지원** | 다양한 프로토콜, BGP, GRE 등 | GRE, BGP 지원, 특히 Connect에서 강조 |
+
 ### 결론 및 시사점
 
 SDN과 AWS Transit Gateway는 네트워크 관리와 연결성에서 공통점을 가지며, AWS Transit Gateway는 SDN의 일부 원칙(중앙 관리, 동적 라우팅)을 클라우드 환경에서 구현하는 도구로 볼 수 있습니다. 그러나 SDN은 더 광범위한 개념으로, AWS Transit Gateway는 AWS 클라우드에 특화된 특정 서비스입니다. 따라서 AWS Transit Gateway는 SDN의 하위 집합적 도구로 이해하며, 클라우드 환경에서 SDN 개념을 구현하는 데 유용하게 사용될 수 있습니다.

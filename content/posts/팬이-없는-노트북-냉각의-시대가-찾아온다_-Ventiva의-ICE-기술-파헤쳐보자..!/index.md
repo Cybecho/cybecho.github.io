@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Ventiva-ICE-1bf1bab9e3f880d99681f01712226d22"
 
 ---
 
-![Image](image_cb9f88c1e357.png)
+![Image](image_6f19b78b059b.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=2lTWI7kfkt0)
 

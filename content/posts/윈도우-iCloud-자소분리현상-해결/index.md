@@ -17,7 +17,7 @@ notion_url: "https://www.notion.so/iCloud-954e9b68284f432581822862eab42fc2"
 ---
 
 
-![Image](image_e429a586d5a0.png)
+![Image](image_7520e197ab42.png)
 
 🔗 [https://pcwindows.tistory.com/414#google_vignette](https://pcwindows.tistory.com/414#google_vignette)
 

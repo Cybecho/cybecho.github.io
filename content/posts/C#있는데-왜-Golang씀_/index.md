@@ -51,6 +51,12 @@ notion_url: "https://www.notion.so/C-Golang-2371bab9e3f88010b3f0c4d2ec3f7001"
 - 컴파일 속도 역시 “Go >> C#/Java”라고 비교 표에서 강조된다 .
 **4) 클라우드-네이티브 생태계의 ‘공용어’**
 
+| **프로젝트** | **언어 근거** |
+| --- | --- |
+| Docker Engine & Compose v2 | “Docker는 Go로 작성됐다” 공식 문서 |
+| Kubernetes & kubectl | client-go 라이브러리가 공식이며, Go 업그레이드 정책까지 블로그에 명시 |
+| Terraform | Core/플러그인·Provider 모두 Go로 작성·지원 (SDK도 Go 전용) |
+
 Go를 쓰면 “네이티브 SDK + 샘플 코드 + 커뮤니티 블로그”가 모두 같은 언어라 학습 자산을 바로 재활용할 수 있다.
 
 **5) 언어 규모와 협업 비용**

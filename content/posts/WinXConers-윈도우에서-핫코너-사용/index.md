@@ -16,11 +16,11 @@ notion_url: "https://www.notion.so/WinXConers-9adbbb59ed964dd7b95e465395c899f9"
 
 ---
 
-![Image](image_cc45d48aed81.png)
+![Image](image_7855e7145826.png)
 
 🔗 [https://apps.codigobit.info/2021/07/winxcorners-hot-corners-for-windows-10.html](https://apps.codigobit.info/2021/07/winxcorners-hot-corners-for-windows-10.html)
 
-![Image](image_afcb9b27f984.png)
+![Image](image_c1af4c1ef7d5.png)
 
 윈도우도 맥의 핫코너처럼 편리하게 트랙패드를 활용할 수 있다
 

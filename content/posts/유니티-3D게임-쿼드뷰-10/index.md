@@ -21,12 +21,12 @@ notion_url: "https://www.notion.so/3D-10-4824ce1e9ddb457c8f926bbcb1deeaa5"
 > 🔥 **왜 공격 애니메이션이 한번만 작동할까…**
 > ## 단순했다.. Entry에 있는 모든 애니메이션에 Has Exit Time을 비활성화시키니까 애니메이션이 정상작동한다
 >
-> ![Image](image_b5fff18bf998.png)
+> ![Image](image_f00390ff62d4.png)
 >
 >
 
 > 🔥 **에러발생**
-> ![Image](image_2ed77880b618.png)
+> ![Image](image_60e9f1a91e88.png)
 >
 > ```c#
 >
@@ -57,12 +57,12 @@ notion_url: "https://www.notion.so/3D-10-4824ce1e9ddb457c8f926bbcb1deeaa5"
 >
 
 > 🔥 **애니메이터를 그대로 복사해서 해당 애니메이터는 Enemy B의 Mesh Object 내부에 넣어준다**
-> ![Image](image_9a7d775c8448.png)
+> ![Image](image_fa9b77de0c7b.png)
 >
 >
 
 > 🔥 **Nav Mesh Agent 설정**
-> ![Image](image_151a730e2901.png)
+> ![Image](image_2a5c9c27cddc.png)
 >
 >
 
@@ -96,7 +96,7 @@ notion_url: "https://www.notion.so/3D-10-4824ce1e9ddb457c8f926bbcb1deeaa5"
 >
 
 > 🔥 **BoxCollider 와 Destroy 충돌 오류**
-> ![Image](image_3ab867d55d3c.png)
+> ![Image](image_138b776dd02c.png)
 >
 > ```c#
 > void OnTriggerEnter(Collider other) 
@@ -214,9 +214,90 @@ notion_url: "https://www.notion.so/3D-10-4824ce1e9ddb457c8f926bbcb1deeaa5"
 >     }
 > ```
 >
-> ![Image](image_4eda16bb9a26.png)
+> ![Image](image_5e7658e9b34c.png)
 >
 > # 선생님의 디버깅 방법(그냥 bool값 추가)
+>
+> ```c#
+> using System.Collections;
+> using System.Collections.Generic;
+> using UnityEngine;
+>
+> public class Bullet_Enemy : MonoBehaviour
+> {
+>     public int damage;
+>     public bool isMelee; //근접무기는 비워두세요
+>
+>     void OnCollisionEnter(Collision collision)
+>     {
+>         //몬스터 A,B 전용
+>         if(isMelee == true)
+>         {
+>             if(collision.gameObject.tag == "Floor")
+>             {
+>                 Debug.Log("몬스터 Floor와 충돌");
+>             }
+>             else if(collision.gameObject.tag == "Wall")
+>             {
+>                 Debug.Log("몬스터 Wall와 충돌");
+>             }
+>         }
+>         //몬스터 C 전용 (미사일에 Destroy를 사용하기 위함)
+>         else
+>         {
+>             if(collision.gameObject.tag == "Floor")
+>             {
+>                 Destroy(gameObject, 2);
+>             }
+>             else if(collision.gameObject.tag == "Wall")
+>             {
+>                 Destroy(gameObject, 2);
+>             }
+>         }
+>
+>     }
+>
+>     void OnTriggerEnter(Collider other) 
+>     {
+>         //몬스터 A,B 전용
+>         if(isMelee == true)
+>         {    
+>             if(other.gameObject.tag == "Floor")
+>             {
+>                 Debug.Log("몬스터 Floor와 충돌");
+>             }
+>             else if(other.gameObject.tag == "Wall")
+>             {
+>                 Debug.Log("몬스터 Wall와 충돌");
+>             }
+>             else if(other.gameObject.tag == "Player")
+>             {
+>                 Debug.Log("몬스터 플레이어와 충돌");
+>             }
+>         }
+>         //몬스터 C 전용 (미사일에 Destroy를 사용하기 위함)
+>         else
+>         {
+>             if(other.gameObject.tag == "Floor")
+>             {
+>                 Destroy(gameObject, 2);
+>             }
+>             else if(other.gameObject.tag == "Wall")
+>             {
+>                 Destroy(gameObject, 2);
+>             }
+>             else if(other.gameObject.tag == "Player")
+>             {
+>                 Debug.Log("몬스터 미사일 플레이어와 충돌");
+>                 Destroy(gameObject);
+>             }
+>         }
+>
+>     }
+>
+> }
+> ```
+>
 >
 >
 

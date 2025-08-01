@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/NAS-f270ca5caee84ea1a6bc20f5303e5c96"
 
 ---
 
-![Image](image_77fb9087accf.png)
+![Image](image_577aa696ad4c.png)
 
 # NAS로 할 수 있는것들
 
@@ -101,7 +101,48 @@ notion_url: "https://www.notion.so/NAS-f270ca5caee84ea1a6bc20f5303e5c96"
 
 # 참고 자작 스펙
 
+> 💡 **N4 빌드**
+> ---
+>
+> [https://www.reddit.com/r/homelab/comments/1couc8u/jonsbo_n4_build/](https://www.reddit.com/r/homelab/comments/1couc8u/jonsbo_n4_build/)
+>
+> [https://www.reddit.com/r/homelab/comments/1d6ri0s/my_first_home_server_build_jonsbo_n4/](https://www.reddit.com/r/homelab/comments/1d6ri0s/my_first_home_server_build_jonsbo_n4/)
+>
+> [https://svrforum.com/hardware/1497003](https://svrforum.com/hardware/1497003)
+>
+> ---
+>
+> [https://quasarzone.com/bbs/qf_net/views/9181](https://quasarzone.com/bbs/qf_net/views/9181)
+>
+> [20만원대](https://quasarzone.com/bbs/qf_hwjoin/views/432355?_method=post&_token=8Wcc50FRJUFEkU4N8FLuaWG7xhZGVaURKVCZieVf&category=&direction=DESC&keyword=nas&kind=subject&page=1&popularity=&sort=num%2C%20reply&type=)
+>
+> [26만원대 셀러론 CPU](https://quasarzone.com/bbs/qf_hwjoin/views/406569?_method=post&_token=8Wcc50FRJUFEkU4N8FLuaWG7xhZGVaURKVCZieVf&category=&direction=DESC&keyword=nas&kind=subject&page=1&popularity=&sort=num%2C%20reply&type=)
+>
+> [24만원대 AMD3000G CPU](https://quasarzone.com/bbs/qf_hwjoin/views/337688?_method=post&_token=8Wcc50FRJUFEkU4N8FLuaWG7xhZGVaURKVCZieVf&category=&direction=DESC&keyword=nas&kind=subject&page=1&popularity=&sort=num%2C%20reply&type=)
+>
+> [G4650 , G4600 , AMD 2400G 급 CPU기만 하면 됨](https://quasarzone.com/bbs/qf_hwjoin/views/96334?_method=post&_token=8Wcc50FRJUFEkU4N8FLuaWG7xhZGVaURKVCZieVf&direction=DESC&keyword=nas&kind=subject&page=2&sort=num%2C%20reply)
+>
+> [SATA 백플레인?](https://quasarzone.com/bbs/qf_hwjoin/views/1393800?_method=post&_token=8Wcc50FRJUFEkU4N8FLuaWG7xhZGVaURKVCZieVf&category=&direction=DESC&keyword=nas&kind=subject&page=1&popularity=&sort=num%2C%20reply&type=) 
+>
+> [일반 cpu 논 k제품을 알아보시오 PWM 아틱 팬 찾아보시오](https://quasarzone.com/bbs/qf_hwjoin/views/565092?_method=post&_token=8Wcc50FRJUFEkU4N8FLuaWG7xhZGVaURKVCZieVf&category=&direction=DESC&keyword=nas&kind=subject&page=1&popularity=&sort=num%2C%20reply&type=)
+>
+>
+
+> 💡 **Think Server**
+> ---
+>
+> [https://www.clien.net/service/board/cm_nas/18628601](https://www.clien.net/service/board/cm_nas/18628601)
+>
+>
+
+
+
+
 # 신경써야할것들
+
+- 저전력 CPU
+- 레이드 카드
+- HDD 케이스
 
 # OS
 
@@ -164,7 +205,7 @@ notion_url: "https://www.notion.so/NAS-f270ca5caee84ea1a6bc20f5303e5c96"
 <details>
 <summary>[**H110M DGS (지금 컴)**](https://www.asrock.com/mb/Intel/H110M-DGS/index.kr.asp)** M ATX 최대 램 32GB (6,7세대 지원함)**</summary>
 
-![Image](image_cd434b582442.jpeg)
+![Image](image_452a6d4e0f8d.jpeg)
 
 </details>
 
@@ -202,9 +243,9 @@ notion_url: "https://www.notion.so/NAS-f270ca5caee84ea1a6bc20f5303e5c96"
 <details>
 <summary>[**Antec VP500P V2 A-PFC**](https://prod.danawa.com/info/?pcode=2529647)** **(지금 내 파워) ATX 규격임…</summary>
 
-![Image](image_e1428fcd16a8.png)
+![Image](image_8ddf7f63a9ff.png)
 
-![Image](image_f639b5dfdeff.jpeg)
+![Image](image_fdabebd41ec7.jpeg)
 
 </details>
 
@@ -244,17 +285,80 @@ WD외장 하드를 직구한 다음. 적출해서 끼우시면 17만원에 8TB�
 
 # 팩트 추
 
+[https://quasarzone.com/bbs/qf_cmr/views/155708](https://quasarzone.com/bbs/qf_cmr/views/155708) 2200G 면 충분
+
+[https://quasarzone.com/bbs/qf_cmr/views/2370848](https://quasarzone.com/bbs/qf_cmr/views/2370848) 12100T 도 좋음
+
+→ 하드 하나당 5w 추가라 생각해야함
+
+```latex
+전력은 씨퓨가 문제가 아니고 나스에 하드를 얼마나 다실건가 그게 더 문제입니다
+
+씨퓨는 전력제한이니 언더볼팅이니 cstate니 그런 전력절감옵션만 해둬도 충분합니다
+애초에 나스가 엄청나게 씨퓨자원을 먹지도 않아서 아이들상태 와트에 가까워요
+8세대 벤치 보니까 아이들에서 피씨 전체 50와트 먹는 수준같은데
+구루3d닷컴/review/intel-core-i7-8700k-processor-review/page-5/
+저전력 씨퓨라 해봐야 10와트입니다
+
+절약할 공간이 마땅치 않다는거죠
+
+
+반면 하드 하나 달면 아이들 5와트 사용시 20와트입니다
+그리고 나스 할거면 하드 적어도 2개 달겠죠 (가용성을 위해 레이드 설정하니까요)
+
+일반적으로는 최소 3개는 달아야 할거고요 용량 가성비까지 생각하면 레이드5 해야할테니까요
+
+그럼 벌써 하드에서 15에서 60와트입니다
+
+3개만 달았는데 씨퓨전력이랑 맞먹죠
+
+
+
+본체는 일단 본인이 원하는 최대크기를 생각해보시고
+
+그 다음에 거기에서 3.5 하드베이가 제일 많은걸 고르세요
+
+ssd로 채우실거면 2.5도 되겠지만 가격은 확 오를것이고 실익도 별로 없겠지요
+
+(1기가 내부망이면 대략 125mb/s 정도니까 하드디스크 속도 못 따라가죠
+
+물론 저소음 저전력이란 장점은 있습니다만 용량가성비가 망해서요)
+
+
+
+누진최대인 전기 300원 적용시켜도 50와트면 일년 13만원입니다
+
+우리나라 중위소득이 1인가구 월 207만원이에요 연환산하면 2400만원쯤 되겠죠
+
+소득 0.5퍼센트... 누진 안걸리는 구간이면 그거의 40%니까 0.2퍼센트
+
+
+
+씨퓨 바꿔서 절약되는 와트는 30 정도로 보시면 됩니다
+
+그러면 비누진구간일 경우 0.2에 3/5 곱하면 0.12퍼센트
+
+돈으로는 연간 약 3만원
+
+
+
+자작공유기라면 씨퓨 바꾸는게 유의미하겠지만 (거기선 그게 보통 전력 제일 많이 먹는거니까요)
+
+자작나스는 하드를 얼마나 달 것인지 위주로 생각해보시는게 좋아요
+```
+
+
 # 결과물
 
-![Image](image_282d8f192eb1.jpeg)
+![Image](image_8ea8292c5569.jpeg)
 
-![Image](image_1601de030ec7.jpeg)
+![Image](image_971dde195870.jpeg)
 
-![Image](image_d9bceaa294a2.jpeg)
+![Image](image_96396217cf18.jpeg)
 
-![Image](image_90dc761168e2.jpeg)
+![Image](image_a84a98738139.jpeg)
 
-![Image](image_57529f646bb6.jpeg)
+![Image](image_245754dd563c.jpeg)
 
-![Image](image_181424794821.jpeg)
+![Image](image_84d6179bccd0.jpeg)
 

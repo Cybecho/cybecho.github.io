@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/preme-for-windows-6a56e7eb06ba49369aad049d6b1
 
 ---
 
-![Image](image_e067fbc58a7e.png)
+![Image](image_d19104be0b81.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=dPIrhbhEVng)
 

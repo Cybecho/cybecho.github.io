@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/08-874bd934c25c429383cdd6c4a7a0d086"
 
 ---
 
-![Image](image_4db4942f41e9.png)
+![Image](image_5717c5b0d957.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=SSg_9q-8h-A&list=PLO-mt5Iu5TeZF8xMHqtT_DhAPKmjF6i3x&index=9)
 
@@ -119,9 +119,9 @@ notion_url: "https://www.notion.so/08-874bd934c25c429383cdd6c4a7a0d086"
 > }
 > ```
 >
-> ![Image](image_9e1a4ccf2d4c.png)
+> ![Image](image_3898eda43c11.png)
 >
-> ![Image](image_add1565d0d01.png)
+> ![Image](image_639282364b53.png)
 >
 >
 
@@ -134,7 +134,7 @@ notion_url: "https://www.notion.so/08-874bd934c25c429383cdd6c4a7a0d086"
 > public RuntimeAnimatorController[] animCon; //애니메이션 컨트롤러를 각 몬스터 타입에 맞게 넣기위해 배열로 선언
 > ```
 >
-> ![Image](image_a4118b81cd20.png)
+> ![Image](image_fc5c8955c468.png)
 >
 > ```c#
 > **//Enemy.cs**

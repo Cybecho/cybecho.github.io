@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Rainmeter-1bc9979deb7348c5b2ea9f809e0eb9f1"
 
 ---
 
-![Image](image_c7ccdaba0484.png)
+![Image](image_8a70b3e61031.png)
 
 🎥 [동영상 보기](https://youtu.be/dg12OurpoIo?si=l8cFePjw2bGD20Ki&t=398)
 

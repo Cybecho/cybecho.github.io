@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VS-Code-a79c5ef60eff499f8938bc6bbdc6ea9b"
 
 ---
 
-![Image](image_e3eeb3a47e67.png)
+![Image](image_86a939377318.png)
 
 🔗 [https://velog.io/@seewon/VSCode-동일-디렉토리에서-여러-언어-파일-실행하기](https://velog.io/@seewon/VSCode-동일-디렉토리에서-여러-언어-파일-실행하기)
 

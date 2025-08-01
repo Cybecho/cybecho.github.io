@@ -18,7 +18,7 @@ notion_url: "https://www.notion.so/Rocky10-neofetch-2411bab9e3f88066b8dfc74e6f9d
 
 > Neofetch 왜 안깔림?
 
-![Image](image_0d110ffa8a1c.png)
+![Image](image_1f507e42202b.png)
 
 ```shell
 $ sudo dnf install neofetch -y

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VirtualBox-AD-Lab-98b7e68b46ed44be8e1d8e5d035
 
 ---
 
-![Image](image_1b657b764b2a.png)
+![Image](image_c819cb4ac3a0.png)
 
 [https://benheater.com/virtualbox-lab-external-pentest-practice/](https://benheater.com/virtualbox-lab-external-pentest-practice/)
 

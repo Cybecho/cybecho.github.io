@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/mac-windows-linux-1961bab9e3f88039bba8ca70524
 
 ---
 
-![Image](image_ff9c0d289a75.png)
+![Image](image_2bd6bfb9a576.png)
 
 # Windows ↔ Windows
 

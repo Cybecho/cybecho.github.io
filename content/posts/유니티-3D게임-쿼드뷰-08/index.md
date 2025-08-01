@@ -60,7 +60,7 @@ notion_url: "https://www.notion.so/3D-08-6e9fae2000094d3db7b93a03586b41d6"
 >
 
 > 🔥 **수류탄 폭발 구현**
-> ![Image](image_6a64f3655e9a.png)
+> ![Image](image_c69ca6983207.png)
 >
 > ```c#
 > //Grenade.cs
@@ -181,7 +181,7 @@ notion_url: "https://www.notion.so/3D-08-6e9fae2000094d3db7b93a03586b41d6"
 > > 🔥 **rigidbody.**freezeRotation** = false / true ;**
 > > 플레이어랑 충돌해서 혼자 돌지말라고 고정옵션 켜뒀던거 끄는함수
 > >
-> > ![Image](image_d6702245bbf3.png)
+> > ![Image](image_64c017df2cd7.png)
 > >
 > >
 >

@@ -16,11 +16,11 @@ notion_url: "https://www.notion.so/GlazeWM-win-66df8974fefc40b8af4e229dea4d3cf2"
 
 ---
 
-![Image](image_f55991980bcf.png)
+![Image](image_261ba6c144e0.png)
 
 # 걍 잘 안쓰는 항목에 `LWin` 추가함
 
-![Image](image_8c31446ff5eb.png)
+![Image](image_b1e9e67a046c.png)
 
 ### 근데 이러면 다른 Win 핫키들이 완전 차단됨
 

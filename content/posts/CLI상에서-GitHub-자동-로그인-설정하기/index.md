@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/CLI-GitHub-2371bab9e3f880928e1ff1b2a4a385e8"
 
 ---
 
-![Image](image_20c03a94c24d.png)
+![Image](image_96a5fd72de18.png)
 
 GitHub 자동 로그인 설정하기
 

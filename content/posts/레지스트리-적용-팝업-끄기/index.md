@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/10b61f18a52541ca934e4b4d393f0aad"
 
 ---
 
-![Image](image_9c4a04d53fc2.png)
+![Image](image_3b51c9dbdfb9.png)
 
 > 💡 **귀찮으면 이거 쓰세요**
 >

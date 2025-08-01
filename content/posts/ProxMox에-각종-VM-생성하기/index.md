@@ -48,7 +48,7 @@ notion_url: "https://www.notion.so/ProxMox-VM-7e6d95afbab549e8b144829daba7790b"
 <details>
 <summary>데스크탑 버전 이거 깔아야함…</summary>
 
-![Image](image_20fbb6bd8709.png)
+![Image](image_f55f086e51a3.png)
 
 </details>
 

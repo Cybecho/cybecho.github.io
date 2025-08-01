@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/099cba4ae0c94b04a745b52e1a94f90d"
 
 ---
 
-![Image](image_4c0212a5f63a.png)
+![Image](image_09660b3d852c.png)
 
 🔗 [https://jspark33.tistory.com/76#Code%20server%20%EB%9E%80%3F%C2%A0-1](https://jspark33.tistory.com/76#Code%20server%20%EB%9E%80%3F%C2%A0-1)
 

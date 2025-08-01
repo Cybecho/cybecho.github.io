@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/win-8cc34530c5bc4147911d0ce6b54b2822"
 
 ---
 
-![Image](image_292beacba48f.png)
+![Image](image_6c1c72006ab0.png)
 
 🔗 [https://m.cafe.daum.net/sigmarion3/Nnp/60?svc=cafeapi](https://m.cafe.daum.net/sigmarion3/Nnp/60?svc=cafeapi)
 

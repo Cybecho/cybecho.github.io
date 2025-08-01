@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VirtualBox-NAT-NAT-network-Bridge-HostOnly-1a
 
 ---
 
-![Image](image_5604bc4f8d46.png)
+![Image](image_929a8a0284c5.png)
 
 > 교장님이 칠수에게 크게 노했습니다!!
 하지만.. 도대체 어떤 칠수에게 노하신거죠?
@@ -195,7 +195,7 @@ NAT 모드에서는 게스트 VM이 가상 NAT를 통해 외부로 통신하기 
 
 이름이 같은 3명의 철수는 동시에 “나를 부른 건가?” 하고 헷갈릴 수밖에 없습니다.
 
-![Image](image_5604bc4f8d46.png)
+![Image](image_929a8a0284c5.png)
 
 > 왜 헷갈릴까?
 

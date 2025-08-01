@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Penpot-Figma-11a0bd60c97c4318af87a4714d3c5e4c
 
 ---
 
-![Image](image_66aafdee77f7.png)
+![Image](image_761bd0604def.png)
 
 [https://youtu.be/rFsD5KYHJxc?si=WKXOjBliw4lQZJuD](https://youtu.be/rFsD5KYHJxc?si=WKXOjBliw4lQZJuD)
 

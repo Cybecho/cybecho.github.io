@@ -18,6 +18,8 @@ notion_url: "https://www.notion.so/MAC-00cfa92b360245c6a08e5821c08f82ba"
 
 🔗 [https://gigglehd.com/gg/soft/12183718](https://gigglehd.com/gg/soft/12183718)
 
+| 참고/링크 | [https://gigglehd.com/gg/bbs/12043933](https://gigglehd.com/gg/bbs/12043933) |
+
 ![Image](image_ff2c75d7ee5d.png)
 
 이전부터 윈도우에서 맥과 리눅스와 같은 FreeType 렌더링을 사용하는 폰트로 바꾸기 위한 노력들은 계속해서 이루어졌습니다. 그중에서 제일 유명한 것이라면 아무래도 MacType이겠지요.

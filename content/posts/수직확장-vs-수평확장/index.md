@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/vs-1991bab9e3f880fa95a0c74f2a44941b"
 
 ---
 
-![Image](image_fb927ed41fe4.png)
+![Image](image_89282d07bd55.png)
 
 - 수직확장 - 컴퓨팅 파워를 강화하는거. DB는 그대로 옮겨짐 → 마이그레이션 필연적
 - 수평확장 - 같은일하는 컴퓨터 여러개 연결시키고, DB끼리 연결함 → 클러스터링이 필연적
