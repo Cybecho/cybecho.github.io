@@ -2,9 +2,9 @@
 title: "라즈베리파이에Lineage OS 설치 시 이미지 쓰기 오류 해결 과정"
 date: 2025-07-17T15:47:00.000Z
 draft: false
-tags: ["fedora", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
 series: ["Let's Linux!"]
-description: "라즈베리파이에 Lineage OS를 설치하는 과정에서 발생한 이미지 쓰기 오류는 일반 포맷 도구로 해결되지 않았으나, SD Card Formatter를 사용하여 SD 카드를 공식 규격에 맞게 포맷함으로써 문제를 해결할 수 있었다. SD Card Formatter는 내부 구조를 최적화하여 파티션 정렬과 FAT 파일 시스템 구성을 정확히 수행하여 임베디드 장치에서의 인식과 읽기/쓰기 성능을 향상시킨다."
+description: "라즈베리파이에 Lineage OS를 설치하는 과정에서 SD카드에 이미지 쓰기 오류가 발생했으나, SD 협회에서 제공하는 SD Card Formatter를 사용하여 포맷한 후 오류가 해결되었다. 일반 포맷 도구와 달리 SD Card Formatter는 SD 카드의 내부 구조를 최적화하여 정확한 파티션 정렬과 FAT 파일 시스템 구성을 수행함으로써 임베디드 장치에서의 신뢰성을 높인다."
 notion_id: "2331bab9-e3f8-8019-a0b2-f53b1d89c0af"
 notion_url: "https://www.notion.so/Lineage-OS-2331bab9e3f88019a0b2f53b1d89c0af"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Lineage-OS-2331bab9e3f88019a0b2f53b1d89c0af"
 # 라즈베리파이에Lineage OS 설치 시 이미지 쓰기 오류 해결 과정
 
 > **Summary**
-> 라즈베리파이에 Lineage OS를 설치하는 과정에서 발생한 이미지 쓰기 오류는 일반 포맷 도구로 해결되지 않았으나, SD Card Formatter를 사용하여 SD 카드를 공식 규격에 맞게 포맷함으로써 문제를 해결할 수 있었다. SD Card Formatter는 내부 구조를 최적화하여 파티션 정렬과 FAT 파일 시스템 구성을 정확히 수행하여 임베디드 장치에서의 인식과 읽기/쓰기 성능을 향상시킨다.
+> 라즈베리파이에 Lineage OS를 설치하는 과정에서 SD카드에 이미지 쓰기 오류가 발생했으나, SD 협회에서 제공하는 SD Card Formatter를 사용하여 포맷한 후 오류가 해결되었다. 일반 포맷 도구와 달리 SD Card Formatter는 SD 카드의 내부 구조를 최적화하여 정확한 파티션 정렬과 FAT 파일 시스템 구성을 수행함으로써 임베디드 장치에서의 신뢰성을 높인다.
 
 ---
 
-![Image](image_4375ab014c25.png)
+![Image](image_bbe152092dde.png)
 
 라즈베리파이 4b에 Lineage OS 22를 설치하기 위해 Raspberry Pi Imager를 사용하여 이미지 쓰기를 진행하는 과정에서 “디스크에 파일을 쓰는 동안 액세스 거부 오류가 발생했습니다”라는 메시지가 지속적으로 나타났다.
 

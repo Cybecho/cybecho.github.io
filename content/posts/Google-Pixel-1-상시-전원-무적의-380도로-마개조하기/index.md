@@ -3,8 +3,8 @@ title: "Google Pixel 1 상시 전원 무적의 380도로 마개조하기"
 date: 2025-02-25T15:15:00.000Z
 draft: false
 tags: ["Other"]
-series: ["Let's Homelab!", "HW"]
-description: "구글 픽셀 1의 전원 문제를 해결하기 위해 써멀패드와 구리판을 사용하여 개조한 방법을 공유하며, 관련 링크와 이미지도 포함되어 있습니다."
+series: ["Let's Homelab!", "HW", "구글픽셀 개조기"]
+description: "구글 픽셀 1을 상시 전원으로 개조하는 방법에 대한 내용으로, 써멀패드와 구리판을 사용한 실제 개조 사례가 포함되어 있습니다. 관련 비디오 링크와 추가 자료도 제공됩니다."
 notion_id: "1a51bab9-e3f8-8044-b427-df204a35b49a"
 notion_url: "https://www.notion.so/Google-Pixel-1-380-1a51bab9e3f88044b427df204a35b49a"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Google-Pixel-1-380-1a51bab9e3f88044b427df204a
 # Google Pixel 1 상시 전원 무적의 380도로 마개조하기
 
 > **Summary**
-> 구글 픽셀 1의 전원 문제를 해결하기 위해 써멀패드와 구리판을 사용하여 개조한 방법을 공유하며, 관련 링크와 이미지도 포함되어 있습니다.
+> 구글 픽셀 1을 상시 전원으로 개조하는 방법에 대한 내용으로, 써멀패드와 구리판을 사용한 실제 개조 사례가 포함되어 있습니다. 관련 비디오 링크와 추가 자료도 제공됩니다.
 
 ---
 
-![Image](image_024fc6c33593.webp)
+![Image](image_8ce82ca0a650.webp)
 
 [https://www.youtube.com/watch?v=Xbzv6BI-2Hw&embeds_referring_euri=https%3A%2F%2Flilys.ai%2F&embeds_referring_origin=https%3A%2F%2Flilys.ai](https://www.youtube.com/watch?v=Xbzv6BI-2Hw&embeds_referring_euri=https%3A%2F%2Flilys.ai%2F&embeds_referring_origin=https%3A%2F%2Flilys.ai)
 
@@ -26,7 +26,7 @@ notion_url: "https://www.notion.so/Google-Pixel-1-380-1a51bab9e3f88044b427df204a
 
 # 그리고 실제로 했음
 
-![Image](image_f376d6500b80.png)
+![Image](image_e1dbff70cf8f.png)
 
 난 써멀패드에 구리판까지 넣어 붙였음
 

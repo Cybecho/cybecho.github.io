@@ -3,8 +3,8 @@ title: "Google Pixel 1 충전 80% 제한하기"
 date: 2024-07-18T12:34:00.000Z
 draft: false
 tags: ["Other"]
-series: ["Let's Homelab!", "HW"]
-description: "Tasker와 스마트 플러그를 사용하여 배터리 충전을 80%로 제한하는 방법을 설명합니다. AccuBattery 앱을 통해 충전 상태를 모니터링하고 알림을 설정한 후, IFTTT를 사용하여 스마트 플러그를 제어하여 충전이 완료되면 자동으로 전원을 차단합니다. 이 방법은 루팅이 필요 없으며, 배터리 수명을 연장하는 데 도움이 됩니다."
+series: ["Let's Homelab!", "HW", "구글픽셀 개조기"]
+description: "Tasker와 스마트 플러그를 사용하여 충전 비율을 80%로 제한하는 방법을 설명합니다. AccuBattery 앱을 통해 충전 상태를 모니터링하고, IFTTT를 통해 스마트 플러그를 제어하여 자동으로 충전을 중지합니다. 이 방법은 루팅이 필요 없으며, 배터리 수명을 연장할 수 있는 안전한 방법입니다."
 notion_id: "f36d494b-d658-48dc-aad0-da5de2663c85"
 notion_url: "https://www.notion.so/Google-Pixel-1-80-f36d494bd65848dcaad0da5de2663c85"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Google-Pixel-1-80-f36d494bd65848dcaad0da5de26
 # Google Pixel 1 충전 80% 제한하기
 
 > **Summary**
-> Tasker와 스마트 플러그를 사용하여 배터리 충전을 80%로 제한하는 방법을 설명합니다. AccuBattery 앱을 통해 충전 상태를 모니터링하고 알림을 설정한 후, IFTTT를 사용하여 스마트 플러그를 제어하여 충전이 완료되면 자동으로 전원을 차단합니다. 이 방법은 루팅이 필요 없으며, 배터리 수명을 연장하는 데 도움이 됩니다.
+> Tasker와 스마트 플러그를 사용하여 충전 비율을 80%로 제한하는 방법을 설명합니다. AccuBattery 앱을 통해 충전 상태를 모니터링하고, IFTTT를 통해 스마트 플러그를 제어하여 자동으로 충전을 중지합니다. 이 방법은 루팅이 필요 없으며, 배터리 수명을 연장할 수 있는 안전한 방법입니다.
 
 ---
 
-![Image](image_9e8be01e4bae.webp)
+![Image](image_a93020b3ad8f.webp)
 
 # **Tasker + 스마트 플러그**
 
