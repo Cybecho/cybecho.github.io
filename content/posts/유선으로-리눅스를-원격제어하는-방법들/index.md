@@ -2,9 +2,9 @@
 title: "유선으로 리눅스를 원격제어하는 방법들"
 date: 2025-01-24T12:31:00.000Z
 draft: false
-tags: ["fedora", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
 series: ["Let's Linux!", "개발환경", "Tips"]
-description: "리눅스를 유선으로 원격 제어하는 다양한 방법을 소개하며, KVM 스위치, Synergy/Barrier, Thunderbolt 연결, HDMI 캡처 카드, USB-KVM 어댑터를 통해 최소 레이턴시와 안정적인 연결을 보장하는 솔루션을 제안합니다. KVM 스위치가 가장 빠르고 안정적인 방법으로 추천되며, Synergy/Barrier는 설정의 편의성을 중시하는 사용자에게 적합합니다."
+description: "리눅스를 유선으로 원격 제어하는 방법으로 KVM 스위치, Synergy/Barrier, Thunderbolt 3/4 연결, HDMI/DP 캡처 카드, USB-KVM 어댑터를 소개하며, 각 방법의 장단점과 추천 제품을 설명합니다. KVM 스위치가 가장 빠르고 안정적인 솔루션으로 추천되며, 설정의 편의성을 중시한다면 Synergy/Barrier가 적합합니다."
 notion_id: "1851bab9-e3f8-802f-a4d4-f8dd71682bb8"
 notion_url: "https://www.notion.so/1851bab9e3f8802fa4d4f8dd71682bb8"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/1851bab9e3f8802fa4d4f8dd71682bb8"
 # 유선으로 리눅스를 원격제어하는 방법들
 
 > **Summary**
-> 리눅스를 유선으로 원격 제어하는 다양한 방법을 소개하며, KVM 스위치, Synergy/Barrier, Thunderbolt 연결, HDMI 캡처 카드, USB-KVM 어댑터를 통해 최소 레이턴시와 안정적인 연결을 보장하는 솔루션을 제안합니다. KVM 스위치가 가장 빠르고 안정적인 방법으로 추천되며, Synergy/Barrier는 설정의 편의성을 중시하는 사용자에게 적합합니다.
+> 리눅스를 유선으로 원격 제어하는 방법으로 KVM 스위치, Synergy/Barrier, Thunderbolt 3/4 연결, HDMI/DP 캡처 카드, USB-KVM 어댑터를 소개하며, 각 방법의 장단점과 추천 제품을 설명합니다. KVM 스위치가 가장 빠르고 안정적인 솔루션으로 추천되며, 설정의 편의성을 중시한다면 Synergy/Barrier가 적합합니다.
 
 ---
 

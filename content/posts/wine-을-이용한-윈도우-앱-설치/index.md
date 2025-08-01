@@ -2,9 +2,9 @@
 title: "wine 을 이용한 윈도우 앱 설치"
 date: 2024-06-06T06:17:00.000Z
 draft: false
-tags: ["ubuntu", "Debian", "Arch", "fedora"]
+tags: ["ubuntu", "Debian", "Arch", "RHEL/Fedora/Rocky"]
 series: ["Let's Linux!"]
-description: "윈도우 앱 설치를 위해 wine과 playonlinux를 사용하며, 카카오톡, 반디집, 노션 등의 프로그램을 설치하는 방법을 설명합니다. 글꼴 설치와 exe 파일 다운로드 방법도 포함되어 있습니다."
+description: "윈도우 앱 설치를 위해 wine과 playonlinux를 사용하며, 카카오톡, 반디집, 노션 등의 프로그램 설치 방법을 설명한다. 글꼴 설치와 exe 파일 다운로드도 안내한다."
 notion_id: "6d0d0331-75ee-4c73-8707-0be5d3d992f4"
 notion_url: "https://www.notion.so/wine-6d0d033175ee4c7387070be5d3d992f4"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/wine-6d0d033175ee4c7387070be5d3d992f4"
 # wine 을 이용한 윈도우 앱 설치
 
 > **Summary**
-> 윈도우 앱 설치를 위해 wine과 playonlinux를 사용하며, 카카오톡, 반디집, 노션 등의 프로그램을 설치하는 방법을 설명합니다. 글꼴 설치와 exe 파일 다운로드 방법도 포함되어 있습니다.
+> 윈도우 앱 설치를 위해 wine과 playonlinux를 사용하며, 카카오톡, 반디집, 노션 등의 프로그램 설치 방법을 설명한다. 글꼴 설치와 exe 파일 다운로드도 안내한다.
 
 ---
 
-![Image](image_31c69ffe43e6.png)
+![Image](image_7ac9fa9ccf14.png)
 
 [https://hamonikr.org/used_hamonikr/82280](https://hamonikr.org/used_hamonikr/82280)
 
@@ -37,9 +37,9 @@ sudo dnf install playonlinux
 > 💡 **버전관리**
 > ---
 >
-> ![Image](image_4d4ff289e7c3.png)
+> ![Image](image_e5ec86fe3dc9.png)
 >
-> ![Image](image_9af9f3a979cd.png)
+> ![Image](image_4956c7d44efa.png)
 >
 >
 

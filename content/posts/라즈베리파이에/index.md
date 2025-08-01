@@ -2,9 +2,9 @@
 title: "라즈베리파이에"
 date: 2025-07-17T09:00:00.000Z
 draft: false
-tags: ["fedora", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
 series: ["Let's Linux!"]
-description: "라즈베리파이에 LineageOS를 설치하여 안드로이드 환경을 구축하는 방법을 설명하며, 설치 과정, Google Apps 설치, 그리고 Revanced를 통한 무제한 Google Photos 백업 활성화 방법을 포함하고 있습니다. KonstaKANG의 LineageOS는 Raspberry Pi에서 안드로이드 기능을 지원하며, 다양한 추가 기능을 통해 저전력 클라우드 폰이나 DIY Android TV 박스로 활용할 수 있습니다."
+description: "라즈베리파이에 LineageOS를 설치하여 안드로이드를 사용할 수 있으며, KonstaKANG이 개발한 LineageOS는 Raspberry Pi 4 모델 이상에서 저사양 스마트폰 수준의 성능을 제공합니다. 설치 과정은 LineageOS 이미지 다운로드, SD 카드에 플래싱, 초기 설정, Google Apps 설치로 구성되며, MindTheGapps 패키지가 권장됩니다. 또한, Revanced를 통해 Google Photos의 무제한 백업 기능을 활성화할 수 있는 방법도 안내됩니다."
 notion_id: "2331bab9-e3f8-801f-af43-e085b9c24e07"
 notion_url: "https://www.notion.so/LineageOS-2331bab9e3f8801faf43e085b9c24e07"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/LineageOS-2331bab9e3f8801faf43e085b9c24e07"
 # 라즈베리파이에
 
 > **Summary**
-> 라즈베리파이에 LineageOS를 설치하여 안드로이드 환경을 구축하는 방법을 설명하며, 설치 과정, Google Apps 설치, 그리고 Revanced를 통한 무제한 Google Photos 백업 활성화 방법을 포함하고 있습니다. KonstaKANG의 LineageOS는 Raspberry Pi에서 안드로이드 기능을 지원하며, 다양한 추가 기능을 통해 저전력 클라우드 폰이나 DIY Android TV 박스로 활용할 수 있습니다.
+> 라즈베리파이에 LineageOS를 설치하여 안드로이드를 사용할 수 있으며, KonstaKANG이 개발한 LineageOS는 Raspberry Pi 4 모델 이상에서 저사양 스마트폰 수준의 성능을 제공합니다. 설치 과정은 LineageOS 이미지 다운로드, SD 카드에 플래싱, 초기 설정, Google Apps 설치로 구성되며, MindTheGapps 패키지가 권장됩니다. 또한, Revanced를 통해 Google Photos의 무제한 백업 기능을 활성화할 수 있는 방법도 안내됩니다.
 
 ---
 
@@ -91,6 +91,81 @@ notion_url: "https://www.notion.so/LineageOS-2331bab9e3f8801faf43e085b9c24e07"
 ## 🔧 **2단계: Google Apps (GApps) 설치**
 
 ### O3 버전
+
+🔗 [https://mindthegapps.com/](https://mindthegapps.com/)
+
+Raspberry Pi 4 Model B에서 **Lineage OS 22 (Android 15)** 를 구운 뒤 최신 Google Apps(GApps)를 쓰려면, 현재 가장 안전한 선택은 **MindTheGapps 15.0.0 ARM64**이다. KonstaKANG의 비공식 Pi 4 빌드는 TWRP Recovery를 포함하고 있으며, FAQ에 “MindTheGapps-15.0.0-arm64.zip → TWRP에서 설치 → 즉시 Factory reset” 순서를 명시한다. LineageOS 공식 위키도 22 버전에는 MindTheGapps만을 권장한다. 대안으로는 Android 15까지 지원하는 NikGApps(여러 패키지 변형 제공)가 있다. OpenGApps는 Android 11 이후 사실상 개발이 멈춰 있어 22 빌드에서는 사용하지 않는다. 아래 절차에 따라 진행하면 된다.
+
+---
+
+## **1. 사전 확인**
+
+---
+
+## **2. GApps 패키지 선택**
+
+> 권장
+
+---
+
+## **3. 다운로드 위치**
+
+1. **MindTheGapps**
+  - mindthegapps.com → *Android 15 (LineageOS 22) → ARM64* 항목 선택 후 GitHub 릴리스 다운로드.
+1. **NikGApps**
+  - nikgapps.com/downloads → *Latest Update – Android 10-16* → 원하는 변형 선택 후 SourceForge 링크에서 ZIP 획득.
+다운로드한 ZIP은 MindTheGapps-15.0.0-arm64-YYYYMMDD_HHMM.zip 처럼 표시된다.
+
+---
+
+## **4. 설치 준비**
+
+1. Lineage OS 22 이미지를 SD 카드(또는 USB/NVMe) 에 작성하고 첫 부팅까지 완료.
+1. 부팅 직후 **전원 메뉴 → Reboot → Recovery**로 진입(TWRP).
+  - KonstaKANG 빌드는 Advanced Reboot 옵션을 통해 쉽게 접근 가능.
+1. PC와 Pi를 USB-C로 연결(ADB 사용 시).
+---
+
+## **5. 설치 단계**
+
+### **방법 A – 기기 저장소/USB에서 플래시**
+
+1. MindTheGapps ZIP을 /sdcard 혹은 외부 USB 저장장치에 복사.
+1. TWRP > *Install* > ZIP 선택 > **Swipe to flash**.
+1. **Wipe → Factory Reset**(데이터 초기화) – KonstaKANG FAQ 요구 사항.
+1. *Reboot System*.
+### **방법 B – ADB sideload**
+
+1. TWRP > *Advanced* > *ADB Sideload* → Slide to start.
+1. PC 터미널에서
+```plain text
+adb sideload MindTheGapps-15.0.0-arm64-YYYYMMDD.zip
+```
+
+1. 전송이 끝나면 TWRP에서 *Wipe → Factory Reset* 후 재부팅.
+> 주의
+
+---
+
+## **6. 설치 후 확인**
+
+1. 첫 부팅 Setup Wizard 진행 중 Google 계정 로그인이 나타나면 성공.
+1. 설정 > 앱 > Google Play 서비스 버전이 “24.x.x (15)” 같이 Android 15 API 레벨을 가리키는지 확인.
+1. OTA 업데이트 시 KonstaKANG 빌드는 addon.d 스크립트로 GApps를 자동 백업·복원한다.
+---
+
+## **7. 문제 해결 Q&A**
+
+---
+
+## **8. 결론**
+
+- **최신 Lineage OS 22(안드로이드 15) + Raspberry Pi 4B** 조합에서는 **MindTheGapps ARM64**가 사실상 표준이다.
+- 설치는 *Lineage/ROM 플래시 → Recovery 진입 → GApps 플래시 → Factory Reset → 첫 부팅* 순서를 반드시 지킬 것.
+- 대안이 필요하면 NikGApps(여러 변형)도 Android 15까지 지원하며 정상 동작한다.
+- OpenGApps는 개발이 중단돼 더 이상 권장되지 않는다.
+필요한 경우 추가 질문을 남겨 주시면 이어서 도와드리겠다.
+
 
 ### **2.1 TWRP 리커버리 부팅**
 

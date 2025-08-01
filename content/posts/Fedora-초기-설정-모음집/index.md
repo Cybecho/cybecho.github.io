@@ -2,9 +2,9 @@
 title: "Fedora 초기 설정 모음집  "
 date: 2024-05-13T00:58:00.000Z
 draft: false
-tags: ["fedora"]
+tags: ["RHEL/Fedora/Rocky"]
 series: ["Let's Linux!"]
-description: "Fedora 초기 설정을 위한 다양한 팁과 필수 애플리케이션 목록을 제공하며, 설치 후 해야 할 작업, 패키지 관리 시스템(DNF와 Flatpak)의 차이점, 사용자 정의 키 매핑 및 윈도우 타일링 기능을 설정하는 방법을 설명합니다. 추천 애플리케이션으로는 GNOME Tweaks, VLC Media Player, LibreOffice, GIMP 등이 있으며, 각 애플리케이션의 설치 방법과 기능도 안내합니다."
+description: "Fedora 초기 설정을 위한 가이드로, 설치 후 해야 할 작업, 추천 프로그램 목록, DNF와 Flatpak의 차이, 사용자 정의 키 매핑 도구, 윈도우 타일링 및 다양한 시각적 효과 설정 방법을 포함하고 있습니다. GNOME 환경에서의 커스터마이징을 위한 다양한 애플리케이션과 확장 기능도 소개됩니다."
 notion_id: "e7e897a7-6094-48d2-bdcb-62d8c10ad62c"
 notion_url: "https://www.notion.so/Fedora-firefox-aurora-e7e897a7609448d2bdcb62d8c10ad62c"
 ---
@@ -14,7 +14,7 @@ notion_url: "https://www.notion.so/Fedora-firefox-aurora-e7e897a7609448d2bdcb62d
 
 
 > **Summary**
-> Fedora 초기 설정을 위한 다양한 팁과 필수 애플리케이션 목록을 제공하며, 설치 후 해야 할 작업, 패키지 관리 시스템(DNF와 Flatpak)의 차이점, 사용자 정의 키 매핑 및 윈도우 타일링 기능을 설정하는 방법을 설명합니다. 추천 애플리케이션으로는 GNOME Tweaks, VLC Media Player, LibreOffice, GIMP 등이 있으며, 각 애플리케이션의 설치 방법과 기능도 안내합니다.
+> Fedora 초기 설정을 위한 가이드로, 설치 후 해야 할 작업, 추천 프로그램 목록, DNF와 Flatpak의 차이, 사용자 정의 키 매핑 도구, 윈도우 타일링 및 다양한 시각적 효과 설정 방법을 포함하고 있습니다. GNOME 환경에서의 커스터마이징을 위한 다양한 애플리케이션과 확장 기능도 소개됩니다.
 
 ---
 

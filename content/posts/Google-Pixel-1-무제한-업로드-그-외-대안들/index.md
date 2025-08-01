@@ -3,8 +3,8 @@ title: "Google Pixel 1 무제한 업로드 그 외 대안들"
 date: 2025-07-14T15:15:00.000Z
 draft: false
 tags: ["Other"]
-series: ["Let's Homelab!", "HW"]
-description: "Google Pixel 1은 무제한 원본 화질 이미지 업로드를 지원하며, 배터리 성능 저하 문제를 해결하기 위해 DC 컨버터를 설치하고 FTP 서버를 운영하여 외장 저장소를 마운트했습니다. 다양한 대안으로는 JPEG로 인코딩 후 업로드, RAW 파일 업로드, Android 에뮬레이터를 통한 디바이스 ID 스푸핑, Revanced Manager 패치 적용, 가상 환경에서의 Pixel 하드웨어 에뮬레이션, SBC 활용, P2P 동기화, Immich 셀프호스트, 저가 오브젝트 스토리지 이용 등이 제안되었습니다."
+series: ["Let's Homelab!", "HW", "구글픽셀 개조기"]
+description: "Google Pixel 1은 무제한 원본 화질 이미지 업로드를 지원하며, 배터리 성능 저하로 전원 공급을 안정화하기 위한 방법과 FTP 서버 운영, 외장 USB 저장소 마운트, 클라이언트와의 네트워크 연결 방법을 설명합니다. 또한 JPEG 인코딩, RAW 파일 업로드, Android 에뮬레이터 사용, Revanced Manager 패치 등 다양한 대안 방법들이 제안됩니다. 다른 사용자들이 제안한 방법으로는 싱글보드컴퓨터 활용, P2P 동기화, 오픈소스 서버 호스팅 등이 있습니다."
 notion_id: "2311bab9-e3f8-8006-872f-cf8f734a4f0a"
 notion_url: "https://www.notion.so/Google-Pixel-1-2311bab9e3f88006872fcf8f734a4f0a"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Google-Pixel-1-2311bab9e3f88006872fcf8f734a4f
 # Google Pixel 1 무제한 업로드 그 외 대안들
 
 > **Summary**
-> Google Pixel 1은 무제한 원본 화질 이미지 업로드를 지원하며, 배터리 성능 저하 문제를 해결하기 위해 DC 컨버터를 설치하고 FTP 서버를 운영하여 외장 저장소를 마운트했습니다. 다양한 대안으로는 JPEG로 인코딩 후 업로드, RAW 파일 업로드, Android 에뮬레이터를 통한 디바이스 ID 스푸핑, Revanced Manager 패치 적용, 가상 환경에서의 Pixel 하드웨어 에뮬레이션, SBC 활용, P2P 동기화, Immich 셀프호스트, 저가 오브젝트 스토리지 이용 등이 제안되었습니다.
+> Google Pixel 1은 무제한 원본 화질 이미지 업로드를 지원하며, 배터리 성능 저하로 전원 공급을 안정화하기 위한 방법과 FTP 서버 운영, 외장 USB 저장소 마운트, 클라이언트와의 네트워크 연결 방법을 설명합니다. 또한 JPEG 인코딩, RAW 파일 업로드, Android 에뮬레이터 사용, Revanced Manager 패치 등 다양한 대안 방법들이 제안됩니다. 다른 사용자들이 제안한 방법으로는 싱글보드컴퓨터 활용, P2P 동기화, 오픈소스 서버 호스팅 등이 있습니다.
 
 ---
 
@@ -20,9 +20,9 @@ notion_url: "https://www.notion.so/Google-Pixel-1-2311bab9e3f88006872fcf8f734a4f
 
 🔗 [https://www.reddit.com/r/homelab/comments/1m04ix4/android_service_for_unlimited_google_photos/](https://www.reddit.com/r/homelab/comments/1m04ix4/android_service_for_unlimited_google_photos/)
 
-![Image](image_6d6a4f0f6a86.png)
+![Image](image_1b43e6c00ffb.png)
 
-![Image](image_33404a4f0569.webp)
+![Image](image_477e7c95eb42.webp)
 
 ```plain text
 	•	Google Pixel 1은 무제한 원본 화질 이미지 업로드를 지원합니다.

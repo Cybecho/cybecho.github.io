@@ -2,7 +2,7 @@
 title: "Linux 백업 시스템"
 date: 2024-06-09T01:52:00.000Z
 draft: false
-tags: ["fedora", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
 series: ["Let's Linux!"]
 description: "콘텐츠 없음"
 notion_id: "0fd7e98a-dee5-4d8b-86af-320667833702"

@@ -3,8 +3,8 @@ title: "Google Pixel 1 간헐적 동기화 서버 설계"
 date: 2024-07-18T15:10:00.000Z
 draft: false
 tags: ["Other"]
-series: ["Let's Homelab!", "HW"]
-description: "픽셀 1의 간헐적 동기화를 위해 윈도우 서버를 사용하여 사진을 동기화하고, FTP 서버를 설정하여 파일을 관리하는 방법을 설명합니다. Syncthing을 통해 윈도우와 안드로이드 간의 자동 파일 동기화 설정을 안내하며, MacroDroid를 이용해 Google Photos의 자동 백업을 유지하는 방법도 소개합니다. 배터리 과열 방지를 위한 스마트 플러그 사용을 권장합니다."
+series: ["Let's Homelab!", "HW", "구글픽셀 개조기"]
+description: "픽셀 1의 간헐적 동기화를 위해 윈도우 서버를 사용하여 사진을 동기화하고, FTP 서버를 설정하여 파일을 관리하는 방법을 설명합니다. 또한, Syncthing을 통해 자동 파일 전송을 설정하고, MacroDroid를 이용해 Google Photos의 자동 백업을 유지하는 방법을 안내합니다. 배터리 과열 방지를 위한 스마트 플러그 사용도 권장됩니다."
 notion_id: "baa1f2f9-90ef-4a90-b84e-86dbcd5b5d7b"
 notion_url: "https://www.notion.so/Google-Pixel-1-baa1f2f990ef4a90b84e86dbcd5b5d7b"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Google-Pixel-1-baa1f2f990ef4a90b84e86dbcd5b5d
 # Google Pixel 1 간헐적 동기화 서버 설계
 
 > **Summary**
-> 픽셀 1의 간헐적 동기화를 위해 윈도우 서버를 사용하여 사진을 동기화하고, FTP 서버를 설정하여 파일을 관리하는 방법을 설명합니다. Syncthing을 통해 윈도우와 안드로이드 간의 자동 파일 동기화 설정을 안내하며, MacroDroid를 이용해 Google Photos의 자동 백업을 유지하는 방법도 소개합니다. 배터리 과열 방지를 위한 스마트 플러그 사용을 권장합니다.
+> 픽셀 1의 간헐적 동기화를 위해 윈도우 서버를 사용하여 사진을 동기화하고, FTP 서버를 설정하여 파일을 관리하는 방법을 설명합니다. 또한, Syncthing을 통해 자동 파일 전송을 설정하고, MacroDroid를 이용해 Google Photos의 자동 백업을 유지하는 방법을 안내합니다. 배터리 과열 방지를 위한 스마트 플러그 사용도 권장됩니다.
 
 ---
 
-![Image](image_8f10be39c580.webp)
+![Image](image_a106b0f20e88.webp)
 
 # Google Pixel 1 간헐적 동기화 서버 설계
 
@@ -90,14 +90,14 @@ Pixel 1 이 켜졌을때, 그동안 저장되었었던 Windows에 있던 사진 
 
 1. 안드로이드 홈 화면 중앙에 'Photos - 여유 공간' 아이콘 배치
   - Photos 앱 아이콘을 길게 눌러 '여유 공간' 옵션을 홈 화면으로 드래그
-![Image](image_ef45310c2f4b.png)
+![Image](image_e991dc116b30.png)
 
 ### → MacroDroid 설정 방법
 
 1. MacroDroid 앱 실행 후 'Add macro' 선택
-![Image](image_ea2e0d1e2124.png)
+![Image](image_cd6d8a506b05.png)
 
-![Image](image_335fd43953aa.png)
+![Image](image_4a00eb74ca06.png)
 
 1. 다음 단계를 반복하여 매크로 생성 (Pixel 1 기준 클릭 좌표 사용):
   - 트리거, 동작, 제약 설정

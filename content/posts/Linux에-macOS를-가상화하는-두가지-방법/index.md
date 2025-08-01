@@ -2,9 +2,9 @@
 title: "Linux에 macOS를 가상화하는 두가지 방법"
 date: 2025-02-09T02:49:00.000Z
 draft: false
-tags: ["fedora", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
 series: ["Let's Linux!"]
-description: "Linux 기반 PC에서 macOS를 가상 머신으로 실행하는 방법은 Hackintosh보다 안정적이며, 성능 최적화를 통해 네이티브 Mac Pro보다 최대 4배 빠른 성능을 구현할 수 있습니다. Arch 기반 배포판에서 QEMU와 KVM을 사용하여 가상화하며, GPU 패스스루를 통해 더욱 강력한 환경을 구축할 수 있습니다."
+description: "Linux 기반 PC에서 macOS를 가상 머신으로 실행하는 방법과 성능 비교를 다루며, 가상 머신 방식이 Hackintosh보다 안정적이고 관리가 용이하다는 점을 강조합니다. 최적화된 설정을 통해 macOS가 네이티브 Mac Pro보다 최대 4배 빠른 성능을 보여줄 수 있으며, GPU 패스스루를 활용하면 더욱 강력한 환경을 구축할 수 있습니다."
 notion_id: "1951bab9-e3f8-8044-86f5-d3c3e374e635"
 notion_url: "https://www.notion.so/Linux-macOS-1951bab9e3f8804486f5d3c3e374e635"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Linux-macOS-1951bab9e3f8804486f5d3c3e374e635"
 # Linux에 macOS를 가상화하는 두가지 방법
 
 > **Summary**
-> Linux 기반 PC에서 macOS를 가상 머신으로 실행하는 방법은 Hackintosh보다 안정적이며, 성능 최적화를 통해 네이티브 Mac Pro보다 최대 4배 빠른 성능을 구현할 수 있습니다. Arch 기반 배포판에서 QEMU와 KVM을 사용하여 가상화하며, GPU 패스스루를 통해 더욱 강력한 환경을 구축할 수 있습니다.
+> Linux 기반 PC에서 macOS를 가상 머신으로 실행하는 방법과 성능 비교를 다루며, 가상 머신 방식이 Hackintosh보다 안정적이고 관리가 용이하다는 점을 강조합니다. 최적화된 설정을 통해 macOS가 네이티브 Mac Pro보다 최대 4배 빠른 성능을 보여줄 수 있으며, GPU 패스스루를 활용하면 더욱 강력한 환경을 구축할 수 있습니다.
 
 ---
 
