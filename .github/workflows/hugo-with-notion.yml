@@ -49,13 +49,7 @@ jobs:
 
           NOTION_SECRET="${{ secrets.NOTION_SECRET }}" DATABASE_ID="${{ secrets.DATABASE_ID }}" node scripts/sync-notion.js
 
-      # Archives 디렉토리 이미지 경로 변환 (로컬 작업용 -> Hugo 빌드용)
-      - name: Convert Archive Image Paths
-        run: |
-          echo "Converting archive image paths for Hugo build..."
-          node scripts/convert-archive-images.js
-
-      # 동기화된 파일들을 저장소에 커밋
+      # 동기화된 파일들을 저장소에 커밋 (Archives 변환 전에 커밋)
       - name: Commit Notion sync changes
         run: |
           git config --local user.email "action@github.com"
@@ -95,7 +89,13 @@ jobs:
             echo "No changes to commit"
           fi
 
-      
+      # Archives 디렉토리 이미지 경로 변환 (로컬 작업용 -> Hugo 빌드용)
+      # 원본 파일은 수정하지 않고, 빌드 시점에만 변환하여 Hugo에서 사용
+      # 이 변환된 내용은 커밋하지 않음 (빌드용으로만 사용)
+      - name: Convert Archive Image Paths for Build
+        run: |
+          echo "Converting archive image paths for Hugo build (temporary conversion)..."
+          node scripts/convert-archive-images-for-build.js
 
       - name: Build with Hugo
         env:
