@@ -133,6 +133,97 @@ function convertRichText(richTextArray) {
   }).join('');
 }
 
+// Table 블록을 Markdown 테이블로 변환하는 함수
+async function convertTableToMarkdown(tableBlock) {
+  try {
+    console.log('🔍 Processing table block:', tableBlock.id);
+    
+    // 1. Table 메타데이터 추출
+    const tableWidth = tableBlock.table?.table_width || 0;
+    const hasColumnHeader = tableBlock.table?.has_column_header || false;
+    
+    console.log(`📊 Table info: ${tableWidth} columns, header: ${hasColumnHeader}`);
+    
+    if (tableWidth === 0) {
+      console.warn('⚠️ Table has no columns, skipping');
+      return '';
+    }
+    
+    // 2. Table의 children (table_row 블록들) 가져오기
+    const rowsResponse = await notion.blocks.children.list({
+      block_id: tableBlock.id,
+      page_size: 100
+    });
+    
+    const tableRows = rowsResponse.results.filter(block => block.type === 'table_row');
+    console.log(`📋 Found ${tableRows.length} table rows`);
+    
+    if (tableRows.length === 0) {
+      console.warn('⚠️ Table has no rows, skipping');
+      return '';
+    }
+    
+    // 3. 각 row의 cells를 텍스트로 변환
+    const processedRows = tableRows.map((row, rowIndex) => {
+      const cells = row.table_row?.cells || [];
+      
+      // 각 셀의 rich_text 배열을 문자열로 변환
+      const cellTexts = cells.map((cell, cellIndex) => {
+        if (!Array.isArray(cell)) {
+          console.warn(`⚠️ Invalid cell at row ${rowIndex}, col ${cellIndex}`);
+          return '';
+        }
+        
+        // 셀 내용이 rich_text 배열이므로 convertRichText 사용
+        const cellContent = convertRichText(cell);
+        
+        // Markdown 테이블에서 파이프 문자 이스케이프
+        return cellContent.replace(/\|/g, '\\|').trim() || ' ';
+      });
+      
+      // table_width만큼 셀이 없으면 빈 셀로 채우기
+      while (cellTexts.length < tableWidth) {
+        cellTexts.push(' ');
+      }
+      
+      return cellTexts.slice(0, tableWidth); // 너무 많은 셀 제거
+    });
+    
+    // 4. Markdown 테이블 형식으로 변환
+    let markdownTable = '';
+    
+    if (hasColumnHeader && processedRows.length > 0) {
+      // 헤더 row 처리
+      const headerRow = processedRows[0];
+      markdownTable += '| ' + headerRow.join(' | ') + ' |\n';
+      
+      // 구분선 생성
+      const separator = headerRow.map(() => '---');
+      markdownTable += '| ' + separator.join(' | ') + ' |\n';
+      
+      // 나머지 데이터 rows 처리
+      for (let i = 1; i < processedRows.length; i++) {
+        const row = processedRows[i];
+        markdownTable += '| ' + row.join(' | ') + ' |\n';
+      }
+    } else {
+      // 헤더 없는 테이블 - 모든 row를 데이터로 처리
+      processedRows.forEach(row => {
+        markdownTable += '| ' + row.join(' | ') + ' |\n';
+      });
+    }
+    
+    console.log(`✅ Successfully converted table with ${processedRows.length} rows`);
+    return markdownTable + '\n';
+    
+  } catch (error) {
+    console.error('❌ Error converting table:', error.message);
+    
+    // Fallback: 테이블 변환 실패시 플레이스홀더 반환
+    return `\n> 📊 **Table** (변환 중 오류 발생)\n> *이 테이블은 Notion에서 직접 확인해 주세요.*\n\n`;
+  }
+}
+
 async function convertBlocks(pageId, postDir, indentLevel = 0) {
   try {
     const blocks = await notion.blocks.children.list({
@@ -374,6 +465,48 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
           const bookmarkUrl = block.bookmark?.url || block.link_preview?.url;
           if (bookmarkUrl) {
             content += '🔗 [' + bookmarkUrl + '](' + bookmarkUrl + ')\n\n';
+          }
+          break;
+          
+        case 'table':
+          console.log('📊 Found table block, processing...');
+          try {
+            const tableMarkdown = await convertTableToMarkdown(block);
+            if (tableMarkdown && tableMarkdown.trim()) {
+              content += tableMarkdown;
+            } else {
+              console.warn('⚠️ Table conversion returned empty result');
+              // Fallback for empty table
+              content += '\n> 📊 **Table** (내용이 비어있습니다)\n\n';
+            }
+          } catch (error) {
+            console.error('❌ Failed to process table block:', error.message);
+            // Fallback for failed table processing
+            content += '\n> 📊 **Table** (처리 중 오류 발생)\n> *이 테이블은 Notion에서 직접 확인해 주세요.*\n\n';
+          }
+          
+          // Table 처리 후 짧은 지연 (API 속도 제한 고려)
+          await new Promise(resolve => setTimeout(resolve, 100));
+          break;
+          
+        case 'to_do':
+          if (block.to_do?.rich_text?.length > 0) {
+            const isChecked = block.to_do.checked || false;
+            const todoText = convertRichText(block.to_do.rich_text);
+            const checkbox = isChecked ? '[x]' : '[ ]';
+            content += '- ' + checkbox + ' ' + todoText + '\n';
+            
+            // 중첩된 to-do 처리
+            if (block.has_children) {
+              const childContent = await convertBlocks(block.id, postDir, indentLevel + 1);
+              content += childContent;
+            }
+          }
+          break;
+          
+        case 'child_page':
+          if (block.child_page?.title) {
+            content += '📄 **[' + block.child_page.title + ']**\n\n';
           }
           break;
       }
