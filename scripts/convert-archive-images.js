@@ -3,8 +3,8 @@
 /**
  * Archives 디렉토리의 이미지 경로 변환 스크립트
  * 
- * 로컬 작업용 경로 (./static/images/...) 를 
- * Hugo 빌드용 경로 (/images/...) 로 변환합니다.
+ * 1. 로컬 작업용 경로 (./static/images/...) 를 Hugo 빌드용 경로 (/images/...) 로 변환
+ * 2. Obsidian 스타일 이미지 임베딩 (![[filename.ext]]) 을 Hugo 호환 형식으로 변환
  * 
  * 오직 content/archives/ 디렉토리의 파일들만 처리합니다.
  */
@@ -21,15 +21,30 @@ const ARCHIVES_DIR = path.join(__dirname, '..', 'content', 'archives');
  * @returns {string} - 변환된 내용
  */
 function convertImagePaths(content) {
-    // 정규식: ![...](./static/images/...) 또는 ![...](../static/images/...) 등을 찾아서 변환
-    const imageRegex = /!\[([^\]]*)\]\(\.\.?\/static\/images\/([^)]+)\)/g;
+    let hasChanges = false;
     
-    return content.replace(imageRegex, (match, altText, imagePath) => {
+    // 1. 기존 정규식: ![...](./static/images/...) 또는 ![...](../static/images/...) 등을 찾아서 변환
+    const imageRegex = /!\[([^\]]*)\]\(\.\.?\/static\/images\/([^)]+)\)/g;
+    content = content.replace(imageRegex, (match, altText, imagePath) => {
         // ./static/images/... 또는 ../static/images/... => /images/...
         const newPath = `/images/${imagePath}`;
         console.log(`  변환: ${match} => ![${altText}](${newPath})`);
+        hasChanges = true;
         return `![${altText}](${newPath})`;
     });
+    
+    // 2. Obsidian 스타일 이미지 임베딩: ![[filename.ext]] => ![](../../static/images/archives/filename.ext)
+    const obsidianImageRegex = /!\[\[([^\]]+)\]\]/g;
+    content = content.replace(obsidianImageRegex, (match, filename) => {
+        // Obsidian 스타일을 Hugo가 인식할 수 있는 형식으로 변환
+        // ![[filename.ext]] => ![](../../static/images/archives/filename.ext)
+        const newPath = `/images/archives/${filename}`;
+        console.log(`  Obsidian 이미지 변환: ${match} => ![](${newPath})`);
+        hasChanges = true;
+        return `![](${newPath})`;
+    });
+    
+    return content;
 }
 
 /**
