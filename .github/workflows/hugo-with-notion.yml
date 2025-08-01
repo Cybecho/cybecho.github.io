@@ -49,6 +49,12 @@ jobs:
 
           NOTION_SECRET="${{ secrets.NOTION_SECRET }}" DATABASE_ID="${{ secrets.DATABASE_ID }}" node scripts/sync-notion.js
 
+      # Archives 디렉토리 이미지 경로 변환 (로컬 작업용 -> Hugo 빌드용)
+      - name: Convert Archive Image Paths
+        run: |
+          echo "Converting archive image paths for Hugo build..."
+          node scripts/convert-archive-images.js
+
       # 동기화된 파일들을 저장소에 커밋
       - name: Commit Notion sync changes
         run: |
