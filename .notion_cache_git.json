@@ -27,22 +27,6 @@
     "has_content": true,
     "accessed_at": "2025-08-01T07:35:58.580Z"
   },
-  "2401bab9-e3f8-80d4-9296-f15fe73d6138": {
-    "last_edited_time": "2025-07-30T05:23:00.000Z",
-    "title": "Copyparty - 거의 모든 기기를 파일 서버로 만드는 오픈소스",
-    "slug": "Copyparty-거의-모든-기기를-파일-서버로-만드는-오픈소스",
-    "processed_at": "2025-08-01T04:33:51.502Z",
-    "tags": [
-      "Util"
-    ],
-    "themes": [
-      "오픈소스",
-      "Let's Homelab!",
-      "구글픽셀 개조기"
-    ],
-    "has_content": true,
-    "accessed_at": "2025-08-01T07:35:58.580Z"
-  },
   "23f1bab9-e3f8-8052-9fe3-d7b6c9ce2761": {
     "last_edited_time": "2025-07-31T02:11:00.000Z",
     "title": "RST와 AHCI가 도대체 뭔데 날 이리 괴롭힐까? - Dell XPS 13 9365에 Ubuntu 듀얼부팅하기",
