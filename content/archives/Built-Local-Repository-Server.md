@@ -94,6 +94,9 @@ https://drive.google.com/file/d/1d_AKlAOD5sJWpmJ3xe_Zg6Aoqbfk5vJT/view
 이 경험을 통해 나는 온몸으로 깨달았다. 꼼꼼한 **검증의 과정은 시스템에 대한 신뢰를 만들고, 피할 수 없어 보이는 제약은 생각을 전환할 때 새로운 기회의 문을 열어준다**는 것을. 이 깨달음이야말로 이번 프로젝트가 나에게 남긴 가장 큰 자산이다.
 
 
+---
+
+
 ### Reference
 
 1. [Microsoft Linux repos suffer day-long outage, still recovering, BleepingComputer, 2024년 6월 17일,](https://www.bleepingcomputer.com/news/microsoft/microsoft-linux-repos-suffer-day-long-outage-still-recovering/) 

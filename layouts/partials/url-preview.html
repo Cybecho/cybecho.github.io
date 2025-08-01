@@ -329,6 +329,48 @@
   flex-shrink: 0;
 }
 
+.google-drive-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.google-drive-overlay:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.google-drive-overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: white;
+  text-align: center;
+}
+
+.google-drive-play-icon {
+  font-size: 3rem;
+  opacity: 0.9;
+  transition: transform 0.2s ease;
+}
+
+.google-drive-overlay:hover .google-drive-play-icon {
+  transform: scale(1.1);
+}
+
+.google-drive-overlay-text {
+  line-height: 1.4;
+}
+
 @media (max-width: 768px) {
   .youtube-embed-container {
     margin: 1rem 0;
@@ -367,6 +409,14 @@
 
   .google-drive-link {
     padding: 0.5rem;
+  }
+
+  .google-drive-play-icon {
+    font-size: 2.5rem;
+  }
+
+  .google-drive-overlay-content {
+    gap: 0.5rem;
   }
 }
 </style>
@@ -668,10 +718,20 @@ class URLPreview {
             src="${previewUrl}"
             title="Google Drive 동영상"
             frameborder="0"
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
             loading="lazy">
           </iframe>
+          <div class="google-drive-overlay" style="display: none;">
+            <div class="google-drive-overlay-content">
+              <span class="google-drive-play-icon">▶️</span>
+              <div class="google-drive-overlay-text">
+                <div>Google Drive 동영상</div>
+                <div style="font-size: 0.8rem; opacity: 0.7;">클릭하여 재생</div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="google-drive-embed-info">
           <div class="google-drive-embed-title">Google Drive 동영상</div>
@@ -688,41 +748,91 @@ class URLPreview {
         </div>
       `;
 
-      // iframe 로딩 실패 시 폴백 처리
+      // iframe 및 오버레이 요소들
       const iframe = container.querySelector('.google-drive-embed-iframe');
       const embedContainer = container.querySelector('.google-drive-embed-container');
       const embedInfo = container.querySelector('.google-drive-embed-info');
       const fallback = container.querySelector('.google-drive-embed-fallback');
+      const overlay = container.querySelector('.google-drive-overlay');
 
-      iframe.addEventListener('error', () => {
-        embedContainer.style.display = 'none';
-        embedInfo.style.display = 'none';
-        fallback.style.display = 'flex';
+      // iframe 로딩 상태 감지
+      let hasLoaded = false;
+      let hasError = false;
+
+      iframe.addEventListener('load', () => {
+        hasLoaded = true;
+        console.log('Google Drive iframe loaded successfully');
       });
 
-      // 일정 시간 후 로딩 실패로 간주
+      iframe.addEventListener('error', () => {
+        hasError = true;
+        this.showGoogleDriveFallback(embedContainer, embedInfo, fallback);
+      });
+
+      // 오버레이 클릭 시 새 창에서 열기
+      overlay.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(url, '_blank', 'noopener,noreferrer');
+      });
+
+      // iframe 접근성 체크 및 타임아웃 처리
       setTimeout(() => {
-        if (iframe.contentDocument === null) {
-          embedContainer.style.display = 'none';
-          embedInfo.style.display = 'none';
-          fallback.style.display = 'flex';
+        if (!hasLoaded || hasError) {
+          console.log('Google Drive iframe failed to load properly, showing fallback');
+          this.showGoogleDriveFallback(embedContainer, embedInfo, fallback);
+          return;
         }
-      }, 5000);
+
+        try {
+          // iframe 접근성 테스트 (CORS 정책으로 실패할 수 있음)
+          const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+          
+          // 접근 불가 시 오버레이 표시
+          if (!iframeDoc) {
+            overlay.style.display = 'flex';
+          }
+        } catch (e) {
+          // CORS 오류는 정상적인 경우, 오버레이만 표시
+          overlay.style.display = 'flex';
+        }
+      }, 3000);
+
+      // 긴 타임아웃으로 완전 실패 감지
+      setTimeout(() => {
+        if (!hasLoaded && !hasError) {
+          console.log('Google Drive iframe timeout, showing fallback');
+          this.showGoogleDriveFallback(embedContainer, embedInfo, fallback);
+        }
+      }, 10000);
 
     } catch (error) {
       console.warn('Google Drive embed failed:', error);
-      // 에러 시 일반 링크로 폴백
-      container.innerHTML = `
-        <a href="${url}" target="_blank" rel="noopener noreferrer" class="google-drive-link">
-          <span class="google-drive-icon">📁</span>
-          <div>
-            <div>Google Drive 파일</div>
-            <div style="font-size: 0.8rem; opacity: 0.7;">브라우저에서 열기</div>
-          </div>
-        </a>
-      `;
+      return this.createGoogleDriveFallback(url);
     }
 
+    return container;
+  }
+
+  // Google Drive 폴백 표시
+  showGoogleDriveFallback(embedContainer, embedInfo, fallback) {
+    embedContainer.style.display = 'none';
+    embedInfo.style.display = 'none';
+    fallback.style.display = 'flex';
+  }
+
+  // Google Drive 폴백 생성
+  createGoogleDriveFallback(url) {
+    const container = document.createElement('div');
+    container.className = 'google-drive-embed-wrapper';
+    container.innerHTML = `
+      <a href="${url}" target="_blank" rel="noopener noreferrer" class="google-drive-link">
+        <span class="google-drive-icon">📁</span>
+        <div>
+          <div>Google Drive 파일</div>
+          <div style="font-size: 0.8rem; opacity: 0.7;">브라우저에서 열기</div>
+        </div>
+      </a>
+    `;
     return container;
   }
 
