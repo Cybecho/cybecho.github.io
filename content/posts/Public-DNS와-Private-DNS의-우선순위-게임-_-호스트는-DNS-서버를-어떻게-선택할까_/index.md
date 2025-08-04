@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Public-DNS-Private-DNS-DNS-1bf1bab9e3f8805cae
 
 ---
 
-![Image](image_64140868ffc6.png)
+![Image](image_fc72c9812256.png)
 
 > 💡 **목차**
 > ---
@@ -109,7 +109,47 @@ flowchart LR
 
 > 참고로 아래 튜토리얼은 단순히 VirtualBox 기준이기에, Proxmox 용으로 실습하시려면 알잘딱으로 네트워크 설정을 다르게 가져가야하는데… 
 
-![Image](image_d595695caf08.png)
+![Image](image_c6623a7f13ab.png)
+
+```mermaid
+flowchart TD
+    ExtDNS[외부 Google DNS<br/>8.8.8.8]
+    
+    PublicDNS[Public DNS<br/>BIND DNS 서버<br/>IP: 172.17.0.2]
+    
+    PrivateDNS[Private DNS<br/>존 파일 정보<br/>IP: 172.17.0.2]
+    
+    WinVM[Win 10<br/>NAT 네트워크<br/>IP: 10.0.2.15]
+    
+    Server1[Ubuntu Server 1<br/>IP: 10.0.2.16<br/>Apache 웹서버]
+    
+    Server2[Ubuntu Server 2<br/>IP: 10.0.2.17<br/>Nginx 웹서버]
+    
+    %% DNS 쿼리 흐름 (수직적)
+    WinVM <-.-> PublicDNS
+    PublicDNS <-.-> ExtDNS
+    PublicDNS <-.-> PrivateDNS
+    
+    %% 웹서버 접속
+    WinVM --> Server1
+    WinVM --> Server2
+    
+    %% 서버-DNS 연결
+    Server1 -.- PublicDNS
+    Server2 -.- PrivateDNS
+    
+    classDef external fill:#e1f5fe,stroke:#01579b,stroke-width:3px
+    classDef publicdns fill:#ffeb3b,stroke:#f57f17,stroke-width:4px
+    classDef privatedns fill:#4caf50,stroke:#2e7d32,stroke-width:4px
+    classDef windows fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef server fill:#f5f5f5,stroke:#666,stroke-width:1px
+    
+    class ExtDNS external
+    class PublicDNS publicdns
+    class PrivateDNS privatedns
+    class WinVM windows
+    class Server1,Server2 server
+```
 
 ## VM 정리
 
@@ -460,11 +500,11 @@ dig BABO1.com
 
 정상적인 IP 주소가 반환되면 설정이 완료된 것입니다.
 
-![Image](image_3bd94ff1736b.png)
+![Image](image_0e98feb79142.png)
 
-![Image](image_c959dd3f272f.png)
+![Image](image_6a92dc02b9eb.png)
 
-![Image](image_cb41c9528359.png)
+![Image](image_f682031d73d6.png)
 
 
 
@@ -766,7 +806,7 @@ Address: 10.0.2.17
 
 ```
 
-![Image](image_dc45166e6bd8.png)
+![Image](image_e445e098c02c.png)
 
 
 
