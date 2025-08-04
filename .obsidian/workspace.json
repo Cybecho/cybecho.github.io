@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/archives/Built-Local-Repository-Server.md",
+                "file": "content/archives/Built-AWS-Foundational-AIOps-Platform-with-Data Lake-and-RAG.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Built-Local-Repository-Server"
+              "title": "Built-AWS-Foundational-AIOps-Platform-with-Data Lake-and-RAG"
             }
           }
         ]
@@ -171,20 +171,25 @@
   },
   "active": "2e82c7c5290e2f95",
   "lastOpenFiles": [
+    "static/images/archives/Pasted image 20250804115414.png",
+    "static/images/archives/Pasted image 20250804115407.png",
+    "static/images/archives/Pasted image 20250804115023.png",
+    "static/images/archives/Pasted image 20250804114951.png",
+    "static/images/archives/Pasted image 20250804114501.png",
+    "content/archives/Built-AWS-Foundational-AIOps-Platform-with-Data Lake-and-RAG.md",
+    "static/images/archives/Pasted image 20250804114138.png",
+    "static/images/archives/Pasted image 20250804114041.png",
+    "static/images/archives/Pasted image 20250804113928.png",
+    "static/images/archives/Pasted image 20250804113914.png",
+    "static/images/archives/Pasted image 20250804113829.png",
+    "static/images/archives/Pasted image 20250804113757.png",
+    "content/archives/Built-Public-Private-DNS-Integration-Analysis.md",
+    "content/archives/Cloud-Migration-for-Shipping Cost-Reduction-System.md",
+    "content/archives/Hardware-modded-for-Google-Photos-upload-server.md",
+    "content/archives/Built-Local-Repository-Server.md",
     "layouts/partials/url-preview.html.tmp.68208.1754065844613",
     "scripts/convert-archive-images-for-build.js",
-    "static/images/archives/0626_cj_diagram_nginx.gif",
-    "static/images/archives/Pasted image 20250802000736.png",
-    "content/archives/Built-Local-Repository-Server.md",
     "scripts/convert-archive-images.js",
-    "static/images/archives/Pasted image 20250802002250.png",
-    "static/images/archives/Pasted image 20250802002228.png",
-    "static/images/archives/Pasted image 20250802002206.png",
-    "static/images/archives/Pasted image 20250802001853.png",
-    "static/images/archives/Pasted image 20250802001844.png",
-    "static/images/archives/Pasted image 20250802001823.png",
-    "static/images/archives/Pasted image 20250802001758.png",
-    "static/images/archives/Pasted image 20250802001537.png",
     "content/posts/go-run의-첫-실행이-유독-느렸던-이유에-대한-고찰/index.md",
     "content/posts/go-run의-첫-실행이-유독-느렸던-이유에-대한-고찰",
     "content/posts/Rocky10-에서-neofetch-직접-빌드하여-사용하기/index.md",
@@ -194,10 +199,7 @@
     "content/posts/Copyparty-거의-모든-기기를-파일-서버로-만드는-오픈소스/index.md",
     "content/posts/Copyparty-거의-모든-기기를-파일-서버로-만드는-오픈소스",
     "CLAUDE.md",
-    "content/archives/Built-Public-Private-DNS-Integration-Analysis.md",
     "content/archives/notion-github-sync.md",
-    "content/archives/Hardware-modded-for-Google-Photos-upload-server.md",
-    "content/archives/Cloud-Migration-for-Shipping Cost-Reduction-System.md",
     "content/archives/Built-Home-Server-Infrastructure.md",
     "content/archives/Built-IPSec-VPN.md",
     "content/archives/Why-Proxmox.md",
