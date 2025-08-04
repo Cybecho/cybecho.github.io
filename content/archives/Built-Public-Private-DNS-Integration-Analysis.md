@@ -2,7 +2,7 @@
 title: "Public/Private DNS 탐구 : 우리가 입력한 주소는 과연 어디서 ‘응답’ 오는 걸까?"
 date: 2025-03-23
 description: VirtualBox 환경에서 BIND를 이용해 Public/Private DNS 서버를 구축하고, Wireshark 패킷 분석을 통해 DNS 캐시, 재귀적/반복적 질의 등 이론적 지식이 실제 네트워크에서 어떻게 동작하는지 실증적으로 검증한 과정을 기록합니다.
-featured_image: https://cybecho.notion.site/image/attachment%3A7b1e00a3-9862-4e3b-b630-8a10ee4eca8c%3Aimage.png?table=block&id=1bf1bab9-e3f8-8025-ae65-e16fa87bd3c6&spaceId=09ccd4d5-876c-4bba-bbdf-cc77a0a11257&width=1420&userId=&cache=v2
+featured_image: https://cybecho.github.io/images/archives/Pasted%20image%2020250804125640.png
 tags:
   - DNS
   - Networking
