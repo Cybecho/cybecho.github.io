@@ -266,14 +266,14 @@ npm install -g @google/gemini-cli
 제미나이 CLI가 설치되면 사용자 폴더에 `.gemini`라는 새 폴더가 생성된다. 이제 슈퍼클로드의 시스템 파일을 이곳으로 옮겨야 한다.
 
 1. **지침 파일 복사**: 기존의 `.claude` 폴더에서 `CLAUDE.md`, `COMMANDS.md`, `FLAGS.md`, `MCP.md`, `MODES.md`, `ORCHESTRATOR.md`, `PERSONAS.md`, `PRINCIPLES.md`, `RULES.md` 총 9개의 파일을 복사하여 `.gemini` 폴더에 붙여넣는다.
-![Image](image_6e38d32a57fe.png)
+![Image](image_548b2c8a8e4d.png)
 
 1. **커맨드 파일 복사**:
   - `.gemini` 폴더 안에 `commands`라는 이름의 새 폴더를 만든다.
-![Image](image_4296519afd42.png)
+![Image](image_e944543f9d8c.png)
 
   - `.claude/commands` 폴더 안에 있는 `sc` 폴더 전체를 복사하여 방금 만든 `.gemini/commands` 폴더에 붙여넣는다.
-![Image](image_f0096e56a9ea.png)
+![Image](image_a17042733f2c.png)
 
 ---
 
