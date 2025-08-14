@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@notionhq/client": "^4.0.1"
+    "@notionhq/client": "^4.0.2"
   },
   "name": "cybecho.github.io",
   "version": "1.0.0",
