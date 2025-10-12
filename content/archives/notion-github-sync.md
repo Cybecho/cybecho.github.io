@@ -8,7 +8,7 @@ categories: ["회고", "프로젝트"]
 draft: false
 ---
 
-### **[회고] 나만의 콘텐츠 플랫폼 구축기: Notion과 GitHub, 그 완벽한 동기화를 향한 엔지니어의 여정**
+### **나만의 콘텐츠 플랫폼 구축기: Notion과 GitHub, 그 완벽한 동기화를 위한 삽질## **나만의 콘텐츠 플랫폼 구축기: Notion과 GitHub, 그 동기화 후기**
 
 **결론부터 말하자면, 나는 나에게 가장 완벽한 글쓰기 환경을 구축했다.** 이제 나는 Notion의 유려한 편집기에서 자유롭게 생각을 기록하고, 데이터베이스로 글을 관리한다. 그리고 내가 '발행(Published)' 상태로 바꾸는 것만으로, 그 모든 콘텐츠는 고도로 최적화된 정적 블로그로 자동 배포된다. 이 글은 단순히 Notion과 GitHub Pages를 '연결'하는 방법을 나열한 튜토리얼이 아니다. 이것은 최고의 창작 도구와 최고의 배포 시스템을 결합하여, 오직 글쓰기에만 집중할 수 있는 나만의 플랫폼을 집요하게 만들어나간 한 엔지니어의 사투와 의사결정에 대한 기록이다.
 
@@ -79,3 +79,30 @@ Notion은 분명 '편집'과 '협업', '공유'에는 최강의 도구였지만,
 결국 이 모든 과정은 '어떻게 하면 더 편하게, 더 잘 글을 쓸 수 있을까?'라는 지극히 개인적인 질문에 대한 나만의 답을 찾아가는 엔지니어링의 여정이었다. 그리고 그 과정에서 나는 코드로 문제를 해결하는 엔지니어로서의 희열과, 사용자의 경험을 설계하는 기획자의 즐거움을 동시에 느낄 수 있었다.
 
 이제 나는 다시 Notion을 켠다. 이 글 역시 그렇게 시작되었고, 곧 세상에 배포될 것이다. 나의 가장 강력하고 만족스러운 도구들을 통해서!
+
+### **참고**
+
+> **노션-Github 동기화 스크립트**
+
+https://github.com/Cybecho/cybecho.github.io/blob/main/scripts/sync-notion.js
+
+Notion API 인증 정보는 아래와 같이 환경변수로 관리됩니다.
+
+```javascript
+const notion = new Client({ auth: process.env.NOTION_SECRET });
+...
+const response = await notion.databases.query({
+  database_id: process.env.DATABASE_ID,
+  ...
+});
+process.env.NOTION_SECRET
+
+process.env.DATABASE_ID
+```
+
+이 두 값은 실제 코드 내부에 하드코딩된 키가 아니라, 실행 환경의 환경변수에서 읽어옵니다.
+
+
+> **Hugo 기반 사이트의 빌드를 위해, 아카이브 디렉토리(content/archives/) 내 마크다운 파일들의 이미지 경로를 변환하는 Node.js 스크립트**
+
+https://github.com/Cybecho/cybecho.github.io/blob/main/scripts/convert-archive-images-for-build.js
