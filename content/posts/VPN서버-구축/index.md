@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VPN-bc4c874c5da54797aea507aac90246d6"
 
 ---
 
-![Image](image_97ddb22de6ee.png)
+![Image](image_2dfd79b005b7.png)
 
 ```latex
 Tailscale이나 PiVPN 하나 설정해두시고 VPN 접속해서 SSH 접속하시는걸 추천합니다.

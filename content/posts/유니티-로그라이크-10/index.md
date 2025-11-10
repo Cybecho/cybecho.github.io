@@ -16,12 +16,12 @@ notion_url: "https://www.notion.so/10-4702c5ac1b3849c8b8e3871a36a9f438"
 
 ---
 
-![Image](image_6017d99a3676.png)
+![Image](image_24df54b4cb77.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=HPJVVcRKwn0&list=PLO-mt5Iu5TeZF8xMHqtT_DhAPKmjF6i3x&index=10)
 
 > 🔥 **풀 매니저에 근접무기를 등록하여 무기를 배치해볼까요**
-> ![Image](image_f5d04e1cd48f.png)
+> ![Image](image_7e47ecbc3dcf.png)
 >
 >
 
@@ -113,9 +113,9 @@ notion_url: "https://www.notion.so/10-4702c5ac1b3849c8b8e3871a36a9f438"
 > }
 > ```
 >
-> ![Image](image_786fff19e980.png)
+> ![Image](image_4e67e60ef7ea.png)
 >
-> ![Image](image_c95a967e1118.png)
+> ![Image](image_4c956f386816.png)
 >
 >
 
@@ -149,7 +149,7 @@ notion_url: "https://www.notion.so/10-4702c5ac1b3849c8b8e3871a36a9f438"
 >     }
 > ```
 >
-> ![Image](image_aa36ea845924.png)
+> ![Image](image_434ee4bc42b4.png)
 >
 >
 

@@ -30,7 +30,7 @@ JUMP DESKTOP 을 애용하는데, 해당 앱은 IOS to WINDOWS 와 상성이 매
 
 문제해결은 다음과 같았다
 
-![Image](image_7e774094ee40.png)
+![Image](image_e3ed8498f4d9.png)
 
 
 바로 두벌식 입력으로 되어있을때 그랬던거라 영문자 입력으로 다시 변경해주면 문제를 해결할 수 있다

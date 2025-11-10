@@ -18,7 +18,7 @@ notion_url: "https://www.notion.so/ChatGPT-f55e6aa856754f89b0c3d7bc63d656a3"
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=Xs-lqxU_PiQ)
 
-![Image](image_31e3a4e65749.png)
+![Image](image_312dbb28b662.png)
 
 > 1️⃣ ****WebChatGPT: 인터넷 액세스가 가능한 ChatGPT****
 > 웹에서 관련 결과를 사용하여 ChatGPT 프롬프트를 향상시킵니다.

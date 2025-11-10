@@ -18,7 +18,7 @@ notion_url: "https://www.notion.so/Debian-5dd11582b9d1429eb12cc103d7f0b7e4"
 
 🔗 [https://humber.tistory.com/entry/라즈베리파이Raspberry-Pi-한글-설치하기](https://humber.tistory.com/entry/라즈베리파이Raspberry-Pi-한글-설치하기)
 
-![Image](image_0e73b737b0e3.png)
+![Image](image_7db3840ffe34.png)
 
 ```latex
 sudo apt update

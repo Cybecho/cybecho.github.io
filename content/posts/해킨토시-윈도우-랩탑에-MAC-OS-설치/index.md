@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-OS-98ccd93277fc489a9908fc688fda44ed"
 
 ---
 
-![Image](image_84cdd5026642.png)
+![Image](image_caf2b00d43ab.png)
 
 🔗 [https://dortania.github.io/OpenCore-Install-Guide/](https://dortania.github.io/OpenCore-Install-Guide/)
 
@@ -36,9 +36,9 @@ notion_url: "https://www.notion.so/MAC-OS-98ccd93277fc489a9908fc688fda44ed"
 
 [엑스팔육 : EFI빌드 - 1 페이지 (x86.co.kr)](https://x86.co.kr/?_filter=search&act=&vid=&mid=efi&category=&search_target=title_content&search_keyword=a320mh)
 
-![Image](https://x86.co.kr/files/attach/images/223309/406/252/008/581486df461748908388f4400d02ea66.png)
+![Image](image_3820952faeb3.png)
 
-![Image](https://x86.co.kr/files/attach/images/223309/406/252/008/9a1ed70eb239e669b594e52bdb19fa22.png)
+![Image](image_4f65d2620d64.png)
 
 방법2. 본인의 메인보드와 cpu등으로 웹검색 합니다.
 
@@ -117,7 +117,7 @@ ex) dortania's opencore guide
 
 🔗 [https://github.com/valnoxy/t480-oc](https://github.com/valnoxy/t480-oc)
 
-![Image](image_81da2e75b9c5.png)
+![Image](image_2f8a809f628f.png)
 
 > 💡 **ROM**
 > ---

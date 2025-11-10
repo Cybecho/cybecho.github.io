@@ -16,8 +16,8 @@ notion_url: "https://www.notion.so/OS-70f005d7f3bb426fbde701c7b129740c"
 
 ---
 
-![Image](image_dd754ed1970c.png)
+![Image](image_d822f81dce66.png)
 
-![Image](image_6137ece50c08.png)
+![Image](image_aa3cede7193a.png)
 
 

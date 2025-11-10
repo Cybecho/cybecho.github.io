@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/cursor-04331296b3eb46a6a5162085118c1cd1"
 
 ---
 
-![Image](image_8d9e79d9f9e5.png)
+![Image](image_4e9b3efa11a7.png)
 
 힙스터 병이 있어서 잘 돌아가는 vs code 냅두고 cursor 사용중인데,
 
@@ -50,7 +50,7 @@ C:\Users\SBU\AppData\Local\cursor-updater
 
 🔗 [https://github.com/getcursor/cursor/issues/807](https://github.com/getcursor/cursor/issues/807)
 
-![Image](image_769a5cfdd072.png)
+![Image](image_0e6c6569ec1b.png)
 
 cursor . 했을때 위 문제 생김..
 

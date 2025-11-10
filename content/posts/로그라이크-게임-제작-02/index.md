@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/02-0d698e28b4db41bf956885301bb9e0be"
 
 ---
 
-![Image](image_4c9c82819d7d.png)
+![Image](image_21db889fbcce.png)
 
 ## InputSystem을 활용하면 좋을거같은데 일단은 기존 인풋시스템을 활용했다
 

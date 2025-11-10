@@ -19,7 +19,7 @@ notion_url: "https://www.notion.so/URL-Co-Pilot-Ver2-a1a7f4a9f9df442b9a4639a0236
 - ver2 업데이트 내용 *
 - 이제 키마다 URL적용 버튼을 가지게 되었습니다
 - shift + alt 를 눌렀을 때 '12121212' 가 입력됩니다 (버튼이 눌렸을때만 활성화)
-![Image](image_18b3839dd796.png)
+![Image](image_e470fcefc19a.png)
 
 > 🔥 **파이썬에서 클래스를 상속받는방법은 다음과같다**
 > # `class 함수명(상속받을함수):`

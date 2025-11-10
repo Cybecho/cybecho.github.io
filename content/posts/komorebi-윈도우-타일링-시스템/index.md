@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/komorebi-b1afaf9416b54e6bac82c395dc0f7047"
 
 ---
 
-![Image](image_65858ed5c85e.png)
+![Image](image_90a38081e6b5.png)
 
 # 설치 방법
 

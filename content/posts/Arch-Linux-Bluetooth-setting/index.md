@@ -137,7 +137,7 @@ $ cd (git clone 디렉토리)
 
 $ makepkg -i
 
-![Image](https://ko.linux-console.net/common-images/configure_bluetooth_arch_linux/configure_bluetooth_14.jpg)
+![Image](image_109406410600.jpg)
 
 그게 다야! 이제 Arch Linux 서버와 원격으로 연결된 Bluetooth 장치를 사용할 수 있습니다.
 

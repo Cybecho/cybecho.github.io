@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 
 ---
 
-![Image](image_88ca91cc2c98.png)
+![Image](image_7a2588d624f9.png)
 
 # 윈도우 커서 MAC처럼
 
@@ -29,8 +29,6 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 
 
 
-
-
 학교에서도, 회사에서도 항상 같은 윈도우 운영체제를 사용하다 보면 윈도우가 질리기 마련이죠.
 
 물론 그렇다고 해서 윈도우를 대체할만한 제품은 아직 없다고 봅니다.
@@ -38,27 +36,19 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 맥이나... 안드로이드나.... 아직 윈도우만큼 상용화 되어있다고 보기는 힘들죠..
 
 
-
 그런 분들을 위해서 윈도우 테마 꾸미기 시리즈를 준비하였습니다!
-
 
 
 1탄은 바로 마우스 커서 스킨 바꾸기 입니다!!
 
 
-
 너무나도 다양한 마우스 커서가 있지만 이번 시간에는 애플의 맥 OS 마우스커서로 바꿔볼건데요!
-
 
 
 사용법만 알면 다른 커서도 적용방법은 다 똑같기 때문에 쉽게 적용하실 수 있을거에요.
 
 
-
 ![Image](image_b583c924a10c.png)
-
-
-
 
 
 
@@ -70,7 +60,6 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 해당 게시글에서 파일을 다운로드 해주세요!
 
 
-
 [**[MacOS 마우스 커서] 엘케피탄 마우스커서 스킨 설치 & 다운로드**](https://blog.naver.com/minidexon/222079790460)[
 ](https://blog.naver.com/minidexon/222079790460)[맥 OS 마우스커서 스킨입니다.적용 방법 및 사용방법은 아래 링크로 걸어두었습니다 :)다운...](https://blog.naver.com/minidexon/222079790460)[
 ](https://blog.naver.com/minidexon/222079790460)[blog.naver.com](https://blog.naver.com/minidexon/222079790460)
@@ -79,28 +68,20 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 
 
 
-
-
 다운로드가 완료되면 데스크톱이나 다른 위치의 새 폴더에 zip 파일의 압축을 풀어주세요.
-
 
 
 압축을 풀려면 zip 파일을 마우스 오른쪽 버튼으로 클릭하고 모두 압축 해제를 클릭 한 다음 압축 해제 파일을 저장할 위치를 선택한 다음 압축 풀기 버튼을 클릭하시면 됩니다.
 
 
-
 ![Image](image_471a55f7ab8f.png)
-
 
 
 **Install.inf**라는 파일을 찾아 마우스 오른쪽 버튼으로 클릭 한 다음 설치 옵션을 클릭하여 Windows 10에 Mac 커서를 설치하시면 됩니다.
 
 
 
-
-
 ![Image](image_dd3892fdd48f.png)
-
 
 
 이제 Mac 커서를 설치 했으므로 새로 설치된 커서를 선택할 차례입니다.
@@ -108,9 +89,7 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 시작 메뉴 또는 실행 명령 상자에 Main.cpl을 입력 한 다음 Enter 키를 눌러 마우스 속성 대화 상자를 열어주세요.
 
 
-
 ![Image](image_a936330d8bd4.png)
-
 
 
 포인터 옵션에 가서 구성표에 보시면 설치된 마우스 커서가 있습니다 그걸 클릭해주시고 적용해주시면 완료됩니다!

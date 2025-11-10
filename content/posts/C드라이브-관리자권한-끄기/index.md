@@ -16,13 +16,13 @@ notion_url: "https://www.notion.so/C-215c36943dee4a40af5fcac1d481c903"
 
 ---
 
-![Image](image_c0b1ebc134d1.png)
+![Image](image_2e063b807b4c.png)
 
 ```c#
 컴퓨터\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
 ```
 
-![Image](image_fc4a28932433.png)
+![Image](image_1d06d6b96632.png)
 
 
 윈도우 C에서 뭘 할때마다 관리자 권한을 요구해서

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/NAS-c14b3bdc776048b594419ab34d05cbc5"
 
 ---
 
-![Image](image_edcd46e2bc2b.png)
+![Image](image_6dc8bcbf9c96.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=l30sADfDiM8)
 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-Chrome-1c9d581a7acf4c8c83ca2efd7907d13e"
 
 ---
 
-![Image](image_0553e01e1f42.png)
+![Image](image_971cf4db25a6.png)
 
 🔗 [https://support.google.com/chrome/thread/64580550/맥에서-크롬이-켜지지-않습니다?hl=ko](https://support.google.com/chrome/thread/64580550/맥에서-크롬이-켜지지-않습니다?hl=ko)
 

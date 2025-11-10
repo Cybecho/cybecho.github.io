@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/ffe24865b17b4153954b544faef2e9bf"
 
 ---
 
-![Image](image_eb6d6fb0fb74.png)
+![Image](image_bb53c221fc73.png)
 
 🔗 [https://www.reddit.com/r/thinkpad/comments/dddsqv/guide_ultimate_windows_battery_life_tips/](https://www.reddit.com/r/thinkpad/comments/dddsqv/guide_ultimate_windows_battery_life_tips/)
 

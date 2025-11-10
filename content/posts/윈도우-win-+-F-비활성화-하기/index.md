@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/win-F-2af9617ff1ac401384bef3c510772509"
 
 ---
 
-![Image](image_5eaae1133c12.png)
+![Image](image_7fdfddf756c5.png)
 
 윈도우에서 피드백허브 검색하고 우클릭→ 삭제
 

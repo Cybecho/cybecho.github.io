@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/f05203f959064cd78bee6c42b5edebf0"
 
 ---
 
-![Image](image_f5d969fb640f.png)
+![Image](image_33ed79bfcb68.png)
 
 🔗 [https://bwhite.tistory.com/1160](https://bwhite.tistory.com/1160)
 

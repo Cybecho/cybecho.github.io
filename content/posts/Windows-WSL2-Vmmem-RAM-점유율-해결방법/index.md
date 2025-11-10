@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Windows-WSL2-Vmmem-RAM-db3cfd373d6e4353a5067c
 
 ---
 
-![Image](image_b5ab9fc64349.png)
+![Image](image_fd84d15e4333.png)
 
 🔗 [https://xpectation.tistory.com/216](https://xpectation.tistory.com/216)
 

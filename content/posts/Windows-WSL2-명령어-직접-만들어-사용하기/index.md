@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Windows-WSL2-de7190764d87414a9cb23ac4dbc73514
 
 ---
 
-![Image](image_bfe84c6081e1.png)
+![Image](image_c2b272d48c2e.png)
 
 # 단순 명령어 alias 명칭 설정
 

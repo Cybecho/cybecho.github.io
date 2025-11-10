@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Middle-Click-MAC-29e56969e24b4f9692b1571c7e62
 
 ---
 
-![Image](image_4d8b6b3658da.png)
+![Image](image_73ab68944793.png)
 
 🔗 [https://ko.savtec.org/articles/howto/how-to-add-a-middle-click-to-your-macs-trackpad.html](https://ko.savtec.org/articles/howto/how-to-add-a-middle-click-to-your-macs-trackpad.html)
 
