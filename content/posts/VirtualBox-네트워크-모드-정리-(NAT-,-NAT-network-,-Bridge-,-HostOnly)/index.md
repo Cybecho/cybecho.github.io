@@ -4,7 +4,7 @@ date: 2025-02-25T04:20:00.000Z
 draft: false
 tags: ["Infra", "Docker"]
 series: ["Infra & Network"]
-description: "VirtualBox의 네트워크 모드에는 Bridged Adapter, Host-Only Adapter, NAT, NAT Network가 있으며, 각 모드는 호스트와 게스트 간의 통신 방식이 다릅니다. Bridged Adapter는 실제 네트워크와 연결되어 독립적인 IP를 부여받고, Host-Only Adapter는 사설 네트워크를 구성하여 인터넷 연결이 불가능합니다. NAT 모드는 게스트가 외부 인터넷에 접근할 수 있지만, 호스트에서 게스트로의 접근은 포트포워딩이 필요하며, NAT Network는 게스트 간의 통신이 가능하지만 호스트와의 직접 통신은 불가능합니다. 포트포워딩 설정을 통해 호스트에서 특정 게스트 VM에 접근할 수 있는 방법도 설명하고 있습니다."
+description: "VirtualBox의 네트워크 모드에는 Bridged Adapter, Host-Only Adapter, NAT, NAT Network가 있으며, 각각의 모드는 호스트와 게스트 간의 통신 방식과 인터넷 접근 가능 여부가 다릅니다. NAT 모드에서는 포트포워딩이 필요하며, 호스트에서 게스트로의 연결을 설정하기 위해 특정 포트를 매핑할 수 있습니다. 이를 통해 호스트는 여러 게스트 VM 중 특정 VM에 접근할 수 있습니다."
 notion_id: "1a51bab9-e3f8-8034-91f6-f06f3247aaea"
 notion_url: "https://www.notion.so/VirtualBox-NAT-NAT-network-Bridge-HostOnly-1a51bab9e3f8803491f6f06f3247aaea"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/VirtualBox-NAT-NAT-network-Bridge-HostOnly-1a
 # VirtualBox 네트워크 모드 정리 (NAT , NAT network , Bridge , HostOnly)
 
 > **Summary**
-> VirtualBox의 네트워크 모드에는 Bridged Adapter, Host-Only Adapter, NAT, NAT Network가 있으며, 각 모드는 호스트와 게스트 간의 통신 방식이 다릅니다. Bridged Adapter는 실제 네트워크와 연결되어 독립적인 IP를 부여받고, Host-Only Adapter는 사설 네트워크를 구성하여 인터넷 연결이 불가능합니다. NAT 모드는 게스트가 외부 인터넷에 접근할 수 있지만, 호스트에서 게스트로의 접근은 포트포워딩이 필요하며, NAT Network는 게스트 간의 통신이 가능하지만 호스트와의 직접 통신은 불가능합니다. 포트포워딩 설정을 통해 호스트에서 특정 게스트 VM에 접근할 수 있는 방법도 설명하고 있습니다.
+> VirtualBox의 네트워크 모드에는 Bridged Adapter, Host-Only Adapter, NAT, NAT Network가 있으며, 각각의 모드는 호스트와 게스트 간의 통신 방식과 인터넷 접근 가능 여부가 다릅니다. NAT 모드에서는 포트포워딩이 필요하며, 호스트에서 게스트로의 연결을 설정하기 위해 특정 포트를 매핑할 수 있습니다. 이를 통해 호스트는 여러 게스트 VM 중 특정 VM에 접근할 수 있습니다.
 
 ---
 
-![Image](image_929a8a0284c5.png)
+![Image](image_6e9a8b4ff0e8.png)
 
 > 교장님이 칠수에게 크게 노했습니다!!
 하지만.. 도대체 어떤 칠수에게 노하신거죠?
@@ -189,23 +189,23 @@ NAT 모드에서는 게스트 VM이 가상 NAT를 통해 외부로 통신하기 
 
 ### 동명이인의 철수를 찾는 이야기로 이해해봅시다!
 
-메가초등학교에 ‘철수’라는 이름을 가진 학생이 3명 있다고 가정해봅시다.
+클클초등학교에 ‘철수’라는 이름을 가진 학생이 3명 있다고 가정해봅시다.
 
 만약 교장 선생님(호스트)이 “철수, 교장실로 와!”라고 외친다면,
 
 이름이 같은 3명의 철수는 동시에 “나를 부른 건가?” 하고 헷갈릴 수밖에 없습니다.
 
-![Image](image_929a8a0284c5.png)
+![Image](image_5a24734b7011.png)
 
 > 왜 헷갈릴까?
 
 ---
 
-### 메가초등학교 = 공인 IP
+### 클클초등학교 = 공인 IP
 
-메가초등학교 자체를 공인 IP(예: 10.234.41.47)에 비유해볼 수 있습니다.
+클클초등학교 자체를 공인 IP(예: 10.234.41.47)에 비유해볼 수 있습니다.
 
-- 메가초등학교(공인 IP)라는 ‘건물(주소)’는 하나이지만,
+- 클클초등학교(공인 IP)라는 ‘건물(주소)’는 하나이지만,
 - 그 안에는 여러 교실(포트, 혹은 실제로는 사설 IP를 쓰는 여러 VM)이 존재합니다.
 ### A반에 가면 1번 철수가 있다 = 포트포워딩
 
