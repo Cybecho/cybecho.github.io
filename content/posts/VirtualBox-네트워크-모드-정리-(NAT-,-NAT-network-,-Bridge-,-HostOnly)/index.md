@@ -4,7 +4,7 @@ date: 2025-02-25T04:20:00.000Z
 draft: false
 tags: ["Infra", "Docker"]
 series: ["Infra & Network"]
-description: "VirtualBox의 네트워크 모드에는 Bridged Adapter, Host-Only Adapter, NAT, NAT Network가 있으며, 각각의 모드는 호스트와 게스트 간의 통신 방식과 인터넷 접근 가능 여부가 다릅니다. NAT 모드에서는 포트포워딩이 필요하며, 호스트에서 게스트로의 연결을 설정하기 위해 특정 포트를 매핑할 수 있습니다. 이를 통해 호스트는 여러 게스트 VM 중 특정 VM에 접근할 수 있습니다."
+description: "VirtualBox의 네트워크 모드에는 Bridged Adapter, Host-Only Adapter, NAT, NAT Network가 있으며, 각 모드는 호스트와 게스트 간의 통신 방식이 다릅니다. Bridged Adapter는 실제 네트워크와 연결되어 독립적인 IP를 사용하고, Host-Only Adapter는 사설 네트워크를 구성하여 인터넷 연결이 불가능합니다. NAT 모드는 게스트가 외부 인터넷에 접근할 수 있지만, 호스트에서 게스트로의 접근은 포트포워딩이 필요합니다. NAT Network는 게스트 간의 통신을 가능하게 하며, 포트포워딩 설정을 통해 호스트에서 특정 게스트에 접근할 수 있습니다."
 notion_id: "1a51bab9-e3f8-8034-91f6-f06f3247aaea"
 notion_url: "https://www.notion.so/VirtualBox-NAT-NAT-network-Bridge-HostOnly-1a51bab9e3f8803491f6f06f3247aaea"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/VirtualBox-NAT-NAT-network-Bridge-HostOnly-1a
 # VirtualBox 네트워크 모드 정리 (NAT , NAT network , Bridge , HostOnly)
 
 > **Summary**
-> VirtualBox의 네트워크 모드에는 Bridged Adapter, Host-Only Adapter, NAT, NAT Network가 있으며, 각각의 모드는 호스트와 게스트 간의 통신 방식과 인터넷 접근 가능 여부가 다릅니다. NAT 모드에서는 포트포워딩이 필요하며, 호스트에서 게스트로의 연결을 설정하기 위해 특정 포트를 매핑할 수 있습니다. 이를 통해 호스트는 여러 게스트 VM 중 특정 VM에 접근할 수 있습니다.
+> VirtualBox의 네트워크 모드에는 Bridged Adapter, Host-Only Adapter, NAT, NAT Network가 있으며, 각 모드는 호스트와 게스트 간의 통신 방식이 다릅니다. Bridged Adapter는 실제 네트워크와 연결되어 독립적인 IP를 사용하고, Host-Only Adapter는 사설 네트워크를 구성하여 인터넷 연결이 불가능합니다. NAT 모드는 게스트가 외부 인터넷에 접근할 수 있지만, 호스트에서 게스트로의 접근은 포트포워딩이 필요합니다. NAT Network는 게스트 간의 통신을 가능하게 하며, 포트포워딩 설정을 통해 호스트에서 특정 게스트에 접근할 수 있습니다.
 
 ---
 
-![Image](image_6e9a8b4ff0e8.png)
+![Image](image_48d6966c7467.png)
 
 > 교장님이 칠수에게 크게 노했습니다!!
 하지만.. 도대체 어떤 칠수에게 노하신거죠?
@@ -195,7 +195,7 @@ NAT 모드에서는 게스트 VM이 가상 NAT를 통해 외부로 통신하기 
 
 이름이 같은 3명의 철수는 동시에 “나를 부른 건가?” 하고 헷갈릴 수밖에 없습니다.
 
-![Image](image_5a24734b7011.png)
+![Image](image_48d6966c7467.png)
 
 > 왜 헷갈릴까?
 
