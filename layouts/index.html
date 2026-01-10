@@ -1,483 +1,222 @@
 {{ define "main" }}
-<div class="container">
-  <div class="profile">
-    {{ with .Site.Params.author }}
-      {{ if .avatar }}
-        <img class="avatar" src="{{ .avatar | absURL }}" alt="{{ .name }}">
-      {{ end }}
-      <h1 class="author">{{ .name }}</h1>
-    {{ end }}
-    <h2 class="bio">{{ .Site.Params.subtitle | default .Site.Params.description }}</h2>
-    
-    <!-- 소셜 링크 -->
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/cybecho/" target="_blank" class="social-icon" aria-label="LinkedIn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-      </a>
-      <a href="https://github.com/Cybecho" target="_blank" class="social-icon" aria-label="GitHub">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-      </a>
-      <a href="https://www.reddit.com/user/HelloZOOO/" target="_blank" class="social-icon" aria-label="Reddit">
-        <svg fill="currentColor" width="18" height="18" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-<path d="M88,148a16,16,0,1,1,16-16A16.01833,16.01833,0,0,1,88,148Zm80-32a16,16,0,1,0,16,16A16.01833,16.01833,0,0,0,168,116Zm-12.47949,45.33789a60.07933,60.07933,0,0,1-55.041,0,12.00032,12.00032,0,0,0-11.01025,21.32617,84.133,84.133,0,0,0,77.062,0,12.00044,12.00044,0,0,0-11.01074-21.32617Zm86.60058-32.585A62.88015,62.88015,0,0,1,244,144c0,23.28613-12.65381,44.8711-35.63037,60.77832C186.73926,219.753,158.19629,228,128,228S69.26074,219.753,47.63037,204.77834C24.65381,188.87112,12,167.28615,12,144A62.8742,62.8742,0,0,1,13.87891,128.753,35.98564,35.98564,0,0,1,61.40137,75.06643c16.604-8.3645,36.07959-13.44483,56.37744-14.73072l6.38428-38.30834a11.99091,11.99091,0,0,1,13.66162-9.8877l31.47461,4.842a23.99063,23.99063,0,1,1-3.66016,23.719l-19.75049-3.03857L142.062,60.62063a145.68144,145.68144,0,0,1,52.53662,14.4458A35.98568,35.98568,0,0,1,242.12109,128.753ZM228,104a12.00148,12.00148,0,0,0-21.71094-7.05273,11.999,11.999,0,0,1-15.93652,3.18457c-.07373-.04492-.14649-.08985-.21875-.13574C173.063,89.68606,151.02588,84.00783,128.043,84.00075l-.02832.00122-.03858-.00146c-22.98974.00391-45.03418,5.68286-62.10986,15.99561-.07226.04589-.145.09082-.21875.13574a11.99894,11.99894,0,0,1-15.93652-3.18457,12.00226,12.00226,0,1,0-15.80469,17.3955,12.001,12.001,0,0,1,4.93506,15.0127A39.69508,39.69508,0,0,0,36,144c0,15.17774,8.98193,29.75391,25.2915,41.0459C78.94727,197.26858,102.6377,204,128,204s49.05273-6.73144,66.7085-18.9541C211.01807,173.75393,220,159.17776,220,144a39.694,39.694,0,0,0-2.85645-14.68262,11.99981,11.99981,0,0,1,4.9502-14.97461A11.91874,11.91874,0,0,0,228,104Z"/>
-</svg>
-      </a>
-      <a href="https://brunch.co.kr/@cybecho" target="_blank" class="social-icon" aria-label="Brunch">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
-      </a>
-      <a href="https://gamma.app/docs/Infra-75ni4cxerzurjak" target="_blank" class="social-icon" aria-label="Portfolio">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
-      </a>
-    </div>
+<div class="llvm-home">
+  <!-- 간단한 소개 -->
+  <div class="site-intro">
+    <h1 class="site-title">{{ .Site.Title }}</h1>
+    <p class="site-subtitle">{{ .Site.Params.subtitle }}</p>
   </div>
 
-  {{ if .Content }}
-    <div class="intro">
-      {{ .Content }}
-    </div>
-  {{ end }}
-
-  <div class="section-header blog-header">
-    <h2 class="section-title"><em>Recent Posts</em></h2>
-    <div class="view-switcher">
-      <button id="gallery-view-btn" title="Gallery View"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg></button>
-      <button id="list-view-btn" title="List View"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></button>
-    </div>
-  </div>
-  
-  <hr class="section-separator">
-
+  <!-- 포스트 리스트 (50개) -->
   {{ $pages := where .Site.RegularPages "Type" "posts" }}
   {{ $paginator := .Paginate $pages }}
 
-  <div id="post-list-container" class="post-item-container">
+  <div class="post-list">
     {{ if $paginator.Pages }}
       {{ range $paginator.Pages }}
-        <a href="{{ .Permalink }}" class="post-item-link">
-          <article class="post-item">
-            <div class="post-header">
-              <h2 class="post-title">{{ .Title }}</h2>
-              <div class="post-meta">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006년 01월 02일" }}</time>
-              </div>
-            </div>
-            <p class="post-summary">{{ .Description | default "요약 정보가 없습니다." | truncate 50 "..." }}</p>
-            {{ with .Params.tags }}
-              <div class="post-tags">
-                {{ range . }}
-                  <span class="tag-item">{{ . }}</span>
-                {{ end }}
-              </div>
+        <article class="post-entry">
+          <div class="post-entry-header">
+            <h2 class="post-entry-title">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+            <time class="post-entry-date" datetime="{{ .Date.Format "2006-01-02" }}">
+              {{ .Date.Format "2006-01-02" }}
+            </time>
+          </div>
+
+          {{ if .Description }}
+          <p class="post-entry-description">{{ .Description | truncate 120 "..." }}</p>
+          {{ end }}
+
+          {{ with .Params.tags }}
+          <div class="post-entry-tags">
+            {{ range first 5 . }}
+              <span class="tag">{{ . }}</span>
             {{ end }}
-          </article>
-        </a>
+          </div>
+          {{ end }}
+        </article>
       {{ end }}
     {{ else }}
-      <p class="no-posts">표시할 글이 없습니다. Notion에서 글을 작성하고 'Published' 상태로 변경했는지 확인해주세요.</p>
+      <p class="no-posts">포스트가 없습니다.</p>
     {{ end }}
   </div>
 
-  
-  <hr class="section-separator">
+  <!-- 페이지네이션 -->
   {{ partial "pagination.html" . }}
 </div>
 
 <style>
-/* ===== 라이트 모드 기본 스타일 ===== */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  width: 100%;
-  box-sizing: border-box;
-  background: #ffffff;
-  color: #0f172a;
+/* ===== LLVM 스타일 홈페이지 ===== */
+.llvm-home {
+  max-width: 100%;
+  padding: 0;
 }
 
-.profile {
-  text-align: center;
+/* 사이트 소개 */
+.site-intro {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 2rem;
   margin-bottom: 2rem;
 }
 
-/* 🎯 프로필 사진 - 장식 제거 */
-.avatar {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  /* 파란색 테두리 제거 */
-}
-
-.author {
-  font-size: 1.8rem;
-  font-weight: 700;
+.site-title {
+  font-size: 2rem;
+  font-weight: 600;
   margin: 0 0 0.5rem 0;
-  color: #1e293b;
+  color: #222;
 }
 
-.bio {
-  font-size: 1.1rem;
-  color: #475569;
-  margin: 0 0 1rem 0;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 0.8rem;
-  margin-bottom: 1rem;
-}
-
-/* 🎯 소셜 링크 - 동그란 배경과 테두리 제거 */
-.social-icon {
-  color: #475569;
-  transition: color 0.2s ease, transform 0.2s ease;
-  /* 모든 장식 제거 */
-}
-
-.social-icon:hover {
-  color: #2563eb;
-  transform: translateY(-2px);
-}
-
-.social-icon svg {
-  width: 18px;
-  height: 18px;
-}
-
-.intro {
-  margin-bottom: 2rem;
+.site-subtitle {
   font-size: 1rem;
-  color: #0f172a;
+  color: #666;
+  margin: 0;
   line-height: 1.6;
-  text-align: center;
 }
 
-.section-header {
-  margin-bottom: 1.5rem;
-}
-
-.section-title {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #0f172a;
+/* 포스트 리스트 */
+.post-list {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  text-align: left;
 }
 
-.section-title em {
-  font-style: italic;
-  font-size: 1.2rem;
-  color: #475569;
+.post-entry {
+  border-bottom: 1px solid #eee;
+  padding: 1.5rem 0;
+  transition: background 0.2s ease;
 }
 
-/* Blog specific styles */
-.blog-header {
+.post-entry:hover {
+  background: #fafafa;
+  margin: 0 -1rem;
+  padding: 1.5rem 1rem;
+}
+
+.post-entry-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-.view-switcher button {
-  background: none;
-  border: 1px solid #e2e8f0;
-  color: #0f172a;
-  padding: 0.5rem;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-left: 0.5rem;
-  line-height: 1;
-  transition: all 0.2s ease;
-}
-.view-switcher button:hover {
-  background-color: #f1f5f9;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.view-switcher button.active {
-  background-color: #2563eb;
-  color: #ffffff;
-  border-color: #2563eb;
-}
-.view-switcher button svg {
-  vertical-align: middle;
-}
-.no-posts {
-  text-align: center;
-  padding: 3rem;
-  color: #475569;
-}
-
-/* Post Item Base Styles */
-.post-item-container {
-  margin-top: 1.5rem; /* Add some space below the header */
-}
-.post-item-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  height: 100%;
-}
-.post-item {
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 1.2rem;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* For uniform height */
-}
-.post-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-.post-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-.post-title {
-  font-size: 1.1rem;
-  font-weight: 400;
-  margin: 0;
-  line-height: 1.3;
-  flex: 1;
-  padding-right: 1rem;
-  /* 두 줄까지만 표시하고 말줄임 처리 */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.post-meta {
-  font-size: 0.875rem;
-  color: #475569;
-  margin: 0;
-  flex-shrink: 0;
-}
-.post-series-meta {
-  display: flex;
-  gap: 0.5rem;
-}
-.post-summary {
-  font-size: 0.85rem;
-  margin: 0 0 0.8rem 0;
-  flex-grow: 1; /* Makes summary take up available space */
-  color: #475569;
-  line-height: 1.4;
-}
-.post-series-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: auto; /* Pushes series to the bottom */
-}
-.post-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-  margin-top: auto;
-}
-.tag-item {
-  background-color: #6b7280;
-  color: #ffffff;
-  padding: 0.25em 0.6em;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-.section-separator {
-  border: none;
-  height: 1px;
-  background-color: #e2e8f0;
-  margin: 2rem 0;
-  opacity: 0.6;
-}
-
-/* Gallery View */
-.view-gallery .post-item-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  row-gap: 3.5rem;
-}
-.view-gallery .post-item {
-  border: 1px solid #e2e8f0;
-}
-.view-gallery .post-meta {
-  font-size: 0.75rem;
-}
-
-/* List View */
-.view-list .post-item-container {
-  display: flex;
-  flex-direction: column;
+  align-items: baseline;
   gap: 1rem;
-}
-.view-list .post-item {
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1rem 1.5rem;
-  height: auto;
-}
-.view-list .post-header {
-  width: 100%;
-}
-.view-list .post-summary { 
-  display: block !important; 
   margin-bottom: 0.5rem;
-}
-.view-list .post-tags { 
-  display: block !important; 
+  flex-wrap: wrap;
 }
 
-/* Pagination Styles */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 3rem;
-  gap: 0.5rem;
+.post-entry-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
 }
-.pagination-item {
-  display: inline-block;
-}
-.pagination-link {
-  display: block;
-  padding: 0.5rem 0.8rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 5px;
+
+.post-entry-title a {
+  color: #222;
   text-decoration: none;
-  color: #0f172a;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-.pagination-link:hover {
-  background-color: #f1f5f9;
-}
-.pagination-link.active {
-  background-color: #2563eb;
-  color: #ffffff;
-  border-color: #2563eb;
-}
-.pagination-link.disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+  transition: color 0.2s ease;
 }
 
-/* 화이트모드 고정 - 다크모드 완전 제거 */
-
-/* 반응형 */
-@media (max-width: 992px) {
-  .view-gallery .post-item-container {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
+.post-entry-title a:hover {
+  color: #0066cc;
 }
+
+.post-entry-date {
+  font-size: 0.9rem;
+  color: #666;
+  flex-shrink: 0;
+  font-family: monospace;
+}
+
+.post-entry-description {
+  margin: 0.5rem 0 0 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.post-entry-tags {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.post-entry-tags .tag {
+  font-size: 0.85rem;
+  color: #666;
+  font-family: monospace;
+}
+
+.post-entry-tags .tag::before {
+  content: "#";
+  color: #999;
+}
+
+.no-posts {
+  padding: 3rem 0;
+  text-align: center;
+  color: #999;
+  font-size: 1rem;
+}
+
+/* ===== 모바일 반응형 ===== */
 @media (max-width: 768px) {
-  .container {
-    padding: 1.5rem 1rem;
-  }
-  
-  .profile {
+  .site-intro {
+    padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
   }
-  
-  .avatar {
-    width: 60px;
-    height: 60px;
+
+  .site-title {
+    font-size: 1.75rem;
   }
-  
-  .author {
-    font-size: 1.5rem;
+
+  .site-subtitle {
+    font-size: 0.95rem;
   }
-  
-  .bio {
-    font-size: 1rem;
+
+  .post-entry {
+    padding: 1.25rem 0;
   }
-  
-  .social-links {
-    gap: 0.6rem;
+
+  .post-entry:hover {
+    margin: 0;
+    padding: 1.25rem 0;
   }
-  
-  .blog-header {
+
+  .post-entry-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.25rem;
   }
-  .view-list .post-item {
-      flex-direction: column;
-      align-items: flex-start;
+
+  .post-entry-title {
+    font-size: 1.1rem;
   }
-  .view-list .post-meta {
-      margin-left: 0;
-      margin-top: 0.5rem;
+
+  .post-entry-date {
+    font-size: 0.85rem;
+  }
+
+  .post-entry-description {
+    font-size: 0.9rem;
+  }
+
+  .post-entry-tags .tag {
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 1rem 0.8rem;
+  .site-title {
+    font-size: 1.5rem;
   }
-  
-  .author {
-    font-size: 1.4rem;
-  }
-  
-  .bio {
-    font-size: 0.95rem;
-  }
-  
-  .title a {
-    font-size: 1.1rem;
-  }
-  
-  .social-icon svg {
-    width: 16px;
-    height: 16px;
-  }
-}
 
-@media (min-width: 1400px) {
-  .container {
-    max-width: 900px;
-    padding: 2.5rem 2rem;
+  .post-entry-title {
+    font-size: 1rem;
+  }
+
+  .post-entry-description {
+    font-size: 0.875rem;
   }
 }
 </style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const container = document.body;
-  const galleryBtn = document.getElementById('gallery-view-btn');
-  const listBtn = document.getElementById('list-view-btn');
-  const viewKey = 'preferred-view-cybecho';
-
-  function setView(view) {
-    if (view === 'list') {
-      container.classList.remove('view-gallery');
-      container.classList.add('view-list');
-      listBtn.classList.add('active');
-      galleryBtn.classList.remove('active');
-      localStorage.setItem(viewKey, 'list');
-    } else {
-      container.classList.remove('view-list');
-      container.classList.add('view-gallery');
-      galleryBtn.classList.add('active');
-      listBtn.classList.remove('active');
-      localStorage.setItem(viewKey, 'gallery');
-    }
-  }
-
-  galleryBtn.addEventListener('click', () => setView('gallery'));
-  listBtn.addEventListener('click', () => setView('list'));
-
-  // Load preferred view or default to list
-  const preferredView = localStorage.getItem(viewKey) || 'list';
-  setView(preferredView);
-});
-</script>
 {{ end }}

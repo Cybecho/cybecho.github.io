@@ -122,10 +122,41 @@
 </head>
 <body>
   {{ partial "header.html" . }}
-  
-  <main role="main">
-    {{ block "main" . }}{{ end }}
-  </main>
+
+  <!-- LLVM 스타일 레이아웃: 좌측 사이드바 + 본문 -->
+  <div class="llvm-layout">
+    {{ partial "sidebar.html" . }}
+
+    <main role="main" class="main-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </div>
+
+  <style>
+  /* LLVM 스타일 Grid 레이아웃 */
+  .llvm-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: calc(100vh - 56px);
+  }
+
+  .main-content {
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  /* 모바일: 사이드바를 숨기고 전체 너비 */
+  @media (max-width: 768px) {
+    .llvm-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .main-content {
+      padding: 1.5rem 1rem;
+    }
+  }
+  </style>
   
   <!-- Search Modal -->
   {{ partial "search.html" . }}
