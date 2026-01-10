@@ -19,94 +19,94 @@
 </nav>
 
 <style>
-/* ===== LLVM 스타일 헤더 ===== */
-.site-nav {
-  background: #FFFFFF;
-  border-bottom: 1px solid #000000;
-  padding: 0;
-}
-
-.nav-container {
-  max-width: 100%;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 12px;
-  height: auto;
-}
-
-/* Sidebar Toggle (모바일에서만 표시) */
-.sidebar-toggle,
-.sidebar-right-toggle {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  color: #000000;
-  cursor: pointer;
-  padding: 4px 8px;
-  font-family: "Georgia", "Palatino", "Times", "Roman", serif;
-  font-size: 12pt;
-  text-decoration: underline;
-  transition: none;
-  margin-right: 8px;
-}
-
-.sidebar-toggle:hover,
-.sidebar-right-toggle:hover {
-  background: #E0E0E0;
-  color: #000000;
-  text-decoration: underline;
-}
-
-/* ===== 모바일 반응형 (< 768px) ===== */
-@media (max-width: 768px) {
-  .nav-container {
-    padding: 8px 10px;
+  /* ===== LLVM 스타일 헤더 ===== */
+  .site-nav {
+    background: #FFFFFF;
+    border-bottom: none;
+    padding: 0;
   }
 
-  /* 모바일에서 사이드바 토글 표시 */
+  .nav-container {
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    height: auto;
+  }
+
+  /* Sidebar Toggle (모바일에서만 표시) */
   .sidebar-toggle,
   .sidebar-right-toggle {
-    display: flex;
-    min-width: 60px;
-    min-height: 44px;
-    padding: 8px 12px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    color: #000000;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+    font-size: 12pt;
+    text-decoration: underline;
+    transition: none;
+    margin-right: 8px;
   }
-}
 
-@media (max-width: 480px) {
-  .nav-container {
-    padding: 6px;
+  .sidebar-toggle:hover,
+  .sidebar-right-toggle:hover {
+    background: #E0E0E0;
+    color: #000000;
+    text-decoration: underline;
   }
 
-  .search-btn {
-    font-size: 10pt;
+  /* ===== 모바일 반응형 (< 768px) ===== */
+  @media (max-width: 768px) {
+    .nav-container {
+      padding: 8px 10px;
+    }
+
+    /* 모바일에서 사이드바 토글 표시 */
+    .sidebar-toggle,
+    .sidebar-right-toggle {
+      display: flex;
+      min-width: 60px;
+      min-height: 44px;
+      padding: 8px 12px;
+    }
   }
-}
+
+  @media (max-width: 480px) {
+    .nav-container {
+      padding: 6px;
+    }
+
+    .search-btn {
+      font-size: 10pt;
+    }
+  }
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const sidebarRightToggle = document.getElementById('sidebarRightToggle');
+  document.addEventListener('DOMContentLoaded', function () {
+    const sidebarRightToggle = document.getElementById('sidebarRightToggle');
 
-  // Right sidebar toggle functionality
-  if (sidebarRightToggle) {
-    sidebarRightToggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      const sidebarRight = document.getElementById('sidebarRight');
-      const sidebarRightOverlay = document.getElementById('sidebarRightOverlay');
+    // Right sidebar toggle functionality
+    if (sidebarRightToggle) {
+      sidebarRightToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        const sidebarRight = document.getElementById('sidebarRight');
+        const sidebarRightOverlay = document.getElementById('sidebarRightOverlay');
 
-      if (sidebarRight) {
-        sidebarRight.classList.add('active');
-      }
-      if (sidebarRightOverlay) {
-        sidebarRightOverlay.classList.add('active');
-      }
-      document.body.classList.add('sidebar-right-open');
-    });
-  }
-});
+        if (sidebarRight) {
+          sidebarRight.classList.add('active');
+        }
+        if (sidebarRightOverlay) {
+          sidebarRightOverlay.classList.add('active');
+        }
+        document.body.classList.add('sidebar-right-open');
+      });
+    }
+  });
 </script>
