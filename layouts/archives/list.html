@@ -1,78 +1,109 @@
 {{ define "main" }}
 <table width="100%" border="0" cellpadding="10">
-<tr>
-<td valign="top">
+  <tr>
+    <td valign="top">
 
-<main role="main" class="main-content">
-  <div class="www_sectiontitle">{{ .Title }}</div>
+      <main role="main" class="main-content">
+        <div class="www_sectiontitle">{{ .Title }}</div>
 
-  <div class="www_text">
-    {{ .Content | safeHTML }}
-  </div>
+        <div class="www_text">
+          {{ .Content | safeHTML }}
+        </div>
 
-  <!-- 아카이브 리스트 -->
-  {{ $archivePages := where site.RegularPages "Section" "archives" }}
+        <!-- 아카이브 리스트 -->
+        {{ $archivePages := where site.RegularPages "Section" "archives" }}
 
-  {{ if $archivePages }}
-    <div class="www_sectiontitle">Archive Posts</div>
+        {{ if $archivePages }}
+        <div class="www_sectiontitle">Archive Posts</div>
 
-    <div class="www_text">
-      {{ range $archivePages.ByDate.Reverse }}
-        <p>
-          <strong>{{ .Date.Format "2006-01-02" }}:</strong>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </p>
-        {{ if .Description }}
-        <p style="margin-left: 2em;">
-          {{ .Description }}
-        </p>
+        <div class="www_text">
+          {{ range $archivePages.ByDate.Reverse }}
+          <p>
+            <strong>{{ .Date.Format "2006-01-02" }}:</strong>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </p>
+          {{ if .Description }}
+          <p style="margin-left: 2em;">
+            {{ .Description }}
+          </p>
+          {{ end }}
+          {{ if .Params.tags }}
+          <p style="margin-left: 2em;">
+            <span style="font-size:smaller">
+              {{ range first 3 .Params.tags }}#{{ . }} {{ end }}
+            </span>
+          </p>
+          {{ end }}
+          {{ end }}
+        </div>
+        {{ else }}
+        <div class="www_text">
+          <p>No archive posts available.</p>
+        </div>
         {{ end }}
-        {{ if .Params.tags }}
-        <p style="margin-left: 2em;">
-          <span style="font-size:smaller">
-            {{ range first 3 .Params.tags }}#{{ . }} {{ end }}
-          </span>
-        </p>
-        {{ end }}
-      {{ end }}
-    </div>
-  {{ else }}
-    <div class="www_text">
-      <p>No archive posts available.</p>
-    </div>
-  {{ end }}
-</main>
+      </main>
 
-</td>
-</tr>
+    </td>
+  </tr>
 </table>
 
 <style>
-.main-content {
-  padding: 0;
-  max-width: 100%;
-  width: 100%;
-  font-family: "Georgia", "Palatino", "Times", "Roman", serif;
-}
-
-.www_text a {
-  color: #0000EE;
-  text-decoration: underline;
-}
-
-.www_text a:visited {
-  color: #551A8B;
-}
-
-.www_text a:hover {
-  color: #0000EE;
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
   .main-content {
     padding: 0;
+    max-width: 100%;
+    width: 100%;
+    font-family: "Georgia", "Palatino", "Times", "Roman", serif;
   }
-}
+
+  .www_text a {
+    color: #0000EE;
+    text-decoration: underline;
+  }
+
+  .www_text a:visited {
+    color: #551A8B;
+  }
+
+  .www_text a:hover {
+    color: #0000EE;
+    text-decoration: underline;
+  }
+
+  /* Explicitly apply Header styles to Archive content to ensure consistency */
+  .www_text h1 {
+    font-size: 24pt;
+    color: #000080;
+    /* 100% intensity Dark Navy */
+    /* LLVM Style Thinner Lines for Content Headers */
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    /* High Contrast Silver Lines */
+    background-color: #FFFFFF;
+    background-image: repeating-linear-gradient(to bottom,
+        #FFFFFF,
+        #FFFFFF 3px,
+        #BFBFBF 3px,
+        #BFBFBF 4px);
+    text-align: center;
+    padding: 4px 0;
+    margin-top: 24px;
+    width: 100%;
+    display: block;
+  }
+
+  .www_text h2 {
+    font-size: 18pt;
+    color: #606090;
+    /* 60% intensity Slate Blue */
+    border-bottom: 1px solid #DDDDDD;
+    /* Very thin line */
+    padding-bottom: 2px;
+  }
+
+  @media (max-width: 768px) {
+    .main-content {
+      padding: 0;
+    }
+  }
 </style>
 {{ end }}

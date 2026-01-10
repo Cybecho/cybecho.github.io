@@ -1,6 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                      "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,44 +9,54 @@
   <!-- SEO Meta Tags -->
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
   <meta name="author" content="{{ .Site.Params.author.name }}">
-  <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags ", " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords ", " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
+  <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags "
+    , " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords "
+    , " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{{ .Permalink }}">
 
   <!-- Schema.org for Google -->
   <meta itemprop="name" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
   <meta itemprop="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
-  {{ if .Params.featured_image }}<meta itemprop="image" content="{{ .Params.featured_image | absURL }}">{{ end }}
+  {{ if .Params.featured_image }}
+  <meta itemprop="image" content="{{ .Params.featured_image | absURL }}">{{ end }}
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
+  <meta property="og:description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
   <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:site_name" content="{{ .Site.Title }}">
   <meta property="og:locale" content="ko_KR">
-  {{ if .Params.featured_image }}<meta property="og:image" content="{{ .Params.featured_image | absURL }}">{{ end }}
-  {{ if .Date }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
-  {{ if .Lastmod }}<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
-  {{ with .Params.tags }}{{ range . }}<meta property="article:tag" content="{{ . }}">{{ end }}{{ end }}
+  {{ if .Params.featured_image }}
+  <meta property="og:image" content="{{ .Params.featured_image | absURL }}">{{ end }}
+  {{ if .Date }}
+  <meta property="article:published_time" content="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" }}">{{ end }}
+  {{ if .Lastmod }}
+  <meta property="article:modified_time" content="{{ .Lastmod.Format " 2006-01-02T15:04:05Z07:00" }}">{{ end }}
+  {{ with .Params.tags }}{{ range . }}
+  <meta property="article:tag" content="{{ . }}">{{ end }}{{ end }}
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
-  {{ if .Params.featured_image }}<meta name="twitter:image" content="{{ .Params.featured_image | absURL }}">{{ end }}
+  <meta name="twitter:description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
+  {{ if .Params.featured_image }}
+  <meta name="twitter:image" content="{{ .Params.featured_image | absURL }}">{{ end }}
 
   <!-- Favicon -->
   <link rel="icon" type="image/gif" href="https://minecraft.wiki/images/Enchanted_Stone_Shovel.gif?33e82">
 
   <!-- RSS Feed -->
   {{ with .OutputFormats.Get "RSS" }}
-    <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}">
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}">
   {{ end }}
 
   <!-- JSON Feed for Search -->
   {{ with .OutputFormats.Get "JSON" }}
-    <link href="{{ .Permalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }} Search Index">
+  <link href="{{ .Permalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }} Search Index">
   {{ end }}
 
   <!-- Google Fonts for Code -->
@@ -112,7 +122,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', '{{ . }}');
   </script>
@@ -121,11 +131,12 @@
   <!-- Include theme variables -->
   {{ partial "theme-vars.html" . }}
 </head>
+
 <body>
   {{ partial "header.html" . }}
 
   <!-- LLVM 스타일 Table 레이아웃: 좌측 + 중앙 + 우측 3열 -->
-  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <table class="main-layout-table" width="100%" border="0" cellpadding="0" cellspacing="0">
     <tr>
       <!-- 좌측 네비게이션 -->
       <td valign="top" align="center" style="width: 220px;">
@@ -142,7 +153,7 @@
         {{ partial "sidebar-right.html" . }}
       </td>
     </tr>
-   </table>
+  </table>
 
   <!-- Search Modal -->
   {{ partial "search.html" . }}
@@ -159,7 +170,7 @@
   <!-- Mermaid Diagrams -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       mermaid.initialize({
         startOnLoad: true,
         theme: 'default',
@@ -175,9 +186,9 @@
   <!-- Load search scripts -->
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // 키보드 단축키: Ctrl+K 또는 Cmd+K로 사이드바 검색창 포커스
-      document.addEventListener('keydown', function(e) {
+      document.addEventListener('keydown', function (e) {
         if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
           e.preventDefault();
           const sidebarSearchInput = document.getElementById('sidebar-search-input');
@@ -192,181 +203,184 @@
 
   <!-- 반응형 스타일 -->
   <style>
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-
-  html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    max-width: 100%;
-    position: relative;
-  }
-
-  /* 메인 컨테이너 레벨에서 너비 제한 */
-  body > table {
-    max-width: 100%;
-  }
-
-  /* 중앙 콘텐츠 영역만 overflow 제어 */
-  .main-content {
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
-
-  /* 모바일용 프로필 섹션 (완전 숨김) */
-  .mobile-profile {
-    display: none;
-  }
-
-  /* 데스크톱 */
-  @media (min-width: 1025px) {
-    table {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: table;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
     }
 
-    table tbody {
-      display: table-row-group;
-    }
-
-    table tr {
-      display: table-row;
-    }
-
-    table td {
-      display: table-cell;
-    }
-
-    table td:first-child {
-      display: table-cell;
-      width: 220px;
-    }
-
-    table td:nth-child(2) {
-      width: auto;
-      max-width: 900px;
-    }
-
-    table td:nth-child(3) {
-      display: table-cell;
-      width: 250px;
-      position: static;
-      z-index: 2;
-    }
-  }
-
-  /* 태블릿 */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    table {
-      max-width: 100%;
-      display: table;
-    }
-
-    table tbody {
-      display: table-row-group;
-    }
-
-    table tr {
-      display: table-row;
-    }
-
-    table td {
-      display: table-cell;
-    }
-
-    table td:first-child {
-      display: table-cell;
-      width: 200px;
-    }
-
-    table td:nth-child(2) {
-      width: auto;
-    }
-
-    table td:nth-child(3) {
-      display: table-cell;
-      width: 220px;
-    }
-  }
-
-  /* 모바일 */
-  @media (max-width: 768px) {
-    table {
-      display: block;
-      max-width: 100%;
+    html {
+      margin: 0;
+      padding: 0;
       width: 100%;
-      overflow-x: hidden;
-    }
-
-    table tbody {
-      display: block;
-    }
-
-    table tr {
-      display: block;
-    }
-
-    table td:first-child {
-      display: none;
-    }
-
-    table td:nth-child(2) {
-      display: block;
-      width: 100% !important;
-      max-width: 100%;
-      padding: 10px;
-      overflow-x: hidden;
-    }
-
-    table td:nth-child(3) {
-      display: none;
-    }
-
-    /* 중첩된 테이블도 모바일에 맞게 조정 */
-    .main-content table {
-      display: block !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      overflow-x: auto !important;
-    }
-
-    .main-content table tbody {
-      display: block !important;
-    }
-
-    .main-content table tr {
-      display: block !important;
-    }
-
-    .main-content table td {
-      display: block !important;
-      width: 100% !important;
-      padding: 10px !important;
     }
 
     body {
+      margin: 0;
       padding: 0;
       width: 100%;
       max-width: 100%;
+      position: relative;
     }
 
-    /* 모바일에서 우측 사이드바를 본문 하단에 추가 (홈 페이지 제외) */
-    .mobile-profile {
-      display: block;
-      margin-top: 2rem;
-      padding: 1rem;
-      border: 2px solid #CCCCCC;
+    /* 메인 컨테이너 레벨에서 너비 제한 */
+    body>table {
+      max-width: 100%;
     }
-  }
+
+    /* 중앙 콘텐츠 영역만 overflow 제어 */
+    .main-content {
+      max-width: 100%;
+      overflow-wrap: break-word;
+    }
+
+    /* 모바일용 프로필 섹션 (완전 숨김) */
+    .mobile-profile {
+      display: none;
+    }
+
+    /* 데스크톱 */
+    @media (min-width: 1025px) {
+      table {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: table;
+      }
+
+      table tbody {
+        display: table-row-group;
+      }
+
+      table tr {
+        display: table-row;
+      }
+
+      table td {
+        display: table-cell;
+      }
+
+      table td:first-child {
+        display: table-cell;
+        width: 220px;
+      }
+
+      table td:nth-child(2) {
+        width: auto;
+        max-width: 900px;
+      }
+
+      table td:nth-child(3) {
+        display: table-cell;
+        width: 250px;
+        position: static;
+        z-index: 2;
+      }
+    }
+
+    /* 태블릿 */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      table {
+        max-width: 100%;
+        display: table;
+      }
+
+      table tbody {
+        display: table-row-group;
+      }
+
+      table tr {
+        display: table-row;
+      }
+
+      table td {
+        display: table-cell;
+      }
+
+      table td:first-child {
+        display: table-cell;
+        width: 200px;
+      }
+
+      table td:nth-child(2) {
+        width: auto;
+      }
+
+      table td:nth-child(3) {
+        display: table-cell;
+        width: 220px;
+      }
+    }
+
+    /* 모바일 */
+    @media (max-width: 768px) {
+      table {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      table tbody {
+        display: block;
+      }
+
+      table tr {
+        display: block;
+      }
+
+      table td:first-child {
+        display: none;
+      }
+
+      table td:nth-child(2) {
+        display: block;
+        width: 100% !important;
+        max-width: 100%;
+        padding: 10px;
+        overflow-x: hidden;
+      }
+
+      table td:nth-child(3) {
+        display: none;
+      }
+
+      /* 중첩된 테이블도 모바일에 맞게 조정 */
+      .main-content table {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto !important;
+      }
+
+      .main-content table tbody {
+        display: block !important;
+      }
+
+      .main-content table tr {
+        display: block !important;
+      }
+
+      .main-content table td {
+        display: block !important;
+        width: 100% !important;
+        padding: 10px !important;
+      }
+
+      body {
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      /* 모바일에서 우측 사이드바를 본문 하단에 추가 (홈 페이지 제외) */
+      .mobile-profile {
+        display: block;
+        margin-top: 2rem;
+        padding: 1rem;
+        border: 2px solid #CCCCCC;
+      }
+    }
   </style>
 </body>
+
 </html>
