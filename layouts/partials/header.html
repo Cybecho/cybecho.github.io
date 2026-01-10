@@ -10,19 +10,25 @@
       <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;">[Menu]</span>
     </button>
 
-    <!-- Mobile Right Sidebar Toggle (우측) -->
-    <button class="sidebar-right-toggle" id="sidebarRightToggle" aria-label="프로필">
-      <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;">[Profile]</span>
-    </button>
+    <!-- Mobile Search Input (중앙/우측) -->
+    <input type="text" id="mobile-search-input" class="mobile-search-input" placeholder="Search..." autocomplete="off" />
+
+    <!-- Mobile Home Button (우측) -->
+    <a href="/" class="mobile-home-btn" aria-label="홈">
+      <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;">[Home]</span>
+    </a>
 
   </div>
 </nav>
+
+<!-- Mobile Search Results -->
+<div id="mobile-search-results" class="mobile-search-results" style="display: none;"></div>
 
 <style>
   /* ===== LLVM 스타일 헤더 ===== */
   .site-nav {
     background: #FFFFFF;
-    border-bottom: none;
+    border-bottom: 1px solid #000000;
     padding: 0;
   }
 
@@ -34,78 +40,241 @@
     justify-content: space-between;
     padding: 8px 12px;
     height: auto;
+    gap: 8px;
   }
 
-  /* Sidebar Toggle (모바일에서만 표시) */
+  /* 모바일 요소들 기본적으로 숨김 */
   .sidebar-toggle,
-  .sidebar-right-toggle {
+  .mobile-search-input,
+  .mobile-home-btn {
     display: none;
-    align-items: center;
-    justify-content: center;
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    color: #000000;
-    cursor: pointer;
-    padding: 4px 8px;
-    font-family: "Georgia", "Palatino", "Times", "Roman", serif;
-    font-size: 12pt;
-    text-decoration: underline;
-    transition: none;
-    margin-right: 8px;
   }
 
-  .sidebar-toggle:hover,
-  .sidebar-right-toggle:hover {
-    background: #E0E0E0;
-    color: #000000;
+  /* 모바일 검색 결과 */
+  .mobile-search-results {
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    max-height: 60vh;
+    overflow-y: auto;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-shadow: 2px 2px 0 #CCCCCC;
+    z-index: 999;
+    margin: 0 10px;
+  }
+
+  .mobile-search-result-item {
+    padding: 10px;
+    border-bottom: 1px solid #CCCCCC;
+    cursor: pointer;
+    background: #FFFFFF;
+  }
+
+  .mobile-search-result-item:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-search-result-item:hover {
+    background: #F5F5F5;
+  }
+
+  .mobile-search-result-title {
+    font-weight: bold;
+    color: #0000EE;
     text-decoration: underline;
+    font-size: 12pt;
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+
+  .mobile-search-result-summary {
+    font-size: 10pt;
+    color: #333333;
+    line-height: 1.5;
+  }
+
+  .mobile-search-no-results {
+    padding: 12px;
+    text-align: center;
+    color: #666666;
+    font-size: 11pt;
+    font-style: italic;
   }
 
   /* ===== 모바일 반응형 (< 768px) ===== */
   @media (max-width: 768px) {
-    .nav-container {
-      padding: 8px 10px;
+    .www_title,
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #FFFFFF;
     }
 
-    /* 모바일에서 사이드바 토글 표시 */
-    .sidebar-toggle,
-    .sidebar-right-toggle {
+    .nav-container {
+      padding: 8px 10px;
+      gap: 6px;
+    }
+
+    /* 모바일에서 버튼들 표시 */
+    .sidebar-toggle {
       display: flex;
-      min-width: 60px;
-      min-height: 44px;
-      padding: 8px 12px;
+      align-items: center;
+      justify-content: center;
+      background: #FFFFFF;
+      border: 1px solid #000000;
+      color: #000000;
+      cursor: pointer;
+      padding: 6px 10px;
+      font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+      font-size: 11pt;
+      text-decoration: underline;
+      flex-shrink: 0;
+    }
+
+    .sidebar-toggle:active {
+      background: #E0E0E0;
+    }
+
+    /* 모바일 검색 입력창 */
+    .mobile-search-input {
+      display: block;
+      flex: 1;
+      font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+      font-size: 11pt;
+      padding: 6px 8px;
+      border: 1px solid #000000;
+      background: #FFFFFF;
+      color: #000000;
+      min-width: 0;
+    }
+
+    .mobile-search-input:focus {
+      outline: 2px solid #000000;
+      outline-offset: 0;
+    }
+
+    /* 모바일 홈 버튼 */
+    .mobile-home-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #FFFFFF;
+      border: 1px solid #000000;
+      color: #000000;
+      cursor: pointer;
+      padding: 6px 10px;
+      font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+      font-size: 11pt;
+      text-decoration: underline;
+      flex-shrink: 0;
+    }
+
+    .mobile-home-btn:active {
+      background: #E0E0E0;
     }
   }
 
   @media (max-width: 480px) {
     .nav-container {
       padding: 6px;
+      gap: 4px;
     }
 
-    .search-btn {
+    .sidebar-toggle,
+    .mobile-home-btn {
       font-size: 10pt;
+      padding: 5px 8px;
+    }
+
+    .mobile-search-input {
+      font-size: 10pt;
+      padding: 5px 6px;
     }
   }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const sidebarRightToggle = document.getElementById('sidebarRightToggle');
+    const mobileSearchInput = document.getElementById('mobile-search-input');
+    const mobileSearchResults = document.getElementById('mobile-search-results');
+    let mobileSearchIndex = [];
+    let mobileFuse;
 
-    // Right sidebar toggle functionality
-    if (sidebarRightToggle) {
-      sidebarRightToggle.addEventListener('click', function (e) {
-        e.preventDefault();
-        const sidebarRight = document.getElementById('sidebarRight');
-        const sidebarRightOverlay = document.getElementById('sidebarRightOverlay');
+    // Load search index for mobile search
+    async function initMobileSearch() {
+      try {
+        const response = await fetch('/index.json');
+        mobileSearchIndex = await response.json();
 
-        if (sidebarRight) {
-          sidebarRight.classList.add('active');
+        mobileFuse = new Fuse(mobileSearchIndex, {
+          keys: [
+            { name: 'title', weight: 0.4 },
+            { name: 'summary', weight: 0.2 },
+            { name: 'content', weight: 0.2 },
+            { name: 'tags', weight: 0.1 },
+            { name: 'series', weight: 0.1 }
+          ],
+          threshold: 0.3,
+          includeScore: true,
+          minMatchCharLength: 2
+        });
+      } catch (error) {
+        console.error('Failed to initialize mobile search:', error);
+      }
+    }
+
+    function performMobileSearch(query) {
+      if (!query || query.length < 2 || !mobileFuse) {
+        mobileSearchResults.style.display = 'none';
+        return;
+      }
+
+      const results = mobileFuse.search(query);
+
+      if (results.length === 0) {
+        mobileSearchResults.innerHTML = '<div class="mobile-search-no-results">No results found.</div>';
+        mobileSearchResults.style.display = 'block';
+        return;
+      }
+
+      const html = results.slice(0, 8).map(result => {
+        const item = result.item;
+        const summary = item.summary || item.content?.substring(0, 80) + '...' || '';
+
+        return `
+          <div class="mobile-search-result-item" onclick="window.location.href='${item.url}'">
+            <div class="mobile-search-result-title">${item.title}</div>
+            <div class="mobile-search-result-summary">${summary}</div>
+          </div>
+        `;
+      }).join('');
+
+      mobileSearchResults.innerHTML = html;
+      mobileSearchResults.style.display = 'block';
+    }
+
+    if (mobileSearchInput) {
+      initMobileSearch();
+
+      mobileSearchInput.addEventListener('input', function (e) {
+        performMobileSearch(e.target.value);
+      });
+
+      mobileSearchInput.addEventListener('focus', function () {
+        if (mobileSearchInput.value) {
+          performMobileSearch(mobileSearchInput.value);
         }
-        if (sidebarRightOverlay) {
-          sidebarRightOverlay.classList.add('active');
+      });
+
+      // Close search results when clicking outside
+      document.addEventListener('click', function (e) {
+        if (!mobileSearchInput.contains(e.target) && !mobileSearchResults.contains(e.target)) {
+          mobileSearchResults.style.display = 'none';
         }
-        document.body.classList.add('sidebar-right-open');
       });
     }
   });
