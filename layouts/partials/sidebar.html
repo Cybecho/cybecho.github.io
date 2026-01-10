@@ -1,0 +1,411 @@
+<aside class="sidebar" id="sidebar">
+  <!-- 모바일 닫기 버튼 -->
+  <button class="sidebar-close" id="sidebarClose" aria-label="사이드바 닫기">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+
+  <!-- Navigation 섹션 -->
+  <div class="sidebar-section">
+    <h3 class="sidebar-title">Navigation</h3>
+    <nav class="sidebar-nav">
+      <a href="/" class="sidebar-link {{ if .IsHome }}active{{ end }}">홈</a>
+      <a href="/posts/" class="sidebar-link {{ if eq .Section "posts" }}active{{ end }}">블로그</a>
+      <a href="/series/" class="sidebar-link {{ if eq .Section "series" }}active{{ end }}">시리즈</a>
+      <a href="/tags/" class="sidebar-link {{ if eq .Section "tags" }}active{{ end }}">태그</a>
+      <a href="/archives/" class="sidebar-link {{ if eq .Section "archives" }}active{{ end }}">아카이브</a>
+      <a href="/about/" class="sidebar-link {{ if eq .Title "About" }}active{{ end }}">소개</a>
+    </nav>
+  </div>
+
+  <!-- Series 섹션 (최대 8개) -->
+  {{ $series := .Site.Taxonomies.series }}
+  {{ if gt (len $series) 0 }}
+  <div class="sidebar-section">
+    <h3 class="sidebar-title">Series</h3>
+    <ul class="sidebar-list">
+      {{ range first 8 $series.ByCount }}
+      <li>
+        <a href="{{ .Page.Permalink }}" class="sidebar-list-link">
+          {{ .Page.Title }} <span class="count">({{ .Count }})</span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  <!-- Tags 섹션 (최대 10개) -->
+  {{ $tags := .Site.Taxonomies.tags }}
+  {{ if gt (len $tags) 0 }}
+  <div class="sidebar-section">
+    <h3 class="sidebar-title">Popular Tags</h3>
+    <ul class="sidebar-list">
+      {{ range first 10 $tags.ByCount }}
+      <li>
+        <a href="{{ .Page.Permalink }}" class="sidebar-list-link">
+          #{{ .Page.Title }} <span class="count">({{ .Count }})</span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  <!-- 포스트 상세 페이지에서만 TOC 표시 -->
+  {{ if and (eq .Kind "page") (eq .Type "posts") }}
+    {{ if .TableOfContents }}
+    <div class="sidebar-section sidebar-toc">
+      <h3 class="sidebar-title">On This Page</h3>
+      <div class="sidebar-toc-content">
+        {{ .TableOfContents }}
+      </div>
+    </div>
+    {{ end }}
+  {{ end }}
+</aside>
+
+<!-- 모바일 오버레이 -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<style>
+/* ===== 사이드바 기본 스타일 ===== */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 220px;
+  background: var(--background-color, #fff);
+  border-right: 1px solid var(--border-color, #ddd);
+  overflow-y: auto;
+  padding: 2rem 0;
+  flex-shrink: 0;
+}
+
+/* 스크롤바 스타일 */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 사이드바 섹션 */
+.sidebar-section {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.sidebar-section:not(:last-child) {
+  border-bottom: 1px solid var(--border-color, #eee);
+  padding-bottom: 1.5rem;
+}
+
+/* 사이드바 제목 */
+.sidebar-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-color-secondary, #666);
+  margin: 0 0 1rem 0;
+}
+
+/* 네비게이션 링크 */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: var(--text-color, #222);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link:hover {
+  background: var(--tertiary-bg, #f5f5f5);
+  color: var(--link-color, #0066cc);
+}
+
+.sidebar-link.active {
+  background: var(--tertiary-bg, #f0f0f0);
+  color: var(--link-color, #0066cc);
+  border-left-color: var(--link-color, #0066cc);
+  font-weight: 500;
+}
+
+/* 리스트 스타일 */
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sidebar-list-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.75rem;
+  color: var(--text-color-secondary, #555);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.sidebar-list-link:hover {
+  background: var(--tertiary-bg, #f5f5f5);
+  color: var(--link-color, #0066cc);
+}
+
+.sidebar-list-link .count {
+  font-size: 0.8rem;
+  color: var(--text-color-secondary, #999);
+  margin-left: 0.5rem;
+}
+
+/* 모바일 닫기 버튼 (기본적으로 숨김) */
+.sidebar-close {
+  display: none;
+}
+
+/* 사이드바 오버레이 (기본적으로 숨김) */
+.sidebar-overlay {
+  display: none;
+}
+
+/* TOC 스타일 */
+.sidebar-toc-content {
+  font-size: 0.9rem;
+}
+
+.sidebar-toc-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar-toc-content li {
+  margin: 0.25rem 0;
+}
+
+.sidebar-toc-content a {
+  display: block;
+  padding: 0.4rem 0.75rem;
+  color: var(--text-color-secondary, #555);
+  text-decoration: none;
+  border-radius: 4px;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.sidebar-toc-content a:hover {
+  background: var(--tertiary-bg, #f5f5f5);
+  color: var(--link-color, #0066cc);
+}
+
+.sidebar-toc-content a.active {
+  color: var(--link-color, #0066cc);
+  background: var(--tertiary-bg, #f0f0f0);
+  border-left-color: var(--link-color, #0066cc);
+  font-weight: 500;
+}
+
+/* 중첩된 TOC */
+.sidebar-toc-content ul ul {
+  padding-left: 1rem;
+}
+
+.sidebar-toc-content ul ul a {
+  font-size: 0.85rem;
+  padding-left: 1rem;
+}
+
+/* ===== 모바일 반응형 (< 768px) ===== */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    z-index: 999;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    padding-top: 1rem;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  /* 닫기 버튼 표시 */
+  .sidebar-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-color, #222);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+    z-index: 1000;
+  }
+
+  .sidebar-close:hover {
+    background: var(--tertiary-bg, #f0f0f0);
+  }
+
+  /* 오버레이 표시 */
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 사이드바 열렸을 때 body 스크롤 방지 */
+  body.sidebar-open {
+    overflow: hidden;
+  }
+
+  .sidebar-section {
+    padding: 0 1.25rem;
+  }
+}
+
+/* ===== 태블릿 (768px - 1024px) ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar-section {
+    padding: 0 1.25rem;
+  }
+}
+</style>
+
+<script>
+// 모바일 사이드바 토글
+document.addEventListener('DOMContentLoaded', function() {
+  const sidebar = document.getElementById('sidebar');
+  const sidebarClose = document.getElementById('sidebarClose');
+  const sidebarOverlay = document.getElementById('sidebarOverlay');
+  const sidebarToggle = document.getElementById('sidebarToggle');
+
+  if (!sidebar) return;
+
+  function openSidebar() {
+    sidebar.classList.add('active');
+    if (sidebarOverlay) sidebarOverlay.classList.add('active');
+    document.body.classList.add('sidebar-open');
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    if (sidebarOverlay) sidebarOverlay.classList.remove('active');
+    document.body.classList.remove('sidebar-open');
+  }
+
+  // 모바일 토글 버튼
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      openSidebar();
+    });
+  }
+
+  // 닫기 버튼
+  if (sidebarClose) {
+    sidebarClose.addEventListener('click', closeSidebar);
+  }
+
+  // 오버레이 클릭
+  if (sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', closeSidebar);
+  }
+
+  // ESC 키로 닫기
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+      closeSidebar();
+    }
+  });
+
+  // TOC 활성화 추적 (포스트 페이지만)
+  const tocLinks = document.querySelectorAll('.sidebar-toc-content a');
+  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+  if (tocLinks.length > 0 && headings.length > 0) {
+    function updateActiveToc() {
+      let current = '';
+      const scrollY = window.scrollY;
+
+      headings.forEach(heading => {
+        if (heading.id) {
+          const rect = heading.getBoundingClientRect();
+          const headingTop = rect.top + scrollY;
+
+          if (headingTop <= scrollY + 150) {
+            current = heading.id;
+          }
+        }
+      });
+
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(updateActiveToc);
+        ticking = true;
+        setTimeout(() => { ticking = false; }, 16);
+      }
+    });
+
+    updateActiveToc();
+  }
+});
+</script>
