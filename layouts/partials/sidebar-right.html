@@ -42,8 +42,8 @@
   /* ===== 우측 사이드바 ===== */
   .sidebar-right {
     position: sticky;
-    top: 0;
-    height: 100vh;
+    top: 60px;
+    max-height: calc(100vh - 60px);
     width: 250px;
     background: #FFFFFF;
     border-left: none;
@@ -51,6 +51,7 @@
     padding: 12px 0;
     flex-shrink: 0;
     font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+    align-self: flex-start;
   }
 
   /* 스크롤바 스타일 */

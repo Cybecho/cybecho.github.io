@@ -219,10 +219,7 @@
       padding: 0;
       width: 100%;
       max-width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
+      min-height: 100vh;
     }
 
     /* Header를 sticky로 고정 */
@@ -232,14 +229,12 @@
       top: 0;
       z-index: 100;
       background: #FFFFFF;
-      flex-shrink: 0;
+      border-bottom: 1px solid #000000;
     }
 
-    /* 메인 컨테이너 레벨에서 너비 제한 */
+    /* 메인 컨테이너 - 스크롤 없음 */
     body>table {
       max-width: 100%;
-      flex: 1;
-      overflow-y: auto;
       display: table;
     }
 
@@ -259,36 +254,32 @@
       table {
         max-width: 1400px;
         margin: 0 auto;
-        display: table;
+        display: block;
       }
 
       table tbody {
-        display: table-row-group;
+        display: block;
       }
 
       table tr {
-        display: table-row;
-      }
-
-      table td {
-        display: table-cell;
+        display: flex;
+        align-items: flex-start;
       }
 
       table td:first-child {
-        display: table-cell;
         width: 220px;
+        flex-shrink: 0;
       }
 
       table td:nth-child(2) {
-        width: auto;
+        flex: 1;
         max-width: 900px;
+        min-width: 0;
       }
 
       table td:nth-child(3) {
-        display: table-cell;
         width: 250px;
-        position: static;
-        z-index: 2;
+        flex-shrink: 0;
       }
     }
 
@@ -296,33 +287,31 @@
     @media (min-width: 769px) and (max-width: 1024px) {
       table {
         max-width: 100%;
-        display: table;
+        display: block;
       }
 
       table tbody {
-        display: table-row-group;
+        display: block;
       }
 
       table tr {
-        display: table-row;
-      }
-
-      table td {
-        display: table-cell;
+        display: flex;
+        align-items: flex-start;
       }
 
       table td:first-child {
-        display: table-cell;
         width: 200px;
+        flex-shrink: 0;
       }
 
       table td:nth-child(2) {
-        width: auto;
+        flex: 1;
+        min-width: 0;
       }
 
       table td:nth-child(3) {
-        display: table-cell;
         width: 220px;
+        flex-shrink: 0;
       }
     }
 
