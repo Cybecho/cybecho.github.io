@@ -13,6 +13,14 @@
     <a href="/about/" class="sidebar-link {{ if eq .Title "About" }}active{{ end }}">About</a>
   </div>
 
+  <!-- Search 섹션 -->
+  <div class="www_sidebar">
+    <b>Search:</b>
+    <br>
+    <input type="text" id="sidebar-search-input" class="sidebar-search-input" placeholder="Search posts..." autocomplete="off" />
+    <div id="sidebar-search-results" class="sidebar-search-results" style="display: none;"></div>
+  </div>
+
   <!-- Series 섹션 (최대 8개) -->
   {{ $series := .Site.Taxonomies.series }}
   {{ if gt (len $series) 0 }}
@@ -167,6 +175,75 @@
   }
 }
 
+/* Sidebar Search */
+.sidebar-search-input {
+  font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+  font-size: 11pt;
+  padding: 4px 6px;
+  border: 1px solid #000000;
+  background: #FFFFFF;
+  color: #000000;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+}
+
+.sidebar-search-input:focus {
+  outline: 2px solid #000000;
+  outline-offset: 0;
+}
+
+.sidebar-search-results {
+  margin-top: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0 #CCCCCC;
+}
+
+.sidebar-search-result-item {
+  padding: 10px;
+  border-bottom: 1px solid #CCCCCC;
+  cursor: pointer;
+  background: #FFFFFF;
+  transition: background 0.1s;
+}
+
+.sidebar-search-result-item:last-child {
+  border-bottom: none;
+}
+
+.sidebar-search-result-item:hover {
+  background: #F5F5F5;
+}
+
+.sidebar-search-result-title {
+  font-weight: bold;
+  color: #0000EE;
+  text-decoration: underline;
+  font-size: 12pt;
+  margin-bottom: 4px;
+  line-height: 1.4;
+  display: block;
+}
+
+.sidebar-search-result-summary {
+  font-size: 10pt;
+  color: #333333;
+  line-height: 1.5;
+  display: block;
+  margin-top: 4px;
+}
+
+.sidebar-search-no-results {
+  padding: 12px;
+  text-align: center;
+  color: #666666;
+  font-size: 11pt;
+  font-style: italic;
+}
+
 /* ===== 태블릿 (768px - 1024px) ===== */
 @media (min-width: 768px) and (max-width: 1024px) {
   .sidebar {
@@ -221,5 +298,85 @@ document.addEventListener('DOMContentLoaded', function() {
       closeSidebar();
     }
   });
+
+  // Sidebar search functionality
+  const sidebarSearchInput = document.getElementById('sidebar-search-input');
+  const sidebarSearchResults = document.getElementById('sidebar-search-results');
+  let sidebarSearchIndex = [];
+  let sidebarFuse;
+
+  // Load search index for sidebar search
+  async function initSidebarSearch() {
+    try {
+      const response = await fetch('/index.json');
+      sidebarSearchIndex = await response.json();
+
+      sidebarFuse = new Fuse(sidebarSearchIndex, {
+        keys: [
+          { name: 'title', weight: 0.4 },
+          { name: 'summary', weight: 0.2 },
+          { name: 'content', weight: 0.2 },
+          { name: 'tags', weight: 0.1 },
+          { name: 'series', weight: 0.1 }
+        ],
+        threshold: 0.3,
+        includeScore: true,
+        minMatchCharLength: 2
+      });
+    } catch (error) {
+      console.error('Failed to initialize sidebar search:', error);
+    }
+  }
+
+  function performSidebarSearch(query) {
+    if (!query || query.length < 2 || !sidebarFuse) {
+      sidebarSearchResults.style.display = 'none';
+      return;
+    }
+
+    const results = sidebarFuse.search(query);
+
+    if (results.length === 0) {
+      sidebarSearchResults.innerHTML = '<div class="sidebar-search-no-results">No results found.</div>';
+      sidebarSearchResults.style.display = 'block';
+      return;
+    }
+
+    const html = results.slice(0, 8).map(result => {
+      const item = result.item;
+      const summary = item.summary || item.content?.substring(0, 80) + '...' || '';
+
+      return `
+        <div class="sidebar-search-result-item" onclick="window.location.href='${item.url}'">
+          <div class="sidebar-search-result-title">${item.title}</div>
+          <div class="sidebar-search-result-summary">${summary}</div>
+        </div>
+      `;
+    }).join('');
+
+    sidebarSearchResults.innerHTML = html;
+    sidebarSearchResults.style.display = 'block';
+  }
+
+  if (sidebarSearchInput) {
+    initSidebarSearch();
+
+    sidebarSearchInput.addEventListener('input', function(e) {
+      performSidebarSearch(e.target.value);
+    });
+
+    sidebarSearchInput.addEventListener('focus', function() {
+      if (sidebarSearchInput.value) {
+        performSidebarSearch(sidebarSearchInput.value);
+      }
+    });
+
+    // Close search results when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!sidebarSearchInput.contains(e.target) && !sidebarSearchResults.contains(e.target)) {
+        sidebarSearchResults.style.display = 'none';
+      }
+    });
+  }
 });
 </script>

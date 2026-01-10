@@ -21,7 +21,7 @@
 
     <div class="www_text">
       {{ range $paginator.Pages }}
-        <div class="post-item" data-post-id="{{ .RelPermalink }}">
+        <div class="post-item" data-url="{{ .Permalink }}">
           <p>
             <strong>{{ .Date.Format "2006-01-02" }}:</strong>
             <a href="{{ .Permalink }}" class="post-title-link">{{ .Title }}</a>
@@ -86,10 +86,16 @@
 .post-item {
   border-bottom: 1px solid #CCCCCC;
   padding: 8px 0;
+  cursor: pointer;
+  transition: background 0.1s;
 }
 
 .post-item:last-child {
   border-bottom: none;
+}
+
+.post-item:hover {
+  background: #F5F5F5;
 }
 
 /* 포스트 제목 링크 */
@@ -136,4 +142,25 @@
   }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Make entire post-item clickable
+  const postItems = document.querySelectorAll('.post-item[data-url]');
+
+  postItems.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      // Don't trigger if clicking directly on a link (let the link handle it)
+      if (e.target.tagName === 'A' || e.target.closest('a')) {
+        return;
+      }
+
+      const url = this.getAttribute('data-url');
+      if (url) {
+        window.location.href = url;
+      }
+    });
+  });
+});
+</script>
 {{ end }}
