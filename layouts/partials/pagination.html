@@ -1,57 +1,53 @@
 <style>
-  .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    gap: 0.3rem;
-    flex-wrap: wrap;
-  }
-  .pagination-btn,
-  .pagination-number,
-  .pagination-ellipsis {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 32px;
-    height: 32px;
-    padding: 0 8px;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    background-color: var(--secondary-bg);
-    transition: all 0.2s ease;
-    font-size: 0.8rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .pagination-ellipsis {
-    border: none;
-    background: none;
-    color: var(--text-color-secondary);
-    cursor: default;
-  }
-  .pagination-btn:hover:not(.disabled),
-  .pagination-number:hover:not(.active) {
-    background-color: var(--tertiary-bg);
-    border-color: var(--primary-color);
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  .pagination-btn.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  .pagination-number.active {
-    background-color: var(--primary-color);
-    color: var(--primary-bg);
-    border-color: var(--primary-color);
-    font-weight: 600;
-    box-shadow: 0 2px 6px rgba(59, 130, 246, 0.3);
-  }
+.pagination {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.pagination a,
+.pagination span {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 0 2px;
+  border: 1px solid #000000;
+  background: #FFFFFF;
+  color: #0000EE;
+  text-decoration: underline;
+  font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+  font-size: 12pt;
+  transition: none;
+}
+
+.pagination a:visited {
+  color: #551A8B;
+}
+
+.pagination a:hover {
+  background: #E0E0E0;
+  color: #0000EE;
+}
+
+.pagination span.disabled {
+  color: #808080;
+  text-decoration: none;
+  background: #F0F0F0;
+  cursor: not-allowed;
+}
+
+.pagination span.active {
+  color: #000000;
+  background: #E0E0E0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.pagination span.ellipsis {
+  border: none;
+  background: none;
+  color: #000000;
+  text-decoration: none;
+}
 </style>
 
 {{ $paginator := .Paginator }}
@@ -59,42 +55,39 @@
 <nav class="pagination" aria-label="페이지네이션">
   <!-- 처음 버튼 -->
   {{ if ne $paginator.PageNumber 1 }}
-    <a href="{{ $paginator.First.URL }}" class="pagination-btn first" title="첫 페이지">◀◀</a>
+    <a href="{{ $paginator.First.URL }}" title="첫 페이지">First</a>
   {{ else }}
-    <span class="pagination-btn first disabled" title="첫 페이지">◀◀</span>
+    <span class="disabled">First</span>
   {{ end }}
 
-  <div class="pagination-numbers">
-    {{ $currentPage := $paginator.PageNumber }}
-    {{ $totalPages := $paginator.TotalPages }}
-    
-    {{ if gt $currentPage 5 }}
-      <a href="{{ (index $paginator.Pagers 0).URL }}" class="pagination-number">1</a>
-      {{ if gt $currentPage 6 }}
-        <span class="pagination-ellipsis">...</span>
-      {{ end }}
+  <!-- 이전 버튼 -->
+  {{ if $paginator.HasPrev }}
+    <a href="{{ $paginator.Prev.URL }}" title="이전">Prev</a>
+  {{ else }}
+    <span class="disabled">Prev</span>
+  {{ end }}
+
+  <!-- 페이지 번호 -->
+  {{ range $paginator.Pagers }}
+    {{ if eq . $paginator }}
+      <span class="active">{{ .PageNumber }}</span>
+    {{ else }}
+      <a href="{{ .URL }}">{{ .PageNumber }}</a>
     {{ end }}
-    
-    {{ range $paginator.Pagers }}
-      {{ $pageNum := .PageNumber }}
-      {{ if and (ge $pageNum (sub $currentPage 4)) (le $pageNum (add $currentPage 4)) }}
-        <a href="{{ .URL }}" class="pagination-number {{ if eq . $paginator }}active{{ end }}">{{ .PageNumber }}</a>
-      {{ end }}
-    {{ end }}
-    
-    {{ if lt $currentPage (sub $totalPages 4) }}
-      {{ if lt $currentPage (sub $totalPages 5) }}
-        <span class="pagination-ellipsis">...</span>
-      {{ end }}
-      <a href="{{ (index $paginator.Pagers (sub $totalPages 1)).URL }}" class="pagination-number">{{ $totalPages }}</a>
-    {{ end }}
-  </div>
+  {{ end }}
+
+  <!-- 다음 버튼 -->
+  {{ if $paginator.HasNext }}
+    <a href="{{ $paginator.Next.URL }}" title="다음">Next</a>
+  {{ else }}
+    <span class="disabled">Next</span>
+  {{ end }}
 
   <!-- 마지막 버튼 -->
   {{ if ne $paginator.PageNumber $paginator.TotalPages }}
-    <a href="{{ $paginator.Last.URL }}" class="pagination-btn last" title="마지막 페이지">▶▶</a>
+    <a href="{{ $paginator.Last.URL }}" title="마지막">Last</a>
   {{ else }}
-    <span class="pagination-btn last disabled" title="마지막 페이지">▶▶</span>
+    <span class="disabled">Last</span>
   {{ end }}
 </nav>
 {{ end }}

@@ -1,348 +1,78 @@
 {{ define "main" }}
-<div class="archives-container">
-  <header class="archives-header">
-    <h1 class="archives-title">{{ .Title }}</h1>
-    <p class="archives-description">{{ .Content | safeHTML }}</p>
-  </header>
+<table width="100%" border="0" cellpadding="10">
+<tr>
+<td valign="top">
 
+<main role="main" class="main-content">
+  <div class="www_sectiontitle">{{ .Title }}</div>
+
+  <div class="www_text">
+    {{ .Content | safeHTML }}
+  </div>
+
+  <!-- 아카이브 리스트 -->
   {{ $archivePages := where site.RegularPages "Section" "archives" }}
+
   {{ if $archivePages }}
-  <div class="archives-grid">
-    {{ range $archivePages.ByDate.Reverse }}
-    <article class="archive-card">
-      {{ if .Params.featured_image }}
-      <div class="archive-image">
-        <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" loading="lazy">
-        <div class="archive-overlay">
-          <div class="archive-date">
-            {{ .Date.Format "2006.01.02" }}
-          </div>
-        </div>
-      </div>
-      {{ else }}
-      <div class="archive-image archive-image-placeholder">
-        <div class="placeholder-icon">📁</div>
-        <div class="archive-overlay">
-          <div class="archive-date">
-            {{ .Date.Format "2006.01.02" }}
-          </div>
-        </div>
-      </div>
-      {{ end }}
-      
-      <div class="archive-content">
-        <h2 class="archive-title">
+    <div class="www_sectiontitle">Archive Posts</div>
+
+    <div class="www_text">
+      {{ range $archivePages.ByDate.Reverse }}
+        <p>
+          <strong>{{ .Date.Format "2006-01-02" }}:</strong>
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h2>
-        
-        <p class="archive-description">
-          {{ if .Description }}
-            {{ .Description }}
-          {{ else }}
-            {{ .Summary | plainify | truncate 120 }}
-          {{ end }}
         </p>
-        
-        {{ if .Params.tags }}
-        <div class="archive-tags">
-          {{ range first 3 .Params.tags }}
-          <span class="archive-tag">#{{ . }}</span>
-          {{ end }}
-        </div>
+        {{ if .Description }}
+        <p style="margin-left: 2em;">
+          {{ .Description }}
+        </p>
         {{ end }}
-        
-        <div class="archive-meta">
-          {{ if .Params.categories }}
-          <span class="archive-category">{{ index .Params.categories 0 }}</span>
-          {{ end }}
-          <span class="archive-read-time">{{ .ReadingTime }}분 읽기</span>
-        </div>
-      </div>
-      
-      <div class="archive-footer">
-        <a href="{{ .RelPermalink }}" class="archive-read-more">
-          자세히 보기
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="7" y1="17" x2="17" y2="7"></line>
-            <polyline points="7,7 17,7 17,17"></polyline>
-          </svg>
-        </a>
-      </div>
-    </article>
-    {{ end }}
-  </div>
+        {{ if .Params.tags }}
+        <p style="margin-left: 2em;">
+          <span style="font-size:smaller">
+            {{ range first 3 .Params.tags }}#{{ . }} {{ end }}
+          </span>
+        </p>
+        {{ end }}
+      {{ end }}
+    </div>
   {{ else }}
-  <div class="archives-empty">
-    <div class="empty-icon">📋</div>
-    <h2>아직 아카이브가 없습니다</h2>
-    <p>프로젝트나 주요 작업물을 추가하여 아카이브를 구성해보세요.</p>
-  </div>
+    <div class="www_text">
+      <p>No archive posts available.</p>
+    </div>
   {{ end }}
-</div>
+</main>
+
+</td>
+</tr>
+</table>
 
 <style>
-.archives-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-}
-
-.archives-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.archives-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--text-color);
-  margin-bottom: 1rem;
-}
-
-.archives-description {
-  font-size: 1.1rem;
-  color: var(--text-color-secondary);
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.archives-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.archive-card {
-  background: var(--secondary-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.archive-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  border-color: var(--primary-color);
-}
-
-.archive-image {
+.main-content {
+  padding: 0;
+  max-width: 100%;
   width: 100%;
-  height: 200px;
-  position: relative;
-  overflow: hidden;
+  font-family: "Georgia", "Palatino", "Times", "Roman", serif;
 }
 
-.archive-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.3s ease;
+.www_text a {
+  color: #0000EE;
+  text-decoration: underline;
 }
 
-.archive-card:hover .archive-image img {
-  transform: scale(1.05);
+.www_text a:visited {
+  color: #551A8B;
 }
 
-.archive-image-placeholder {
-  background: linear-gradient(135deg, var(--primary-color), var(--tertiary-bg));
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.www_text a:hover {
+  color: #0000EE;
+  text-decoration: underline;
 }
 
-.placeholder-icon {
-  font-size: 3rem;
-  opacity: 0.7;
-}
-
-.archive-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(0,0,0,0.3), rgba(0,0,0,0));
-  display: flex;
-  align-items: flex-end;
-  padding: 1rem;
-}
-
-.archive-date {
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--text-color);
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  backdrop-filter: blur(10px);
-}
-
-.archive-content {
-  padding: 1.5rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.archive-title {
-  margin: 0 0 1rem 0;
-  font-size: 1.3rem;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-.archive-title a {
-  color: var(--text-color);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.archive-title a:hover {
-  color: var(--primary-color);
-}
-
-.archive-description {
-  color: var(--text-color-secondary);
-  line-height: 1.5;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-  flex: 1;
-}
-
-.archive-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.archive-tag {
-  background: var(--tertiary-bg);
-  color: var(--primary-color);
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-.archive-meta {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  font-size: 0.85rem;
-  color: var(--text-color-secondary);
-}
-
-.archive-category {
-  background: var(--primary-color);
-  color: white;
-  padding: 0.2rem 0.6rem;
-  border-radius: 8px;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-.archive-footer {
-  padding: 0 1.5rem 1.5rem;
-}
-
-.archive-read-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-}
-
-.archive-read-more:hover {
-  transform: translateX(4px);
-}
-
-.archive-read-more svg {
-  width: 14px;
-  height: 14px;
-  transition: transform 0.2s ease;
-}
-
-.archive-read-more:hover svg {
-  transform: translateX(2px);
-}
-
-.archives-empty {
-  text-align: center;
-  padding: 4rem 2rem;
-  color: var(--text-color-secondary);
-}
-
-.empty-icon {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  opacity: 0.5;
-}
-
-.archives-empty h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--text-color);
-}
-
-/* 모바일 반응형 */
 @media (max-width: 768px) {
-  .archives-container {
-    padding: 1.5rem 1rem;
-  }
-  
-  .archives-title {
-    font-size: 2rem;
-  }
-  
-  .archives-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .archive-image {
-    height: 160px;
-  }
-  
-  .archive-content {
-    padding: 1.25rem;
-  }
-  
-  .archive-title {
-    font-size: 1.2rem;
+  .main-content {
+    padding: 0;
   }
 }
-
-@media (max-width: 480px) {
-  .archives-container {
-    padding: 1rem 0.75rem;
-  }
-  
-  .archives-title {
-    font-size: 1.8rem;
-  }
-  
-  .archive-content {
-    padding: 1rem;
-  }
-  
-  .archive-footer {
-    padding: 0 1rem 1rem;
-  }
-}
-
-/* 화이트모드 고정 - 다크모드 완전 제거 */
 </style>
 {{ end }}

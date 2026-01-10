@@ -1,44 +1,30 @@
-<header class="site-header">
-  <nav class="site-nav">
-    <div class="nav-container">
-      <!-- Mobile Sidebar Toggle (왼쪽) -->
-      <button class="sidebar-toggle" id="sidebarToggle" aria-label="메뉴">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
+<!-- LLVM 스타일 헤더 -->
+<div class="www_title">
+  <strong>{{ .Site.Title }}</strong>
+</div>
+
+<nav class="site-nav">
+  <div class="nav-container">
+    <!-- Mobile Sidebar Toggle (왼쪽) -->
+    <button class="sidebar-toggle" id="sidebarToggle" aria-label="메뉴">
+      <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;">[Menu]</span>
+    </button>
+
+    <!-- Search (오른쪽) -->
+    <div class="nav-actions">
+      <button class="search-btn" id="search-btn" aria-label="검색" title="검색">
+        <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;">[Search]</span>
       </button>
-
-      <!-- Site Logo/Title (중앙-왼쪽) -->
-      <div class="site-brand">
-        <a href="/" class="brand-link">
-          <img src="https://minecraft.wiki/images/Enchanted_Stone_Shovel.gif?33e82" alt="삽질 저장소" class="brand-icon" width="24" height="24">
-          <span class="brand-text">{{ .Site.Title }}</span>
-        </a>
-      </div>
-
-      <!-- Search (오른쪽) -->
-      <div class="nav-actions">
-        <button class="search-btn" id="search-btn" aria-label="검색" title="검색">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.35-4.35"></path>
-          </svg>
-        </button>
-      </div>
     </div>
-  </nav>
-</header>
+  </div>
+</nav>
 
 <style>
-/* ===== LLVM 스타일 단순한 헤더 ===== */
-.site-header {
+/* ===== LLVM 스타일 헤더 ===== */
+.site-nav {
   background: #FFFFFF;
   border-bottom: 1px solid #000000;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding: 0;
 }
 
 .nav-container {
@@ -56,53 +42,21 @@
   display: none;
   align-items: center;
   justify-content: center;
-  background: none;
+  background: #FFFFFF;
   border: 1px solid #000000;
   color: #000000;
   cursor: pointer;
-  padding: 4px;
-  border-radius: 0;
+  padding: 4px 8px;
+  font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+  font-size: 12pt;
+  text-decoration: underline;
   transition: none;
 }
 
 .sidebar-toggle:hover {
   background: #E0E0E0;
-}
-
-/* Site Brand */
-.site-brand {
-  flex-shrink: 0;
-}
-
-.brand-link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  font-size: 18px;
-  font-family: Georgia, 'Times New Roman', serif;
-  transition: none;
-}
-
-.brand-link:hover {
   color: #000000;
   text-decoration: underline;
-}
-
-.brand-icon {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
-  border: none;
-}
-
-.brand-text {
-  font-family: Georgia, 'Times New Roman', serif;
 }
 
 /* Navigation Actions */
@@ -120,14 +74,14 @@
   justify-content: center;
   width: auto;
   height: auto;
-  background: none;
+  background: #FFFFFF;
   border: 1px solid #000000;
-  border-radius: 0;
   color: #000000;
   cursor: pointer;
   padding: 4px 8px;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 14px;
+  font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+  font-size: 12pt;
+  text-decoration: underline;
   transition: none;
 }
 
@@ -135,11 +89,7 @@
   background: #E0E0E0;
   border-color: #000000;
   color: #000000;
-}
-
-.search-btn svg {
-  width: 14px;
-  height: 14px;
+  text-decoration: underline;
 }
 
 /* ===== 모바일 반응형 (< 768px) ===== */
@@ -153,13 +103,9 @@
     display: flex;
   }
 
-  .brand-text {
-    font-size: 16px;
-  }
-
   .search-btn {
     padding: 4px 6px;
-    font-size: 13px;
+    font-size: 11pt;
   }
 }
 
@@ -168,8 +114,8 @@
     padding: 6px;
   }
 
-  .brand-text {
-    font-size: 15px;
+  .search-btn {
+    font-size: 10pt;
   }
 }
 </style>
