@@ -1,51 +1,45 @@
 {{ define "main" }}
-<table width="100%" border="0" cellpadding="10">
-  <tr>
-    <td valign="top">
+<div class="content-box">
+  <main role="main" class="main-content">
+    <div class="www_sectiontitle">{{ .Title }}</div>
 
-      <main role="main" class="main-content">
-        <div class="www_sectiontitle">{{ .Title }}</div>
+    <div class="www_text">
+      {{ .Content | safeHTML }}
+    </div>
 
-        <div class="www_text">
-          {{ .Content | safeHTML }}
-        </div>
+    <!-- 아카이브 리스트 -->
+    {{ $archivePages := where site.RegularPages "Section" "archives" }}
 
-        <!-- 아카이브 리스트 -->
-        {{ $archivePages := where site.RegularPages "Section" "archives" }}
+    {{ if $archivePages }}
+    <div class="www_sectiontitle">Archive Posts</div>
 
-        {{ if $archivePages }}
-        <div class="www_sectiontitle">Archive Posts</div>
-
-        <div class="www_text">
-          {{ range $archivePages.ByDate.Reverse }}
-          <p>
-            <strong>{{ .Date.Format "2006-01-02" }}:</strong>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          </p>
-          {{ if .Description }}
-          <p style="margin-left: 2em;">
-            {{ .Description }}
-          </p>
-          {{ end }}
-          {{ if .Params.tags }}
-          <p style="margin-left: 2em;">
-            <span style="font-size:smaller">
-              {{ range first 3 .Params.tags }}#{{ . }} {{ end }}
-            </span>
-          </p>
-          {{ end }}
-          {{ end }}
-        </div>
-        {{ else }}
-        <div class="www_text">
-          <p>No archive posts available.</p>
-        </div>
-        {{ end }}
-      </main>
-
-    </td>
-  </tr>
-</table>
+    <div class="www_text">
+      {{ range $archivePages.ByDate.Reverse }}
+      <p>
+        <strong>{{ .Date.Format "2006-01-02" }}:</strong>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </p>
+      {{ if .Description }}
+      <p style="margin-left: 2em;">
+        {{ .Description }}
+      </p>
+      {{ end }}
+      {{ if .Params.tags }}
+      <p style="margin-left: 2em;">
+        <span style="font-size:smaller">
+          {{ range first 3 .Params.tags }}#{{ . }} {{ end }}
+        </span>
+      </p>
+      {{ end }}
+      {{ end }}
+    </div>
+    {{ else }}
+    <div class="www_text">
+      <p>No archive posts available.</p>
+    </div>
+    {{ end }}
+  </main>
+</div>
 
 <style>
   .main-content {

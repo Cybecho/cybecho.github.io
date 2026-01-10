@@ -1,48 +1,49 @@
 {{ define "main" }}
-<table width="100%" border="0" cellpadding="10">
-  <tr>
-    <td valign="top">
+<div class="content-box">
+  <main role="main" class="main-content">
+    {{ if .Title }}
+    <div class="www_sectiontitle">{{ .Title }}</div>
+    {{ end }}
 
-      <main role="main" class="main-content">
-        <article class="post-content">
-          <div class="www_sectiontitle">{{ .Title }}</div>
+    <div class="www_text">
+      {{ .Content }}
+    </div>
 
-          <div class="www_text">
-            <p><strong>Posted:</strong> {{ .Date.Format "2006-01-02" }}</p>
+    {{ if .Params.tags }}
+    <div class="tag-container">
+      {{ range .Params.tags }}
+      <a href="/tags/{{ . | urlize }}" class="tag-link">#{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
 
-            {{ with .Params.tags }}
-            <p><strong>Tags:</strong> {{ range . }} <a href="/tags/{{ . | urlize }}/">#{{ . }}</a>{{ end }}</p>
-            {{ end }}
+    <!-- Utterances 댓글 시스템 -->
+    <div style="margin-top: 50px;">
+      <script src="https://utteranc.es/client.js" repo="Cybecho/cybecho.github.io" issue-term="pathname" label="comment"
+        theme="github-light" crossorigin="anonymous" async>
+        </script>
+    </div>
+  </main>
+</div>
 
-            {{ with .Params.series }}
-            <p><strong>Series:</strong> {{ range . }} <a href="/series/{{ . | urlize }}/">{{ . }}</a>{{ end }}</p>
-            {{ end }}
+<!-- 댓글 섹션 -->
+{{ partial "comments.html" . }}
 
-            <hr>
+<!-- 이미지 모달 -->
+<div class="image-modal" id="imageModal">
+  <div class="image-modal-overlay" id="imageModalOverlay"></div>
+  <div class="image-modal-content">
+    <button class="image-modal-close" id="imageModalClose" aria-label="이미지 모달 닫기">
+      <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;">[Close]</span>
+    </button>
+    <img class="image-modal-img" id="imageModalImg" src="" alt="">
+    <div class="image-modal-info" id="imageModalInfo"></div>
+  </div>
+</div>
+</main>
 
-            <!-- 본문 내용 -->
-            {{ .Content }}
-          </div>
-        </article>
-
-        <!-- 댓글 섹션 -->
-        {{ partial "comments.html" . }}
-
-        <!-- 이미지 모달 -->
-        <div class="image-modal" id="imageModal">
-          <div class="image-modal-overlay" id="imageModalOverlay"></div>
-          <div class="image-modal-content">
-            <button class="image-modal-close" id="imageModalClose" aria-label="이미지 모달 닫기">
-              <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;">[Close]</span>
-            </button>
-            <img class="image-modal-img" id="imageModalImg" src="" alt="">
-            <div class="image-modal-info" id="imageModalInfo"></div>
-          </div>
-        </div>
-      </main>
-
-    </td>
-  </tr>
+</td>
+</tr>
 </table>
 
 <script>
