@@ -162,16 +162,18 @@
 
   .www_text h1 {
     font-size: 24pt;
+    color: #000080;
+    /* 100% intensity Dark Navy */
     /* LLVM Style Thinner Lines for Content Headers */
     border-top: 1px solid #CCCCCC;
     border-bottom: 1px solid #CCCCCC;
-    /* Use CSS Gradient here as well */
-    background-color: #FAFAFA;
+    /* High Contrast Silver Lines */
+    background-color: #FFFFFF;
     background-image: repeating-linear-gradient(to bottom,
-        #FAFAFA,
-        #FAFAFA 2px,
-        #E0E0E0 2px,
-        #E0E0E0 3px);
+        #FFFFFF,
+        #FFFFFF 3px,
+        #BFBFBF 3px,
+        #BFBFBF 4px);
     text-align: center;
     padding: 4px 0;
     margin-top: 24px;
@@ -179,6 +181,8 @@
 
   .www_text h2 {
     font-size: 18pt;
+    color: #606090;
+    /* 60% intensity Slate Blue */
     border-bottom: 1px solid #DDDDDD;
     /* Very thin line */
     padding-bottom: 2px;
