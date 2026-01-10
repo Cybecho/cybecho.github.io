@@ -258,7 +258,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const html = results.slice(0, 10).map(result => {
       const item = result.item;
       const summary = item.summary || item.content?.substring(0, 100) + '...' || '';
-      const tags = item.tags ? item.tags.slice(0, 3).join(', ') : '';
+      // tags는 이미 문자열 (delimit로 변환됨)
+      const tags = item.tags || '';
 
       return `
         <div class="search-result-item" onclick="window.location.href='${item.url}'">

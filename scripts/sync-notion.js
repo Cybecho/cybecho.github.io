@@ -3,6 +3,7 @@ const fs = require('fs');
 const crypto = require('crypto');
 const https = require('https');
 const path = require('path');
+const sharp = require('sharp');
 
 const notion = new Client({ auth: process.env.NOTION_SECRET });
 const CACHE_FILE = 'notion_cache.json';
@@ -80,26 +81,57 @@ function createSlug(title) {
   return slug;
 }
 
-// 이미지 다운로드 함수
+// 이미지 다운로드 및 리사이징 함수
 async function downloadImage(imageUrl, imagePath) {
   return new Promise((resolve, reject) => {
-    const file = fs.createWriteStream(imagePath);
-    
+    const tempPath = imagePath + '.tmp';
+    const file = fs.createWriteStream(tempPath);
+
     https.get(imageUrl, (response) => {
       if (response.statusCode !== 200) {
         reject(new Error(`HTTP ${response.statusCode}: ${response.statusMessage}`));
         return;
       }
-      
+
       response.pipe(file);
-      
-      file.on('finish', () => {
+
+      file.on('finish', async () => {
         file.close();
-        resolve(imagePath);
+
+        try {
+          // sharp로 이미지 메타데이터 읽기
+          const metadata = await sharp(tempPath).metadata();
+
+          // 이미지 너비가 900px를 초과하면 리사이징
+          if (metadata.width > 900) {
+            console.log(`Resizing image from ${metadata.width}px to 900px: ${path.basename(imagePath)}`);
+
+            await sharp(tempPath)
+              .resize({
+                width: 900,
+                fit: 'inside',
+                withoutEnlargement: true
+              })
+              .toFile(imagePath);
+
+            // 임시 파일 삭제
+            fs.unlinkSync(tempPath);
+          } else {
+            // 리사이징 불필요 - 임시 파일을 최종 파일로 이동
+            fs.renameSync(tempPath, imagePath);
+          }
+
+          resolve(imagePath);
+        } catch (err) {
+          // sharp 처리 실패시 원본 유지
+          console.warn('Image resize failed, using original:', err.message);
+          fs.renameSync(tempPath, imagePath);
+          resolve(imagePath);
+        }
       });
-      
+
       file.on('error', (err) => {
-        fs.unlink(imagePath, () => {}); // 실패시 파일 삭제
+        fs.unlink(tempPath, () => {}); // 실패시 파일 삭제
         reject(err);
       });
     }).on('error', (err) => {
@@ -111,12 +143,29 @@ async function downloadImage(imageUrl, imagePath) {
 // 이미지 파일명 생성 함수
 function createImageFilename(imageUrl) {
   const urlHash = crypto.createHash('md5').update(imageUrl).digest('hex').substring(0, 12);
-  const extension = imageUrl.includes('.png') ? '.png' : 
-                   imageUrl.includes('.jpg') ? '.jpg' : 
-                   imageUrl.includes('.jpeg') ? '.jpeg' : 
-                   imageUrl.includes('.gif') ? '.gif' : 
+  const extension = imageUrl.includes('.png') ? '.png' :
+                   imageUrl.includes('.jpg') ? '.jpg' :
+                   imageUrl.includes('.jpeg') ? '.jpeg' :
+                   imageUrl.includes('.gif') ? '.gif' :
                    imageUrl.includes('.webp') ? '.webp' : '.png';
   return `image_${urlHash}${extension}`;
+}
+
+// 긴 URL에 <wbr> 태그 삽입하는 함수
+function addWordBreaksToUrl(url) {
+  // 40자 미만의 짧은 URL은 그대로 반환
+  if (url.length < 40) {
+    return url;
+  }
+
+  // URL의 구분자 뒤에 <wbr> 삽입
+  return url
+    .replace(/\//g, '/<wbr>')
+    .replace(/\?/g, '?<wbr>')
+    .replace(/&/g, '&<wbr>')
+    .replace(/=/g, '=<wbr>')
+    .replace(/-/g, '-<wbr>')
+    .replace(/_/g, '_<wbr>');
 }
 
 function convertRichText(richTextArray) {
@@ -128,7 +177,11 @@ function convertRichText(richTextArray) {
     if (textObj.annotations?.code) text = '`' + text + '`';
     if (textObj.annotations?.strikethrough) text = `~~${text}~~`;
     if (textObj.annotations?.underline) text = `<u>${text}</u>`;
-    if (textObj.href) text = `[${text}](${textObj.href})`;
+    if (textObj.href) {
+      // 긴 URL에 <wbr> 태그 추가
+      const processedUrl = addWordBreaksToUrl(textObj.href);
+      text = `[${text}](${processedUrl})`;
+    }
     return text;
   }).join('');
 }

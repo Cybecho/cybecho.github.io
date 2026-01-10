@@ -91,6 +91,33 @@ document.addEventListener('DOMContentLoaded', function() {
   modalImg.addEventListener('click', function(e) {
     e.stopPropagation();
   });
+
+  // 🚀 이미지 Lazy Loading (성능 최적화)
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        if (img.dataset.src) {
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+          observer.unobserve(img);
+        }
+      }
+    });
+  }, {
+    rootMargin: '50px' // 뷰포트 50px 전에 로딩 시작
+  });
+
+  // 모든 이미지에 lazy loading 적용
+  images.forEach(img => {
+    // 이미 로드된 이미지는 건너뛰기
+    if (img.complete) return;
+
+    // data-src로 이동
+    img.dataset.src = img.src;
+    img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3C/svg%3E';
+    imageObserver.observe(img);
+  });
 });
 </script>
 

@@ -201,7 +201,6 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: clip;
   }
 
   body {
@@ -210,6 +209,17 @@
     width: 100%;
     max-width: 100%;
     position: relative;
+  }
+
+  /* 메인 컨테이너 레벨에서 너비 제한 */
+  body > table {
+    max-width: 100%;
+  }
+
+  /* 중앙 콘텐츠 영역만 overflow 제어 */
+  .main-content {
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   /* 모바일용 프로필 섹션 (완전 숨김) */
