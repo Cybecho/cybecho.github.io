@@ -133,7 +133,7 @@
       </td>
 
       <!-- 중앙 본문 -->
-      <td valign="top">
+      <td valign="top" class="main-content">
         {{ block "main" . }}{{ end }}
       </td>
 
@@ -249,7 +249,7 @@
   /* 데스크톱 */
   @media (min-width: 1025px) {
     table {
-      max-width: 1600px;
+      max-width: 1400px;
       margin: 0 auto;
       display: table;
     }
@@ -273,6 +273,7 @@
 
     table td:nth-child(2) {
       width: auto;
+      max-width: 900px;
     }
 
     table td:nth-child(3) {
