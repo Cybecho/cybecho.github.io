@@ -133,7 +133,7 @@
       </td>
 
       <!-- 중앙 본문 -->
-      <td valign="top">
+      <td valign="top" class="main-content">
         {{ block "main" . }}{{ end }}
       </td>
 
@@ -142,27 +142,7 @@
         {{ partial "sidebar-right.html" . }}
       </td>
     </tr>
-  </table>
-
-  <!-- 모바일용 우측 사이드바 (하단) - 홈 페이지 제외 -->
-  {{ if not .IsHome }}
-  <div class="mobile-profile" id="mobileProfile">
-    <div class="www_sidebar" style="background: none; border: none; text-align: left; padding: 0;">
-      <b>Profile</b>
-      <br><br>
-      <center>
-        <img src="{{ .Site.Params.author.avatar | absURL }}" width="64" height="64" alt="{{ .Site.Params.author.name }}" style="border: 1px solid #000000;">
-          <br><br>
-          <strong>{{ .Site.Params.author.name }}</strong>
-      </center>
-      <br><br>
-      <b>Social:</b><br>
-      {{ range .Site.Params.social }}
-        <a href="{{ .url }}" target="_blank" rel="noopener" class="sidebar-link">{{ .name }}</a><br>
-      {{ end }}
-    </div>
-  </div>
-  {{ end }}
+   </table>
 
   <!-- Search Modal -->
   {{ partial "search.html" . }}
@@ -237,19 +217,15 @@
     overflow-x: hidden;
   }
 
-  /* 모바일용 우측 사이드바 하단 컨텐츠 (홈 페이지 제외) */
+  /* 모바일용 프로필 섹션 (완전 숨김) */
   .mobile-profile {
     display: none;
-    border: 2px solid #CCCCCC;
-    padding: 1rem;
-    margin: 2rem 0;
-    background: #FFFFFF;
   }
 
   /* 데스크톱 */
   @media (min-width: 1025px) {
     table {
-      max-width: 1600px;
+      max-width: 1400px;
       margin: 0 auto;
       display: table;
     }
@@ -273,6 +249,7 @@
 
     table td:nth-child(2) {
       width: auto;
+      max-width: 900px;
     }
 
     table td:nth-child(3) {
