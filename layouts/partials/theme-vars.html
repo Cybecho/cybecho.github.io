@@ -153,11 +153,28 @@ img {
 /* ===== LLVM Main Website Styles ===== */
 
 .www_title  {
-  font-family: "Georgia","Palatino","Times","Roman";
-  font-size: 33pt;
+  font-family: "Batang", "바탕", "Georgia", "Palatino", "Times", "Roman", serif;
+  font-size: 20pt;
   text-align: center;
   padding: 8px 0;
   margin: 8px 0;
+}
+
+/* 모바일에서 제목 더 작게 */
+@media (max-width: 768px) {
+  .www_title {
+    font-size: 16pt;
+    padding: 6px 0;
+    margin: 6px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .www_title {
+    font-size: 14pt;
+    padding: 4px 0;
+    margin: 4px 0;
+  }
 }
 
 .www_sidebar  {
