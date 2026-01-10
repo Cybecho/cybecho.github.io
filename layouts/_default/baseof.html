@@ -176,6 +176,22 @@
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Search 버튼 클릭 이벤트 리스너 추가
+      const searchBtn = document.getElementById('search-btn');
+      if (searchBtn) {
+        searchBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const searchModal = document.getElementById('search-modal');
+          const searchInput = document.getElementById('search-input');
+          if (searchModal) {
+            searchModal.style.display = 'block';
+            if (searchInput) {
+              searchInput.focus();
+            }
+          }
+        });
+      }
+
       // 키보드 단축키: Ctrl+K 또는 Cmd+K로 검색 모달 열기
       document.addEventListener('keydown', function(e) {
         if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
@@ -210,10 +226,15 @@
 
   <!-- 반응형 스타일 -->
   <style>
-  body {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
     margin: 0;
     padding: 0;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
   }
 
@@ -298,8 +319,9 @@
   @media (max-width: 768px) {
     table {
       display: block;
-      max-width: 100vw;
+      max-width: 100%;
       width: 100%;
+      overflow-x: hidden;
     }
 
     table tbody {
@@ -317,7 +339,9 @@
     table td:nth-child(2) {
       display: block;
       width: 100% !important;
+      max-width: 100%;
       padding: 10px;
+      overflow-x: hidden;
     }
 
     table td:nth-child(3) {
@@ -328,6 +352,8 @@
     .main-content table {
       display: block !important;
       width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: auto !important;
     }
 
     .main-content table tbody {
@@ -346,6 +372,9 @@
 
     body {
       padding: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
     /* 모바일에서 우측 사이드바를 본문 하단에 추가 (홈 페이지 제외) */
