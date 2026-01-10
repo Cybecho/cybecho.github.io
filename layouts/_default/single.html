@@ -336,218 +336,236 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <style>
+/* LLVM 스타일 포스트 페이지 */
 .single-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 12px;
   position: relative;
-  color: var(--text-color);
-  background: var(--background-color);
+  color: #000000;
+  background: #FFFFFF;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 .post-content {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
 }
 
 .post-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #808080;
 }
 
 .post-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
-  line-height: 1.2;
-  color: var(--heading-color);
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+  color: #000000;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 .post-meta {
-  color: var(--text-color-secondary);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .post-tags {
-  margin-top: 0.75rem;
+  margin-top: 6px;
 }
 
 .tag {
-  display: inline-block;
-  background: #3b82f6;
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  margin: 0.25rem;
-  font-weight: 500;
+  display: inline;
+  background: none;
+  color: #0000EE;
+  padding: 0;
+  border-radius: 0;
+  font-size: 14px;
+  margin: 0 4px 0 0;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.tag::before {
+  content: "#";
 }
 
 .post-series {
-  margin-top: 0.5rem;
+  margin-top: 4px;
 }
 
 .series-tag {
-  display: inline-block;
-  background: #059669;
-  color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
-  font-size: 0.85rem;
-  margin: 0.25rem;
-  font-weight: 500;
+  display: inline;
+  background: none;
+  color: #0000EE;
+  padding: 0;
+  border-radius: 0;
+  font-size: 14px;
+  margin: 0 4px 0 0;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .content {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
   position: relative;
   z-index: 1;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  scroll-margin-top: 120px;
-  color: var(--heading-color);
-  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  scroll-margin-top: 60px;
+  color: #000000;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 .content h1 {
-  font-size: 2rem;
-  border-bottom: 2px solid var(--border-color);
-  padding-bottom: 0.5rem;
+  font-size: 24px;
+  border-bottom: 1px solid #808080;
+  padding-bottom: 4px;
 }
 
 .content h2 {
-  font-size: 1.6rem;
+  font-size: 20px;
 }
 
 .content h3 {
-  font-size: 1.3rem;
+  font-size: 18px;
 }
 
 .content p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 8px;
 }
 
 .content ul, .content ol {
-  margin-bottom: 1.5rem;
-  padding-left: 1.5rem;
+  margin-bottom: 8px;
+  padding-left: 32px;
 }
 
 .content li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 4px;
 }
 
 .content blockquote {
-  border-left: 4px solid var(--link-color);
-  background: var(--secondary-bg);
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
+  border-left: 3px solid #808080;
+  background: none;
+  padding: 4px 12px;
+  margin: 8px 0;
   font-style: italic;
-  color: var(--text-color-secondary);
+  color: #000000;
 }
 
 .content code {
-  background: var(--code-bg);
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
-  font-size: 0.9em;
-  color: var(--link-color);
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  background: #F0F0F0;
+  padding: 2px 4px;
+  border-radius: 0;
+  font-size: 14px;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  border: 1px solid #808080;
 }
 
 .content pre {
-  background: var(--code-bg);
-  color: var(--code-text);
-  padding: 1.5rem;
-  border-radius: 8px;
+  background: #F0F0F0;
+  color: #000000;
+  padding: 8px;
+  border-radius: 0;
   overflow-x: auto;
-  margin: 1.5rem 0;
+  margin: 8px 0;
+  border: 1px solid #808080;
 }
 
 .content pre code {
   background: none;
   padding: 0;
   color: inherit;
+  border: none;
 }
 
 .content img {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  margin: 1.5rem auto;
+  border-radius: 0;
+  margin: 8px 0;
   display: block;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  cursor: zoom-in;
-  transition: all 0.3s ease;
+  box-shadow: none;
+  cursor: pointer;
+  transition: none;
+  border: 1px solid #808080;
 }
 
 .content img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transform: none;
+  box-shadow: none;
 }
 
 .content table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: 0.95rem;
+  margin: 8px 0;
+  font-size: 14px;
+  border: 1px solid #808080;
 }
 
 .content th,
 .content td {
-  border: 1px solid var(--border-color);
-  padding: 0.75rem 1rem;
+  border: 1px solid #808080;
+  padding: 4px 8px;
   text-align: left;
 }
 
 .content th {
-  background: var(--secondary-bg);
-  font-weight: 600;
-  color: var(--text-color);
+  background: #E0E0E0;
+  font-weight: bold;
+  color: #000000;
 }
 
-/* 🎯 TOC 토글 버튼 */
+/* LLVM 스타일 TOC 토글 버튼 */
 .toc-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
   top: 50%;
-  right: 1rem;
+  right: 8px;
   transform: translateY(-50%);
-  background: #3b82f6;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+  background: #FFFFFF;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  box-shadow: none;
   cursor: pointer;
   z-index: 300;
-  transition: all 0.3s ease;
+  transition: none;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 .toc-toggle:hover {
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 25px rgba(59, 130, 246, 0.4);
+  transform: translateY(-50%);
+  box-shadow: none;
+  background: #E0E0E0;
 }
 
 .toc-toggle:active {
-  transform: translateY(-50%) scale(0.95);
+  transform: translateY(-50%);
 }
 
 .toc-toggle svg {
   margin: 0;
 }
 
-/* 🎯 TOC 오버레이 */
+/* LLVM 스타일 TOC 오버레이 */
 .toc-overlay {
   position: fixed;
   top: 0;
@@ -566,66 +584,68 @@ document.addEventListener('DOMContentLoaded', function() {
   visibility: visible;
 }
 
-/* 🎯 TOC 컨테이너 */
+/* LLVM 스타일 TOC 컨테이너 */
 .toc-container {
   position: fixed;
   right: -320px;
   top: 50%;
   transform: translateY(-50%);
   width: 280px;
-  background: var(--background-color);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 0;
   padding: 0;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
   z-index: 280;
   max-height: 70vh;
   overflow: hidden;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  backdrop-filter: none;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 .toc-container.active {
-  right: 2rem;
+  right: 12px;
 }
 
 .toc-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.25rem;
-  border-bottom: 1px solid var(--border-color);
-  background: var(--secondary-bg);
+  padding: 8px 12px;
+  border-bottom: 1px solid #808080;
+  background: #E0E0E0;
 }
 
 .toc-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--heading-color);
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
   margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 .toc-close {
   display: block;
   background: none;
-  border: none;
-  color: var(--text-color-secondary);
+  border: 1px solid #000000;
+  color: #000000;
   cursor: pointer;
-  padding: 0.25rem;
-  border-radius: 4px;
-  transition: all 0.2s ease;
+  padding: 4px;
+  border-radius: 0;
+  transition: none;
 }
 
 .toc-close:hover {
-  color: var(--text-color);
-  background: var(--tertiary-bg);
+  color: #000000;
+  background: #D0D0D0;
 }
 
 .toc-content {
-  padding: 1rem;
+  padding: 8px;
   overflow-y: auto;
-  max-height: calc(70vh - 60px);
-  background: var(--background-color);
+  max-height: calc(70vh - 40px);
+  background: #FFFFFF;
 }
 
 .toc-content ul {
@@ -635,45 +655,50 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .toc-content li {
-  margin: 0.25rem 0;
+  margin: 2px 0;
 }
 
 .toc-content a {
   display: block;
-  padding: 0.5rem 0.75rem;
-  color: var(--text-color-secondary);
-  text-decoration: none;
-  font-size: 0.9rem;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-  border-left: 3px solid transparent;
+  padding: 4px 6px;
+  color: #0000EE;
+  text-decoration: underline;
+  font-size: 13px;
+  border-radius: 0;
+  transition: none;
+  border-left: none;
   line-height: 1.4;
 }
 
+.toc-content a:visited {
+  color: #551A8B;
+}
+
 .toc-content a:hover {
-  color: var(--link-color);
-  background: var(--tertiary-bg);
+  color: #0000EE;
+  background: #E0E0E0;
 }
 
 .toc-content a.active {
-  color: var(--link-color);
-  background: var(--tertiary-bg);
-  border-left-color: var(--link-color);
-  font-weight: 500;
+  color: #000000;
+  background: #E0E0E0;
+  border-left: none;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* 중첩 레벨 들여쓰기 */
 .toc-content ul ul a {
-  padding-left: 1.5rem;
-  font-size: 0.85rem;
+  padding-left: 12px;
+  font-size: 12px;
 }
 
 .toc-content ul ul ul a {
-  padding-left: 2.5rem;
-  font-size: 0.8rem;
+  padding-left: 24px;
+  font-size: 11px;
 }
 
-/* 🎯 좁은 화면 대응 */
+/* LLVM 스타일 좁은 화면 대응 */
 @media (max-width: 1400px) {
   .toc-container {
     position: fixed;
@@ -686,8 +711,9 @@ document.addEventListener('DOMContentLoaded', function() {
     border-radius: 0;
     border-right: none;
     transition: right 0.3s ease;
-    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
-    background: var(--background-color);
+    box-shadow: none;
+    background: #FFFFFF;
+    border: 1px solid #000000;
   }
 
   .toc-container.active {
@@ -695,7 +721,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   .toc-content {
-    max-height: calc(100vh - 60px);
+    max-height: calc(100vh - 40px);
   }
 
   body.toc-open {
@@ -705,26 +731,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 @media (max-width: 768px) {
   .single-container {
-    padding: 1.5rem 1rem;
+    padding: 10px 8px;
   }
-  
+
   .post-title {
-    font-size: 2rem;
+    font-size: 20px;
   }
-  
+
   .toc-container {
     width: 280px;
     right: -300px;
   }
-  
+
   .toc-toggle {
-    width: 44px;
-    height: 44px;
-    right: 0.75rem;
+    width: 36px;
+    height: 36px;
+    right: 6px;
   }
-  
+
   .content {
-    font-size: 1rem;
+    font-size: 15px;
   }
 
   .content h1 {
