@@ -211,6 +211,7 @@
       margin: 0;
       padding: 0;
       width: 100%;
+      height: 100%;
     }
 
     body {
@@ -218,12 +219,28 @@
       padding: 0;
       width: 100%;
       max-width: 100%;
-      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Header를 sticky로 고정 */
+    body > .www_title,
+    body > .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #FFFFFF;
+      flex-shrink: 0;
     }
 
     /* 메인 컨테이너 레벨에서 너비 제한 */
     body>table {
       max-width: 100%;
+      flex: 1;
+      overflow-y: auto;
+      display: table;
     }
 
     /* 중앙 콘텐츠 영역만 overflow 제어 */
