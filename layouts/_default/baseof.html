@@ -144,15 +144,16 @@
     </tr>
   </table>
 
-  <!-- 모바일용 우측 사이드바 (하단) -->
+  <!-- 모바일용 우측 사이드바 (하단) - 홈 페이지 제외 -->
+  {{ if not .IsHome }}
   <div class="mobile-profile" id="mobileProfile">
     <div class="www_sidebar" style="background: none; border: none; text-align: left; padding: 0;">
       <b>Profile</b>
       <br><br>
       <center>
-        <img src="{{ .Site.Params.author.avatar | absURL }}" width="64" height="64" alt="{{ .Site.Params.author.name }}" style="border:1px solid #000000;">
-        <br><br>
-        <strong>{{ .Site.Params.author.name }}</strong>
+        <img src="{{ .Site.Params.author.avatar | absURL }}" width="64" height="64" alt="{{ .Site.Params.author.name }}" style="border: 1px solid #000000;">
+          <br><br>
+          <strong>{{ .Site.Params.author.name }}</strong>
       </center>
       <br><br>
       <b>Social:</b><br>
@@ -161,6 +162,7 @@
       {{ end }}
     </div>
   </div>
+  {{ end }}
 
   <!-- Search Modal -->
   {{ partial "search.html" . }}
@@ -194,26 +196,34 @@
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // 키보드 단축키: Ctrl+K 또는 Cmd+K로 검색 모달 열기
+      document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+          e.preventDefault();
+          const searchModal = document.getElementById('search-modal');
+          const searchInput = document.getElementById('search-input');
+          if (searchModal) {
+            searchModal.style.display = 'block';
+            if (searchInput) {
+              searchInput.focus();
+            }
+          }
+        }
+
+        // ESC 키로 모달 닫기
+        if (e.key === 'Escape') {
+          const searchModal = document.getElementById('search-modal');
+          if (searchModal && searchModal.style.display !== 'none') {
+            searchModal.style.display = 'none';
+          }
+        }
+      });
+
+      // 검색 기능 초기화 (search.html에서 initSearch 함수가 정의됨)
       if (typeof initSearch === 'function') {
         initSearch();
-      }
-    });
-
-    document.addEventListener('keydown', function(e) {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-        e.preventDefault();
-        const searchModal = document.getElementById('search-modal');
-        if (searchModal) {
-          searchModal.style.display = 'block';
-          document.getElementById('search-input').focus();
-        }
-      }
-
-      if (e.key === 'Escape') {
-        const searchModal = document.getElementById('search-modal');
-        if (searchModal && searchModal.style.display === 'block') {
-          searchModal.style.display = 'none';
-        }
+      } else if (typeof initLocalSearch === 'function') {
+        initLocalSearch();
       }
     });
   </script>
@@ -227,12 +237,13 @@
     overflow-x: hidden;
   }
 
-  /* 모바일용 우측 사이드바 하단 컨텐츠 */
+  /* 모바일용 우측 사이드바 하단 컨텐츠 (홈 페이지 제외) */
   .mobile-profile {
     display: none;
     border: 2px solid #CCCCCC;
     padding: 1rem;
     margin: 2rem 0;
+    background: #FFFFFF;
   }
 
   /* 데스크톱 */
@@ -337,12 +348,12 @@
       padding: 0;
     }
 
-    /* 모바일에서 우측 사이드바를 본문 하단에 추가 */
+    /* 모바일에서 우측 사이드바를 본문 하단에 추가 (홈 페이지 제외) */
     .mobile-profile {
       display: block;
       margin-top: 2rem;
       padding: 1rem;
-      border: 1px solid #000000;
+      border: 2px solid #CCCCCC;
     }
   }
   </style>

@@ -3,3 +3,4 @@ notion_cache.json
 hugo_stats.json
 public/
 node_modules/
+.DS_Store
