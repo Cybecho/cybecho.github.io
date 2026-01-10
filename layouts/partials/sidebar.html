@@ -36,33 +36,20 @@
     {{ end }}
   </div>
   {{ end }}
-
-  <!-- 포스트 상세 페이지에서만 TOC 표시 -->
-  {{ if and (eq .Kind "page") (eq .Type "posts") }}
-    {{ if .TableOfContents }}
-    <div class="www_sidebar">
-      <b>On This Page:</b>
-      <br>
-      <div class="sidebar-toc-content">
-        {{ .TableOfContents }}
-      </div>
-    </div>
-    {{ end }}
-  {{ end }}
 </aside>
 
 <!-- 모바일 오버레이 -->
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <style>
-/* ===== LLVM 스타일 사이드바 ===== */
+/* ===== LLVM 스타일 좌측 사이드바 ===== */
 .sidebar {
   position: sticky;
   top: 0;
   height: 100vh;
   width: 220px;
   background: #FFFFFF;
-  border-right: 1px solid #000000;
+  border-right:1px solid #000000;
   overflow-y: auto;
   padding: 12px 0;
   flex-shrink: 0;
@@ -106,54 +93,6 @@
   font-weight: bold;
 }
 
-/* TOC 스타일 */
-.sidebar-toc-content {
-  font-size: 11pt;
-  text-align: left;
-}
-
-.sidebar-toc-content ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.sidebar-toc-content li {
-  margin: 4px 0;
-}
-
-.sidebar-toc-content a {
-  color: #0000EE;
-  text-decoration: underline;
-  font-size: 11pt;
-  transition: none;
-}
-
-.sidebar-toc-content a:visited {
-  color: #551A8B;
-}
-
-.sidebar-toc-content a:hover {
-  background: #E0E0E0;
-  color: #0000EE;
-}
-
-.sidebar-toc-content a.active {
-  color: #000000;
-  background: #E0E0E0;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* 중첩된 TOC */
-.sidebar-toc-content ul ul {
-  padding-left: 16px;
-}
-
-.sidebar-toc-content ul ul a {
-  font-size: 10pt;
-}
-
 /* 모바일 닫기 버튼 (기본적으로 숨김) */
 .sidebar-close {
   display: none;
@@ -173,7 +112,7 @@
     width: 280px;
     height: 100vh;
     z-index: 999;
-    border: 1px solid #000000;
+    border:1px solid #000000;
     padding-top: 12px;
   }
 
@@ -237,7 +176,7 @@
 </style>
 
 <script>
-// 모바일 사이드바 토글
+// 모바일 좌측 사이드바 토글
 document.addEventListener('DOMContentLoaded', function() {
   const sidebar = document.getElementById('sidebar');
   const sidebarClose = document.getElementById('sidebarClose');
@@ -282,45 +221,5 @@ document.addEventListener('DOMContentLoaded', function() {
       closeSidebar();
     }
   });
-
-  // TOC 활성화 추적 (포스트 페이지만)
-  const tocLinks = document.querySelectorAll('.sidebar-toc-content a');
-  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-
-  if (tocLinks.length > 0 && headings.length > 0) {
-    function updateActiveToc() {
-      let current = '';
-      const scrollY = window.scrollY;
-
-      headings.forEach(heading => {
-        if (heading.id) {
-          const rect = heading.getBoundingClientRect();
-          const headingTop = rect.top + scrollY;
-
-          if (headingTop <= scrollY + 150) {
-            current = heading.id;
-          }
-        }
-      });
-
-      tocLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
-    }
-
-    let ticking = false;
-    window.addEventListener('scroll', function() {
-      if (!ticking) {
-        requestAnimationFrame(updateActiveToc);
-        ticking = true;
-        setTimeout(() => { ticking = false; }, 16);
-      }
-    });
-
-    updateActiveToc();
-  }
 });
 </script>

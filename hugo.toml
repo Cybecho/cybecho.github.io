@@ -27,17 +27,16 @@ mainSections = ["posts"]
 
   title = "삽질 저장소"
   subtitle = "본질에 몰입하는 엔지니어 입니다. HW 및 OS에 관심이 많습니다."
-  
+
   # SEO 설정
   keywords = ["프로그래밍", "개발", "기술블로그", "Hugo", "GitHub", "엔지니어링"]
-  
+
   # Google Analytics
   googleAnalytics = "G-3S7YFLEF06"
-  
-  # Google Search Console 
+
+  # Google Search Console
   googleSiteVerification = "Qo0OxfN5ruMcndy9ZDJD0ldtj-8gqSZkhc_0C2bx6Po"
 
-  
   postSectionName = "블로그"
 
   showToc = true
@@ -48,7 +47,33 @@ mainSections = ["posts"]
   ShowCodeCopyButtons = true
   UseHugoToc = true
   colorScheme = "light"
-  
+
+  # 소셜 링크 (우측 프로필 위젯에 표시)
+  [[params.social]]
+    name = "GitHub"
+    url = "https://github.com/Cybecho"
+    icon = "github"
+
+  [[params.social]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/cybecho/"
+    icon = "linkedin"
+
+  [[params.social]]
+    name = "Brunch"
+    url = "https://brunch.co.kr/@cybecho"
+    icon = "brunch"
+
+  [[params.social]]
+    name = "Portfolio"
+    url = "https://gamma.app/docs/Infra-75ni4cxerzurjak"
+    icon = "portfolio"
+
+  [[params.social]]
+    name = "Reddit"
+    url = "https://www.reddit.com/user/HelloZOOO/"
+    icon = "reddit"
+
 [menu]
   [[menu.main]]
     identifier = "posts"

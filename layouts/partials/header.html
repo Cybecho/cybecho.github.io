@@ -5,9 +5,14 @@
 
 <nav class="site-nav">
   <div class="nav-container">
-    <!-- Mobile Sidebar Toggle (왼쪽) -->
+    <!-- Mobile Sidebar Toggle (좌측) -->
     <button class="sidebar-toggle" id="sidebarToggle" aria-label="메뉴">
       <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;">[Menu]</span>
+    </button>
+
+    <!-- Mobile Right Sidebar Toggle (우측) -->
+    <button class="sidebar-right-toggle" id="sidebarRightToggle" aria-label="프로필">
+      <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;">[Profile]</span>
     </button>
 
     <!-- Search (오른쪽) -->
@@ -38,7 +43,8 @@
 }
 
 /* Sidebar Toggle (모바일에서만 표시) */
-.sidebar-toggle {
+.sidebar-toggle,
+.sidebar-right-toggle {
   display: none;
   align-items: center;
   justify-content: center;
@@ -51,9 +57,11 @@
   font-size: 12pt;
   text-decoration: underline;
   transition: none;
+  margin-right: 8px;
 }
 
-.sidebar-toggle:hover {
+.sidebar-toggle:hover,
+.sidebar-right-toggle:hover {
   background: #E0E0E0;
   color: #000000;
   text-decoration: underline;
@@ -99,7 +107,8 @@
   }
 
   /* 모바일에서 사이드바 토글 표시 */
-  .sidebar-toggle {
+  .sidebar-toggle,
+  .sidebar-right-toggle {
     display: flex;
   }
 
@@ -123,6 +132,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const searchBtn = document.getElementById('search-btn');
+  const sidebarRightToggle = document.getElementById('sidebarRightToggle');
 
   // Search button functionality
   if (searchBtn) {
@@ -134,6 +144,17 @@ document.addEventListener('DOMContentLoaded', function() {
         if (searchInput) {
           searchInput.focus();
         }
+      }
+    });
+  }
+
+  // Right sidebar toggle functionality
+  if (sidebarRightToggle) {
+    sidebarRightToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      const sidebarRight = document.getElementById('sidebarRight');
+      if (sidebarRight) {
+        sidebarRight.classList.add('active');
       }
     });
   }
