@@ -4,16 +4,15 @@
   <div class="www_sidebar">
     <b>Search</b>
     <br>
-    <form action="https://www.google.com/search" method="get">
+    <form id="search-form" action="#">
       <div>
-        <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL }}">
-        <input type="text" name="q" size="25" id="search-input" placeholder="Search this site...">
+        <input type="text" id="search-input" size="25" placeholder="Search this site...">
         <br>
         <input type="submit" value="Search!">
       </div>
     </form>
     <br>
-    <p style="font-size:smaller">Or use Ctrl+K for local search</p>
+    <p style="font-size:smaller">Or use Ctrl+K to focus</p>
   </div>
 </div>
 
@@ -73,6 +72,9 @@
   transform: translate(-50%, -50%);
   width: 300px;
   max-width: 90%;
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  padding: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -87,11 +89,17 @@
 let searchIndex = [];
 let fuse;
 
-async function initLocalSearch() {
+async function initSearch() {
   try {
+    console.log('Initializing search...');
+    
+    // Load search index
     const response = await fetch('/index.json');
     searchIndex = await response.json();
+    
+    console.log('Search index loaded:', searchIndex.length, 'posts');
 
+    // Initialize Fuse.js
     const fuseOptions = {
       keys: [
         { name: 'title', weight: 0.4 },
@@ -111,7 +119,7 @@ async function initLocalSearch() {
     // Setup local search
     setupLocalSearch();
 
-    console.log('Local search initialized with', searchIndex.length, 'posts');
+    console.log('Local search initialized successfully');
   } catch (error) {
     console.error('Failed to initialize local search:', error);
   }
@@ -121,17 +129,28 @@ function setupLocalSearch() {
   const searchModal = document.getElementById('search-modal');
   const searchOverlay = document.getElementById('search-overlay');
   const searchInput = document.getElementById('search-input');
+  const searchForm = document.getElementById('search-form');
 
-  if (!searchModal) return;
+  if (!searchModal) {
+    console.warn('Search modal not found');
+    return;
+  }
 
   // Override form submission for local search
-  const form = searchModal.querySelector('form');
-  if (form) {
-    form.addEventListener('submit', function(e) {
+  if (searchForm) {
+    searchForm.addEventListener('submit', function(e) {
       e.preventDefault();
       const query = searchInput.value.trim();
-      if (query && fuse) {
+      
+      if (!query) {
+        closeModal();
+        return;
+      }
+
+      if (fuse) {
         const results = fuse.search(query);
+        console.log('Search results:', results.length, 'for query:', query);
+        
         if (results.length > 0) {
           // Redirect to first result
           window.location.href = results[0].item.url;
@@ -145,10 +164,14 @@ function setupLocalSearch() {
   // Close modal functions
   function closeModal() {
     searchModal.style.display = 'none';
-    searchInput.value = '';
+    if (searchInput) {
+      searchInput.value = '';
+    }
   }
 
-  searchOverlay.addEventListener('click', closeModal);
+  if (searchOverlay) {
+    searchOverlay.addEventListener('click', closeModal);
+  }
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && searchModal.style.display !== 'none') {
@@ -159,8 +182,8 @@ function setupLocalSearch() {
 
 // Initialize when DOM is loaded
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initLocalSearch);
+  document.addEventListener('DOMContentLoaded', initSearch);
 } else {
-  initLocalSearch();
+  initSearch();
 }
 </script>

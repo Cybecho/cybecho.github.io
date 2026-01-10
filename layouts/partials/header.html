@@ -131,22 +131,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const searchBtn = document.getElementById('search-btn');
   const sidebarRightToggle = document.getElementById('sidebarRightToggle');
-
-  // Search button functionality
-  if (searchBtn) {
-    searchBtn.addEventListener('click', function() {
-      const searchModal = document.getElementById('search-modal');
-      if (searchModal) {
-        searchModal.style.display = 'block';
-        const searchInput = document.getElementById('search-input');
-        if (searchInput) {
-          searchInput.focus();
-        }
-      }
-    });
-  }
 
   // Right sidebar toggle functionality
   if (sidebarRightToggle) {
@@ -158,13 +143,5 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-
-  // Ctrl+K 단축키로 검색 열기
-  document.addEventListener('keydown', function(e) {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-      e.preventDefault();
-      searchBtn.click();
-    }
-  });
 });
 </script>
