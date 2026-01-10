@@ -101,11 +101,14 @@ document.addEventListener('DOMContentLoaded', function() {
   max-width: 100%;
   width: 100%;
   font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+  overflow-x: hidden;
 }
 
 .post-content {
   max-width: 100%;
   margin: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .www_text {
@@ -139,6 +142,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .www_text p {
   margin-bottom: 8px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.www_text a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .www_text ul, .www_text ol {
@@ -157,6 +168,10 @@ document.addEventListener('DOMContentLoaded', function() {
   margin: 8px 0;
   font-style: italic;
   color: #000000;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-x: auto;
 }
 
 .www_text code {
@@ -187,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .www_text img {
-  max-width: 1200px;
+  max-width: 100%;
   height: auto;
   border-radius: 0;
   margin: 8px 0;
@@ -204,11 +219,13 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .www_text table {
-  width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
   margin: 8px 0;
   font-size: 12pt;
   border: 2px solid gray;
+  display: block;
+  overflow-x: auto;
 }
 
 .www_text th,

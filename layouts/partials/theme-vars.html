@@ -49,6 +49,9 @@ h6 { font-size: 14pt; }
 a {
   color: #0000EE;
   text-decoration: underline;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 a:visited {
@@ -67,6 +70,8 @@ a:active {
 /* 단락 */
 p {
   margin: 8px 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* 코드 블록 - 모노스페이스 폰트 */
@@ -135,6 +140,10 @@ blockquote {
   padding-left: 12px;
   border-left: 3px solid #999999;
   color: #000000;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-x: auto;
 }
 
 /* 수평선 */
