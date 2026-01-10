@@ -151,7 +151,13 @@
     font-weight: bold;
     font-size: 105%;
     color: #000000;
-    background: url('/images/lines.gif');
+    /* CSS Gradient Replacement */
+    background-color: #FAFAFA;
+    background-image: repeating-linear-gradient(to bottom,
+        #FAFAFA,
+        #FAFAFA 2px,
+        #E0E0E0 2px,
+        #E0E0E0 3px);
     font-family: "Georgia", "Palatino", "Times", "Roman", "SanSerif";
     text-align: center;
     vertical-align: middle;
@@ -238,11 +244,14 @@
     margin-right: 0em;
     padding: 0.15em 0.15em 0.15em 0.15em;
     width: 100%;
-    /* Restore background texture for filled look */
-    background: url('/images/lines.gif');
+    /* High Contrast Silver Lines - 4px repeat pattern */
+    background-color: #FFFFFF;
+    background-image: repeating-linear-gradient(to bottom,
+        #FFFFFF,
+        #FFFFFF 3px,
+        #BFBFBF 3px,
+        #BFBFBF 4px);
     border: 1px solid #CCCCCC;
-    border-top: 1px solid #C0C0C0;
-    border-bottom: 1px solid #C0C0C0;
     margin-bottom: 1em;
     padding: 10px;
   }
@@ -252,10 +261,18 @@
     /* LLVM Style Thinner Lines for Content Headers */
     border-top: 1px solid #CCCCCC;
     border-bottom: 1px solid #CCCCCC;
-    background: url('/images/lines.gif');
+    /* High Contrast Silver Lines */
+    background-color: #FFFFFF;
+    background-image: repeating-linear-gradient(to bottom,
+        #FFFFFF,
+        #FFFFFF 3px,
+        #BFBFBF 3px,
+        #BFBFBF 4px);
     text-align: center;
     padding: 4px 0;
     margin-top: 24px;
+    width: 100%;
+    display: block;
   }
 
   .www_sectiontitle,
@@ -267,7 +284,13 @@
     font-family: "Georgia", "Palatino", "Times", "Roman";
     font-weight: bold;
     font-size: 18pt;
-    background: url('/images/lines.gif');
+    /* High Contrast Silver Lines */
+    background-color: #FFFFFF;
+    background-image: repeating-linear-gradient(to bottom,
+        #FFFFFF,
+        #FFFFFF 3px,
+        #BFBFBF 3px,
+        #BFBFBF 4px);
     padding: 0.1em 0.1em 0.1em 0.1em;
     width: 100%;
     margin-bottom: 0.3em;
