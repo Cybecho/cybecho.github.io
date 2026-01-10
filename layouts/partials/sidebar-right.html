@@ -9,28 +9,29 @@
     <b>Profile</b>
     <br><br>
     <center>
-      <img src="{{ .Site.Params.author.avatar | absURL }}" width="64" height="64" alt="{{ .Site.Params.author.name }}" style="border: 1px solid #000000;">
+      <img src="{{ .Site.Params.author.avatar | absURL }}" width="64" height="64" alt="{{ .Site.Params.author.name }}"
+        style="border: 1px solid #000000;">
       <br><br>
       <strong>{{ .Site.Params.author.name }}</strong>
     </center>
     <br><br>
     <b>Social:</b><br>
     {{ range .Site.Params.social }}
-      <a href="{{ .url }}" target="_blank" rel="noopener" class="sidebar-link">{{ .name }}</a><br>
+    <a href="{{ .url }}" target="_blank" rel="noopener" class="sidebar-link">{{ .name }}</a><br>
     {{ end }}
   </div>
 
   <!-- TOC (포스트 페이지만) -->
   {{ if and (eq .Kind "page") (eq .Type "posts") }}
-    {{ if .TableOfContents }}
-    <div class="www_sidebar">
-      <b>On This Page:</b>
-      <br>
-      <div class="sidebar-toc-content">
-        {{ .TableOfContents }}
-      </div>
+  {{ if .TableOfContents }}
+  <div class="www_sidebar">
+    <b>On This Page:</b>
+    <br>
+    <div class="sidebar-toc-content">
+      {{ .TableOfContents }}
     </div>
-    {{ end }}
+  </div>
+  {{ end }}
   {{ end }}
 </aside>
 
@@ -38,242 +39,242 @@
 <div class="sidebar-right-overlay" id="sidebarRightOverlay"></div>
 
 <style>
-/* ===== 우측 사이드바 ===== */
-.sidebar-right {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  width: 250px;
-  background: #FFFFFF;
-  border-left: 1px solid #000000;
-  overflow-y: auto;
-  padding: 12px 0;
-  flex-shrink: 0;
-  font-family: "Georgia", "Palatino", "Times", "Roman", serif;
-}
-
-/* 스크롤바 스타일 */
-.sidebar-right::-webkit-scrollbar {
-  width: 8px;
-}
-
-.sidebar-right::-webkit-scrollbar-thumb {
-  background: #808080;
-  border-radius: 0;
-}
-
-.sidebar-right::-webkit-scrollbar-track {
-  background: #E0E0E0;
-}
-
-/* 프로필 이미지 */
-.sidebar-right img {
-  display: block;
-  margin: 0 auto;
-}
-
-/* TOC 스타일 */
-.sidebar-toc-content {
-  font-size: 11pt;
-  text-align: left;
-}
-
-.sidebar-toc-content ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.sidebar-toc-content li {
-  margin: 4px 0;
-}
-
-.sidebar-toc-content a {
-  color: #0000EE;
-  text-decoration: underline;
-  font-size: 11pt;
-  transition: none;
-}
-
-.sidebar-toc-content a:visited {
-  color: #551A8B;
-}
-
-.sidebar-toc-content a:hover {
-  background: #E0E0E0;
-  color: #0000EE;
-}
-
-.sidebar-toc-content a.active {
-  color: #000000;
-  background: #E0E0E0;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* 중첩된 TOC */
-.sidebar-toc-content ul ul {
-  padding-left: 16px;
-}
-
-.sidebar-toc-content ul ul a {
-  font-size: 10pt;
-}
-
-/* 모바일 닫기 버튼 (기본적으로 숨김) */
-.sidebar-right-close {
-  display: none;
-}
-
-/* 사이드바 오버레이 (기본적으로 숨김) */
-.sidebar-right-overlay {
-  display: none;
-}
-
-/* ===== 모바일 반응형 (< 768px) ===== */
-@media (max-width: 768px) {
+  /* ===== 우측 사이드바 ===== */
   .sidebar-right {
-    position: fixed;
-    right: -280px;
+    position: sticky;
     top: 0;
-    width: 280px;
     height: 100vh;
-    z-index: 999;
-    border: 1px solid #000000;
-    padding-top: 12px;
-  }
-
-  .sidebar-right.active {
-    right: 0;
-  }
-
-  /* 닫기 버튼 표시 */
-  .sidebar-right-close {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 8px;
-    right: 8px;
+    width: 250px;
     background: #FFFFFF;
-    border: 1px solid #000000;
-    color: #000000;
-    cursor: pointer;
-    padding: 4px 8px;
-    z-index: 1000;
+    border-left: none;
+    overflow-y: auto;
+    padding: 12px 0;
+    flex-shrink: 0;
     font-family: "Georgia", "Palatino", "Times", "Roman", serif;
-    transition: none;
   }
 
-  .sidebar-right-close:hover {
+  /* 스크롤바 스타일 */
+  .sidebar-right::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .sidebar-right::-webkit-scrollbar-thumb {
+    background: #808080;
+    border-radius: 0;
+  }
+
+  .sidebar-right::-webkit-scrollbar-track {
     background: #E0E0E0;
   }
 
-  /* 오버레이 표시 */
-  .sidebar-right-overlay {
+  /* 프로필 이미지 */
+  .sidebar-right img {
     display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 998;
-    opacity: 0;
-    visibility: hidden;
+    margin: 0 auto;
   }
 
-  .sidebar-right-overlay.active {
-    opacity: 1;
-    visibility: visible;
+  /* TOC 스타일 */
+  .sidebar-toc-content {
+    font-size: 11pt;
+    text-align: left;
   }
 
-  /* 사이드바 열렸을 때 body 스크롤 방지 */
-  body.sidebar-right-open {
-    overflow: hidden;
+  .sidebar-toc-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
   }
-}
 
-/* ===== 태블릿 (768px - 1024px) ===== */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .sidebar-right {
-    width: 200px;
+  .sidebar-toc-content li {
+    margin: 4px 0;
   }
-}
+
+  .sidebar-toc-content a {
+    color: #0000EE;
+    text-decoration: underline;
+    font-size: 11pt;
+    transition: none;
+  }
+
+  .sidebar-toc-content a:visited {
+    color: #551A8B;
+  }
+
+  .sidebar-toc-content a:hover {
+    background: #E0E0E0;
+    color: #0000EE;
+  }
+
+  .sidebar-toc-content a.active {
+    color: #000000;
+    background: #E0E0E0;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  /* 중첩된 TOC */
+  .sidebar-toc-content ul ul {
+    padding-left: 16px;
+  }
+
+  .sidebar-toc-content ul ul a {
+    font-size: 10pt;
+  }
+
+  /* 모바일 닫기 버튼 (기본적으로 숨김) */
+  .sidebar-right-close {
+    display: none;
+  }
+
+  /* 사이드바 오버레이 (기본적으로 숨김) */
+  .sidebar-right-overlay {
+    display: none;
+  }
+
+  /* ===== 모바일 반응형 (< 768px) ===== */
+  @media (max-width: 768px) {
+    .sidebar-right {
+      position: fixed;
+      right: -280px;
+      top: 0;
+      width: 280px;
+      height: 100vh;
+      z-index: 999;
+      border: 1px solid #000000;
+      padding-top: 12px;
+    }
+
+    .sidebar-right.active {
+      right: 0;
+    }
+
+    /* 닫기 버튼 표시 */
+    .sidebar-right-close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: #FFFFFF;
+      border: 1px solid #000000;
+      color: #000000;
+      cursor: pointer;
+      padding: 4px 8px;
+      z-index: 1000;
+      font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+      transition: none;
+    }
+
+    .sidebar-right-close:hover {
+      background: #E0E0E0;
+    }
+
+    /* 오버레이 표시 */
+    .sidebar-right-overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 998;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .sidebar-right-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* 사이드바 열렸을 때 body 스크롤 방지 */
+    body.sidebar-right-open {
+      overflow: hidden;
+    }
+  }
+
+  /* ===== 태블릿 (768px - 1024px) ===== */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .sidebar-right {
+      width: 200px;
+    }
+  }
 </style>
 
 <script>
-// 우측 사이드바 TOC 활성화 추적 (포스트 페이지만)
-document.addEventListener('DOMContentLoaded', function() {
-  const tocLinks = document.querySelectorAll('.sidebar-toc-content a');
-  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  // 우측 사이드바 TOC 활성화 추적 (포스트 페이지만)
+  document.addEventListener('DOMContentLoaded', function () {
+    const tocLinks = document.querySelectorAll('.sidebar-toc-content a');
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
 
-  if (tocLinks.length > 0 && headings.length > 0) {
-    function updateActiveToc() {
-      let current = '';
-      const scrollY = window.scrollY;
+    if (tocLinks.length > 0 && headings.length > 0) {
+      function updateActiveToc() {
+        let current = '';
+        const scrollY = window.scrollY;
 
-      headings.forEach(heading => {
-        if (heading.id) {
-          const rect = heading.getBoundingClientRect();
-          const headingTop = rect.top + scrollY;
+        headings.forEach(heading => {
+          if (heading.id) {
+            const rect = heading.getBoundingClientRect();
+            const headingTop = rect.top + scrollY;
 
-          if (headingTop <= scrollY + 150) {
-            current = heading.id;
+            if (headingTop <= scrollY + 150) {
+              current = heading.id;
+            }
           }
+        });
+
+        tocLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      let ticking = false;
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          requestAnimationFrame(updateActiveToc);
+          ticking = true;
+          setTimeout(() => { ticking = false; }, 16);
         }
       });
 
-      tocLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
+      updateActiveToc();
     }
 
-    let ticking = false;
-    window.addEventListener('scroll', function() {
-      if (!ticking) {
-        requestAnimationFrame(updateActiveToc);
-        ticking = true;
-        setTimeout(() => { ticking = false; }, 16);
+    // 모바일 우측 사이드바 관리
+    const sidebarRightClose = document.getElementById('sidebarRightClose');
+    const sidebarRight = document.getElementById('sidebarRight');
+    const sidebarRightOverlay = document.getElementById('sidebarRightOverlay');
+
+    function closeSidebarRight() {
+      if (sidebarRight) {
+        sidebarRight.classList.remove('active');
+      }
+      if (sidebarRightOverlay) {
+        sidebarRightOverlay.classList.remove('active');
+      }
+      document.body.classList.remove('sidebar-right-open');
+    }
+
+    // 닫기 버튼
+    if (sidebarRightClose) {
+      sidebarRightClose.addEventListener('click', closeSidebarRight);
+    }
+
+    // 오버레이 클릭
+    if (sidebarRightOverlay) {
+      sidebarRightOverlay.addEventListener('click', closeSidebarRight);
+    }
+
+    // ESC 키로 우측 사이드바 닫기
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && sidebarRight && sidebarRight.classList.contains('active')) {
+        closeSidebarRight();
       }
     });
-
-    updateActiveToc();
-  }
-
-  // 모바일 우측 사이드바 관리
-  const sidebarRightClose = document.getElementById('sidebarRightClose');
-  const sidebarRight = document.getElementById('sidebarRight');
-  const sidebarRightOverlay = document.getElementById('sidebarRightOverlay');
-
-  function closeSidebarRight() {
-    if (sidebarRight) {
-      sidebarRight.classList.remove('active');
-    }
-    if (sidebarRightOverlay) {
-      sidebarRightOverlay.classList.remove('active');
-    }
-    document.body.classList.remove('sidebar-right-open');
-  }
-
-  // 닫기 버튼
-  if (sidebarRightClose) {
-    sidebarRightClose.addEventListener('click', closeSidebarRight);
-  }
-
-  // 오버레이 클릭
-  if (sidebarRightOverlay) {
-    sidebarRightOverlay.addEventListener('click', closeSidebarRight);
-  }
-
-  // ESC 키로 우측 사이드바 닫기
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && sidebarRight && sidebarRight.classList.contains('active')) {
-      closeSidebarRight();
-    }
   });
-});
 </script>
