@@ -1,332 +1,77 @@
 {{ define "main" }}
-<div class="series-container">
-  <header class="series-header">
-    <nav class="breadcrumb">
-      <a href="/series/">시리즈</a>
-      <span class="separator">›</span>
-      <span class="current">{{ .Title }}</span>
-    </nav>
-    <h1 class="series-title">{{ .Title }}</h1>
-    <p class="series-description">{{ .Content }}</p>
-  </header>
+<table width="100%" border="0" cellpadding="10">
+<tr>
+<td valign="top">
 
-  <!-- 🎯 시리즈에 속한 포스트들 가져오기 -->
+<main role="main" class="main-content">
+  <div class="www_sectiontitle">{{ .Title }}</div>
+
+  {{ .Content | safeHTML }}
+
+  <!-- 시리즈 포스트 리스트 -->
   {{ $seriesName := .Title }}
   {{ $posts := where .Site.RegularPages "Params.series" "intersect" (slice $seriesName) }}
   {{ $posts = $posts.ByDate.Reverse }}
 
-  <div class="series-stats">
-    <span class="post-count">📚 총 {{ len $posts }}개 글</span>
-    {{ if $posts }}
-      <span class="date-range">
-        {{ (index $posts (sub (len $posts) 1)).Date.Format "2006년 1월" }} - 
-        {{ (index $posts 0).Date.Format "2006년 1월" }}
-      </span>
-    {{ end }}
-  </div>
-
-  <!-- 포스트 목록 -->
   {{ if $posts }}
-    <div class="series-posts">
-      {{ range $index, $post := $posts }}
-        <article class="series-post-item">
-          <div class="post-number">{{ add $index 1 }}</div>
-          <div class="post-content">
-            <h3 class="post-title">
-              <a href="{{ $post.Permalink }}">{{ $post.Title }}</a>
-            </h3>
-            <time class="post-date">{{ $post.Date.Format "2006년 1월 2일" }}</time>
-            {{ if $post.Description }}
-              <p class="post-summary">{{ $post.Description }}</p>
-            {{ else if $post.Summary }}
-              <p class="post-summary">{{ $post.Summary }}</p>
-            {{ end }}
-            {{ if $post.Params.tags }}
-              <div class="post-tags">
-                {{ range $post.Params.tags }}
-                  <span class="tag"># {{ . }}</span>
-                {{ end }}
-              </div>
-            {{ end }}
-          </div>
-        </article>
-      {{ end }}
-    </div>
-  {{ else }}
-    <div class="no-posts">
-      <p>📝 이 시리즈에 속한 글이 아직 없습니다.</p>
-      <p><small>곧 흥미로운 내용으로 찾아뵙겠습니다!</small></p>
-    </div>
-  {{ end }}
+    <div class="www_sectiontitle">Posts ({{ len $posts }})</div>
 
-  <!-- 다른 시리즈 둘러보기 -->
-  <div class="other-series">
-    <h3>다른 시리즈 둘러보기</h3>
-    <div class="series-grid">
-      {{ range .Site.Taxonomies.series }}
-        {{ if ne .Page.Title $seriesName }}
-          <a href="{{ .Page.Permalink }}" class="series-card">
-            <h4>{{ .Page.Title }}</h4>
-            <span class="series-count">{{ .Count }}개 글</span>
-          </a>
+    <div class="www_text">
+      {{ range $index, $post := $posts }}
+        <p>
+          <strong>{{ add $index 1 }}. {{ $post.Date.Format "2006-01-02" }}:</strong>
+          <a href="{{ $post.Permalink }}">{{ $post.Title }}</a>
+        </p>
+        {{ if $post.Description }}
+        <p style="margin-left: 2em;">
+          {{ $post.Description }}
+        </p>
+        {{ end }}
+        {{ with $post.Params.tags }}
+        <p style="margin-left: 2em;">
+          <span style="font-size:smaller">
+            {{ range first 5 . }}#{{ . }} {{ end }}
+          </span>
+        </p>
         {{ end }}
       {{ end }}
     </div>
-  </div>
-</div>
+  {{ else }}
+    <div class="www_text">
+      <p>No posts available for this series.</p>
+    </div>
+  {{ end }}
+</main>
+
+</td>
+</tr>
+</table>
 
 <style>
-.series-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  color: var(--text-color);
-  background: var(--background-color);
+.main-content {
+  padding: 0;
+  max-width: 100%;
+  width: 100%;
+  font-family: "Georgia", "Palatino", "Times", "Roman", serif;
 }
 
-.series-header {
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.breadcrumb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  color: #6b7280;
-}
-
-.breadcrumb a {
-  color: var(--link-color);
-  text-decoration: none;
-}
-
-.breadcrumb a:hover {
+.www_text a {
+  color: #0000EE;
   text-decoration: underline;
 }
 
-.separator {
-  color: var(--text-color-secondary);
+.www_text a:visited {
+  color: #551A8B;
 }
 
-.current {
-  font-weight: 500;
-  color: var(--text-color);
+.www_text a:hover {
+  color: #0000EE;
+  text-decoration: underline;
 }
 
-.series-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
-  color: var(--heading-color);
-}
-
-.series-description {
-  font-size: 1.1rem;
-  color: var(--text-color-secondary);
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.series-stats {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: var(--secondary-bg);
-  border-radius: 12px;
-  border: 2px solid var(--border-color);
-}
-
-.post-count {
-  font-weight: 600;
-  color: #059669;
-}
-
-.date-range {
-  color: var(--text-color-secondary);
-  font-size: 0.9rem;
-}
-
-.series-posts {
-  margin-bottom: 4rem;
-}
-
-.series-post-item {
-  display: flex;
-  gap: 1rem;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  background: var(--background-color);
-  border: 2px solid var(--border-color);
-  border-radius: 16px;
-  transition: all 0.3s ease;
-}
-
-.series-post-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  border-color: var(--primary-color);
-}
-
-.post-number {
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  background: var(--primary-color);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.post-content {
-  flex: 1;
-}
-
-.post-title {
-  margin: 0 0 0.5rem 0;
-}
-
-.post-title a {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--heading-color);
-  text-decoration: none;
-  line-height: 1.4;
-}
-
-.post-title a:hover {
-  color: var(--link-color);
-}
-
-.post-date {
-  font-size: 0.85rem;
-  color: var(--text-color-secondary);
-  font-weight: 500;
-}
-
-.post-summary {
-  margin: 0.5rem 0;
-  color: var(--text-color-secondary);
-  line-height: 1.6;
-}
-
-.post-tags {
-  margin-top: 0.5rem;
-}
-
-.tag {
-  display: inline-block;
-  background: var(--tertiary-bg);
-  color: var(--text-color);
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 8px;
-  margin: 0.2rem 0.3rem 0 0;
-  font-weight: 500;
-}
-
-.no-posts {
-  text-align: center;
-  padding: 4rem 2rem;
-  color: var(--text-color-secondary);
-  font-size: 1.1rem;
-}
-
-.other-series {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 2px solid var(--border-color);
-}
-
-.other-series h3 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: var(--heading-color);
-}
-
-.series-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.series-card {
-  display: block;
-  padding: 1rem;
-  background: var(--secondary-bg);
-  border: 2px solid var(--border-color);
-  border-radius: 12px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.series-card:hover {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
-  transform: translateY(-2px);
-}
-
-.series-card h4 {
-  margin: 0 0 0.5rem 0;
-  color: var(--heading-color);
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.series-card:hover h4 {
-  color: white;
-}
-
-.series-count {
-  font-size: 0.8rem;
-  color: var(--text-color-secondary);
-  font-weight: 500;
-}
-
-.series-card:hover .series-count {
-  color: #bfdbfe;
-}
-
-/* 화이트모드 고정 - 다크모드 완전 제거 */
-
-/* 반응형 */
 @media (max-width: 768px) {
-  .series-container {
-    padding: 1.5rem 1rem;
-  }
-
-  .series-title {
-    font-size: 2rem;
-  }
-
-  .series-stats {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .series-post-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .post-number {
-    align-self: center;
-  }
-
-  .series-grid {
-    grid-template-columns: 1fr;
+  .main-content {
+    padding: 0;
   }
 }
 </style>

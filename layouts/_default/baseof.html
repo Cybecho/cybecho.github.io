@@ -1,22 +1,23 @@
-<!DOCTYPE html>
-<html lang="ko">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-  
+
   <!-- SEO Meta Tags -->
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
   <meta name="author" content="{{ .Site.Params.author.name }}">
   <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags ", " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords ", " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{{ .Permalink }}">
-  
+
   <!-- Schema.org for Google -->
   <meta itemprop="name" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
   <meta itemprop="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
   {{ if .Params.featured_image }}<meta itemprop="image" content="{{ .Params.featured_image | absURL }}">{{ end }}
-  
+
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
@@ -28,31 +29,31 @@
   {{ if .Date }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
   {{ if .Lastmod }}<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
   {{ with .Params.tags }}{{ range . }}<meta property="article:tag" content="{{ . }}">{{ end }}{{ end }}
-  
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
   <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
   {{ if .Params.featured_image }}<meta name="twitter:image" content="{{ .Params.featured_image | absURL }}">{{ end }}
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/gif" href="https://minecraft.wiki/images/Enchanted_Stone_Shovel.gif?33e82">
-  
+
   <!-- RSS Feed -->
   {{ with .OutputFormats.Get "RSS" }}
     <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}">
   {{ end }}
-  
+
   <!-- JSON Feed for Search -->
   {{ with .OutputFormats.Get "JSON" }}
     <link href="{{ .Permalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }} Search Index">
   {{ end }}
-  
+
   <!-- Google Fonts for Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
-  
+
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
@@ -105,7 +106,7 @@
   {{ with .Site.Params.googleSiteVerification }}
   <meta name="google-site-verification" content="{{ . }}">
   {{ end }}
-  
+
   <!-- Google Analytics -->
   {{ with .Site.Params.googleAnalytics }}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
@@ -123,62 +124,35 @@
 <body>
   {{ partial "header.html" . }}
 
-  <!-- LLVM 스타일 레이아웃: 좌측 사이드바 + 본문 -->
-  <div class="llvm-layout">
-    {{ partial "sidebar.html" . }}
+  <!-- LLVM 스타일 Table 레이아웃: 좌측 사이드바 + 본문 -->
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td valign="top" align="center" style="width: 220px;">
+        {{ partial "sidebar.html" . }}
+      </td>
+      <td valign="top">
+        {{ block "main" . }}{{ end }}
+      </td>
+    </tr>
+  </table>
 
-    <main role="main" class="main-content">
-      {{ block "main" . }}{{ end }}
-    </main>
-  </div>
-
-  <style>
-  /* LLVM 스타일 Grid 레이아웃 */
-  .llvm-layout {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    min-height: calc(100vh - 40px);
-  }
-
-  .main-content {
-    padding: 12px;
-    max-width: 100%;
-    width: 100%;
-    font-family: Georgia, 'Times New Roman', serif;
-  }
-
-  /* 모바일: 사이드바를 숨기고 전체 너비 */
-  @media (max-width: 768px) {
-    .llvm-layout {
-      grid-template-columns: 1fr;
-    }
-
-    .main-content {
-      padding: 10px 8px;
-    }
-  }
-  </style>
-  
   <!-- Search Modal -->
   {{ partial "search.html" . }}
-  
+
   <!-- URL Preview -->
   {{ partial "url-preview.html" . }}
-  
+
   <!-- Code Enhancements -->
   {{ partial "code-enhancements.html" . }}
-  
-  <!-- Draggable TOC (Mobile) -->
-  {{ partial "draggable-toc.html" . }}
-  
+
   <!-- URL Preview Configuration -->
   <script src="/js/url-preview-config.js"></script>
-  
+
   <!-- Mermaid Diagrams -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      mermaid.initialize({ 
+      mermaid.initialize({
         startOnLoad: true,
         theme: 'default',
         securityLevel: 'loose',
@@ -193,16 +167,13 @@
   <!-- Load search scripts -->
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
   <script>
-    // Initialize search functionality
     document.addEventListener('DOMContentLoaded', function() {
       if (typeof initSearch === 'function') {
         initSearch();
       }
     });
-    
-    // Keyboard shortcuts
+
     document.addEventListener('keydown', function(e) {
-      // Ctrl+K or Cmd+K to open search
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
         const searchModal = document.getElementById('search-modal');
@@ -211,8 +182,7 @@
           document.getElementById('search-input').focus();
         }
       }
-      
-      // Escape to close search
+
       if (e.key === 'Escape') {
         const searchModal = document.getElementById('search-modal');
         if (searchModal && searchModal.style.display === 'block') {
@@ -221,5 +191,105 @@
       }
     });
   </script>
+
+  <!-- 반응형 스타일 -->
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /* 데스크톱 */
+  @media (min-width: 1025px) {
+    table {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: table;
+    }
+
+    table tbody {
+      display: table-row-group;
+    }
+
+    table tr {
+      display: table-row;
+    }
+
+    table td {
+      display: table-cell;
+    }
+
+    table td:first-child {
+      display: table-cell;
+      width: 220px;
+    }
+
+    table td:last-child {
+      width: auto;
+    }
+  }
+
+  /* 태블릿 */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    table {
+      max-width: 100%;
+      display: table;
+    }
+
+    table tbody {
+      display: table-row-group;
+    }
+
+    table tr {
+      display: table-row;
+    }
+
+    table td {
+      display: table-cell;
+    }
+
+    table td:first-child {
+      display: table-cell;
+      width: 200px;
+    }
+
+    table td:last-child {
+      width: auto;
+    }
+  }
+
+  /* 모바일 */
+  @media (max-width: 768px) {
+    table {
+      display: block;
+      max-width: 100vw;
+      width: 100%;
+    }
+
+    table tbody {
+      display: block;
+    }
+
+    table tr {
+      display: block;
+    }
+
+    table td:first-child {
+      display: none;
+    }
+
+    table td:last-child {
+      display: block;
+      width: 100% !important;
+      padding: 8px !important;
+    }
+
+    body {
+      padding: 0;
+    }
+  }
+  </style>
 </body>
 </html>

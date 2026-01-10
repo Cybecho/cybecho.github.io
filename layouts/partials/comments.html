@@ -1,233 +1,111 @@
-<!-- Giscus 댓글 시스템 -->
-<div class="comments-section">
-  <div class="comments-header">
-    <h3 class="comments-title">💬 댓글</h3>
-    <p class="comments-description">
-      GitHub 계정으로 로그인하여 댓글을 남겨보세요. 
-      <a href="https://github.com/login" target="_blank" rel="noopener" class="no-preview">GitHub 로그인</a>
-    </p>
-  </div>
-  
-  <div class="giscus-container">
-    <!-- 
-    🔧 Giscus 설정 안내:
-    1. https://giscus.app/ko 에서 설정 생성
-    2. 아래 data-repo-id와 data-category-id를 생성된 값으로 교체
-    3. 자세한 설정 방법은 GISCUS_SETUP_GUIDE.md 참조
-    -->
-    
-    <script src="https://giscus.app/client.js"
-            data-repo="Cybecho/cybecho.github.io"
-            data-repo-id="R_kgDOPPm4Qg"
-            data-category="Comments"
-            data-category-id="DIC_kwDOPPm4Qs4CtUGU"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="1"
-            data-input-position="top"
-            data-theme="preferred_color_scheme"
-            data-lang="ko"
-            data-loading="lazy"
-            crossorigin="anonymous"
-            async>
-    </script>
-    
-    <!-- 설정이 완료되지 않은 경우 표시될 안내 메시지 -->
-    <div class="giscus-setup-notice" id="giscus-setup-notice">
-      <div class="setup-notice-content">
-        <h4>🔧 댓글 시스템 설정이 필요합니다</h4>
-        <p>GitHub Discussions 기반 댓글 시스템을 활성화하려면:</p>
-        <ol>
-          <li><a href="https://giscus.app/ko" target="_blank" class="no-preview">Giscus 설정 페이지</a>에서 설정 생성</li>
-          <li><code>GISCUS_SETUP_GUIDE.md</code> 파일의 안내를 따라 설정 완료</li>
-          <li>Repository의 Discussions 기능 활성화</li>
-        </ol>
-        <p class="setup-help">
-          <strong>Repository 관리자만 설정할 수 있습니다.</strong> 
-          설정이 완료되면 모든 방문자가 댓글을 남길 수 있습니다.
-        </p>
-      </div>
-    </div>
-  </div>
-  
-  <script>
-    // Giscus 로드 확인 및 설정 안내 표시/숨김
-    document.addEventListener('DOMContentLoaded', function() {
-      const notice = document.getElementById('giscus-setup-notice');
-      
-      // 3초 후 Giscus가 로드되었는지 확인
-      setTimeout(function() {
-        const giscusFrame = document.querySelector('.giscus-frame');
-        if (giscusFrame) {
-          // Giscus가 정상 로드되면 안내 메시지 숨김
-          notice.style.display = 'none';
-        } else {
-          // Giscus가 로드되지 않으면 안내 메시지 표시
-          notice.style.display = 'block';
-        }
-      }, 3000);
-    });
-  </script>
+<!-- Giscus 댓글 시스템 - LLVM Style -->
+<div class="www_sectiontitle">Comments</div>
+
+<div class="www_text">
+  <p>
+    GitHub 계정으로 로그인하여 댓글을 남겨보세요.
+    <a href="https://github.com/login" target="_blank" rel="noopener">GitHub 로그인</a>
+  </p>
 </div>
 
+<div class="giscus-container">
+  <!--
+  Giscus 설정 안내:
+  1. https://giscus.app/ko 에서 설정 생성
+  2. 아래 data-repo-id와 data-category-id를 생성된 값으로 교체
+  3. 자세한 설정 방법은 GISCUS_SETUP_GUIDE.md 참조
+  -->
+
+  <script src="https://giscus.app/client.js"
+          data-repo="Cybecho/cybecho.github.io"
+          data-repo-id="R_kgDOPPm4Qg"
+          data-category="Comments"
+          data-category-id="DIC_kwDOPPm4Qs4CtUGU"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="ko"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+
+  <!-- 설정이 완료되지 않은 경우 표시될 안내 메시지 -->
+  <div class="giscus-setup-notice" id="giscus-setup-notice">
+    <div style="text-align: center; padding: 1rem;">
+      <p><strong>댓글 시스템 설정이 필요합니다</strong></p>
+      <p>GitHub Discussions 기반 댓글 시스템을 활성화하려면:</p>
+      <ol style="text-align: left; max-width: 400px; margin: 1rem auto;">
+        <li><a href="https://giscus.app/ko" target="_blank">Giscus 설정 페이지</a>에서 설정 생성</li>
+        <li>GISCUS_SETUP_GUIDE.md 파일의 안내를 따라 설정 완료</li>
+        <li>Repository의 Discussions 기능 활성화</li>
+      </ol>
+      <p><strong>Repository 관리자만 설정할 수 있습니다.</strong></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Giscus 로드 확인 및 설정 안내 표시/숨김
+  document.addEventListener('DOMContentLoaded', function() {
+    const notice = document.getElementById('giscus-setup-notice');
+
+    // 3초 후 Giscus가 로드되었는지 확인
+    setTimeout(function() {
+      const giscusFrame = document.querySelector('.giscus-frame');
+      if (giscusFrame) {
+        // Giscus가 정상 로드되면 안내 메시지 숨김
+        notice.style.display = 'none';
+      } else {
+        // Giscus가 로드되지 않으면 안내 메시지 표시
+        notice.style.display = 'block';
+      }
+    }, 3000);
+  });
+</script>
+
 <style>
-.comments-section {
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 2px solid #e2e8f0;
+.giscus-container {
+  margin-top: 1rem;
 }
 
-.comments-header {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.comments-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #1e293b;
-  margin: 0 0 0.5rem 0;
-}
-
-.comments-description {
-  font-size: 0.9rem;
-  color: #64748b;
-  margin: 0;
-  line-height: 1.5;
-}
-
-.comments-description a {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.comments-description a:hover {
+.www_text a {
+  color: #0000EE;
   text-decoration: underline;
 }
 
-.giscus-container {
-  max-width: 100%;
-  margin: 0 auto;
+.www_text a:visited {
+  color: #551A8B;
 }
 
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-  .comments-section {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-  }
-  
-  .comments-header {
-    margin-bottom: 1.5rem;
-  }
-  
-  .comments-title {
-    font-size: 1.3rem;
-  }
-  
-  .comments-description {
-    font-size: 0.85rem;
-    padding: 0 1rem;
-  }
+.www_text a:hover {
+  color: #0000EE;
+  text-decoration: underline;
 }
 
-/* Giscus 설정 안내 메시지 */
 .giscus-setup-notice {
   display: none;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  border: 2px solid #3b82f6;
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 2rem 0;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
-}
-
-.setup-notice-content h4 {
-  color: #1e293b;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0 0 1rem 0;
-}
-
-.setup-notice-content p {
-  color: #475569;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  border: 2px solid #000000;
+  padding: 1rem;
   margin: 1rem 0;
+  text-align: center;
+  font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+  font-size: 12pt;
 }
 
-.setup-notice-content ol {
-  text-align: left;
-  max-width: 500px;
-  margin: 1.5rem auto;
-  padding-left: 1.5rem;
-  color: #334155;
-}
-
-.setup-notice-content li {
+.giscus-setup-notice p {
   margin: 0.5rem 0;
-  line-height: 1.5;
 }
 
-.setup-notice-content a {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.setup-notice-content a:hover {
+.giscus-setup-notice a {
+  color: #0000EE;
   text-decoration: underline;
 }
 
-.setup-notice-content code {
-  background: #f1f5f9;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  color: #1e293b;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-}
-
-.setup-help {
-  background: rgba(59, 130, 246, 0.1);
-  border-radius: 8px;
-  padding: 1rem;
-  margin-top: 1.5rem !important;
-  font-size: 0.9rem !important;
-}
-
-.setup-help strong {
-  color: #1e293b;
-}
-
-/* 다크모드 대응 (현재는 라이트모드만 사용) */
-.giscus-container .giscus-frame {
-  border-radius: 8px;
-  border: 1px solid #e2e8f0;
-}
-
-/* 설정 안내 반응형 디자인 */
-@media (max-width: 768px) {
-  .giscus-setup-notice {
-    padding: 1.5rem;
-    margin: 1.5rem -1rem;
-    border-radius: 8px;
-  }
-  
-  .setup-notice-content h4 {
-    font-size: 1.1rem;
-  }
-  
-  .setup-notice-content ol {
-    max-width: 100%;
-    padding-left: 1rem;
-  }
-  
-  .setup-help {
-    padding: 0.75rem;
-  }
+.giscus-setup-notice a:visited {
+  color: #551A8B;
 }
 </style>
