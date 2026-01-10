@@ -230,12 +230,19 @@
     box-sizing: border-box;
   }
 
-  html, body {
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: clip;
+  }
+
+  body {
     margin: 0;
     padding: 0;
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    position: relative;
   }
 
   /* 모바일용 프로필 섹션 (완전 숨김) */
@@ -374,7 +381,6 @@
       padding: 0;
       width: 100%;
       max-width: 100%;
-      overflow-x: hidden;
     }
 
     /* 모바일에서 우측 사이드바를 본문 하단에 추가 (홈 페이지 제외) */

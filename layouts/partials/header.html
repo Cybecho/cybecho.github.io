@@ -103,17 +103,22 @@
 /* ===== 모바일 반응형 (< 768px) ===== */
 @media (max-width: 768px) {
   .nav-container {
-    padding: 6px 8px;
+    padding: 8px 10px;
   }
 
   /* 모바일에서 사이드바 토글 표시 */
   .sidebar-toggle,
   .sidebar-right-toggle {
     display: flex;
+    min-width: 60px;
+    min-height: 44px;
+    padding: 8px 12px;
   }
 
   .search-btn {
-    padding: 4px 6px;
+    padding: 8px 12px;
+    min-width: 60px;
+    min-height: 44px;
     font-size: 11pt;
   }
 }
@@ -138,9 +143,15 @@ document.addEventListener('DOMContentLoaded', function() {
     sidebarRightToggle.addEventListener('click', function(e) {
       e.preventDefault();
       const sidebarRight = document.getElementById('sidebarRight');
+      const sidebarRightOverlay = document.getElementById('sidebarRightOverlay');
+
       if (sidebarRight) {
         sidebarRight.classList.add('active');
       }
+      if (sidebarRightOverlay) {
+        sidebarRightOverlay.classList.add('active');
+      }
+      document.body.classList.add('sidebar-right-open');
     });
   }
 });
