@@ -176,51 +176,18 @@
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Search 버튼 클릭 이벤트 리스너 추가
-      const searchBtn = document.getElementById('search-btn');
-      if (searchBtn) {
-        searchBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          const searchModal = document.getElementById('search-modal');
-          const searchInput = document.getElementById('search-input');
-          if (searchModal) {
-            searchModal.style.display = 'block';
-            if (searchInput) {
-              searchInput.focus();
-            }
-          }
-        });
-      }
-
-      // 키보드 단축키: Ctrl+K 또는 Cmd+K로 검색 모달 열기
+      // 키보드 단축키: Ctrl+K 또는 Cmd+K로 헤더 검색창 포커스
       document.addEventListener('keydown', function(e) {
         if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
           e.preventDefault();
-          const searchModal = document.getElementById('search-modal');
-          const searchInput = document.getElementById('search-input');
-          if (searchModal) {
-            searchModal.style.display = 'block';
-            if (searchInput) {
-              searchInput.focus();
-            }
-          }
-        }
-
-        // ESC 키로 모달 닫기
-        if (e.key === 'Escape') {
-          const searchModal = document.getElementById('search-modal');
-          if (searchModal && searchModal.style.display !== 'none') {
-            searchModal.style.display = 'none';
+          const headerSearchInput = document.getElementById('header-search-input');
+          if (headerSearchInput) {
+            headerSearchInput.focus();
+            // 검색창이 보이도록 스크롤
+            headerSearchInput.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           }
         }
       });
-
-      // 검색 기능 초기화 (search.html에서 initSearch 함수가 정의됨)
-      if (typeof initSearch === 'function') {
-        initSearch();
-      } else if (typeof initLocalSearch === 'function') {
-        initLocalSearch();
-      }
     });
   </script>
 
@@ -230,12 +197,19 @@
     box-sizing: border-box;
   }
 
-  html, body {
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: clip;
+  }
+
+  body {
     margin: 0;
     padding: 0;
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    position: relative;
   }
 
   /* 모바일용 프로필 섹션 (완전 숨김) */
@@ -374,7 +348,6 @@
       padding: 0;
       width: 100%;
       max-width: 100%;
-      overflow-x: hidden;
     }
 
     /* 모바일에서 우측 사이드바를 본문 하단에 추가 (홈 페이지 제외) */
