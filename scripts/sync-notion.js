@@ -782,7 +782,7 @@ async function syncNotionDatabase() {
         const dateValue = page.properties['Date']?.date?.start || page.created_time;
         const tags = page.properties['Tags']?.multi_select?.map(tag => tag.name) || [];
         const themes = page.properties['Thems']?.multi_select?.map(theme => theme.name) || [];
-        const aiSummary = page.properties['AI 요약']?.rich_text?.[0]?.plain_text || '';
+        const aiSummary = convertRichText(page.properties['AI 요약']?.rich_text);
 
         // 포스트 디렉토리 먼저 생성 (이미지 다운로드에 필요)
         if (!fs.existsSync(postDir)) {
