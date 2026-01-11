@@ -1,0 +1,80 @@
+{{ define "main" }}
+<div class="content-box">
+    <main role="main" class="main-content">
+        <div class="www_sectiontitle">{{ .Title }}</div>
+
+        {{ if .Content }}
+        <div class="www_text">
+            {{ .Content }}
+        </div>
+        {{ end }}
+
+        <!-- 포스트 리스트 -->
+        {{ $paginator := .Paginate .Pages }}
+
+        {{ if $paginator.Pages }}
+        <br>
+        <div class="www_sectiontitle">Posts</div>
+
+        <div class="www_text">
+            {{ range $paginator.Pages }}
+            <p>
+                <strong>{{ .Date.Format "2006-01-02" }}:</strong>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </p>
+            {{ if .Description }}
+            <p style="margin-left: 2em;">
+                {{ .Description | truncate 120 "..." }}
+            </p>
+            {{ end }}
+            {{ with .Params.tags }}
+            <p style="margin-left: 2em;">
+                <span style="font-size:smaller">
+                    {{ range first 5 . }}<a href="/tags/{{ . | urlize }}" style="text-decoration:none; color:#333;">#{{
+                        . }}</a>
+                    {{ end }}
+                </span>
+            </p>
+            {{ end }}
+            {{ end }}
+        </div>
+        {{ else }}
+        <div class="www_text">
+            <p>No posts found.</p>
+        </div>
+        {{ end }}
+
+        <!-- 페이지네이션 -->
+        {{ partial "pagination.html" . }}
+    </main>
+</div>
+
+<style>
+    .main-content {
+        padding: 0;
+        max-width: 100%;
+        width: 100%;
+        font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+    }
+
+    .www_text a {
+        color: #0000EE;
+        text-decoration: underline;
+    }
+
+    .www_text a:visited {
+        color: #551A8B;
+    }
+
+    .www_text a:hover {
+        color: #0000EE;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .main-content {
+            padding: 0;
+        }
+    }
+</style>
+{{ end }}
