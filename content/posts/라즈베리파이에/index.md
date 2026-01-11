@@ -102,9 +102,13 @@ Raspberry Pi 4 Model B에서 **Lineage OS 22 (Android 15)** 를 구운 뒤 최�
 
 | **항목** | **값** |
 | --- | --- |
+|---|---|
 | 기기 | Raspberry Pi 4 B (또는 Pi 400/CM4) |
+|---|---|
 | ROM | Lineage OS 22.2 (Android 15) 비공식 KonstaKANG 빌드 |
+|---|---|
 | 아키텍처 | **ARM64** (Pi 4는 64-bit 전용) |
+|---|---|
 | Recovery | 빌드에 포함된 **TWRP 3.7 기반** |
 
 ---
@@ -113,8 +117,11 @@ Raspberry Pi 4 Model B에서 **Lineage OS 22 (Android 15)** 를 구운 뒤 최�
 
 | **패키지** | **지원 버전** | **특징** | **비고** |
 | --- | --- | --- | --- |
+|---|---|---|---|
 | **MindTheGapps 15.0.0 ARM64** | Lineage 22 / Android 15 | 최소 구성(Play Store, Play Services, Setup Wizard 등) | 공식 위키·KonstaKANG 모두 추천 |
+|---|---|---|---|
 | **NikGApps Core~Full (2025-07-16)** | Android 10–16 | 변형 다수(Core, Basic, Omni, Stock, Full, Go) | 설치 스크립트 업데이트 활발 |
+|---|---|---|---|
 | OpenGApps | Android 4.4–11 | 오래된 패키지 | Android 12 이후 중단 |
 
 > 권장
@@ -171,9 +178,13 @@ adb sideload MindTheGapps-15.0.0-arm64-YYYYMMDD.zip
 
 | **증상** | **조치** |
 | --- | --- |
+|---|---|
 | Play 스토어가 열리지 않음 | ZIP 아키텍처(ARM64)·Android 버전(15) 일치 여부 재확인 후 재플래시. |
+|---|---|
 | OTA 후 앱 사라짐 | TWRP에서 adb shell ls /system/addon.d/ 로 스크립트 존재 확인; 없으면 GApps 재설치. |
+|---|---|
 | 설치 중 오류 70 (파티션 공간 부족) | NikGApps Core 같이 작은 패키지로 변경하거나, 파티션 크기 확장. |
+|---|---|
 | “signature verification failed” | TWRP > Settings > *Signature Verification* 체크 해제 후 재시도; XDA 보고 사례. |
 
 ---
@@ -272,7 +283,9 @@ Settings → System → Buttons → Power menu → Advanced restart
 
 | 용도 | 일반 커스텀롬용 파일 | 화웨이 등(h/w) 기기용 |
 | --- | --- | --- |
+|---|---|---|
 | 구글서비스 대체 | com.google.android.gms-250932016.apk | com.google.android.gms-250932016-hw.apk |
+|---|---|---|
 | 플레이스토어 대체 | com.android.vending-84022616.apk | com.android.vending-84022616-hw.apk |
 
 **파일명과 버전을 잘 확인하고, 본인 환경(커스텀 롬/화웨이 등)에 맞는 버전을 받아주세요.**
@@ -343,10 +356,15 @@ Settings → System → Buttons → Power menu → Advanced restart
 
 | 항목 | 내용 |
 | --- | --- |
+|---|---|
 | **파일명** | Google Photos 7.37.0.782944147 (nodpi) |
+|---|---|
 | **크기** | 108MB (nodpi), 157MB (arm64-v8a) |
+|---|---|
 | **호환성** | Android 6.0+ (LineageOS 22 지원) |
+|---|---|
 | **Revanced 패치** | 2025년 7월 기준 지원 |
+|---|---|
 | **다운로드** | APKMirror, Uptodown, APKPure |
 
 **이 버전은 2025년 7월 20일 기준으로 최신이며, LineageOS 22 환경에서 정상 작동하고 ReVanced 패치와의 호환성도 확인되어 안전하게 사용할 수 있습니다.**
@@ -418,8 +436,11 @@ Settings → System → Buttons → Power menu → Advanced restart
 - 설치 및 버그 안내: [Revanced Reddit/공식 Discussion](https://www.reddit.com/r/revancedapp/)
 | 준비물 | 설명 | 주요 링크 |
 | --- | --- | --- |
+|---|---|---|
 | Revanced Manager | APK 설치 및 패치 툴 | ReVanced 공식[3](https://github.com/revanced/revanced-manager/releases) |
+|---|---|---|
 | MicroG (GmsCore) | Google Play Service 대체, 계정 로그인 지원 | MicroG 공식, 영상 안내[2](https://www.youtube.com/watch?v=b0wI5_nbMY0)[4](https://www.youtube.com/watch?v=Mdv_bceH-Ls) |
+|---|---|---|
 | Google Photos APK | 최신 패치 호환성 APK | Vanced/공식 미러팀, 최신 릴리즈[1](https://vanced.to/revanced-google-photos)[5](https://github.com/Unofficial-Life/revanced-gphotos-build)[2](https://www.youtube.com/watch?v=b0wI5_nbMY0)[4](https://www.youtube.com/watch?v=Mdv_bceH-Ls)[3](https://github.com/revanced/revanced-manager/releases) |
 
 ## 요약

@@ -121,13 +121,21 @@ SHA256:/LWlSzXXfZojm+UUZT1L1fgtgVUXI4wkIiyjfd46cSQ sbu@sbu
 The key's randomart image is:
 +---[RSA 4096]----+
 |    .. . ...o+.=*|
+|---|
 |   o .. . ....+ *|
+|---|
 |  o o          ==|
+|---|
 | . . E o      ooB|
+|---|
 |    o + S   . =o=|
+|---|
 |     o o . . = *.|
+|---|
 |      +   . = *  |
+|---|
 |     o     . O . |
+|---|
 |      .     + .  |
 +----[SHA256]-----+
 ```

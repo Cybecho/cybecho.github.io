@@ -23,11 +23,18 @@ notion_url: "https://www.notion.so/ESXi-2111bab9e3f880719c1fe2d33faebce7"
 ## 내 정보 (어처피 SHA있어봤자 의미없을듯)
 
 | 항목 | 내용 |
+|---|---|
 | **File Name** | VMware-VMvisor-Installer-8.0U3e-24677879.x86_64.iso (618.34 MB) |
+|---|---|
 | **Release Date** | Apr 10, 2025 |
+|---|---|
 | **Last Updated** | Apr 07, 2025 |
+|---|---|
 | **Build Number** | 24677879 |
+|---|---|
 | **SHA2** | 9782c96ffd01cc56da17ec31573da69f4cba2f9402e67c8b55d05d9472c7376a |
+|---|---|
 | **MD5** | ddb642eee9635ceaeaeb812ccd813189 |
+|---|---|
 | **Description** | VMware vSphere Hypervisor (ESXi ISO) image |
 

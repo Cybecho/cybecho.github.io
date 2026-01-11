@@ -375,8 +375,9 @@ async function convertTableToMarkdown(tableBlock) {
     // 4. Markdown 테이블 형식으로 변환
     let markdownTable = '';
 
-    if (hasColumnHeader && processedRows.length > 0) {
-      // 헤더 row 처리
+    if (processedRows.length > 0) {
+      // 헤더 여부와 관계없이 항상 첫 번째 줄을 헤더로 처리하여 Markdown 테이블 문법 준수
+      // Notion에서 헤더가 없더라도 Markdown은 구분선이 필수임
       const headerRow = processedRows[0];
       markdownTable += '| ' + headerRow.join(' | ') + ' |\n';
 
@@ -389,11 +390,6 @@ async function convertTableToMarkdown(tableBlock) {
         const row = processedRows[i];
         markdownTable += '| ' + row.join(' | ') + ' |\n';
       }
-    } else {
-      // 헤더 없는 테이블 - 모든 row를 데이터로 처리
-      processedRows.forEach(row => {
-        markdownTable += '| ' + row.join(' | ') + ' |\n';
-      });
     }
 
     console.log(`✅ Successfully converted table with ${processedRows.length} rows`);

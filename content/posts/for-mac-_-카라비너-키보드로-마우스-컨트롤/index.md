@@ -733,6 +733,8 @@ notion_url: "https://www.notion.so/for-mac-264702d1bd8d4677b5117e3e7d0a44b2"
 → 항상 ctrl 키는 hold하고 있다고 생각
 
 | 마우스 이동 (정밀) | `ctrl` | `ijkl` |
+|---|---|---|
 | 마우스 이동 (신속) | `ctrl` + `win` | `ijkl` |
+|---|---|---|
 | 스크롤 | `ctrl` + `shift` | `ijkl` |
 
