@@ -14,7 +14,7 @@ notion_url: "https://www.notion.so/OS-2dc1bab9e3f881cda31cd1b35bbf40e2"
 
 ---
 
-![Image](image_86708bc5a857.png)
+![Image](image_6dd2be77b5cd.png)
 
 [https://www.perplexity.ai/search/0dc30e87-9cb3-4b9f-9b3e-6718de2710bc](https://www.perplexity.ai/search/0dc30e87-9cb3-4b9f-9b3e-6718de2710bc)
 

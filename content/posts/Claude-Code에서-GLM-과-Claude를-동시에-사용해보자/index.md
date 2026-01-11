@@ -4,7 +4,7 @@ date: 2026-01-02T04:20:00.000Z
 draft: false
 tags: ["AI", "Claude"]
 series: ["AI"]
-description: "Claude Code에서 GLM 모델과 Claude 모델을 동시에 사용하기 위해서는 래퍼 스크립트와 프록시 도구를 활용하여 환경변수를 설정하고, 여러 세션을 열어 두는 방식이 효과적이다. WSL/Linux 환경에서는 각각의 모델에 대해 별도의 명령을 사용하여 병행 사용이 가능하며, ccx 프록시를 통해 한 세션 내에서 모델을 자유롭게 전환할 수 있다. 이를 통해 사용자들은 Anthropic Claude와 "
+description: "Claude Code에서 GLM 모델과 Claude 모델을 동시에 사용하기 위해서는 래퍼 스크립트와 프록시 도구를 활용하여 환경변수를 설정하고, 여러 세션을 동시에 열어 사용할 수 있다. 기본적으로는 각 모델에 대해 별도의 터미널을 열어 독립적으로 작업하며, ccx 프록시를 사용하면 한 세션 내에서 모델을 자유롭게 전환할 수 있다. 이를 통해 사용자는 Anthropic Claude와 "
 notion_id: "2dc1bab9-e3f8-802a-bb8b-e1f94fbbc87b"
 notion_url: "https://www.notion.so/Claude-Code-GLM-Claude-2dc1bab9e3f8802abb8be1f94fbbc87b"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Claude-Code-GLM-Claude-2dc1bab9e3f8802abb8be1
 # Claude Code에서 GLM 과 Claude를 동시에 사용해보자
 
 > **Summary**
-> Claude Code에서 GLM 모델과 Claude 모델을 동시에 사용하기 위해서는 래퍼 스크립트와 프록시 도구를 활용하여 환경변수를 설정하고, 여러 세션을 열어 두는 방식이 효과적이다. WSL/Linux 환경에서는 각각의 모델에 대해 별도의 명령을 사용하여 병행 사용이 가능하며, ccx 프록시를 통해 한 세션 내에서 모델을 자유롭게 전환할 수 있다. 이를 통해 사용자들은 Anthropic Claude와 
+> Claude Code에서 GLM 모델과 Claude 모델을 동시에 사용하기 위해서는 래퍼 스크립트와 프록시 도구를 활용하여 환경변수를 설정하고, 여러 세션을 동시에 열어 사용할 수 있다. 기본적으로는 각 모델에 대해 별도의 터미널을 열어 독립적으로 작업하며, ccx 프록시를 사용하면 한 세션 내에서 모델을 자유롭게 전환할 수 있다. 이를 통해 사용자는 Anthropic Claude와 
 
 ---
 
-![Image](image_1e33630bb70c.png)
+![Image](image_2a4d0209c793.png)
 
 [https://www.reddit.com/r/ClaudeCode/comments/1o8yst9/how_do_i_use_glm_46_and_claude_on_claude_code/](https:/<wbr>/<wbr>www.reddit.com/<wbr>r/<wbr>ClaudeCode/<wbr>comments/<wbr>1o8yst9/<wbr>how_<wbr>do_<wbr>i_<wbr>use_<wbr>glm_<wbr>46_<wbr>and_<wbr>claude_<wbr>on_<wbr>claude_<wbr>code/<wbr>)
 

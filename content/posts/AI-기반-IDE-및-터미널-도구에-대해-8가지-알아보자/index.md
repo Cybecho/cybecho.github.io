@@ -4,7 +4,7 @@ date: 2025-12-28T03:01:00.000Z
 draft: false
 tags: ["AI"]
 series: ["AI"]
-description: "여덟 가지 AI 기반 개발 도구를 소개하며, 각 도구의 주요 기능을 설명합니다. Claude Code는 AI 코딩 비서 역할을 하고, Cursor는 VS Code 스타일의 AI 코드 에디터로 자동 코드 작성 기능을 제공합니다. Cline은 하나의 에이전트가 다양한 작업을 자동화하며, Kilo Code는 프로젝트 단위 이해를 지원합니다. Roocode는 자연어 지시를 통해 코드 수정을 수행하고, OpenCode는 오픈소스 플랫폼으로 사용자 맞춤형 모델 구성이 가능합니다. Crush는 명령형 워크플로 자동화에 특화되어 있으며, Goose는 대규모 수정 작업을 지원합니다."
+description: "AI 기반 IDE 및 터미널 도구에 대한 8가지 소개: Claude Code는 AI 개발 비서 역할을 하며, Cursor는 AI 페어 프로그래머 기능을 제공하고, Cline은 명령어로 작업을 자동화합니다. Kilo Code는 프로젝트 이해와 자동 코드 생성을 지원하고, Roocode는 자연어 지시로 기능을 구현합니다. OpenCode는 오픈소스 플랫폼으로 사용자 맞춤형 구성이 가능하며, Crush는 명령형 워크플로 자동화에 특화되어 있습니다. Goose는 대규모 수정 작업을 지원하는 개발 도구입니다."
 notion_id: "2d71bab9-e3f8-8063-8172-ebef7e12eec5"
 notion_url: "https://www.notion.so/AI-IDE-8-2d71bab9e3f880638172ebef7e12eec5"
 ---
@@ -12,13 +12,13 @@ notion_url: "https://www.notion.so/AI-IDE-8-2d71bab9e3f880638172ebef7e12eec5"
 # AI 기반 IDE 및 터미널 도구에 대해 8가지 알아보자
 
 > **Summary**
-> 여덟 가지 AI 기반 개발 도구를 소개하며, 각 도구의 주요 기능을 설명합니다. Claude Code는 AI 코딩 비서 역할을 하고, Cursor는 VS Code 스타일의 AI 코드 에디터로 자동 코드 작성 기능을 제공합니다. Cline은 하나의 에이전트가 다양한 작업을 자동화하며, Kilo Code는 프로젝트 단위 이해를 지원합니다. Roocode는 자연어 지시를 통해 코드 수정을 수행하고, OpenCode는 오픈소스 플랫폼으로 사용자 맞춤형 모델 구성이 가능합니다. Crush는 명령형 워크플로 자동화에 특화되어 있으며, Goose는 대규모 수정 작업을 지원합니다.
+> AI 기반 IDE 및 터미널 도구에 대한 8가지 소개: Claude Code는 AI 개발 비서 역할을 하며, Cursor는 AI 페어 프로그래머 기능을 제공하고, Cline은 명령어로 작업을 자동화합니다. Kilo Code는 프로젝트 이해와 자동 코드 생성을 지원하고, Roocode는 자연어 지시로 기능을 구현합니다. OpenCode는 오픈소스 플랫폼으로 사용자 맞춤형 구성이 가능하며, Crush는 명령형 워크플로 자동화에 특화되어 있습니다. Goose는 대규모 수정 작업을 지원하는 개발 도구입니다.
 
 ---
 
-![Image](image_8a0059265464.png)
+![Image](image_7bfc06b6a41c.png)
 
-![Image](image_1b972df54a54.png)
+![Image](image_a8ebe51d4427.png)
 
 ## Claude Code
 
