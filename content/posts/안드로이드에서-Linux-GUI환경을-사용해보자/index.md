@@ -59,19 +59,12 @@ Android
 
 | 구성요소 | 역할 |
 | --- | --- |
-|---|---|
 | Termux | Android에서 Linux 터미널 환경 제공 |
-|---|---|
 | proot-distro | 루팅 없이 chroot 방식으로 Linux 배포판 실행 |
-|---|---|
 | Debian | 실제 Linux 운영체제 |
-|---|---|
 | XFCE | 경량 데스크톱 환경 (GUI) |
-|---|---|
 | Termux:X11 | GUI 화면을 Android에 렌더링 |
-|---|---|
 | PulseAudio | 오디오 출력 처리 |
-|---|---|
 | fcitx5 | 한글 입력기 |
 
 ---
@@ -162,11 +155,8 @@ pkg install proot-distro termux-x11-nightly pulseaudio -y
 
 | 패키지 | 용도 |
 | --- | --- |
-|---|---|
 | proot-distro | Linux 배포판 관리 |
-|---|---|
 | termux-x11-nightly | X11 서버 |
-|---|---|
 | pulseaudio | 오디오 서버 |
 
 ---

@@ -1,0 +1,50 @@
+/* Custom Table Styles to Fix Rendering Issues */
+
+/* Wrapper logic for responsiveness */
+.post-content table, 
+.entry-content table,
+.www_text table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 20px 0;
+  border-spacing: 0;
+}
+
+/* Table Header */
+.post-content table th, 
+.entry-content table th,
+.www_text table th {
+  background-color: #f8f9fa; /* Light background for header */
+  font-weight: 600;
+  text-align: left;
+  padding: 10px 12px;
+  border: 1px solid #e1e4e8; /* Thinner, lighter border */
+  white-space: nowrap; /* Prevent ugly wrapping in headers */
+}
+
+/* Table Cells */
+.post-content table td,
+.entry-content table td,
+.www_text table td {
+  padding: 10px 12px;
+  border: 1px solid #e1e4e8; /* Thinner, lighter border */
+  /* Remove white-space: nowrap for data cells so long text wraps naturally, 
+     but keeping the container scrolling handles extremely long content */
+  min-width: 100px; /* Ensure columns don't crush too small */
+}
+
+/* Row Stripes for readability */
+.post-content table tr:nth-child(even),
+.entry-content table tr:nth-child(even),
+.www_text table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Hover effect */
+.post-content table tr:hover,
+.entry-content table tr:hover,
+.www_text table tr:hover {
+  background-color: #f1f1f1;
+}
