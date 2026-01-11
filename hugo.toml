@@ -101,6 +101,11 @@ mainSections = ["posts"]
     name = "아카이브"
     url = "/archives/"
     weight = 50
+  [[menu.main]]
+    identifier = "ai-search"
+    name = "AI 검색"
+    url = "/ai-search/"
+    weight = 60
 
 [markup]
   [markup.goldmark.renderer]
