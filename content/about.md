@@ -219,7 +219,6 @@ Information & Communication Dept. | <span>March 2016 – Feb 2019</span>
 <span class="item-title">Certifications:</span>
 </div>
 <ul class="details">
-<li>Opic IM2</li>
 <li>Craftsman Communication Cable (통신선로기능사)</li>
 <li>Web Design Technician (웹디자인기능사)</li>
 <li>Computer Graphics Operation Technician (컴퓨터그래픽스운용기능사)</li>
