@@ -9,7 +9,9 @@
     <!-- SEO Meta Tags -->
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
     <meta name="author" content="{{ .Site.Params.author.name }}">
-  <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags ", " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords ", " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
+    <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags "
+        , " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords "
+        , " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="{{ .Permalink }}">
 
@@ -366,6 +368,8 @@
             }
         }
     </style>
+    <!-- Math Support -->
+    {{ partial "math.html" . }}
 </body>
 
 </html>

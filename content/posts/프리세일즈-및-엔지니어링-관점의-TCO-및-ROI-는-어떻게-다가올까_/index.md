@@ -59,7 +59,7 @@ ROI 분석은 기술적 성능을 매출과 직결된 지표로 변환하는 '�
 
 보안 영역에서는 직접적인 수익 창출이 어려운 점을 고려하여 ROSI(Return on Security Investment) 지표를 활용합니다.
 
-ROSI = \frac{(\text{도입 전 ALE} - \text{도입 후 ALE}) - \text{솔루션 비용}}{\text{솔루션 비용}}
+$$ ROSI = \frac{(\text{도입 전 ALE} - \text{도입 후 ALE}) - \text{솔루션 비용}}{\text{솔루션 비용}} $$
 
 여기서 연간 예상 손실(ALE)은 사고 발생 확률과 예상 피해액을 곱하여 산출하며, 이를 통해 보안 투자가 잠재적 손실을 얼마나 방어하는지 수치화합니다.
 
