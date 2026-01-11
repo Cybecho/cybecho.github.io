@@ -16,9 +16,9 @@ notion_url: "https://www.notion.so/AI-IDE-8-2d71bab9e3f880638172ebef7e12eec5"
 
 ---
 
-![Image](image_7bfc06b6a41c.png)
+![Image](image_e838878b725c.png)
 
-![Image](image_a8ebe51d4427.png)
+![Image](image_8b35c7769b42.png)
 
 ## Claude Code
 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Opencode-Antgravity-Opencode-2e51bab9e3f880cf
 
 ---
 
-![Image](image_73d97731eabc.png)
+![Image](image_e8b015d79a18.png)
 
 [https://youtu.be/UQv-OfWDgxs?si=xL-6ZwDa3uk2g2Ad](https://youtu.be/UQv-OfWDgxs?si=xL-6ZwDa3uk2g2Ad)
 

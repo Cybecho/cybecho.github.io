@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Linux-GUI-2e01bab9e3f8800fa707efb81b953afb"
 
 ---
 
-![Image](image_a674ac55322e.png)
+![Image](image_2b3ad6b56419.png)
 
 # Android에서 Linux GUI 환경 구축 완전 가이드
 
