@@ -308,6 +308,10 @@ function convertRichText(richTextArray) {
       const processedUrl = addWordBreaksToUrl(textObj.href);
       text = `[${text}](${processedUrl})`;
     }
+    // Handle inline equations
+    if (textObj.type === 'equation') {
+      text = `$${textObj.equation?.expression || text}$`;
+    }
     return text;
   }).join('');
 }
@@ -610,6 +614,12 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
         case 'video':
           if (block.video?.external?.url) {
             content += '[' + block.video.external.url + '](' + block.video.external.url + ')\n\n';
+          }
+          break;
+
+        case 'equation':
+          if (block.equation?.expression) {
+            content += '$$ ' + block.equation.expression + ' $$\n\n';
           }
           break;
 
