@@ -57,7 +57,20 @@
     flex-shrink: 0;
     font-family: "Georgia", "Palatino", "Times", "Roman", serif;
     align-self: flex-start;
+    /* Hide Scrollbar */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
   }
+
+  /* Hide Scrollbar for Chrome/Safari */
+  .sidebar-right::-webkit-scrollbar {
+    display: none;
+  }
+
 
   /* Title Block Style */
   .sidebar-title-block {
@@ -66,6 +79,8 @@
     text-align: center;
     padding: 10px 5px;
     margin-bottom: 20px;
+    margin-top: 0;
+    /* Force top alignment */
     color: #000000;
     font-family: "Georgia", "Palatino", "Times", "Roman", serif;
     border-top: 1px solid #CCCCCC;
