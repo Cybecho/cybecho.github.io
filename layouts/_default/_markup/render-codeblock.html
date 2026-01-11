@@ -1,4 +1,4 @@
-{{- $type := .Type | lower | trim -}}
+{{- $type := .Type | lower -}}
 {{- if eq $type "mermaid" -}}
 <div class="mermaid">
     {{- .Inner | htmlEscape -}}
