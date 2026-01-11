@@ -1,8 +1,4 @@
-<!-- LLVM 스타일 헤더 -->
-<div class="www_title">
-  <strong>{{ .Site.Title }}</strong>
-</div>
-
+<!-- LLVM 스타일 헤더 (Mobile Only) -->
 <nav class="site-nav">
   <div class="nav-container">
     <!-- Mobile Sidebar Toggle (좌측) -->
@@ -31,6 +27,8 @@
     background: #FFFFFF;
     border-bottom: none;
     padding: 0;
+    display: none;
+    /* Hide on desktop */
   }
 
   .nav-container {
@@ -55,7 +53,7 @@
   .mobile-search-results {
     display: none;
     position: fixed;
-    top: 100px;
+    top: 50px;
     left: 0;
     right: 0;
     max-height: 60vh;
@@ -114,6 +112,8 @@
       top: 0;
       z-index: 100;
       background: #FFFFFF;
+      display: block;
+      /* Show on mobile */
     }
 
     .nav-container {

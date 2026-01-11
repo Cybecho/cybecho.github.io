@@ -9,7 +9,9 @@
   <!-- SEO Meta Tags -->
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
   <meta name="author" content="{{ .Site.Params.author.name }}">
-  <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags ", " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords ", " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
+  <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags "
+    , " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords "
+    , " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{{ .Permalink }}">
 
@@ -259,9 +261,9 @@
       width: 220px;
       flex-shrink: 0;
       position: sticky;
-      top: 100px;
-      /* Header height offset approx */
-      height: calc(100vh - 100px);
+      top: 20px;
+      /* Header removed */
+      height: calc(100vh - 20px);
       overflow-y: auto;
     }
 
@@ -269,9 +271,9 @@
       width: 250px;
       flex-shrink: 0;
       position: sticky;
-      top: 100px;
-      /* Header height offset approx */
-      height: calc(100vh - 100px);
+      top: 20px;
+      /* Header removed */
+      height: calc(100vh - 20px);
       overflow-y: auto;
     }
 

@@ -4,6 +4,11 @@
     <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 14pt;">[X]</span>
   </button>
 
+  <!-- Title Block (Desktop Header Replacement) -->
+  <div class="sidebar-title-block">
+    {{ .Site.Title }}
+  </div>
+
   <!-- 프로필 위젯 (모든 페이지) -->
   <div class="www_sidebar">
     <b>Profile</b>
@@ -52,6 +57,25 @@
     flex-shrink: 0;
     font-family: "Georgia", "Palatino", "Times", "Roman", serif;
     align-self: flex-start;
+  }
+
+  /* Title Block Style */
+  .sidebar-title-block {
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-family: "Georgia", "Palatino", "Times", "Roman", serif;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+    background-image: repeating-linear-gradient(to bottom,
+        #FFFFFF,
+        #FFFFFF 3px,
+        #BFBFBF 3px,
+        #BFBFBF 4px);
   }
 
   /* 스크롤바 스타일 */
