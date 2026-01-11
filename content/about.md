@@ -6,499 +6,318 @@ ShowToc: false
 ShowBreadCrumbs: false
 ---
 
-<div class="resume-wrapper">
-<!-- Header Section -->
-<header class="resume-header">
-<h1>소병욱 (Cybecho)</h1>
-<p class="subtitle">Pre-Sales Engineer | 본질에 몰입하는 엔지니어</p>
-<div class="social-links">
-<a href="https://github.com/Cybecho" target="_blank">GitHub</a>
-<span class="separator">|</span>
-<a href="https://www.linkedin.com/in/cybecho/" target="_blank">LinkedIn</a>
-<span class="separator">|</span>
-<a href="mailto:cybecho@gmail.com">Contact</a>
-</div>
+<div class="classic-resume">
+
+<header class="header-section">
+    <h1>소병욱 (Cybecho)</h1>
+    <div class="sub-header">Pre-Sales Engineer</div>
+    <div class="contact-info">
+        Seoul, Korea Republic of | <a href="mailto:cybecho@gmail.com">cybecho@gmail.com</a>
+    </div>
+    <div class="links">
+        <a href="https://www.linkedin.com/in/cybecho/" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/Cybecho" target="_blank">GitHub</a> |
+        <a href="https://cybecho.github.io">Blog</a>
+    </div>
 </header>
 
-<!-- Experience Section -->
-<section class="resume-section">
-<h2><span class="icon">💼</span> 경력</h2>
-<table class="resume-table">
-<tbody>
-<!-- CJ OliveNetworks -->
-<tr>
-<td class="col-date">2025.06 - 2025.06</td>
-<td class="col-content">
-<h3>CJ 올리브네트웍스</h3>
-<span class="role">인프라 서비스 엔지니어 인턴</span>
-<p class="description">IDC 인프라 운영 및 서비스 관리</p>
-</td>
-</tr>
-<!-- 111Percent -->
-<tr>
-<td class="col-date">2024.10 - 2025.01</td>
-<td class="col-content">
-<h3>111퍼센트</h3>
-<span class="role">게임 개발자 인턴</span>
-<p class="description">Unity 엔진 기반 게임 클라이언트 개발 및 프로토타이핑</p>
-</td>
-</tr>
-<!-- Catholic Univ Lab -->
-<tr>
-<td class="col-date">2022.08 - 2024.07</td>
-<td class="col-content">
-<h3>가톨릭대학교 컴퓨터 그래픽스 연구실</h3>
-<span class="role">학부연구생</span>
-<p class="description">컴퓨터 그래픽스 및 HCI 분야 연구 참여</p>
-</td>
-</tr>
-<!-- Personal Business -->
-<tr>
-<td class="col-date">2023.02 - 2024.02</td>
-<td class="col-content">
-<h3>개인사업 (소매업)</h3>
-<span class="role">대표</span>
-<p class="description">사업 기획 및 운영 관리</p>
-</td>
-</tr>
-<!-- Digiin -->
-<tr>
-<td class="col-date">2022.01 - 2022.07</td>
-<td class="col-content">
-<h3>주식회사디지인</h3>
-<span class="role">영상디자이너</span>
-<p class="description">영상 콘텐츠 디자인 및 편집</p>
-</td>
-</tr>
-<!-- Edicon -->
-<tr>
-<td class="col-date">2019.07 - 2019.10</td>
-<td class="col-content">
-<h3>Edicon Studio</h3>
-<span class="role">프로젝트 기획자</span>
-<p class="description">프로젝트 기획 및 관리</p>
-</td>
-</tr>
-</tbody>
-</table>
+<section class="section">
+    <h2 class="section-title">PROFILE</h2>
+    <hr>
+    <p>
+        Proficient in building and troubleshooting end-to-end on-premises infrastructure, from hardware to OS, with a focus on creating stable and efficient systems.
+        <br>
+        본질에 몰입하는 엔지니어입니다. HW 및 OS에 관심이 많습니다.
+    </p>
 </section>
 
-<!-- Education Section -->
-<section class="resume-section">
-<h2><span class="icon">🎓</span> 학력</h2>
-<table class="resume-table">
-<tbody>
-<tr>
-<td class="col-date">2019.03 - 2025.02</td>
-<td class="col-content">
-<h3>가톨릭대학교</h3>
-<p class="description">미디어공학/컴퓨터공학 학사 (평점 3.69/4.5)</p>
-</td>
-</tr>
-<tr>
-<td class="col-date">2016.03 - 2019.02</td>
-<td class="col-content">
-<h3>삼일공업고등학교</h3>
-<p class="description">정보통신학과 졸업<br>30대 학생부회장 (2017.03 - 2018.09)</p>
-</td>
-</tr>
-</tbody>
-</table>
+<section class="section">
+    <h2 class="section-title">WORK EXPERIENCE</h2>
+    <hr>
+
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title role">System Engineer</span>
+        </div>
+        <div class="item-sub">
+            <span class="company">Swatch Group</span>, Seoul | <span class="date">August 2025 ~ NOW</span>
+        </div>
+        <ul class="details">
+            <li><strong>IT Service Management</strong>: Managed ServiceNow tickets and Swiss HQ escalations • Supported MDM migration</li>
+            <li><strong>Infrastructure Management</strong>: Coordinated asset procurement and vendor management • Maintained IT inventory</li>
+            <li><strong>Store Operations</strong>: Administered VPN devices and Windows AD • Managed store openings/closures</li>
+            <li><strong>Server Administration</strong>: Maintained Windows Servers • Managed & Monitoring infrastructure (HVAC, UPS, Switch)</li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title role">IDC Infra Service Engineer Intern</span>
+        </div>
+        <div class="item-sub">
+            <span class="company">CJ OliveNetworks</span>, Incheon | <span class="date">June 2025</span>
+        </div>
+        <ul class="details">
+            <li><strong>Built a centralized on-prem repository</strong> to improve system <strong>reliability</strong> (security, consistency, efficiency).</li>
+            <li>Engineered a <strong>99.9% auditable</strong>, immutable Docker/Nginx repo; removed supply chain risk.</li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title role">Game Developer Intern</span>
+        </div>
+        <div class="item-sub">
+            <span class="company">111Percent</span>, Seoul | <span class="date">October 2024 ~ January 2025</span>
+        </div>
+        <ul class="details">
+            <li>Developed game clients and prototypes using Unity Engine.</li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title role">Undergraduate Researcher</span>
+        </div>
+        <div class="item-sub">
+            <span class="company">Catholic Univ. Computer Graphics Lab</span> | <span class="date">August 2022 ~ July 2024</span>
+        </div>
+        <ul class="details">
+            <li>Participated in research on Computer Graphics and HCI.</li>
+        </ul>
+    </div>
 </section>
 
-<!-- Awards Section -->
-<section class="resume-section">
-<h2><span class="icon">🏆</span> 수상</h2>
-<div class="card-grid">
-<!-- Award Items -->
-<div class="card">
-<div class="card-header">
-<span class="date">2024.11</span>
-<span class="badge">대상</span>
-</div>
-<h3>미디어 S/W 제작 경진대회</h3>
-<p class="issuer">가톨릭대학교</p>
-</div>
-<div class="card">
-<div class="card-header">
-<span class="date">2024.07</span>
-<span class="badge">장려상</span>
-</div>
-<h3>캡스톤 경진대회</h3>
-<p class="issuer">가톨릭대학교</p>
-</div>
-<div class="card">
-<div class="card-header">
-<span class="date">2024.01</span>
-<span class="badge">우수상</span>
-</div>
-<h3>HCI Creative Award</h3>
-<p class="issuer">한국 HCI 학회</p>
-</div>
-<div class="card">
-<div class="card-header">
-<span class="date">2023.07</span>
-<span class="badge">우수논문상</span>
-</div>
-<h3>KCGS 학부 우수 논문상</h3>
-<p class="issuer">한국컴퓨터그래픽스학회</p>
-</div>
-<div class="card">
-<div class="card-header">
-<span class="date">2022.11</span>
-<span class="badge">입상</span>
-</div>
-<h3>UNITY GAMEJAM 2022</h3>
-<p class="issuer">UnityKorea</p>
-</div>
-<div class="card">
-<div class="card-header">
-<span class="date">2019.10</span>
-<span class="badge">우수상</span>
-</div>
-<h3>GGC 게임잼 2019</h3>
-<p class="issuer">글로벌게임챌린지</p>
-</div>
-<div class="card">
-<div class="card-header">
-<span class="date">2018.12</span>
-<span class="badge">대상</span>
-</div>
-<h3>GGC 게임잼 2018</h3>
-<p class="issuer">글로벌게임챌린지</p>
-</div>
-<div class="card">
-<div class="card-header">
-<span class="date">2017.12</span>
-<span class="badge">대상</span>
-</div>
-<h3>1인 창조기업 홍보 해커톤</h3>
-<p class="issuer">창업진흥원장</p>
-</div>
-</div>
+<section class="section">
+    <h2 class="section-title">PROJECTS</h2>
+    <hr>
+
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title">Built Home Server Infrastructure</span>
+        </div>
+        <ul class="details">
+            <li>Maximized resource efficiency by migrating from VirtualBox (Type 2) to bare-metal Proxmox (Type 1) hypervisor, <strong>by greater than 55% VM density</strong>.</li>
+            <li><strong>Identified the public-router bottleneck</strong> and built a 2.5G/10G internal-only network, <strong>offloading over 90 % of traffic</strong>, boosting bandwidth 2.5 Mb/s → 325.5 Mb/s, and sharply <strong>improving response times</strong>.</li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title">Cloud Migration for Shipping Cost Reduction System</span>
+        </div>
+        <ul class="details">
+            <li><strong>Migrated the local system to AWS EC2</strong>, which resolved the critical Single Point of Failure (SPOF)</li>
+            <li>Automated processes using Python and Shell, achieving an <strong>80% reduction in operational costs</strong>.</li>
+        </ul>
+    </div>
+
+     <div class="item">
+        <div class="item-header">
+            <span class="item-title">Hardware-modded for 24/7 Google Photos upload server</span>
+        </div>
+        <ul class="details">
+            <li><strong>Achieved above 95% SLA by engineering custom hardware</strong> to resolve critical stability and safety failures.</li>
+            <li><strong>Engineered a 24/7 power system</strong> using a custom DC-DC converter to eliminate battery and heat risks.</li>
+            <li><strong>Added passive cooling</strong> to stop overheating and lower the SoC peak temperature by <strong>about 3 °C</strong>.</li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title">Automation Framework for Resource Optimization</span>
+        </div>
+        <ul class="details">
+            <li><strong>Designed a KVM Switch / Python-based automation system</strong> to remove a critical resource bottleneck.</li>
+            <li>Automated over 20,000 repetitive tasks, leading to a <strong>120% increase in operational efficiency</strong>.</li>
+             <li>Achieved an <strong>84% reduction in labor costs</strong> by eliminating operator wait times.</li>
+        </ul>
+    </div>
 </section>
 
-<!-- Certifications Section -->
-<section class="resume-section">
-<h2><span class="icon">📜</span> 자격증</h2>
-<table class="resume-table simple-table">
-<tbody>
-<tr>
-<td class="col-date">2018.07</td>
-<td class="col-content"><strong>통신선로기능사</strong> (한국방송통신전파진흥원)</td>
-</tr>
-<tr>
-<td class="col-date">2016.12</td>
-<td class="col-content"><strong>웹디자인기능사</strong> (한국산업인력공단)</td>
-</tr>
-<tr>
-<td class="col-date">2016.06</td>
-<td class="col-content"><strong>컴퓨터그래픽스운용기능사</strong> (한국산업인력공단)</td>
-</tr>
-</tbody>
-</table>
+<section class="section">
+    <h2 class="section-title">EDUCATION</h2>
+    <hr>
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title">Bachelor’s in Computer Engineering & Media Engineering</span>
+        </div>
+        <div class="item-sub">
+            Catholic University of Korea | <span>Graduated Feb 2025</span> | <span>GPA: 3.69/4.50</span>
+        </div>
+    </div>
 </section>
 
-<!-- Papers Section -->
-<section class="resume-section">
-<h2><span class="icon">📝</span> 논문</h2>
-<div class="paper-list">
-<div class="paper-item">
-<h3>사람의 얼굴을 이용한 동물 3D 모델링 생성 서비스</h3>
-<p>한국컴퓨터그래픽스학회 (KCGS) | 2024.07</p>
-</div>
-<div class="paper-item">
-<h3>XR 테이크아웃 카페</h3>
-<p>한국HCI학회 (HCI) | 2024.01</p>
-</div>
-<div class="paper-item">
-<h3>생성 AI 기술을 활용한 스토리텔링 영상 콘텐츠 제작</h3>
-<p>한국컴퓨터그래픽스학회 (KCGS) | 2023.07</p>
-</div>
-<div class="paper-item">
-<h3>안티글레어 모니터를 이용한 XR 스튜디오 구성 및 작품 제작 사례</h3>
-<p>한국컴퓨터그래픽스학회 (KCGS) | 2023.07</p>
-</div>
-</div>
+<section class="section">
+    <h2 class="section-title">CORE COMPETENCIES</h2>
+    <hr>
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title">Skills:</span>
+        </div>
+        <ul class="details">
+            <li>Linux: RHEL/Rocky, Ubuntu, LVM , Proxmox(KVM)</li>
+            <li>Storage: NAS/NFS/SMB/FTP</li>
+            <li>Network: DHCP/DNS, VPN(TailScale/IPsec), iptables</li>
+            <li>Script: Bash, Python, C/C++ ,Git</li>
+        </ul>
+    </div>
 </section>
 
-<div class="notion-nots">
-<em>*Notion API를 통해 Published 상태의 글들이 자동 동기화됩니다</em>
-</div>
+<section class="section">
+    <h2 class="section-title">OTHERS</h2>
+    <hr>
+    
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title">Certifications:</span>
+        </div>
+        <ul class="details">
+            <li>Opic IM2 (2025)</li>
+            <li>Craftsman Communication Cable (2018)</li>
+            <li>Web Design Technician (2016)</li>
+            <li>Computer Graphics Operation Technician (2016)</li>
+        </ul>
+    </div>
+    
+     <div class="item">
+        <div class="item-header">
+            <span class="item-title">Cloud Club | 2025 Feb - Now</span>
+        </div>
+        <ul class="details">
+            <li>Led a 16-week home server lab, guiding all 12 members to successfully build their own servers.</li>
+             <li>Presented on "Proxmox: Wanna Take Home Server 101?" at the external IT conference.</li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title">Awards:</span>
+        </div>
+        <ul class="details">
+            <li>Media S/W Competition Grand Prize (2024.11)</li>
+            <li>Capstone Design Competition Participation Prize (2024.07)</li>
+            <li>HCI Creative Award Excellence Prize (2024.01)</li>
+            <li>KCGS Excellent Paper Award (2023.07)</li>
+        </ul>
+    </div>
+</section>
+
 </div>
 
 <style>
-/* CSS Variables */
-:root {
---resume-primary-color: #333;
---resume-accent-color: #007bff;
---resume-bg-color: transparent;
---resume-text-color: inherit;
---resume-card-bg: rgba(255, 255, 255, 0.05);
---resume-border-color: rgba(0, 0, 0, 0.1);
---resume-timeline-line: #ddd;
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+.classic-resume {
+    font-family: 'Batang', 'BatangChe', 'Nanum Myeongjo', serif; /* Use Batang/Myeongjo as primary */
+    color: #000;
+    line-height: 1.5;
+    max-width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-:root {
---resume-timeline-line: #555;
---resume-border-color: rgba(255, 255, 255, 0.1);
-}
-}
-
-.resume-wrapper {
-/* Font changed to Batang (Serif) as requested */
-font-family: 'Batang', 'BatangChe', 'Times New Roman', serif;
-line-height: 1.6;
-color: var(--resume-text-color);
-max-width: 900px;
-margin: 0 auto;
+/* Reset Links for Print Style */
+.classic-resume a {
+    color: #0000EE; /* Standard Link Blue */
+    text-decoration: underline;
 }
 
-/* Header */
-.resume-header {
-text-align: center;
-margin-bottom: 3rem;
-padding-bottom: 2rem;
-border-bottom: 1px solid var(--resume-timeline-line);
+.header-section {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.resume-header h1 {
-margin: 0;
-font-size: 2.2rem;
-font-weight: 800;
-letter-spacing: -0.5px;
-font-family: 'Batang', 'BatangChe', serif; /* Explicitly set font for header */
+.header-section h1 {
+    font-weight: 900;
+    font-size: 24pt;
+    margin: 0 0 5px 0;
+    font-family: 'Batang', serif;
+    color: #000;
+    letter-spacing: 0px;
 }
 
-.resume-header .subtitle {
-font-size: 1.1rem;
-color: #666;
-margin-top: 0.5rem;
-margin-bottom: 1rem;
+.sub-header {
+    font-weight: bold;
+    font-size: 14pt;
+    margin-bottom: 5px;
 }
 
-[data-theme='dark'] .resume-header .subtitle {
-color: #aaa;
+.contact-info, .links {
+    font-size: 11pt;
 }
 
-.social-links a {
-color: var(--resume-text-color);
-text-decoration: none;
-font-weight: 500;
-opacity: 0.8;
-transition: opacity 0.2s;
+.section {
+    margin-bottom: 1.5rem;
 }
 
-.social-links a:hover {
-opacity: 1;
-text-decoration: underline;
+.section-title {
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 10px 0 2px 0;
+    text-transform: uppercase;
+    font-family: 'Batang', serif;
+    border: none;
+    color: #000;
 }
 
-.social-links .separator {
-margin: 0 8px;
-color: #ddd;
+/* Default horizontal rule style for the resume */
+.section hr {
+    border: 0;
+    border-top: 1px solid #000;
+    margin: 2px 0 10px 0;
 }
 
-/* Sections */
-.resume-section {
-margin-bottom: 4rem;
+.item {
+    margin-bottom: 15px;
 }
 
-.resume-section h2 {
-border-bottom: 2px solid var(--resume-timeline-line);
-padding-bottom: 0.5rem;
-margin-bottom: 1.5rem;
-font-size: 1.5rem;
-display: flex;
-align-items: center;
-gap: 10px;
-font-family: 'Batang', serif;
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
 }
 
-.resume-section h2 .icon {
-font-size: 1.3rem;
+.item-title {
+    font-weight: bold;
+    font-size: 12pt;
+    font-family: 'Batang', serif;
 }
 
-/* Table Layout for Experience/Education */
-.resume-table {
-width: 100%;
-border-collapse: collapse;
-margin-top: 1rem;
+.item-sub {
+    font-style: italic;
+    font-size: 11pt;
+    margin-bottom: 3px;
+    font-family: 'Batang', serif;
 }
 
-.resume-table td {
-padding: 1.2rem 0;
-vertical-align: top;
-border-bottom: 1px solid var(--resume-border-color);
+.company {
+    font-weight: bold;
 }
 
-.resume-table tr:last-child td {
-border-bottom: none;
+.details {
+    margin: 5px 0 0 0;
+    padding-left: 20px;
+    list-style-type: disc; /* Simple bullets */
 }
 
-.col-date {
-width: 160px;
-color: #666;
-font-weight: bold;
-font-size: 0.95rem;
-padding-right: 20px;
-white-space: nowrap;
+.details li {
+    margin-bottom: 3px;
+    font-size: 11pt;
+    line-height: 1.4;
 }
 
-[data-theme='dark'] .col-date {
-color: #999;
+/* Bold strong tags should be very visible */
+.item strong {
+    font-weight: 700;
 }
 
-.col-content h3 {
-margin: 0;
-font-size: 1.2rem;
-font-weight: 700;
-color: var(--resume-text-color);
-display: inline-block;
-}
-
-.col-content .role {
-display: block;
-font-size: 1rem;
-font-weight: 600;
-color: var(--resume-primary-color);
-margin-top: 4px;
-margin-bottom: 6px;
-}
-
-[data-theme='dark'] .col-content .role {
-color: #ddd;
-}
-
-.col-content .description {
-margin: 0;
-font-size: 0.95rem;
-opacity: 0.8;
-line-height: 1.5;
-}
-
-/* Card Grid */
-.card-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-gap: 1.5rem;
-}
-
-.card {
-border: 1px solid var(--resume-border-color);
-padding: 1.2rem;
-border-radius: 4px; /* Slightly sharper corners for serif vibe */
-background: var(--resume-card-bg);
-transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card:hover {
-transform: translateY(-3px);
-box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.card-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 0.8rem;
-}
-
-.card-header .date {
-font-size: 0.8rem;
-opacity: 0.7;
-}
-
-.card-header .badge {
-font-size: 0.75rem;
-background: #f0f0f0;
-color: #333;
-padding: 2px 6px;
-border-radius: 4px;
-font-weight: 600;
-}
-
-[data-theme='dark'] .card-header .badge {
-background: #444;
-color: #eee;
-}
-
-.card h3 {
-margin: 0 0 0.4rem 0;
-font-size: 1.1rem;
-font-weight: 600;
-line-height: 1.3;
-}
-
-.card .issuer {
-margin: 0;
-font-size: 0.9rem;
-opacity: 0.7;
-}
-
-/* Paper List */
-.paper-list {
-display: flex;
-flex-direction: column;
-gap: 1.2rem;
-}
-
-.paper-item {
-border-left: 3px solid var(--resume-timeline-line);
-padding-left: 1rem;
-}
-
-.paper-item h3 {
-margin: 0 0 0.3rem 0;
-font-size: 1.05rem;
-font-weight: 600;
-}
-
-.paper-item p {
-margin: 0;
-font-size: 0.9rem;
-opacity: 0.7;
-}
-
-.notion-nots {
-margin-top: 4rem;
-text-align: center;
-font-size: 0.8rem;
-opacity: 0.5;
-border-top: 1px dashed var(--resume-border-color);
-padding-top: 1rem;
-}
-
-/* Mobile Responsive */
+/* Mobile Tweaks */
 @media (max-width: 600px) {
-.resume-header h1 {
-font-size: 1.8rem;
-}
-
-/* Stack tables on mobile */
-.resume-table, .resume-table tbody, .resume-table tr, .resume-table td {
-display: block;
-width: 100%;
-}
-
-.resume-table td {
-padding: 0.5rem 0;
-border: none;
-}
-.resume-table tr {
-margin-bottom: 1.5rem;
-border-bottom: 1px solid var(--resume-border-color);
-padding-bottom: 1rem;
-}
-.col-date {
-margin-bottom: 0.2rem;
-font-size: 0.9rem;
-padding-right: 0;
-}
-
-.card-grid {
-grid-template-columns: 1fr;
-}
+    .header-section h1 {
+        font-size: 20pt;
+    }
+    .item-header {
+        flex-direction: column;
+    }
 }
 </style>
