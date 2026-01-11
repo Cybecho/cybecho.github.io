@@ -95,6 +95,20 @@ Proficient in building and troubleshooting end-to-end on-premises infrastructure
 <li>Participated in research on Computer Graphics and HCI.</li>
 </ul>
 </div>
+
+<div class="item">
+<div class="item-header">
+<span class="item-title role">Microwave Operator (IT)</span>
+</div>
+<div class="item-sub">
+<span class="company">Military Service</span> | <span class="date">July 2020 – January 2022</span>
+</div>
+<ul class="details">
+<li><strong>Performed 24/7 real-time monitoring</strong> and incident response to ensure core network uptime.</li>
+<li>Conducted weekly fail-over drills that <strong>kept recovery time under 5-m</strong> and enabled <strong>rapid traffic rerouting</strong>.</li>
+<li>Daily generator/UPS inspections <strong>kept power-related outages at zero</strong>.</li>
+</ul>
+</div>
 </section>
 
 <section class="section">
@@ -106,8 +120,19 @@ Proficient in building and troubleshooting end-to-end on-premises infrastructure
 <span class="item-title">Built Home Server Infrastructure</span>
 </div>
 <ul class="details">
-<li>Maximized resource efficiency by migrating from VirtualBox (Type 2) to bare-metal Proxmox (Type 1) hypervisor, <strong>by greater than 55% VM density</strong>.</li>
-<li><strong>Identified the public-router bottleneck</strong> and built a 2.5G/10G internal-only network, <strong>offloading over 90 % of traffic</strong>, boosting bandwidth 2.5 Mb/s → 325.5 Mb/s, and sharply <strong>improving response times</strong>.</li>
+<li>Migrated from a Type-2 hypervisor to Proxmox Type-1, reduce overhead and lifting VM density by greater than <strong>200 %</strong>.</li>
+<li><strong>Identified the public-router bottleneck</strong> and built a 2.5G/10G internal-only network, <strong>offloading over 90 % of traffic</strong>, boosting bandwidth <strong>130×</strong> (2.5 Mb/s → 325.5 Mb/s), and sharply <strong>improving response times</strong>.</li>
+</ul>
+</div>
+
+<div class="item">
+<div class="item-header">
+<span class="item-title">Foundational AIOps Platform with a Unified Data Lake and RAG</span>
+</div>
+<ul class="details">
+<li>Architected unified AWS platform dismantling data silos via <strong>centralized Data Lake + RAG AI service</strong>.</li>
+<li>Built governance foundation using <strong>Lake Formation & automated Glue ETL</strong>.</li>
+<li><strong>Deployed an S3-hosted WebUI</strong> enabling natural-language queries against the Data Lake via <strong>Kendra/RAG</strong>.</li>
 </ul>
 </div>
 
@@ -123,23 +148,23 @@ Proficient in building and troubleshooting end-to-end on-premises infrastructure
 
 <div class="item">
 <div class="item-header">
-<span class="item-title">Hardware-modded for 24/7 Google Photos upload server</span>
-</div>
-<ul class="details">
-<li><strong>Achieved above 95% SLA by engineering custom hardware</strong> to resolve critical stability and safety failures.</li>
-<li><strong>Engineered a 24/7 power system</strong> using a custom DC-DC converter to eliminate battery and heat risks.</li>
-<li><strong>Added passive cooling</strong> to stop overheating and lower the SoC peak temperature by <strong>about 3 °C</strong>.</li>
-</ul>
-</div>
-
-<div class="item">
-<div class="item-header">
 <span class="item-title">Automation Framework for Resource Optimization</span>
 </div>
 <ul class="details">
 <li><strong>Designed a KVM Switch / Python-based automation system</strong> to remove a critical resource bottleneck.</li>
 <li>Automated over 20,000 repetitive tasks, leading to a <strong>120% increase in operational efficiency</strong>.</li>
 <li>Achieved an <strong>84% reduction in labor costs</strong> by eliminating operator wait times.</li>
+</ul>
+</div>
+
+<div class="item">
+<div class="item-header">
+<span class="item-title">Hardware-modded for 24/7 Google Photos upload server</span>
+</div>
+<ul class="details">
+<li><strong>Achieved above 95% SLA by engineering custom hardware</strong> to resolve critical stability and safety failures.</li>
+<li><strong>Engineered a 24/7 power system</strong> using a custom DC-DC converter to eliminate battery and heat risks.</li>
+<li><strong>Added passive cooling</strong> to stop overheating and lower the SoC peak temperature by <strong>about 3 °C</strong>.</li>
 </ul>
 </div>
 </section>
@@ -304,7 +329,8 @@ margin: 2px 0 10px 0;
 }
 
 .item {
-margin-bottom: 15px;
+/* Increased separation between items as requested */
+margin-bottom: 30px;
 }
 
 .item-header {
@@ -315,20 +341,23 @@ flex-wrap: wrap;
 }
 
 .item-title {
-font-weight: bold;
-font-size: 12pt;
+font-weight: 900; /* Bolder */
+font-size: 14pt; /* Larger (was 12pt) */
 font-family: 'Batang', serif;
+margin-bottom: 2px;
 }
 
 .item-sub {
 font-style: italic;
 font-size: 11pt;
-margin-bottom: 3px;
+margin-bottom: 5px;
 font-family: 'Batang', serif;
+color: #333;
 }
 
 .company {
 font-weight: bold;
+color: #000;
 }
 
 .details {
