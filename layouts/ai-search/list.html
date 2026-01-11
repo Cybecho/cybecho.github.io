@@ -1,0 +1,809 @@
+{{ define "main" }}
+<section class="ai-search-page">
+  <header class="ai-search-header">
+    <h1>AI Blog Search</h1>
+    <p class="ai-search-desc">자연어로 질문하면 블로그 글을 기반으로 AI가 답변합니다.</p>
+    <p class="ai-search-info">
+      <small>Powered by Gemini + Fuse.js | 검색 범위: 이 블로그의 모든 글</small>
+    </p>
+  </header>
+
+  <!-- Bot Protection: Simple interaction check -->
+  <div id="ai-search-gate" class="ai-search-gate">
+    <p>AI 검색을 시작하려면 아래 버튼을 클릭하세요.</p>
+    <button id="ai-search-start-btn" class="ai-btn ai-btn-primary">AI 검색 시작</button>
+  </div>
+
+  <!-- Main Chat Interface (hidden until gate passed) -->
+  <div id="ai-search-main" class="ai-search-main" hidden>
+    <!-- Chat Messages -->
+    <div id="ai-chat-messages" class="ai-chat-messages">
+      <div class="ai-chat-msg ai-chat-system">
+        <div class="ai-chat-bubble">
+          안녕하세요! 이 블로그에 대해 궁금한 점을 자연어로 질문해 주세요.<br>
+          예: "라즈베리파이로 NAS 구축하는 방법이 있나요?"
+        </div>
+      </div>
+    </div>
+
+    <!-- Input Area -->
+    <form id="ai-chat-form" class="ai-chat-form">
+      <div class="ai-chat-input-wrapper">
+        <textarea
+          id="ai-chat-input"
+          class="ai-chat-input"
+          rows="2"
+          placeholder="질문을 입력하세요..."
+          maxlength="500"
+        ></textarea>
+        <button type="submit" id="ai-chat-submit" class="ai-btn ai-btn-submit">
+          전송
+        </button>
+      </div>
+      <div class="ai-chat-hints">
+        <small>
+          <span id="ai-char-count">0</span>/500 |
+          Enter로 전송, Shift+Enter로 줄바꿈 |
+          <span id="ai-rate-info">일일 질문 한도: <span id="ai-remaining">30</span>회</span>
+        </small>
+      </div>
+    </form>
+  </div>
+
+  <!-- Loading indicator -->
+  <div id="ai-loading" class="ai-loading" hidden>
+    <div class="ai-loading-spinner"></div>
+    <span>AI가 답변을 생성하고 있습니다...</span>
+  </div>
+
+  <!-- Error display -->
+  <div id="ai-error" class="ai-error" hidden></div>
+</section>
+
+<style>
+/* AI Search Page - Brutalist/LLVM Style */
+.ai-search-page {
+  font-family: "Times New Roman", "Times", "Georgia", serif;
+  color: #000000;
+  background: #FFFFFF;
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 0;
+}
+
+.ai-search-header {
+  border: 2px solid #000000;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  background: #F5F5F5;
+}
+
+.ai-search-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ai-search-desc {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+}
+
+.ai-search-info {
+  margin: 0;
+  color: #666666;
+}
+
+/* Gate (Bot Protection) */
+.ai-search-gate {
+  border: 2px solid #000000;
+  padding: 24px;
+  text-align: center;
+  background: #FFFFF8;
+}
+
+.ai-search-gate p {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+}
+
+/* Buttons */
+.ai-btn {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 2px solid #000000;
+  background: #FFFFFF;
+  color: #000000;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.ai-btn:hover {
+  background: #E0E0E0;
+}
+
+.ai-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ai-btn-primary {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.ai-btn-primary:hover {
+  background: #333333;
+}
+
+/* Main Chat Area */
+.ai-search-main {
+  border: 2px solid #000000;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat Messages Container */
+.ai-chat-messages {
+  min-height: 300px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 16px;
+  background: #FAFAFA;
+  border-bottom: 1px solid #000000;
+}
+
+/* Chat Message */
+.ai-chat-msg {
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.ai-chat-msg:last-child {
+  margin-bottom: 0;
+}
+
+.ai-chat-user {
+  justify-content: flex-end;
+}
+
+.ai-chat-ai,
+.ai-chat-system {
+  justify-content: flex-start;
+}
+
+.ai-chat-bubble {
+  max-width: 85%;
+  padding: 10px 14px;
+  border: 1px solid #000000;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ai-chat-user .ai-chat-bubble {
+  background: #E8E8E8;
+  border-radius: 0;
+}
+
+.ai-chat-ai .ai-chat-bubble {
+  background: #FFFFFF;
+  border-radius: 0;
+}
+
+.ai-chat-system .ai-chat-bubble {
+  background: #FFFFF0;
+  border: 1px dashed #999999;
+  font-size: 13px;
+  color: #444444;
+}
+
+/* Chat bubble content */
+.ai-chat-bubble p {
+  margin: 0 0 8px 0;
+}
+
+.ai-chat-bubble p:last-child {
+  margin-bottom: 0;
+}
+
+.ai-chat-bubble ul,
+.ai-chat-bubble ol {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.ai-chat-bubble li {
+  margin-bottom: 4px;
+}
+
+.ai-chat-bubble code {
+  background: #F0F0F0;
+  padding: 1px 4px;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.ai-chat-bubble pre {
+  background: #F0F0F0;
+  padding: 8px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 12px;
+  margin: 8px 0;
+}
+
+.ai-chat-bubble a {
+  color: #0000EE;
+  text-decoration: underline;
+}
+
+/* Reference links */
+.ai-chat-refs {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #CCCCCC;
+  font-size: 12px;
+}
+
+.ai-chat-refs-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #666666;
+}
+
+.ai-chat-refs ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.ai-chat-refs li {
+  margin-bottom: 3px;
+}
+
+/* Input Form */
+.ai-chat-form {
+  padding: 12px;
+  background: #FFFFFF;
+}
+
+.ai-chat-input-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.ai-chat-input {
+  flex: 1;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 8px 10px;
+  border: 1px solid #000000;
+  resize: none;
+  min-height: 40px;
+}
+
+.ai-chat-input:focus {
+  outline: 2px solid #000000;
+  outline-offset: 1px;
+}
+
+.ai-btn-submit {
+  align-self: flex-end;
+  min-width: 60px;
+}
+
+.ai-chat-hints {
+  margin-top: 6px;
+  color: #666666;
+  font-size: 11px;
+}
+
+/* Loading */
+.ai-loading {
+  border: 2px solid #000000;
+  padding: 20px;
+  text-align: center;
+  background: #FFFFF8;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.ai-loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #CCCCCC;
+  border-top-color: #000000;
+  border-radius: 50%;
+  animation: ai-spin 0.8s linear infinite;
+}
+
+@keyframes ai-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error */
+.ai-error {
+  border: 2px solid #CC0000;
+  padding: 12px 16px;
+  background: #FFF0F0;
+  color: #CC0000;
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .ai-search-page {
+    margin: 12px;
+  }
+
+  .ai-chat-messages {
+    min-height: 250px;
+    max-height: 400px;
+  }
+
+  .ai-chat-bubble {
+    max-width: 92%;
+  }
+
+  .ai-chat-input-wrapper {
+    flex-direction: column;
+  }
+
+  .ai-btn-submit {
+    align-self: stretch;
+  }
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script>
+(function() {
+  'use strict';
+
+  // ========================================
+  // Configuration
+  // ========================================
+  const CONFIG = {
+    // API Configuration - will be set from environment or fallback
+    GEMINI_API_KEY: '{{ getenv "KEY_API_GEMINI" }}' || '',
+    GEMINI_MODEL: 'gemini-2.0-flash-lite',
+    GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/',
+
+    // Search Configuration
+    SEARCH_RESULT_LIMIT: 5,
+    FUSE_THRESHOLD: 0.4,
+
+    // Rate Limiting
+    DAILY_LIMIT: 30,
+    RATE_LIMIT_KEY: 'ai_search_rate_limit',
+
+    // Content limits
+    MAX_CONTEXT_CHARS: 8000,
+    MAX_INPUT_LENGTH: 500
+  };
+
+  // ========================================
+  // State
+  // ========================================
+  let searchIndex = [];
+  let fuse = null;
+  let isProcessing = false;
+  let chatHistory = [];
+
+  // ========================================
+  // DOM Elements
+  // ========================================
+  const elements = {
+    gate: document.getElementById('ai-search-gate'),
+    startBtn: document.getElementById('ai-search-start-btn'),
+    main: document.getElementById('ai-search-main'),
+    messages: document.getElementById('ai-chat-messages'),
+    form: document.getElementById('ai-chat-form'),
+    input: document.getElementById('ai-chat-input'),
+    submit: document.getElementById('ai-chat-submit'),
+    charCount: document.getElementById('ai-char-count'),
+    remaining: document.getElementById('ai-remaining'),
+    loading: document.getElementById('ai-loading'),
+    error: document.getElementById('ai-error')
+  };
+
+  // ========================================
+  // Rate Limiting
+  // ========================================
+  function getRateLimitData() {
+    try {
+      const data = localStorage.getItem(CONFIG.RATE_LIMIT_KEY);
+      if (!data) return { date: '', count: 0 };
+      return JSON.parse(data);
+    } catch {
+      return { date: '', count: 0 };
+    }
+  }
+
+  function setRateLimitData(data) {
+    try {
+      localStorage.setItem(CONFIG.RATE_LIMIT_KEY, JSON.stringify(data));
+    } catch {
+      // localStorage not available
+    }
+  }
+
+  function checkRateLimit() {
+    const today = new Date().toISOString().split('T')[0];
+    const data = getRateLimitData();
+
+    if (data.date !== today) {
+      // Reset for new day
+      setRateLimitData({ date: today, count: 0 });
+      return { allowed: true, remaining: CONFIG.DAILY_LIMIT };
+    }
+
+    const remaining = CONFIG.DAILY_LIMIT - data.count;
+    return { allowed: remaining > 0, remaining: Math.max(0, remaining) };
+  }
+
+  function incrementRateLimit() {
+    const today = new Date().toISOString().split('T')[0];
+    const data = getRateLimitData();
+
+    if (data.date !== today) {
+      setRateLimitData({ date: today, count: 1 });
+    } else {
+      setRateLimitData({ date: today, count: data.count + 1 });
+    }
+  }
+
+  function updateRateLimitDisplay() {
+    const { remaining } = checkRateLimit();
+    if (elements.remaining) {
+      elements.remaining.textContent = remaining;
+    }
+  }
+
+  // ========================================
+  // Search Index
+  // ========================================
+  async function loadSearchIndex() {
+    try {
+      const response = await fetch('/index.json');
+      if (!response.ok) throw new Error('Failed to load search index');
+      searchIndex = await response.json();
+
+      fuse = new Fuse(searchIndex, {
+        keys: [
+          { name: 'title', weight: 0.35 },
+          { name: 'summary', weight: 0.25 },
+          { name: 'content', weight: 0.25 },
+          { name: 'tags', weight: 0.1 },
+          { name: 'series', weight: 0.05 }
+        ],
+        threshold: CONFIG.FUSE_THRESHOLD,
+        includeScore: true,
+        minMatchCharLength: 2
+      });
+
+      console.log(`[AI Search] Loaded ${searchIndex.length} posts`);
+      return true;
+    } catch (err) {
+      console.error('[AI Search] Failed to load index:', err);
+      showError('검색 인덱스를 로드하지 못했습니다. 페이지를 새로고침해 주세요.');
+      return false;
+    }
+  }
+
+  // ========================================
+  // Search & RAG
+  // ========================================
+  function searchRelevantPosts(query) {
+    if (!fuse) return [];
+
+    const results = fuse.search(query);
+    return results.slice(0, CONFIG.SEARCH_RESULT_LIMIT).map(r => ({
+      title: r.item.title,
+      url: r.item.url,
+      summary: r.item.summary || '',
+      content: r.item.content || '',
+      tags: r.item.tags || '',
+      score: r.score
+    }));
+  }
+
+  function buildContext(posts) {
+    let context = '';
+    let charCount = 0;
+
+    for (const post of posts) {
+      const postText = `
+## ${post.title}
+URL: ${post.url}
+${post.tags ? `태그: ${post.tags}` : ''}
+${post.summary ? `요약: ${post.summary}` : ''}
+${post.content ? `내용: ${post.content}` : ''}
+---
+`;
+      if (charCount + postText.length > CONFIG.MAX_CONTEXT_CHARS) break;
+      context += postText;
+      charCount += postText.length;
+    }
+
+    return context;
+  }
+
+  // ========================================
+  // Gemini API
+  // ========================================
+  async function callGeminiAPI(query, context, relevantPosts) {
+    if (!CONFIG.GEMINI_API_KEY) {
+      throw new Error('API 키가 설정되지 않았습니다. 관리자에게 문의하세요.');
+    }
+
+    const systemPrompt = `당신은 "삽질 저장소" 블로그의 AI 검색 어시스턴트입니다.
+사용자의 질문에 대해 아래 제공된 블로그 글들을 참고하여 답변해 주세요.
+
+규칙:
+1. 반드시 제공된 블로그 글 내용만을 기반으로 답변하세요.
+2. 블로그에 관련 내용이 없으면 솔직하게 "이 블로그에는 관련 글이 없습니다"라고 말씀해 주세요.
+3. 답변은 간결하고 명확하게 작성하세요.
+4. 가능하면 관련 글의 제목을 언급해 주세요.
+5. 마크다운 형식을 사용해도 됩니다.
+6. 한국어로 답변하세요.`;
+
+    const userMessage = `[사용자 질문]
+${query}
+
+[참고할 블로그 글들]
+${context}
+
+위 블로그 글들을 참고하여 사용자의 질문에 답변해 주세요.`;
+
+    const url = `${CONFIG.GEMINI_API_URL}${CONFIG.GEMINI_MODEL}:generateContent?key=${CONFIG.GEMINI_API_KEY}`;
+
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        contents: [{
+          parts: [{ text: systemPrompt + '\n\n' + userMessage }]
+        }],
+        generationConfig: {
+          temperature: 0.7,
+          maxOutputTokens: 1024,
+          topP: 0.9
+        },
+        safetySettings: [
+          { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_ONLY_HIGH" },
+          { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_ONLY_HIGH" },
+          { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_ONLY_HIGH" },
+          { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_ONLY_HIGH" }
+        ]
+      })
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      console.error('[AI Search] API Error:', errorData);
+
+      if (response.status === 429) {
+        throw new Error('API 요청 한도를 초과했습니다. 잠시 후 다시 시도해 주세요.');
+      } else if (response.status === 403) {
+        throw new Error('API 키가 유효하지 않습니다.');
+      }
+      throw new Error('AI 응답을 받지 못했습니다. 잠시 후 다시 시도해 주세요.');
+    }
+
+    const data = await response.json();
+
+    if (data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
+      return data.candidates[0].content.parts[0].text;
+    }
+
+    throw new Error('AI 응답 형식이 올바르지 않습니다.');
+  }
+
+  // ========================================
+  // Chat UI
+  // ========================================
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  function parseMarkdown(text) {
+    // Simple markdown parsing
+    return text
+      // Code blocks
+      .replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
+      // Inline code
+      .replace(/`([^`]+)`/g, '<code>$1</code>')
+      // Bold
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      // Italic
+      .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+      // Links
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+      // Line breaks
+      .replace(/\n\n/g, '</p><p>')
+      .replace(/\n/g, '<br>');
+  }
+
+  function addMessage(type, content, refs = []) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = `ai-chat-msg ai-chat-${type}`;
+
+    const bubbleDiv = document.createElement('div');
+    bubbleDiv.className = 'ai-chat-bubble';
+
+    if (type === 'user') {
+      bubbleDiv.innerHTML = `<p>${escapeHtml(content)}</p>`;
+    } else {
+      bubbleDiv.innerHTML = `<p>${parseMarkdown(content)}</p>`;
+
+      // Add references if available
+      if (refs.length > 0) {
+        const refsDiv = document.createElement('div');
+        refsDiv.className = 'ai-chat-refs';
+        refsDiv.innerHTML = `
+          <div class="ai-chat-refs-title">참고한 글:</div>
+          <ul>
+            ${refs.map(r => `<li><a href="${r.url}" target="_blank">${escapeHtml(r.title)}</a></li>`).join('')}
+          </ul>
+        `;
+        bubbleDiv.appendChild(refsDiv);
+      }
+    }
+
+    msgDiv.appendChild(bubbleDiv);
+    elements.messages.appendChild(msgDiv);
+
+    // Scroll to bottom
+    elements.messages.scrollTop = elements.messages.scrollHeight;
+  }
+
+  function showError(message) {
+    elements.error.textContent = message;
+    elements.error.hidden = false;
+    setTimeout(() => {
+      elements.error.hidden = true;
+    }, 5000);
+  }
+
+  function setLoading(loading) {
+    isProcessing = loading;
+    elements.loading.hidden = !loading;
+    elements.submit.disabled = loading;
+    elements.input.disabled = loading;
+  }
+
+  // ========================================
+  // Main Handler
+  // ========================================
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    const query = elements.input.value.trim();
+    if (!query || isProcessing) return;
+
+    // Check rate limit
+    const rateCheck = checkRateLimit();
+    if (!rateCheck.allowed) {
+      showError('일일 질문 한도를 초과했습니다. 내일 다시 시도해 주세요.');
+      return;
+    }
+
+    // Clear input
+    elements.input.value = '';
+    elements.charCount.textContent = '0';
+
+    // Add user message
+    addMessage('user', query);
+
+    // Set loading
+    setLoading(true);
+    elements.error.hidden = true;
+
+    try {
+      // Search relevant posts
+      const relevantPosts = searchRelevantPosts(query);
+
+      if (relevantPosts.length === 0) {
+        addMessage('ai', '죄송합니다. 질문과 관련된 블로그 글을 찾지 못했습니다. 다른 키워드로 검색해 보세요.', []);
+        setLoading(false);
+        return;
+      }
+
+      // Build context
+      const context = buildContext(relevantPosts);
+
+      // Call Gemini API
+      const response = await callGeminiAPI(query, context, relevantPosts);
+
+      // Increment rate limit
+      incrementRateLimit();
+      updateRateLimitDisplay();
+
+      // Add AI response
+      addMessage('ai', response, relevantPosts);
+
+      // Store in history
+      chatHistory.push({ role: 'user', content: query });
+      chatHistory.push({ role: 'assistant', content: response });
+
+    } catch (err) {
+      console.error('[AI Search] Error:', err);
+      showError(err.message || '오류가 발생했습니다. 다시 시도해 주세요.');
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  // ========================================
+  // Event Listeners
+  // ========================================
+  function setupEventListeners() {
+    // Start button (gate)
+    elements.startBtn?.addEventListener('click', async () => {
+      elements.gate.hidden = true;
+      elements.main.hidden = false;
+
+      // Load search index
+      await loadSearchIndex();
+      updateRateLimitDisplay();
+
+      // Focus input
+      elements.input?.focus();
+    });
+
+    // Form submit
+    elements.form?.addEventListener('submit', handleSubmit);
+
+    // Character count
+    elements.input?.addEventListener('input', () => {
+      const len = elements.input.value.length;
+      elements.charCount.textContent = len;
+
+      if (len >= CONFIG.MAX_INPUT_LENGTH) {
+        elements.charCount.style.color = '#CC0000';
+      } else {
+        elements.charCount.style.color = '';
+      }
+    });
+
+    // Enter to submit, Shift+Enter for newline
+    elements.input?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        elements.form?.dispatchEvent(new Event('submit'));
+      }
+    });
+  }
+
+  // ========================================
+  // Initialize
+  // ========================================
+  function init() {
+    // Check if API key is available
+    if (!CONFIG.GEMINI_API_KEY) {
+      console.warn('[AI Search] API key not configured');
+      // Still allow starting - will show error when trying to search
+    }
+
+    setupEventListeners();
+    console.log('[AI Search] Initialized');
+  }
+
+  // Run on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+{{ end }}
