@@ -20,6 +20,9 @@
     <input type="text" id="sidebar-search-input" class="sidebar-search-input" placeholder="Search posts..."
       autocomplete="off" />
     <div id="sidebar-search-results" class="sidebar-search-results" style="display: none;"></div>
+    <div class="magic-search-wrapper">
+      <a href="/magic-search/" class="magic-search-button">Magic Search</a>
+    </div>
   </div>
 
   <!-- Series 섹션 (최대 8개) -->
@@ -248,6 +251,41 @@
     color: #666666;
     font-size: 11pt;
     font-style: italic;
+  }
+
+  .magic-search-wrapper {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .magic-search-button {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 2px solid #000000;
+    font-size: 11pt;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    background: linear-gradient(90deg, #ff5f6d, #ffc371, #7afcff, #b5fffc, #c3ff99, #ffb4e6);
+    background-size: 200% 200%;
+    animation: magicRainbow 2.5s linear infinite;
+  }
+
+  .magic-search-button:hover {
+    color: #000000;
+    background-position: 100% 0;
+  }
+
+  @keyframes magicRainbow {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
   }
 
   /* ===== 태블릿 (768px - 1024px) ===== */

@@ -1,6 +1,6 @@
 ---
 title: "Linux - Debian에서 keyd를 사용한 키보드 리맵핑 가이드"
-date: 2025-11-16T07:44:00.000Z
+date: 2024-11-16T07:44:00.000Z
 draft: false
 tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
 series: ["Let's Linux!"]
@@ -147,4 +147,3 @@ sudo keyd monitor
 - `u/o`: Home/End 키로 매핑
 - `[capslock+shift]`: Shift와 조합시 텍스트 선택 가능
 이제 Capslock을 누른 채로 i j k l 키를 사용하면 방향키로 작동하며, Shift를 추가로 누르면 텍스트 선택도 가능합니다.
-
