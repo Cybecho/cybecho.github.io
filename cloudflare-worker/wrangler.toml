@@ -1,0 +1,7 @@
+name = "magic-search-proxy"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# 환경변수는 Cloudflare 대시보드에서 설정하세요
+# Settings > Variables > Environment Variables > Add variable
+# GEMINI_API_KEY = "your-api-key-here"

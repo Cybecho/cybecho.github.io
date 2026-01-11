@@ -106,7 +106,6 @@ jobs:
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
-          HUGO_GEMINI_API_KEY: ${{ secrets.KEY_API_GEMINI }}
         run: |
           echo "Building Hugo site..."
           hugo --gc --minify --buildFuture
