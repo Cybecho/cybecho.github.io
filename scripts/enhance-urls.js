@@ -133,7 +133,7 @@ async function enhanceMarkdownFile(filePath, cache) {
     let modified = false;
 
     // Pattern: [URL](URL) where URL is the same in both places
-    // 🔗 emoji가 있는 경우와 없는 경우 모두 처리
+    // 이모지가 있는 경우도 처리하지만, 결과에서는 제거
     const urlPattern = /(?:🔗\s*)?\[(https?:\/\/[^\]]+)\]\((https?:\/\/[^\)]+)\)/g;
 
     const matches = [...content.matchAll(urlPattern)];
@@ -142,22 +142,28 @@ async function enhanceMarkdownFile(filePath, cache) {
       const linkText = match[1];
       const linkUrl = match[2];
 
-      // Only process if link text equals link URL (excluding emoji)
+      // Only process if link text equals link URL
       if (linkText === linkUrl) {
         console.log('\n🔗 Found URL-only link:', linkUrl);
 
         const title = await fetchPageTitle(linkUrl, cache);
 
         if (title) {
-          // Replace with title, preserving 🔗 emoji if it exists
-          const hasEmoji = match[0].startsWith('🔗');
-          const replacement = hasEmoji
-            ? `🔗 [${title}](${linkUrl})`
-            : `[${title}](${linkUrl})`;
+          // Replace with title without emoji
+          const replacement = `[${title}](${linkUrl})`;
 
           content = content.replace(match[0], replacement);
           modified = true;
           console.log('  ✅ Replaced with title');
+        } else {
+          // If title fetch fails, still remove emoji if present
+          const hasEmoji = match[0].startsWith('🔗');
+          if (hasEmoji) {
+            const replacement = `[${linkUrl}](${linkUrl})`;
+            content = content.replace(match[0], replacement);
+            modified = true;
+            console.log('  ⚠️ Removed emoji (title fetch failed)');
+          }
         }
 
         // Add delay to avoid rate limiting

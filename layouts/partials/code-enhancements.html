@@ -83,16 +83,17 @@
 }
 
 /* 줄 번호 스타일 */
-.highlight .lnt,
-.highlight .line {
-  display: inline-block;
-  height: 21px;
-  line-height: 21px;
-}
-
 .highlight .lnt {
+  display: inline-block;
   color: #999999;
   font-weight: normal;
+}
+
+/* 코드 라인 - 줄바꿈 유지 */
+.highlight .line {
+  display: block;
+  min-height: 21px;
+  line-height: 21px;
 }
 
 /* 복사 버튼 - 우측 상단에 배치 */
@@ -252,9 +253,8 @@ code:not(.highlight code):not(pre code) {
     font-size: 13px;
   }
 
-  .highlight .lnt,
   .highlight .line {
-    height: 18.85px;
+    min-height: 18.85px;
     line-height: 18.85px;
   }
 
@@ -276,9 +276,8 @@ code:not(.highlight code):not(pre code) {
     font-size: 12px;
   }
 
-  .highlight .lnt,
   .highlight .line {
-    height: 17.4px;
+    min-height: 17.4px;
     line-height: 17.4px;
   }
 

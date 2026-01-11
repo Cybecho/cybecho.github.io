@@ -16,17 +16,17 @@ notion_url: "https://www.notion.so/AWS-e71d214380b5426abc9d5872c144c38d"
 
 ---
 
-🔗 [https://m.youtube.com/watch?v=1-ejsGzhF8A](https://m.youtube.com/watch?v=1-ejsGzhF8A)
+[https://m.youtube.com/watch?v=1-ejsGzhF8A](https://m.youtube.com/watch?v=1-ejsGzhF8A)
 
-🔗 [https://m.youtube.com/watch?v=WDkhI1_12WQ](https://m.youtube.com/watch?v=WDkhI1_12WQ)
+[https://m.youtube.com/watch?v=WDkhI1_12WQ](https://m.youtube.com/watch?v=WDkhI1_12WQ)
 
-🔗 [https://m.youtube.com/watch?v=gceEXrU0b0U](https://m.youtube.com/watch?v=gceEXrU0b0U)
+[https://m.youtube.com/watch?v=gceEXrU0b0U](https://m.youtube.com/watch?v=gceEXrU0b0U)
 
-🔗 [https://m.youtube.com/watch?v=U24tsNk8Wyg](https://m.youtube.com/watch?v=U24tsNk8Wyg)
+[https://m.youtube.com/watch?v=U24tsNk8Wyg](https://m.youtube.com/watch?v=U24tsNk8Wyg)
 
-🔗 [https://aws.amazon.com/ko/gametech/game-servers-networking/](https://aws.amazon.com/ko/gametech/game-servers-networking/)
+[https://aws.amazon.com/ko/gametech/game-servers-networking/](https://aws.amazon.com/ko/gametech/game-servers-networking/)
 
-🔗 [https://brunch.co.kr/@topasvga/79](https://brunch.co.kr/@topasvga/79)
+[https://brunch.co.kr/@topasvga/79](https://brunch.co.kr/@topasvga/79)
 
-🔗 [https://youtu.be/VsSC3cW7L2s?si=Ic3Sz9ArM_Y-iH0N](https://youtu.be/VsSC3cW7L2s?si=Ic3Sz9ArM_Y-iH0N)
+[https://youtu.be/VsSC3cW7L2s?si=Ic3Sz9ArM_Y-iH0N](https://youtu.be/VsSC3cW7L2s?si=Ic3Sz9ArM_Y-iH0N)
 

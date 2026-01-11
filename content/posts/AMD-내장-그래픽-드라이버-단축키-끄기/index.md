@@ -18,11 +18,11 @@ notion_url: "https://www.notion.so/AMD-92873ece602c4607ae9f61290ab6230d"
 
 ![Image](image_eac995a73545.png)
 
-🔗 [https://brokyy.tistory.com/52](https://brokyy.tistory.com/52)
+[https://brokyy.tistory.com/52](https://brokyy.tistory.com/52)
 
 ## AMD 7900용 드라이버
 
-🔗 [https://www.amd.com/en/support/apu/amd-ryzen-processors/amd-ryzen-9-processors/amd-ryzen-9-7900](https://www.amd.com/en/support/apu/amd-ryzen-processors/amd-ryzen-9-processors/amd-ryzen-9-7900)
+[https://www.amd.com/en/support/apu/amd-ryzen-processors/amd-ryzen-9-processors/amd-ryzen-9-7900](https://www.amd.com/en/support/apu/amd-ryzen-processors/amd-ryzen-9-processors/amd-ryzen-9-7900)
 
 ![Image](image_59517c237401.png)
 
