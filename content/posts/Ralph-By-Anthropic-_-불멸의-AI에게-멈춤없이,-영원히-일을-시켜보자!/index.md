@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Ralph-By-Anthropic-AI-2e51bab9e3f8806db12bf05
 
 ---
 
-![Image](image_a147c8fd5cce.png)
+![Image](image_00d00752529e.png)
 
 ## [주제 1: Ralph 플러그인의 기원과 핵심 개념]
 
@@ -32,7 +32,7 @@ Anthropic 팀은 단순히 한 줄의 배시 스크립트를 사용하는 대신
 
 Claude Code 인터페이스 내에서 Ralph 기능을 활성화하기 위해서는 `/ralph` 슬래시 명령어를 사용해야 합니다. 이 명령어는 크게 세 가지 구성 요소로 이루어지는데, 수행할 과업을 명시한 프롬프트, 작업 완료를 인식할 지표인 '완료 신호(Completion Promise)', 그리고 선택 사항인 반복 횟수 제한입니다. 사용자는 'done'이나 'complete'와 같은 특정 단어를 완료 신호로 설정함으로써, 에이전트가 해당 단어를 출력할 때까지 작업을 멈추지 않고 지속하도록 제어할 수 있습니다.
 
-![Image](image_d28f45baba8a.png)
+![Image](image_4a896acd55dd.png)
 
 ## [주제 4: 자동 반복을 위한 스탑 훅(Stop Hook) 및 상태 관리]
 
