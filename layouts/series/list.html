@@ -1,78 +1,72 @@
 {{ define "main" }}
-<table width="100%" border="0" cellpadding="10">
-<tr>
-<td valign="top">
+<div class="content-box">
+  <main role="main" class="main-content">
+    <div class="www_sectiontitle">{{ .Title }}</div>
 
-<main role="main" class="main-content">
-  <div class="www_sectiontitle">{{ .Title }}</div>
+    {{ .Content | safeHTML }}
 
-  {{ .Content | safeHTML }}
+    <!-- 시리즈 포스트 리스트 -->
+    {{ $seriesName := .Title }}
+    {{ $posts := where .Site.RegularPages "Params.series" "intersect" (slice $seriesName) }}
+    {{ $posts = $posts.ByDate.Reverse }}
 
-  <!-- 시리즈 포스트 리스트 -->
-  {{ $seriesName := .Title }}
-  {{ $posts := where .Site.RegularPages "Params.series" "intersect" (slice $seriesName) }}
-  {{ $posts = $posts.ByDate.Reverse }}
-
-  {{ if $posts }}
+    {{ if $posts }}
     <div class="www_sectiontitle">Posts ({{ len $posts }})</div>
 
     <div class="www_text">
       {{ range $index, $post := $posts }}
-        <p>
-          <strong>{{ add $index 1 }}. {{ $post.Date.Format "2006-01-02" }}:</strong>
-          <a href="{{ $post.Permalink }}">{{ $post.Title }}</a>
-        </p>
-        {{ if $post.Description }}
-        <p style="margin-left: 2em;">
-          {{ $post.Description }}
-        </p>
-        {{ end }}
-        {{ with $post.Params.tags }}
-        <p style="margin-left: 2em;">
-          <span style="font-size:smaller">
-            {{ range first 5 . }}#{{ . }} {{ end }}
-          </span>
-        </p>
-        {{ end }}
+      <p>
+        <strong>{{ add $index 1 }}. {{ $post.Date.Format "2006-01-02" }}:</strong>
+        <a href="{{ $post.Permalink }}">{{ $post.Title }}</a>
+      </p>
+      {{ if $post.Description }}
+      <p style="margin-left: 2em;">
+        {{ $post.Description }}
+      </p>
+      {{ end }}
+      {{ with $post.Params.tags }}
+      <p style="margin-left: 2em;">
+        <span style="font-size:smaller">
+          {{ range first 5 . }}#{{ . }} {{ end }}
+        </span>
+      </p>
+      {{ end }}
       {{ end }}
     </div>
-  {{ else }}
+    {{ else }}
     <div class="www_text">
       <p>No posts available for this series.</p>
     </div>
-  {{ end }}
-</main>
-
-</td>
-</tr>
-</table>
+    {{ end }}
+  </main>
+</div>
 
 <style>
-.main-content {
-  padding: 0;
-  max-width: 100%;
-  width: 100%;
-  font-family: "Georgia", "Palatino", "Times", "Roman", serif;
-}
-
-.www_text a {
-  color: #0000EE;
-  text-decoration: underline;
-}
-
-.www_text a:visited {
-  color: #551A8B;
-}
-
-.www_text a:hover {
-  color: #0000EE;
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
   .main-content {
     padding: 0;
+    max-width: 100%;
+    width: 100%;
+    font-family: "Georgia", "Palatino", "Times", "Roman", serif;
   }
-}
+
+  .www_text a {
+    color: #0000EE;
+    text-decoration: underline;
+  }
+
+  .www_text a:visited {
+    color: #551A8B;
+  }
+
+  .www_text a:hover {
+    color: #0000EE;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .main-content {
+      padding: 0;
+    }
+  }
 </style>
 {{ end }}

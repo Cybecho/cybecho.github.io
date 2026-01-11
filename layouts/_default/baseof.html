@@ -9,7 +9,9 @@
   <!-- SEO Meta Tags -->
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
   <meta name="author" content="{{ .Site.Params.author.name }}">
-  <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags ", " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords ", " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
+  <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags "
+    , " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords "
+    , " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{{ .Permalink }}">
 
@@ -133,25 +135,23 @@
 <body>
   {{ partial "header.html" . }}
 
-  <!-- LLVM 스타일 Table 레이아웃: 좌측 + 중앙 + 우측 3열 -->
-  <table class="main-layout-table" width="100%" border="0" cellpadding="0" cellspacing="0">
-    <tr>
-      <!-- 좌측 네비게이션 -->
-      <td valign="top" align="center" style="width: 220px;">
-        {{ partial "sidebar.html" . }}
-      </td>
+  <!-- Flexbox Layout Container -->
+  <div class="site-container">
+    <!-- 좌측 네비게이션 -->
+    <aside class="sidebar-left">
+      {{ partial "sidebar.html" . }}
+    </aside>
 
-      <!-- 중앙 본문 -->
-      <td valign="top" class="main-content">
-        {{ block "main" . }}{{ end }}
-      </td>
+    <!-- 중앙 본문 -->
+    <main class="main-content-wrapper">
+      {{ block "main" . }}{{ end }}
+    </main>
 
-      <!-- 우측 프로필/TOC -->
-      <td valign="top" align="center" style="width: 250px;">
-        {{ partial "sidebar-right.html" . }}
-      </td>
-    </tr>
-  </table>
+    <!-- 우측 프로필/TOC -->
+    <aside class="sidebar-right">
+      {{ partial "sidebar-right.html" . }}
+    </aside>
+  </div>
 
   <!-- Search Modal -->
   {{ partial "search.html" . }}
@@ -218,30 +218,72 @@
       margin: 0;
       padding: 0;
       width: 100%;
-      max-width: 100%;
       min-height: 100vh;
+      background-color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
     }
 
-    /* Header를 sticky로 고정 */
-    body > .www_title,
-    body > .site-nav {
+    /* Sticky Header */
+    .www_title,
+    .site-nav {
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
       background: #FFFFFF;
-      border-bottom: 1px solid #000000;
+      width: 100%;
     }
 
-    /* 메인 컨테이너 - 스크롤 없음 */
-    body>table {
-      max-width: 100%;
-      display: table;
+    .site-nav {
+      /* Remove border if requested, or keep strictly defined one */
+      border-bottom: 1px solid #CCCCCC;
     }
 
-    /* 중앙 콘텐츠 영역만 overflow 제어 */
-    .main-content {
-      max-width: 100%;
-      overflow-wrap: break-word;
+    /* Site Container (Flexbox) */
+    .site-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      /* Center the layout */
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1400px;
+      /* Limit max width */
+      margin: 0 auto;
+      /* Center horizontally */
+      padding-top: 20px;
+      gap: 20px;
+      /* Spacing between columns */
+    }
+
+    /* Sidebars */
+    .sidebar-left {
+      width: 220px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 100px;
+      /* Header height offset approx */
+      height: calc(100vh - 100px);
+      overflow-y: auto;
+    }
+
+    .sidebar-right {
+      width: 250px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 100px;
+      /* Header height offset approx */
+      height: calc(100vh - 100px);
+      overflow-y: auto;
+    }
+
+    /* Main Content */
+    .main-content-wrapper {
+      flex: 1;
+      max-width: 800px;
+      /* Optimal reading width */
+      min-width: 0;
+      /* Prevent flex overflow */
     }
 
     /* 모바일용 프로필 섹션 (완전 숨김) */
@@ -249,139 +291,50 @@
       display: none;
     }
 
-    /* 데스크톱 */
-    @media (min-width: 1025px) {
-      table {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: block;
-      }
-
-      table tbody {
-        display: block;
-      }
-
-      table tr {
-        display: flex;
-        align-items: flex-start;
-      }
-
-      table td:first-child {
-        width: 220px;
-        flex-shrink: 0;
-      }
-
-      table td:nth-child(2) {
-        flex: 1;
-        max-width: 900px;
-        min-width: 0;
-      }
-
-      table td:nth-child(3) {
-        width: 250px;
-        flex-shrink: 0;
-      }
-    }
-
     /* 태블릿 */
     @media (min-width: 769px) and (max-width: 1024px) {
-      table {
-        max-width: 100%;
-        display: block;
+      .site-container {
+        padding: 0 10px;
+        gap: 15px;
       }
 
-      table tbody {
-        display: block;
-      }
-
-      table tr {
-        display: flex;
-        align-items: flex-start;
-      }
-
-      table td:first-child {
+      .sidebar-left {
         width: 200px;
-        flex-shrink: 0;
       }
 
-      table td:nth-child(2) {
-        flex: 1;
-        min-width: 0;
-      }
-
-      table td:nth-child(3) {
+      .sidebar-right {
         width: 220px;
-        flex-shrink: 0;
       }
     }
 
     /* 모바일 */
     @media (max-width: 768px) {
-      table {
-        display: block;
-        max-width: 100%;
-        width: 100%;
-        overflow-x: hidden;
+      .site-container {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
       }
 
-      table tbody {
-        display: block;
-      }
-
-      table tr {
-        display: block;
-      }
-
-      table td:first-child {
+      /* 사이드바는 모바일에서 숨김 (토글로 제어됨) */
+      .sidebar-left,
+      .sidebar-right {
         display: none;
+        /* sidebar.html 내부의 모바일 로직이 position:fixed로 처리함 */
       }
 
-      table td:nth-child(2) {
-        display: block;
-        width: 100% !important;
+      .main-content-wrapper {
+        width: 100%;
         max-width: 100%;
         padding: 10px;
-        overflow-x: hidden;
       }
 
-      table td:nth-child(3) {
-        display: none;
-      }
+      /* Mobile Profile visibility handled in sidebar-right logic or add specifically here if needed */
 
-      /* 중첩된 테이블도 모바일에 맞게 조정 */
-      .main-content table {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow-x: auto !important;
-      }
-
-      .main-content table tbody {
-        display: block !important;
-      }
-
-      .main-content table tr {
-        display: block !important;
-      }
-
-      .main-content table td {
-        display: block !important;
-        width: 100% !important;
-        padding: 10px !important;
-      }
-
-      body {
-        padding: 0;
-        width: 100%;
-        max-width: 100%;
-      }
-
-      /* 모바일에서 우측 사이드바를 본문 하단에 추가 (홈 페이지 제외) */
-      .mobile-profile {
-        display: block;
-        margin-top: 2rem;
-        padding: 1rem;
-        border: 2px solid #CCCCCC;
+      /* Sticky Header adjustment for mobile */
+      .www_title,
+      .site-nav {
+        position: sticky;
+        top: 0;
       }
     }
   </style>

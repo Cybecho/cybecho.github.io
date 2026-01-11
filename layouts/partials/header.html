@@ -11,7 +11,8 @@
     </button>
 
     <!-- Mobile Search Input (중앙/우측) -->
-    <input type="text" id="mobile-search-input" class="mobile-search-input" placeholder="Search..." autocomplete="off" />
+    <input type="text" id="mobile-search-input" class="mobile-search-input" placeholder="Search..."
+      autocomplete="off" />
 
     <!-- Mobile Home Button (우측) -->
     <a href="/" class="mobile-home-btn" aria-label="홈">
@@ -28,7 +29,7 @@
   /* ===== LLVM 스타일 헤더 ===== */
   .site-nav {
     background: #FFFFFF;
-    border-bottom: 1px solid #000000;
+    border-bottom: none;
     padding: 0;
   }
 
@@ -106,6 +107,7 @@
 
   /* ===== 모바일 반응형 (< 768px) ===== */
   @media (max-width: 768px) {
+
     .www_title,
     .site-nav {
       position: sticky;
