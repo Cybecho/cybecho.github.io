@@ -16,9 +16,11 @@ notion_url: "https://www.notion.so/Ralph-By-Anthropic-AI-2e51bab9e3f8806db12bf05
 
 ---
 
-![Image](image_bfef78f32959.png)
+![Image](image_8b2fe7fb03e6.png)
 
 ## [주제 1: Ralph 플러그인의 기원과 핵심 개념]
+
+[https://ghuntley.com/ralph/](https://ghuntley.com/ralph/)
 
 Anthropic의 Claude를 위한 코드 플러그인인 'Ralph'는 심슨 가족의 캐릭터 랄프 위검(Ralph Wiggum)에서 영감을 얻어 제작되었습니다. 이 도구의 핵심은 인공지능 모델이 과업을 완료하지 못하고 조기에 포기하는 문제를 해결하기 위해, 작업이 실제로 완료될 때까지 동일한 프롬프트를 반복해서 실행하는 끈기 있는 아키텍처에 있습니다. 본래 이 개념은 제프리 헌틀리(Jeffrey Huntley)가 제안한 '무한 배시 와일 루프(infinite bash while loop)' 기술에서 시작되었으며, 에이전트에게 프롬프트를 전달한 후 응답을 대기하고 다시 동일한 프롬프트를 피드백하는 단순하지만 강력한 논리적 구조를 지니고 있습니다.
 
@@ -30,7 +32,7 @@ Anthropic 팀은 단순히 한 줄의 배시 스크립트를 사용하는 대신
 
 Claude Code 인터페이스 내에서 Ralph 기능을 활성화하기 위해서는 `/ralph` 슬래시 명령어를 사용해야 합니다. 이 명령어는 크게 세 가지 구성 요소로 이루어지는데, 수행할 과업을 명시한 프롬프트, 작업 완료를 인식할 지표인 '완료 신호(Completion Promise)', 그리고 선택 사항인 반복 횟수 제한입니다. 사용자는 'done'이나 'complete'와 같은 특정 단어를 완료 신호로 설정함으로써, 에이전트가 해당 단어를 출력할 때까지 작업을 멈추지 않고 지속하도록 제어할 수 있습니다.
 
-![Image](image_ba0b1c826738.png)
+![Image](image_fa4221250414.png)
 
 ## [주제 4: 자동 반복을 위한 스탑 훅(Stop Hook) 및 상태 관리]
 

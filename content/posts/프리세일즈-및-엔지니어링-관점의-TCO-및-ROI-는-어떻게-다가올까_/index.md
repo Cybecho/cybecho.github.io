@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/TCO-ROI-2e51bab9e3f8806295d4f25fe8a3abf9"
 
 ---
 
-![Image](image_774fc7c757c4.png)
+![Image](image_d2f0d8d7e0ef.png)
 
 # IT 인프라스트럭처의 전략적 재무 아키텍처
 

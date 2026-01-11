@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/brew-cask-GUI-CLI-2dc1bab9e3f8800cb9c3deb19db
 
 ---
 
-![Image](image_19931dce4340.png)
+![Image](image_ab1af4ca987e.png)
 
 # `--CASK` 이거 뭐임?
 
