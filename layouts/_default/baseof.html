@@ -9,7 +9,9 @@
   <!-- SEO Meta Tags -->
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
   <meta name="author" content="{{ .Site.Params.author.name }}">
-  <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags ", " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords ", " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
+  <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags "
+    , " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords "
+    , " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{{ .Permalink }}">
 
@@ -168,7 +170,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       mermaid.initialize({
-        startOnLoad: true,
+        startOnLoad: false,
         theme: 'default',
         securityLevel: 'loose',
         flowchart: {
@@ -176,8 +178,29 @@
           htmlLabels: true
         }
       });
+
+      // Fallback: convert fenced mermaid code blocks to .mermaid nodes
+      const mermaidCodeBlocks = document.querySelectorAll('pre code.language-mermaid, pre code.lang-mermaid');
+      mermaidCodeBlocks.forEach(function (codeBlock) {
+        const pre = codeBlock.closest('pre');
+        if (!pre || pre.closest('.mermaid')) {
+          return;
+        }
+
+        const mermaidContainer = document.createElement('div');
+        mermaidContainer.className = 'mermaid';
+        mermaidContainer.textContent = codeBlock.textContent || '';
+        pre.replaceWith(mermaidContainer);
+      });
+
+      const mermaidBlocks = document.querySelectorAll('.mermaid');
+      if (mermaidBlocks.length) {
+        mermaid.run({ nodes: mermaidBlocks });
+      }
     });
   </script>
+
+
 
   <!-- Load search scripts -->
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
@@ -314,10 +337,19 @@
       }
 
       /* 사이드바는 모바일에서 숨김 (토글로 제어됨) */
-      .sidebar-left,
+      .sidebar-left {
+        /* display: none; -> Removing this so the fixed child works */
+        display: block;
+        width: 0;
+        height: 0;
+        overflow: visible;
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+
       .sidebar-right {
         display: none;
-        /* sidebar.html 내부의 모바일 로직이 position:fixed로 처리함 */
       }
 
       .main-content-wrapper {
