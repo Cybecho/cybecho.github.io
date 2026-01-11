@@ -369,7 +369,7 @@
   // ========================================
   const CONFIG = {
     // API Configuration - will be set from environment or fallback
-    GEMINI_API_KEY: '{{ getenv "KEY_API_GEMINI" }}' || '',
+    GEMINI_API_KEY: '{{ getenv "HUGO_GEMINI_API_KEY" }}' || '',
     GEMINI_MODEL: 'gemini-2.0-flash-lite',
     GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/',
 
