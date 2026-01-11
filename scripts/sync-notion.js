@@ -635,7 +635,7 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
           
         case 'video':
           if (block.video?.external?.url) {
-            content += '🎥 [동영상 보기](' + block.video.external.url + ')\n\n';
+            content += '[' + block.video.external.url + '](' + block.video.external.url + ')\n\n';
           }
           break;
           
@@ -648,10 +648,10 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             const pageTitle = await fetchPageTitle(bookmarkUrl);
 
             if (pageTitle) {
-              content += '🔗 [' + pageTitle + '](' + bookmarkUrl + ')\n\n';
+              content += '[' + pageTitle + '](' + bookmarkUrl + ')\n\n';
             } else {
               // Fallback to URL if title fetch fails
-              content += '🔗 [' + bookmarkUrl + '](' + bookmarkUrl + ')\n\n';
+              content += '[' + bookmarkUrl + '](' + bookmarkUrl + ')\n\n';
             }
           }
           break;

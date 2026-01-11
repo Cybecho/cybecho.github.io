@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/AI-20d1bab9e3f880989097fca7aacbebff"
 
 ---
 
-🔗 [https://machinelearning.apple.com/research/illusion-of-thinking](https://machinelearning.apple.com/research/illusion-of-thinking)
+[https://machinelearning.apple.com/research/illusion-of-thinking](https://machinelearning.apple.com/research/illusion-of-thinking)
 
-🔗 [https://claude.ai/share/c5ed7b35-23bb-45b2-966d-3f2d9acddec4](https://claude.ai/share/c5ed7b35-23bb-45b2-966d-3f2d9acddec4)
+[https://claude.ai/share/c5ed7b35-23bb-45b2-966d-3f2d9acddec4](https://claude.ai/share/c5ed7b35-23bb-45b2-966d-3f2d9acddec4)
 
