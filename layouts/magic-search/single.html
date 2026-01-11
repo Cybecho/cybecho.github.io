@@ -1,12 +1,16 @@
 {{ define "main" }}
 <section class="magic-search-page">
   <h1>Cybecho's Magic Search</h1>
-  <p>자연어로 질문하면 블로그 글을 모아 답변을 만들어드립니다.</p>
+  <p>자연어로 질문하면 블로그 글을 기반으로 AI가 답변을 생성합니다.</p>
+  <p class="magic-search-info"><small>Powered by Gemini + Fuse.js | 일일 30회 제한</small></p>
 
   <form id="magic-search-form" class="magic-search-form">
     <label for="magic-search-input">질문</label>
-    <textarea id="magic-search-input" rows="4" placeholder="예: 라즈베리파이로 NAS 구축할 때 고려할 점은?"></textarea>
-    <button type="submit">Ask Magic</button>
+    <textarea id="magic-search-input" rows="4" placeholder="예: 라즈베리파이로 NAS 구축할 때 고려할 점은?" maxlength="500"></textarea>
+    <div class="magic-search-form-footer">
+      <small><span id="char-count">0</span>/500</small>
+      <button type="submit" id="magic-submit-btn">Ask Magic</button>
+    </div>
   </form>
 
   <div id="magic-search-status" class="magic-search-status" aria-live="polite"></div>
@@ -14,8 +18,14 @@
   <div id="magic-search-answer" class="magic-search-answer" hidden>
     <h2>Magic Answer</h2>
     <div id="magic-search-summary"></div>
-    <h3>참고 링크</h3>
-    <ul id="magic-search-links"></ul>
+    <div id="magic-search-refs" class="magic-search-refs">
+      <h3>참고한 글</h3>
+      <ul id="magic-search-links"></ul>
+    </div>
+  </div>
+
+  <div id="magic-rate-info" class="magic-rate-info">
+    <small>오늘 남은 질문: <span id="magic-remaining">30</span>회</small>
   </div>
 </section>
 
@@ -36,6 +46,11 @@
     margin-top: 0;
   }
 
+  .magic-search-info {
+    color: #666666;
+    margin-top: -8px;
+  }
+
   .magic-search-form {
     display: flex;
     flex-direction: column;
@@ -45,114 +60,482 @@
 
   .magic-search-form textarea {
     border: 1px solid #000000;
-    padding: 6px;
+    padding: 8px;
     font-size: 12pt;
+    font-family: inherit;
     resize: vertical;
+    min-height: 80px;
+  }
+
+  .magic-search-form textarea:focus {
+    outline: 2px solid #000000;
+    outline-offset: 1px;
+  }
+
+  .magic-search-form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .magic-search-form button {
     border: 2px solid #000000;
-    background: #FFFFFF;
-    color: #000000;
+    background: #000000;
+    color: #FFFFFF;
     font-size: 12pt;
-    padding: 6px 12px;
+    font-family: inherit;
+    padding: 8px 16px;
     cursor: pointer;
+    transition: background 0.1s;
   }
 
   .magic-search-form button:hover {
-    background: #E0E0E0;
+    background: #333333;
+  }
+
+  .magic-search-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 
   .magic-search-status {
     margin-top: 12px;
-    font-style: italic;
+    padding: 12px;
+    background: #FFFFF0;
+    border: 1px dashed #999999;
+  }
+
+  .magic-search-status:empty {
+    display: none;
+  }
+
+  .magic-search-status.loading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .magic-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #CCCCCC;
+    border-top-color: #000000;
+    border-radius: 50%;
+    animation: magic-spin 0.8s linear infinite;
+  }
+
+  @keyframes magic-spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .magic-search-status.error {
+    background: #FFF0F0;
+    border-color: #CC0000;
+    color: #CC0000;
   }
 
   .magic-search-answer {
     margin-top: 18px;
-    border-top: 1px solid #000000;
-    padding-top: 12px;
+    border-top: 2px solid #000000;
+    padding-top: 16px;
+  }
+
+  .magic-search-answer h2 {
+    margin-bottom: 12px;
+  }
+
+  #magic-search-summary {
+    line-height: 1.6;
+  }
+
+  #magic-search-summary p {
+    margin: 0 0 12px 0;
+  }
+
+  #magic-search-summary ul,
+  #magic-search-summary ol {
+    margin: 8px 0;
+    padding-left: 24px;
+  }
+
+  #magic-search-summary li {
+    margin-bottom: 6px;
+  }
+
+  #magic-search-summary code {
+    background: #F0F0F0;
+    padding: 2px 6px;
+    font-family: monospace;
+    font-size: 11pt;
+  }
+
+  #magic-search-summary pre {
+    background: #F0F0F0;
+    padding: 12px;
+    overflow-x: auto;
+    font-family: monospace;
+    font-size: 10pt;
+    margin: 12px 0;
+    border: 1px solid #CCCCCC;
+  }
+
+  #magic-search-summary strong {
+    font-weight: bold;
+  }
+
+  #magic-search-summary em {
+    font-style: italic;
+  }
+
+  .magic-search-refs {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px dashed #CCCCCC;
+  }
+
+  .magic-search-refs h3 {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 8px;
+  }
+
+  .magic-search-refs ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .magic-search-refs li {
+    margin-bottom: 4px;
+  }
+
+  .magic-search-refs a {
+    color: #0000EE;
+    text-decoration: underline;
+  }
+
+  .magic-rate-info {
+    margin-top: 16px;
+    text-align: right;
+    color: #666666;
   }
 </style>
 
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 <script>
-  const magicForm = document.getElementById('magic-search-form');
-  const magicInput = document.getElementById('magic-search-input');
-  const magicStatus = document.getElementById('magic-search-status');
-  const magicAnswer = document.getElementById('magic-search-answer');
-  const magicSummary = document.getElementById('magic-search-summary');
-  const magicLinks = document.getElementById('magic-search-links');
+(function() {
+  'use strict';
 
-  let magicIndex = [];
-  let magicFuse;
+  // ========================================
+  // Configuration
+  // ========================================
+  const CONFIG = {
+    GEMINI_API_KEY: '{{ getenv "HUGO_GEMINI_API_KEY" }}' || '',
+    GEMINI_MODEL: 'gemini-2.0-flash-lite',
+    GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/',
+    SEARCH_LIMIT: 5,
+    MAX_CONTEXT_CHARS: 8000,
+    DAILY_LIMIT: 30,
+    RATE_KEY: 'magic_search_rate'
+  };
 
-  async function ensureMagicIndex() {
-    if (magicFuse) return;
-    const response = await fetch('/index.json');
-    magicIndex = await response.json();
-    magicFuse = new Fuse(magicIndex, {
-      keys: [
-        { name: 'title', weight: 0.4 },
-        { name: 'summary', weight: 0.2 },
-        { name: 'content', weight: 0.2 },
-        { name: 'tags', weight: 0.1 },
-        { name: 'series', weight: 0.1 }
-      ],
-      threshold: 0.35,
-      includeScore: true,
-      minMatchCharLength: 2
+  // ========================================
+  // DOM Elements
+  // ========================================
+  const form = document.getElementById('magic-search-form');
+  const input = document.getElementById('magic-search-input');
+  const submitBtn = document.getElementById('magic-submit-btn');
+  const status = document.getElementById('magic-search-status');
+  const answer = document.getElementById('magic-search-answer');
+  const summary = document.getElementById('magic-search-summary');
+  const links = document.getElementById('magic-search-links');
+  const charCount = document.getElementById('char-count');
+  const remaining = document.getElementById('magic-remaining');
+
+  let searchIndex = [];
+  let fuse = null;
+  let isProcessing = false;
+
+  // ========================================
+  // Rate Limiting
+  // ========================================
+  function getRateData() {
+    try {
+      const data = localStorage.getItem(CONFIG.RATE_KEY);
+      if (!data) return { date: '', count: 0 };
+      return JSON.parse(data);
+    } catch {
+      return { date: '', count: 0 };
+    }
+  }
+
+  function setRateData(data) {
+    try {
+      localStorage.setItem(CONFIG.RATE_KEY, JSON.stringify(data));
+    } catch {}
+  }
+
+  function checkRateLimit() {
+    const today = new Date().toISOString().split('T')[0];
+    const data = getRateData();
+    if (data.date !== today) {
+      setRateData({ date: today, count: 0 });
+      return { allowed: true, remaining: CONFIG.DAILY_LIMIT };
+    }
+    const rem = CONFIG.DAILY_LIMIT - data.count;
+    return { allowed: rem > 0, remaining: Math.max(0, rem) };
+  }
+
+  function incrementRate() {
+    const today = new Date().toISOString().split('T')[0];
+    const data = getRateData();
+    if (data.date !== today) {
+      setRateData({ date: today, count: 1 });
+    } else {
+      setRateData({ date: today, count: data.count + 1 });
+    }
+  }
+
+  function updateRateDisplay() {
+    const { remaining: rem } = checkRateLimit();
+    if (remaining) remaining.textContent = rem;
+  }
+
+  // ========================================
+  // Search Index
+  // ========================================
+  async function loadIndex() {
+    if (fuse) return true;
+    try {
+      const response = await fetch('/index.json');
+      searchIndex = await response.json();
+      fuse = new Fuse(searchIndex, {
+        keys: [
+          { name: 'title', weight: 0.35 },
+          { name: 'summary', weight: 0.25 },
+          { name: 'content', weight: 0.25 },
+          { name: 'tags', weight: 0.1 },
+          { name: 'series', weight: 0.05 }
+        ],
+        threshold: 0.4,
+        includeScore: true,
+        minMatchCharLength: 2
+      });
+      return true;
+    } catch (err) {
+      console.error('Failed to load index:', err);
+      return false;
+    }
+  }
+
+  // ========================================
+  // Search & Context
+  // ========================================
+  function searchPosts(query) {
+    if (!fuse) return [];
+    return fuse.search(query).slice(0, CONFIG.SEARCH_LIMIT).map(r => ({
+      title: r.item.title,
+      url: r.item.url,
+      summary: r.item.summary || '',
+      content: r.item.content || '',
+      tags: r.item.tags || '',
+      score: r.score
+    }));
+  }
+
+  function buildContext(posts) {
+    let ctx = '';
+    let len = 0;
+    for (const p of posts) {
+      const text = `## ${p.title}\nURL: ${p.url}\n${p.tags ? '태그: ' + p.tags + '\n' : ''}${p.summary ? '요약: ' + p.summary + '\n' : ''}${p.content ? '내용: ' + p.content + '\n' : ''}---\n`;
+      if (len + text.length > CONFIG.MAX_CONTEXT_CHARS) break;
+      ctx += text;
+      len += text.length;
+    }
+    return ctx;
+  }
+
+  // ========================================
+  // Gemini API
+  // ========================================
+  async function callGemini(query, context) {
+    if (!CONFIG.GEMINI_API_KEY) {
+      throw new Error('API 키가 설정되지 않았습니다.');
+    }
+
+    const systemPrompt = `당신은 "삽질 저장소" 블로그의 AI 검색 어시스턴트입니다.
+사용자의 질문에 대해 아래 제공된 블로그 글들을 참고하여 답변해 주세요.
+
+규칙:
+1. 반드시 제공된 블로그 글 내용만을 기반으로 답변하세요.
+2. 블로그에 관련 내용이 없으면 "이 블로그에는 관련 글이 없습니다"라고 솔직히 말해주세요.
+3. 답변은 간결하고 명확하게 작성하세요 (3-5문장 정도).
+4. 관련 글의 제목을 자연스럽게 언급해 주세요.
+5. 마크다운 형식을 사용해도 됩니다.
+6. 한국어로 답변하세요.`;
+
+    const userMsg = `[사용자 질문]\n${query}\n\n[참고할 블로그 글들]\n${context}\n\n위 블로그 글들을 참고하여 사용자의 질문에 답변해 주세요.`;
+
+    const url = `${CONFIG.GEMINI_API_URL}${CONFIG.GEMINI_MODEL}:generateContent?key=${CONFIG.GEMINI_API_KEY}`;
+
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: systemPrompt + '\n\n' + userMsg }] }],
+        generationConfig: {
+          temperature: 0.7,
+          maxOutputTokens: 1024,
+          topP: 0.9
+        },
+        safetySettings: [
+          { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_ONLY_HIGH" },
+          { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_ONLY_HIGH" },
+          { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_ONLY_HIGH" },
+          { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_ONLY_HIGH" }
+        ]
+      })
     });
+
+    if (!res.ok) {
+      if (res.status === 429) throw new Error('API 요청 한도 초과. 잠시 후 다시 시도해 주세요.');
+      if (res.status === 403) throw new Error('API 키가 유효하지 않습니다.');
+      throw new Error('AI 응답을 받지 못했습니다.');
+    }
+
+    const data = await res.json();
+    if (data.candidates?.[0]?.content?.parts?.[0]?.text) {
+      return data.candidates[0].content.parts[0].text;
+    }
+    throw new Error('AI 응답 형식 오류');
   }
 
-  function buildMagicSummary(results) {
-    const snippets = results.map((result, index) => {
-      const item = result.item;
-      const baseText = item.summary || item.content || '';
-      const trimmed = baseText.length > 200 ? baseText.slice(0, 200) + '...' : baseText;
-      return `<p><strong>${index + 1}. ${item.title}</strong><br>${trimmed}</p>`;
-    });
-    return `
-      <p>입력한 질문과 관련된 글을 모아 요약했습니다.</p>
-      ${snippets.join('')}
-    `;
+  // ========================================
+  // Markdown Parser
+  // ========================================
+  function parseMarkdown(text) {
+    return text
+      .replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
+      .replace(/`([^`]+)`/g, '<code>$1</code>')
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
+      .replace(/\n\n/g, '</p><p>')
+      .replace(/\n/g, '<br>');
   }
 
-  function renderReferences(results) {
-    magicLinks.innerHTML = results.map(result => {
-      const item = result.item;
-      return `<li><a href="${item.url}">${item.title}</a></li>`;
-    }).join('');
+  // ========================================
+  // UI Helpers
+  // ========================================
+  function showStatus(msg, type = 'info') {
+    status.className = 'magic-search-status ' + type;
+    if (type === 'loading') {
+      status.innerHTML = `<div class="magic-spinner"></div><span>${msg}</span>`;
+    } else {
+      status.textContent = msg;
+    }
   }
 
-  async function handleMagicSubmit(event) {
-    event.preventDefault();
-    const query = magicInput.value.trim();
+  function clearStatus() {
+    status.className = 'magic-search-status';
+    status.innerHTML = '';
+  }
 
+  function setLoading(loading) {
+    isProcessing = loading;
+    submitBtn.disabled = loading;
+    input.disabled = loading;
+  }
+
+  function renderAnswer(text, posts) {
+    summary.innerHTML = '<p>' + parseMarkdown(text) + '</p>';
+    links.innerHTML = posts.map(p => `<li><a href="${p.url}" target="_blank">${p.title}</a></li>`).join('');
+    answer.hidden = false;
+  }
+
+  // ========================================
+  // Form Handler
+  // ========================================
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (isProcessing) return;
+
+    const query = input.value.trim();
     if (!query) {
-      magicStatus.textContent = '질문을 입력해주세요.';
-      magicAnswer.hidden = true;
+      showStatus('질문을 입력해주세요.', 'error');
       return;
     }
 
-    magicStatus.textContent = 'Magic Search가 글을 모으는 중입니다...';
-    await ensureMagicIndex();
-
-    const results = magicFuse.search(query).slice(0, 5);
-
-    if (results.length === 0) {
-      magicStatus.textContent = '관련된 글을 찾지 못했습니다.';
-      magicAnswer.hidden = true;
+    // Rate limit check
+    const rate = checkRateLimit();
+    if (!rate.allowed) {
+      showStatus('일일 질문 한도를 초과했습니다. 내일 다시 시도해 주세요.', 'error');
       return;
     }
 
-    magicSummary.innerHTML = buildMagicSummary(results);
-    renderReferences(results);
-    magicAnswer.hidden = false;
-    magicStatus.textContent = '완료되었습니다.';
+    setLoading(true);
+    answer.hidden = true;
+    showStatus('블로그에서 관련 글을 찾는 중...', 'loading');
+
+    try {
+      // Load index
+      const loaded = await loadIndex();
+      if (!loaded) {
+        throw new Error('검색 인덱스를 로드하지 못했습니다.');
+      }
+
+      // Search
+      const posts = searchPosts(query);
+      if (posts.length === 0) {
+        showStatus('관련된 글을 찾지 못했습니다. 다른 키워드로 검색해 보세요.', 'info');
+        setLoading(false);
+        return;
+      }
+
+      showStatus('AI가 답변을 생성하는 중...', 'loading');
+
+      // Build context and call Gemini
+      const context = buildContext(posts);
+      const response = await callGemini(query, context);
+
+      // Increment rate
+      incrementRate();
+      updateRateDisplay();
+
+      // Render
+      clearStatus();
+      renderAnswer(response, posts);
+
+    } catch (err) {
+      console.error('Magic Search error:', err);
+      showStatus(err.message || '오류가 발생했습니다.', 'error');
+    } finally {
+      setLoading(false);
+    }
   }
 
-  if (magicForm) {
-    magicForm.addEventListener('submit', handleMagicSubmit);
+  // ========================================
+  // Initialize
+  // ========================================
+  function init() {
+    // Character count
+    input?.addEventListener('input', () => {
+      if (charCount) charCount.textContent = input.value.length;
+    });
+
+    // Form submit
+    form?.addEventListener('submit', handleSubmit);
+
+    // Rate display
+    updateRateDisplay();
+
+    console.log('[Magic Search] Initialized with Gemini integration');
   }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
 </script>
 {{ end }}
