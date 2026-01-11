@@ -2,70 +2,68 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
-  <meta name="author" content="{{ .Site.Params.author.name }}">
-  <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags "
-    , " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords "
-    , " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="{{ .Permalink }}">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
+    <meta name="author" content="{{ .Site.Params.author.name }}">
+  <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags ", " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords ", " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ .Permalink }}">
 
-  <!-- Schema.org for Google -->
-  <meta itemprop="name" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-  <meta itemprop="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
-  {{ if .Params.featured_image }}
-  <meta itemprop="image" content="{{ .Params.featured_image | absURL }}">{{ end }}
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta itemprop="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
+    {{ if .Params.featured_image }}
+    <meta itemprop="image" content="{{ .Params.featured_image | absURL }}">{{ end }}
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-  <meta property="og:description"
-    content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
-  <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
-  <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:site_name" content="{{ .Site.Title }}">
-  <meta property="og:locale" content="ko_KR">
-  {{ if .Params.featured_image }}
-  <meta property="og:image" content="{{ .Params.featured_image | absURL }}">{{ end }}
-  {{ if .Date }}
-  <meta property="article:published_time" content="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" }}">{{ end }}
-  {{ if .Lastmod }}
-  <meta property="article:modified_time" content="{{ .Lastmod.Format " 2006-01-02T15:04:05Z07:00" }}">{{ end }}
-  {{ with .Params.tags }}{{ range . }}
-  <meta property="article:tag" content="{{ . }}">{{ end }}{{ end }}
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:description"
+        content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
+    <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:locale" content="ko_KR">
+    {{ if .Params.featured_image }}
+    <meta property="og:image" content="{{ .Params.featured_image | absURL }}">{{ end }}
+    {{ if .Date }}
+    <meta property="article:published_time" content="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" }}">{{ end }}
+    {{ if .Lastmod }}
+    <meta property="article:modified_time" content="{{ .Lastmod.Format " 2006-01-02T15:04:05Z07:00" }}">{{ end }}
+    {{ with .Params.tags }}{{ range . }}
+    <meta property="article:tag" content="{{ . }}">{{ end }}{{ end }}
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-  <meta name="twitter:description"
-    content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
-  {{ if .Params.featured_image }}
-  <meta name="twitter:image" content="{{ .Params.featured_image | absURL }}">{{ end }}
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta name="twitter:description"
+        content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
+    {{ if .Params.featured_image }}
+    <meta name="twitter:image" content="{{ .Params.featured_image | absURL }}">{{ end }}
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/gif" href="https://minecraft.wiki/images/Enchanted_Stone_Shovel.gif?33e82">
+    <!-- Favicon -->
+    <link rel="icon" type="image/gif" href="https://minecraft.wiki/images/Enchanted_Stone_Shovel.gif?33e82">
 
-  <!-- RSS Feed -->
-  {{ with .OutputFormats.Get "RSS" }}
-  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}">
-  {{ end }}
+    <!-- RSS Feed -->
+    {{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}">
+    {{ end }}
 
-  <!-- JSON Feed for Search -->
-  {{ with .OutputFormats.Get "JSON" }}
-  <link href="{{ .Permalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }} Search Index">
-  {{ end }}
+    <!-- JSON Feed for Search -->
+    {{ with .OutputFormats.Get "JSON" }}
+    <link href="{{ .Permalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }} Search Index">
+    {{ end }}
 
-  <!-- Google Fonts for Code -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts for Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "{{ if .IsHome }}WebSite{{ else }}{{ if eq .Type "posts" }}BlogPosting{{ else }}WebPage{{ end }}{{ end }}",
@@ -112,262 +110,262 @@
   }
   </script>
 
-  <!-- Google Search Console Verification -->
-  {{ with .Site.Params.googleSiteVerification }}
-  <meta name="google-site-verification" content="{{ . }}">
-  {{ end }}
+    <!-- Google Search Console Verification -->
+    {{ with .Site.Params.googleSiteVerification }}
+    <meta name="google-site-verification" content="{{ . }}">
+    {{ end }}
 
-  <!-- Google Analytics -->
-  {{ with .Site.Params.googleAnalytics }}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', '{{ . }}');
-  </script>
-  {{ end }}
+    <!-- Google Analytics -->
+    {{ with .Site.Params.googleAnalytics }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ . }}');
+    </script>
+    {{ end }}
 
-  <!-- Include theme variables -->
-  {{ partial "theme-vars.html" . }}
+    <!-- Include theme variables -->
+    {{ partial "theme-vars.html" . }}
 </head>
 
 <body>
-  {{ partial "header.html" . }}
+    {{ partial "header.html" . }}
 
-  <!-- Flexbox Layout Container -->
-  <div class="site-container">
-    <!-- 좌측 네비게이션 -->
-    <aside class="sidebar-left">
-      {{ partial "sidebar.html" . }}
-    </aside>
+    <!-- Flexbox Layout Container -->
+    <div class="site-container">
+        <!-- 좌측 네비게이션 -->
+        <aside class="sidebar-left">
+            {{ partial "sidebar.html" . }}
+        </aside>
 
-    <!-- 중앙 본문 -->
-    <main class="main-content-wrapper">
-      {{ block "main" . }}{{ end }}
-    </main>
+        <!-- 중앙 본문 -->
+        <main class="main-content-wrapper">
+            {{ block "main" . }}{{ end }}
+        </main>
 
-    <!-- 우측 프로필/TOC -->
-    <aside class="sidebar-right">
-      {{ partial "sidebar-right.html" . }}
-    </aside>
-  </div>
+        <!-- 우측 프로필/TOC -->
+        <aside class="sidebar-right">
+            {{ partial "sidebar-right.html" . }}
+        </aside>
+    </div>
 
-  <!-- Search Modal -->
-  {{ partial "search.html" . }}
+    <!-- Search Modal -->
+    {{ partial "search.html" . }}
 
-  <!-- URL Preview -->
-  {{ partial "url-preview.html" . }}
+    <!-- URL Preview -->
+    {{ partial "url-preview.html" . }}
 
-  <!-- Code Enhancements -->
-  {{ partial "code-enhancements.html" . }}
+    <!-- Code Enhancements -->
+    {{ partial "code-enhancements.html" . }}
 
-  <!-- URL Preview Configuration -->
-  <script src="/js/url-preview-config.js"></script>
+    <!-- URL Preview Configuration -->
+    <script src="/js/url-preview-config.js"></script>
 
-  <!-- Mermaid Diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      mermaid.initialize({
-        startOnLoad: false,
-        theme: 'default',
-        securityLevel: 'loose',
-        flowchart: {
-          useMaxWidth: true,
-          htmlLabels: true
+    <!-- Mermaid Diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: 'default',
+                securityLevel: 'loose',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                }
+            });
+
+            // Fallback: convert fenced mermaid code blocks to .mermaid nodes
+            const mermaidCodeBlocks = document.querySelectorAll('pre code.language-mermaid, pre code.lang-mermaid');
+            mermaidCodeBlocks.forEach(function (codeBlock) {
+                const pre = codeBlock.closest('pre');
+                if (!pre || pre.closest('.mermaid')) {
+                    return;
+                }
+
+                const mermaidContainer = document.createElement('div');
+                mermaidContainer.className = 'mermaid';
+                mermaidContainer.textContent = codeBlock.textContent || '';
+                pre.replaceWith(mermaidContainer);
+            });
+
+            const mermaidBlocks = document.querySelectorAll('.mermaid');
+            if (mermaidBlocks.length) {
+                mermaid.run({ nodes: mermaidBlocks });
+            }
+        });
+    </script>
+
+
+
+    <!-- Load search scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 키보드 단축키: Ctrl+K 또는 Cmd+K로 사이드바 검색창 포커스
+            document.addEventListener('keydown', function (e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    const sidebarSearchInput = document.getElementById('sidebar-search-input');
+                    if (sidebarSearchInput) {
+                        sidebarSearchInput.focus();
+                        sidebarSearchInput.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- 반응형 스타일 -->
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
         }
-      });
 
-      // Fallback: convert fenced mermaid code blocks to .mermaid nodes
-      const mermaidCodeBlocks = document.querySelectorAll('pre code.language-mermaid, pre code.lang-mermaid');
-      mermaidCodeBlocks.forEach(function (codeBlock) {
-        const pre = codeBlock.closest('pre');
-        if (!pre || pre.closest('.mermaid')) {
-          return;
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
         }
 
-        const mermaidContainer = document.createElement('div');
-        mermaidContainer.className = 'mermaid';
-        mermaidContainer.textContent = codeBlock.textContent || '';
-        pre.replaceWith(mermaidContainer);
-      });
-
-      const mermaidBlocks = document.querySelectorAll('.mermaid');
-      if (mermaidBlocks.length) {
-        mermaid.run({ nodes: mermaidBlocks });
-      }
-    });
-  </script>
-
-
-
-  <!-- Load search scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // 키보드 단축키: Ctrl+K 또는 Cmd+K로 사이드바 검색창 포커스
-      document.addEventListener('keydown', function (e) {
-        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-          e.preventDefault();
-          const sidebarSearchInput = document.getElementById('sidebar-search-input');
-          if (sidebarSearchInput) {
-            sidebarSearchInput.focus();
-            sidebarSearchInput.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
         }
-      });
-    });
-  </script>
 
-  <!-- 반응형 스타일 -->
-  <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+        /* Sticky Header */
+        .www_title,
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #FFFFFF;
+            width: 100%;
+        }
 
-    html {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-    }
+        .site-nav {
+            /* Remove border if requested, or keep strictly defined one */
+            border-bottom: 1px solid #CCCCCC;
+        }
 
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      min-height: 100vh;
-      background-color: #FFFFFF;
-      display: flex;
-      flex-direction: column;
-    }
+        /* Site Container (Flexbox) */
+        .site-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* Center the layout */
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1400px;
+            /* Limit max width */
+            margin: 0 auto;
+            /* Center horizontally */
+            padding-top: 20px;
+            gap: 20px;
+            /* Spacing between columns */
+        }
 
-    /* Sticky Header */
-    .www_title,
-    .site-nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #FFFFFF;
-      width: 100%;
-    }
+        /* Sidebars */
+        .sidebar-left {
+            width: 220px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 20px;
+            /* Header removed */
+            height: calc(100vh - 20px);
+            overflow-y: auto;
+        }
 
-    .site-nav {
-      /* Remove border if requested, or keep strictly defined one */
-      border-bottom: 1px solid #CCCCCC;
-    }
+        .sidebar-right {
+            width: 250px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 20px;
+            /* Header removed */
+            height: calc(100vh - 20px);
+            overflow-y: auto;
+        }
 
-    /* Site Container (Flexbox) */
-    .site-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      /* Center the layout */
-      align-items: flex-start;
-      width: 100%;
-      max-width: 1400px;
-      /* Limit max width */
-      margin: 0 auto;
-      /* Center horizontally */
-      padding-top: 20px;
-      gap: 20px;
-      /* Spacing between columns */
-    }
+        /* Main Content */
+        .main-content-wrapper {
+            flex: 1;
+            max-width: 800px;
+            /* Optimal reading width */
+            min-width: 0;
+            /* Prevent flex overflow */
+        }
 
-    /* Sidebars */
-    .sidebar-left {
-      width: 220px;
-      flex-shrink: 0;
-      position: sticky;
-      top: 20px;
-      /* Header removed */
-      height: calc(100vh - 20px);
-      overflow-y: auto;
-    }
+        /* 모바일용 프로필 섹션 (완전 숨김) */
+        .mobile-profile {
+            display: none;
+        }
 
-    .sidebar-right {
-      width: 250px;
-      flex-shrink: 0;
-      position: sticky;
-      top: 20px;
-      /* Header removed */
-      height: calc(100vh - 20px);
-      overflow-y: auto;
-    }
+        /* 태블릿 */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .site-container {
+                padding: 0 10px;
+                gap: 15px;
+            }
 
-    /* Main Content */
-    .main-content-wrapper {
-      flex: 1;
-      max-width: 800px;
-      /* Optimal reading width */
-      min-width: 0;
-      /* Prevent flex overflow */
-    }
+            .sidebar-left {
+                width: 200px;
+            }
 
-    /* 모바일용 프로필 섹션 (완전 숨김) */
-    .mobile-profile {
-      display: none;
-    }
+            .sidebar-right {
+                width: 220px;
+            }
+        }
 
-    /* 태블릿 */
-    @media (min-width: 769px) and (max-width: 1024px) {
-      .site-container {
-        padding: 0 10px;
-        gap: 15px;
-      }
+        /* 모바일 */
+        @media (max-width: 768px) {
+            .site-container {
+                flex-direction: column;
+                padding: 0;
+                gap: 0;
+            }
 
-      .sidebar-left {
-        width: 200px;
-      }
+            /* 사이드바는 모바일에서 숨김 (토글로 제어됨) */
+            .sidebar-left {
+                /* display: none; -> Removing this so the fixed child works */
+                display: block;
+                width: 0;
+                height: 0;
+                overflow: visible;
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
 
-      .sidebar-right {
-        width: 220px;
-      }
-    }
+            .sidebar-right {
+                display: none;
+            }
 
-    /* 모바일 */
-    @media (max-width: 768px) {
-      .site-container {
-        flex-direction: column;
-        padding: 0;
-        gap: 0;
-      }
+            .main-content-wrapper {
+                width: 100%;
+                max-width: 100%;
+                padding: 10px;
+            }
 
-      /* 사이드바는 모바일에서 숨김 (토글로 제어됨) */
-      .sidebar-left {
-        /* display: none; -> Removing this so the fixed child works */
-        display: block;
-        width: 0;
-        height: 0;
-        overflow: visible;
-        margin: 0;
-        padding: 0;
-        border: none;
-      }
+            /* Mobile Profile visibility handled in sidebar-right logic or add specifically here if needed */
 
-      .sidebar-right {
-        display: none;
-      }
-
-      .main-content-wrapper {
-        width: 100%;
-        max-width: 100%;
-        padding: 10px;
-      }
-
-      /* Mobile Profile visibility handled in sidebar-right logic or add specifically here if needed */
-
-      /* Sticky Header adjustment for mobile */
-      .www_title,
-      .site-nav {
-        position: sticky;
-        top: 0;
-      }
-    }
-  </style>
+            /* Sticky Header adjustment for mobile */
+            .www_title,
+            .site-nav {
+                position: sticky;
+                top: 0;
+            }
+        }
+    </style>
 </body>
 
 </html>
