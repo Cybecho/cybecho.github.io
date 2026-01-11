@@ -1,0 +1,49 @@
+{{- /* YouTube Video Embedding - Auto-detect and embed */ -}}
+{{- $url := .Destination -}}
+{{- $text := .Text -}}
+
+{{- /* YouTube URL patterns detection */ -}}
+{{- $isYouTube := false -}}
+{{- $videoID := "" -}}
+
+{{- /* Pattern 1: youtube.com/watch?v=VIDEO_ID */ -}}
+{{- if findRE `youtube\.com/watch\?v=([a-zA-Z0-9_-]{11})` $url -}}
+  {{- $isYouTube = true -}}
+  {{- $videoID = replaceRE `.*youtube\.com/watch\?v=([a-zA-Z0-9_-]{11}).*` "$1" $url -}}
+{{- end -}}
+
+{{- /* Pattern 2: youtu.be/VIDEO_ID */ -}}
+{{- if findRE `youtu\.be/([a-zA-Z0-9_-]{11})` $url -}}
+  {{- $isYouTube = true -}}
+  {{- $videoID = replaceRE `.*youtu\.be/([a-zA-Z0-9_-]{11}).*` "$1" $url -}}
+{{- end -}}
+
+{{- /* Pattern 3: m.youtube.com/watch?v=VIDEO_ID (mobile) */ -}}
+{{- if findRE `m\.youtube\.com/watch\?v=([a-zA-Z0-9_-]{11})` $url -}}
+  {{- $isYouTube = true -}}
+  {{- $videoID = replaceRE `.*m\.youtube\.com/watch\?v=([a-zA-Z0-9_-]{11}).*` "$1" $url -}}
+{{- end -}}
+
+{{- /* Pattern 4: youtube.com/embed/VIDEO_ID */ -}}
+{{- if findRE `youtube\.com/embed/([a-zA-Z0-9_-]{11})` $url -}}
+  {{- $isYouTube = true -}}
+  {{- $videoID = replaceRE `.*youtube\.com/embed/([a-zA-Z0-9_-]{11}).*` "$1" $url -}}
+{{- end -}}
+
+{{- /* Render YouTube embed or regular link */ -}}
+{{- if and $isYouTube $videoID -}}
+<div class="youtube-embed-container">
+  <iframe
+    class="youtube-embed-iframe"
+    src="https://www.youtube.com/embed/{{ $videoID }}"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    loading="lazy"
+    title="{{ $text }}">
+  </iframe>
+</div>
+{{- else -}}
+  {{- /* Regular link - LLVM style */ -}}
+  <a href="{{ $url | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ $text | safeHTML }}</a>
+{{- end -}}
