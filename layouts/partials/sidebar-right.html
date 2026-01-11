@@ -23,6 +23,22 @@
         style="border: 1px solid #000000; width: 100%; max-width: 220px; height: auto; display: block;">
     </center>
     <br>
+
+    <!-- Bio Block -->
+    {{ with .Site.Params.author.bio }}
+    <div style="
+        font-family: 'Batang', 'BatangChe', 'Gungsuh', 'GungsuhChe', serif;
+        text-align: center;
+        border-top: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+        padding: 10px 0;
+        margin: 10px 0 20px 0;
+        font-size: 1.1em;
+    ">
+      {{ . }}
+    </div>
+    {{ end }}
+
     <b>Social:</b><br>
     {{ range .Site.Params.social }}
     <a href="{{ .url }}" target="_blank" rel="noopener" class="sidebar-link">{{ .name }}</a><br>

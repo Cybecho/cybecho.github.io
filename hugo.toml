@@ -24,6 +24,7 @@ mainSections = ["posts"]
   [params.author]
     name = "Cybecho"
     avatar = "https://avatars.githubusercontent.com/u/42949995?v=4"
+    bio = "기술과 문화를 사랑합니다"
 
   title = "삽질 저장소"
   subtitle = "본질에 몰입하는 엔지니어 입니다. HW 및 OS에 관심이 많습니다."
