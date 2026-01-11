@@ -738,6 +738,8 @@ async function syncNotionDatabase() {
       fs.mkdirSync('content/posts', { recursive: true });
     }
 
+    const SCRIPT_VERSION = "1"; // Bump this to force cache invalidation
+
     let successCount = 0;
     let skippedCount = 0;
     let updatedCount = 0;
@@ -758,6 +760,7 @@ async function syncNotionDatabase() {
         const isCacheValid = cache[pageId] &&
           cache[pageId].last_edited_time === lastEditedTime &&
           cache[pageId].slug === slug &&
+          cache[pageId].script_version === SCRIPT_VERSION && // Check version
           fs.existsSync(postFile);
 
         if (isCacheValid) {
@@ -848,7 +851,8 @@ async function syncNotionDatabase() {
           processed_at: new Date().toISOString(),
           tags: tags,
           themes: themes,
-          has_content: blockContent.trim().length > 0
+          has_content: blockContent.trim().length > 0,
+          script_version: SCRIPT_VERSION // Save version
         };
 
         if (cache[pageId]) {
