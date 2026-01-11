@@ -108,8 +108,8 @@ mainSections = ["posts"]
     linkify = true
   [markup.highlight]
     style = "github"
-    lineNos = true
-    lineNumbersInTable = true
+    lineNos = false
+    lineNumbersInTable = false
     noClasses = false
     tabWidth = 2
     guessSyntax = true
