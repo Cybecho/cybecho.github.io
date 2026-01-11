@@ -4,7 +4,7 @@ date: 2026-01-03T02:14:00.000Z
 draft: false
 tags: ["Docker"]
 series: ["Infra & Network"]
-description: "Podman을 사용하여 centOS GUI를 빌드하는 과정은 Rootful 모드에서의 Podman 머신 초기화, 비밀번호 해시 생성, Containerfile 및 config.toml 생성, 이미지 빌드, 레지스트리에 푸시, 이미지 풀, ISO 빌드 및 확인으로 구성된다. 각 단계에서 Mac과 Podman VM 간의 데이터 흐름과 마운트의 역할이 설명되며, 최종적으로 ISO 파일이 생성되어 Mac에 저장된다."
+description: "Podman을 사용하여 centOS GUI를 구축하는 과정은 Rootful 모드에서의 Podman Machine 재설정, 비밀번호 해시 생성, Containerfile 및 config.toml 생성, 이미지 빌드 및 레지스트리 푸시, ISO 빌드 및 확인 단계를 포함합니다. 각 단계에서 Podman VM과 Mac 간의 데이터 흐름과 마운트의 역할이 중요하며, 최종적으로 설치 가능한 ISO 파일이 생성됩니다."
 notion_id: "2dd1bab9-e3f8-80c7-874b-f7b1ad21da7a"
 notion_url: "https://www.notion.so/Podman-bootC-centOS-GUI-2dd1bab9e3f880c7874bf7b1ad21da7a"
 ---
@@ -12,12 +12,12 @@ notion_url: "https://www.notion.so/Podman-bootC-centOS-GUI-2dd1bab9e3f880c7874bf
 # Podman에서 bootC로 centOS GUI 굽는 과정을 파헤쳐보자
 
 > **Summary**
-> Podman을 사용하여 centOS GUI를 빌드하는 과정은 Rootful 모드에서의 Podman 머신 초기화, 비밀번호 해시 생성, Containerfile 및 config.toml 생성, 이미지 빌드, 레지스트리에 푸시, 이미지 풀, ISO 빌드 및 확인으로 구성된다. 각 단계에서 Mac과 Podman VM 간의 데이터 흐름과 마운트의 역할이 설명되며, 최종적으로 ISO 파일이 생성되어 Mac에 저장된다.
+> Podman을 사용하여 centOS GUI를 구축하는 과정은 Rootful 모드에서의 Podman Machine 재설정, 비밀번호 해시 생성, Containerfile 및 config.toml 생성, 이미지 빌드 및 레지스트리 푸시, ISO 빌드 및 확인 단계를 포함합니다. 각 단계에서 Podman VM과 Mac 간의 데이터 흐름과 마운트의 역할이 중요하며, 최종적으로 설치 가능한 ISO 파일이 생성됩니다.
 
 ---
 
 
-![Image](image_ab3797ec684f.png)
+![Image](image_33951f15da71.png)
 
 # bootC로 centOS GUI 굽는 과정…
 
@@ -458,8 +458,6 @@ Podman VM의 /var/lib/containers/storage를
 ```
 
 ## 최종 정리
-
-이제 전체 그림이 보이나요?
 
 **물리적 계층:**
 
