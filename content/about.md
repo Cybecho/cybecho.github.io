@@ -32,10 +32,24 @@ Proficient in building and troubleshooting end-to-end on-premises infrastructure
 
 <div class="item">
 <div class="item-header">
+<span class="item-title role">Pre-Sales</span>
+</div>
+<div class="item-sub">
+<span class="company">Fujifilm Business Innovation Korea</span>, Seoul | <span class="date">November 2025 ~ NOW</span>
+</div>
+<ul class="details">
+<li><strong>Infrastructure Architecture Proposal & Needs Assessment</strong>: Identifying client requirements and proposing optimal infrastructure architectures.</li>
+<li><strong>IT Consulting</strong>: Providing professional IT consulting services to clients.</li>
+<li><strong>Internal Portfolio Improvement</strong>: Discovering new items and conducting experiments to enhance internal service portfolio.</li>
+</ul>
+</div>
+
+<div class="item">
+<div class="item-header">
 <span class="item-title role">System Engineer</span>
 </div>
 <div class="item-sub">
-<span class="company">Swatch Group</span>, Seoul | <span class="date">August 2025 ~ NOW</span>
+<span class="company">Swatch Group</span>, Seoul | <span class="date">August 2025 ~ October 2025</span>
 </div>
 <ul class="details">
 <li><strong>IT Service Management</strong>: Managed ServiceNow tickets and Swiss HQ escalations • Supported MDM migration</li>
@@ -135,11 +149,23 @@ Proficient in building and troubleshooting end-to-end on-premises infrastructure
 <hr>
 <div class="item">
 <div class="item-header">
-<span class="item-title">Bachelor’s in Computer Engineering & Media Engineering</span>
+<span class="item-title">Catholic University of Korea</span>
 </div>
 <div class="item-sub">
-Catholic University of Korea | <span>Graduated Feb 2025</span> | <span>GPA: 3.69/4.50</span>
+Bachelor of Computer Engineering / Media Engineering | <span>March 2019 – Feb 2025</span> | <span>GPA: 3.69/4.50</span>
 </div>
+</div>
+
+<div class="item">
+<div class="item-header">
+<span class="item-title">Samil Technical High School</span>
+</div>
+<div class="item-sub">
+Information & Communication Dept. | <span>March 2016 – Feb 2019</span>
+</div>
+<ul class="details">
+<li>Student Council Vice President (March 2017 – Sep 2018)</li>
+</ul>
 </div>
 </section>
 
@@ -168,10 +194,10 @@ Catholic University of Korea | <span>Graduated Feb 2025</span> | <span>GPA: 3.69
 <span class="item-title">Certifications:</span>
 </div>
 <ul class="details">
-<li>Opic IM2 (2025)</li>
-<li>Craftsman Communication Cable (2018)</li>
-<li>Web Design Technician (2016)</li>
-<li>Computer Graphics Operation Technician (2016)</li>
+<li>Opic IM2</li>
+<li>Craftsman Communication Cable (통신선로기능사)</li>
+<li>Web Design Technician (웹디자인기능사)</li>
+<li>Computer Graphics Operation Technician (컴퓨터그래픽스운용기능사)</li>
 </ul>
 </div>
 
@@ -190,12 +216,30 @@ Catholic University of Korea | <span>Graduated Feb 2025</span> | <span>GPA: 3.69
 <span class="item-title">Awards:</span>
 </div>
 <ul class="details">
-<li>Media S/W Competition Grand Prize (2024.11)</li>
-<li>Capstone Design Competition Participation Prize (2024.07)</li>
-<li>HCI Creative Award Excellence Prize (2024.01)</li>
-<li>KCGS Excellent Paper Award (2023.07)</li>
+<li>Media S/W Competition Grand Prize</li>
+<li>Capstone Design Competition Participation Prize</li>
+<li>HCI Creative Award Excellence Prize</li>
+<li>KCGS Excellent Paper Award</li>
+<li>UNITY GAMEJAM 2022 Prize</li>
+<li>GGC GameJam 2019 Excellence Prize</li>
+<li>GGC GameJam 2018 Grand Prize</li>
+<li>One-person Creative Enterprise PR Hackathon Grand Prize</li>
+<li>Korea Youth GameJam Prize</li>
 </ul>
 </div>
+
+<div class="item">
+<div class="item-header">
+<span class="item-title">Papers:</span>
+</div>
+<ul class="details">
+<li><strong>Animal 3D Modeling Generation Service using Human Face</strong> | KCGS | 2024.07</li>
+<li><strong>XR Takeout Cafe</strong> | HCI Korea | 2024.01</li>
+<li><strong>Storytelling Video Content Creation using Generative AI</strong> | KCGS | 2023.07</li>
+<li><strong>XR Studio Configuration and Production Case using Anti-glare Monitor</strong> | KCGS | 2023.07</li>
+</ul>
+</div>
+
 </section>
 
 </div>
