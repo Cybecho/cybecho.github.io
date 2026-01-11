@@ -1,223 +1,276 @@
 {{ define "main" }}
 <section class="magic-search-page">
-  <h1>Cybecho's Magic Search</h1>
-  <p>자연어로 질문하면 블로그 글을 기반으로 AI가 답변을 생성합니다.</p>
-  <p class="magic-search-info"><small>Powered by Gemini + Fuse.js | 일일 30회 제한</small></p>
+  <header class="magic-header">
+    <h1>Magic Search</h1>
+    <p>자연어로 질문하면 블로그 글을 기반으로 AI가 답변합니다.</p>
+  </header>
 
-  <form id="magic-search-form" class="magic-search-form">
-    <label for="magic-search-input">질문</label>
-    <textarea id="magic-search-input" rows="4" placeholder="예: 라즈베리파이로 NAS 구축할 때 고려할 점은?" maxlength="500"></textarea>
-    <div class="magic-search-form-footer">
-      <small><span id="char-count">0</span>/500</small>
-      <button type="submit" id="magic-submit-btn">Ask Magic</button>
+  <!-- 채팅 메시지 영역 -->
+  <div id="chat-container" class="chat-container">
+    <div id="chat-messages" class="chat-messages">
+      <div class="chat-msg chat-system">
+        <div class="chat-bubble">
+          안녕하세요! 이 블로그에 대해 궁금한 점을 자연어로 질문해 주세요.<br>
+          예: "라즈베리파이로 NAS 구축하는 방법이 있나요?"
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 입력 영역 -->
+  <form id="chat-form" class="chat-form">
+    <div class="chat-input-row">
+      <textarea
+        id="chat-input"
+        class="chat-input"
+        rows="2"
+        placeholder="질문을 입력하세요..."
+        maxlength="500"
+      ></textarea>
+      <button type="submit" id="chat-submit" class="chat-submit-btn">
+        전송
+      </button>
+    </div>
+    <div class="chat-footer">
+      <span><span id="char-count">0</span>/500</span>
+      <span id="rate-info">일일 질문 한도: <span id="remaining">30</span>회</span>
     </div>
   </form>
 
-  <div id="magic-search-status" class="magic-search-status" aria-live="polite"></div>
-
-  <div id="magic-search-answer" class="magic-search-answer" hidden>
-    <h2>Magic Answer</h2>
-    <div id="magic-search-summary"></div>
-    <div id="magic-search-refs" class="magic-search-refs">
-      <h3>참고한 글</h3>
-      <ul id="magic-search-links"></ul>
-    </div>
-  </div>
-
-  <div id="magic-rate-info" class="magic-rate-info">
-    <small>오늘 남은 질문: <span id="magic-remaining">30</span>회</small>
-  </div>
+  <!-- 상태 표시 -->
+  <div id="status-bar" class="status-bar" hidden></div>
 </section>
 
 <style>
+/* Magic Search - 투박한 스타일 */
+.magic-search-page {
+  font-family: "Times New Roman", "Georgia", serif;
+  color: #000;
+  background: #fff;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0;
+}
+
+.magic-header {
+  border: 2px solid #000;
+  padding: 16px 20px;
+  margin-bottom: 0;
+  background: #f5f5f5;
+}
+
+.magic-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+}
+
+.magic-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* 채팅 컨테이너 */
+.chat-container {
+  border: 2px solid #000;
+  border-top: none;
+  background: #fafafa;
+}
+
+.chat-messages {
+  min-height: 350px;
+  max-height: 450px;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+/* 채팅 메시지 */
+.chat-msg {
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.chat-msg:last-child {
+  margin-bottom: 0;
+}
+
+.chat-user {
+  justify-content: flex-end;
+}
+
+.chat-ai, .chat-system {
+  justify-content: flex-start;
+}
+
+.chat-bubble {
+  max-width: 85%;
+  padding: 12px 16px;
+  border: 1px solid #000;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.chat-user .chat-bubble {
+  background: #e8e8e8;
+}
+
+.chat-ai .chat-bubble {
+  background: #fff;
+}
+
+.chat-system .chat-bubble {
+  background: #fffff0;
+  border-style: dashed;
+  color: #555;
+  font-size: 13px;
+}
+
+/* 채팅 버블 내용 스타일 */
+.chat-bubble p { margin: 0 0 10px 0; }
+.chat-bubble p:last-child { margin-bottom: 0; }
+.chat-bubble ul, .chat-bubble ol { margin: 8px 0; padding-left: 20px; }
+.chat-bubble li { margin-bottom: 4px; }
+.chat-bubble code { background: #f0f0f0; padding: 2px 6px; font-family: monospace; font-size: 13px; }
+.chat-bubble pre { background: #f0f0f0; padding: 10px; overflow-x: auto; font-family: monospace; font-size: 12px; margin: 10px 0; }
+.chat-bubble strong { font-weight: bold; }
+.chat-bubble em { font-style: italic; }
+.chat-bubble a { color: #00e; text-decoration: underline; }
+
+/* 참고 글 링크 */
+.chat-refs {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed #ccc;
+  font-size: 12px;
+}
+
+.chat-refs-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #666;
+}
+
+.chat-refs ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.chat-refs li {
+  margin-bottom: 4px;
+}
+
+/* 입력 폼 */
+.chat-form {
+  border: 2px solid #000;
+  border-top: none;
+  padding: 12px;
+  background: #fff;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input {
+  flex: 1;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #000;
+  resize: none;
+}
+
+.chat-input:focus {
+  outline: 2px solid #000;
+  outline-offset: 1px;
+}
+
+.chat-submit-btn {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.chat-submit-btn:hover {
+  background: #333;
+}
+
+.chat-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.chat-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* 상태 바 */
+.status-bar {
+  border: 2px solid #000;
+  border-top: none;
+  padding: 12px 16px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-bar.loading {
+  background: #fffff0;
+}
+
+.status-bar.error {
+  background: #fff0f0;
+  color: #c00;
+  border-color: #c00;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 모바일 */
+@media (max-width: 600px) {
   .magic-search-page {
-    font-family: "Times New Roman", "Times", serif;
-    color: #000000;
-    background: #FFFFFF;
-    padding: 24px;
-    border: 2px solid #000000;
-    max-width: 720px;
-    margin: 24px auto;
+    margin: 10px;
   }
 
-  .magic-search-page h1,
-  .magic-search-page h2,
-  .magic-search-page h3 {
-    margin-top: 0;
+  .chat-messages {
+    min-height: 280px;
+    max-height: 350px;
   }
 
-  .magic-search-info {
-    color: #666666;
-    margin-top: -8px;
+  .chat-bubble {
+    max-width: 92%;
   }
 
-  .magic-search-form {
-    display: flex;
+  .chat-input-row {
     flex-direction: column;
-    gap: 8px;
-    margin: 16px 0;
   }
 
-  .magic-search-form textarea {
-    border: 1px solid #000000;
-    padding: 8px;
-    font-size: 12pt;
-    font-family: inherit;
-    resize: vertical;
-    min-height: 80px;
+  .chat-submit-btn {
+    width: 100%;
   }
-
-  .magic-search-form textarea:focus {
-    outline: 2px solid #000000;
-    outline-offset: 1px;
-  }
-
-  .magic-search-form-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .magic-search-form button {
-    border: 2px solid #000000;
-    background: #000000;
-    color: #FFFFFF;
-    font-size: 12pt;
-    font-family: inherit;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: background 0.1s;
-  }
-
-  .magic-search-form button:hover {
-    background: #333333;
-  }
-
-  .magic-search-form button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-
-  .magic-search-status {
-    margin-top: 12px;
-    padding: 12px;
-    background: #FFFFF0;
-    border: 1px dashed #999999;
-  }
-
-  .magic-search-status:empty {
-    display: none;
-  }
-
-  .magic-search-status.loading {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .magic-spinner {
-    width: 16px;
-    height: 16px;
-    border: 2px solid #CCCCCC;
-    border-top-color: #000000;
-    border-radius: 50%;
-    animation: magic-spin 0.8s linear infinite;
-  }
-
-  @keyframes magic-spin {
-    to { transform: rotate(360deg); }
-  }
-
-  .magic-search-status.error {
-    background: #FFF0F0;
-    border-color: #CC0000;
-    color: #CC0000;
-  }
-
-  .magic-search-answer {
-    margin-top: 18px;
-    border-top: 2px solid #000000;
-    padding-top: 16px;
-  }
-
-  .magic-search-answer h2 {
-    margin-bottom: 12px;
-  }
-
-  #magic-search-summary {
-    line-height: 1.6;
-  }
-
-  #magic-search-summary p {
-    margin: 0 0 12px 0;
-  }
-
-  #magic-search-summary ul,
-  #magic-search-summary ol {
-    margin: 8px 0;
-    padding-left: 24px;
-  }
-
-  #magic-search-summary li {
-    margin-bottom: 6px;
-  }
-
-  #magic-search-summary code {
-    background: #F0F0F0;
-    padding: 2px 6px;
-    font-family: monospace;
-    font-size: 11pt;
-  }
-
-  #magic-search-summary pre {
-    background: #F0F0F0;
-    padding: 12px;
-    overflow-x: auto;
-    font-family: monospace;
-    font-size: 10pt;
-    margin: 12px 0;
-    border: 1px solid #CCCCCC;
-  }
-
-  #magic-search-summary strong {
-    font-weight: bold;
-  }
-
-  #magic-search-summary em {
-    font-style: italic;
-  }
-
-  .magic-search-refs {
-    margin-top: 20px;
-    padding-top: 16px;
-    border-top: 1px dashed #CCCCCC;
-  }
-
-  .magic-search-refs h3 {
-    font-size: 14px;
-    color: #666666;
-    margin-bottom: 8px;
-  }
-
-  .magic-search-refs ul {
-    margin: 0;
-    padding-left: 20px;
-  }
-
-  .magic-search-refs li {
-    margin-bottom: 4px;
-  }
-
-  .magic-search-refs a {
-    color: #0000EE;
-    text-decoration: underline;
-  }
-
-  .magic-rate-info {
-    margin-top: 16px;
-    text-align: right;
-    color: #666666;
-  }
+}
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
@@ -225,57 +278,53 @@
 (function() {
   'use strict';
 
-  // ========================================
-  // Configuration
-  // ========================================
+  // ============================================================
+  // 설정 - Cloudflare Worker URL을 여기에 입력하세요
+  // ============================================================
   const CONFIG = {
-    GEMINI_API_KEY: '{{ getenv "HUGO_GEMINI_API_KEY" }}' || '',
-    GEMINI_MODEL: 'gemma-3-4b-it',
-    GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/',
+    // TODO: Cloudflare Worker 배포 후 이 URL을 변경하세요
+    WORKER_URL: 'https://magic-search-proxy.YOUR_SUBDOMAIN.workers.dev',
+
+    // 검색 설정
     SEARCH_LIMIT: 7,
+    FUSE_THRESHOLD: 0.6,
     MAX_CONTEXT_CHARS: 6000,
+
+    // Rate limit (클라이언트 측 표시용)
     DAILY_LIMIT: 30,
-    RATE_KEY: 'magic_search_rate',
-    FUSE_THRESHOLD: 0.6
+    RATE_KEY: 'magic_search_rate_v2'
   };
 
-  // ========================================
-  // DOM Elements
-  // ========================================
-  const form = document.getElementById('magic-search-form');
-  const input = document.getElementById('magic-search-input');
-  const submitBtn = document.getElementById('magic-submit-btn');
-  const status = document.getElementById('magic-search-status');
-  const answer = document.getElementById('magic-search-answer');
-  const summary = document.getElementById('magic-search-summary');
-  const links = document.getElementById('magic-search-links');
+  // ============================================================
+  // DOM 요소
+  // ============================================================
+  const chatMessages = document.getElementById('chat-messages');
+  const chatForm = document.getElementById('chat-form');
+  const chatInput = document.getElementById('chat-input');
+  const chatSubmit = document.getElementById('chat-submit');
   const charCount = document.getElementById('char-count');
-  const remaining = document.getElementById('magic-remaining');
+  const remaining = document.getElementById('remaining');
+  const statusBar = document.getElementById('status-bar');
 
   let searchIndex = [];
   let fuse = null;
   let isProcessing = false;
 
-  // ========================================
-  // Rate Limiting
-  // ========================================
+  // ============================================================
+  // Rate Limiting (클라이언트 측 - 표시용)
+  // ============================================================
   function getRateData() {
     try {
       const data = localStorage.getItem(CONFIG.RATE_KEY);
-      if (!data) return { date: '', count: 0 };
-      return JSON.parse(data);
-    } catch {
-      return { date: '', count: 0 };
-    }
+      return data ? JSON.parse(data) : { date: '', count: 0 };
+    } catch { return { date: '', count: 0 }; }
   }
 
   function setRateData(data) {
-    try {
-      localStorage.setItem(CONFIG.RATE_KEY, JSON.stringify(data));
-    } catch {}
+    try { localStorage.setItem(CONFIG.RATE_KEY, JSON.stringify(data)); } catch {}
   }
 
-  function checkRateLimit() {
+  function checkRate() {
     const today = new Date().toISOString().split('T')[0];
     const data = getRateData();
     if (data.date !== today) {
@@ -297,18 +346,18 @@
   }
 
   function updateRateDisplay() {
-    const { remaining: rem } = checkRateLimit();
+    const { remaining: rem } = checkRate();
     if (remaining) remaining.textContent = rem;
   }
 
-  // ========================================
-  // Search Index
-  // ========================================
+  // ============================================================
+  // 검색 인덱스 로드
+  // ============================================================
   async function loadIndex() {
     if (fuse) return true;
     try {
-      const response = await fetch('/index.json');
-      searchIndex = await response.json();
+      const res = await fetch('/index.json');
+      searchIndex = await res.json();
       fuse = new Fuse(searchIndex, {
         keys: [
           { name: 'title', weight: 0.4 },
@@ -320,55 +369,39 @@
         threshold: CONFIG.FUSE_THRESHOLD,
         includeScore: true,
         minMatchCharLength: 1,
-        ignoreLocation: true,
-        useExtendedSearch: true
+        ignoreLocation: true
       });
+      console.log('[Magic Search] Loaded', searchIndex.length, 'posts');
       return true;
     } catch (err) {
-      console.error('Failed to load index:', err);
+      console.error('[Magic Search] Failed to load index:', err);
       return false;
     }
   }
 
-  // ========================================
-  // Search & Context
-  // ========================================
-
-  // 자연어에서 핵심 키워드 추출
+  // ============================================================
+  // 키워드 추출 및 검색
+  // ============================================================
   function extractKeywords(query) {
-    // 불용어 제거
-    const stopwords = ['은', '는', '이', '가', '을', '를', '의', '에', '에서', '으로', '로', '와', '과', '도', '만', '뭐', '어떻게', '무엇', '왜', '어디', '언제', '누가', '뭘', '좀', '해줘', '알려줘', '설명해줘', '대해', '대해서', '관해', '관해서', '있나요', '있어요', '있을까요', '할까요', '하나요', '인가요', '건가요', '나요', '요'];
-
-    // 쿼리를 단어로 분리
-    let words = query
-      .replace(/[?!.,;:'"()[\]{}]/g, ' ')
-      .split(/\s+/)
-      .filter(w => w.length > 0);
-
-    // 불용어 제거
+    const stopwords = ['은','는','이','가','을','를','의','에','에서','으로','로','와','과','도','만','뭐','어떻게','무엇','왜','어디','언제','누가','뭘','좀','해줘','알려줘','설명해줘','대해','대해서','관해','관해서','있나요','있어요','있을까요','할까요','하나요','인가요','건가요','나요','요','것','수','때'];
+    let words = query.replace(/[?!.,;:'"()[\]{}]/g, ' ').split(/\s+/).filter(w => w.length > 0);
     words = words.filter(w => !stopwords.some(sw => w.endsWith(sw) || w === sw));
-
-    // 남은 키워드들
     return words.length > 0 ? words : query.split(/\s+/).slice(0, 3);
   }
 
   function searchPosts(query) {
     if (!fuse) return [];
 
-    // 1. 먼저 전체 쿼리로 검색
     let results = fuse.search(query);
 
-    // 2. 결과가 적으면 키워드 추출해서 다시 검색
+    // 결과가 적으면 키워드별 추가 검색
     if (results.length < 3) {
       const keywords = extractKeywords(query);
-      console.log('[Magic Search] Keywords:', keywords);
-
-      for (const keyword of keywords) {
-        if (keyword.length >= 2) {
-          const keywordResults = fuse.search(keyword);
-          // 중복 제거하며 추가
-          for (const r of keywordResults) {
-            if (!results.find(existing => existing.item.url === r.item.url)) {
+      for (const kw of keywords) {
+        if (kw.length >= 2) {
+          const kwResults = fuse.search(kw);
+          for (const r of kwResults) {
+            if (!results.find(e => e.item.url === r.item.url)) {
               results.push(r);
             }
           }
@@ -376,7 +409,6 @@
       }
     }
 
-    // 점수순 정렬 후 반환
     return results
       .sort((a, b) => (a.score || 0) - (b.score || 0))
       .slice(0, CONFIG.SEARCH_LIMIT)
@@ -384,9 +416,7 @@
         title: r.item.title,
         url: r.item.url,
         summary: r.item.summary || '',
-        content: r.item.content || '',
-        tags: r.item.tags || '',
-        score: r.score
+        content: r.item.content || ''
       }));
   }
 
@@ -394,7 +424,7 @@
     let ctx = '';
     let len = 0;
     for (const p of posts) {
-      const text = `## ${p.title}\nURL: ${p.url}\n${p.tags ? '태그: ' + p.tags + '\n' : ''}${p.summary ? '요약: ' + p.summary + '\n' : ''}${p.content ? '내용: ' + p.content + '\n' : ''}---\n`;
+      const text = `## ${p.title}\nURL: ${p.url}\n${p.summary ? '요약: ' + p.summary + '\n' : ''}${p.content ? '내용: ' + p.content + '\n' : ''}---\n`;
       if (len + text.length > CONFIG.MAX_CONTEXT_CHARS) break;
       ctx += text;
       len += text.length;
@@ -402,64 +432,15 @@
     return ctx;
   }
 
-  // ========================================
-  // Gemini API
-  // ========================================
-  async function callGemini(query, context) {
-    if (!CONFIG.GEMINI_API_KEY) {
-      throw new Error('API 키가 설정되지 않았습니다.');
-    }
-
-    const systemPrompt = `당신은 "삽질 저장소" 블로그의 AI 검색 어시스턴트입니다.
-사용자의 질문에 대해 아래 제공된 블로그 글들을 참고하여 답변해 주세요.
-
-규칙:
-1. 반드시 제공된 블로그 글 내용만을 기반으로 답변하세요.
-2. 블로그에 관련 내용이 없으면 "이 블로그에는 관련 글이 없습니다"라고 솔직히 말해주세요.
-3. 답변은 간결하고 명확하게 작성하세요 (3-5문장 정도).
-4. 관련 글의 제목을 자연스럽게 언급해 주세요.
-5. 마크다운 형식을 사용해도 됩니다.
-6. 한국어로 답변하세요.`;
-
-    const userMsg = `[사용자 질문]\n${query}\n\n[참고할 블로그 글들]\n${context}\n\n위 블로그 글들을 참고하여 사용자의 질문에 답변해 주세요.`;
-
-    const url = `${CONFIG.GEMINI_API_URL}${CONFIG.GEMINI_MODEL}:generateContent?key=${CONFIG.GEMINI_API_KEY}`;
-
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: systemPrompt + '\n\n' + userMsg }] }],
-        generationConfig: {
-          temperature: 0.7,
-          maxOutputTokens: 1024,
-          topP: 0.9
-        },
-        safetySettings: [
-          { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_ONLY_HIGH" },
-          { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_ONLY_HIGH" },
-          { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_ONLY_HIGH" },
-          { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_ONLY_HIGH" }
-        ]
-      })
-    });
-
-    if (!res.ok) {
-      if (res.status === 429) throw new Error('API 요청 한도 초과. 잠시 후 다시 시도해 주세요.');
-      if (res.status === 403) throw new Error('API 키가 유효하지 않습니다.');
-      throw new Error('AI 응답을 받지 못했습니다.');
-    }
-
-    const data = await res.json();
-    if (data.candidates?.[0]?.content?.parts?.[0]?.text) {
-      return data.candidates[0].content.parts[0].text;
-    }
-    throw new Error('AI 응답 형식 오류');
+  // ============================================================
+  // UI 헬퍼
+  // ============================================================
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
   }
 
-  // ========================================
-  // Markdown Parser
-  // ========================================
   function parseMarkdown(text) {
     return text
       .replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
@@ -471,112 +452,167 @@
       .replace(/\n/g, '<br>');
   }
 
-  // ========================================
-  // UI Helpers
-  // ========================================
-  function showStatus(msg, type = 'info') {
-    status.className = 'magic-search-status ' + type;
-    if (type === 'loading') {
-      status.innerHTML = `<div class="magic-spinner"></div><span>${msg}</span>`;
+  function addMessage(type, content, refs = []) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = `chat-msg chat-${type}`;
+
+    const bubbleDiv = document.createElement('div');
+    bubbleDiv.className = 'chat-bubble';
+
+    if (type === 'user') {
+      bubbleDiv.innerHTML = `<p>${escapeHtml(content)}</p>`;
     } else {
-      status.textContent = msg;
+      bubbleDiv.innerHTML = `<p>${parseMarkdown(content)}</p>`;
+
+      if (refs.length > 0) {
+        const refsHtml = `
+          <div class="chat-refs">
+            <div class="chat-refs-title">참고한 글:</div>
+            <ul>${refs.map(r => `<li><a href="${r.url}" target="_blank">${escapeHtml(r.title)}</a></li>`).join('')}</ul>
+          </div>
+        `;
+        bubbleDiv.innerHTML += refsHtml;
+      }
     }
+
+    msgDiv.appendChild(bubbleDiv);
+    chatMessages.appendChild(msgDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
-  function clearStatus() {
-    status.className = 'magic-search-status';
-    status.innerHTML = '';
+  function showStatus(msg, type = 'loading') {
+    statusBar.className = 'status-bar ' + type;
+    if (type === 'loading') {
+      statusBar.innerHTML = `<div class="spinner"></div><span>${msg}</span>`;
+    } else {
+      statusBar.textContent = msg;
+    }
+    statusBar.hidden = false;
+  }
+
+  function hideStatus() {
+    statusBar.hidden = true;
   }
 
   function setLoading(loading) {
     isProcessing = loading;
-    submitBtn.disabled = loading;
-    input.disabled = loading;
+    chatSubmit.disabled = loading;
+    chatInput.disabled = loading;
   }
 
-  function renderAnswer(text, posts) {
-    summary.innerHTML = '<p>' + parseMarkdown(text) + '</p>';
-    links.innerHTML = posts.map(p => `<li><a href="${p.url}" target="_blank">${p.title}</a></li>`).join('');
-    answer.hidden = false;
+  // ============================================================
+  // API 호출 (Cloudflare Worker)
+  // ============================================================
+  async function callWorker(query, context) {
+    const res = await fetch(CONFIG.WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query, context })
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.error || 'API 요청 실패');
+    }
+
+    return data.response;
   }
 
-  // ========================================
-  // Form Handler
-  // ========================================
+  // ============================================================
+  // 폼 제출 핸들러
+  // ============================================================
   async function handleSubmit(e) {
     e.preventDefault();
     if (isProcessing) return;
 
-    const query = input.value.trim();
-    if (!query) {
-      showStatus('질문을 입력해주세요.', 'error');
-      return;
-    }
+    const query = chatInput.value.trim();
+    if (!query) return;
 
-    // Rate limit check
-    const rate = checkRateLimit();
+    // Rate limit 체크
+    const rate = checkRate();
     if (!rate.allowed) {
       showStatus('일일 질문 한도를 초과했습니다. 내일 다시 시도해 주세요.', 'error');
       return;
     }
 
+    // 입력 초기화
+    chatInput.value = '';
+    charCount.textContent = '0';
+
+    // 사용자 메시지 추가
+    addMessage('user', query);
+
     setLoading(true);
-    answer.hidden = true;
+    hideStatus();
     showStatus('블로그에서 관련 글을 찾는 중...', 'loading');
 
     try {
-      // Load index
+      // 인덱스 로드
       const loaded = await loadIndex();
       if (!loaded) {
         throw new Error('검색 인덱스를 로드하지 못했습니다.');
       }
 
-      // Search
+      // 검색
       const posts = searchPosts(query);
       if (posts.length === 0) {
-        showStatus('관련된 글을 찾지 못했습니다. 다른 키워드로 검색해 보세요.', 'info');
+        hideStatus();
+        addMessage('ai', '관련된 글을 찾지 못했습니다. 다른 키워드로 검색해 보세요.', []);
         setLoading(false);
         return;
       }
 
       showStatus('AI가 답변을 생성하는 중...', 'loading');
 
-      // Build context and call Gemini
+      // 컨텍스트 구성 및 Worker 호출
       const context = buildContext(posts);
-      const response = await callGemini(query, context);
+      const response = await callWorker(query, context);
 
-      // Increment rate
+      // Rate 증가 및 UI 업데이트
       incrementRate();
       updateRateDisplay();
 
-      // Render
-      clearStatus();
-      renderAnswer(response, posts);
+      hideStatus();
+      addMessage('ai', response, posts);
 
     } catch (err) {
-      console.error('Magic Search error:', err);
+      console.error('[Magic Search] Error:', err);
       showStatus(err.message || '오류가 발생했습니다.', 'error');
     } finally {
       setLoading(false);
     }
   }
 
-  // ========================================
-  // Initialize
-  // ========================================
+  // ============================================================
+  // 초기화
+  // ============================================================
   function init() {
-    // Character count
-    input?.addEventListener('input', () => {
-      if (charCount) charCount.textContent = input.value.length;
+    // 글자 수 카운트
+    chatInput?.addEventListener('input', () => {
+      charCount.textContent = chatInput.value.length;
     });
 
-    // Form submit
-    form?.addEventListener('submit', handleSubmit);
+    // Enter로 전송 (Shift+Enter는 줄바꿈)
+    chatInput?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        chatForm?.dispatchEvent(new Event('submit'));
+      }
+    });
 
-    // Rate display
+    // 폼 제출
+    chatForm?.addEventListener('submit', handleSubmit);
+
+    // Rate 표시
     updateRateDisplay();
 
-    console.log('[Magic Search] Initialized with Gemini integration');
+    // Worker URL 체크
+    if (CONFIG.WORKER_URL.includes('YOUR_SUBDOMAIN')) {
+      addMessage('system', '⚠️ Cloudflare Worker URL이 설정되지 않았습니다. 관리자에게 문의하세요.');
+    }
+
+    console.log('[Magic Search] Initialized');
   }
 
   if (document.readyState === 'loading') {
