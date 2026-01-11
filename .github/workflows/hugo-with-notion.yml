@@ -45,9 +45,15 @@ jobs:
       - name: Notion to Hugo Sync
         run: |
           npm init -y
-          npm install @notionhq/client
+          npm install @notionhq/client sharp
 
           NOTION_SECRET="${{ secrets.NOTION_SECRET }}" DATABASE_ID="${{ secrets.DATABASE_ID }}" node scripts/sync-notion.js
+
+      # URL 향상 처리 (제목 추출)
+      - name: Enhance URLs with Titles
+        run: |
+          echo "Enhancing URLs with page titles..."
+          node scripts/enhance-urls.js || echo "URL enhancement completed with warnings"
 
       # 동기화된 파일들을 저장소에 커밋 (Archives 변환 전에 커밋)
       - name: Commit Notion sync changes

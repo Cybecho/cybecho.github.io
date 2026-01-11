@@ -104,6 +104,8 @@ mainSections = ["posts"]
 [markup]
   [markup.goldmark.renderer]
     unsafe = true
+  [markup.goldmark.extensions]
+    linkify = true
   [markup.highlight]
     style = "github"
     lineNos = true

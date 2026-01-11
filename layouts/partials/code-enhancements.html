@@ -1,442 +1,307 @@
-<!-- VS Code Style Code Blocks - Hugo Native Structure Compatible -->
+<!-- Simplified Light Theme Code Blocks - LLVM Style Compatible -->
 <style>
-/* VS Code 스타일 코드블록 컨테이너 */
-.vscode-container {
-  background: #1e1e1e;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  margin: 2rem 0;
+/* 코드블록 컨테이너 - 흰색 테마 */
+.code-container {
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  margin: 1.5rem 0;
   overflow: hidden;
   font-family: 'Fira Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
   position: relative;
 }
 
-/* VS Code 탭 헤더 */
-.vscode-header {
-  background: #2d2d30;
-  border-bottom: 1px solid #3e3e42;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* Hugo highlight 구조 스타일링 */
+.highlight {
+  background: #fafafa !important;
+  margin: 0;
+  position: relative;
+}
+
+/* 줄 번호 테이블 구조 */
+.highlight .lntable {
+  border-spacing: 0;
   padding: 0;
-  height: 35px;
-  position: relative;
+  margin: 0;
+  border: 0;
+  width: 100%;
+  overflow: auto;
+  display: block;
+  background: #fafafa;
 }
 
-.vscode-tab {
-  background: #1e1e1e;
-  color: #cccccc;
-  padding: 8px 16px;
-  font-size: 13px;
-  border-right: 1px solid #3e3e42;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  position: relative;
-  height: 100%;
-  min-width: 120px;
-  cursor: default;
+.highlight .lntable tbody {
+  display: table;
+  width: 100%;
 }
 
-.vscode-tab::before {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.8;
+.highlight .lntable tr {
+  display: table-row;
 }
 
-/* 언어별 아이콘 */
-.vscode-tab.lang-javascript::before, .vscode-tab.lang-js::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f7df1e' d='M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z'/%3E%3C/svg%3E");
+.highlight .lntable .lntd {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
-.vscode-tab.lang-python::before, .vscode-tab.lang-py::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233776ab' d='M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09-.33.22zM21.1 6.11l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08-.33.23z'/%3E%3C/svg%3E");
+/* 줄 번호 컬럼 */
+.highlight .lntable .lntd:first-child {
+  min-width: 50px;
+  border-right: 1px solid #e0e0e0;
+  background: #f5f5f5;
+  user-select: none;
+  padding: 0;
 }
 
-.vscode-tab.lang-html::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e34f26' d='M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z'/%3E%3C/svg%3E");
-}
-
-.vscode-tab.lang-css::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231572b6' d='M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm4.75 7.5l4.5 4.5H5.25l1.5-1.5h3l-3-3zm0 0V6l6 6-1.5 1.5-4.5-4.5z'/%3E%3C/svg%3E");
-}
-
-.vscode-tab.lang-json::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffd700' d='M5.219 2.5c-.638 0-1.157.519-1.157 1.157v16.686c0 .638.519 1.157 1.157 1.157h13.562c.638 0 1.157-.519 1.157-1.157V3.657c0-.638-.519-1.157-1.157-1.157H5.219zm2.023 3.447h1.734v1.734H7.242V5.947zm4.336 0h1.734v1.734h-1.734V5.947zm4.336 0h1.734v1.734h-1.734V5.947z'/%3E%3C/svg%3E");
-}
-
-.vscode-tab.lang-bash::before, .vscode-tab.lang-shell::before, .vscode-tab.lang-sh::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234eaa25' d='M3 3v18h18V3H3zm16 16H5V5h14v14zM7 7v2h2V7H7zm4 0v2h6V7h-6zm-4 4v2h2v-2H7zm4 0v2h6v-2h-6z'/%3E%3C/svg%3E");
-}
-
-.vscode-tab-filename {
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-
-/* 복사 버튼 */
-.vscode-copy-btn {
-  position: absolute;
-  top: 6px;
-  right: 8px;
+.highlight .lntable .lntd:first-child pre {
+  margin: 0;
+  padding: 16px 12px;
   background: transparent;
-  border: 1px solid #484848;
-  color: #cccccc;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 11px;
+  text-align: right;
+  color: #999999;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/* 코드 내용 컬럼 */
+.highlight .lntable .lntd:last-child {
+  width: 100%;
+  padding: 0;
+}
+
+.highlight .lntable .lntd:last-child pre {
+  margin: 0;
+  padding: 16px;
+  background: transparent;
+  overflow-x: auto;
+  color: #333333;
+  font-size: 14px;
+  line-height: 21px;
+  white-space: pre;
+}
+
+/* 줄 번호 스타일 */
+.highlight .lnt,
+.highlight .line {
+  display: inline-block;
+  height: 21px;
+  line-height: 21px;
+}
+
+.highlight .lnt {
+  color: #999999;
+  font-weight: normal;
+}
+
+/* 복사 버튼 - 우측 상단에 배치 */
+.code-copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #f0f0f0;
+  border: 1px solid #d0d0d0;
+  color: #333333;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 12px;
   cursor: pointer;
   opacity: 0;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   gap: 4px;
-  font-family: inherit;
-  height: 22px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  height: 24px;
+  z-index: 10;
 }
 
-.vscode-container:hover .vscode-copy-btn,
-.highlight.vscode-enhanced:hover .vscode-copy-btn {
+.highlight:hover .code-copy-btn {
   opacity: 1;
 }
 
-.vscode-copy-btn:hover {
-  background: #094771;
-  border-color: #007acc;
-  color: #ffffff;
+.code-copy-btn:hover {
+  background: #e0e0e0;
+  border-color: #b0b0b0;
 }
 
-.vscode-copy-btn.copied {
-  background: #16825d !important;
-  border-color: #16825d !important;
-  color: #ffffff !important;
+.code-copy-btn:active {
+  background: #d0d0d0;
 }
 
-.vscode-copy-btn svg {
+.code-copy-btn.clicked {
+  background: #e8f5e9;
+  border-color: #4caf50;
+  color: #2e7d32;
+}
+
+.code-copy-btn svg {
   width: 12px;
   height: 12px;
-  flex-shrink: 0;
 }
 
-/* Hugo의 highlight 구조를 VS Code 스타일로 변환 */
-.highlight.vscode-enhanced {
-  background: #1e1e1e;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  position: relative;
-  margin: 2rem 0;
-  overflow: hidden;
-}
+/* Chroma 신택스 하이라이팅 - 라이트 테마 */
+.highlight .k,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt { color: #0000ff !important; font-weight: bold; }  /* 키워드: 파란색 */
 
-/* Hugo chroma 구조 숨기기 */
-.highlight.vscode-enhanced .chroma {
-  background: transparent;
-  color: #d4d4d4;
-}
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .dl,
+.highlight .sd,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .ss { color: #a31515 !important; }  /* 문자열: 빨간색 */
 
-/* Hugo lntable 구조를 VS Code 스타일로 스타일링 */
-.highlight.vscode-enhanced .lntable {
-  border-spacing: 0;
-  border-collapse: separate;
-  width: 100%;
-  background: #1e1e1e;
-  color: #d4d4d4;
-  margin: 0;
-  display: flex;
-  font-family: 'Fira Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
-}
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cp,
+.highlight .cs,
+.highlight .ch { color: #008000 !important; font-style: italic; }  /* 주석: 초록색 */
 
-.highlight.vscode-enhanced .lntable tr {
-  display: flex;
-  width: 100%;
-}
+.highlight .m,
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo,
+.highlight .il { color: #098658 !important; }  /* 숫자: 진한 초록 */
 
-.highlight.vscode-enhanced .lntable .lntd {
-  border: none;
-  padding: 0;
-  vertical-align: top;
-}
+.highlight .n,
+.highlight .na,
+.highlight .nb,
+.highlight .nc,
+.highlight .nd,
+.highlight .ne,
+.highlight .nf,
+.highlight .ni,
+.highlight .nl,
+.highlight .nn,
+.highlight .no,
+.highlight .nt,
+.highlight .nv,
+.highlight .nx,
+.highlight .py,
+.highlight .w { color: #333333 !important; }  /* 식별자: 검은색 */
 
-/* 첫 번째 td: 라인 번호 영역 */
-.highlight.vscode-enhanced .lntable .lntd:first-child {
-  background: #1e1e1e;
-  border-right: 1px solid #333333;
-  flex-shrink: 0;
-  min-width: 50px;
-}
+.highlight .nc,
+.highlight .nn { color: #267f99 !important; }  /* 클래스/네임스페이스: 청록색 */
 
-.highlight.vscode-enhanced .lntable .lntd:first-child pre {
-  background: transparent;
-  margin: 0;
-  padding: 16px;
-  text-align: right;
-  user-select: none;
-  color: #858585;
-  font-size: 14px;
-  line-height: 1.45;
-  border: none;
-  overflow: visible;
-}
+.highlight .nf { color: #795e26 !important; }  /* 함수: 갈색 */
 
-.highlight.vscode-enhanced .lntable .lntd:first-child code {
-  background: transparent;
-  color: inherit;
-  padding: 0;
-  font-family: inherit;
-}
+.highlight .kc,
+.highlight .bp { color: #0000ff !important; }  /* 상수/내장: 파란색 */
 
-.highlight.vscode-enhanced .lnt {
-  display: block;
-  color: #858585;
-  font-weight: 400;
-  height: 20.3px;
-  line-height: 20.3px;
-  user-select: none;
-}
+.highlight .o,
+.highlight .ow { color: #333333 !important; }  /* 연산자: 검은색 */
 
-/* 두 번째 td: 코드 내용 영역 */
-.highlight.vscode-enhanced .lntable .lntd:last-child {
-  flex: 1;
-  background: #1e1e1e;
-}
+.highlight .p,
+.highlight .pi { color: #333333 !important; }  /* 구두점: 검은색 */
 
-.highlight.vscode-enhanced .lntable .lntd:last-child pre {
-  background: transparent;
-  margin: 0;
-  padding: 16px;
-  color: #d4d4d4;
-  font-size: 14px;
-  line-height: 1.45;
-  overflow-x: auto;
-  border: none;
-  white-space: pre;
-  tab-size: 4;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.highlight.vscode-enhanced .lntable .lntd:last-child code {
-  background: transparent;
-  color: inherit;
-  padding: 0;
-  font-family: inherit;
-  display: block;
-  white-space: pre;
-}
-
-/* Hugo 생성 라인 구조 */
-.highlight.vscode-enhanced .line {
-  display: block;
-  height: 20.3px;
-  line-height: 20.3px;
-}
-
-.highlight.vscode-enhanced .cl {
-  display: inline;
-}
-
-/* VS Code 구문 강조 색상으로 기존 chroma 클래스들 덮어쓰기 */
-.highlight.vscode-enhanced .k,
-.highlight.vscode-enhanced .kc,
-.highlight.vscode-enhanced .kd,
-.highlight.vscode-enhanced .kn,
-.highlight.vscode-enhanced .kp,
-.highlight.vscode-enhanced .kr,
-.highlight.vscode-enhanced .kt { color: #569cd6 !important; font-weight: normal !important; }
-
-.highlight.vscode-enhanced .s,
-.highlight.vscode-enhanced .sa,
-.highlight.vscode-enhanced .sb,
-.highlight.vscode-enhanced .sc,
-.highlight.vscode-enhanced .dl,
-.highlight.vscode-enhanced .sd,
-.highlight.vscode-enhanced .s2,
-.highlight.vscode-enhanced .se,
-.highlight.vscode-enhanced .sh,
-.highlight.vscode-enhanced .si,
-.highlight.vscode-enhanced .sx,
-.highlight.vscode-enhanced .sr,
-.highlight.vscode-enhanced .s1,
-.highlight.vscode-enhanced .ss { color: #ce9178 !important; }
-
-.highlight.vscode-enhanced .c,
-.highlight.vscode-enhanced .ch,
-.highlight.vscode-enhanced .cm,
-.highlight.vscode-enhanced .c1,
-.highlight.vscode-enhanced .cs { color: #6a9955 !important; font-style: italic !important; }
-
-.highlight.vscode-enhanced .m,
-.highlight.vscode-enhanced .mb,
-.highlight.vscode-enhanced .mf,
-.highlight.vscode-enhanced .mh,
-.highlight.vscode-enhanced .mi,
-.highlight.vscode-enhanced .il,
-.highlight.vscode-enhanced .mo { color: #b5cea8 !important; }
-
-.highlight.vscode-enhanced .n,
-.highlight.vscode-enhanced .na,
-.highlight.vscode-enhanced .nb,
-.highlight.vscode-enhanced .bp,
-.highlight.vscode-enhanced .nc,
-.highlight.vscode-enhanced .no,
-.highlight.vscode-enhanced .nd,
-.highlight.vscode-enhanced .ni,
-.highlight.vscode-enhanced .ne,
-.highlight.vscode-enhanced .nf,
-.highlight.vscode-enhanced .fm,
-.highlight.vscode-enhanced .nl,
-.highlight.vscode-enhanced .nn,
-.highlight.vscode-enhanced .nx,
-.highlight.vscode-enhanced .py,
-.highlight.vscode-enhanced .nt,
-.highlight.vscode-enhanced .nv,
-.highlight.vscode-enhanced .vc,
-.highlight.vscode-enhanced .vg,
-.highlight.vscode-enhanced .vi,
-.highlight.vscode-enhanced .vm { color: #9cdcfe !important; }
-
-.highlight.vscode-enhanced .o,
-.highlight.vscode-enhanced .ow { color: #d4d4d4 !important; }
-
-.highlight.vscode-enhanced .p,
-.highlight.vscode-enhanced .pi { color: #ffd700 !important; }
-
-.highlight.vscode-enhanced .gt { color: #4ec9b0 !important; }
-
-/* 스크롤바 스타일링 */
-.highlight.vscode-enhanced .lntd:last-child pre::-webkit-scrollbar {
-  height: 10px;
-}
-
-.highlight.vscode-enhanced .lntd:last-child pre::-webkit-scrollbar-track {
-  background: #1e1e1e;
-}
-
-.highlight.vscode-enhanced .lntd:last-child pre::-webkit-scrollbar-thumb {
-  background: #424242;
-  border-radius: 5px;
-}
-
-.highlight.vscode-enhanced .lntd:last-child pre::-webkit-scrollbar-thumb:hover {
-  background: #4f4f4f;
-}
-
-/* 포커스/호버 효과 */
-.highlight.vscode-enhanced:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-}
-
-/* 인라인 코드 스타일 */
-code:not(.highlight code):not(.vscode-code):not(pre code) {
-  background: #2d2d30;
-  color: #cccccc;
+/* 인라인 코드 스타일 - 흰색 테마 */
+code:not(.highlight code):not(pre code) {
+  background: #f5f5f5;
+  color: #666666;
   padding: 2px 6px;
   border-radius: 3px;
   font-size: 0.9em;
   font-family: 'Fira Code', 'SF Mono', Consolas, monospace;
-  border: 1px solid #404040;
+  border: 1px solid #e0e0e0;
   font-weight: normal;
+}
+
+/* 스크롤바 스타일링 */
+.highlight .lntd:last-child pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.highlight .lntd:last-child pre::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.highlight .lntd:last-child pre::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 4px;
+}
+
+.highlight .lntd:last-child pre::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
 }
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
-  .highlight.vscode-enhanced .lntable .lntd:first-child {
+  .highlight .lntable .lntd:first-child {
     min-width: 40px;
   }
-  
-  .highlight.vscode-enhanced .lntable .lntd:first-child pre,
-  .highlight.vscode-enhanced .lntable .lntd:last-child pre {
+
+  .highlight .lntable .lntd:first-child pre,
+  .highlight .lntable .lntd:last-child pre {
     padding: 12px;
     font-size: 13px;
   }
-  
-  .highlight.vscode-enhanced .lnt,
-  .highlight.vscode-enhanced .line {
+
+  .highlight .lnt,
+  .highlight .line {
     height: 18.85px;
     line-height: 18.85px;
   }
-  
-  .vscode-tab {
-    padding: 6px 12px;
-    font-size: 12px;
-    min-width: 100px;
-  }
-  
-  .vscode-copy-btn {
-    font-size: 10px;
-    padding: 3px 6px;
-    height: 20px;
+
+  .code-copy-btn {
+    font-size: 11px;
+    padding: 3px 8px;
+    height: 22px;
   }
 }
 
 @media (max-width: 480px) {
-  .highlight.vscode-enhanced .lntable .lntd:first-child {
+  .highlight .lntable .lntd:first-child {
     min-width: 35px;
   }
-  
-  .highlight.vscode-enhanced .lntable .lntd:first-child pre,
-  .highlight.vscode-enhanced .lntable .lntd:last-child pre {
+
+  .highlight .lntable .lntd:first-child pre,
+  .highlight .lntable .lntd:last-child pre {
     padding: 8px;
     font-size: 12px;
   }
-  
-  .highlight.vscode-enhanced .lnt,
-  .highlight.vscode-enhanced .line {
+
+  .highlight .lnt,
+  .highlight .line {
     height: 17.4px;
     line-height: 17.4px;
   }
-  
-  .vscode-tab {
-    padding: 6px 8px;
-    font-size: 11px;
-    min-width: 80px;
+
+  .code-copy-btn {
+    font-size: 10px;
+    padding: 2px 6px;
+    height: 20px;
   }
 }
 </style>
 
 <script>
-class VSCodeEnhancer {
+class CodeEnhancer {
   constructor() {
     this.copyIcon = `<svg fill="currentColor" viewBox="0 0 16 16">
       <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
       <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
     </svg>`;
-    
+
     this.checkIcon = `<svg fill="currentColor" viewBox="0 0 16 16">
       <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
     </svg>`;
-    
-    this.languageExtensions = {
-      'javascript': 'script.js',
-      'js': 'script.js',
-      'python': 'script.py',
-      'py': 'script.py',
-      'html': 'index.html',
-      'css': 'styles.css',
-      'json': 'data.json',
-      'bash': 'script.sh',
-      'shell': 'script.sh',
-      'sh': 'script.sh',
-      'typescript': 'script.ts',
-      'ts': 'script.ts',
-      'php': 'script.php',
-      'java': 'Script.java',
-      'c': 'script.c',
-      'cpp': 'script.cpp',
-      'go': 'script.go',
-      'rust': 'script.rs',
-      'sql': 'query.sql',
-      'yaml': 'config.yaml',
-      'yml': 'config.yml',
-      'xml': 'data.xml',
-      'markdown': 'README.md',
-      'md': 'README.md'
-    };
-    
+
     this.init();
   }
 
@@ -446,7 +311,7 @@ class VSCodeEnhancer {
     } else {
       this.enhanceAllCodeBlocks();
     }
-    
+
     // 동적으로 추가되는 코드블록 감지
     this.observeContentChanges();
   }
@@ -457,18 +322,11 @@ class VSCodeEnhancer {
         if (mutation.type === 'childList') {
           mutation.addedNodes.forEach(node => {
             if (node.nodeType === Node.ELEMENT_NODE) {
-              // 새로 추가된 코드블록들 처리
-              const newHighlights = node.querySelectorAll ? node.querySelectorAll('.highlight:not(.vscode-enhanced)') : [];
-              const newPres = node.querySelectorAll ? node.querySelectorAll('pre:not(.highlight pre)') : [];
-              
+              const newHighlights = node.querySelectorAll ? node.querySelectorAll('.highlight:not(.code-enhanced)') : [];
               newHighlights.forEach(block => this.enhanceCodeBlock(block));
-              newPres.forEach(pre => this.convertToVSCode(pre));
-              
-              // 노드 자체가 코드블록인 경우
-              if (node.matches && node.matches('.highlight:not(.vscode-enhanced)')) {
+
+              if (node.matches && node.matches('.highlight:not(.code-enhanced)')) {
                 this.enhanceCodeBlock(node);
-              } else if (node.matches && node.matches('pre:not(.highlight pre)')) {
-                this.convertToVSCode(node);
               }
             }
           });
@@ -483,326 +341,107 @@ class VSCodeEnhancer {
   }
 
   enhanceAllCodeBlocks() {
-    // Hugo highlight 구조가 있는 코드블록들 처리
-    const highlightBlocks = document.querySelectorAll('.highlight:not(.vscode-enhanced)');
+    const highlightBlocks = document.querySelectorAll('.highlight:not(.code-enhanced)');
     highlightBlocks.forEach(block => this.enhanceCodeBlock(block));
-    
-    // 일반 pre 태그들 (Hugo가 처리하지 않은 것들)
-    const preBlocks = document.querySelectorAll('pre:not(.highlight pre)');
-    preBlocks.forEach(pre => this.convertToVSCode(pre));
   }
 
   enhanceCodeBlock(highlightElement) {
-    // 이미 처리된 경우 건너뛰기
-    if (highlightElement.classList.contains('vscode-enhanced')) {
+    if (highlightElement.classList.contains('code-enhanced')) {
       return;
     }
 
-    // 언어 감지
-    const language = this.detectLanguageFromHighlight(highlightElement);
-    
-    // 코드 내용 추출 (Hugo 구조 활용)
-    const codeContent = this.extractCodeFromHugoStructure(highlightElement);
-    
+    const codeContent = this.extractCodeContent(highlightElement);
+
     if (!codeContent.trim()) {
-      return; // 빈 코드블록은 건너뛰기
+      return;
     }
 
-    // VS Code 스타일 클래스 추가
-    highlightElement.classList.add('vscode-enhanced');
-    
-    // 헤더 추가
-    const header = this.createHeader(language, codeContent);
-    highlightElement.insertBefore(header, highlightElement.firstChild);
+    highlightElement.classList.add('code-enhanced');
+
+    // 복사 버튼 추가
+    const copyBtn = this.createCopyButton(codeContent);
+    highlightElement.appendChild(copyBtn);
   }
 
-  extractCodeFromHugoStructure(highlightElement) {
+  extractCodeContent(highlightElement) {
     // Hugo의 lntable 구조에서 코드 내용 추출
     const codeElement = highlightElement.querySelector('.lntd:last-child code');
     if (codeElement) {
       return codeElement.textContent || codeElement.innerText || '';
     }
-    
+
     // 일반적인 구조에서 추출
     const generalCode = highlightElement.querySelector('code');
     if (generalCode) {
       return generalCode.textContent || generalCode.innerText || '';
     }
-    
+
     return '';
   }
 
-  detectLanguageFromHighlight(element) {
-    // 코드 요소에서 data-lang 속성 확인
-    const codeElement = element.querySelector('code[data-lang]');
-    if (codeElement) {
-      return codeElement.getAttribute('data-lang').toLowerCase();
-    }
-    
-    // 클래스명에서 언어 추출
-    const classList = Array.from(element.classList);
-    for (const className of classList) {
-      if (className.startsWith('language-')) {
-        return className.replace('language-', '').toLowerCase();
-      }
-      if (className.startsWith('highlight-')) {
-        return className.replace('highlight-', '').toLowerCase();
-      }
-    }
-    
-    // 내용으로 언어 추측
-    const content = this.extractCodeFromHugoStructure(element);
-    return this.detectLanguageFromContent(content);
-  }
-
-  detectLanguageFromContent(content) {
-    const text = content.trim();
-    
-    // 간단한 언어 감지 로직
-    if (text.startsWith('<?php')) return 'php';
-    if (text.includes('function') && text.includes('=>')) return 'javascript';
-    if (text.includes('def ') && text.includes(':')) return 'python';
-    if (text.includes('<html') || text.includes('<!DOCTYPE')) return 'html';
-    if (text.includes('import ') && text.includes('from ')) return 'python';
-    if (text.startsWith('#!') && text.includes('bash')) return 'bash';
-    if ((text.startsWith('{') || text.startsWith('[')) && text.includes('"')) return 'json';
-    if (text.includes('SELECT') || text.includes('FROM')) return 'sql';
-    
-    return 'text';
-  }
-
-  createHeader(language, codeContent) {
-    const header = document.createElement('div');
-    header.className = 'vscode-header';
-    
-    const tab = document.createElement('div');
-    tab.className = `vscode-tab lang-${language}`;
-    
-    const filename = document.createElement('span');
-    filename.className = 'vscode-tab-filename';
-    filename.textContent = this.languageExtensions[language] || `code.${language}`;
-    
+  createCopyButton(codeContent) {
     const copyBtn = document.createElement('button');
-    copyBtn.className = 'vscode-copy-btn';
+    copyBtn.className = 'code-copy-btn';
     copyBtn.innerHTML = `${this.copyIcon} Copy`;
-    copyBtn.title = '코드 복사';
-    copyBtn.setAttribute('aria-label', '코드 복사');
-    
-    // 복사 이벤트 연결
+    copyBtn.title = 'Copy code';
+    copyBtn.setAttribute('aria-label', 'Copy code to clipboard');
+
     copyBtn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       this.copyToClipboard(copyBtn, codeContent);
     });
-    
-    tab.appendChild(filename);
-    header.appendChild(tab);
-    header.appendChild(copyBtn);
-    
-    return header;
-  }
 
-  // Hugo가 처리하지 않은 일반 pre 태그를 위한 변환 (기존 방식 유지)
-  convertToVSCode(originalElement) {
-    // 이미 변환된 경우 건너뛰기
-    if (originalElement.closest('.vscode-container')) {
-      return;
-    }
-
-    // 코드 내용과 언어 추출
-    let codeContent = '';
-    let language = 'text';
-    let codeElement = originalElement.querySelector('code') || originalElement;
-
-    if (codeElement) {
-      codeContent = codeElement.textContent || codeElement.innerText || '';
-    }
-
-    if (!codeContent.trim()) {
-      return; // 빈 코드블록은 건너뛰기
-    }
-
-    language = this.detectLanguageFromContent(codeContent);
-
-    // VS Code 스타일 컨테이너 생성 (기존 방식)
-    const vscodeContainer = this.createVSCodeContainer(language, codeContent);
-    
-    // 원래 요소 교체
-    originalElement.parentNode.replaceChild(vscodeContainer, originalElement);
-  }
-
-  createVSCodeContainer(language, codeContent) {
-    const container = document.createElement('div');
-    container.className = 'vscode-container';
-    
-    // 헤더 생성
-    const header = this.createHeader(language, codeContent);
-    
-    // 컨텐츠 생성 (기존 방식)
-    const content = this.createContent(codeContent);
-    
-    container.appendChild(header);
-    container.appendChild(content);
-    
-    return container;
-  }
-
-  createContent(codeContent) {
-    const content = document.createElement('div');
-    content.className = 'vscode-content';
-    content.style.display = 'flex';
-    
-    // 라인별로 분리
-    const lines = codeContent.split('\n');
-    
-    // 라인 번호 영역
-    const lineNumbers = document.createElement('div');
-    lineNumbers.style.cssText = `
-      background: #1e1e1e;
-      color: #858585;
-      padding: 16px;
-      text-align: right;
-      user-select: none;
-      font-size: 14px;
-      line-height: 1.45;
-      min-width: 50px;
-      border-right: 1px solid #333333;
-      flex-shrink: 0;
-    `;
-    
-    // 코드 내용 영역
-    const codeContentDiv = document.createElement('div');
-    codeContentDiv.style.cssText = `
-      flex: 1;
-      background: #1e1e1e;
-      overflow-x: auto;
-      padding: 16px;
-    `;
-    
-    const pre = document.createElement('pre');
-    pre.style.cssText = `
-      background: transparent;
-      color: #d4d4d4;
-      margin: 0;
-      padding: 0;
-      font-family: inherit;
-      font-size: 14px;
-      line-height: 1.45;
-      white-space: pre;
-      tab-size: 4;
-    `;
-    
-    const code = document.createElement('code');
-    code.style.cssText = `
-      background: transparent;
-      color: inherit;
-      padding: 0;
-      font-family: inherit;
-      display: block;
-      white-space: pre;
-    `;
-    
-    // 라인 번호 생성
-    lines.forEach((line, index) => {
-      const lineNum = document.createElement('div');
-      lineNum.textContent = (index + 1).toString();
-      lineNum.style.cssText = `
-        height: 20.3px;
-        line-height: 20.3px;
-      `;
-      lineNumbers.appendChild(lineNum);
-    });
-    
-    // 코드 라인 생성
-    lines.forEach((line, index) => {
-      const lineDiv = document.createElement('div');
-      lineDiv.style.cssText = `
-        height: 20.3px;
-        line-height: 20.3px;
-      `;
-      lineDiv.innerHTML = this.applySyntaxHighlighting(line);
-      code.appendChild(lineDiv);
-    });
-    
-    pre.appendChild(code);
-    codeContentDiv.appendChild(pre);
-    
-    content.appendChild(lineNumbers);
-    content.appendChild(codeContentDiv);
-    
-    return content;
-  }
-
-  applySyntaxHighlighting(line) {
-    if (!line.trim()) {
-      return '&nbsp;';
-    }
-    
-    // 기본적인 구문 강조 (HTML 이스케이프 먼저)
-    let highlighted = line
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;');
-    
-    // 구문 강조 적용
-    highlighted = highlighted
-      .replace(/(".*?")/g, '<span style="color: #ce9178;">$1</span>')
-      .replace(/('.*?')/g, '<span style="color: #ce9178;">$1</span>')
-      .replace(/(\/\/.*$)/g, '<span style="color: #6a9955; font-style: italic;">$1</span>')
-      .replace(/(\/\*.*?\*\/)/g, '<span style="color: #6a9955; font-style: italic;">$1</span>')
-      .replace(/\b(function|class|const|let|var|if|else|for|while|return|import|export|from|as|default|def|print|True|False|None)\b/g, '<span style="color: #569cd6;">$1</span>')
-      .replace(/\b(\d+\.?\d*)\b/g, '<span style="color: #b5cea8;">$1</span>')
-      .replace(/([{}()\[\]])/g, '<span style="color: #ffd700;">$1</span>');
-    
-    return highlighted;
+    return copyBtn;
   }
 
   async copyToClipboard(button, text) {
     try {
-      await navigator.clipboard.writeText(text);
-      this.showCopySuccess(button);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        this.showCopyFeedback(button, true);
+      } else {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        const successful = document.execCommand('copy');
+        document.body.removeChild(textArea);
+
+        this.showCopyFeedback(button, successful);
+      }
     } catch (err) {
-      console.warn('클립보드 복사 실패, 폴백 방법 사용:', err);
-      this.fallbackCopy(text);
-      this.showCopySuccess(button);
+      console.error('Failed to copy:', err);
+      this.showCopyFeedback(button, false);
     }
   }
 
-  fallbackCopy(text) {
-    const textArea = document.createElement('textarea');
-    textArea.value = text;
-    textArea.style.position = 'fixed';
-    textArea.style.left = '-9999px';
-    textArea.style.opacity = '0';
-    document.body.appendChild(textArea);
-    
-    textArea.focus();
-    textArea.select();
-    
-    try {
-      document.execCommand('copy');
-    } catch (err) {
-      console.error('폴백 복사도 실패:', err);
-    }
-    
-    document.body.removeChild(textArea);
-  }
-
-  showCopySuccess(button) {
+  showCopyFeedback(button, success) {
     const originalHTML = button.innerHTML;
-    button.innerHTML = `${this.checkIcon} Copied!`;
-    button.classList.add('copied');
-    
-    // 2초 후 원래 상태로 복원
-    setTimeout(() => {
-      button.innerHTML = originalHTML;
-      button.classList.remove('copied');
-    }, 2000);
+
+    if (success) {
+      button.innerHTML = `${this.checkIcon} Copied!`;
+      button.classList.add('clicked');
+
+      setTimeout(() => {
+        button.innerHTML = originalHTML;
+        button.classList.remove('clicked');
+      }, 2000);
+    } else {
+      button.innerHTML = `${this.copyIcon} Failed`;
+      setTimeout(() => {
+        button.innerHTML = originalHTML;
+      }, 2000);
+    }
   }
 }
 
-// VS Code 스타일 코드블록 초기화
-window.vscodeEnhancer = new VSCodeEnhancer();
+// Initialize enhancer
+new CodeEnhancer();
 </script>

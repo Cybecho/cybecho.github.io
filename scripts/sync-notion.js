@@ -2,12 +2,14 @@ const { Client } = require('@notionhq/client');
 const fs = require('fs');
 const crypto = require('crypto');
 const https = require('https');
+const http = require('http');
 const path = require('path');
 const sharp = require('sharp');
 
 const notion = new Client({ auth: process.env.NOTION_SECRET });
 const CACHE_FILE = 'notion_cache.json';
 const GIT_CACHE_FILE = '.notion_cache_git.json'; // Git에 저장될 캐시
+const URL_TITLE_CACHE_FILE = '.url_title_cache.json'; // URL 제목 캐시
 
 function loadCache() {
   try {
@@ -38,6 +40,130 @@ function saveCache(cache) {
   } catch (error) {
     console.error('Cache save error:', error.message);
   }
+}
+
+// URL 제목 캐시 관리
+function loadUrlTitleCache() {
+  try {
+    if (fs.existsSync(URL_TITLE_CACHE_FILE)) {
+      const cache = JSON.parse(fs.readFileSync(URL_TITLE_CACHE_FILE, 'utf8'));
+      console.log('Loaded URL title cache with', Object.keys(cache).length, 'entries');
+      return cache;
+    }
+  } catch (error) {
+    console.log('URL title cache load error:', error.message);
+  }
+  return {};
+}
+
+function saveUrlTitleCache(cache) {
+  try {
+    fs.writeFileSync(URL_TITLE_CACHE_FILE, JSON.stringify(cache, null, 2));
+  } catch (error) {
+    console.error('URL title cache save error:', error.message);
+  }
+}
+
+// URL에서 페이지 제목 추출
+async function fetchPageTitle(url) {
+  // 캐시에서 먼저 확인
+  const cache = loadUrlTitleCache();
+  if (cache[url]) {
+    console.log('📦 Using cached title for:', url);
+    return cache[url];
+  }
+
+  return new Promise((resolve, reject) => {
+    try {
+      const urlObj = new URL(url);
+      const protocol = urlObj.protocol === 'https:' ? https : http;
+
+      const options = {
+        hostname: urlObj.hostname,
+        path: urlObj.pathname + urlObj.search,
+        method: 'GET',
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (compatible; NotionSync/1.0)',
+          'Accept': 'text/html,application/xhtml+xml',
+          'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7'
+        },
+        timeout: 10000 // 10 seconds timeout
+      };
+
+      const req = protocol.request(options, (res) => {
+        // Handle redirects
+        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+          console.log('🔄 Redirecting to:', res.headers.location);
+          fetchPageTitle(res.headers.location).then(resolve).catch(reject);
+          return;
+        }
+
+        if (res.statusCode !== 200) {
+          console.warn(`⚠️ HTTP ${res.statusCode} for ${url}`);
+          resolve(null);
+          return;
+        }
+
+        let html = '';
+        res.setEncoding('utf8');
+
+        res.on('data', (chunk) => {
+          html += chunk;
+          // Early termination if we found the title
+          if (html.includes('</title>')) {
+            res.destroy(); // Stop receiving data
+          }
+        });
+
+        res.on('end', () => {
+          try {
+            // Extract title from HTML
+            const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
+            if (titleMatch && titleMatch[1]) {
+              let title = titleMatch[1]
+                .trim()
+                .replace(/\s+/g, ' ')
+                .replace(/&amp;/g, '&')
+                .replace(/&lt;/g, '<')
+                .replace(/&gt;/g, '>')
+                .replace(/&quot;/g, '"')
+                .replace(/&#039;/g, "'");
+
+              console.log('✅ Fetched title:', title);
+
+              // Save to cache
+              cache[url] = title;
+              saveUrlTitleCache(cache);
+
+              resolve(title);
+            } else {
+              console.warn('⚠️ No title found for:', url);
+              resolve(null);
+            }
+          } catch (error) {
+            console.error('❌ Error parsing HTML:', error.message);
+            resolve(null);
+          }
+        });
+      });
+
+      req.on('error', (error) => {
+        console.error('❌ Request error for', url, ':', error.message);
+        resolve(null); // Resolve with null instead of reject
+      });
+
+      req.on('timeout', () => {
+        console.error('❌ Request timeout for:', url);
+        req.destroy();
+        resolve(null);
+      });
+
+      req.end();
+    } catch (error) {
+      console.error('❌ Invalid URL:', url, error.message);
+      resolve(null);
+    }
+  });
 }
 
 function createSafeYamlString(str) {
@@ -517,7 +643,16 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
         case 'link_preview':
           const bookmarkUrl = block.bookmark?.url || block.link_preview?.url;
           if (bookmarkUrl) {
-            content += '🔗 [' + bookmarkUrl + '](' + bookmarkUrl + ')\n\n';
+            // Try to fetch page title
+            console.log('🔗 Processing bookmark:', bookmarkUrl);
+            const pageTitle = await fetchPageTitle(bookmarkUrl);
+
+            if (pageTitle) {
+              content += '🔗 [' + pageTitle + '](' + bookmarkUrl + ')\n\n';
+            } else {
+              // Fallback to URL if title fetch fails
+              content += '🔗 [' + bookmarkUrl + '](' + bookmarkUrl + ')\n\n';
+            }
           }
           break;
           
