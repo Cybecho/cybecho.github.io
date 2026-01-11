@@ -1,7 +1,7 @@
-{{- $type := .Type | lower -}}
+{{- $type := .Type | lower | trim -}}
 {{- if eq $type "mermaid" -}}
 <div class="mermaid">
-    {{- .Inner | htmlEscape -}}
+    {{- .Inner | safeHTML -}}
 </div>
 {{- else -}}
 {{- highlight .Inner .Type .Options -}}
