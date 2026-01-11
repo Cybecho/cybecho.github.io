@@ -230,12 +230,13 @@
   // ========================================
   const CONFIG = {
     GEMINI_API_KEY: '{{ getenv "HUGO_GEMINI_API_KEY" }}' || '',
-    GEMINI_MODEL: 'gemini-2.0-flash-lite',
+    GEMINI_MODEL: 'gemma-3-4b-it',
     GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/',
-    SEARCH_LIMIT: 5,
-    MAX_CONTEXT_CHARS: 8000,
+    SEARCH_LIMIT: 7,
+    MAX_CONTEXT_CHARS: 6000,
     DAILY_LIMIT: 30,
-    RATE_KEY: 'magic_search_rate'
+    RATE_KEY: 'magic_search_rate',
+    FUSE_THRESHOLD: 0.6
   };
 
   // ========================================
@@ -310,15 +311,17 @@
       searchIndex = await response.json();
       fuse = new Fuse(searchIndex, {
         keys: [
-          { name: 'title', weight: 0.35 },
+          { name: 'title', weight: 0.4 },
           { name: 'summary', weight: 0.25 },
-          { name: 'content', weight: 0.25 },
+          { name: 'content', weight: 0.2 },
           { name: 'tags', weight: 0.1 },
           { name: 'series', weight: 0.05 }
         ],
-        threshold: 0.4,
+        threshold: CONFIG.FUSE_THRESHOLD,
         includeScore: true,
-        minMatchCharLength: 2
+        minMatchCharLength: 1,
+        ignoreLocation: true,
+        useExtendedSearch: true
       });
       return true;
     } catch (err) {
@@ -330,16 +333,61 @@
   // ========================================
   // Search & Context
   // ========================================
+
+  // 자연어에서 핵심 키워드 추출
+  function extractKeywords(query) {
+    // 불용어 제거
+    const stopwords = ['은', '는', '이', '가', '을', '를', '의', '에', '에서', '으로', '로', '와', '과', '도', '만', '뭐', '어떻게', '무엇', '왜', '어디', '언제', '누가', '뭘', '좀', '해줘', '알려줘', '설명해줘', '대해', '대해서', '관해', '관해서', '있나요', '있어요', '있을까요', '할까요', '하나요', '인가요', '건가요', '나요', '요'];
+
+    // 쿼리를 단어로 분리
+    let words = query
+      .replace(/[?!.,;:'"()[\]{}]/g, ' ')
+      .split(/\s+/)
+      .filter(w => w.length > 0);
+
+    // 불용어 제거
+    words = words.filter(w => !stopwords.some(sw => w.endsWith(sw) || w === sw));
+
+    // 남은 키워드들
+    return words.length > 0 ? words : query.split(/\s+/).slice(0, 3);
+  }
+
   function searchPosts(query) {
     if (!fuse) return [];
-    return fuse.search(query).slice(0, CONFIG.SEARCH_LIMIT).map(r => ({
-      title: r.item.title,
-      url: r.item.url,
-      summary: r.item.summary || '',
-      content: r.item.content || '',
-      tags: r.item.tags || '',
-      score: r.score
-    }));
+
+    // 1. 먼저 전체 쿼리로 검색
+    let results = fuse.search(query);
+
+    // 2. 결과가 적으면 키워드 추출해서 다시 검색
+    if (results.length < 3) {
+      const keywords = extractKeywords(query);
+      console.log('[Magic Search] Keywords:', keywords);
+
+      for (const keyword of keywords) {
+        if (keyword.length >= 2) {
+          const keywordResults = fuse.search(keyword);
+          // 중복 제거하며 추가
+          for (const r of keywordResults) {
+            if (!results.find(existing => existing.item.url === r.item.url)) {
+              results.push(r);
+            }
+          }
+        }
+      }
+    }
+
+    // 점수순 정렬 후 반환
+    return results
+      .sort((a, b) => (a.score || 0) - (b.score || 0))
+      .slice(0, CONFIG.SEARCH_LIMIT)
+      .map(r => ({
+        title: r.item.title,
+        url: r.item.url,
+        summary: r.item.summary || '',
+        content: r.item.content || '',
+        tags: r.item.tags || '',
+        score: r.score
+      }));
   }
 
   function buildContext(posts) {
