@@ -2,7 +2,7 @@ name: Hugo with Direct Notion API
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "claude/*"]
   schedule:
     - cron: '0 2 * * *'
   workflow_dispatch:
@@ -56,41 +56,53 @@ jobs:
           node scripts/enhance-urls.js || echo "URL enhancement completed with warnings"
 
       # 동기화된 파일들을 저장소에 커밋 (Archives 변환 전에 커밋)
+      # main 브랜치에서만 커밋, claude/* 브랜치에서는 테스트만 수행
       - name: Commit Notion sync changes
         run: |
+          CURRENT_BRANCH=${GITHUB_REF#refs/heads/}
+          echo "Current branch: $CURRENT_BRANCH"
+
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
+
           # 작업 디렉토리 완전 정리
           echo "Cleaning working directory..."
           git add -A
-          
+
           if ! git diff --staged --quiet; then
-            echo "Changes detected, committing..."
-            git commit -m "feat: Notion 포스트 동기화 업데이트"
-            
-            # 충돌 없는 안전한 푸시 전략
-            echo "Attempting to push..."
-            
-            # 최신 상태 확인 후 푸시
-            git fetch origin main
-            
-            # 현재 브랜치가 origin/main보다 뒤처져 있는지 확인
-            BEHIND=$(git rev-list --count HEAD..origin/main)
-            AHEAD=$(git rev-list --count origin/main..HEAD)
-            
-            echo "Commits behind: $BEHIND, ahead: $AHEAD"
-            
-            if [ "$BEHIND" -gt 0 ]; then
-              echo "Branch is behind, creating new commit on top of origin/main..."
-              # 현재 변경사항을 임시 저장
-              COMMIT_MSG=$(git log -1 --pretty=%s)
-              git reset --soft origin/main
-              git commit -m "$COMMIT_MSG"
+            echo "Changes detected"
+
+            # main 브랜치에서만 커밋 및 푸시
+            if [[ "$CURRENT_BRANCH" == "main" ]]; then
+              echo "Main branch detected, committing and pushing..."
+              git commit -m "feat: Notion 포스트 동기화 업데이트"
+
+              # 충돌 없는 안전한 푸시 전략
+              echo "Attempting to push..."
+
+              # 최신 상태 확인 후 푸시
+              git fetch origin main
+
+              # 현재 브랜치가 origin/main보다 뒤처져 있는지 확인
+              BEHIND=$(git rev-list --count HEAD..origin/main)
+              AHEAD=$(git rev-list --count origin/main..HEAD)
+
+              echo "Commits behind: $BEHIND, ahead: $AHEAD"
+
+              if [ "$BEHIND" -gt 0 ]; then
+                echo "Branch is behind, creating new commit on top of origin/main..."
+                # 현재 변경사항을 임시 저장
+                COMMIT_MSG=$(git log -1 --pretty=%s)
+                git reset --soft origin/main
+                git commit -m "$COMMIT_MSG"
+              fi
+
+              # 이제 안전하게 푸시
+              git push
+            else
+              echo "Feature branch detected, skipping commit and push (test only)"
+              echo "Sync would create/update $(git diff --staged --name-only | wc -l) files"
             fi
-            
-            # 이제 안전하게 푸시
-            git push
           else
             echo "No changes to commit"
           fi
