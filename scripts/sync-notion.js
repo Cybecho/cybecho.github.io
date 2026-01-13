@@ -717,8 +717,13 @@ async function getAllPages() {
         await new Promise(resolve => setTimeout(resolve, 50));
       }
     } catch (error) {
-      console.error('Error fetching pages:', error.message);
-      break;
+      console.error('❌ Critical Error fetching pages:', error.message);
+      console.error('💡 Please check:');
+      console.error('   1. NOTION_SECRET environment variable is set correctly');
+      console.error('   2. DATABASE_ID environment variable is set correctly');
+      console.error('   3. Notion integration has access to the database');
+      console.error('   4. Database exists and has not been deleted');
+      throw new Error('Failed to fetch pages from Notion API');
     }
   }
   return allPages;
@@ -894,7 +899,8 @@ async function syncNotionDatabase() {
 
   } catch (error) {
     console.error('❌ Notion API Error:', error.message);
-    process.exit(0);
+    console.error('Stack trace:', error.stack);
+    process.exit(1);
   }
 }
 
