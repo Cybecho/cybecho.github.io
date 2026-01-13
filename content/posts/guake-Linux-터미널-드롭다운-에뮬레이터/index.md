@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/guake-Linux-1871bab9e3f880d6a601e6be1c02d27d"
 
 ---
 
-![Image](image_9846396955ea.png)
+![Image](image_94fe483431cb.png)
 
 Guake는 GNOME 데스크톱 환경을 위한 강력하고 사용자 정의가 가능한 드롭다운 터미널 에뮬레이터입니다. 주요 특징과 기능은 다음과 같습니다:
 

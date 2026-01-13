@@ -16,18 +16,18 @@ notion_url: "https://www.notion.so/macOS-KDE-Yakuake-23e1bab9e3f880d387f1e3b4182
 
 ---
 
-![Image](image_94a6d39195a8.png)
+![Image](image_dc7cd51745a2.png)
 
 ## iTerm2로 드롭다운 터미널 만드는 방법
 
 1. **iTerm2 설치**
   - [iTerm2 공식 홈페이지](https://iterm2.com/)에서 다운로드하거나 Homebrew로 설치하세요.
 1. **핫키 윈도우 설정**
-![Image](image_b5a12ba016f6.png)
+![Image](image_40f058b38eeb.png)
 
   - iTerm2 실행 후 Preferences(환경설정) → Keys(단축키) → Hotkey 항목에서 **Show/hide all windows with a system-wide hotkey**를 체크하고, 원하는 단축키(예: `Ctrl + ~`, `Option + Space` 등)를 설정합니다.
 1. **윈도우 스타일 및 위치 설정**
-![Image](image_b3467cf48994.png)
+![Image](image_bbfb7534b3de.png)
 
   - Preferences → Profiles(프로필) → Window(창) 탭에서 다음과 같이 설정하세요:
     - **Style**: **Full-width Top of Screen**(화면 상단 전체 너비)

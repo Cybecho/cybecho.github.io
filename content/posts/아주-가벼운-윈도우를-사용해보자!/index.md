@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Ghost-Spectre-Windows-11-1e31bab9e3f880e5854a
 
 ---
 
-![Image](image_f2aab42fba39.png)
+![Image](image_94001f29825b.png)
 
 🔗 [https://cafe.naver.com/f-e/cafes/29222956/articles/58371?boardtype=I&userDisplay=20&menuid=93&referrerAllArticles=false&page=1](https://cafe.naver.com/f-e/cafes/29222956/articles/58371?boardtype=I&userDisplay=20&menuid=93&referrerAllArticles=false&page=1)
 

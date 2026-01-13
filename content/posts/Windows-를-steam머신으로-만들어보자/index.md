@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Windows-steam-492feb6b0d124b89af7c2c4a6f0cf33
 
 ---
 
-![Image](image_6cd31f1b2ee6.png)
+![Image](image_0dd0698cf760.png)
 
 <details>
 <summary>[https://www.tumblr.com/bugbear5/135763151126/윈도우-pc를-스팀-머신으로-만들기](https://www.tumblr.com/bugbear5/135763151126/윈도우-pc를-스팀-머신으로-만들기)</summary>

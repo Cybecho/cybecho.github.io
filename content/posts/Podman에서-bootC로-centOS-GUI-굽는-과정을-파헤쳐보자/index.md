@@ -17,7 +17,7 @@ notion_url: "https://www.notion.so/Podman-bootC-centOS-GUI-2dd1bab9e3f880c7874bf
 ---
 
 
-![Image](image_3145447044e9.png)
+![Image](image_ee8e00ab650f.png)
 
 # bootC로 centOS GUI 굽는 과정…
 

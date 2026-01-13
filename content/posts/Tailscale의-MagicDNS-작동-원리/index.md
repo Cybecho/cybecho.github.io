@@ -16,13 +16,13 @@ notion_url: "https://www.notion.so/Tailscale-MagicDNS-1bf1bab9e3f88004b4cdfb120b
 
 ---
 
-![Image](image_fdaebca4b718.png)
+![Image](image_65edbaa8c5ff.png)
 
 # TailScale 설치 후에, tailscale DNS는 어디에 먼저 질의하는가?
 
 PR 적다가, 도리어 내가 궁금해졌다.
 
-![Image](image_08f89e458628.png)
+![Image](image_e8f52424cc6f.png)
 
 > Tailscale DNS은 로컬 resolve를 건드릴까? 최초에 요청을 보내는 Tailscale은 어디에 있을까? Tailscale을 설치하는 순간부터, 로컬에 무언가 변경점이 있었을것이다. 로컬DNS를 다시한번 상기해보며, 한번 찾아보면 좋을것같다.
 

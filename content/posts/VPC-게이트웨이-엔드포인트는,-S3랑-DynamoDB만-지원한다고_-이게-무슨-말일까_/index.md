@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VPC-S3-DynamoDB-1c81bab9e3f8803aa3bdcccef5556
 
 ---
 
-![Image](image_509094416ce3.png)
+![Image](image_cbbd0d755954.png)
 
 > VPC 엔드포인트는 VPC 내부에 존재하는 EC2 인스턴스가 인터넷 게이트웨이를 거치지 않고, **AWS 서비스와 프라이빗하게 통신할 수 있도록 하는 서비스**야.
 

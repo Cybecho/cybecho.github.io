@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/AeroPeek-Windows-f5392944b71d4f6389956860ff81
 
 ---
 
-![Image](image_fdf2794edb1d.png)
+![Image](image_bbc8f3755508.png)
 
 🔗 [https://mspoweruser.com/ko/temporarily-peek-at-the-desktop/](https://mspoweruser.com/ko/temporarily-peek-at-the-desktop/)
 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Make-AI-7d875c8b16e544398cda76e2b9844123"
 
 ---
 
-![Image](image_7e120863222e.png)
+![Image](image_40b3148aa73d.png)
 
 🔗 [https://www.make.com/en/register?pc=successwiki](https://www.make.com/en/register?pc=successwiki)
 

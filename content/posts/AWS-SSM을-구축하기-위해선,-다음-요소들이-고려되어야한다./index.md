@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/AWS-SSM-1fc1bab9e3f880289eecebb1260b3cdb"
 
 ---
 
-![Image](image_a1d60cde7c97.png)
+![Image](image_b20856721f1a.png)
 
 ```json
 1. ssm 생성

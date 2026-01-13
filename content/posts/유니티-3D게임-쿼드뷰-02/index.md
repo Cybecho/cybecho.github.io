@@ -21,16 +21,16 @@ notion_url: "https://www.notion.so/3D-02-54478c158de5411bab6158fcc933f3b2"
 > 🔥 **중력설정방법**
 > Edit - Project Settings - Physics
 >
-> ![Image](image_4e582efaa7f3.png)
+> ![Image](image_15785f08b075.png)
 >
 >
 
 > 🔥 **물리충돌 강화방법 - 충돌 들어있는 그룹 스태틱으로 전환 후 자식들까지 적용**
-> ![Image](image_32e22efa9fa4.png)
+> ![Image](image_2e4ce319a303.png)
 >
 > 컨티뉴스를 제대로 사용하기 위해서 부딪히는상태를 정적으로해둬야 제대로 작동한다
 >
-> ![Image](image_bf8e296b7f68.png)
+> ![Image](image_7c32cefdff1c.png)
 >
 > 또한 WorldSpace에 충돌을 위한 리지드바디를 추가해주고 중력값을 받지 않게하기위해서 Use Gravity를 꺼주고 Is Kinematic 을 켜준다
 >
@@ -119,7 +119,7 @@ notion_url: "https://www.notion.so/3D-02-54478c158de5411bab6158fcc933f3b2"
 > - LimitVelocityOverLifetime - 시간에따른 파티클 속도변화
 > - StartLifeTime - 파티클 생존 시간
 > - Start Speed 에서 토글눌러서 랜덤값도 추가 가능
-> ![Image](image_a51ae13dedbd.png)
+> ![Image](image_3a6c6e99990a.png)
 >
 >
 
@@ -128,7 +128,7 @@ notion_url: "https://www.notion.so/3D-02-54478c158de5411bab6158fcc933f3b2"
 > > **상수 숫자들을 보다 의미있는 단어들로 표현**
 > > 할 수 있어서 프로그램을 읽기 쉽게 해준다.
 > >
-> > ![Image](image_da00a3d135d3.png)
+> > ![Image](image_ffb30342e885.png)
 > >
 > >
 >

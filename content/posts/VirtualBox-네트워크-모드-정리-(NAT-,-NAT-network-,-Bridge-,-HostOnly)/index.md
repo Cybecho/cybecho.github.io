@@ -16,14 +16,14 @@ notion_url: "https://www.notion.so/VirtualBox-NAT-NAT-network-Bridge-HostOnly-1a
 
 ---
 
-![Image](image_56b4fb7be50a.png)
+![Image](image_c3f828080412.png)
 
 > 교장님이 칠수에게 크게 노했습니다!!
 하지만.. 도대체 어떤 칠수에게 노하신거죠?
 
 # VM 포트포워딩
 
-![Image](image_c3798a96d059.png)
+![Image](image_208fa2b39522.png)
 
 실습을 시작하기 전에, VirtualBox에서 제공하는 네트워크 모드(NAT, 브리지, 내부 네트워크 등)에 대해 충분히 숙지하고, 호스트와 게스트 간 통신을 설정하기 위해 필요한 포트 포워딩의 개념을 이해한 후 본문으로 넘어가는 것이 좋습니다.
 
@@ -197,7 +197,7 @@ NAT 모드에서는 게스트 VM이 가상 NAT를 통해 외부로 통신하기 
 
 이름이 같은 3명의 철수는 동시에 “나를 부른 건가?” 하고 헷갈릴 수밖에 없습니다.
 
-![Image](image_3ea285d31ced.png)
+![Image](image_65d6c29d8e2a.png)
 
 > 왜 헷갈릴까?
 
@@ -222,11 +222,11 @@ NAT 모드에서는 게스트 VM이 가상 NAT를 통해 외부로 통신하기 
 1. 그 ‘A반(호스트 포트)’ 안에 있는 ‘1번 철수(사설 IP: 10.0.2.15, 사설 포트: 22번)’에게 전달하도록 설정합니다.
 ---
 
-![Image](image_79287f9e9459.png)
+![Image](image_f28c67a15762.png)
 
 # Virtual Machine을 이용한 인프라 구성을 직접 해볼까요?!
 
-![Image](image_a93857f5f1b2.png)
+![Image](image_c72348f86fbc.png)
 
 ### 각 단계별 점검사항
 
@@ -240,7 +240,7 @@ NAT 모드에서는 게스트 VM이 가상 NAT를 통해 외부로 통신하기 
 <details>
 <summary>O O O</summary>
 
-![Image](image_119f596a1687.png)
+![Image](image_bd9bdb6701e2.png)
 
 </details>
 
@@ -248,11 +248,11 @@ NAT 모드에서는 게스트 VM이 가상 NAT를 통해 외부로 통신하기 
 <details>
 <summary>O O X</summary>
 
-![Image](image_a961663869a8.png)
+![Image](image_8276c6c870b6.png)
 
-![Image](image_2703eb148db9.png)
+![Image](image_5b35bb1d31a5.png)
 
-![Image](image_741801bd8d3c.png)
+![Image](image_758121d9bb66.png)
 
 </details>
 
@@ -261,22 +261,22 @@ NAT 모드에서는 게스트 VM이 가상 NAT를 통해 외부로 통신하기 
 <summary>사전 설정</summary>
 
 - 새로운 어댑터를 만들어줘야함
-![Image](image_48abd5ced6fe.png)
+![Image](image_3bcb0f9a75c9.png)
 
-![Image](image_e9794a2af202.png)
+![Image](image_89828636c0ba.png)
 
-![Image](image_157a2c748970.png)
+![Image](image_c3d7e41ef31c.png)
 
 </details>
 
 <details>
 <summary>O O X</summary>
 
-![Image](image_c4610e4b9517.png)
+![Image](image_b95ab00fe59d.png)
 
-![Image](image_0dc6f26b7ecf.png)
+![Image](image_194c80bb3ab2.png)
 
-![Image](image_cfa2ebfdd495.png)
+![Image](image_393114d6595d.png)
 
 </details>
 
@@ -284,18 +284,18 @@ NAT 모드에서는 게스트 VM이 가상 NAT를 통해 외부로 통신하기 
 <details>
 <summary>🔺 X O</summary>
 
-![Image](image_89a212bc64bc.png)
+![Image](image_43546dc3160b.png)
 
-![Image](image_d92ab8c7f6e4.png)
+![Image](image_127d9949419c.png)
 
-![Image](image_b174389b0e1e.png)
+![Image](image_cf71e94a6b49.png)
 
 </details>
 
 <details>
 <summary>APT는 잘 됨</summary>
 
-![Image](image_67ec945c297f.png)
+![Image](image_a3bd27d359c7.png)
 
 </details>
 
@@ -306,7 +306,7 @@ NAT 모드에서는 게스트 VM이 가상 NAT를 통해 외부로 통신하기 
 <details>
 <summary>네트워크 추가</summary>
 
-![Image](image_887f18004a75.png)
+![Image](image_5e1b7c72168a.png)
 
 ```javascript
 이더넷 어댑터 이더넷 2:
@@ -345,9 +345,9 @@ NAT 모드에서는 게스트 VM이 가상 NAT를 통해 외부로 통신하기 
 <details>
 <summary>GNS3 구성</summary>
 
-![Image](image_86b715e4d742.png)
+![Image](image_93315b631f0c.png)
 
-![Image](image_737f5ed1336e.png)
+![Image](image_6c30cd6a0c6d.png)
 
 </details>
 
@@ -507,7 +507,7 @@ end
 
 **gns3에서 구축한 L3스위치의 라우티드 포트 게이트웨이 정보를 알 수 없음**
 
-![Image](image_183e38817fde.png)
+![Image](image_677e5f802606.png)
 
 그래서 게스트측에서도 라우팅을 해줘야함
 
@@ -539,9 +539,9 @@ sudo ip route add default via 192.168.27.254
 
 UbuntuDesktop → UbuntuServer
 
-![Image](image_e2e7c3b8fc6d.png)
+![Image](image_9088362efcbb.png)
 
-![Image](image_f5a0a49d1bda.png)
+![Image](image_ccc6687e8371.png)
 
 </details>
 
@@ -554,11 +554,11 @@ UbuntuDesktop → UbuntuServer
 <details>
 <summary>서브넷을 애초에 적게주자</summary>
 
-![Image](image_10fdd4e5a2cc.png)
+![Image](image_5c0d1c390339.png)
 
 그리고 host PC 에서 ipconfig 를 통해 어댑터가 생성되었는지 확인해보자
 
-![Image](image_d3f7957d0592.png)
+![Image](image_5de8eb255e80.png)
 
 </details>
 
@@ -586,7 +586,7 @@ sudo ip addr add 192.168.56.23/24 dev enp0s3
 <details>
 <summary>GNS3 설정을 해주자</summary>
 
-![Image](image_5eee2619eb0f.png)
+![Image](image_f1377873f38d.png)
 
 </details>
 
@@ -637,14 +637,14 @@ Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 <details>
 <summary>10.234.41.47:2222 → ubuntu desktop 10.0.2.15:22</summary>
 
-![Image](image_3cd3dc23c708.png)
+![Image](image_87aae61e7fc6.png)
 
 </details>
 
 <details>
 <summary>10.234.41.47:2223 → ubuntu server 10.0.2.15:22</summary>
 
-![Image](image_add8e96c992f.png)
+![Image](image_05f781a9cb9e.png)
 
 </details>
 
@@ -657,7 +657,7 @@ Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 <details>
 <summary>설정방법</summary>
 
-![Image](image_cbb036f76a1f.png)
+![Image](image_181454cb7ba5.png)
 
 </details>
 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/1ba1bab9e3f880558438d8975c68758c"
 
 ---
 
-![Image](image_3bf2f8341322.png)
+![Image](image_860cf9aecb51.png)
 
 > 아래는 Redis에서의 캐싱(Cache)과 세션(Session)을 3티어 아키텍처(3-Tier)와 함께 이해하기 쉽게 정리한 간단한 레포트입니다.
 

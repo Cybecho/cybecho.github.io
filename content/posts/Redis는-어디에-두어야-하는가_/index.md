@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Redis-1bb1bab9e3f880949e82fd1882b1e807"
 
 ---
 
-![Image](image_891809a8c896.png)
+![Image](image_db96d0300c17.png)
 
 # Redis는 어디에 두어야 하는가?
 

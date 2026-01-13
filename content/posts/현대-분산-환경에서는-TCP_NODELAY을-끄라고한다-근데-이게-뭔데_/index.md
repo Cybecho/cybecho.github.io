@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/TCP_NODELAY-2d51bab9e3f8813fa5b1e8ccfede48aa"
 
 ---
 
-![Image](image_9b7a9663e70a.png)
+![Image](image_dcda57f1be3a.png)
 
 ## **1. 배경: 1984년, 인터넷 초창기의 '낭비' 문제**
 

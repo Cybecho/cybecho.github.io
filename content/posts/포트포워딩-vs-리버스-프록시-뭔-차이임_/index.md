@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/vs-2d0fb3dc33b4432aa094fa3d195b22b6"
 
 ---
 
-![Image](image_0e9451159e87.png)
+![Image](image_413bee7716da.png)
 
 # 개요
 

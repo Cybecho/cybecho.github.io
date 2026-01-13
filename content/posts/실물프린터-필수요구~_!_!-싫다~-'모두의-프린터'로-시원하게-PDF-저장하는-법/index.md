@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/PDF-2871bab9e3f880dbbe5bea0a8e463d6f"
 
 ---
 
-![Image](image_6666a0721c97.png)
+![Image](image_851b48866e33.png)
 
 [https://modu-print.com/%eb%aa%a8%eb%91%90%ec%9d%98-%ed%94%84%eb%a6%b0%ed%84%b0-%eb%8b%a4%ec%9a%b4%eb%a1%9c%eb%93%9c/](https://modu-print.com/%eb%aa%a8%eb%91%90%ec%9d%98-%ed%94%84%eb%a6%b0%ed%84%b0-%eb%8b%a4%ec%9a%b4%eb%a1%9c%eb%93%9c/)
 

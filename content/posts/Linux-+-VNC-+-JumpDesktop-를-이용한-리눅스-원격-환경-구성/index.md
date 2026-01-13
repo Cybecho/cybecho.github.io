@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Linux-VNC-JumpDesktop-15d1bab9e3f8808fab6adb7
 
 ---
 
-![Image](image_f148bcb525d7.png)
+![Image](image_e08869f32b86.png)
 
 # Pop!_OS에서 VNC 서버 설정 및 Jump Desktop으로 연결하기
 
@@ -99,7 +99,7 @@ GUI를 사용해 화면 공유를 설정할 수도 있습니다:
 gnome-control-center sharing
 ```
 
-![Image](image_6116fe94badf.png)
+![Image](image_4781f5a52cb8.png)
 
   - **"Screen Sharing"** 또는 **"화면 공유"** 옵션을 활성화합니다.
   - **비밀번호 보호**를 설정합니다.
@@ -162,7 +162,7 @@ ip addr show
   - 비밀번호: 설정한 VNC 비밀번호 입력
 1. **연결 시도**: 설정을 저장하고 연결 버튼을 클릭합니다.
 
-![Image](image_99154cba138f.png)
+![Image](image_75903e1e66b8.png)
 
 ---
 

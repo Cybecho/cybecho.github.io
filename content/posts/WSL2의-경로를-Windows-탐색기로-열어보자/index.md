@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/WSL2-Windows-4d0f25ccd7c84706b1a749562669b27c
 
 ---
 
-![Image](image_92d22b752d17.png)
+![Image](image_01357d198540.png)
 
 🔗 [https://coding-groot.tistory.com/101](https://coding-groot.tistory.com/101)
 

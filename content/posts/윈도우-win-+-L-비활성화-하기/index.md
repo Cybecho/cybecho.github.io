@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/win-L-e2e4269d107f413eac708099bd840641"
 
 ---
 
-![Image](image_706136b88c2b.png)
+![Image](image_4c80a4a4f38a.png)
 
 🔗 [https://www.maketecheasier.com/disable-lock-screen-shortcut-key-windows/](https://www.maketecheasier.com/disable-lock-screen-shortcut-key-windows/)
 

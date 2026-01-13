@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/like-macOS-1cea25b9307d4778bcb10d939f44fba4"
 
 ---
 
-![Image](image_a382535b782b.png)
+![Image](image_e7b1ba11e883.png)
 
 🔗 [https://www.reddit.com/r/Windows_Redesign/comments/nxvmli/winos_with_simple_apps_and_awesome_addons/](https://www.reddit.com/r/Windows_Redesign/comments/nxvmli/winos_with_simple_apps_and_awesome_addons/)
 

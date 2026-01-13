@@ -17,7 +17,7 @@ notion_url: "https://www.notion.so/Xfce-RDP-15d1bab9e3f880cd8748fbb3aa63e9de"
 ---
 
 
-![Image](image_559b7ea1f078.png)
+![Image](image_6d6258227d24.png)
 
 # Xfce 환경에서 RDP 마우스 입력 문제 해결하기
 

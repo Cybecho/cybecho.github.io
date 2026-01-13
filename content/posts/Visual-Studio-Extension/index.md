@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Visual-Studio-Extension-c7e398ff28864baf98411
 
 ---
 
-![Image](image_8f9c38ff4873.png)
+![Image](image_cdee210cc0b9.png)
 
 > 💡 ****Code Made****
 > 🔗 [https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaidVS2022](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaidVS2022)

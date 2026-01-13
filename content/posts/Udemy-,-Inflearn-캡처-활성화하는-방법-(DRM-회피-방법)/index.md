@@ -15,7 +15,7 @@ notion_url: "https://www.notion.so/Udemy-Inflearn-DRM-4f1fa16ce765442e964e9a103c
 
 ---
 
-![Image](image_109f8d22fa5b.jpeg)
+![Image](image_bd14e8206820.jpeg)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=DNf4Lm2y4CI)
 

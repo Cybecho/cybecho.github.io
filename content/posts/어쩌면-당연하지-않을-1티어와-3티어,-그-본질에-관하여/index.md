@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/1-3-1b71bab9e3f8803ea33bff2716adea3a"
 
 ---
 
-![Image](image_8b1d1ae944f6.png)
+![Image](image_4eb41bd4faa7.png)
 
 ### 발단
 

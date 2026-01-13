@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/s390x-1a41bab9e3f88068a912c68aa2a93a02"
 
 ---
 
-![Image](image_35e5e3c710e4.png)
+![Image](image_96d1462df995.png)
 
 도커 공식문서를 읽다가, s390x 라는 처음보는아키텍처가 있어 이게뭔고~ 하고 조사하게되었다.
 

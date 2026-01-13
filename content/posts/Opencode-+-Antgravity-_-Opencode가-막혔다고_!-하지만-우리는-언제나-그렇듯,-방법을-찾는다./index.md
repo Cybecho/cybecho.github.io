@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Opencode-Antgravity-Opencode-2e51bab9e3f880cf
 
 ---
 
-![Image](image_23a1c46c1181.png)
+![Image](image_d80843068c18.png)
 
 🎥 [동영상 보기](https://youtu.be/UQv-OfWDgxs?si=xL-6ZwDa3uk2g2Ad)
 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Linux-RDP-JumpDesktop-15d1bab9e3f880b3a07ee63
 
 ---
 
-![Image](image_8a0943b69567.png)
+![Image](image_dcdb4ca67998.png)
 
 # RDP를 이용한 XFCE 환경의 원격 데스크탑 구축기
 

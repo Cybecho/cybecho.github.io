@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/gemini-2d61bab9e3f880519bcbe57f0c37d040"
 
 ---
 
-![Image](image_efad2ebbad02.png)
+![Image](image_7b19838c8ee2.png)
 
 🔗 [https://www.threads.com/@choi.openai/post/DRuFda3D2Ca](https://www.threads.com/@choi.openai/post/DRuFda3D2Ca)
 

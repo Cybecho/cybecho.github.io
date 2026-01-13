@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/AWS-cloudfront-proxy-1fc1bab9e3f880b4b86cedd4
 
 ---
 
-![Image](image_6bd2b544de2a.png)
+![Image](image_e10901924e3f.png)
 
 # 초기 문제상황
 
@@ -92,9 +92,9 @@ sequenceDiagram
 
 ## 문제 상황 및 해결 과정 요약
 
-![Image](image_243f8d93f9e4.png)
+![Image](image_a14f96358c24.png)
 
-![Image](image_1c2a64b43c5a.png)
+![Image](image_88fa8fbd224c.png)
 
 ```json
 해결법을 찾았다!

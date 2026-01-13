@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Visual-Studio-9255c6c2665a45f09b1230fa380b2b6
 
 ---
 
-![Image](image_e1dc3d8faafe.png)
+![Image](image_5ec30725e94a.png)
 
 🔗 [https://homosapi.tistory.com/2](https://homosapi.tistory.com/2)
 

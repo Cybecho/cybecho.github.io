@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Super-Claude-16-2481bab9e3f880e8a0e0e71ad303e
 
 ---
 
-![Image](image_a3d7333686a5.png)
+![Image](image_004ec897097e.png)
 
 🔗 [https://github.com/SuperClaude-Org/SuperClaude_Framework](https://github.com/SuperClaude-Org/SuperClaude_Framework)
 

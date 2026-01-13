@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/3-chroot-namespace-cgroups-1a11bab9e3f88020ad
 
 ---
 
-![Image](image_471f03c7d670.png)
+![Image](image_045e2fce45b7.png)
 
 🔗 [https://github.com/p8952/bocker](https://github.com/p8952/bocker)
 

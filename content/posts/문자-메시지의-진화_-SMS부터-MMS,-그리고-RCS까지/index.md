@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/SMS-MMS-RCS-27e1bab9e3f880b8907edf5f198a5980"
 
 ---
 
-![Image](image_6b238a208a31.png)
+![Image](image_c99cc66d7ebc.png)
 
 > 휴대폰 문자 기술부터 주파수 정책까지, 통신 인프라는 우리가 매일 쓰면서도 깊이 이해하지 못하는 영역이다. 오늘은 SMS·MMS·RCS의 차이, 전화선 주파수의 한계, 그리고 한국에서 UHF·초장파 사용이 제한되는 이유를 연결해 살펴본다.
 

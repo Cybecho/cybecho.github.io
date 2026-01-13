@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/crontab-66cfd67a6ed64ead8cc37d7eac85d578"
 
 ---
 
-![Image](image_2485ab53fdc2.png)
+![Image](image_b7f67f983571.png)
 
 🔗 [https://blog.raccoony.dev/cron-job-with-uwsgi-in-docker-container/](https://blog.raccoony.dev/cron-job-with-uwsgi-in-docker-container/)
 

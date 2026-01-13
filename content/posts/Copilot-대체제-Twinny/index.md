@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Copilot-Twinny-11ad1a5015414e19ba9db038b3f221
 
 ---
 
-![Image](image_571b3ec495cf.png)
+![Image](image_3a0e66d4431e.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=2Nj1W3CP9mM)
 

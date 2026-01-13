@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Alias-1a41bab9e3f8804dbb86f63ca9263587"
 
 ---
 
-![Image](image_22c67a637ddc.png)
+![Image](image_b9bd2cc94690.png)
 
 # 리눅스 환경변수와 Alias의 비교
 

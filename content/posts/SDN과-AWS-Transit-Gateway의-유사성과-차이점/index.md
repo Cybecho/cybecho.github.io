@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/SDN-AWS-Transit-Gateway-1cf1bab9e3f88098b34ae
 
 ---
 
-![Image](image_07fddd4e97c3.png)
+![Image](image_4a35c424da3e.png)
 
 [https://grok.com/share/bGVnYWN5_6a0c2d4d-90e9-48ae-9b44-4fe0e1e66207](https://grok.com/share/bGVnYWN5_6a0c2d4d-90e9-48ae-9b44-4fe0e1e66207)
 

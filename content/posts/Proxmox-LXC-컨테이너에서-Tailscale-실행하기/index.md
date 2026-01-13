@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Proxmox-LXC-Tailscale-1951bab9e3f880c7afe8c90
 
 ---
 
-![Image](image_7f7cc72086a0.png)
+![Image](image_5204abdd397a.png)
 
 # Proxmox LXC 컨테이너에서 Tailscale 실행하기
 

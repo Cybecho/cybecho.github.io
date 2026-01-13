@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Firefox-shyfox-0a766503311c4566b2803f8adfe8c9
 
 ---
 
-![Image](image_e6c0233ff8b3.png)
+![Image](image_a7fd93acc0e0.png)
 
 # 설치방법
 
@@ -56,5 +56,5 @@ This information can be found in the README on GitHub.
 Go to userChrome.css and remove line with import shy-floating-search.css
 ```
 
-![Image](image_8cd8d34c2856.png)
+![Image](image_b6615e055070.png)
 

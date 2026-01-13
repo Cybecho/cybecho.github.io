@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Mouseless-1681bab9e3f8806a8ac0f0c3125828b3"
 
 ---
 
-![Image](image_ec8b16e59723.png)
+![Image](image_0cb6cda2a47f.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=J0rwQVNQkHM&t=208s)
 

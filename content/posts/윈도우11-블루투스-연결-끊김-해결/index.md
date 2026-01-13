@@ -17,7 +17,7 @@ notion_url: "https://www.notion.so/11-6575ff9275774939920e8383fce3f803"
 ---
 
 
-![Image](image_34ba497dcfea.png)
+![Image](image_97508eb38153.png)
 
 # 1. 장치관리자 Bluetooth HID 장치 자동종료 해제
 

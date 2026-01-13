@@ -123,7 +123,7 @@ notion_url: "https://www.notion.so/3D-11-56f2450434fb4ec5bafcb29ddb4258ba"
 >
 
 > 🔥 **미사일 피격시 폭발구현**
-> ![Image](image_ed9e0c453f80.png)
+> ![Image](image_8de9f63a4a67.png)
 >
 > Grenade에서 사용했던 파티클을 그대로 사용했고 Simulation Space를  Local에서 Word로 바꿨고 Emission의 Rate Over Distance를 조절해서 폭발을 구현했다
 >

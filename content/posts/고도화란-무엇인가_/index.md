@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/27d1bab9e3f880eca181df4fcfe1b7be"
 
 ---
 
-![Image](image_2afb4c1843a9.png)
+![Image](image_f787931efa58.png)
 
 [https://yat-ong.tistory.com/entry/%EA%B3%A0%EB%8F%84%ED%99%94%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80](https://yat-ong.tistory.com/entry/%EA%B3%A0%EB%8F%84%ED%99%94%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80)
 

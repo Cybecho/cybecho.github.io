@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Vim-8cfdb875ba1f4b0cbd55d2d5f1f4d9db"
 
 ---
 
-![Image](image_bc054856b285.png)
+![Image](image_a45b11e45978.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=ONcFKXoJ7uQ&t=323s)
 

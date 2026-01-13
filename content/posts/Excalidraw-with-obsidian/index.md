@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Excalidraw-with-obsidian-e4ea10b5f67248df9964
 
 ---
 
-![Image](image_d0e3fd274f90.png)
+![Image](image_71219bede7ce.png)
 
 🔗 [https://abluesnake.tistory.com/166](https://abluesnake.tistory.com/166)
 

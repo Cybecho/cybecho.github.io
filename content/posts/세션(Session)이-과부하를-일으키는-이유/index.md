@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Session-1ba1bab9e3f88048aac6c97910e44a3d"
 
 ---
 
-![Image](image_73c0bd250f68.png)
+![Image](image_8b6459962a48.png)
 
 > 아래 글은 세션(Session)이 왜 과부하를 일으키는지, 온라인 게임 환경에서 세션 유지가 어떤 의미로 관련이 있는지, 그리고 어느 레이어(layer)에서 주로 이러한 과부하가 발생하는지를 설명합니다.
 

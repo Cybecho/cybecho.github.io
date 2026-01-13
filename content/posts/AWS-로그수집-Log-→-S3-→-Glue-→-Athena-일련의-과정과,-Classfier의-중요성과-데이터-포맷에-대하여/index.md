@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/AWS-Log-S3-Glue-Athena-Classfier-2021bab9e3f8
 
 ---
 
-![Image](image_5ccc38457fd3.png)
+![Image](image_628b1186ad04.png)
 
 <details>
 <summary>원본글</summary>
@@ -27,9 +27,9 @@ notion_url: "https://www.notion.so/AWS-Log-S3-Glue-Athena-Classfier-2021bab9e3f8
 
 🔗 [https://claude.ai/public/artifacts/bfd977b8-ca4c-4983-bdd3-ae8d7ae227fc](https://claude.ai/public/artifacts/bfd977b8-ca4c-4983-bdd3-ae8d7ae227fc)
 
-![Image](image_591bbdefa295.jpg)
+![Image](image_49220b733a48.jpg)
 
-![Image](image_6246ad790d73.png)
+![Image](image_a4d2f74f80e0.png)
 
 <details>
 <summary>**1. VPC 플로우 로그 활성화 및 CloudWatch Logs로 전송**</summary>

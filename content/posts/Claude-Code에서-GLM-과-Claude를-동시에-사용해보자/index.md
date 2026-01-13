@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Claude-Code-GLM-Claude-2dc1bab9e3f8802abb8be1
 
 ---
 
-![Image](image_e8cd9c5d6b21.png)
+![Image](image_8bf071d880f3.png)
 
 [https://www.reddit.com/r/ClaudeCode/comments/1o8yst9/how_do_i_use_glm_46_and_claude_on_claude_code/](https://www.reddit.com/r/ClaudeCode/comments/1o8yst9/how_do_i_use_glm_46_and_claude_on_claude_code/)
 

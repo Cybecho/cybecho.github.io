@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Ctrl-CapsLock-7db001a3cb4248009f9440327f19552
 
 ---
 
-![Image](image_219bed666df2.png)
+![Image](image_e12b01bb8ff0.png)
 
 🔗 [https://m.blog.naver.com/minhyupp/222211206474](https://m.blog.naver.com/minhyupp/222211206474)
 
@@ -56,11 +56,11 @@ CapsLock 조차 Ctrl 키로 바꿔버리기
 
 🔗 [https://blog.naver.com/starbros/220466856335](https://blog.naver.com/starbros/220466856335)
 
-![Image](image_d2e161b9d370.png)
+![Image](image_11ecf08bcaf6.png)
 
-![Image](image_2f6808383d9b.png)
+![Image](image_da97f3db4e93.png)
 
 
-![Image](image_1ec0c7b4f735.png)
+![Image](image_e919862fe8f9.png)
 
 

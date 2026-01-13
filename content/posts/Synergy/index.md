@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Synergy-KVM-1851bab9e3f880c8a167df95a85333d3"
 
 ---
 
-![Image](image_4ab54115d140.png)
+![Image](image_2ccec0afd7be.png)
 
 > 💡 **여기서 14일마다 재가입해주면 무한 사용가능**
 > 심지어 그것도 안함

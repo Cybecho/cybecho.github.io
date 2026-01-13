@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/ProxMox-92f9725a610b4c31a923f32091792ee0"
 
 ---
 
-![Image](image_a953cab438a9.png)
+![Image](image_af6072fec8c3.png)
 
 [https://m.ppomppu.co.kr/new/bbs_view.php?id=nas&no=44870](https://m.ppomppu.co.kr/new/bbs_view.php?id=nas&no=44870)
 

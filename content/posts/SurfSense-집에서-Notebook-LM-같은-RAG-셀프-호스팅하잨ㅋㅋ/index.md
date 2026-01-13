@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/SurfSense-Notebook-LM-RAG-2d61bab9e3f8802f8cf
 
 ---
 
-![Image](image_ab44a86c9bf2.png)
+![Image](image_fa427b4a6d48.png)
 
 # SurfSense: 당신만의 AI 연구 비서를 로컬에서 구축하다
 

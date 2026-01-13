@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Notion-0c1da44e51374a1bba5d52b7c4b709f8"
 
 ---
 
-![Image](image_07bb28abb9ff.png)
+![Image](image_41e065803369.png)
 
 🔗 [https://github.com/notionblog/NotionThemes](https://github.com/notionblog/NotionThemes)
 

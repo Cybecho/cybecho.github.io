@@ -17,9 +17,9 @@ notion_url: "https://www.notion.so/ADSL-27e1bab9e3f880c68b9ecddf587637e5"
 ---
 
 
-![Image](image_ed3d9ed2bb11.png)
+![Image](image_83b7a8a1129a.png)
 
-![Image](image_36fcb004d3eb.png)
+![Image](image_dc381b335960.png)
 
 ### 백화점은 왜 ADSL을 사용할까? 구시대 기술의 의외의 생존기
 
@@ -31,7 +31,7 @@ ADSL(Asymmetric Digital Subscriber Line, 비대칭 디지털 가입자 회선)�
 
 이름에 '비대칭'이 붙는 이유는 데이터의 다운로드 속도와 업로드 속도가 다르기 때문이다. 당시 인터넷 사용자 대부분이 콘텐츠를 내려받는(다운로드) 비중이 압도적으로 높았기에, 다운로드 속도를 업로드 속도보다 훨씬 빠르게 설정하여 효율을 높였다. ADSL의 핵심은 음성 통화(저주파 대역)와 데이터 통신(고주파 대역)에 사용하는 주파수 대역을 분리하여, 전화와 인터넷을 동시에 사용할 수 있다는 점이었다.
 
-![Image](image_8fd3f2628e9e.png)
+![Image](image_bcd313599ee9.png)
 
 ### 백화점이 ADSL을 선택했던 이유
 

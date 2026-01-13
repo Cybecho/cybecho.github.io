@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VS-code-vs-code-3738fece05c5471d83f63f99a0edf
 
 ---
 
-![Image](image_7adfbebcf905.png)
+![Image](image_d7eecb594f57.png)
 
 ## 윈도우,Linux는 아래 링크 따라하면 돼
 

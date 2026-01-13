@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/ProxMox-VLAN-VMBR-2ad1bab9e3f8808e8074d52d6c6
 
 ---
 
-![Image](image_16fab2e78d44.png)
+![Image](image_c84bd4a93caa.png)
 
 ## VMBR , VLAN 차이점을 궁금해 하는것.. 이 질문이 왜 중요할까?
 
@@ -46,7 +46,7 @@ Proxmox를 처음 설치하면 vmbr0이라는 기본 브리지가 만들어집�
 
 ## 계층의 분리, 그리고 각자의 역할
 
-![Image](image_7537940cb1f6.png)
+![Image](image_39b47d56e888.png)
 
 즉, VMBR과 VLAN은 서로 다른 레이어에서 작동합니다. VMBR은 Proxmox 호스트 내부의 문제를 해결합니다. 즉, "가상 머신들을 어떻게 물리 네트워크 카드에 연결할 것인가"라는 문제입니다. 반면 VLAN은 네트워크 전체의 문제를 해결합니다. "하나의 물리적 인프라로 여러 개의 논리적 네트워크를 어떻게 구성할 것인가"라는 문제입니다.
 

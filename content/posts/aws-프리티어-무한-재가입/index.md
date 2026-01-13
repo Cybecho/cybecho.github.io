@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/aws-a040c21b3ad5480eb62445c05660d43e"
 
 ---
 
-![Image](image_d71ddabba1ab.png)
+![Image](image_eb0efe36ebdf.png)
 
 
 🔗 [https://this-programmer.tistory.com/472](https://this-programmer.tistory.com/472)

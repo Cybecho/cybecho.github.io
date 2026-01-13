@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Google-Pixel-1-380-1a51bab9e3f88044b427df204a
 
 ---
 
-![Image](image_ef9d196bcd12.webp)
+![Image](image_37b18f8c2822.webp)
 
 [https://www.youtube.com/watch?v=Xbzv6BI-2Hw&embeds_referring_euri=https%3A%2F%2Flilys.ai%2F&embeds_referring_origin=https%3A%2F%2Flilys.ai](https://www.youtube.com/watch?v=Xbzv6BI-2Hw&embeds_referring_euri=https%3A%2F%2Flilys.ai%2F&embeds_referring_origin=https%3A%2F%2Flilys.ai)
 
@@ -26,7 +26,7 @@ notion_url: "https://www.notion.so/Google-Pixel-1-380-1a51bab9e3f88044b427df204a
 
 # 그리고 실제로 했음
 
-![Image](image_291a089876b4.png)
+![Image](image_5d94cc6a9842.png)
 
 난 써멀패드에 구리판까지 넣어 붙였음
 

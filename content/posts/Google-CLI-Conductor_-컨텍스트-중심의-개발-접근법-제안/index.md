@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Google-CLI-Conductor-2d01bab9e3f88085b209d1d8
 
 ---
 
-![Image](image_60f6f4e5770a.png)
+![Image](image_f7e5abcdda54.png)
 
 🔗 [https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/](https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/)
 
@@ -38,7 +38,7 @@ notion_url: "https://www.notion.so/Google-CLI-Conductor-2d01bab9e3f88085b209d1d8
 
 ## 작동 메커니즘의 다층성
 
-![Image](image_a311c8ec4744.png)
+![Image](image_8ab0f66d5b8c.png)
 
 Conductor의 워크플로는 세 개의 상호연결된 단계로 구성된다. 각 단계는 서로 다른 차원의 맥락을 다룬다.
 

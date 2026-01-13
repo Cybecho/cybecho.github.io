@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Bardimm-27e1bab9e3f880669a65f03eebafcb89"
 
 ---
 
-![Image](image_3693960e0f25.png)
+![Image](image_b093c70c54eb.png)
 
 ### 보이지 않는 표준, Bardimm은 어떻게 독점 구조를 만들었나
 
@@ -24,7 +24,7 @@ notion_url: "https://www.notion.so/Bardimm-27e1bab9e3f880669a65f03eebafcb89"
 
 Bardimm은 단순한 바코드 솔루션이 아닙니다. 특정 기술 환경과 거대 소프트웨어 기업의 전략이 맞물려 강력한 독점적 생태계를 구축한 성공적인 B2B 기술의 교과서적 사례입니다. 이 글에서는 Bardimm이 무엇인지, 그리고 어떻게 SAP 환경의 대체 불가능한 솔루션으로 자리 잡을 수 있었는지 그 독점 구조의 비밀을 종합적으로 파헤쳐 봅니다.
 
-![Image](image_b2e006f8aa3f.png)
+![Image](image_f5feffdf72f6.png)
 
 ---
 

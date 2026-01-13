@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Apple-RDMA-MAC-AI-2d01bab9e3f8802ab3d1edc4cab
 
 ---
 
-![Image](image_59bface911f1.png)
+![Image](image_2829ddfb61a1.png)
 
 ## 초기 관찰: RDMA는 무엇이 특별한가?
 
@@ -122,7 +122,7 @@ Apple의 역사적 패턴을 보면 Metal API는 2014년에 발표되고 GPU 집
 
 NVIDIA H100 한 대는 $30,000에서 $40,000이고, Mac Studio M2 Ultra 4대도 $32,000에서 $40,000으로 비슷하지만, 전력 소비는 Mac이 약 1/5 수준이다. 가격은 비슷하지만 접근성과 운영 비용에서 차이가 난다. 더 중요한 것은 Apple이 기존 시장을 정면 공격하지 않고 새로운 카테고리를 만드는 경향이 있다는 점이다. iPhone으로 모바일 컴퓨팅을 재정의했고, AirPods로 오디오 시장을 재편했으며, Apple Silicon으로 PC 아키텍처에 도전했다. RDMA over Thunderbolt도 같은 맥락에서 이해할 수 있다.
 
-![Image](image_7736554041a6.png)
+![Image](image_a25bf8be900d.png)
 
 ## 7단계: 최종 종합 - 의의와 한계
 

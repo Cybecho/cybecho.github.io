@@ -126,7 +126,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 
 입력 후 두명령어를 입력하라고 한다 (homebrew를 활성화하기위해 PATH 를 추가하는 과정)
 
-![Image](image_59e4ec2dc99d.png)
+![Image](image_6de6af1f605d.png)
 
 
 이후 다음 명령어 실행
@@ -143,7 +143,7 @@ echo 'export MANPATH="${HOME}/.linuxbrew/share/man:$MANPATH"' >>~/.bash_profile
 echo 'export INFOPATH="${HOME}/.linuxbrew/share/info:$INFOPATH"' >>~/.bash_profile
 ```
 
-![Image](image_7f64215d65e6.png)
+![Image](image_522affb4bbea.png)
 
 
 초기화 파일을 새롭게 읽음

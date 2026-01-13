@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Vim-dedf8d442e9a45ffaadd6e6c1fbd01d6"
 
 ---
 
-![Image](image_2120cb6cd9f0.png)
+![Image](image_6ba27758996e.png)
 
 🔗 [https://dev.to/kaiwalter/share-neovim-configuration-between-linux-and-windows-4gh8](https://dev.to/kaiwalter/share-neovim-configuration-between-linux-and-windows-4gh8)
 

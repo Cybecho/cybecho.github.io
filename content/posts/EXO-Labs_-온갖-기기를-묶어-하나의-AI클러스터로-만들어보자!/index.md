@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/EXO-Labs-AI-2d01bab9e3f880758c69dceda6820d2f"
 
 ---
 
-![Image](image_9ae5a549f781.png)
+![Image](image_2c6fe8f191a1.png)
 
 > EXO Labs는 EXO라는 오픈소스 프레임워크로, 여러 종류의 장비(GPU 서버, 워크스테이션, 노트북, 심지어 스마트폰까지)를 하나의 AI 추론 클러스터처럼 묶어 쓰는 것을 목표로 합니다.
 
@@ -30,7 +30,7 @@ notion_url: "https://www.notion.so/EXO-Labs-AI-2d01bab9e3f880758c69dceda6820d2f"
 
 ### 1. 탄생 배경과 핵심 목표: 인프라의 오케스트레이션
 
-![Image](image_010d70096065.png)
+![Image](image_46dc4b2de29f.png)
 
 EXO Labs는 대학생들이 보유한 개인 기기들을 활용해 고사양 LLM 연구를 더 빠르게 수행하고자 하는 실용적인 욕구에서 시작되었습니다. 단일 기기의 메모리와 계산 능력(FLOPS) 한계로 인해 대형 모델 실행이 불가능했던 상황을 해결하는 것이 초기 과제였습니다.
 

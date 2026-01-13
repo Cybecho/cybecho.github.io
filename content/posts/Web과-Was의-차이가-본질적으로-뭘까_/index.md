@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Web-Was-1b21bab9e3f880a5a1cac6b0d093e41c"
 
 ---
 
-![Image](image_35582634c586.png)
+![Image](image_03ce01837532.png)
 
 ### Web과 Was의 차이가 본질적으로 뭘까?
 

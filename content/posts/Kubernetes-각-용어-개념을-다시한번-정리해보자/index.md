@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Kubernetes-1d71bab9e3f8803d925cd4fe59cd5a06"
 
 ---
 
-![Image](image_fd9047a16351.png)
+![Image](image_bb7c5e187ec0.png)
 
 ### **1. 클러스터 (Cluster): 식당 전체** 🏢
 

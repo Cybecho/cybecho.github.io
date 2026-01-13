@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/AI-dbcd2fbc469249f3abc4e1204e514f6b"
 
 ---
 
-![Image](image_31a8cde6a382.png)
+![Image](image_7bf1f53109e3.png)
 
 ```latex
 큰 아이디어는 다음과 같다

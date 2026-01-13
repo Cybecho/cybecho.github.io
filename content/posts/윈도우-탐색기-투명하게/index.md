@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/f47854d2452b4efdb0937bbbaa8f0232"
 
 ---
 
-![Image](image_0e3457905c7a.png)
+![Image](image_c7a25ceb079a.png)
 
 ## 윈도우 터미널 투명 설정
 

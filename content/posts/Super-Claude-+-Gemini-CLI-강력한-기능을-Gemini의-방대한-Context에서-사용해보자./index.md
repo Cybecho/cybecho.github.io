@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Super-Claude-Gemini-CLI-Gemini-Context-2481ba
 
 ---
 
-![Image](image_9d4c8a66ef0f.png)
+![Image](image_b0ae52eb0568.png)
 
 ## 슈퍼클로드의 정교함과 제미나이의 광활함을 한 곳에 담다
 
@@ -268,14 +268,14 @@ npm install -g @google/gemini-cli
 제미나이 CLI가 설치되면 사용자 폴더에 `.gemini`라는 새 폴더가 생성된다. 이제 슈퍼클로드의 시스템 파일을 이곳으로 옮겨야 한다.
 
 1. **지침 파일 복사**: 기존의 `.claude` 폴더에서 `CLAUDE.md`, `COMMANDS.md`, `FLAGS.md`, `MCP.md`, `MODES.md`, `ORCHESTRATOR.md`, `PERSONAS.md`, `PRINCIPLES.md`, `RULES.md` 총 9개의 파일을 복사하여 `.gemini` 폴더에 붙여넣는다.
-![Image](image_0190fda9bf2f.png)
+![Image](image_e8b0ff7aaa3f.png)
 
 1. **커맨드 파일 복사**:
   - `.gemini` 폴더 안에 `commands`라는 이름의 새 폴더를 만든다.
-![Image](image_ba6b726f0199.png)
+![Image](image_3042a7a92fe4.png)
 
   - `.claude/commands` 폴더 안에 있는 `sc` 폴더 전체를 복사하여 방금 만든 `.gemini/commands` 폴더에 붙여넣는다.
-![Image](image_2cfea0c8f993.png)
+![Image](image_d8fa7c411975.png)
 
 ---
 

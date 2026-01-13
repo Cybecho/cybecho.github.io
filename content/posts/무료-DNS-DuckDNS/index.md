@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/DNS-DuckDNS-9a32dca9a8634d3f8ab3667b829686c7"
 
 ---
 
-![Image](image_72a406a1eff3.png)
+![Image](image_2f56f49f094c.png)
 
 [https://www.duckdns.org/domains](https://www.duckdns.org/domains)
 

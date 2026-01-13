@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/AWS-Lakeformation-S3-IAM-Lake-Formation-2021b
 
 ---
 
-![Image](image_979526715995.png)
+![Image](image_bea67e588a77.png)
 
 <details>
 <summary>원본글</summary>
@@ -25,7 +25,7 @@ notion_url: "https://www.notion.so/AWS-Lakeformation-S3-IAM-Lake-Formation-2021b
 
 ## Lake Formation
 
-![Image](image_443dcf944003.png)
+![Image](image_668a7746ff09.png)
 
 - WHAT
   - 한마디로 똑똑한 문지기이다.
@@ -40,16 +40,16 @@ notion_url: "https://www.notion.so/AWS-Lakeformation-S3-IAM-Lake-Formation-2021b
 
   - 그래서 부서 또는 팀에게 하나의 IAM를 주고 Lake Formation에서 세분적으로 각 iam의 s3의 어느 부분까지 접근이 가능한지 허락해준다. (예: 다이아 광부는 1층까지, 금 광부는 3층까지…등등)
 - HOW?
-![Image](image_e9b5ba00bec9.png)
+![Image](image_0215d9d089fd.png)
 
   Athena도 처리된 쿼리를 S3에 저장할때, Lake Formation을 이용하기 때문에, LakeFormation을 이용해야 한다.
 Glue는 애초에 S3의 데이터를 읽어 크롤링 해야 하기에, (s3::get) Lake Formation을 활용한다.
 
-![Image](image_c5cf9068cbf8.png)
+![Image](image_e7f7605f9183.png)
 
-![Image](image_40b02dfbdfa2.png)
+![Image](image_b18b93f9fa26.png)
 
-![Image](image_0c55cbb06b99.png)
+![Image](image_58a82c5a1f9c.png)
 
   해당 그림은, 결국 Athena 든 Glue든 결과적으로 s3를 사용해야하기에, 다음과 같은 그림이 그려지는 것이다.
 결국에 glue랑 athena는 get, put이든 s3에 접근을 해야한다.

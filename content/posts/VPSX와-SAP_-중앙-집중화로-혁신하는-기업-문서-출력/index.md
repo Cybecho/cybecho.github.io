@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VPSX-SAP-2821bab9e3f88091bd6cc5e075fc9479"
 
 ---
 
-![Image](image_458cd8b53b55.png)
+![Image](image_93e85ac35652.png)
 
 ## VPSX와 SAP: 기업의 문서 출력을 혁신하는 강력한 조합
 

@@ -16,9 +16,9 @@ notion_url: "https://www.notion.so/LunarVim-f526e9b0513a4cd0a43b9631c4c0304f"
 
 ---
 
-![Image](image_bf7a94f34f51.png)
+![Image](image_c58816a31b1a.png)
 
-![Image](image_9810aca6cdba.png)
+![Image](image_770a1387227d.png)
 
 🔗 [https://velog.io/@mythos/Linux-Lunar-Vim-설치](https://velog.io/@mythos/Linux-Lunar-Vim-설치)
 

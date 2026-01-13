@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/AWS-EFS-EBS-S3-1c81bab9e3f880e1b162dd22c1d0fa
 
 ---
 
-![Image](image_b20a907ec2f6.png)
+![Image](image_77d89a8387a0.png)
 
 ## AWS 스토리지 삼총사: EFS, EBS, S3 제대로 이해하기
 

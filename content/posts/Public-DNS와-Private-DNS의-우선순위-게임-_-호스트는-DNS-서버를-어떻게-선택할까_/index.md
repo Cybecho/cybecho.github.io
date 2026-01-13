@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Public-DNS-Private-DNS-DNS-1bf1bab9e3f8805cae
 
 ---
 
-![Image](image_bef1b7742c19.png)
+![Image](image_2d3efcd7fe36.png)
 
 > 💡 **목차**
 > ---
@@ -109,7 +109,7 @@ flowchart LR
 
 > 참고로 아래 튜토리얼은 단순히 VirtualBox 기준이기에, Proxmox 용으로 실습하시려면 알잘딱으로 네트워크 설정을 다르게 가져가야하는데… 
 
-![Image](image_b24835d57f6b.png)
+![Image](image_5e9231bd80d8.png)
 
 ```mermaid
 flowchart TD
@@ -500,11 +500,11 @@ dig BABO1.com
 
 정상적인 IP 주소가 반환되면 설정이 완료된 것입니다.
 
-![Image](image_fecc60fa2317.png)
+![Image](image_750c199f2c73.png)
 
-![Image](image_738f7e696135.png)
+![Image](image_1b535e033199.png)
 
-![Image](image_4a5271508d14.png)
+![Image](image_011183e482f4.png)
 
 
 
@@ -806,7 +806,7 @@ Address: 10.0.2.17
 
 ```
 
-![Image](image_fe59aceeea62.png)
+![Image](image_a6edb5cb7559.png)
 
 
 

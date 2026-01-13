@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/3PL-5PL-SCCM-27e1bab9e3f880f1902de3e5ed15934c
 
 ---
 
-![Image](image_cbffa52038bb.png)
+![Image](image_400e3437cf7f.png)
 
 **3PL이란?**
 

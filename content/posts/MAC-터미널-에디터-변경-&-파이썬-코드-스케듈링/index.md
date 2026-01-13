@@ -33,7 +33,7 @@ export VISUAL=nano; crontab -e
 위 명령어를 입력하시면 crontab을 열 때 nano가 기본 에디터로 설정됩니다. 만약 vim으로 변경하고 싶다면, 위 명령어에서 nano를 vim으로 변경해주시면 됩니다.
 
 
-![Image](image_985935cc11cb.png)
+![Image](image_b84a6cfd38ab.png)
 
 기존 vim 에디터는 상당히 불편하다
 
@@ -47,7 +47,7 @@ export VISUAL=nano; crontab -e
 ```
 
 
-![Image](image_01661193ab06.png)
+![Image](image_cb14294d2ce6.png)
 
 
 다시 Vim 에디터로 변경하고싶으면 VISUAL 부분을 vim 으로 변경해주면 쉽게 바꿀 수 있다

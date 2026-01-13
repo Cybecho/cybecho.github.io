@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/IBM-1961bab9e3f8805da851fe877c67eb03"
 
 ---
 
-![Image](image_53688d17593b.png)
+![Image](image_551092535560.png)
 
 [https://www.reddit.com/r/thinkpad/comments/ondeco/how_to_swap_the_fn_ctrl_keys_on_the_sk8845_sk8835/](https://www.reddit.com/r/thinkpad/comments/ondeco/how_to_swap_the_fn_ctrl_keys_on_the_sk8845_sk8835/)
 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e
 
 ---
 
-![Image](image_c1fe4233c0fb.png)
+![Image](image_558d68cfc8aa.png)
 
 [https://pve.proxmox.com/wiki/Network_Configuration](https://pve.proxmox.com/wiki/Network_Configuration)
 
@@ -24,7 +24,7 @@ notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e
 
 ### 브리지 구성
 
-![Image](image_d4087a1d4b09.png)
+![Image](image_3b51172d7152.png)
 
 > 첫 번째는 '브리지' 방식입니다. 이건 마치 가상 컴퓨터들이 실제 네트워크에 직접 연결된 것처럼 작동해요. 여러 컴퓨터를 하나의 인터넷 선에 연결하는 것과 비슷하죠.
 
@@ -37,7 +37,7 @@ notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e
 
 ### 라우팅 구성
 
-![Image](image_383d05f264a9.png)
+![Image](image_6611b0c2bffa.png)
 
 > 하지만 때로는 브리지 방식을 쓸 수 없을 때가 있어요. 일부 서비스에서는 하나의 네트워크 연결에 여러 IP 주소를 사용하는 것을 막기 때문이죠.
 
@@ -53,7 +53,7 @@ notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e
 
 ### NAT 구성
 
-![Image](image_a198e5e5b885.png)
+![Image](image_3df703a7d665.png)
 
 - NAT를 사용하면 가상 머신이 내부 IP 주소를 써도 호스트 컴퓨터의 IP를 통해 외부 인터넷을 사용할 수 있습니다.
 - 방화벽 설정에 따라 추가로 conntrack 설정이 필요할 수 있습니다.
@@ -80,7 +80,7 @@ NAT는 내부 IP를 사용하면서 호스트 컴퓨터의 IP를 통해 인터�
 
 ## Linux Bond
 
-![Image](image_2e4f8f25ff75.png)
+![Image](image_791b031f4a81.png)
 
 > “결론적으로, 본딩은 여러 네트워크 포트를 묶어서 속도도 올리고, 하나가 고장 나도 통신이 끊기지 않도록 해주는 기술이다.”
 

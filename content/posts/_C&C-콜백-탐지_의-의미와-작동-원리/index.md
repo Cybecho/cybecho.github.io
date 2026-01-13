@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/C-C-2961bab9e3f8802594f8f4f4a3edd021"
 
 ---
 
-![Image](image_060ec2280010.png)
+![Image](image_01ffd67785f2.png)
 
 ## "C&C 콜백 탐지"의 의미와 작동 원리
 

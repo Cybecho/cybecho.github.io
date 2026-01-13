@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MCP-Perflexity-API-2301bab9e3f88051aee6c038ca
 
 ---
 
-![Image](image_d09091ea60c1.png)
+![Image](image_2e1cbd5f2ad9.png)
 
 🔗 [https://chatgpt.com/share/687513b3-8b8c-8007-acfb-610c80d0d032](https://chatgpt.com/share/687513b3-8b8c-8007-acfb-610c80d0d032)
 

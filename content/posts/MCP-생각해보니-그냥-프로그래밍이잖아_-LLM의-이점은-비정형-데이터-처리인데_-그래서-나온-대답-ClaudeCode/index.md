@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MCP-LLM-ClaudeCode-2cc1bab9e3f8810c8605eabc80
 
 ---
 
-![Image](image_0a88e82b88ee.png)
+![Image](image_74a3a1a6e3f8.png)
 
 ## MCP에서 클로드 스킬로: 프로토콜에서 자연어로의 회귀
 

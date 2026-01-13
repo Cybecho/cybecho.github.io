@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/mtr-VPN-VPN-1d01bab9e3f8804f835ce5b3f0c6d9e4"
 
 ---
 
-![Image](image_4011dcc140b8.png)
+![Image](image_bc1dfab08ff3.png)
 
 AWS에서 VPN을 구축해보면서, mtr로 다른 VPC로 ping 홉 따라가보니 인스턴스 사이에 홉이 안보였음
 
@@ -37,13 +37,13 @@ AWS에서 VPN을 구축해보면서, mtr로 다른 VPC로 ping 홉 따라가보�
 
 ### 8.8.8.8 외부 네트워크로 나가보자~
 
-![Image](image_9beb8b883795.png)
+![Image](image_c6270a1883e7.png)
 
 ### Tailscale VPN (외부) 네트워크로 가보자~
 
-![Image](image_72c0852c3095.png)
+![Image](image_625526048e05.png)
 
 ### Tailscale VPN (내부) 네트워크로 가보자~
 
-![Image](image_f3822433aab8.png)
+![Image](image_0edccdafd6e2.png)
 

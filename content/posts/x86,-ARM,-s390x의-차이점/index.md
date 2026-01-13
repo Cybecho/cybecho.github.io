@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/x86-ARM-s390x-1a41bab9e3f8808e820ceb348ce6fdb
 
 ---
 
-![Image](image_17fcfb7ba19b.png)
+![Image](image_00ea8e36e3d6.png)
 
 ### x86, ARM, s390x의 차이점
 

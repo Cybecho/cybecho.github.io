@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Yabai-i3-8cb7c4ceb63f4193b5b3ff9863070628"
 
 ---
 
-![Image](image_a87424ead44c.png)
+![Image](image_e63ea915b54a.png)
 
 
 

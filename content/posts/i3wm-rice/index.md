@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/i3wm-rice-0a926befb69449a9a4d1618d38822f49"
 
 ---
 
-![Image](image_f88fd549d86b.png)
+![Image](image_ace351eed8ff.png)
 
 🔗 [https://www.youtube.com/watch?v=6xqjA6vhqR8](https://www.youtube.com/watch?v=6xqjA6vhqR8)
 

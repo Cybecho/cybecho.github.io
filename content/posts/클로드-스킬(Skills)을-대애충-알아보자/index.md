@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Skills-2931bab9e3f880099a8cf666031c9e87"
 
 ---
 
-![Image](image_289f8d50635e.png)
+![Image](image_5357dbf3c8a6.png)
 
 [https://youtu.be/vqLONWXfMsI?si=5Rf5G8EM6hJs03fG](https://youtu.be/vqLONWXfMsI?si=5Rf5G8EM6hJs03fG)
 

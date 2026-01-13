@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/NetApp-ONTAP-2141bab9e3f880ed9387eb558dc98303
 
 ---
 
-![Image](image_b09530ce6b42.png)
+![Image](image_bdd1c8d69f8d.png)
 
 # 레이드카드와 NetApp ONTAP에대한 이야기
 
