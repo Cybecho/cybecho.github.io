@@ -4,7 +4,7 @@ date: 2025-03-05T06:41:00.000Z
 draft: false
 tags: ["쿠버네티스"]
 series: ["Infra & Network"]
-description: "Cilium은 쿠버네티스에서 컨테이너 간의 네트워크 통신을 관리하는 도구로, eBPF 기술을 사용하여 빠르고 세밀한 네트워크 관리가 가능합니다. eBPF는 리눅스 커널에서 작동하며, 네트워크 데이터 처리, 보안 감시, 시스템 성능 확인을 실시간으로 가능하게 합니다. Cilium은 이러한 eBPF 덕분에 빠른 네트워크 속도와 안전한 네트워크 감시를 제공합니다."
+description: "Cilium은 쿠버네티스에서 컨테이너 간의 네트워크 통신을 관리하는 도구로, eBPF 기술을 활용하여 빠르고 안전한 네트워크 관리를 가능하게 합니다. eBPF는 리눅스 커널에서 실행되는 프로그램으로, 네트워크 속도 향상, 세밀한 규칙 설정, 실시간 보안 감시 등의 이점을 제공합니다. Cilium 덕분에 효율적인 트래픽 관리가 가능해집니다."
 notion_id: "1ad1bab9-e3f8-801e-ae18-c2c7baf2b9db"
 notion_url: "https://www.notion.so/Cilium-eBPF-1ad1bab9e3f8801eae18c2c7baf2b9db"
 ---
@@ -12,9 +12,11 @@ notion_url: "https://www.notion.so/Cilium-eBPF-1ad1bab9e3f8801eae18c2c7baf2b9db"
 # Cilium & eBPF 관계
 
 > **Summary**
-> Cilium은 쿠버네티스에서 컨테이너 간의 네트워크 통신을 관리하는 도구로, eBPF 기술을 사용하여 빠르고 세밀한 네트워크 관리가 가능합니다. eBPF는 리눅스 커널에서 작동하며, 네트워크 데이터 처리, 보안 감시, 시스템 성능 확인을 실시간으로 가능하게 합니다. Cilium은 이러한 eBPF 덕분에 빠른 네트워크 속도와 안전한 네트워크 감시를 제공합니다.
+> Cilium은 쿠버네티스에서 컨테이너 간의 네트워크 통신을 관리하는 도구로, eBPF 기술을 활용하여 빠르고 안전한 네트워크 관리를 가능하게 합니다. eBPF는 리눅스 커널에서 실행되는 프로그램으로, 네트워크 속도 향상, 세밀한 규칙 설정, 실시간 보안 감시 등의 이점을 제공합니다. Cilium 덕분에 효율적인 트래픽 관리가 가능해집니다.
 
 ---
+
+![Image](image_9d0280414c64.png)
 
 ```bash
 쿠버네티스에서 eBPF때문에 cilium? 이 많이 쓰인다는데, 

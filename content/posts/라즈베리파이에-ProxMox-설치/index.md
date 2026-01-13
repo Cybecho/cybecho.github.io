@@ -4,7 +4,7 @@ date: 2025-03-05T15:19:00.000Z
 draft: false
 tags: ["ProxMox"]
 series: ["Let's Homelab!"]
-description: "라즈베리파이에 Proxmox를 설치하는 방법을 설명하며, 시스템 준비, 컴퓨터 이름 설정, 관리자 비밀번호 생성, Pimox 설치 및 재부팅 과정을 포함합니다. 설치 후 웹 브라우저를 통해 Proxmox에 접근할 수 있으며, 실험 단계이므로 중요한 작업에는 사용하지 않는 것이 좋습니다."
+description: "라즈베리파이에 Proxmox를 설치하는 방법을 설명하며, 시스템 준비, 컴퓨터 이름 설정, 관리자 비밀번호 생성, Pimox 설치 및 재부팅 단계를 포함합니다. 설치 후 웹 브라우저를 통해 Proxmox에 접근할 수 있으며, 현재 실험 단계이므로 중요한 작업에는 사용하지 않는 것이 좋습니다."
 notion_id: "1ad1bab9-e3f8-8097-b72c-f26d7149316e"
 notion_url: "https://www.notion.so/ProxMox-1ad1bab9e3f88097b72cf26d7149316e"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/ProxMox-1ad1bab9e3f88097b72cf26d7149316e"
 # 라즈베리파이에 ProxMox 설치
 
 > **Summary**
-> 라즈베리파이에 Proxmox를 설치하는 방법을 설명하며, 시스템 준비, 컴퓨터 이름 설정, 관리자 비밀번호 생성, Pimox 설치 및 재부팅 과정을 포함합니다. 설치 후 웹 브라우저를 통해 Proxmox에 접근할 수 있으며, 실험 단계이므로 중요한 작업에는 사용하지 않는 것이 좋습니다.
+> 라즈베리파이에 Proxmox를 설치하는 방법을 설명하며, 시스템 준비, 컴퓨터 이름 설정, 관리자 비밀번호 생성, Pimox 설치 및 재부팅 단계를 포함합니다. 설치 후 웹 브라우저를 통해 Proxmox에 접근할 수 있으며, 현재 실험 단계이므로 중요한 작업에는 사용하지 않는 것이 좋습니다.
 
 ---
 
@@ -20,9 +20,9 @@ notion_url: "https://www.notion.so/ProxMox-1ad1bab9e3f88097b72cf26d7149316e"
 
 🔗 [https://github.com/pimox/pimox7](https://github.com/pimox/pimox7)
 
-![Image](image_199bac6df15c.png)
+![Image](image_af073d9d6105.png)
 
-![Image](image_8f145c43a7c2.png)
+![Image](image_6421697f7ea3.png)
 
 라즈베리파이 4B에 Proxmox를 설치하는 방법을 알아보겠습니다. 먼저 환경을 설명하자면, 라즈베리파이에는 64비트 우분투 라이트가 설치되어 있고 IP 주소는 192.168.45.42입니다.
 

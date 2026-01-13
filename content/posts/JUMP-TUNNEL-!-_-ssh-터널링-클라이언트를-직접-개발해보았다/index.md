@@ -4,7 +4,7 @@ date: 2025-03-15T04:16:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Infra & Network"]
-description: "Jump Tunnel은 SSH 터널링의 복잡성을 단순화하기 위해 개발된 GUI 프로그램으로, Bastion Host를 통해 내부망을 안전하게 보호하고 ProxyJump 기능을 활용하여 여러 서버에 쉽게 접근할 수 있도록 해줍니다. 사용자는 마스터 계정과 키를 통해 관리 효율성을 높일 수 있으며, 간편한 설정 자동화로 SSH 터널링을 쉽게 이해하고 적용할 수 있습니다."
+description: "Jump Tunnel은 SSH 터널링을 단순화하기 위해 개발된 GUI 프로그램으로, Bastion Host를 통해 내부망을 안전하게 보호하고 ProxyJump 기능을 활용하여 복잡한 SSH 연결을 간소화합니다. 사용자는 공통 계정과 키를 통해 여러 서버에 쉽게 접근할 수 있으며, 자동화된 설정으로 사용자 편의성을 높였습니다."
 notion_id: "1b71bab9-e3f8-8022-849f-ce52c62d729e"
 notion_url: "https://www.notion.so/JUMP-TUNNEL-ssh-1b71bab9e3f88022849fce52c62d729e"
 ---
@@ -12,11 +12,13 @@ notion_url: "https://www.notion.so/JUMP-TUNNEL-ssh-1b71bab9e3f88022849fce52c62d7
 # JUMP TUNNEL ! : ssh 터널링 클라이언트를 직접 개발해보았다
 
 > **Summary**
-> Jump Tunnel은 SSH 터널링의 복잡성을 단순화하기 위해 개발된 GUI 프로그램으로, Bastion Host를 통해 내부망을 안전하게 보호하고 ProxyJump 기능을 활용하여 여러 서버에 쉽게 접근할 수 있도록 해줍니다. 사용자는 마스터 계정과 키를 통해 관리 효율성을 높일 수 있으며, 간편한 설정 자동화로 SSH 터널링을 쉽게 이해하고 적용할 수 있습니다.
+> Jump Tunnel은 SSH 터널링을 단순화하기 위해 개발된 GUI 프로그램으로, Bastion Host를 통해 내부망을 안전하게 보호하고 ProxyJump 기능을 활용하여 복잡한 SSH 연결을 간소화합니다. 사용자는 공통 계정과 키를 통해 여러 서버에 쉽게 접근할 수 있으며, 자동화된 설정으로 사용자 편의성을 높였습니다.
 
 ---
 
-![Image](image_532ccde6351a.png)
+![Image](image_d3355a9b1e44.png)
+
+![Image](image_2c44a47cf29f.png)
 
 🔗 [https://github.com/Cybecho/JumpTunnel](https://github.com/Cybecho/JumpTunnel)
 

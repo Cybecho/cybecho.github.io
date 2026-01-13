@@ -4,7 +4,7 @@ date: 2025-03-05T08:36:00.000Z
 draft: false
 tags: ["ProxMox"]
 series: ["Infra & Network", "Let's Homelab!"]
-description: "Proxmox에서 VM을 생성하면 기본적으로 Bridge 모드로 설정되며, 이를 통해 VM들이 인터넷을 사용할 수 있다. 특정 VM들끼리만 통신할 수 있는 독립된 네트워크를 만들기 위해서는 새로운 브리지를 생성하거나 VLAN, Open vSwitch를 사용할 수 있다."
+description: "Proxmox에서 VM을 생성하면 기본적으로 Bridge 모드로 설정되며, "
 notion_id: "1ad1bab9-e3f8-80a3-9495-f8ed670086fa"
 notion_url: "https://www.notion.so/ProxMox-1ad1bab9e3f880a39495f8ed670086fa"
 ---
@@ -12,9 +12,11 @@ notion_url: "https://www.notion.so/ProxMox-1ad1bab9e3f880a39495f8ed670086fa"
 # ProxMox 네트워크 모드 - 디폴트 설정과 폐쇄망 만드는 방법
 
 > **Summary**
-> Proxmox에서 VM을 생성하면 기본적으로 Bridge 모드로 설정되며, 이를 통해 VM들이 인터넷을 사용할 수 있다. 특정 VM들끼리만 통신할 수 있는 독립된 네트워크를 만들기 위해서는 새로운 브리지를 생성하거나 VLAN, Open vSwitch를 사용할 수 있다.
+> Proxmox에서 VM을 생성하면 기본적으로 Bridge 모드로 설정되며, 
 
 ---
+
+![Image](image_d6afbd9f21d1.png)
 
 [https://pve.proxmox.com/wiki/Network_Configuration](https://pve.proxmox.com/wiki/Network_Configuration)
 
