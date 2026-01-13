@@ -2,14 +2,11 @@ const { Client } = require('@notionhq/client');
 const fs = require('fs');
 const crypto = require('crypto');
 const https = require('https');
-const http = require('http');
 const path = require('path');
-const sharp = require('sharp');
 
 const notion = new Client({ auth: process.env.NOTION_SECRET });
 const CACHE_FILE = 'notion_cache.json';
 const GIT_CACHE_FILE = '.notion_cache_git.json'; // Git에 저장될 캐시
-const URL_TITLE_CACHE_FILE = '.url_title_cache.json'; // URL 제목 캐시
 
 function loadCache() {
   try {
@@ -42,133 +39,9 @@ function saveCache(cache) {
   }
 }
 
-// URL 제목 캐시 관리
-function loadUrlTitleCache() {
-  try {
-    if (fs.existsSync(URL_TITLE_CACHE_FILE)) {
-      const cache = JSON.parse(fs.readFileSync(URL_TITLE_CACHE_FILE, 'utf8'));
-      console.log('Loaded URL title cache with', Object.keys(cache).length, 'entries');
-      return cache;
-    }
-  } catch (error) {
-    console.log('URL title cache load error:', error.message);
-  }
-  return {};
-}
-
-function saveUrlTitleCache(cache) {
-  try {
-    fs.writeFileSync(URL_TITLE_CACHE_FILE, JSON.stringify(cache, null, 2));
-  } catch (error) {
-    console.error('URL title cache save error:', error.message);
-  }
-}
-
-// URL에서 페이지 제목 추출
-async function fetchPageTitle(url) {
-  // 캐시에서 먼저 확인
-  const cache = loadUrlTitleCache();
-  if (cache[url]) {
-    console.log('📦 Using cached title for:', url);
-    return cache[url];
-  }
-
-  return new Promise((resolve, reject) => {
-    try {
-      const urlObj = new URL(url);
-      const protocol = urlObj.protocol === 'https:' ? https : http;
-
-      const options = {
-        hostname: urlObj.hostname,
-        path: urlObj.pathname + urlObj.search,
-        method: 'GET',
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; NotionSync/1.0)',
-          'Accept': 'text/html,application/xhtml+xml',
-          'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7'
-        },
-        timeout: 10000 // 10 seconds timeout
-      };
-
-      const req = protocol.request(options, (res) => {
-        // Handle redirects
-        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-          console.log('🔄 Redirecting to:', res.headers.location);
-          fetchPageTitle(res.headers.location).then(resolve).catch(reject);
-          return;
-        }
-
-        if (res.statusCode !== 200) {
-          console.warn(`⚠️ HTTP ${res.statusCode} for ${url}`);
-          resolve(null);
-          return;
-        }
-
-        let html = '';
-        res.setEncoding('utf8');
-
-        res.on('data', (chunk) => {
-          html += chunk;
-          // Early termination if we found the title
-          if (html.includes('</title>')) {
-            res.destroy(); // Stop receiving data
-          }
-        });
-
-        res.on('end', () => {
-          try {
-            // Extract title from HTML
-            const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
-            if (titleMatch && titleMatch[1]) {
-              let title = titleMatch[1]
-                .trim()
-                .replace(/\s+/g, ' ')
-                .replace(/&amp;/g, '&')
-                .replace(/&lt;/g, '<')
-                .replace(/&gt;/g, '>')
-                .replace(/&quot;/g, '"')
-                .replace(/&#039;/g, "'");
-
-              console.log('✅ Fetched title:', title);
-
-              // Save to cache
-              cache[url] = title;
-              saveUrlTitleCache(cache);
-
-              resolve(title);
-            } else {
-              console.warn('⚠️ No title found for:', url);
-              resolve(null);
-            }
-          } catch (error) {
-            console.error('❌ Error parsing HTML:', error.message);
-            resolve(null);
-          }
-        });
-      });
-
-      req.on('error', (error) => {
-        console.error('❌ Request error for', url, ':', error.message);
-        resolve(null); // Resolve with null instead of reject
-      });
-
-      req.on('timeout', () => {
-        console.error('❌ Request timeout for:', url);
-        req.destroy();
-        resolve(null);
-      });
-
-      req.end();
-    } catch (error) {
-      console.error('❌ Invalid URL:', url, error.message);
-      resolve(null);
-    }
-  });
-}
-
 function createSafeYamlString(str) {
   if (!str) return '""';
-
+  
   let safe = str
     .replace(/\\/g, '\\\\')
     .replace(/"/g, '\\"')
@@ -176,7 +49,7 @@ function createSafeYamlString(str) {
     .replace(/\r/g, ' ')
     .replace(/\t/g, ' ')
     .replace(/[\x00-\x1f\x7f-\x9f]/g, '');
-
+  
   return `"${safe}"`;
 }
 
@@ -188,7 +61,7 @@ function formatDate(dateString) {
 // 🎯 제목 완전 보존을 위한 새로운 슬러그 생성
 function createSlug(title) {
   const hash = crypto.createHash('md5').update(title).digest('hex').substring(0, 8);
-
+  
   let slug = title
     .trim()
     // 파일시스템 위험 문자만 교체 (나머지는 모두 보존)
@@ -196,68 +69,37 @@ function createSlug(title) {
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '');
-
+  
   // 빈 슬러그나 너무 긴 경우 처리
   if (!slug) {
     slug = 'post-' + hash;
   } else if (slug.length > 100) {
     slug = slug.substring(0, 90) + '-' + hash;
   }
-
+  
   return slug;
 }
 
-// 이미지 다운로드 및 리사이징 함수
+// 이미지 다운로드 함수
 async function downloadImage(imageUrl, imagePath) {
   return new Promise((resolve, reject) => {
-    const tempPath = imagePath + '.tmp';
-    const file = fs.createWriteStream(tempPath);
-
+    const file = fs.createWriteStream(imagePath);
+    
     https.get(imageUrl, (response) => {
       if (response.statusCode !== 200) {
         reject(new Error(`HTTP ${response.statusCode}: ${response.statusMessage}`));
         return;
       }
-
+      
       response.pipe(file);
-
-      file.on('finish', async () => {
+      
+      file.on('finish', () => {
         file.close();
-
-        try {
-          // sharp로 이미지 메타데이터 읽기
-          const metadata = await sharp(tempPath).metadata();
-
-          // 이미지 너비가 900px를 초과하면 리사이징
-          if (metadata.width > 900) {
-            console.log(`Resizing image from ${metadata.width}px to 900px: ${path.basename(imagePath)}`);
-
-            await sharp(tempPath)
-              .resize({
-                width: 900,
-                fit: 'inside',
-                withoutEnlargement: true
-              })
-              .toFile(imagePath);
-
-            // 임시 파일 삭제
-            fs.unlinkSync(tempPath);
-          } else {
-            // 리사이징 불필요 - 임시 파일을 최종 파일로 이동
-            fs.renameSync(tempPath, imagePath);
-          }
-
-          resolve(imagePath);
-        } catch (err) {
-          // sharp 처리 실패시 원본 유지
-          console.warn('Image resize failed, using original:', err.message);
-          fs.renameSync(tempPath, imagePath);
-          resolve(imagePath);
-        }
+        resolve(imagePath);
       });
-
+      
       file.on('error', (err) => {
-        fs.unlink(tempPath, () => { }); // 실패시 파일 삭제
+        fs.unlink(imagePath, () => {}); // 실패시 파일 삭제
         reject(err);
       });
     }).on('error', (err) => {
@@ -269,29 +111,12 @@ async function downloadImage(imageUrl, imagePath) {
 // 이미지 파일명 생성 함수
 function createImageFilename(imageUrl) {
   const urlHash = crypto.createHash('md5').update(imageUrl).digest('hex').substring(0, 12);
-  const extension = imageUrl.includes('.png') ? '.png' :
-    imageUrl.includes('.jpg') ? '.jpg' :
-      imageUrl.includes('.jpeg') ? '.jpeg' :
-        imageUrl.includes('.gif') ? '.gif' :
-          imageUrl.includes('.webp') ? '.webp' : '.png';
+  const extension = imageUrl.includes('.png') ? '.png' : 
+                   imageUrl.includes('.jpg') ? '.jpg' : 
+                   imageUrl.includes('.jpeg') ? '.jpeg' : 
+                   imageUrl.includes('.gif') ? '.gif' : 
+                   imageUrl.includes('.webp') ? '.webp' : '.png';
   return `image_${urlHash}${extension}`;
-}
-
-// 긴 URL에 <wbr> 태그 삽입하는 함수
-function addWordBreaksToUrl(url) {
-  // 40자 미만의 짧은 URL은 그대로 반환
-  if (url.length < 40) {
-    return url;
-  }
-
-  // URL의 구분자 뒤에 <wbr> 삽입
-  return url
-    .replace(/\//g, '/<wbr>')
-    .replace(/\?/g, '?<wbr>')
-    .replace(/&/g, '&<wbr>')
-    .replace(/=/g, '=<wbr>')
-    .replace(/-/g, '-<wbr>')
-    .replace(/_/g, '_<wbr>');
 }
 
 function convertRichText(richTextArray) {
@@ -303,15 +128,7 @@ function convertRichText(richTextArray) {
     if (textObj.annotations?.code) text = '`' + text + '`';
     if (textObj.annotations?.strikethrough) text = `~~${text}~~`;
     if (textObj.annotations?.underline) text = `<u>${text}</u>`;
-    if (textObj.href) {
-      // 긴 URL에 <wbr> 태그 추가
-      const processedUrl = addWordBreaksToUrl(textObj.href);
-      text = `[${text}](${processedUrl})`;
-    }
-    // Handle inline equations
-    if (textObj.type === 'equation') {
-      text = `$${textObj.equation?.expression || text}$`;
-    }
+    if (textObj.href) text = `[${text}](${textObj.href})`;
     return text;
   }).join('');
 }
@@ -320,84 +137,88 @@ function convertRichText(richTextArray) {
 async function convertTableToMarkdown(tableBlock) {
   try {
     console.log('🔍 Processing table block:', tableBlock.id);
-
+    
     // 1. Table 메타데이터 추출
     const tableWidth = tableBlock.table?.table_width || 0;
     const hasColumnHeader = tableBlock.table?.has_column_header || false;
-
+    
     console.log(`📊 Table info: ${tableWidth} columns, header: ${hasColumnHeader}`);
-
+    
     if (tableWidth === 0) {
       console.warn('⚠️ Table has no columns, skipping');
       return '';
     }
-
+    
     // 2. Table의 children (table_row 블록들) 가져오기
     const rowsResponse = await notion.blocks.children.list({
       block_id: tableBlock.id,
       page_size: 100
     });
-
+    
     const tableRows = rowsResponse.results.filter(block => block.type === 'table_row');
     console.log(`📋 Found ${tableRows.length} table rows`);
-
+    
     if (tableRows.length === 0) {
       console.warn('⚠️ Table has no rows, skipping');
       return '';
     }
-
+    
     // 3. 각 row의 cells를 텍스트로 변환
     const processedRows = tableRows.map((row, rowIndex) => {
       const cells = row.table_row?.cells || [];
-
+      
       // 각 셀의 rich_text 배열을 문자열로 변환
       const cellTexts = cells.map((cell, cellIndex) => {
         if (!Array.isArray(cell)) {
           console.warn(`⚠️ Invalid cell at row ${rowIndex}, col ${cellIndex}`);
           return '';
         }
-
+        
         // 셀 내용이 rich_text 배열이므로 convertRichText 사용
         const cellContent = convertRichText(cell);
-
+        
         // Markdown 테이블에서 파이프 문자 이스케이프
         return cellContent.replace(/\|/g, '\\|').trim() || ' ';
       });
-
+      
       // table_width만큼 셀이 없으면 빈 셀로 채우기
       while (cellTexts.length < tableWidth) {
         cellTexts.push(' ');
       }
-
+      
       return cellTexts.slice(0, tableWidth); // 너무 많은 셀 제거
     });
-
+    
     // 4. Markdown 테이블 형식으로 변환
     let markdownTable = '';
-
-    if (processedRows.length > 0) {
-      // 헤더 여부와 관계없이 항상 첫 번째 줄을 헤더로 처리하여 Markdown 테이블 문법 준수
-      // Notion에서 헤더가 없더라도 Markdown은 구분선이 필수임
+    
+    if (hasColumnHeader && processedRows.length > 0) {
+      // 헤더 row 처리
       const headerRow = processedRows[0];
       markdownTable += '| ' + headerRow.join(' | ') + ' |\n';
-
+      
       // 구분선 생성
       const separator = headerRow.map(() => '---');
       markdownTable += '| ' + separator.join(' | ') + ' |\n';
-
+      
       // 나머지 데이터 rows 처리
       for (let i = 1; i < processedRows.length; i++) {
         const row = processedRows[i];
         markdownTable += '| ' + row.join(' | ') + ' |\n';
       }
+    } else {
+      // 헤더 없는 테이블 - 모든 row를 데이터로 처리
+      processedRows.forEach(row => {
+        markdownTable += '| ' + row.join(' | ') + ' |\n';
+      });
     }
-
+    
     console.log(`✅ Successfully converted table with ${processedRows.length} rows`);
     return markdownTable + '\n';
-
+    
   } catch (error) {
     console.error('❌ Error converting table:', error.message);
-
+    
     // Fallback: 테이블 변환 실패시 플레이스홀더 반환
     return `\n> 📊 **Table** (변환 중 오류 발생)\n> *이 테이블은 Notion에서 직접 확인해 주세요.*\n\n`;
   }
@@ -412,10 +233,36 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
 
     let content = '';
     const indent = '  '.repeat(indentLevel); // 들여쓰기용 공백
-
+    
     for (const block of blocks.results) {
-
-
+      // 디버깅: 블록 구조 로깅
+      if (block.type === 'toggle' || block.type === 'heading_1' || block.type === 'heading_2' || block.type === 'heading_3') {
+        console.log(`\n=== DEBUG BLOCK ===`);
+        console.log(`Type: ${block.type}`);
+        console.log(`Has children: ${block.has_children}`);
+        console.log(`Block ID: ${block.id}`);
+        
+        if (block.toggle) {
+          console.log(`Toggle text: "${convertRichText(block.toggle.rich_text)}"`);
+        }
+        if (block.heading_1) {
+          console.log(`H1 text: "${convertRichText(block.heading_1.rich_text)}"`);
+          console.log(`H1 is_toggleable: ${block.heading_1.is_toggleable}`);
+        }
+        if (block.heading_2) {
+          console.log(`H2 text: "${convertRichText(block.heading_2.rich_text)}"`);
+          console.log(`H2 is_toggleable: ${block.heading_2.is_toggleable}`);
+        }
+        if (block.heading_3) {
+          console.log(`H3 text: "${convertRichText(block.heading_3.rich_text)}"`);
+          console.log(`H3 is_toggleable: ${block.heading_3.is_toggleable}`);
+        }
+        
+        // 전체 블록 구조 출력 (JSON)
+        console.log(`Raw block:`, JSON.stringify(block, null, 2));
+        console.log(`===================\n`);
+      }
+      
       switch (block.type) {
         case 'paragraph':
           if (block.paragraph?.rich_text?.length > 0) {
@@ -424,12 +271,12 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             content += '\n';
           }
           break;
-
+          
         case 'heading_1':
           if (block.heading_1?.rich_text?.length > 0) {
             const headingText = convertRichText(block.heading_1.rich_text);
             content += '# ' + headingText + '\n\n';
-
+            
             // 제목 토글인지 확인 (is_toggleable 속성)
             if (block.heading_1.is_toggleable && block.has_children) {
               console.log(`🔍 Found H1 toggle: "${headingText}"`);
@@ -440,12 +287,12 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             }
           }
           break;
-
+          
         case 'heading_2':
           if (block.heading_2?.rich_text?.length > 0) {
             const headingText = convertRichText(block.heading_2.rich_text);
             content += '## ' + headingText + '\n\n';
-
+            
             // 제목 토글인지 확인 (is_toggleable 속성)
             if (block.heading_2.is_toggleable && block.has_children) {
               console.log(`🔍 Found H2 toggle: "${headingText}"`);
@@ -456,12 +303,12 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             }
           }
           break;
-
+          
         case 'heading_3':
           if (block.heading_3?.rich_text?.length > 0) {
             const headingText = convertRichText(block.heading_3.rich_text);
             content += '### ' + headingText + '\n\n';
-
+            
             // 제목 토글인지 확인 (is_toggleable 속성)
             if (block.heading_3.is_toggleable && block.has_children) {
               console.log(`🔍 Found H3 toggle: "${headingText}"`);
@@ -472,11 +319,11 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             }
           }
           break;
-
+          
         case 'bulleted_list_item':
           if (block.bulleted_list_item?.rich_text?.length > 0) {
             content += indent + '- ' + convertRichText(block.bulleted_list_item.rich_text) + '\n';
-
+            
             // 중첩된 불릿포인트 처리
             if (block.has_children) {
               const childContent = await convertBlocks(block.id, postDir, indentLevel + 1);
@@ -484,11 +331,11 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             }
           }
           break;
-
+          
         case 'numbered_list_item':
           if (block.numbered_list_item?.rich_text?.length > 0) {
             content += indent + '1. ' + convertRichText(block.numbered_list_item.rich_text) + '\n';
-
+            
             // 중첩된 번호 목록 처리
             if (block.has_children) {
               const childContent = await convertBlocks(block.id, postDir, indentLevel + 1);
@@ -496,26 +343,26 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             }
           }
           break;
-
+          
         case 'toggle':
           if (block.toggle?.rich_text?.length > 0) {
             const toggleText = convertRichText(block.toggle.rich_text);
-
+            
             // 제목 토글 패턴 확인 (다양한 형태의 제목 토글 지원)
             // 패턴: "## >> 제목", "### >>>> 제목", "# > 제목" 등
-            const headingToggleMatch = toggleText.match(/^(#{1,6})\s*>+\s*(.+)/) ||
-              toggleText.match(/^(#{1,6})\s+(.+)/);
-
+            const headingToggleMatch = toggleText.match(/^(#{1,6})\s*>+\s*(.+)/) || 
+                                     toggleText.match(/^(#{1,6})\s+(.+)/);
+            
             if (headingToggleMatch) {
               // 제목 토글의 경우: 제목으로 변환하고 내부 콘텐츠 포함
               const headingLevel = headingToggleMatch[1]; // #, ##, ### 등
               const headingTitle = headingToggleMatch[2].trim();
-
+              
               console.log(`Converting heading toggle: "${toggleText}" → "${headingLevel} ${headingTitle}"`);
-
+              
               // 제목 출력
               content += headingLevel + ' ' + headingTitle + '\n\n';
-
+              
               // 🔥 핵심: 제목 토글 내부 컨텐츠를 반드시 포함
               if (block.has_children) {
                 console.log(`Processing children for heading toggle: ${headingTitle}`);
@@ -527,22 +374,22 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             } else {
               // 일반 토글의 경우: details/summary 태그 사용
               content += '<details>\n<summary>' + toggleText + '</summary>\n\n';
-
+              
               if (block.has_children) {
                 const childContent = await convertBlocks(block.id, postDir, 0);
                 content += childContent;
               }
-
+              
               content += '</details>\n\n';
             }
           }
           break;
-
+          
         case 'code':
           if (block.code?.rich_text?.length > 0) {
             const language = block.code.language || '';
             const codeText = convertRichText(block.code.rich_text);
-
+            
             // Mermaid 코드블록인지 확인
             if (language.toLowerCase() === 'mermaid') {
               content += '```mermaid\n' + codeText + '\n```\n\n';
@@ -551,52 +398,52 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             }
           }
           break;
-
+          
         case 'quote':
           if (block.quote?.rich_text?.length > 0) {
             content += '> ' + convertRichText(block.quote.rich_text) + '\n\n';
           }
           break;
-
+          
         case 'callout':
           if (block.callout?.rich_text?.length > 0) {
             const icon = block.callout.icon?.emoji || '💡';
             const calloutText = convertRichText(block.callout.rich_text);
             content += '> ' + icon + ' **' + calloutText + '**\n';
-
+            
             // Callout 내부 컨텐츠 처리
             if (block.has_children) {
               const childContent = await convertBlocks(block.id, postDir, 0);
               // callout 내부 컨텐츠를 인용구 형태로 변환
-              const quotedChildContent = childContent.split('\n').map(line =>
+              const quotedChildContent = childContent.split('\n').map(line => 
                 line.trim() ? '> ' + line : '>'
               ).join('\n');
               content += quotedChildContent + '\n';
             }
-
+            
             content += '\n';
           }
           break;
-
+          
         case 'divider':
           content += '---\n\n';
           break;
-
+          
         case 'image':
           if (block.image?.file?.url || block.image?.external?.url) {
             const imageUrl = block.image.file?.url || block.image.external?.url;
-
+            
             try {
               // 이미지 다운로드 및 로컬 저장
               const imageFilename = createImageFilename(imageUrl);
               const imagePath = path.join(postDir, imageFilename);
-
+              
               // 이미지가 이미 존재하지 않으면 다운로드
               if (!fs.existsSync(imagePath)) {
                 console.log('Downloading image:', imageFilename);
                 await downloadImage(imageUrl, imagePath);
               }
-
+              
               // 상대 경로로 마크다운에 추가
               content += '![Image](' + imageFilename + ')\n\n';
             } catch (error) {
@@ -606,36 +453,21 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             }
           }
           break;
-
+          
         case 'video':
           if (block.video?.external?.url) {
-            content += '[' + block.video.external.url + '](' + block.video.external.url + ')\n\n';
+            content += '🎥 [동영상 보기](' + block.video.external.url + ')\n\n';
           }
           break;
-
-        case 'equation':
-          if (block.equation?.expression) {
-            content += '$$ ' + block.equation.expression + ' $$\n\n';
-          }
-          break;
-
+          
         case 'bookmark':
         case 'link_preview':
           const bookmarkUrl = block.bookmark?.url || block.link_preview?.url;
           if (bookmarkUrl) {
-            // Try to fetch page title
-            console.log('🔗 Processing bookmark:', bookmarkUrl);
-            const pageTitle = await fetchPageTitle(bookmarkUrl);
-
-            if (pageTitle) {
-              content += '[' + pageTitle + '](' + bookmarkUrl + ')\n\n';
-            } else {
-              // Fallback to URL if title fetch fails
-              content += '[' + bookmarkUrl + '](' + bookmarkUrl + ')\n\n';
-            }
+            content += '🔗 [' + bookmarkUrl + '](' + bookmarkUrl + ')\n\n';
           }
           break;
-
+          
         case 'table':
           console.log('📊 Found table block, processing...');
           try {
@@ -652,18 +484,18 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             // Fallback for failed table processing
             content += '\n> 📊 **Table** (처리 중 오류 발생)\n> *이 테이블은 Notion에서 직접 확인해 주세요.*\n\n';
           }
-
+          
           // Table 처리 후 짧은 지연 (API 속도 제한 고려)
           await new Promise(resolve => setTimeout(resolve, 100));
           break;
-
+          
         case 'to_do':
           if (block.to_do?.rich_text?.length > 0) {
             const isChecked = block.to_do.checked || false;
             const todoText = convertRichText(block.to_do.rich_text);
             const checkbox = isChecked ? '[x]' : '[ ]';
             content += '- ' + checkbox + ' ' + todoText + '\n';
-
+            
             // 중첩된 to-do 처리
             if (block.has_children) {
               const childContent = await convertBlocks(block.id, postDir, indentLevel + 1);
@@ -671,17 +503,17 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             }
           }
           break;
-
+          
         case 'child_page':
           if (block.child_page?.title) {
             content += '📄 **[' + block.child_page.title + ']**\n\n';
           }
           break;
       }
-
+      
       await new Promise(resolve => setTimeout(resolve, 20));
     }
-
+    
     return content;
   } catch (error) {
     console.error('Error converting blocks:', error.message);
@@ -712,18 +544,13 @@ async function getAllPages() {
       nextCursor = response.next_cursor;
 
       console.log('Retrieved', response.results.length, 'pages (Total:', allPages.length + ')');
-
+      
       if (hasMore) {
         await new Promise(resolve => setTimeout(resolve, 50));
       }
     } catch (error) {
-      console.error('❌ Critical Error fetching pages:', error.message);
-      console.error('💡 Please check:');
-      console.error('   1. NOTION_SECRET environment variable is set correctly');
-      console.error('   2. DATABASE_ID environment variable is set correctly');
-      console.error('   3. Notion integration has access to the database');
-      console.error('   4. Database exists and has not been deleted');
-      throw new Error('Failed to fetch pages from Notion API');
+      console.error('Error fetching pages:', error.message);
+      break;
     }
   }
   return allPages;
@@ -732,18 +559,16 @@ async function getAllPages() {
 async function syncNotionDatabase() {
   try {
     console.log('Connecting to Notion...');
-
+    
     const cache = loadCache();
     console.log('Loaded cache with', Object.keys(cache).length, 'entries');
-
+    
     const allPages = await getAllPages();
     console.log('Found', allPages.length, 'published posts');
 
     if (!fs.existsSync('content/posts')) {
       fs.mkdirSync('content/posts', { recursive: true });
     }
-
-    const SCRIPT_VERSION = "1"; // Bump this to force cache invalidation
 
     let successCount = 0;
     let skippedCount = 0;
@@ -754,7 +579,7 @@ async function syncNotionDatabase() {
       try {
         const pageId = page.id;
         const lastEditedTime = page.last_edited_time;
-
+        
         // ✅ 제목 원본 완전 보존
         const originalTitle = page.properties['제목']?.title?.[0]?.plain_text || 'Untitled';
         const slug = createSlug(originalTitle);
@@ -762,12 +587,11 @@ async function syncNotionDatabase() {
         const postFile = postDir + '/index.md';
 
         // 향상된 캐시 검증 로직
-        const isCacheValid = cache[pageId] &&
-          cache[pageId].last_edited_time === lastEditedTime &&
-          cache[pageId].slug === slug &&
-          cache[pageId].script_version === SCRIPT_VERSION && // Check version
-          fs.existsSync(postFile);
-
+        const isCacheValid = cache[pageId] && 
+                           cache[pageId].last_edited_time === lastEditedTime &&
+                           cache[pageId].slug === slug &&
+                           fs.existsSync(postFile);
+        
         if (isCacheValid) {
           console.log('✅ Skipped (cached):', originalTitle);
           // 캐시된 항목을 그대로 유지하되 처리 시간 업데이트
@@ -778,7 +602,7 @@ async function syncNotionDatabase() {
           skippedCount++;
           continue;
         }
-
+        
         // 부분 업데이트 확인 (파일은 있지만 캐시 정보가 다름)
         const isPartialUpdate = cache[pageId] && fs.existsSync(postFile);
         if (isPartialUpdate) {
@@ -790,7 +614,7 @@ async function syncNotionDatabase() {
         const dateValue = page.properties['Date']?.date?.start || page.created_time;
         const tags = page.properties['Tags']?.multi_select?.map(tag => tag.name) || [];
         const themes = page.properties['Thems']?.multi_select?.map(theme => theme.name) || [];
-        const aiSummary = convertRichText(page.properties['AI 요약']?.rich_text);
+        const aiSummary = page.properties['AI 요약']?.rich_text?.[0]?.plain_text || '';
 
         // 포스트 디렉토리 먼저 생성 (이미지 다운로드에 필요)
         if (!fs.existsSync(postDir)) {
@@ -827,17 +651,17 @@ async function syncNotionDatabase() {
 
         // 🎯 개선된 본문 내용 (제목 + AI요약 + 구분선 + 본문)
         let mainContent = '';
-
+        
         // 제목 (원본 그대로)
         mainContent += '# ' + originalTitle + '\n\n';
-
+        
         // AI 요약 표시 (있을 경우)
         if (aiSummary) {
           mainContent += '> **Summary**\n';
           mainContent += '> ' + aiSummary + '\n\n';
           mainContent += '---\n\n'; // 구분선 추가
         }
-
+        
         // 본문 내용
         if (blockContent.trim()) {
           mainContent += blockContent;
@@ -856,8 +680,7 @@ async function syncNotionDatabase() {
           processed_at: new Date().toISOString(),
           tags: tags,
           themes: themes,
-          has_content: blockContent.trim().length > 0,
-          script_version: SCRIPT_VERSION // Save version
+          has_content: blockContent.trim().length > 0
         };
 
         if (cache[pageId]) {
@@ -879,16 +702,16 @@ async function syncNotionDatabase() {
 
     const cacheEfficiency = Math.round((skippedCount / allPages.length) * 100);
     const newPosts = successCount - updatedCount;
-
+    
     console.log('\n🎯 동기화 완료:');
     console.log('📊 전체 포스트:', allPages.length + '개');
     console.log('✅ 캐시 적중:', skippedCount + '개', cacheEfficiency >= 50 ? '🎉' : '');
-    console.log('🔄 업데이트:', updatedCount + '개');
+    console.log('🔄 업데이트:', updatedCount + '개');  
     console.log('📝 신규 생성:', newPosts + '개');
     console.log('⚡ 캐시 효율:', cacheEfficiency + '%', cacheEfficiency >= 80 ? '🚀' : cacheEfficiency >= 50 ? '⭐' : '');
     console.log('💾 지속적 캐시: 활성화');
     console.log('🏷️ 시리즈 지원: 활성화');
-
+    
     if (cacheEfficiency >= 80) {
       console.log('🎊 훌륭합니다! 캐시가 매우 효율적으로 동작하고 있습니다.');
     } else if (cacheEfficiency >= 50) {
@@ -899,8 +722,7 @@ async function syncNotionDatabase() {
 
   } catch (error) {
     console.error('❌ Notion API Error:', error.message);
-    console.error('Stack trace:', error.stack);
-    process.exit(1);
+    process.exit(0);
   }
 }
 
