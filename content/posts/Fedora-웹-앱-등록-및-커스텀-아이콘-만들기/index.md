@@ -28,14 +28,14 @@ notion_url: "https://www.notion.so/Fedora-0684031da50e43aebb8ac8d826bc025e"
 >
 
 > 💡 **웹 앱 화 시켜버릴 목적의 웹사이트 방문**
-> ![Image](image_f0e2091177ae.png)
+> ![Image](image_3ca1f9b6ae83.png)
 >
 >
 
 > 💡 **우측상단 점 세개 → 저장 및 공유 → 웹 앱 설치… (바로가기 만들기도 상관없음)**
-> ![Image](image_e45a1d0ab4df.png)
+> ![Image](image_3edc13a95ac4.png)
 >
-> ![Image](image_6d16725317a9.png)
+> ![Image](image_1e26799a0a95.png)
 >
 >
 
@@ -67,7 +67,7 @@ notion_url: "https://www.notion.so/Fedora-0684031da50e43aebb8ac8d826bc025e"
 cd ~/.local/share/applications
 ```
 
-![Image](image_f6b2ccc322ae.png)
+![Image](image_41011412c65c.png)
 
 ## 아이콘 필요한거 다운받자.. 가능하면 ico 확장자로
 

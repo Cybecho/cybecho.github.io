@@ -4,7 +4,7 @@ date: 2025-07-09T01:34:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Infra & Network"]
-description: "VMware ESXi에서 OpenStack으로의 VM 마이그레이션을 위한 단계별 가이드. 마이그레이션 계획 수립, 기존 환경 감사, 낮은 중요도의 서버부터 시작, 다운타임 고려, DNS TTL 조정, VM 내보내기, 디스크 이미지 포맷 변환, OpenStack으로 이미지 가져오기 및 인스턴스 실행, 마이그레이션 검증 과정을 포함하여 비용 효율적인 클라우드 환경으로의 전환을 지원합니다."
+description: "VMware에서 OpenStack으로의 VM 마이그레이션을 위해 철저한 계획과 준비가 필요하다. 마이그레이션 과정은 VM 목록 작성, 중요도가 낮은 서버부터 시작, 다운타임 고려, DNS TTL 조정 등의 단계를 포함한다. VMware에서 VM을 내보내고, VMDK 파일을 QCOW2 포맷으로 변환한 후, OpenStack에 이미지를 업로드하고 인스턴스를 실행하여 마이그레이션을 검증한다. 성공적인 마이그레이션을 통해 비용 효율적인 클라우드 환경으로 전환할 수 있다."
 notion_id: "22b1bab9-e3f8-80a3-a573-dad07bf0f583"
 notion_url: "https://www.notion.so/VMware-EXSi-OpenStack-VM-22b1bab9e3f880a3a573dad07bf0f583"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/VMware-EXSi-OpenStack-VM-22b1bab9e3f880a3a573
 # VMware EXSi의 대안, OpenStack으로의 VM 마이그레이션 가이드
 
 > **Summary**
-> VMware ESXi에서 OpenStack으로의 VM 마이그레이션을 위한 단계별 가이드. 마이그레이션 계획 수립, 기존 환경 감사, 낮은 중요도의 서버부터 시작, 다운타임 고려, DNS TTL 조정, VM 내보내기, 디스크 이미지 포맷 변환, OpenStack으로 이미지 가져오기 및 인스턴스 실행, 마이그레이션 검증 과정을 포함하여 비용 효율적인 클라우드 환경으로의 전환을 지원합니다.
+> VMware에서 OpenStack으로의 VM 마이그레이션을 위해 철저한 계획과 준비가 필요하다. 마이그레이션 과정은 VM 목록 작성, 중요도가 낮은 서버부터 시작, 다운타임 고려, DNS TTL 조정 등의 단계를 포함한다. VMware에서 VM을 내보내고, VMDK 파일을 QCOW2 포맷으로 변환한 후, OpenStack에 이미지를 업로드하고 인스턴스를 실행하여 마이그레이션을 검증한다. 성공적인 마이그레이션을 통해 비용 효율적인 클라우드 환경으로 전환할 수 있다.
 
 ---
 
@@ -38,7 +38,7 @@ notion_url: "https://www.notion.so/VMware-EXSi-OpenStack-VM-22b1bab9e3f880a3a573
 
 첫 번째 실습 단계는 VMware에서 가상 머신 이미지를 추출하는 것입니다.
 
-1. **로그인 및 VM 종료:** VMware ESXi Host Client에 로그인한 후, 마이그레이션할 가상 머신(`debian-server`)의 전원을 완전히 **종료(Shutdown Guest)**합니다.
+1. **로그인 및 VM 종료:** VMware ESXi Host Client에 로그인한 후, 마이그레이션할 가상 머신(`debian-server`)의 전원을 완전히 종료(Shutdown Guest)합니다.
 1. **VM Export:** 가상 머신 목록에서 해당 VM을 우클릭(또는 Actions 메뉴)하여 **Export**를 선택합니다.
 1. **파일 다운로드:** Export 창이 나타나면, `.ovf` (설정 파일)와 `.vmdk` (가상 디스크) 파일의 다운로드를 진행합니다. 이 중 가장 중요한 파일은 가상 디스크인 `.vmdk` 파일입니다.
 ### **3. 디스크 이미지 포맷 변환 (VMDK → QCOW2)**
@@ -69,7 +69,7 @@ qemu-img convert -f vmdk -O qcow2 debian-server-1.vmdk debian-server.qcow2
   - **[Compute] → [Images]** 메뉴로 이동합니다.
   - **[+ Create Image]** 버튼을 클릭합니다.
   - **Image Name:** `debian-server`와 같이 식별하기 쉬운 이름을 입력합니다.
-  - **File:** **[Browse]**를 클릭하여 3단계에서 생성한 `debian-server.qcow2` 파일을 선택합니다.
+  - **File:** [Browse]를 클릭하여 3단계에서 생성한 `debian-server.qcow2` 파일을 선택합니다.
   - **Format:** 드롭다운 메뉴에서 **QCOW2 - QEMU Emulator**를 선택합니다.
   - **Minimum Disk (GB):** 원본 디스크 크기(32GB)와 동일하거나 더 큰 값으로 설정합니다.
   - **[Create Image]** 버튼을 눌러 이미지 업로드를 시작합니다.
@@ -85,7 +85,7 @@ qemu-img convert -f vmdk -O qcow2 debian-server-1.vmdk debian-server.qcow2
 
 인스턴스 생성이 완료되고 상태가 'Running'으로 변경되면, 마이그레이션이 성공했는지 확인합니다.
 
-1. 생성된 인스턴스의 드롭다운 메뉴에서 **[Console]**을 선택하여 가상 콘솔에 접근합니다.
+1. 생성된 인스턴스의 드롭다운 메뉴에서 [Console]을 선택하여 가상 콘솔에 접근합니다.
 1. 기존 VMware VM에서 사용하던 사용자 계정과 비밀번호로 로그인합니다.
 1. 로그인 후, 마이그레이션 전에 생성했던 테스트 파일(`message.txt`)이 존재하는지, 내용(`Hello World`)이 동일한지 확인합니다.
 이 파일과 내용이 그대로 존재한다면, 디스크 이미지 전체가 성공적으로 이전되었음을 의미합니다.

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/b421e6e1575b4b37b5ee3bc9c627a3bc"
 
 ---
 
-![Image](image_ddc0870df62f.png)
+![Image](image_32e247777e2a.png)
 
 
 🔗 [https://pcwindows.tistory.com/241](https://pcwindows.tistory.com/241)

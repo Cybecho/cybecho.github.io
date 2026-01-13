@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/x86-ARM-s390x-1a41bab9e3f8808e820ceb348ce6fdb
 
 ---
 
-![Image](image_acfe995b5838.png)
+![Image](image_17fcfb7ba19b.png)
 
 ### x86, ARM, s390x의 차이점
 
@@ -48,7 +48,6 @@ x86, ARM, s390x는 서로 다른 컴퓨팅 아키텍처로, 각각의 설계 철
 아래 표는 x86, ARM, s390x의 주요 기술적 차이점을 요약합니다.
 
 | **항목** | **x86** | **ARM** | **s390x** |
-|---|---|---|---|
 | **ISA 타입** | CISC | RISC | CISC |
 | **엔디안성** | 리틀 엔디안 | 빅 엔디안 또는 리틀 엔디안 | 빅 엔디안 |
 | **워드 사이즈** | 64비트 (x86-64) | 32비트 또는 64비트 (ARM64) | 64비트 |

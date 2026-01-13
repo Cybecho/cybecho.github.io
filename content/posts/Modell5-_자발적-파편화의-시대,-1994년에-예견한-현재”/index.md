@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Modell5-1994-2051bab9e3f880088f53c3d82731a42c
 
 ---
 
-![Image](image_af9109bd02bc.png)
+![Image](image_67feffab059d.png)
 
 # Modell5
 
@@ -57,7 +57,7 @@ Modell 5는 1994년에 만들어진 미디어 아트 작품이다. 일본인 퍼
 
 ## 누가 만들었을까?
 
-![Image](image_7b2ac476451d.png)
+![Image](image_ea2f0c19a757.png)
 
 이 작품의 특별함은 바로 '경계인'들의 만남에서 시작된다.
 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Google-Pixel-1-1a28f3aeda114b0380435ba02c83e9
 
 ---
 
-![Image](image_60fdede96c18.webp)
+![Image](image_3ea8b4955e44.webp)
 
 🔗 [https://www.clien.net/service/board/lecture/17216250#comment_write_point](https://www.clien.net/service/board/lecture/17216250#comment_write_point)
 
@@ -40,9 +40,9 @@ notion_url: "https://www.notion.so/Google-Pixel-1-1a28f3aeda114b0380435ba02c83e9
 ### 3. ADB 설치 및 실행
 
 1. [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools) 다운로드 및 설치
-![Image](image_9ed1781bd505.png)
+![Image](image_9fbc70452c5f.png)
 
-![Image](image_7947483e33e6.png)
+![Image](image_ec7042dd7cdc.png)
 
 1. 폰과 PC를 USB로 연결
 1. 폰에서 USB 디버깅 허용
@@ -78,7 +78,7 @@ exit
 
 ```
 
-![Image](image_8a1f8fd96081.png)
+![Image](image_f4b378e1ef40.png)
 
 ### 5. 외장하드 설정
 

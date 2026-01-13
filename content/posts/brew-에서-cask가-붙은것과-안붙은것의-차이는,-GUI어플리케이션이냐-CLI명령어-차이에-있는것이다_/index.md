@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/brew-cask-GUI-CLI-2dc1bab9e3f8800cb9c3deb19db
 
 ---
 
-![Image](image_3a317d34ad9d.png)
+![Image](image_4f62db77483b.png)
 
 # `--CASK` 이거 뭐임?
 
@@ -30,13 +30,13 @@ notion_url: "https://www.notion.so/brew-cask-GUI-CLI-2dc1bab9e3f8800cb9c3deb19db
 
 **macOS의 앱 번들 철학**
 
-macOS는 Apple이 NeXTSTEP 운영체제를 기반으로 만들면서 "앱 번들"이라는 개념을 도입했습니다. GUI 애플리케이션은 `/Applications` 폴더에 `.app`이라는 폴더 구조로 설치되며, 이 폴더 내부에는 실행 파일, 이미지, 아이콘, 설정 파일 등이 모두 포함되어 있습니다. 사용자 입장에서는 "UTM.app"을 하나의 단일 애플리케이션으로 인식하지만, 실제로는 `UTM.app/Contents/MacOS/utm` 같은 구조로 내부 자료가 완전히 자체 포함되어 있습니다. 이 설계는 사용자가 앱을 쉽게 옮기고, 삭제하고, 관리할 수 있도록 의도된 것입니다.[cdecl.github](https:/<wbr>/<wbr>cdecl.github.io/<wbr>devops/<wbr>homebrew-<wbr>formulae-<wbr>cask/<wbr>)
+macOS는 Apple이 NeXTSTEP 운영체제를 기반으로 만들면서 "앱 번들"이라는 개념을 도입했습니다. GUI 애플리케이션은 `/Applications` 폴더에 `.app`이라는 폴더 구조로 설치되며, 이 폴더 내부에는 실행 파일, 이미지, 아이콘, 설정 파일 등이 모두 포함되어 있습니다. 사용자 입장에서는 "UTM.app"을 하나의 단일 애플리케이션으로 인식하지만, 실제로는 `UTM.app/Contents/MacOS/utm` 같은 구조로 내부 자료가 완전히 자체 포함되어 있습니다. 이 설계는 사용자가 앱을 쉽게 옮기고, 삭제하고, 관리할 수 있도록 의도된 것입니다.[cdecl.github](https://cdecl.github.io/devops/homebrew-formulae-cask/)
 
-반면 CLI 도구는 Unix 전통에서 비롯되었습니다. 1970년대 Unix에서 `git`, `python`, `wget` 같은 도구들은 **단일 실행 파일 + 공유 라이브러리** 형태로 설계되었습니다. 이들은 소스 코드에서 컴파일되어 `/usr/bin`이나 `/usr/local/bin` 같은 표준 경로에 설치되고, 여러 프로그램이 공유 라이브러리를 함께 사용합니다. 이 구조는 효율성과 자동화를 위해 설계된 것입니다.[cdecl.github](https:/<wbr>/<wbr>cdecl.github.io/<wbr>devops/<wbr>homebrew-<wbr>formulae-<wbr>cask/<wbr>)
+반면 CLI 도구는 Unix 전통에서 비롯되었습니다. 1970년대 Unix에서 `git`, `python`, `wget` 같은 도구들은 **단일 실행 파일 + 공유 라이브러리** 형태로 설계되었습니다. 이들은 소스 코드에서 컴파일되어 `/usr/bin`이나 `/usr/local/bin` 같은 표준 경로에 설치되고, 여러 프로그램이 공유 라이브러리를 함께 사용합니다. 이 구조는 효율성과 자동화를 위해 설계된 것입니다.[cdecl.github](https://cdecl.github.io/devops/homebrew-formulae-cask/)
 
 **두 구조가 나뉜 역사적 이유**
 
-macOS가 등장한 초기에는 GUI 앱도 CLI 도구와 유사한 방식으로 설치되었지만, Apple이 GUI 중심의 사용자 경험을 강조하면서 앱 번들 개념을 강화했습니다. 2000년대 초반 DMG(Disk Image)와 ZIP 파일이 표준 배포 형식이 되었고, 이는 "완성된 패키지"를 다운로드하는 방식입니다. 즉, GUI 앱은 이미 **컴파일되어 완성된 바이너리**로 배포되므로, 사용자나 패키지 관리자가 재컴파일할 필요가 없습니다. 반면 CLI 도구는 개발자들 사이에서 여전히 **소스 코드를 컴파일하는 방식**을 선호했습니다. 이것이 Apple Silicon (M4) 같은 새로운 아키텍처가 나올 때마다 CLI 도구는 새로 컴파일되어야 하는 이유입니다.[naver+1](https:/<wbr>/<wbr>blog.naver.com/<wbr>kiros33/<wbr>220083258955)
+macOS가 등장한 초기에는 GUI 앱도 CLI 도구와 유사한 방식으로 설치되었지만, Apple이 GUI 중심의 사용자 경험을 강조하면서 앱 번들 개념을 강화했습니다. 2000년대 초반 DMG(Disk Image)와 ZIP 파일이 표준 배포 형식이 되었고, 이는 "완성된 패키지"를 다운로드하는 방식입니다. 즉, GUI 앱은 이미 **컴파일되어 완성된 바이너리**로 배포되므로, 사용자나 패키지 관리자가 재컴파일할 필요가 없습니다. 반면 CLI 도구는 개발자들 사이에서 여전히 **소스 코드를 컴파일하는 방식**을 선호했습니다. 이것이 Apple Silicon (M4) 같은 새로운 아키텍처가 나올 때마다 CLI 도구는 새로 컴파일되어야 하는 이유입니다.[naver+1](https://blog.naver.com/kiros33/220083258955)
 
 ## 전개: Homebrew의 Formula와 Cask 분리 전략
 
@@ -72,7 +72,7 @@ GUI 앱을 `/Applications`에 설치하는 이유는 macOS의 표준 관례입�
 
 **구조적 선택의 장점**
 
-Homebrew가 두 가지 방식을 분리함으로써 얻은 실질적 이점은 다음과 같습니다. 첫째, 사용자는 자신의 목적에 맞는 도구를 선택할 수 있습니다. CLI가 필요하면 Formula, GUI가 필요하면 Cask. 둘 다 `brew list`, `brew upgrade`, `brew uninstall` 같은 통일된 인터페이스로 관리됩니다. 둘째, 각 타입이 최적화되어 성능과 안정성이 보장됩니다. CLI 도구는 M4 같은 새 아키텍처에서 완벽하게 컴파일되고, GUI 앱은 앱 스토어 수준의 배포 품질을 유지합니다. 셋째, macOS의 설계 철학을 존중하면서도 개발자 효율성을 높입니다.[stackoverflow](https:/<wbr>/<wbr>stackoverflow.com/<wbr>questions/<wbr>46403937/<wbr>what-<wbr>is-<wbr>the-<wbr>difference-<wbr>between-<wbr>brew-<wbr>install-<wbr>x-<wbr>and-<wbr>brew-<wbr>cask-<wbr>install-<wbr>x)
+Homebrew가 두 가지 방식을 분리함으로써 얻은 실질적 이점은 다음과 같습니다. 첫째, 사용자는 자신의 목적에 맞는 도구를 선택할 수 있습니다. CLI가 필요하면 Formula, GUI가 필요하면 Cask. 둘 다 `brew list`, `brew upgrade`, `brew uninstall` 같은 통일된 인터페이스로 관리됩니다. 둘째, 각 타입이 최적화되어 성능과 안정성이 보장됩니다. CLI 도구는 M4 같은 새 아키텍처에서 완벽하게 컴파일되고, GUI 앱은 앱 스토어 수준의 배포 품질을 유지합니다. 셋째, macOS의 설계 철학을 존중하면서도 개발자 효율성을 높입니다.[stackoverflow](https://stackoverflow.com/questions/46403937/what-is-the-difference-between-brew-install-x-and-brew-cask-install-x)
 
 **최종 이해**
 
@@ -80,8 +80,8 @@ Homebrew가 두 가지 방식을 분리함으로써 얻은 실질적 이점은 �
 
 ---
 
-1. [https://cdecl.github.io/devops/homebrew-formulae-cask/](https:/<wbr>/<wbr>cdecl.github.io/<wbr>devops/<wbr>homebrew-<wbr>formulae-<wbr>cask/<wbr>)
-1. [https://blog.naver.com/kiros33/220083258955](https:/<wbr>/<wbr>blog.naver.com/<wbr>kiros33/<wbr>220083258955)
+1. [https://cdecl.github.io/devops/homebrew-formulae-cask/](https://cdecl.github.io/devops/homebrew-formulae-cask/)
+1. [https://blog.naver.com/kiros33/220083258955](https://blog.naver.com/kiros33/220083258955)
 1. [https://ds31x.tistory.com/148](https://ds31x.tistory.com/148)
-1. [https://www.perplexity.ai/search/1414ba2e-97e1-4f65-98e6-e7ef227f8d77](https:/<wbr>/<wbr>www.perplexity.ai/<wbr>search/<wbr>1414ba2e-<wbr>97e1-<wbr>4f65-<wbr>98e6-<wbr>e7ef227f8d77)
-1. [https://stackoverflow.com/questions/46403937/what-is-the-difference-between-brew-install-x-and-brew-cask-install-x](https:/<wbr>/<wbr>stackoverflow.com/<wbr>questions/<wbr>46403937/<wbr>what-<wbr>is-<wbr>the-<wbr>difference-<wbr>between-<wbr>brew-<wbr>install-<wbr>x-<wbr>and-<wbr>brew-<wbr>cask-<wbr>install-<wbr>x)
+1. [https://www.perplexity.ai/search/1414ba2e-97e1-4f65-98e6-e7ef227f8d77](https://www.perplexity.ai/search/1414ba2e-97e1-4f65-98e6-e7ef227f8d77)
+1. [https://stackoverflow.com/questions/46403937/what-is-the-difference-between-brew-install-x-and-brew-cask-install-x](https://stackoverflow.com/questions/46403937/what-is-the-difference-between-brew-install-x-and-brew-cask-install-x)

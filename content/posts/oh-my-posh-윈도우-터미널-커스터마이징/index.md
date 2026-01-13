@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/oh-my-posh-4537e5ec748a4e2590aa05849af7338d"
 
 ---
 
-![Image](image_f6ca5613d924.png)
+![Image](image_6031ca65f945.png)
 
 ## 설치
 

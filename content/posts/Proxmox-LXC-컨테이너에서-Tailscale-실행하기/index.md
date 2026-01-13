@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Proxmox-LXC-Tailscale-1951bab9e3f880c7afe8c90
 
 ---
 
-![Image](image_3bade9ab8c2c.png)
+![Image](image_7f7cc72086a0.png)
 
 # Proxmox LXC 컨테이너에서 Tailscale 실행하기
 
@@ -151,7 +151,6 @@ crontab -e
 ## 🚀 **결론**
 
 | 단계 | 설명 |
-|---|---|
 | **1. LXC 설정 수정** | `/etc/pve/lxc/<컨테이너ID>.conf` 수정하여 `TUN` 활성화 |
 | **2. 컨테이너 재시작** | `pct stop <ID> && pct start <ID>` 실행 |
 | **3. **`**/dev/net/tun**`** 확인** | `ls -l /dev/net/tun`으로 확인, 없으면 `mknod`로 생성 |

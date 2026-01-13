@@ -4,7 +4,7 @@ date: 2025-12-21T02:34:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Infra & Network"]
-description: "Apple은 macOS 15.2에서 Thunderbolt 5를 통해 RDMA(Remote Direct Memory Access)를 지원하기 시작하며, 이를 통해 소비자용 Mac에서 AI 인퍼런스 머신으로의 전환을 시도하고 있다. RDMA는 CPU 개입 없이 메모리 간 직접 데이터를 전송하여 성능을 극대화하고, Thunderbolt 5의 특성을 활용해 물리적으로 가까운 고성능 컴퓨팅 노드들을 연결하는 새로운 형태의 컴퓨팅 구성을 제안한다. 이를 통해 Apple은 클라우드와 온디바이스 AI의 중간 지점인 \"Edge AI Cluster\"를 형성하고, 데이터 프라이버시와 성능을 동시에 충족할 수 있는 가능성을 열어준다. 또한, 소프트웨어 생태계의 발전과 NVIDIA 의존도 탈피를 통해 AI 컴퓨팅 시장의 다변화를 추구하고 있다."
+description: "Apple은 macOS 15.2에서 Thunderbolt 5를 통해 RDMA(Remote Direct Memory Access)를 지원하기 시작하며, 이를 통해 소비자용 Mac에서도 고속 데이터 전송이 가능해진다. RDMA는 CPU 개입 없이 메모리 간 직접 전송을 가능하게 하여 성능을 극대화한다. Thunderbolt 5의 특성 덕분에 여러 대의 Mac Studio를 연결하여 통합 메모리 풀을 형성할 수 있으며, 이는 새로운 \"Edge AI Cluster\" 개념을 통해 클라우드와 온디바이스 AI의 장점을 결합한다. Apple은 RDMA를 통해 NVIDIA 의존도를 줄이고, 새로운 소프트웨어 생태계를 구축할 기회를 제공하며, 데이터 프라이버시를 강화하는 방향으로 나아가고 있다."
 notion_id: "2d01bab9-e3f8-802a-b3d1-edc4cab6dc5d"
 notion_url: "https://www.notion.so/Apple-RDMA-MAC-AI-2d01bab9e3f8802ab3d1edc4cab6dc5d"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Apple-RDMA-MAC-AI-2d01bab9e3f8802ab3d1edc4cab
 # Apple RDMA : MAC 제품군을 점점 AI 인퍼런스 머신으로 만들고있다..!
 
 > **Summary**
-> Apple은 macOS 15.2에서 Thunderbolt 5를 통해 RDMA(Remote Direct Memory Access)를 지원하기 시작하며, 이를 통해 소비자용 Mac에서 AI 인퍼런스 머신으로의 전환을 시도하고 있다. RDMA는 CPU 개입 없이 메모리 간 직접 데이터를 전송하여 성능을 극대화하고, Thunderbolt 5의 특성을 활용해 물리적으로 가까운 고성능 컴퓨팅 노드들을 연결하는 새로운 형태의 컴퓨팅 구성을 제안한다. 이를 통해 Apple은 클라우드와 온디바이스 AI의 중간 지점인 "Edge AI Cluster"를 형성하고, 데이터 프라이버시와 성능을 동시에 충족할 수 있는 가능성을 열어준다. 또한, 소프트웨어 생태계의 발전과 NVIDIA 의존도 탈피를 통해 AI 컴퓨팅 시장의 다변화를 추구하고 있다.
+> Apple은 macOS 15.2에서 Thunderbolt 5를 통해 RDMA(Remote Direct Memory Access)를 지원하기 시작하며, 이를 통해 소비자용 Mac에서도 고속 데이터 전송이 가능해진다. RDMA는 CPU 개입 없이 메모리 간 직접 전송을 가능하게 하여 성능을 극대화한다. Thunderbolt 5의 특성 덕분에 여러 대의 Mac Studio를 연결하여 통합 메모리 풀을 형성할 수 있으며, 이는 새로운 "Edge AI Cluster" 개념을 통해 클라우드와 온디바이스 AI의 장점을 결합한다. Apple은 RDMA를 통해 NVIDIA 의존도를 줄이고, 새로운 소프트웨어 생태계를 구축할 기회를 제공하며, 데이터 프라이버시를 강화하는 방향으로 나아가고 있다.
 
 ---
 
-![Image](image_3c4737b06363.png)
+![Image](image_59bface911f1.png)
 
 ## 초기 관찰: RDMA는 무엇이 특별한가?
 
@@ -121,6 +121,8 @@ Apple의 역사적 패턴을 보면 Metal API는 2014년에 발표되고 GPU 집
 흥미롭게도 AMD와 Intel도 비슷한 방향을 모색하고 있다. AMD MI300X는 통합 메모리 아키텍처를 채택했고, Intel Ponte Vecchio는 타일 기반 아키텍처를 사용한다. 하지만 이들은 여전히 데이터센터 중심이다. Apple의 접근은 프로슈머 시장에 초점을 맞춘다는 점에서 차별화된다.
 
 NVIDIA H100 한 대는 $30,000에서 $40,000이고, Mac Studio M2 Ultra 4대도 $32,000에서 $40,000으로 비슷하지만, 전력 소비는 Mac이 약 1/5 수준이다. 가격은 비슷하지만 접근성과 운영 비용에서 차이가 난다. 더 중요한 것은 Apple이 기존 시장을 정면 공격하지 않고 새로운 카테고리를 만드는 경향이 있다는 점이다. iPhone으로 모바일 컴퓨팅을 재정의했고, AirPods로 오디오 시장을 재편했으며, Apple Silicon으로 PC 아키텍처에 도전했다. RDMA over Thunderbolt도 같은 맥락에서 이해할 수 있다.
+
+![Image](image_7736554041a6.png)
 
 ## 7단계: 최종 종합 - 의의와 한계
 

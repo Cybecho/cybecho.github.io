@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Linux-GUI-2e01bab9e3f8800fa707efb81b953afb"
 
 ---
 
-![Image](image_e54e1c7cd3f4.png)
+![Image](image_ef92d3358036.png)
 
 # Android에서 Linux GUI 환경 구축 완전 가이드
 
@@ -26,18 +26,18 @@ Termux + proot-distro + Termux:X11을 이용한 Debian XFCE 데스크톱 환경 
 
 ## 목차
 
-1. [개요 및 구조](https:/<wbr>/<wbr>www.notion.so/<wbr>cybecho/<wbr>Linux-<wbr>2e01bab9e3f8800fa707efb81b953afb?<wbr>v=<wbr>2361bab9e3f8808dbbce000ce422ed7d#1-<wbr>%EA%B0%9C%EC%9A%94-<wbr>%EB%B0%8F-<wbr>%EA%B5%AC%EC%A1%B0)
-1. [사전 준비: 앱 설치](https:/<wbr>/<wbr>www.notion.so/<wbr>cybecho/<wbr>Linux-<wbr>2e01bab9e3f8800fa707efb81b953afb?<wbr>v=<wbr>2361bab9e3f8808dbbce000ce422ed7d#2-<wbr>%EC%82%AC%EC%A0%84-<wbr>%EC%A4%80%EB%B9%84-<wbr>%EC%95%B1-<wbr>%EC%84%A4%EC%B9%98)
-1. [Android 시스템 설정](https:/<wbr>/<wbr>www.notion.so/<wbr>cybecho/<wbr>Linux-<wbr>2e01bab9e3f8800fa707efb81b953afb?<wbr>v=<wbr>2361bab9e3f8808dbbce000ce422ed7d#3-<wbr>android-<wbr>%EC%8B%9C%EC%8A%A4%ED%85%9C-<wbr>%EC%84%A4%EC%A0%95)
-1. [Termux 기본 환경 구성](https:/<wbr>/<wbr>www.notion.so/<wbr>cybecho/<wbr>Linux-<wbr>2e01bab9e3f8800fa707efb81b953afb?<wbr>v=<wbr>2361bab9e3f8808dbbce000ce422ed7d#4-<wbr>termux-<wbr>%EA%B8%B0%EB%B3%B8-<wbr>%ED%99%98%EA%B2%BD-<wbr>%EA%B5%AC%EC%84%B1)
-1. [Debian 설치 및 사용자 생성](https:/<wbr>/<wbr>www.notion.so/<wbr>cybecho/<wbr>Linux-<wbr>2e01bab9e3f8800fa707efb81b953afb?<wbr>v=<wbr>2361bab9e3f8808dbbce000ce422ed7d#5-<wbr>debian-<wbr>%EC%84%A4%EC%B9%98-<wbr>%EB%B0%8F-<wbr>%EC%82%AC%EC%9A%A9%EC%9E%90-<wbr>%EC%83%9D%EC%84%B1)
-1. [XFCE 데스크톱 및 한글 환경 설치](https:/<wbr>/<wbr>www.notion.so/<wbr>cybecho/<wbr>Linux-<wbr>2e01bab9e3f8800fa707efb81b953afb?<wbr>v=<wbr>2361bab9e3f8808dbbce000ce422ed7d#6-<wbr>xfce-<wbr>%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%86%B1-<wbr>%EB%B0%8F-<wbr>%ED%95%9C%EA%B8%80-<wbr>%ED%99%98%EA%B2%BD-<wbr>%EC%84%A4%EC%B9%98)
-1. [환경변수 설정](https:/<wbr>/<wbr>www.notion.so/<wbr>cybecho/<wbr>Linux-<wbr>2e01bab9e3f8800fa707efb81b953afb?<wbr>v=<wbr>2361bab9e3f8808dbbce000ce422ed7d#7-<wbr>%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-<wbr>%EC%84%A4%EC%A0%95)
-1. [실행 및 종료 스크립트 작성](https:/<wbr>/<wbr>www.notion.so/<wbr>cybecho/<wbr>Linux-<wbr>2e01bab9e3f8800fa707efb81b953afb?<wbr>v=<wbr>2361bab9e3f8808dbbce000ce422ed7d#8-<wbr>%EC%8B%A4%ED%96%89-<wbr>%EB%B0%8F-<wbr>%EC%A2%85%EB%A3%8C-<wbr>%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-<wbr>%EC%9E%91%EC%84%B1)
-1. [실행 및 한글 입력 설정](https:/<wbr>/<wbr>www.notion.so/<wbr>cybecho/<wbr>Linux-<wbr>2e01bab9e3f8800fa707efb81b953afb?<wbr>v=<wbr>2361bab9e3f8808dbbce000ce422ed7d#9-<wbr>%EC%8B%A4%ED%96%89-<wbr>%EB%B0%8F-<wbr>%ED%95%9C%EA%B8%80-<wbr>%EC%9E%85%EB%A0%A5-<wbr>%EC%84%A4%EC%A0%95)
-1. [화면 최적화](https:/<wbr>/<wbr>www.notion.so/<wbr>cybecho/<wbr>Linux-<wbr>2e01bab9e3f8800fa707efb81b953afb?<wbr>v=<wbr>2361bab9e3f8808dbbce000ce422ed7d#10-<wbr>%ED%99%94%EB%A9%B4-<wbr>%EC%B5%9C%EC%A0%81%ED%99%94)
-1. [문제 해결](https:/<wbr>/<wbr>www.notion.so/<wbr>cybecho/<wbr>Linux-<wbr>2e01bab9e3f8800fa707efb81b953afb?<wbr>v=<wbr>2361bab9e3f8808dbbce000ce422ed7d#11-<wbr>%EB%AC%B8%EC%A0%9C-<wbr>%ED%95%B4%EA%B2%B0)
-1. [명령어 총정리](https:/<wbr>/<wbr>www.notion.so/<wbr>cybecho/<wbr>Linux-<wbr>2e01bab9e3f8800fa707efb81b953afb?<wbr>v=<wbr>2361bab9e3f8808dbbce000ce422ed7d#12-<wbr>%EB%AA%85%EB%A0%B9%EC%96%B4-<wbr>%EC%B4%9D%EC%A0%95%EB%A6%AC)
+1. [개요 및 구조](https://www.notion.so/cybecho/Linux-2e01bab9e3f8800fa707efb81b953afb?v=2361bab9e3f8808dbbce000ce422ed7d#1-%EA%B0%9C%EC%9A%94-%EB%B0%8F-%EA%B5%AC%EC%A1%B0)
+1. [사전 준비: 앱 설치](https://www.notion.so/cybecho/Linux-2e01bab9e3f8800fa707efb81b953afb?v=2361bab9e3f8808dbbce000ce422ed7d#2-%EC%82%AC%EC%A0%84-%EC%A4%80%EB%B9%84-%EC%95%B1-%EC%84%A4%EC%B9%98)
+1. [Android 시스템 설정](https://www.notion.so/cybecho/Linux-2e01bab9e3f8800fa707efb81b953afb?v=2361bab9e3f8808dbbce000ce422ed7d#3-android-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EC%A0%95)
+1. [Termux 기본 환경 구성](https://www.notion.so/cybecho/Linux-2e01bab9e3f8800fa707efb81b953afb?v=2361bab9e3f8808dbbce000ce422ed7d#4-termux-%EA%B8%B0%EB%B3%B8-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1)
+1. [Debian 설치 및 사용자 생성](https://www.notion.so/cybecho/Linux-2e01bab9e3f8800fa707efb81b953afb?v=2361bab9e3f8808dbbce000ce422ed7d#5-debian-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%83%9D%EC%84%B1)
+1. [XFCE 데스크톱 및 한글 환경 설치](https://www.notion.so/cybecho/Linux-2e01bab9e3f8800fa707efb81b953afb?v=2361bab9e3f8808dbbce000ce422ed7d#6-xfce-%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%86%B1-%EB%B0%8F-%ED%95%9C%EA%B8%80-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%B9%98)
+1. [환경변수 설정](https://www.notion.so/cybecho/Linux-2e01bab9e3f8800fa707efb81b953afb?v=2361bab9e3f8808dbbce000ce422ed7d#7-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95)
+1. [실행 및 종료 스크립트 작성](https://www.notion.so/cybecho/Linux-2e01bab9e3f8800fa707efb81b953afb?v=2361bab9e3f8808dbbce000ce422ed7d#8-%EC%8B%A4%ED%96%89-%EB%B0%8F-%EC%A2%85%EB%A3%8C-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%9E%91%EC%84%B1)
+1. [실행 및 한글 입력 설정](https://www.notion.so/cybecho/Linux-2e01bab9e3f8800fa707efb81b953afb?v=2361bab9e3f8808dbbce000ce422ed7d#9-%EC%8B%A4%ED%96%89-%EB%B0%8F-%ED%95%9C%EA%B8%80-%EC%9E%85%EB%A0%A5-%EC%84%A4%EC%A0%95)
+1. [화면 최적화](https://www.notion.so/cybecho/Linux-2e01bab9e3f8800fa707efb81b953afb?v=2361bab9e3f8808dbbce000ce422ed7d#10-%ED%99%94%EB%A9%B4-%EC%B5%9C%EC%A0%81%ED%99%94)
+1. [문제 해결](https://www.notion.so/cybecho/Linux-2e01bab9e3f8800fa707efb81b953afb?v=2361bab9e3f8808dbbce000ce422ed7d#11-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0)
+1. [명령어 총정리](https://www.notion.so/cybecho/Linux-2e01bab9e3f8800fa707efb81b953afb?v=2361bab9e3f8808dbbce000ce422ed7d#12-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%B4%9D%EC%A0%95%EB%A6%AC)
 ---
 
 ## 1. 개요 및 구조
@@ -79,14 +79,14 @@ Play Store의 Termux는 업데이트가 중단되어 제대로 작동하지 않�
 
 GitHub Releases에서 다운로드:
 
-- [https://github.com/termux/termux-app/releases](https:/<wbr>/<wbr>github.com/<wbr>termux/<wbr>termux-<wbr>app/<wbr>releases)
+- [https://github.com/termux/termux-app/releases](https://github.com/termux/termux-app/releases)
 - 파일명: `termux-app_v0.118.1+github-debug_arm64-v8a.apk`
 - arm64-v8a는 대부분의 최신 폰에 해당 (Galaxy S24 FE 포함)
 ### Termux:X11 설치
 
 GitHub Releases에서 다운로드:
 
-- [https://github.com/termux/termux-x11/releases](https:/<wbr>/<wbr>github.com/<wbr>termux/<wbr>termux-<wbr>x11/<wbr>releases)
+- [https://github.com/termux/termux-x11/releases](https://github.com/termux/termux-x11/releases)
 - 파일명: `app-arm64-v8a-debug.apk`
 ### 설치 시 주의사항
 

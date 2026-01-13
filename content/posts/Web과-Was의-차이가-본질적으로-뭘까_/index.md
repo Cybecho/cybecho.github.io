@@ -4,7 +4,7 @@ date: 2025-03-10T10:59:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Infra & Network"]
-description: "Web과 Was의 본질적 차이는 함수 실행의 깊이에 있으며, Web은 단순 내장 함수처럼 바로 실행되는 반면, Was는 여러 단계를 거쳐 실행됩니다. 결국 차이는 함수 호출 체계와 실행 로직의 복잡성에서 비롯됩니다."
+description: "Web과 Was의 본질적 차이는 함수 실행의 깊이에 있으며, Web은 단순 내장 함수처럼 바로 실행되는 반면, Was는 여러 단계를 거쳐 실행됩니다. 결국, 이 차이는 함수 호출 체계와 실행 로직의 복잡성에서 비롯됩니다."
 notion_id: "1b21bab9-e3f8-80a5-a1ca-c6b0d093e41c"
 notion_url: "https://www.notion.so/Web-Was-1b21bab9e3f880a5a1cac6b0d093e41c"
 ---
@@ -12,9 +12,11 @@ notion_url: "https://www.notion.so/Web-Was-1b21bab9e3f880a5a1cac6b0d093e41c"
 # Web과 Was의 차이가 본질적으로 뭘까?
 
 > **Summary**
-> Web과 Was의 본질적 차이는 함수 실행의 깊이에 있으며, Web은 단순 내장 함수처럼 바로 실행되는 반면, Was는 여러 단계를 거쳐 실행됩니다. 결국 차이는 함수 호출 체계와 실행 로직의 복잡성에서 비롯됩니다.
+> Web과 Was의 본질적 차이는 함수 실행의 깊이에 있으며, Web은 단순 내장 함수처럼 바로 실행되는 반면, Was는 여러 단계를 거쳐 실행됩니다. 결국, 이 차이는 함수 호출 체계와 실행 로직의 복잡성에서 비롯됩니다.
 
 ---
+
+![Image](image_35582634c586.png)
 
 ### Web과 Was의 차이가 본질적으로 뭘까?
 

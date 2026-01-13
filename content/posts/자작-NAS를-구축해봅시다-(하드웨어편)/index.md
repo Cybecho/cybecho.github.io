@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/NAS-f270ca5caee84ea1a6bc20f5303e5c96"
 
 ---
 
-![Image](image_577aa696ad4c.png)
+![Image](image_d141a382ddc8.png)
 
 # NAS로 할 수 있는것들
 
@@ -205,7 +205,7 @@ notion_url: "https://www.notion.so/NAS-f270ca5caee84ea1a6bc20f5303e5c96"
 <details>
 <summary>[**H110M DGS (지금 컴)**](https://www.asrock.com/mb/Intel/H110M-DGS/index.kr.asp)** M ATX 최대 램 32GB (6,7세대 지원함)**</summary>
 
-![Image](image_452a6d4e0f8d.jpeg)
+![Image](image_db6e19350101.jpeg)
 
 </details>
 
@@ -243,9 +243,9 @@ notion_url: "https://www.notion.so/NAS-f270ca5caee84ea1a6bc20f5303e5c96"
 <details>
 <summary>[**Antec VP500P V2 A-PFC**](https://prod.danawa.com/info/?pcode=2529647)** **(지금 내 파워) ATX 규격임…</summary>
 
-![Image](image_8ddf7f63a9ff.png)
+![Image](image_a14bace5344e.png)
 
-![Image](image_fdabebd41ec7.jpeg)
+![Image](image_59c79ebe6bc7.jpeg)
 
 </details>
 
@@ -350,15 +350,15 @@ ssd로 채우실거면 2.5도 되겠지만 가격은 확 오를것이고 실익�
 
 # 결과물
 
-![Image](image_8ea8292c5569.jpeg)
+![Image](image_fc9537d05994.jpeg)
 
-![Image](image_971dde195870.jpeg)
+![Image](image_cbbc3d803e92.jpeg)
 
-![Image](image_96396217cf18.jpeg)
+![Image](image_1d52e8792a45.jpeg)
 
-![Image](image_a84a98738139.jpeg)
+![Image](image_1aa17860d59c.jpeg)
 
-![Image](image_245754dd563c.jpeg)
+![Image](image_371989e19fc5.jpeg)
 
-![Image](image_84d6179bccd0.jpeg)
+![Image](image_2bab5b553b0b.jpeg)
 

@@ -20,13 +20,13 @@ notion_url: "https://www.notion.so/1d41bab9e3f880bcb09bcd8bf1d9f0df"
 
 # 시스템 조립
 
-![Image](image_ebfd1ddbc05e.jpeg)
+![Image](image_e6a3dd7e1e51.jpeg)
 
-![Image](image_648db7134b1c.jpeg)
+![Image](image_c2d2be659a11.jpeg)
 
-![Image](image_51f19d240af7.jpeg)
+![Image](image_a26a2d7dc31d.jpeg)
 
-![Image](image_347caefdb684.jpeg)
+![Image](image_1ac36fd15708.jpeg)
 
 
 # Proxmox설치
@@ -70,7 +70,7 @@ found ISO9660 FS but no, or wrong proxmox cd-id, skipping 이 몇번 반복되�
 no device with valid ISO found, please check your installation medium 에러가 발생한다.
 ```
 
-![Image](image_a254f4c66fdc.png)
+![Image](image_c5730e2bae42.png)
 
 
 

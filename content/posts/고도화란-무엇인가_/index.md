@@ -4,7 +4,7 @@ date: 2025-09-29T22:31:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Infra & Network"]
-description: "고도화는 기존 소프트웨어나 애플리케이션의 기능, 성능, 안전성 등을 향상시키는 과정으로, 기능, 성능, 안정성, 기술, 보안의 다섯 가지 측면에서 개선 작업을 포함합니다. 이는 시스템이나 서비스를 발전시키고 효율적으로 만들기 위한 IT 용어입니다."
+description: "고도화는 기존 소프트웨어나 애플리케이션의 기능, 성능, 안전성 등을 향상시키는 과정으로, 기능, 성능, 안정성, 기술, 보안 고도화의 다섯 가지 작업으로 나눌 수 있습니다. 이는 시스템이나 서비스를 발전시키고 효율적으로 만들기 위한 IT 용어입니다."
 notion_id: "27d1bab9-e3f8-80ec-a181-df4fcfe1b7be"
 notion_url: "https://www.notion.so/27d1bab9e3f880eca181df4fcfe1b7be"
 ---
@@ -12,9 +12,11 @@ notion_url: "https://www.notion.so/27d1bab9e3f880eca181df4fcfe1b7be"
 # 고도화란 무엇인가?
 
 > **Summary**
-> 고도화는 기존 소프트웨어나 애플리케이션의 기능, 성능, 안전성 등을 향상시키는 과정으로, 기능, 성능, 안정성, 기술, 보안의 다섯 가지 측면에서 개선 작업을 포함합니다. 이는 시스템이나 서비스를 발전시키고 효율적으로 만들기 위한 IT 용어입니다.
+> 고도화는 기존 소프트웨어나 애플리케이션의 기능, 성능, 안전성 등을 향상시키는 과정으로, 기능, 성능, 안정성, 기술, 보안 고도화의 다섯 가지 작업으로 나눌 수 있습니다. 이는 시스템이나 서비스를 발전시키고 효율적으로 만들기 위한 IT 용어입니다.
 
 ---
+
+![Image](image_2afb4c1843a9.png)
 
 [https://yat-ong.tistory.com/entry/%EA%B3%A0%EB%8F%84%ED%99%94%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80](https://yat-ong.tistory.com/entry/%EA%B3%A0%EB%8F%84%ED%99%94%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80)
 

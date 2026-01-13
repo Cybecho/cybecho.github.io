@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/i3wm-242197e71102495c807e0d7eb2896288"
 
 ---
 
-![Image](image_1d50118afb66.png)
+![Image](image_8d7637a3c72f.png)
 
 ### install on Arch Linux
 
@@ -34,7 +34,6 @@ notion_url: "https://www.notion.so/i3wm-242197e71102495c807e0d7eb2896288"
 ### hot key
 
 | `**cmd**` |   | `**d**` | search to process |
-|---|---|---|---|
 | `**cmd**` |   | `**enter**` | new tab |
 | `**cmd**` | `**shfit**` | `**q**` | close tab |
 | `**cmd**` |   | `**arrow key**` | change tab |

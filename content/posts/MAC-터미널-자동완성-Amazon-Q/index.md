@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-Amazon-Q-3473fd81d43d4cd3a87f3ad75a11a3f3
 
 ---
 
-![Image](image_224a961aca49.png)
+![Image](image_244fc291fc35.png)
 
 Fig가 2024년 9월 1일부로 아마존 Q와 흡수됨
 

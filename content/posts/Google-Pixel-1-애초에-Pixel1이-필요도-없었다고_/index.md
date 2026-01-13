@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Google-Pixel-1-Pixel1-2311bab9e3f880eb87eae27
 
 ---
 
-![Image](image_ccb2e47a45f7.webp)
+![Image](image_24be875e3eb0.webp)
 
 # 제야의 고수들이 나에게 조언해줬음
 

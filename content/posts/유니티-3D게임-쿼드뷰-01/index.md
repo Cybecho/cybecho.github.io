@@ -24,11 +24,11 @@ notion_url: "https://www.notion.so/3D-01-2e99bfeef2da4c76ac8eecca4dc23fe6"
 
 `Collider`
 
-![Image](image_e1c0240da4e3.png)
+![Image](image_9cb4f7761227.png)
 
-![Image](image_fbbb24befed7.png)
+![Image](image_b9ad3f25b79c.png)
 
-![Image](image_270690909696.png)
+![Image](image_c79a044b8c72.png)
 
 
 > 🔥 ****캐릭터 움직이는 코드****
@@ -47,13 +47,13 @@ notion_url: "https://www.notion.so/3D-01-2e99bfeef2da4c76ac8eecca4dc23fe6"
 
 > 🔥 **Edit - Project Settings - Input Manager**
 
-![Image](image_c6f0c912d23b.png)
+![Image](image_07f06f71a7dd.png)
 
 
 > 🔥 **버그 뒤지게나서 뭔가했더니 역시나 대소문자 이슈였음**
-> ![Image](image_a5576daef5a6.png)
+> ![Image](image_b8daa31ced3d.png)
 >
-> ![Image](image_2fc8af0ff386.png)
+> ![Image](image_b4fff7362b42.png)
 >
 >
 >
@@ -111,7 +111,7 @@ notion_url: "https://www.notion.so/3D-01-2e99bfeef2da4c76ac8eecca4dc23fe6"
 >
 
 > 🔥 **실수다… 왜 애니메이션이 안뜨나 했더니 Trigger로 생성해야할걸 bool로 생성했다**
-> ![Image](image_66c7fcbb4fb8.png)
+> ![Image](image_483c2dffbe80.png)
 >
 >
 

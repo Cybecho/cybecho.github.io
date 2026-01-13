@@ -16,12 +16,12 @@ notion_url: "https://www.notion.so/07-e15763de9751499c9c7a76f2845abfab"
 
 ---
 
-![Image](image_d6a2f2aae016.png)
+![Image](image_4f920e768a1b.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=A7mfPH8jyBE&list=PLO-mt5Iu5TeZF8xMHqtT_DhAPKmjF6i3x&index=8)
 
 > 🔥 ****일단 만들어진 적 오브젝트를 프리팹으로 만들어준다 (위치 초기화도 잊지마요)****
-> ![Image](image_5eef3f1f40bd.png)
+> ![Image](image_28b5f268836b.png)
 >
 >
 
@@ -116,7 +116,7 @@ notion_url: "https://www.notion.so/07-e15763de9751499c9c7a76f2845abfab"
 >
 
 > 🔥 ****몬스터 스포너를 만들어보자****
-> ![Image](image_bca5701b6e95.png)
+> ![Image](image_9711ebb15d38.png)
 >
 >
 > 외부에서 PoolManager의 변수와 함수를 이용하기 위해 게임매니저 스크립트에 PoolManager를 생성하여 초기화해준다
@@ -184,12 +184,12 @@ notion_url: "https://www.notion.so/07-e15763de9751499c9c7a76f2845abfab"
 > >
 > >
 >
-> ![Image](image_c33611e32bef.png)
+> ![Image](image_03f96b2de8bb.png)
 >
 >
 > ## 이제 주변에 자동으로 몬스터가 스폰되는 코드를 생성시켜볼까요
 >
-> ![Image](image_90ff93f4c6f6.png)
+> ![Image](image_e37835dc5ece.png)
 >
 > ```c#
 > //Spawner.cs

@@ -4,7 +4,7 @@ date: 2025-03-23T23:38:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Infra & Network"]
-description: "Tailscale 설치 후 MagicDNS를 활성화하면 각 디바이스는 호스트 이름으로 서로 접근할 수 있으며, 로컬 DNS 설정이 수정되어 Tailscale DNS 서버로 질의가 전달됩니다. 이 과정에서 사용자는 Tailscale IP를 통해 기기 간 직접 통신이 가능해지며, MagicDNS는 TailScale 네트워크 내부에서만 작동합니다."
+description: "Tailscale의 MagicDNS는 VPN 기능을 통해 기기들이 호스트 이름으로 상호 접근할 수 있도록 자동으로 DNS를 설정합니다. MagicDNS가 활성화되면 로컬 DNS 설정이 수정되어 Tailscale DNS 서버로 질의가 전달되며, 이는 Tailnet 맵을 참조하여 IP 주소를 반환합니다. 이 과정은 Tailscale 네트워크 내에서만 작동하며, 외부 DNS에는 영향을 미치지 않습니다."
 notion_id: "1bf1bab9-e3f8-8004-b4cd-fb120b4497d9"
 notion_url: "https://www.notion.so/Tailscale-MagicDNS-1bf1bab9e3f88004b4cdfb120b4497d9"
 ---
@@ -12,17 +12,17 @@ notion_url: "https://www.notion.so/Tailscale-MagicDNS-1bf1bab9e3f88004b4cdfb120b
 # Tailscale의 MagicDNS 작동 원리
 
 > **Summary**
-> Tailscale 설치 후 MagicDNS를 활성화하면 각 디바이스는 호스트 이름으로 서로 접근할 수 있으며, 로컬 DNS 설정이 수정되어 Tailscale DNS 서버로 질의가 전달됩니다. 이 과정에서 사용자는 Tailscale IP를 통해 기기 간 직접 통신이 가능해지며, MagicDNS는 TailScale 네트워크 내부에서만 작동합니다.
+> Tailscale의 MagicDNS는 VPN 기능을 통해 기기들이 호스트 이름으로 상호 접근할 수 있도록 자동으로 DNS를 설정합니다. MagicDNS가 활성화되면 로컬 DNS 설정이 수정되어 Tailscale DNS 서버로 질의가 전달되며, 이는 Tailnet 맵을 참조하여 IP 주소를 반환합니다. 이 과정은 Tailscale 네트워크 내에서만 작동하며, 외부 DNS에는 영향을 미치지 않습니다.
 
 ---
 
-![Image](image_eabbbe4337de.png)
+![Image](image_fdaebca4b718.png)
 
 # TailScale 설치 후에, tailscale DNS는 어디에 먼저 질의하는가?
 
 PR 적다가, 도리어 내가 궁금해졌다.
 
-![Image](image_b21e207ef5d3.png)
+![Image](image_08f89e458628.png)
 
 > Tailscale DNS은 로컬 resolve를 건드릴까? 최초에 요청을 보내는 Tailscale은 어디에 있을까? Tailscale을 설치하는 순간부터, 로컬에 무언가 변경점이 있었을것이다. 로컬DNS를 다시한번 상기해보며, 한번 찾아보면 좋을것같다.
 

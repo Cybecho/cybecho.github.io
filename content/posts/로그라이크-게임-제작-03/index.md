@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/03-cf13efee63d44806a536ffd3acfaea65"
 
 ---
 
-![Image](image_107c1ed5af92.png)
+![Image](image_dce3bd9defdb.png)
 
 
 ## URP로 생성했기 때문에 방법이 좀 다를 수 있다
@@ -36,7 +36,7 @@ notion_url: "https://www.notion.so/03-cf13efee63d44806a536ffd3acfaea65"
 1. 초점 대상 필드에서 초점 대상 개체 사용
 이제 CM vcam은 초점 거리를 카메라와 초점 대상 사이의 거리로 동적으로 설정합니다.
 
-![Image](image_f139ef4085e6.png)
+![Image](image_0ee6b2fe7984.png)
 
 ![Image](image_e4a8ff3eb270.png)
 
@@ -46,9 +46,9 @@ notion_url: "https://www.notion.so/03-cf13efee63d44806a536ffd3acfaea65"
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=fAJWpCmF918)
 
-![Image](image_67bc065d92e1.png)
+![Image](image_f61b723c6fbd.png)
 
-![Image](image_9b0fd8102278.png)
+![Image](image_faebc388f7f7.png)
 
-![Image](image_8ba96947625d.png)
+![Image](image_a722b01716bd.png)
 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/01-4afad8d22bef437ea7543dc69c22792b"
 
 ---
 
-![Image](image_96303492e8a7.png)
+![Image](image_4cb05a9d516f.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=lnvNWuovnRs)
 
@@ -30,7 +30,7 @@ notion_url: "https://www.notion.so/01-4afad8d22bef437ea7543dc69c22792b"
 
 > 🔥 **저장한 캐릭터 정보는 Resources/SPUM/SPUM_Units 에 존재함**
 
-![Image](image_18132699f230.png)
+![Image](image_9583608f2e1f.png)
 
 
 # 리소스 탐색

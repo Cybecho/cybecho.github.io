@@ -4,7 +4,7 @@ date: 2025-12-21T02:39:00.000Z
 draft: false
 tags: ["AI"]
 series: ["AI"]
-description: "AI 시대의 개발 접근법으로, Conductor는 개발 맥락을 코드와 동등한 일급 시민으로 다루며, 명확한 계획 수립을 강조한다. 프로젝트의 정체성을 정의하고, 작업의 스펙과 계획을 문서화하여 팀원 간의 일관성을 확보하며, AI와의 협력을 통해 개발자의 역할을 재정의한다. 그러나 문서의 최신성 유지, 오버헤드 문제, 창의성 제약 등의 도전 과제가 존재한다."
+description: "AI 시대의 개발에서 즉흥적 접근 방식의 위험성을 지적하며, 구글의 Conductor는 개발 맥락을 코드베이스와 통합하여 지속 가능한 문서화와 팀 협업을 촉진하는 구조적 접근법을 제안한다. 이 시스템은 프로젝트의 정체성을 정의하고, 명세 및 계획 단계를 통해 작업을 구체화하며, 구현 단계에서 AI가 계획을 실행하도록 한다. 또한, 기존 프로젝트에 적용할 때의 복잡성을 해결하고, 팀의 일관성을 높이며, 개발자의 역할을 재정의하는 데 중점을 둔다. 그러나 오버헤드 문제, 문서의 최신성 유지, 창의성 제약 등의 도전 과제가 존재한다."
 notion_id: "2d01bab9-e3f8-8085-b209-d1d8d17d14d4"
 notion_url: "https://www.notion.so/Google-CLI-Conductor-2d01bab9e3f88085b209d1d8d17d14d4"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Google-CLI-Conductor-2d01bab9e3f88085b209d1d8
 # Google CLI Conductor: 컨텍스트 중심의 개발 접근법 제안
 
 > **Summary**
-> AI 시대의 개발 접근법으로, Conductor는 개발 맥락을 코드와 동등한 일급 시민으로 다루며, 명확한 계획 수립을 강조한다. 프로젝트의 정체성을 정의하고, 작업의 스펙과 계획을 문서화하여 팀원 간의 일관성을 확보하며, AI와의 협력을 통해 개발자의 역할을 재정의한다. 그러나 문서의 최신성 유지, 오버헤드 문제, 창의성 제약 등의 도전 과제가 존재한다.
+> AI 시대의 개발에서 즉흥적 접근 방식의 위험성을 지적하며, 구글의 Conductor는 개발 맥락을 코드베이스와 통합하여 지속 가능한 문서화와 팀 협업을 촉진하는 구조적 접근법을 제안한다. 이 시스템은 프로젝트의 정체성을 정의하고, 명세 및 계획 단계를 통해 작업을 구체화하며, 구현 단계에서 AI가 계획을 실행하도록 한다. 또한, 기존 프로젝트에 적용할 때의 복잡성을 해결하고, 팀의 일관성을 높이며, 개발자의 역할을 재정의하는 데 중점을 둔다. 그러나 오버헤드 문제, 문서의 최신성 유지, 창의성 제약 등의 도전 과제가 존재한다.
 
 ---
 
-![Image](image_73c2efc9611b.png)
+![Image](image_60f6f4e5770a.png)
 
 🔗 [https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/](https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/)
 
@@ -37,6 +37,8 @@ notion_url: "https://www.notion.so/Google-CLI-Conductor-2d01bab9e3f88085b209d1d8
 또한 "측정은 두 번, 코딩은 한 번(Measure twice, code once)"이라는 원칙을 AI 시대에 재해석한다. 전통적 소프트웨어 공학에서 요구사항 분석과 설계 단계의 중요성은 잘 알려져 있지만, AI 코딩 도구의 즉각성은 이 단계들을 생략하도록 부추긴다. Conductor는 의도적으로 마찰(friction)을 도입한다. 코드를 작성하기 전에 먼저 무엇을 만들 것인지(spec), 어떻게 만들 것인지(plan)를 명시적으로 문서화하도록 강제하는 것이다.
 
 ## 작동 메커니즘의 다층성
+
+![Image](image_a311c8ec4744.png)
 
 Conductor의 워크플로는 세 개의 상호연결된 단계로 구성된다. 각 단계는 서로 다른 차원의 맥락을 다룬다.
 

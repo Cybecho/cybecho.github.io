@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/10-11-a98a69b61ead4832a283c426cb51d7cf"
 
 ---
 
-![Image](image_107442dab3ff.png)
+![Image](image_ae1d0a9b76dc.png)
 
 > 💡 **목차**
 > ---
@@ -30,9 +30,9 @@ notion_url: "https://www.notion.so/10-11-a98a69b61ead4832a283c426cb51d7cf"
 > 💡 **XMeters 설정은 다음과 같이 설정**
 > ---
 >
-> ![Image](image_6cd889b67775.png)
+> ![Image](image_c84104398d61.png)
 >
-> ![Image](image_d863670909a2.png)
+> ![Image](image_ac0910df8113.png)
 >
 >
 
@@ -43,7 +43,7 @@ notion_url: "https://www.notion.so/10-11-a98a69b61ead4832a283c426cb51d7cf"
 > 💡 **설정은 다음과 같음**
 > ---
 >
-> ![Image](image_a6896d0727e7.png)
+> ![Image](image_ef0ca6302561.png)
 >
 >
 
@@ -55,9 +55,9 @@ notion_url: "https://www.notion.so/10-11-a98a69b61ead4832a283c426cb51d7cf"
 > 💡 **세팅정보**
 > ---
 >
-> ![Image](image_116368446b9a.png)
+> ![Image](image_0e1d39f10ec8.png)
 >
-> ![Image](image_66cf5cfb1d52.png)
+> ![Image](image_6d02920a709f.png)
 >
 >
 
@@ -68,7 +68,7 @@ notion_url: "https://www.notion.so/10-11-a98a69b61ead4832a283c426cb51d7cf"
 > 💡 **위 링크를 따라 형식 사용자 지정의 시간으로 이동하여 다음 옵션 적용**
 > ---
 >
-> ![Image](image_43f8b68d1552.png)
+> ![Image](image_332cb57b2600.png)
 >
 >
 
@@ -92,5 +92,5 @@ notion_url: "https://www.notion.so/10-11-a98a69b61ead4832a283c426cb51d7cf"
 
 🔗 [https://github.com/valinet/ExplorerPatcher](https://github.com/valinet/ExplorerPatcher)
 
-![Image](image_72f3951a1241.png)
+![Image](image_a69373a25411.png)
 

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/stable-diffusion-Web-UI-a3fc2a94636545009281c
 
 ---
 
-![Image](image_8e01b08390e7.png)
+![Image](image_64605d166b07.png)
 
 아래 레파토지로 다운로드받는것을 추천드립니다.
 
@@ -54,7 +54,7 @@ choco
 choco -?
 ```
 
-![Image](image_ffc29030db67.png)
+![Image](image_9941628fbf72.png)
 
 ‘[launch.py](http://launch.py/)’ 파일에서 발생한 오류는 'RuntimeError: Couldn’t install torch.'입니다. 이 오류는 PyTorch를 설치할 때 발생하는 것으로 보입니다. 오류 메시지에 따르면 Python 버전이 호환되지 않아 발생한 것 같습니다.
 

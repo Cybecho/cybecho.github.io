@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Proxmox-029d1e143d554abc8b9a6e5da8468f09"
 
 ---
 
-![Image](image_9563adad0c6b.png)
+![Image](image_0ef2e5c3fb5b.png)
 
 
 # 정리문서
@@ -105,5 +105,5 @@ notion_url: "https://www.notion.so/Proxmox-029d1e143d554abc8b9a6e5da8468f09"
 
 [https://it-svr.com/proxmoxe-henolroji-seolcihagi-dsm-7-2/](https://it-svr.com/proxmoxe-henolroji-seolcihagi-dsm-7-2/)
 
-![Image](image_f41fb2d3fc2a.png)
+![Image](image_fe9a04a936e7.png)
 

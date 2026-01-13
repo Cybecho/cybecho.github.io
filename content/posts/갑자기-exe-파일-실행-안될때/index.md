@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/exe-9f0333b7c2534bb9b40a3dbd8ee615d5"
 
 ---
 
-![Image](image_361a678bd4a7.png)
+![Image](image_98aa1df679d9.png)
 
 몬헌 모드질을 좀 하다가… 시스템파일을 건드린것같다
 

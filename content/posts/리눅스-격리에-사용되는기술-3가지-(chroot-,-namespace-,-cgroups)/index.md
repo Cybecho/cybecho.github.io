@@ -4,7 +4,7 @@ date: 2025-02-21T08:50:00.000Z
 draft: false
 tags: ["Docker"]
 series: ["Infra & Network"]
-description: "리눅스 격리에 사용되는 주요 기술은 chroot(파일 시스템 격리), namespaces(자원 격리), cgroups(자원 제한)으로, 이 세 가지 기술이 결합되어 현대적인 컨테이너 기술의 기반을 형성합니다. chroot는 프로세스의 루트 디렉토리를 변경하여 파일 시스템 접근을 제한하고, namespaces는 시스템 자원을 독립적으로 관리하며, cgroups는 자원 사용량을 제어하여 각 컨테이너가 독립적으로 동작하도록 합니다."
+description: "리눅스 격리에 사용되는 주요 기술은 chroot, namespace, cgroups이다. chroot는 파일 시스템 격리를 제공하고, namespace는 프로세스와 네트워크 자원을 독립적으로 관리하며, cgroups는 자원 사용량을 제한한다. 이 세 기술이 결합되어 현대의 컨테이너 기술이 형성되며, 각 컨테이너는 독립적으로 운영되면서 자원 한계를 설정할 수 있다."
 notion_id: "1a11bab9-e3f8-8020-ad74-e473e54bc888"
 notion_url: "https://www.notion.so/3-chroot-namespace-cgroups-1a11bab9e3f88020ad74e473e54bc888"
 ---
@@ -12,9 +12,11 @@ notion_url: "https://www.notion.so/3-chroot-namespace-cgroups-1a11bab9e3f88020ad
 # 리눅스 격리에 사용되는기술 3가지 (chroot , namespace , cgroups)
 
 > **Summary**
-> 리눅스 격리에 사용되는 주요 기술은 chroot(파일 시스템 격리), namespaces(자원 격리), cgroups(자원 제한)으로, 이 세 가지 기술이 결합되어 현대적인 컨테이너 기술의 기반을 형성합니다. chroot는 프로세스의 루트 디렉토리를 변경하여 파일 시스템 접근을 제한하고, namespaces는 시스템 자원을 독립적으로 관리하며, cgroups는 자원 사용량을 제어하여 각 컨테이너가 독립적으로 동작하도록 합니다.
+> 리눅스 격리에 사용되는 주요 기술은 chroot, namespace, cgroups이다. chroot는 파일 시스템 격리를 제공하고, namespace는 프로세스와 네트워크 자원을 독립적으로 관리하며, cgroups는 자원 사용량을 제한한다. 이 세 기술이 결합되어 현대의 컨테이너 기술이 형성되며, 각 컨테이너는 독립적으로 운영되면서 자원 한계를 설정할 수 있다.
 
 ---
+
+![Image](image_471f03c7d670.png)
 
 🔗 [https://github.com/p8952/bocker](https://github.com/p8952/bocker)
 

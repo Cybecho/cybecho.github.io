@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Rainmeter-MAC-4032f7a00bb14c29b86e8ded6670c40
 
 ---
 
-![Image](image_62d940d000cf.png)
+![Image](image_943e396e520b.png)
 
 ### Rainmeter 설치 후 아래 깃허브 파일 다운로드 
 

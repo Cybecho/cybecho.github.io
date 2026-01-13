@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/WSL2-GUI-21b662ddae8b49a097cc3f66a93dafcc"
 
 ---
 
-![Image](image_3af3e35b747b.png)
+![Image](image_8e4bc1fabe52.png)
 
 🔗 [https://x410.dev/cookbook/wsl/enable-systemd-in-wsl2-and-have-the-best-ubuntu-gui-desktop-experience/](https://x410.dev/cookbook/wsl/enable-systemd-in-wsl2-and-have-the-best-ubuntu-gui-desktop-experience/)
 

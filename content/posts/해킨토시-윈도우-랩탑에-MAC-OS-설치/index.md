@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-OS-98ccd93277fc489a9908fc688fda44ed"
 
 ---
 
-![Image](image_caf2b00d43ab.png)
+![Image](image_caa2b57844b9.png)
 
 🔗 [https://dortania.github.io/OpenCore-Install-Guide/](https://dortania.github.io/OpenCore-Install-Guide/)
 
@@ -117,7 +117,7 @@ ex) dortania's opencore guide
 
 🔗 [https://github.com/valnoxy/t480-oc](https://github.com/valnoxy/t480-oc)
 
-![Image](image_2f8a809f628f.png)
+![Image](image_9cd08f93370a.png)
 
 > 💡 **ROM**
 > ---

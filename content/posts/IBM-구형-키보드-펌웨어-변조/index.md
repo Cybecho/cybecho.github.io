@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/IBM-1961bab9e3f8805da851fe877c67eb03"
 
 ---
 
-![Image](image_c1bb8e1e5ed2.png)
+![Image](image_53688d17593b.png)
 
 [https://www.reddit.com/r/thinkpad/comments/ondeco/how_to_swap_the_fn_ctrl_keys_on_the_sk8845_sk8835/](https://www.reddit.com/r/thinkpad/comments/ondeco/how_to_swap_the_fn_ctrl_keys_on_the_sk8845_sk8835/)
 
@@ -132,7 +132,6 @@ Fn::LWin  ; Fn 키를 왼쪽 Win 키로 매핑
 ### 요약
 
 | 방법 | 장점 | 단점 |
-|---|---|---|
 | **BIOS 설정** | 안정적 | 옵션 유무 확인 필요 |
 | **전용 유틸리티** | 공식 지원 | SK-8845 호환성 확인 필수 |
 | **KeyTweak** | 즉시 적용 가능 | 관리자 권한 필요 |
@@ -195,7 +194,6 @@ Fn & LCtrl::LWin  ; Fn + LCtrl을 Win 키로 매핑
 ### **요약: 방법별 비교**
 
 | 방법 | 실행 난이도 | 안정성 | 비고 |
-|---|---|---|---|
 | BIOS + 소프트웨어 재맵핑 | 중간 | 높음 | BIOS 옵션 확인 필수 |
 | DIP 스위치 | 낮음 | 높음 | 하드웨어 지원 필요 |
 | 외부 컨트롤러 | 매우 높음 | 중간 | 기술력 요구 |

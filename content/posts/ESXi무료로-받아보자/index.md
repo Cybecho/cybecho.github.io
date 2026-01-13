@@ -16,14 +16,13 @@ notion_url: "https://www.notion.so/ESXi-2111bab9e3f880719c1fe2d33faebce7"
 
 ---
 
-![Image](image_0aa3dea5c07a.png)
+![Image](image_fc1bdd359fac.png)
 
 🔗 [https://svrforum.com/itnews/2301976](https://svrforum.com/itnews/2301976)
 
 ## 내 정보 (어처피 SHA있어봤자 의미없을듯)
 
 | 항목 | 내용 |
-|---|---|
 | **File Name** | VMware-VMvisor-Installer-8.0U3e-24677879.x86_64.iso (618.34 MB) |
 | **Release Date** | Apr 10, 2025 |
 | **Last Updated** | Apr 07, 2025 |

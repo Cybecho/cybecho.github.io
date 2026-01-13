@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Copilot-Twinny-11ad1a5015414e19ba9db038b3f221
 
 ---
 
-![Image](image_84ac1272b7fa.png)
+![Image](image_571b3ec495cf.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=2Nj1W3CP9mM)
 
@@ -124,7 +124,6 @@ def quicksort(arr):
 Codestral과 Twinny의 조합을 다른 솔루션과 비교한 벤치마크 결과:
 
 | 측정 항목 | Codestral + Twinny | GitHub Copilot | OpenAI Codex |
-|---|---|---|---|
 | 응답 시간 | 평균 0.5초 | 평균 1.2초 | 평균 0.8초 |
 | 코드 품질 (Lint 점수) | 92/100 | 89/100 | 90/100 |
 | 리소스 사용 (RAM) | 평균 2GB | N/A (클라우드) | N/A (클라우드) |

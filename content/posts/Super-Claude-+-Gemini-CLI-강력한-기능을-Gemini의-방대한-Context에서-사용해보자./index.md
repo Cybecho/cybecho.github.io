@@ -4,7 +4,7 @@ date: 2025-08-07T11:01:00.000Z
 draft: false
 tags: ["AI", "Claude"]
 series: ["AI"]
-description: "슈퍼클로드와 제미나이 CLI의 통합을 통해 강력한 AI 코딩 환경을 구축하는 방법을 설명한다. 슈퍼클로드는 16개의 슬래시 커맨드와 11개 분야의 전문가 페르소나를 활용하여 개발 효율성을 극대화하며, 제미나이는 방대한 컨텍스트를 무료로 제공하여 토큰 소모 문제를 해결한다. 설치 및 설정 과정이 상세히 안내되며, 최종적으로 두 AI의 장점을 결합한 혁신적인 코딩 경험을 제공한다."
+description: "슈퍼클로드와 제미나이 CLI의 결합으로 강력한 AI 코딩 환경이 구축되었다. 슈퍼클로드는 16개의 슬래시 커맨드와 11개의 전문가 페르소나를 통해 개발 과정을 지원하며, 제미나이는 방대한 컨텍스트를 제공하여 토큰 소모 문제를 해결한다. 이 조합은 개발자에게 새로운 경험을 선사하며, 설치 및 설정 방법도 자세히 설명되어 있다."
 notion_id: "2481bab9-e3f8-808a-9c76-ed03d482aaba"
 notion_url: "https://www.notion.so/Super-Claude-Gemini-CLI-Gemini-Context-2481bab9e3f8808a9c76ed03d482aaba"
 ---
@@ -12,9 +12,11 @@ notion_url: "https://www.notion.so/Super-Claude-Gemini-CLI-Gemini-Context-2481ba
 # Super Claude + Gemini CLI 강력한 기능을 Gemini의 방대한 Context에서 사용해보자.
 
 > **Summary**
-> 슈퍼클로드와 제미나이 CLI의 통합을 통해 강력한 AI 코딩 환경을 구축하는 방법을 설명한다. 슈퍼클로드는 16개의 슬래시 커맨드와 11개 분야의 전문가 페르소나를 활용하여 개발 효율성을 극대화하며, 제미나이는 방대한 컨텍스트를 무료로 제공하여 토큰 소모 문제를 해결한다. 설치 및 설정 과정이 상세히 안내되며, 최종적으로 두 AI의 장점을 결합한 혁신적인 코딩 경험을 제공한다.
+> 슈퍼클로드와 제미나이 CLI의 결합으로 강력한 AI 코딩 환경이 구축되었다. 슈퍼클로드는 16개의 슬래시 커맨드와 11개의 전문가 페르소나를 통해 개발 과정을 지원하며, 제미나이는 방대한 컨텍스트를 제공하여 토큰 소모 문제를 해결한다. 이 조합은 개발자에게 새로운 경험을 선사하며, 설치 및 설정 방법도 자세히 설명되어 있다.
 
 ---
+
+![Image](image_9d4c8a66ef0f.png)
 
 ## 슈퍼클로드의 정교함과 제미나이의 광활함을 한 곳에 담다
 
@@ -266,14 +268,14 @@ npm install -g @google/gemini-cli
 제미나이 CLI가 설치되면 사용자 폴더에 `.gemini`라는 새 폴더가 생성된다. 이제 슈퍼클로드의 시스템 파일을 이곳으로 옮겨야 한다.
 
 1. **지침 파일 복사**: 기존의 `.claude` 폴더에서 `CLAUDE.md`, `COMMANDS.md`, `FLAGS.md`, `MCP.md`, `MODES.md`, `ORCHESTRATOR.md`, `PERSONAS.md`, `PRINCIPLES.md`, `RULES.md` 총 9개의 파일을 복사하여 `.gemini` 폴더에 붙여넣는다.
-![Image](image_548b2c8a8e4d.png)
+![Image](image_0190fda9bf2f.png)
 
 1. **커맨드 파일 복사**:
   - `.gemini` 폴더 안에 `commands`라는 이름의 새 폴더를 만든다.
-![Image](image_e944543f9d8c.png)
+![Image](image_ba6b726f0199.png)
 
   - `.claude/commands` 폴더 안에 있는 `sc` 폴더 전체를 복사하여 방금 만든 `.gemini/commands` 폴더에 붙여넣는다.
-![Image](image_a17042733f2c.png)
+![Image](image_2cfea0c8f993.png)
 
 ---
 

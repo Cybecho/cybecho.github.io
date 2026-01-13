@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Typeless-2d61bab9e3f88030a5fce89c4bde097e"
 
 ---
 
-![Image](image_c868ac00576a.png)
+![Image](image_2cad8cb88cda.png)
 
 ## **Typeless: 생각하는 속도로 쓰는 새로운 방법**
 

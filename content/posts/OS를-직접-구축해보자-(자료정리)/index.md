@@ -14,11 +14,11 @@ notion_url: "https://www.notion.so/OS-2dc1bab9e3f881cda31cd1b35bbf40e2"
 
 ---
 
-![Image](image_857f36325a82.png)
+![Image](image_8879e929b06b.png)
 
-[https://www.perplexity.ai/search/0dc30e87-9cb3-4b9f-9b3e-6718de2710bc](https://www.perplexity.ai/search/0dc30e87-9cb3-4b9f-9b3e-6718de2710bc)
+🔗 [https://www.perplexity.ai/search/0dc30e87-9cb3-4b9f-9b3e-6718de2710bc](https://www.perplexity.ai/search/0dc30e87-9cb3-4b9f-9b3e-6718de2710bc)
 
-[https://claude.ai/public/artifacts/5542f2f9-02e3-42ad-a26d-38f791034188](https://claude.ai/public/artifacts/5542f2f9-02e3-42ad-a26d-38f791034188)
+🔗 [https://claude.ai/public/artifacts/5542f2f9-02e3-42ad-a26d-38f791034188](https://claude.ai/public/artifacts/5542f2f9-02e3-42ad-a26d-38f791034188)
 
 ## 1. 필수 사전 지식 및 개발 환경 구축
 

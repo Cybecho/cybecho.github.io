@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Docker-socket-82adb5e873784b12a106f80977c8ef7
 
 ---
 
-![Image](image_37ff191bbb19.png)
+![Image](image_97166cfc040a.png)
 
 ```shell
 sudo systemctl stop docker

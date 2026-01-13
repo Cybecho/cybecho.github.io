@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Windows-steam-492feb6b0d124b89af7c2c4a6f0cf33
 
 ---
 
-![Image](image_d9b102569e97.png)
+![Image](image_6cd31f1b2ee6.png)
 
 <details>
 <summary>[https://www.tumblr.com/bugbear5/135763151126/윈도우-pc를-스팀-머신으로-만들기](https://www.tumblr.com/bugbear5/135763151126/윈도우-pc를-스팀-머신으로-만들기)</summary>
@@ -132,7 +132,6 @@ graph TD
 ## 스팀 기본 쉘 사용의 장점
 
 | 장점 | 설명 |
-|---|---|
 | 자원 효율 | 윈도우 인터페이스 구동 자원을 게임에 활용 |
 | 패드 호환성 | 엑스박스 패드의 가이드 버튼을 스팀에서 사용 가능 |
 | 집중도 향상 | Alt+Tab 시 다른 프로그램 노출 최소화 |

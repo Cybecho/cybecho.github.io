@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Copilot-Continue-59143691caa94b4abbcf23bc6523
 
 ---
 
-![Image](image_7bb605beb6d0.png)
+![Image](image_273dc6a9fe3e.png)
 
 🔗 [https://github.com/continuedev/continue](https://github.com/continuedev/continue)
 

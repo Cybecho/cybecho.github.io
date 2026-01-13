@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/LUMA-AI-Text-to-3D-880fd83e2a6d467ca3effea80d
 
 ---
 
-![Image](image_1ad736886aaf.png)
+![Image](image_d0c3d772b1ee.png)
 
 🔗 [https://www.youtube.com/watch?v=jGHDA25ukBw](https://www.youtube.com/watch?v=jGHDA25ukBw)
 

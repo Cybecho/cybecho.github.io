@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/1-1bf1bab9e3f88071a376e0e615a54f00"
 
 ---
 
-![Image](image_ec5720171e68.png)
+![Image](image_3b4bf38908aa.png)
 
 ```plain text
 서양과 동양을 가르는 경계는 어디서 오는가? 

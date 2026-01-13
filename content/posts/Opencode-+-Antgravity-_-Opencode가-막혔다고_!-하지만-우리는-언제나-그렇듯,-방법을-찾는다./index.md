@@ -16,9 +16,9 @@ notion_url: "https://www.notion.so/Opencode-Antgravity-Opencode-2e51bab9e3f880cf
 
 ---
 
-![Image](image_8eed3407e781.png)
+![Image](image_23a1c46c1181.png)
 
-[https://youtu.be/UQv-OfWDgxs?si=xL-6ZwDa3uk2g2Ad](https://youtu.be/UQv-OfWDgxs?si=xL-6ZwDa3uk2g2Ad)
+🎥 [동영상 보기](https://youtu.be/UQv-OfWDgxs?si=xL-6ZwDa3uk2g2Ad)
 
 ## [주제 1: Anthropic의 시장 통제 전략과 제3자 툴 차단 현황]
 

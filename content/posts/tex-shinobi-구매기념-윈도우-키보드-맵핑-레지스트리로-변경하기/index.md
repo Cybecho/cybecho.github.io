@@ -16,9 +16,9 @@ notion_url: "https://www.notion.so/tex-shinobi-769bc5821e7c4c1bb2d7d6754b7fe6b5"
 
 ---
 
-![Image](image_dbf9676dabe7.png)
+![Image](image_6d98783e9401.png)
 
-![Image](image_e46e54e2d5ea.png)
+![Image](image_4ab7300f77ce.png)
 
 
 🔗 [https://gigglehd.com/gg/soft/12015825](https://gigglehd.com/gg/soft/12015825)

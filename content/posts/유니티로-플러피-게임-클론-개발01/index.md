@@ -22,15 +22,15 @@ notion_url: "https://www.notion.so/01-a3bc990885bd4f8e921f13019d832dd9"
 
 ## 이미지 레이어 순서
 
-![Image](image_dc07e49c3a86.png)
+![Image](image_38aa4b9ea153.png)
 
 ## 이미지 타일화
 
-![Image](image_80ebe2765127.png)
+![Image](image_9592b7e0fcf8.png)
 
 ## 애니메이션 커브설정
 
-![Image](image_6d58aae37d6e.png)
+![Image](image_d7390e72b36a.png)
 
 ## 오브젝트 물리법칙적용
 
@@ -44,11 +44,11 @@ notion_url: "https://www.notion.so/01-a3bc990885bd4f8e921f13019d832dd9"
 
 `Capsule Colider 2D - Direction 방향설정 - Edit Colider`**   **
 
-![Image](image_13c9bd11b4fe.png)
+![Image](image_e63d231bc952.png)
 
 ## 코드 에디터 설정
 
-![Image](image_fafb5f2a9cfa.png)
+![Image](image_1be53636f003.png)
 
 # 코딩부분
 
@@ -152,7 +152,7 @@ Prefab을 만드는 방법은 그냥 Hieararchy에 올라가있는 오브젝트�
 > 🔥 **사용방법**
 > 제네레이터 내부에서 컴포넌트 추가하고 스크립트 내에서 public으로 GameObject자료형을 가진 변수 설정
 >
-> ![Image](image_f9a1d2198f8a.png)
+> ![Image](image_8ec424f55d7f.png)
 >
 > 그 후 하이하이어라키에서 생산할 프리팹을 드래그앤 드롭 혹은 직접 선택하여 변수내부에 할당 가능
 >

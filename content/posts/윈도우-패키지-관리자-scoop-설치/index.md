@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/scoop-85c8c41652704cfc9b25a72a32ce190b"
 
 ---
 
-![Image](image_15ddadf400f3.png)
+![Image](image_f81682ff9203.png)
 
 ## scoop설치
 

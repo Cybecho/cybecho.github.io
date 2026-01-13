@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-82c31900393a43f7a172aa9d3bfa0644"
 
 ---
 
-![Image](image_7a2588d624f9.png)
+![Image](image_b1e68bbf805a.png)
 
 # 윈도우 커서 MAC처럼
 

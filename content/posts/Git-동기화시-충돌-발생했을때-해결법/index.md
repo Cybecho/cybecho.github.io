@@ -19,9 +19,9 @@ notion_url: "https://www.notion.so/Git-c00dabb68b8f4de0873395dc39aa66b4"
 
 ![Image](image_49f5a6ca9beb.png)
 
-![Image](image_bdbc460bd604.png)
+![Image](image_ea855fce7555.png)
 
-![Image](image_92d401ee1540.png)
+![Image](image_0c2bbcad6680.png)
 
 ```latex
 git rm <파일>

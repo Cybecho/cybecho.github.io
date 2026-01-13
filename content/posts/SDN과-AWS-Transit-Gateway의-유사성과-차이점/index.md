@@ -4,7 +4,7 @@ date: 2025-04-08T01:18:00.000Z
 draft: false
 tags: ["AWS", "AI Generate"]
 series: ["Infra & Network"]
-description: "SDN과 AWS Transit Gateway는 중앙 집중식 네트워크 관리와 연결성을 공유하지만, SDN은 다양한 환경에서 사용 가능한 광범위한 아키텍처인 반면, AWS Transit Gateway는 AWS 클라우드에 특화된 서비스입니다. AWS Transit Gateway는 SDN 원칙을 클라우드 환경에서 부분적으로 구현할 수 있으며, SD-WAN과의 통합을 통해 동적 라우팅을 지원합니다. 그러나 AWS Transit Gateway는 SDN의 전체 아키텍처를 대체하지 않으며, 주로 트래픽 라우팅에 초점을 맞추고 있습니다."
+description: "SDN과 AWS Transit Gateway는 중앙 집중식 네트워크 관리와 연결성을 공유하지만, SDN은 다양한 환경에서 사용 가능한 광범위한 개념인 반면, AWS Transit Gateway는 AWS 클라우드에 특화된 서비스입니다. AWS Transit Gateway는 SDN의 일부 원칙을 클라우드 환경에서 구현할 수 있는 도구로, 특히 SD-WAN과의 통합을 통해 동적 라우팅을 지원합니다. 그러나 SDN의 전체 아키텍처를 대체하지는 않습니다."
 notion_id: "1cf1bab9-e3f8-8098-b34a-e4bf431c8687"
 notion_url: "https://www.notion.so/SDN-AWS-Transit-Gateway-1cf1bab9e3f88098b34ae4bf431c8687"
 ---
@@ -12,9 +12,11 @@ notion_url: "https://www.notion.so/SDN-AWS-Transit-Gateway-1cf1bab9e3f88098b34ae
 # SDN과 AWS Transit Gateway의 유사성과 차이점
 
 > **Summary**
-> SDN과 AWS Transit Gateway는 중앙 집중식 네트워크 관리와 연결성을 공유하지만, SDN은 다양한 환경에서 사용 가능한 광범위한 아키텍처인 반면, AWS Transit Gateway는 AWS 클라우드에 특화된 서비스입니다. AWS Transit Gateway는 SDN 원칙을 클라우드 환경에서 부분적으로 구현할 수 있으며, SD-WAN과의 통합을 통해 동적 라우팅을 지원합니다. 그러나 AWS Transit Gateway는 SDN의 전체 아키텍처를 대체하지 않으며, 주로 트래픽 라우팅에 초점을 맞추고 있습니다.
+> SDN과 AWS Transit Gateway는 중앙 집중식 네트워크 관리와 연결성을 공유하지만, SDN은 다양한 환경에서 사용 가능한 광범위한 개념인 반면, AWS Transit Gateway는 AWS 클라우드에 특화된 서비스입니다. AWS Transit Gateway는 SDN의 일부 원칙을 클라우드 환경에서 구현할 수 있는 도구로, 특히 SD-WAN과의 통합을 통해 동적 라우팅을 지원합니다. 그러나 SDN의 전체 아키텍처를 대체하지는 않습니다.
 
 ---
+
+![Image](image_07fddd4e97c3.png)
 
 [https://grok.com/share/bGVnYWN5_6a0c2d4d-90e9-48ae-9b44-4fe0e1e66207](https://grok.com/share/bGVnYWN5_6a0c2d4d-90e9-48ae-9b44-4fe0e1e66207)
 
@@ -88,7 +90,6 @@ AWS Transit Gateway의 특정 기능은 SDN과의 통합에서 중요한 역할�
 다음 표는 AWS Transit Gateway와 SDN의 주요 기술적 비교를 요약합니다:
 
 | **항목** | **SDN** | **AWS Transit Gateway** |
-|---|---|---|
 | **범위** | 광범위한 네트워크 아키텍처, 다양한 환경 적용 | AWS 클라우드 환경에 특화된 서비스 |
 | **주요 기능** | 제어 평면/데이터 평면 분리, 프로그래밍 가능 | VPC 및 온프레미스 네트워크 연결, 트래픽 라우팅 |
 | **통합 가능성** | SD-WAN, 온프레미스, 멀티클라우드 등 | 주로 AWS SD-WAN과 통합, AWS 환경 내에서 최적화 |

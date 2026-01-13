@@ -41,14 +41,14 @@ notion_url: "https://www.notion.so/Ubuntu-ssh-for-Ipad-4b5fa5b287034745b0cbcc3a5
 sudo apt update
 ```
 
-![Image](image_52406b286550.png)
+![Image](image_1d8bf3cc9b8d.png)
 
 
 ```shell
 sudo apt install openssh-server
 ```
 
-![Image](image_8950929e2ffd.png)
+![Image](image_f4dc63100533.png)
 
 
 # 서버 IP 확인
@@ -64,7 +64,7 @@ ifconfig
 >
 >
 
-![Image](image_6793b56dc0eb.png)
+![Image](image_3cdf6f9f7d85.png)
 
 
 # **SSH 서버의 포트 설정하기**
@@ -88,7 +88,7 @@ sudo nano /etc/ssh/sshd_config
 systemctl restart sshd
 ```
 
-![Image](image_f6600f27fec6.png)
+![Image](image_3662a001cba0.png)
 
 
 ```shell
@@ -99,7 +99,7 @@ ssh -p 12345 당신계정이름@당신의IPv4
 ssh -p 12345 sbu@10.0.2.15
 ```
 
-![Image](image_1152763b6b58.png)
+![Image](image_c7f3cd0155b7.png)
 
 
 **SSH 키 비밀번호 없이 이용하기**
@@ -121,7 +121,6 @@ SHA256:/LWlSzXXfZojm+UUZT1L1fgtgVUXI4wkIiyjfd46cSQ sbu@sbu
 The key's randomart image is:
 +---[RSA 4096]----+
 |    .. . ...o+.=*|
-|---|
 |   o .. . ....+ *|
 |  o o          ==|
 | . . E o      ooB|

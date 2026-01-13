@@ -20,9 +20,9 @@ notion_url: "https://www.notion.so/10-23b1bab9e3f880248273f875108d25f6"
 
 # 블로그 빌드 시간 10배 단축
 
-![Image](image_38b770b287c9.png)
+![Image](image_c49da886ba4e.png)
 
-![Image](image_76809b4118e1.png)
+![Image](image_19e71cb1706d.png)
 
 결론부터 말하자면, GitHub Actions의 워크플로우를 근본적으로 이해하고 캐시를 전략적으로 활용함으로써, 10분이 넘던 빌드 시간을 1분 남짓으로 단축시킬 수 있었다.
 

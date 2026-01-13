@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Semaphore-UI-CI-CD-d875f75584644126a30bda65c6
 
 ---
 
-![Image](image_2bda9578629b.png)
+![Image](image_13ceef124202.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=tc3tqMIN89U)
 

@@ -16,11 +16,11 @@ notion_url: "https://www.notion.so/Claude-Code-GLM-Claude-2dc1bab9e3f8802abb8be1
 
 ---
 
-![Image](image_bcac597e15c3.png)
+![Image](image_e8cd9c5d6b21.png)
 
-[https://www.reddit.com/r/ClaudeCode/comments/1o8yst9/how_do_i_use_glm_46_and_claude_on_claude_code/](https:/<wbr>/<wbr>www.reddit.com/<wbr>r/<wbr>ClaudeCode/<wbr>comments/<wbr>1o8yst9/<wbr>how_<wbr>do_<wbr>i_<wbr>use_<wbr>glm_<wbr>46_<wbr>and_<wbr>claude_<wbr>on_<wbr>claude_<wbr>code/<wbr>)
+[https://www.reddit.com/r/ClaudeCode/comments/1o8yst9/how_do_i_use_glm_46_and_claude_on_claude_code/](https://www.reddit.com/r/ClaudeCode/comments/1o8yst9/how_do_i_use_glm_46_and_claude_on_claude_code/)
 
-[https://github.com/JoeInnsp23/claude-glm-wrapper](https:/<wbr>/<wbr>github.com/<wbr>JoeInnsp23/<wbr>claude-<wbr>glm-<wbr>wrapper)
+[https://github.com/JoeInnsp23/claude-glm-wrapper](https://github.com/JoeInnsp23/claude-glm-wrapper)
 
 ---
 

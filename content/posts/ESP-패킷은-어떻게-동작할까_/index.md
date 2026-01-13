@@ -4,7 +4,7 @@ date: 2025-02-20T04:39:00.000Z
 draft: false
 tags: ["Infra"]
 series: ["Let's Homelab!"]
-description: "IPsec VPN 환경에서의 통신 방식과 ESP 패킷의 동작 원리를 분석하며, 디폴트 라우팅과 캡슐화 과정을 통해 ISP가 내부망 정보를 몰라도 패킷을 전달할 수 있는 이유를 설명합니다. 현재 구성은 Tunnel Mode로, Site-to-Site VPN에서 IPsec을 통해 패킷이 암호화되고 외부 IP 헤더로 캡슐화되어 ISP를 통해 전송됩니다."
+description: "ESP 패킷의 작동 원리를 설명하며, IPsec VPN 환경에서의 통신 방식과 디폴트 라우팅의 역할을 분석합니다. ISP는 내부 네트워크 정보를 알지 못하지만, 외부 IP 헤더를 통해 패킷을 전달할 수 있습니다. 현재 구성은 Tunnel Mode로, IPsec 캡슐화 방식과 Wireshark 분석을 통해 확인됩니다. 각 라우터는 모르는 목적지를 ISP로 보내도록 설정되어 있어, 복잡한 라우팅 없이도 통신이 가능합니다."
 notion_id: "1a01bab9-e3f8-8053-9f61-ec583099a965"
 notion_url: "https://www.notion.so/ESP-1a01bab9e3f880539f61ec583099a965"
 ---
@@ -12,9 +12,11 @@ notion_url: "https://www.notion.so/ESP-1a01bab9e3f880539f61ec583099a965"
 # ESP 패킷은 어떻게 동작할까?
 
 > **Summary**
-> IPsec VPN 환경에서의 통신 방식과 ESP 패킷의 동작 원리를 분석하며, 디폴트 라우팅과 캡슐화 과정을 통해 ISP가 내부망 정보를 몰라도 패킷을 전달할 수 있는 이유를 설명합니다. 현재 구성은 Tunnel Mode로, Site-to-Site VPN에서 IPsec을 통해 패킷이 암호화되고 외부 IP 헤더로 캡슐화되어 ISP를 통해 전송됩니다.
+> ESP 패킷의 작동 원리를 설명하며, IPsec VPN 환경에서의 통신 방식과 디폴트 라우팅의 역할을 분석합니다. ISP는 내부 네트워크 정보를 알지 못하지만, 외부 IP 헤더를 통해 패킷을 전달할 수 있습니다. 현재 구성은 Tunnel Mode로, IPsec 캡슐화 방식과 Wireshark 분석을 통해 확인됩니다. 각 라우터는 모르는 목적지를 ISP로 보내도록 설정되어 있어, 복잡한 라우팅 없이도 통신이 가능합니다.
 
 ---
+
+![Image](image_471b01657458.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=bkcrSaJ_qxo)
 
@@ -24,7 +26,7 @@ notion_url: "https://www.notion.so/ESP-1a01bab9e3f880539f61ec583099a965"
 
 ### >>>> ISP는 아무런 라우팅을 안했는데, 패킷이 목적지로 어떻게 이동하는가?
 
-![Image](image_75709f0d8cb3.png)
+![Image](image_51e42cff2dc7.png)
 
 R1과 HQ 간의 통신이 정상적으로 이루어지는 것을 확인했습니다. 
 
@@ -63,14 +65,14 @@ end
 1. **ISP 전달:** ISP는 외부 헤더(1.1.100.5 → 1.1.100.1)만 보고 VPN 라우터(1.1.100.1)까지 패킷을 전달합니다. ISP는 내부 IP를 알 필요가 없습니다.
 1. **VPN 라우터/HQ 라우터 처리:** VPN 라우터/HQ 라우터는 외부 헤더를 제거하고 내부 IP 정보(1.1.1.10 → 3.3.3.100)를 확인합니다. 목적지(3.3.3.100)가 자신에게 연결된 네트워크이므로 해당 방향으로 패킷을 보냅니다.
 1. **응답 패킷:** 응답 패킷도 동일한 과정을 거쳐 R1까지 전달됩니다.
-![Image](image_5cc95beda4c9.png)
+![Image](image_a4bcf23cc633.png)
 
 
 ### >>>> ISP는 내부망 정보를 몰라도 통신이 가능한 이유
 
 ISP는 IPsec 트래픽의 외부 헤더(1.1.100.x)만 보고 패킷을 중계하며, 실제 내부 IP 주소 통신은 VPN 터널 안에서 캡슐화되어 처리됩니다. 각 라우터가 디폴트 라우트를 통해 "모르는 IP는 ISP로" 보내고, VPN/IPsec 설정에서 내부 IP를 외부 IP로 캡슐화하기 때문에 ISP는 특별한 라우팅 없이도 목적지로 패킷을 전달할 수 있습니다.
 
-![Image](image_db1ee9347236.png)
+![Image](image_4d6b7ed63ab4.png)
 
 
 
@@ -81,7 +83,7 @@ ISP는 IPsec 트래픽의 외부 헤더(1.1.100.x)만 보고 패킷을 중계하
 
 패킷 구조만 보면 터널모드겠지만, 저희는 이번에 따로 터널을 설정해준기억이 없는데 과연 진짜 터널 모드인것일까? 라는 의문에서 시작된 문제 분석입니다.
 
-![Image](image_3d7704036ad3.png)
+![Image](image_8bc71e03d715.png)
 
 ### >>>> IPsec 모드 분석
 
@@ -97,7 +99,6 @@ ISP는 IPsec 트래픽의 외부 헤더(1.1.100.x)만 보고 패킷을 중계하
 ### >>>> Transport Mode vs. Tunnel Mode 비교
 
 | 구분 | Transport Mode | Tunnel Mode |
-|---|---|---|
 | 사용 사례 | 호스트 ↔ 호스트 직접 암호화 | 라우터/방화벽 등 중간 장비 간 암호화("Site-to-Site") |
 | 암호화 범위 | 원본 IP 헤더 일부 제외, 데이터(페이로드) 암호화 | 원본 IP 헤더 포함 전체 패킷 암호화 후 새 IP 헤더 추가 |
 | 장점 | 호스트 IP 그대로 노출 가능, IP 헤더 정보 일부 노출(효율적) | 내부 IP 전부 감춰짐(보안성 높음), 서로 다른 내부 네트워크 연결에 적합 |
@@ -114,7 +115,7 @@ ISP는 IPsec 트래픽의 외부 헤더(1.1.100.x)만 보고 패킷을 중계하
 
 # 토폴로지 구성
 
-![Image](image_ad2b9b26e45e.png)
+![Image](image_2c25e5b414c9.png)
 
 ## >> 라우터 IP 추가
 
@@ -223,7 +224,7 @@ end
 
 루프백 네트워크는 공유하지 않도록 설정
 
-![Image](image_16ae293e0888.png)
+![Image](image_7da4e9290c19.png)
 
 **VPN (OSPF 설정)**
 
@@ -251,7 +252,7 @@ end
 
 ## **>> 라우팅 - Static**
 
-![Image](image_264611502f89.png)
+![Image](image_fa154c55c7e1.png)
 
 **R1**
 
@@ -616,7 +617,7 @@ end
 sh ip ro
 ```
 
-![Image](image_ab9390b64a61.png)
+![Image](image_4aac555278af.png)
 
 `reverse-route static` 이 설정 덕분은
 
@@ -641,11 +642,11 @@ static으로 가져와서, reverse-route 로 내부망 라우터들에게 전달
 
 이 두 명령어 덕분에 R2측에 R3의 내부망을 Static으로 알 수 있고, R2의 내부망인 R1도 R2에게 리버스로 전달받은 R4의 IP 정보를 알 수 있는것임!
 
-![Image](image_8e076826967a.png)
+![Image](image_3d5bfa15f2c1.png)
 
 패킷도 확인해보자
 
-![Image](image_b2a06877db23.png)
+![Image](image_6c613615e276.png)
 
 
 
@@ -654,22 +655,22 @@ static으로 가져와서, reverse-route 로 내부망 라우터들에게 전달
 
 ### >>>> 핑테스트 확인
 
-![Image](image_2c629b90ec18.png)
+![Image](image_51acefeff4e3.png)
 
 ### >>>> 암호화 확인
 
-![Image](image_2a9085f10344.png)
+![Image](image_0d9180ef4b04.png)
 
 ### >>>> 지사 to 지사 통신 확인
 
-![Image](image_206e88858f22.png)
+![Image](image_5ba4a8ae8a4d.png)
 
 
 ## >> ISP 에게 라우팅도 안해줬는데, 어떻게 이게 가능할까?
 
 ### **>>>> “비밀은 ESP 헤더에 숨어있다”**
 
-![Image](image_91b9dcee9f03.png)
+![Image](image_e3548ac33881.png)
 
 ```bash
 결과적으로 “ISP에는 내부망 라우팅이 전혀 없어도, 외부(1.1.100.x) 구간만 연결 정보가 맞으면 캡슐화 트래픽이 흐르고, 서로 디폴트 라우트로 트래픽을 보내는 구조”이기에 HQ ↔ R1, HQ ↔ R2 통신이 가능해집니다.
@@ -685,7 +686,7 @@ static으로 가져와서, reverse-route 로 내부망 라우터들에게 전달
 
 ### **>>>> “ISP는 내부 대역을 전혀 몰라도 된다”**
 
-![Image](image_af798ae37411.png)
+![Image](image_977642afab8d.png)
 
 **시나리오**
 
@@ -814,7 +815,7 @@ write memory
 archive config
 ```
 
-![Image](image_139c91ddc44f.png)
+![Image](image_6f393f8fd11f.png)
 
 
 ### >>>> 만약에 ftp가 작동하지 않는다면?
@@ -1063,7 +1064,7 @@ UDP/TCP 514 포트가 LISTEN 상태인지 확인합니다.
 
 ## >> 메인 아이디어
 
-![Image](image_05d48af33ed8.png)
+![Image](image_95eac531fcec.png)
 
 ```plain text
 이거 그냥 Branch 측에서 EEM 인식해서 보내는것보다,각 Branch 측에서 192.168.102.100 에 3초에 한번씩 핑만 보내다가, 핑이 안보내지는 시점부터 현재 시간을 기반으로 한 파일 하나 생성하고, 당시의 상태를 syslog등으로 기록하여 상태를 기록한다음에, 다시 192.168.102.100 으로 핑이 보내지는 시점에, 192.168.102.100 에 있는 ftp서버에, 그동안 기록되었던 파일을 보내는 스크립트를 작성하면 되는거 아닌가? 즉, 리눅스서버에 EEM과 비슷한 데몬을 만들면 되는거 아님?
@@ -1262,7 +1263,7 @@ sudo systemctl start branch_monitor.service
 htop
 ```
 
-![Image](image_7a1fcde20d11.png)
+![Image](image_1e13d0d8173e.png)
 
 ### **>>>> 모니터링**
 

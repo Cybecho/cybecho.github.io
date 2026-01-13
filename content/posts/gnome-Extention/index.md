@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/gnome-Extention-b38fe92a74254ac18d3af074fd5a3
 
 ---
 
-![Image](image_a0ca12cf0e97.png)
+![Image](image_e8c4d16a3c90.png)
 
 # 설치방법
 
@@ -31,7 +31,7 @@ sudo dnf install gnome-browser-connector
 
 🔗 [https://extensions.gnome.org/extension/3193/blur-my-shell/](https://extensions.gnome.org/extension/3193/blur-my-shell/)
 
-![Image](image_dbcf3c583b0d.png)
+![Image](image_3aecaed98525.png)
 
 
 

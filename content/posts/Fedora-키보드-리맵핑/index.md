@@ -4,7 +4,7 @@ date: 2024-05-31T08:08:00.000Z
 draft: false
 tags: ["ubuntu"]
 series: ["Let's Linux!"]
-description: "Fedora에서 키보드 리맵핑을 위한 keyd와 AutoKey 설치 및 설정 방법을 설명하며, keyd를 사용하여 Capslock과 방향키를 매핑하는 방법과 관련된 링크를 제공합니다. 설치 명령어와 config 파일 설정 방법도 포함되어 있습니다."
+description: "Fedora에서 키보드 리맵핑을 위한 keyd와 AutoKey 설치 및 설정 방법을 설명하며, capslock과 방향키를 매핑하는 방법을 포함하고 있습니다. 관련 링크와 설치 명령어도 제공됩니다."
 notion_id: "68b0551f-e780-4f81-be65-d987ca9ae47e"
 notion_url: "https://www.notion.so/Fedora-68b0551fe7804f81be65d987ca9ae47e"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/Fedora-68b0551fe7804f81be65d987ca9ae47e"
 # Fedora 키보드 리맵핑
 
 > **Summary**
-> Fedora에서 키보드 리맵핑을 위한 keyd와 AutoKey 설치 및 설정 방법을 설명하며, keyd를 사용하여 Capslock과 방향키를 매핑하는 방법과 관련된 링크를 제공합니다. 설치 명령어와 config 파일 설정 방법도 포함되어 있습니다.
+> Fedora에서 키보드 리맵핑을 위한 keyd와 AutoKey 설치 및 설정 방법을 설명하며, capslock과 방향키를 매핑하는 방법을 포함하고 있습니다. 관련 링크와 설치 명령어도 제공됩니다.
 
 ---
 

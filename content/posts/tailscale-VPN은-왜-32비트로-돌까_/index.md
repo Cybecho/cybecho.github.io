@@ -18,7 +18,7 @@ notion_url: "https://www.notion.so/tailscale-VPN-32-19e1bab9e3f880619405e82e85ad
 
 ### 근데 다 조사하고 찾아보니 tailscaled GUI만 x86이고 실제 VPN은 Arm64 로 도네 ㅋㅋㅋ
 
-![Image](image_335816379916.png)
+![Image](image_2583d89eadc7.png)
 
 ### CPU 자원을 더 단독사용하여 안정적인 연결을 위해
 

@@ -32,20 +32,20 @@ notion_url: "https://www.notion.so/3D-05-297ca482365a43d68672d9a0288c6047"
 >     public TrailRenderer trailEffect; //무기 휘두르는 효과
 > ```
 >
-> ![Image](image_41bc24ced4f4.png)
+> ![Image](image_119fe1ecea06.png)
 >
-> ![Image](image_be5cd7689cb8.png)
+> ![Image](image_fa18e4561eea.png)
 >
 >
 
 > 🔥 **근접공격 잔상효과를 만들기 위해서 웨폰포인트에 Effect Empty를 설정해두고 Trail Renderer 컴포넌트를 추가해준다**
-> ![Image](image_c24304b9cdae.png)
+> ![Image](image_3034e240d3f2.png)
 >
-> ![Image](image_8c3617a00dce.png)
+> ![Image](image_45728ec109ca.png)
 >
-> ![Image](image_3ae4bfc3a020.png)
+> ![Image](image_a2a9ff8b5860.png)
 >
-> ![Image](image_d57d57106151.png)
+> ![Image](image_4be579b19bf0.png)
 >
 > 그리고 Trail 렌더하고 Box 콜라이더도 Off 시켜준다
 >
@@ -255,12 +255,12 @@ notion_url: "https://www.notion.so/3D-05-297ca482365a43d68672d9a0288c6047"
 > public Camera followCamera;
 > ```
 >
-> ![Image](image_c36e32225798.png)
+> ![Image](image_5d3006581639.png)
 >
 > > 🔥 **What is Raycast?**
 > > > 레이캐스트는 광선을 쏘는 것을 의미합니다. 여기서는
 > >
-> > ![Image](image_b45ff3376724.png)
+> > ![Image](image_a9eb8a62e62b.png)
 > >
 > > ```c#
 > > //player.cs
@@ -307,14 +307,14 @@ notion_url: "https://www.notion.so/3D-05-297ca482365a43d68672d9a0288c6047"
 >
 > 또한, 충돌 레이어 또한 설정해줘야한다 다른 리지드바디와 충돌했기 때문이기에 레이어를 다르게한다
 >
-> ![Image](image_3f332bd26ec0.png)
+> ![Image](image_3b7101bae38d.png)
 >
-> ![Image](image_5c47e7ed4c3a.png)
+> ![Image](image_3c193005550c.png)
 >
 >
 > Edit - ProjectSettings - Physics - Layer Collision Matrix
 >
-> ![Image](image_f93d33b280b6.png)
+> ![Image](image_517102973b68.png)
 >
 >
 
@@ -333,7 +333,7 @@ notion_url: "https://www.notion.so/3D-05-297ca482365a43d68672d9a0288c6047"
 >     }
 > ```
 >
-> ![Image](image_16256e935cff.png)
+> ![Image](image_6ecda37e7709.png)
 >
 > ```c#
 > bool isBorder; //벽과 닿았나 안닿았나?

@@ -16,5 +16,5 @@ notion_url: "https://www.notion.so/Vagrant-1ac1bab9e3f8804b9437c1272ffd4e09"
 
 ---
 
-![Image](image_a5088859c536.png)
+![Image](image_71a3d554c53c.png)
 

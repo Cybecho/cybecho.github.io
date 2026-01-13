@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/RST-AHCI-Dell-XPS-13-9365-Ubuntu-23f1bab9e3f8
 
 ---
 
-![Image](image_64e1c6439139.png)
+![Image](image_566f3a477788.png)
 
 [https://www.perplexity.ai/search/dell-xps-9365eseo-biosyi-sata-tMMr3dGITjOAuTTjQedoYQ](https://www.perplexity.ai/search/dell-xps-9365eseo-biosyi-sata-tMMr3dGITjOAuTTjQedoYQ)
 
@@ -52,7 +52,7 @@ notion_url: "https://www.notion.so/RST-AHCI-Dell-XPS-13-9365-Ubuntu-23f1bab9e3f8
 
 ## **Dell XPS 13 9365 2-in-1: Windows 10 + Ubuntu 듀얼 부팅 가이드**
 
-![Image](image_8bf519a52ca6.png)
+![Image](image_2c4bc2a8f50d.png)
 
 > 내 경험을 바탕으로, 바로 따라할 수 있도록 가이드를 남겨두도록 하겠다.
 
@@ -104,9 +104,9 @@ bcdedit /deletevalue {current} safeboot
 
 ## **그래서, 어떤 결과를 얻었나?**
 
-![Image](image_c5d85d874e68.png)
+![Image](image_c1175e19ee35.png)
 
-![Image](image_0ea962619324.png)
+![Image](image_67d435c8adf4.png)
 
 이 과정을 따라 마침내 나는 Dell XPS 13 9365에서 Windows 10과 Ubuntu의 완벽한 듀얼 부팅 환경을 구축했다. 이전의 실패에서 배운 중요한 포인트는 다음과 같다.
 
