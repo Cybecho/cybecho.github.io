@@ -136,14 +136,10 @@ function convertRichText(richTextArray) {
 // Table 블록을 Markdown 테이블로 변환하는 함수
 async function convertTableToMarkdown(tableBlock) {
   try {
-    console.log('🔍 Processing table block:', tableBlock.id);
-    
     // 1. Table 메타데이터 추출
     const tableWidth = tableBlock.table?.table_width || 0;
     const hasColumnHeader = tableBlock.table?.has_column_header || false;
-    
-    console.log(`📊 Table info: ${tableWidth} columns, header: ${hasColumnHeader}`);
-    
+
     if (tableWidth === 0) {
       console.warn('⚠️ Table has no columns, skipping');
       return '';
@@ -156,8 +152,7 @@ async function convertTableToMarkdown(tableBlock) {
     });
     
     const tableRows = rowsResponse.results.filter(block => block.type === 'table_row');
-    console.log(`📋 Found ${tableRows.length} table rows`);
-    
+
     if (tableRows.length === 0) {
       console.warn('⚠️ Table has no rows, skipping');
       return '';
@@ -213,9 +208,8 @@ async function convertTableToMarkdown(tableBlock) {
       });
     }
     
-    console.log(`✅ Successfully converted table with ${processedRows.length} rows`);
     return markdownTable + '\n';
-    
+
   } catch (error) {
     console.error('❌ Error converting table:', error.message);
     
@@ -235,34 +229,6 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
     const indent = '  '.repeat(indentLevel); // 들여쓰기용 공백
     
     for (const block of blocks.results) {
-      // 디버깅: 블록 구조 로깅
-      if (block.type === 'toggle' || block.type === 'heading_1' || block.type === 'heading_2' || block.type === 'heading_3') {
-        console.log(`\n=== DEBUG BLOCK ===`);
-        console.log(`Type: ${block.type}`);
-        console.log(`Has children: ${block.has_children}`);
-        console.log(`Block ID: ${block.id}`);
-        
-        if (block.toggle) {
-          console.log(`Toggle text: "${convertRichText(block.toggle.rich_text)}"`);
-        }
-        if (block.heading_1) {
-          console.log(`H1 text: "${convertRichText(block.heading_1.rich_text)}"`);
-          console.log(`H1 is_toggleable: ${block.heading_1.is_toggleable}`);
-        }
-        if (block.heading_2) {
-          console.log(`H2 text: "${convertRichText(block.heading_2.rich_text)}"`);
-          console.log(`H2 is_toggleable: ${block.heading_2.is_toggleable}`);
-        }
-        if (block.heading_3) {
-          console.log(`H3 text: "${convertRichText(block.heading_3.rich_text)}"`);
-          console.log(`H3 is_toggleable: ${block.heading_3.is_toggleable}`);
-        }
-        
-        // 전체 블록 구조 출력 (JSON)
-        console.log(`Raw block:`, JSON.stringify(block, null, 2));
-        console.log(`===================\n`);
-      }
-      
       switch (block.type) {
         case 'paragraph':
           if (block.paragraph?.rich_text?.length > 0) {
@@ -279,7 +245,6 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             
             // 제목 토글인지 확인 (is_toggleable 속성)
             if (block.heading_1.is_toggleable && block.has_children) {
-              console.log(`🔍 Found H1 toggle: "${headingText}"`);
               const childContent = await convertBlocks(block.id, postDir, 0);
               if (childContent.trim()) {
                 content += childContent + '\n';
@@ -295,7 +260,6 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             
             // 제목 토글인지 확인 (is_toggleable 속성)
             if (block.heading_2.is_toggleable && block.has_children) {
-              console.log(`🔍 Found H2 toggle: "${headingText}"`);
               const childContent = await convertBlocks(block.id, postDir, 0);
               if (childContent.trim()) {
                 content += childContent + '\n';
@@ -311,7 +275,6 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
             
             // 제목 토글인지 확인 (is_toggleable 속성)
             if (block.heading_3.is_toggleable && block.has_children) {
-              console.log(`🔍 Found H3 toggle: "${headingText}"`);
               const childContent = await convertBlocks(block.id, postDir, 0);
               if (childContent.trim()) {
                 content += childContent + '\n';
@@ -357,15 +320,12 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
               // 제목 토글의 경우: 제목으로 변환하고 내부 콘텐츠 포함
               const headingLevel = headingToggleMatch[1]; // #, ##, ### 등
               const headingTitle = headingToggleMatch[2].trim();
-              
-              console.log(`Converting heading toggle: "${toggleText}" → "${headingLevel} ${headingTitle}"`);
-              
+
               // 제목 출력
               content += headingLevel + ' ' + headingTitle + '\n\n';
-              
+
               // 🔥 핵심: 제목 토글 내부 컨텐츠를 반드시 포함
               if (block.has_children) {
-                console.log(`Processing children for heading toggle: ${headingTitle}`);
                 const childContent = await convertBlocks(block.id, postDir, 0);
                 if (childContent.trim()) {
                   content += childContent + '\n';
@@ -440,7 +400,6 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
               
               // 이미지가 이미 존재하지 않으면 다운로드
               if (!fs.existsSync(imagePath)) {
-                console.log('Downloading image:', imageFilename);
                 await downloadImage(imageUrl, imagePath);
               }
               
@@ -469,7 +428,6 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
           break;
           
         case 'table':
-          console.log('📊 Found table block, processing...');
           try {
             const tableMarkdown = await convertTableToMarkdown(block);
             if (tableMarkdown && tableMarkdown.trim()) {
