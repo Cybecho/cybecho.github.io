@@ -16,7 +16,7 @@
     "date" (.Date.Format "2006-01-02")
     "dateFormatted" (.Date.Format "2006년 1월 2일")
     "summary" $summary
-    "content" ($content | truncate 500 "...")
+    "content" ($content | truncate 2500 "...")
     "tags" $tags
     "series" $series
     "section" .Section

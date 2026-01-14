@@ -20,13 +20,7 @@
   <!-- 입력 영역 -->
   <form id="chat-form" class="chat-form">
     <div class="chat-input-row">
-      <textarea
-        id="chat-input"
-        class="chat-input"
-        rows="2"
-        placeholder="질문을 입력하세요..."
-        maxlength="500"
-      ></textarea>
+      <textarea id="chat-input" class="chat-input" rows="2" placeholder="질문을 입력하세요..." maxlength="500"></textarea>
       <button type="submit" id="chat-submit" class="chat-submit-btn">
         전송
       </button>
@@ -42,584 +36,678 @@
 </section>
 
 <style>
-/* Magic Search - 투박한 스타일 */
-.magic-search-page {
-  font-family: "Times New Roman", "Georgia", serif;
-  color: #000;
-  background: #fff;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0;
-}
-
-.magic-header {
-  border: 2px solid #000;
-  padding: 16px 20px;
-  margin-bottom: 0;
-  background: #f5f5f5;
-}
-
-.magic-header h1 {
-  margin: 0 0 8px 0;
-  font-size: 24px;
-}
-
-.magic-header p {
-  margin: 0;
-  font-size: 14px;
-  color: #444;
-}
-
-/* 채팅 컨테이너 */
-.chat-container {
-  border: 2px solid #000;
-  border-top: none;
-  background: #fafafa;
-}
-
-.chat-messages {
-  min-height: 350px;
-  max-height: 450px;
-  overflow-y: auto;
-  padding: 16px;
-}
-
-/* 채팅 메시지 */
-.chat-msg {
-  margin-bottom: 16px;
-  display: flex;
-}
-
-.chat-msg:last-child {
-  margin-bottom: 0;
-}
-
-.chat-user {
-  justify-content: flex-end;
-}
-
-.chat-ai, .chat-system {
-  justify-content: flex-start;
-}
-
-.chat-bubble {
-  max-width: 85%;
-  padding: 12px 16px;
-  border: 1px solid #000;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.chat-user .chat-bubble {
-  background: #e8e8e8;
-}
-
-.chat-ai .chat-bubble {
-  background: #fff;
-}
-
-.chat-system .chat-bubble {
-  background: #fffff0;
-  border-style: dashed;
-  color: #555;
-  font-size: 13px;
-}
-
-/* 채팅 버블 내용 스타일 */
-.chat-bubble p { margin: 0 0 10px 0; }
-.chat-bubble p:last-child { margin-bottom: 0; }
-.chat-bubble ul, .chat-bubble ol { margin: 8px 0; padding-left: 20px; }
-.chat-bubble li { margin-bottom: 4px; }
-.chat-bubble code { background: #f0f0f0; padding: 2px 6px; font-family: monospace; font-size: 13px; }
-.chat-bubble pre { background: #f0f0f0; padding: 10px; overflow-x: auto; font-family: monospace; font-size: 12px; margin: 10px 0; }
-.chat-bubble strong { font-weight: bold; }
-.chat-bubble em { font-style: italic; }
-.chat-bubble a { color: #00e; text-decoration: underline; }
-
-/* 참고 글 링크 */
-.chat-refs {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px dashed #ccc;
-  font-size: 12px;
-}
-
-.chat-refs-title {
-  font-weight: bold;
-  margin-bottom: 6px;
-  color: #666;
-}
-
-.chat-refs ul {
-  margin: 0;
-  padding-left: 18px;
-}
-
-.chat-refs li {
-  margin-bottom: 4px;
-}
-
-/* 입력 폼 */
-.chat-form {
-  border: 2px solid #000;
-  border-top: none;
-  padding: 12px;
-  background: #fff;
-}
-
-.chat-input-row {
-  display: flex;
-  gap: 10px;
-}
-
-.chat-input {
-  flex: 1;
-  font-family: inherit;
-  font-size: 14px;
-  padding: 10px;
-  border: 1px solid #000;
-  resize: none;
-}
-
-.chat-input:focus {
-  outline: 2px solid #000;
-  outline-offset: 1px;
-}
-
-.chat-submit-btn {
-  font-family: inherit;
-  font-size: 14px;
-  padding: 10px 20px;
-  border: 2px solid #000;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.chat-submit-btn:hover {
-  background: #333;
-}
-
-.chat-submit-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.chat-footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 8px;
-  font-size: 12px;
-  color: #666;
-}
-
-/* 상태 바 */
-.status-bar {
-  border: 2px solid #000;
-  border-top: none;
-  padding: 12px 16px;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.status-bar.loading {
-  background: #fffff0;
-}
-
-.status-bar.error {
-  background: #fff0f0;
-  color: #c00;
-  border-color: #c00;
-}
-
-.spinner {
-  width: 16px;
-  height: 16px;
-  border: 2px solid #ccc;
-  border-top-color: #000;
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-/* 모바일 */
-@media (max-width: 600px) {
+  /* Magic Search - 투박한 스타일 */
   .magic-search-page {
-    margin: 10px;
+    font-family: "Times New Roman", "Georgia", serif;
+    color: #000;
+    background: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0;
+  }
+
+  .magic-header {
+    border: 2px solid #000;
+    padding: 16px 20px;
+    margin-bottom: 0;
+    background: #f5f5f5;
+  }
+
+  .magic-header h1 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+  }
+
+  .magic-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+  }
+
+  /* 채팅 컨테이너 */
+  .chat-container {
+    border: 2px solid #000;
+    border-top: none;
+    background: #fafafa;
   }
 
   .chat-messages {
-    min-height: 280px;
-    max-height: 350px;
+    min-height: 350px;
+    max-height: 450px;
+    overflow-y: auto;
+    padding: 16px;
+  }
+
+  /* 채팅 메시지 */
+  .chat-msg {
+    margin-bottom: 16px;
+    display: flex;
+  }
+
+  .chat-msg:last-child {
+    margin-bottom: 0;
+  }
+
+  .chat-user {
+    justify-content: flex-end;
+  }
+
+  .chat-ai,
+  .chat-system {
+    justify-content: flex-start;
   }
 
   .chat-bubble {
-    max-width: 92%;
+    max-width: 85%;
+    padding: 12px 16px;
+    border: 1px solid #000;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .chat-user .chat-bubble {
+    background: #e8e8e8;
+  }
+
+  .chat-ai .chat-bubble {
+    background: #fff;
+  }
+
+  .chat-system .chat-bubble {
+    background: #fffff0;
+    border-style: dashed;
+    color: #555;
+    font-size: 13px;
+  }
+
+  /* 채팅 버블 내용 스타일 */
+  .chat-bubble p {
+    margin: 0 0 10px 0;
+  }
+
+  .chat-bubble p:last-child {
+    margin-bottom: 0;
+  }
+
+  .chat-bubble ul,
+  .chat-bubble ol {
+    margin: 8px 0;
+    padding-left: 20px;
+  }
+
+  .chat-bubble li {
+    margin-bottom: 4px;
+  }
+
+  .chat-bubble code {
+    background: #f0f0f0;
+    padding: 2px 6px;
+    font-family: monospace;
+    font-size: 13px;
+  }
+
+  .chat-bubble pre {
+    background: #f0f0f0;
+    padding: 10px;
+    overflow-x: auto;
+    font-family: monospace;
+    font-size: 12px;
+    margin: 10px 0;
+  }
+
+  .chat-bubble strong {
+    font-weight: bold;
+  }
+
+  .chat-bubble em {
+    font-style: italic;
+  }
+
+  .chat-bubble a {
+    color: #00e;
+    text-decoration: underline;
+  }
+
+  /* 참고 글 링크 */
+  .chat-refs {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed #ccc;
+    font-size: 12px;
+  }
+
+  .chat-refs-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #666;
+  }
+
+  .chat-refs ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  .chat-refs li {
+    margin-bottom: 4px;
+  }
+
+  /* 입력 폼 */
+  .chat-form {
+    border: 2px solid #000;
+    border-top: none;
+    padding: 12px;
+    background: #fff;
   }
 
   .chat-input-row {
-    flex-direction: column;
+    display: flex;
+    gap: 10px;
+  }
+
+  .chat-input {
+    flex: 1;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #000;
+    resize: none;
+  }
+
+  .chat-input:focus {
+    outline: 2px solid #000;
+    outline-offset: 1px;
   }
 
   .chat-submit-btn {
-    width: 100%;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    white-space: nowrap;
   }
-}
+
+  .chat-submit-btn:hover {
+    background: #333;
+  }
+
+  .chat-submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .chat-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #666;
+  }
+
+  /* 상태 바 */
+  .status-bar {
+    border: 2px solid #000;
+    border-top: none;
+    padding: 12px 16px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .status-bar.loading {
+    background: #fffff0;
+  }
+
+  .status-bar.error {
+    background: #fff0f0;
+    color: #c00;
+    border-color: #c00;
+  }
+
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-top-color: #000;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* 모바일 */
+  @media (max-width: 600px) {
+    .magic-search-page {
+      margin: 10px;
+    }
+
+    .chat-messages {
+      min-height: 280px;
+      max-height: 350px;
+    }
+
+    .chat-bubble {
+      max-width: 92%;
+    }
+
+    .chat-input-row {
+      flex-direction: column;
+    }
+
+    .chat-submit-btn {
+      width: 100%;
+    }
+  }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 <script>
-(function() {
-  'use strict';
+  (function () {
+    'use strict';
 
-  // ============================================================
-  // 설정 - Cloudflare Worker URL을 여기에 입력하세요
-  // ============================================================
-  const CONFIG = {
-    // TODO: Cloudflare Worker 배포 후 이 URL을 변경하세요
-    WORKER_URL: 'https://magic-search-proxy.thquddnr123.workers.dev',
+    // ============================================================
+    // 설정 - Cloudflare Worker URL을 여기에 입력하세요
+    // ============================================================
+    const CONFIG = {
+      // TODO: Cloudflare Worker 배포 후 이 URL을 변경하세요
+      WORKER_URL: 'https://magic-search-proxy.thquddnr123.workers.dev',
 
-    // 검색 설정
-    SEARCH_LIMIT: 7,
-    FUSE_THRESHOLD: 0.6,
-    MAX_CONTEXT_CHARS: 6000,
+      // 검색 설정
+      SEARCH_LIMIT: 10,
+      FUSE_THRESHOLD: 0.4,
+      MAX_CONTEXT_CHARS: 8000,
 
-    // Rate limit (클라이언트 측 표시용)
-    DAILY_LIMIT: 30,
-    RATE_KEY: 'magic_search_rate_v2'
-  };
+      // Rate limit (클라이언트 측 표시용)
+      DAILY_LIMIT: 30,
+      RATE_KEY: 'magic_search_rate_v2'
+    };
 
-  // ============================================================
-  // DOM 요소
-  // ============================================================
-  const chatMessages = document.getElementById('chat-messages');
-  const chatForm = document.getElementById('chat-form');
-  const chatInput = document.getElementById('chat-input');
-  const chatSubmit = document.getElementById('chat-submit');
-  const charCount = document.getElementById('char-count');
-  const remaining = document.getElementById('remaining');
-  const statusBar = document.getElementById('status-bar');
+    // ============================================================
+    // DOM 요소
+    // ============================================================
+    const chatMessages = document.getElementById('chat-messages');
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const chatSubmit = document.getElementById('chat-submit');
+    const charCount = document.getElementById('char-count');
+    const remaining = document.getElementById('remaining');
+    const statusBar = document.getElementById('status-bar');
 
-  let searchIndex = [];
-  let fuse = null;
-  let isProcessing = false;
+    let searchIndex = [];
+    let fuse = null;
+    let isProcessing = false;
 
-  // ============================================================
-  // Rate Limiting (클라이언트 측 - 표시용)
-  // ============================================================
-  function getRateData() {
-    try {
-      const data = localStorage.getItem(CONFIG.RATE_KEY);
-      return data ? JSON.parse(data) : { date: '', count: 0 };
-    } catch { return { date: '', count: 0 }; }
-  }
-
-  function setRateData(data) {
-    try { localStorage.setItem(CONFIG.RATE_KEY, JSON.stringify(data)); } catch {}
-  }
-
-  function checkRate() {
-    const today = new Date().toISOString().split('T')[0];
-    const data = getRateData();
-    if (data.date !== today) {
-      setRateData({ date: today, count: 0 });
-      return { allowed: true, remaining: CONFIG.DAILY_LIMIT };
+    // ============================================================
+    // Rate Limiting (클라이언트 측 - 표시용)
+    // ============================================================
+    function getRateData() {
+      try {
+        const data = localStorage.getItem(CONFIG.RATE_KEY);
+        return data ? JSON.parse(data) : { date: '', count: 0 };
+      } catch { return { date: '', count: 0 }; }
     }
-    const rem = CONFIG.DAILY_LIMIT - data.count;
-    return { allowed: rem > 0, remaining: Math.max(0, rem) };
-  }
 
-  function incrementRate() {
-    const today = new Date().toISOString().split('T')[0];
-    const data = getRateData();
-    if (data.date !== today) {
-      setRateData({ date: today, count: 1 });
-    } else {
-      setRateData({ date: today, count: data.count + 1 });
+    function setRateData(data) {
+      try { localStorage.setItem(CONFIG.RATE_KEY, JSON.stringify(data)); } catch { }
     }
-  }
 
-  function updateRateDisplay() {
-    const { remaining: rem } = checkRate();
-    if (remaining) remaining.textContent = rem;
-  }
+    function checkRate() {
+      const today = new Date().toISOString().split('T')[0];
+      const data = getRateData();
+      if (data.date !== today) {
+        setRateData({ date: today, count: 0 });
+        return { allowed: true, remaining: CONFIG.DAILY_LIMIT };
+      }
+      const rem = CONFIG.DAILY_LIMIT - data.count;
+      return { allowed: rem > 0, remaining: Math.max(0, rem) };
+    }
 
-  // ============================================================
-  // 검색 인덱스 로드
-  // ============================================================
-  async function loadIndex() {
-    if (fuse) return true;
-    try {
-      const res = await fetch('/index.json');
-      searchIndex = await res.json();
-      fuse = new Fuse(searchIndex, {
-        keys: [
-          { name: 'title', weight: 0.4 },
-          { name: 'summary', weight: 0.25 },
-          { name: 'content', weight: 0.2 },
-          { name: 'tags', weight: 0.1 },
-          { name: 'series', weight: 0.05 }
-        ],
-        threshold: CONFIG.FUSE_THRESHOLD,
-        includeScore: true,
-        minMatchCharLength: 1,
-        ignoreLocation: true
+    function incrementRate() {
+      const today = new Date().toISOString().split('T')[0];
+      const data = getRateData();
+      if (data.date !== today) {
+        setRateData({ date: today, count: 1 });
+      } else {
+        setRateData({ date: today, count: data.count + 1 });
+      }
+    }
+
+    function updateRateDisplay() {
+      const { remaining: rem } = checkRate();
+      if (remaining) remaining.textContent = rem;
+    }
+
+    // ============================================================
+    // 검색 인덱스 로드
+    // ============================================================
+    async function loadIndex() {
+      if (fuse) return true;
+      try {
+        const res = await fetch('/index.json');
+        searchIndex = await res.json();
+        fuse = new Fuse(searchIndex, {
+          keys: [
+            { name: 'title', weight: 0.35 },
+            { name: 'summary', weight: 0.2 },
+            { name: 'content', weight: 0.25 },
+            { name: 'tags', weight: 0.12 },
+            { name: 'series', weight: 0.08 }
+          ],
+          threshold: CONFIG.FUSE_THRESHOLD,
+          includeScore: true,
+          minMatchCharLength: 2,
+          ignoreLocation: true,
+          findAllMatches: true,
+          useExtendedSearch: true
+        });
+        console.log('[Magic Search] Loaded', searchIndex.length, 'posts');
+        return true;
+      } catch (err) {
+        console.error('[Magic Search] Failed to load index:', err);
+        return false;
+      }
+    }
+
+    // ============================================================
+    // 키워드 추출 및 검색
+    // ============================================================
+    function extractKeywords(query) {
+      // 확장된 불용어 목록
+      const stopwords = [
+        '은', '는', '이', '가', '을', '를', '의', '에', '에서', '으로', '로', '와', '과', '도', '만',
+        '뭐', '어떻게', '무엇', '왜', '어디', '언제', '누가', '뭘', '좀', '제발', '그냥',
+        '해줘', '알려줘', '설명해줘', '찾아줘', '보여줘', '가르쳐줘',
+        '대해', '대해서', '관해', '관해서', '관련', '관련해서',
+        '있나요', '있어요', '있을까요', '할까요', '하나요', '인가요', '건가요', '나요', '요',
+        '것', '수', '때', '거', '게', '데', '곳', '분', '점', '건', '번',
+        '어떤', '어느', '무슨', '이런', '저런', '그런', '아무', '모든',
+        '하고', '싶어', '싶은', '원해', '원하는'
+      ];
+
+      // 1. 특수문자 제거 및 토큰화
+      let words = query
+        .replace(/[?!.,;:'"()\[\]{}~@#$%^&*+=<>]/g, ' ')
+        .split(/\s+/)
+        .filter(w => w.length >= 2);  // 2글자 이상만
+
+      // 2. 불용어 제거 (정확한 매칭 + 끝부분 매칭)
+      words = words.filter(w => {
+        const lower = w.toLowerCase();
+        return !stopwords.some(sw => lower === sw || lower.endsWith(sw));
       });
-      console.log('[Magic Search] Loaded', searchIndex.length, 'posts');
-      return true;
-    } catch (err) {
-      console.error('[Magic Search] Failed to load index:', err);
-      return false;
+
+      // 3. 핵심 키워드 우선 정렬 (영문/대문자/기술용어 우선)
+      const prioritized = words.sort((a, b) => {
+        const aScore = (/[A-Z]/.test(a) ? 10 : 0) + (/^[a-zA-Z0-9]+$/.test(a) ? 5 : 0) + a.length;
+        const bScore = (/[A-Z]/.test(b) ? 10 : 0) + (/^[a-zA-Z0-9]+$/.test(b) ? 5 : 0) + b.length;
+        return bScore - aScore;
+      });
+
+      // 4. 결과 반환 (최대 5개)
+      return prioritized.length > 0 ? prioritized.slice(0, 5) : query.split(/\s+/).slice(0, 3);
     }
-  }
 
-  // ============================================================
-  // 키워드 추출 및 검색
-  // ============================================================
-  function extractKeywords(query) {
-    const stopwords = ['은','는','이','가','을','를','의','에','에서','으로','로','와','과','도','만','뭐','어떻게','무엇','왜','어디','언제','누가','뭘','좀','해줘','알려줘','설명해줘','대해','대해서','관해','관해서','있나요','있어요','있을까요','할까요','하나요','인가요','건가요','나요','요','것','수','때'];
-    let words = query.replace(/[?!.,;:'"()[\]{}]/g, ' ').split(/\s+/).filter(w => w.length > 0);
-    words = words.filter(w => !stopwords.some(sw => w.endsWith(sw) || w === sw));
-    return words.length > 0 ? words : query.split(/\s+/).slice(0, 3);
-  }
+    function searchPosts(query) {
+      if (!fuse) return [];
 
-  function searchPosts(query) {
-    if (!fuse) return [];
-
-    let results = fuse.search(query);
-
-    // 결과가 적으면 키워드별 추가 검색
-    if (results.length < 3) {
       const keywords = extractKeywords(query);
+      console.log('[Magic Search] Keywords:', keywords);
+
+      // === 1차: 전체 질의로 검색 ===
+      let results = fuse.search(query);
+      console.log('[Magic Search] Phase 1 (full query):', results.length, 'results');
+
+      // === 2차: 키워드별 개별 검색 ===
       for (const kw of keywords) {
         if (kw.length >= 2) {
           const kwResults = fuse.search(kw);
           for (const r of kwResults) {
             if (!results.find(e => e.item.url === r.item.url)) {
-              results.push(r);
+              // 키워드 검색 결과는 약간의 점수 패널티 부여
+              results.push({ ...r, score: (r.score || 0) + 0.05 });
             }
           }
         }
       }
+      console.log('[Magic Search] Phase 2 (keywords):', results.length, 'results');
+
+      // === 3차: 태그/시리즈 직접 매칭 ===
+      for (const post of searchIndex) {
+        const tags = (post.tags || '').toLowerCase();
+        const series = (post.series || '').toLowerCase();
+        const title = (post.title || '').toLowerCase();
+
+        for (const kw of keywords) {
+          const kwLower = kw.toLowerCase();
+          if (tags.includes(kwLower) || series.includes(kwLower) || title.includes(kwLower)) {
+            if (!results.find(e => e.item.url === post.url)) {
+              results.push({ item: post, score: 0.3 });
+            }
+            break;
+          }
+        }
+      }
+      console.log('[Magic Search] Phase 3 (tags/series/title):', results.length, 'results');
+
+      // 점수순 정렬 및 상위 N개 반환
+      return results
+        .sort((a, b) => (a.score || 0) - (b.score || 0))
+        .slice(0, CONFIG.SEARCH_LIMIT)
+        .map(r => ({
+          title: r.item.title,
+          url: r.item.url,
+          summary: r.item.summary || '',
+          content: r.item.content || ''
+        }));
     }
 
-    return results
-      .sort((a, b) => (a.score || 0) - (b.score || 0))
-      .slice(0, CONFIG.SEARCH_LIMIT)
-      .map(r => ({
-        title: r.item.title,
-        url: r.item.url,
-        summary: r.item.summary || '',
-        content: r.item.content || ''
-      }));
-  }
-
-  function buildContext(posts) {
-    let ctx = '';
-    let len = 0;
-    for (const p of posts) {
-      const text = `## ${p.title}\nURL: ${p.url}\n${p.summary ? '요약: ' + p.summary + '\n' : ''}${p.content ? '내용: ' + p.content + '\n' : ''}---\n`;
-      if (len + text.length > CONFIG.MAX_CONTEXT_CHARS) break;
-      ctx += text;
-      len += text.length;
+    function buildContext(posts) {
+      let ctx = '';
+      let len = 0;
+      for (const p of posts) {
+        const text = `## ${p.title}\nURL: ${p.url}\n${p.summary ? '요약: ' + p.summary + '\n' : ''}${p.content ? '내용: ' + p.content + '\n' : ''}---\n`;
+        if (len + text.length > CONFIG.MAX_CONTEXT_CHARS) break;
+        ctx += text;
+        len += text.length;
+      }
+      return ctx;
     }
-    return ctx;
-  }
 
-  // ============================================================
-  // UI 헬퍼
-  // ============================================================
-  function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-  }
+    // ============================================================
+    // UI 헬퍼
+    // ============================================================
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
 
-  function parseMarkdown(text) {
-    return text
-      .replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
-      .replace(/`([^`]+)`/g, '<code>$1</code>')
-      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-      .replace(/\*([^*]+)\*/g, '<em>$1</em>')
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
-      .replace(/\n\n/g, '</p><p>')
-      .replace(/\n/g, '<br>');
-  }
+    function parseMarkdown(text) {
+      return text
+        .replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
+        .replace(/`([^`]+)`/g, '<code>$1</code>')
+        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
+        .replace(/\n\n/g, '</p><p>')
+        .replace(/\n/g, '<br>');
+    }
 
-  function addMessage(type, content, refs = []) {
-    const msgDiv = document.createElement('div');
-    msgDiv.className = `chat-msg chat-${type}`;
+    function addMessage(type, content, refs = []) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `chat-msg chat-${type}`;
 
-    const bubbleDiv = document.createElement('div');
-    bubbleDiv.className = 'chat-bubble';
+      const bubbleDiv = document.createElement('div');
+      bubbleDiv.className = 'chat-bubble';
 
-    if (type === 'user') {
-      bubbleDiv.innerHTML = `<p>${escapeHtml(content)}</p>`;
-    } else {
-      bubbleDiv.innerHTML = `<p>${parseMarkdown(content)}</p>`;
+      if (type === 'user') {
+        bubbleDiv.innerHTML = `<p>${escapeHtml(content)}</p>`;
+      } else {
+        bubbleDiv.innerHTML = `<p>${parseMarkdown(content)}</p>`;
 
-      if (refs.length > 0) {
-        const refsHtml = `
+        if (refs.length > 0) {
+          const refsHtml = `
           <div class="chat-refs">
             <div class="chat-refs-title">참고한 글:</div>
             <ul>${refs.map(r => `<li><a href="${r.url}" target="_blank">${escapeHtml(r.title)}</a></li>`).join('')}</ul>
           </div>
         `;
-        bubbleDiv.innerHTML += refsHtml;
-      }
-    }
-
-    msgDiv.appendChild(bubbleDiv);
-    chatMessages.appendChild(msgDiv);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }
-
-  function showStatus(msg, type = 'loading') {
-    statusBar.className = 'status-bar ' + type;
-    if (type === 'loading') {
-      statusBar.innerHTML = `<div class="spinner"></div><span>${msg}</span>`;
-    } else {
-      statusBar.textContent = msg;
-    }
-    statusBar.hidden = false;
-  }
-
-  function hideStatus() {
-    statusBar.hidden = true;
-  }
-
-  function setLoading(loading) {
-    isProcessing = loading;
-    chatSubmit.disabled = loading;
-    chatInput.disabled = loading;
-  }
-
-  // ============================================================
-  // API 호출 (Cloudflare Worker)
-  // ============================================================
-  async function callWorker(query, context) {
-    const res = await fetch(CONFIG.WORKER_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query, context })
-    });
-
-    const data = await res.json();
-
-    if (!res.ok) {
-      throw new Error(data.error || 'API 요청 실패');
-    }
-
-    return data.response;
-  }
-
-  // ============================================================
-  // 폼 제출 핸들러
-  // ============================================================
-  async function handleSubmit(e) {
-    e.preventDefault();
-    if (isProcessing) return;
-
-    const query = chatInput.value.trim();
-    if (!query) return;
-
-    // Rate limit 체크
-    const rate = checkRate();
-    if (!rate.allowed) {
-      showStatus('일일 질문 한도를 초과했습니다. 내일 다시 시도해 주세요.', 'error');
-      return;
-    }
-
-    // 입력 초기화
-    chatInput.value = '';
-    charCount.textContent = '0';
-
-    // 사용자 메시지 추가
-    addMessage('user', query);
-
-    setLoading(true);
-    hideStatus();
-    showStatus('블로그에서 관련 글을 찾는 중...', 'loading');
-
-    try {
-      // 인덱스 로드
-      const loaded = await loadIndex();
-      if (!loaded) {
-        throw new Error('검색 인덱스를 로드하지 못했습니다.');
+          bubbleDiv.innerHTML += refsHtml;
+        }
       }
 
-      // 검색
-      const posts = searchPosts(query);
-      if (posts.length === 0) {
-        hideStatus();
-        addMessage('ai', '관련된 글을 찾지 못했습니다. 다른 키워드로 검색해 보세요.', []);
-        setLoading(false);
+      msgDiv.appendChild(bubbleDiv);
+      chatMessages.appendChild(msgDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function showStatus(msg, type = 'loading') {
+      statusBar.className = 'status-bar ' + type;
+      if (type === 'loading') {
+        statusBar.innerHTML = `<div class="spinner"></div><span>${msg}</span>`;
+      } else {
+        statusBar.textContent = msg;
+      }
+      statusBar.hidden = false;
+    }
+
+    function hideStatus() {
+      statusBar.hidden = true;
+    }
+
+    function setLoading(loading) {
+      isProcessing = loading;
+      chatSubmit.disabled = loading;
+      chatInput.disabled = loading;
+    }
+
+    // ============================================================
+    // API 호출 (Cloudflare Worker)
+    // ============================================================
+    async function callWorker(query, context) {
+      const res = await fetch(CONFIG.WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query, context })
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || 'API 요청 실패');
+      }
+
+      return data.response;
+    }
+
+    // ============================================================
+    // 폼 제출 핸들러
+    // ============================================================
+    async function handleSubmit(e) {
+      e.preventDefault();
+      if (isProcessing) return;
+
+      const query = chatInput.value.trim();
+      if (!query) return;
+
+      // Rate limit 체크
+      const rate = checkRate();
+      if (!rate.allowed) {
+        showStatus('일일 질문 한도를 초과했습니다. 내일 다시 시도해 주세요.', 'error');
         return;
       }
 
-      showStatus('AI가 답변을 생성하는 중...', 'loading');
+      // 입력 초기화
+      chatInput.value = '';
+      charCount.textContent = '0';
 
-      // 컨텍스트 구성 및 Worker 호출
-      const context = buildContext(posts);
-      const response = await callWorker(query, context);
+      // 사용자 메시지 추가
+      addMessage('user', query);
 
-      // Rate 증가 및 UI 업데이트
-      incrementRate();
+      setLoading(true);
+      hideStatus();
+      showStatus('블로그에서 관련 글을 찾는 중...', 'loading');
+
+      try {
+        // 인덱스 로드
+        const loaded = await loadIndex();
+        if (!loaded) {
+          throw new Error('검색 인덱스를 로드하지 못했습니다.');
+        }
+
+        // 검색
+        const posts = searchPosts(query);
+        if (posts.length === 0) {
+          hideStatus();
+          addMessage('ai', '관련된 글을 찾지 못했습니다. 다른 키워드로 검색해 보세요.', []);
+          setLoading(false);
+          return;
+        }
+
+        showStatus('AI가 답변을 생성하는 중...', 'loading');
+
+        // 컨텍스트 구성 및 Worker 호출
+        const context = buildContext(posts);
+        const response = await callWorker(query, context);
+
+        // Rate 증가 및 UI 업데이트
+        incrementRate();
+        updateRateDisplay();
+
+        hideStatus();
+        addMessage('ai', response, posts);
+
+      } catch (err) {
+        console.error('[Magic Search] Error:', err);
+        showStatus(err.message || '오류가 발생했습니다.', 'error');
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    // ============================================================
+    // 초기화
+    // ============================================================
+    function init() {
+      // 글자 수 카운트
+      chatInput?.addEventListener('input', () => {
+        charCount.textContent = chatInput.value.length;
+      });
+
+      // Enter로 전송 (Shift+Enter는 줄바꿈)
+      chatInput?.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          chatForm?.dispatchEvent(new Event('submit'));
+        }
+      });
+
+      // 폼 제출
+      chatForm?.addEventListener('submit', handleSubmit);
+
+      // Rate 표시
       updateRateDisplay();
 
-      hideStatus();
-      addMessage('ai', response, posts);
-
-    } catch (err) {
-      console.error('[Magic Search] Error:', err);
-      showStatus(err.message || '오류가 발생했습니다.', 'error');
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  // ============================================================
-  // 초기화
-  // ============================================================
-  function init() {
-    // 글자 수 카운트
-    chatInput?.addEventListener('input', () => {
-      charCount.textContent = chatInput.value.length;
-    });
-
-    // Enter로 전송 (Shift+Enter는 줄바꿈)
-    chatInput?.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
-        chatForm?.dispatchEvent(new Event('submit'));
+      // Worker URL 체크
+      if (CONFIG.WORKER_URL.includes('YOUR_SUBDOMAIN')) {
+        addMessage('system', '⚠️ Cloudflare Worker URL이 설정되지 않았습니다. 관리자에게 문의하세요.');
       }
-    });
 
-    // 폼 제출
-    chatForm?.addEventListener('submit', handleSubmit);
-
-    // Rate 표시
-    updateRateDisplay();
-
-    // Worker URL 체크
-    if (CONFIG.WORKER_URL.includes('YOUR_SUBDOMAIN')) {
-      addMessage('system', '⚠️ Cloudflare Worker URL이 설정되지 않았습니다. 관리자에게 문의하세요.');
+      console.log('[Magic Search] Initialized');
     }
 
-    console.log('[Magic Search] Initialized');
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-})();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
 </script>
 {{ end }}
