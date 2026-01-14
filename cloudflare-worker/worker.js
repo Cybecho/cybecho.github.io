@@ -30,7 +30,7 @@ const CONFIG = {
   GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/',
 
   // Rate Limiting (KV 없이 메모리 기반 - Worker 재시작시 리셋)
-  RATE_LIMIT_PER_IP: 30,      // IP당 일일 요청 제한
+  RATE_LIMIT_PER_IP: 50,      // IP당 일일 요청 제한
   RATE_LIMIT_WINDOW: 86400000 // 24시간 (밀리초)
 };
 
@@ -221,28 +221,33 @@ ${context}
           // 에러 처리
           const errorStatus = geminiResponse.status;
           const errorText = await geminiResponse.text();
-          console.log(`[Magic Search] Model ${model} failed with ${errorStatus}: ${errorText.substring(0, 200)}`);
+          console.log(`[Magic Search] Model ${model} failed with ${errorStatus}: ${errorText.substring(0, 500)}`);
 
-          // 429 (Rate Limit) 또는 5xx 에러 시 다음 모델 시도
-          if (errorStatus === 429 || errorStatus >= 500) {
-            lastError = `${model}: ${errorStatus}`;
+          // 404 (모델 없음), 429 (Rate Limit), 5xx 에러 시 다음 모델 시도
+          if (errorStatus === 404 || errorStatus === 429 || errorStatus >= 500) {
+            lastError = `${model}: HTTP ${errorStatus}`;
             continue;  // 다음 모델로
           }
 
-          // 400, 403 등 다른 에러는 중단
-          lastError = errorText;
+          // 400, 403 등 다른 에러는 상세 정보와 함께 저장
+          try {
+            const errorJson = JSON.parse(errorText);
+            lastError = `${model}: ${errorJson.error?.message || errorStatus}`;
+          } catch {
+            lastError = `${model}: ${errorText.substring(0, 100)}`;
+          }
           break;
 
         } catch (fetchError) {
           console.error(`[Magic Search] Fetch error for ${model}:`, fetchError.message);
-          lastError = fetchError.message;
+          lastError = `${model}: ${fetchError.message}`;
           continue;  // 네트워크 에러 시 다음 모델 시도
         }
       }
 
-      // 모든 모델 실패
+      // 모든 모델 실패 - 상세 에러 정보 포함
       console.error('[Magic Search] All models failed. Last error:', lastError);
-      return errorResponse('AI 응답 생성에 실패했습니다. 모든 모델이 사용 불가합니다.', 500, origin);
+      return errorResponse(`AI 응답 생성 실패: ${lastError}`, 500, origin);
 
     } catch (err) {
       console.error('Worker error:', err);
