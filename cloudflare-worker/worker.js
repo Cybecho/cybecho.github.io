@@ -20,11 +20,12 @@ const CONFIG = {
   ],
 
   // Gemini API 설정 - 성능/속도 순으로 정렬 (fallback 순서)
-  // Gemma 모델은 API에서 404를 반환하므로 Gemini 모델 사용
+  // -it (instruction-tuned) 접미사 필수
   GEMINI_MODELS: [
-    'gemini-2.0-flash',      // 최신, 빠름
-    'gemini-1.5-flash',      // 안정적, 빠름
-    'gemini-1.5-pro',        // 고성능
+    'gemma-3-27b-it',    // 최고 성능
+    'gemma-3-12b-it',    // 고성능
+    'gemma-3-4b-it',     // 중간 성능
+    'gemma-3-2b-it',     // 경량
   ],
   GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/',
 
