@@ -19,13 +19,12 @@ const CONFIG = {
     'http://127.0.0.1:1313'
   ],
 
-  // Gemini API 설정 - 성능 순으로 정렬 (fallback 순서)
-  // Rate limit 발생 시 다음 모델로 자동 전환
+  // Gemini API 설정 - 성능/속도 순으로 정렬 (fallback 순서)
+  // Gemma 모델은 API에서 404를 반환하므로 Gemini 모델 사용
   GEMINI_MODELS: [
-    'gemma-3-27b',   // 최고 성능
-    'gemma-3-12b',   // 고성능
-    'gemma-3-4b',    // 중간 성능
-    'gemma-3-2b',    // 경량
+    'gemini-2.0-flash',      // 최신, 빠름
+    'gemini-1.5-flash',      // 안정적, 빠름
+    'gemini-1.5-pro',        // 고성능
   ],
   GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/',
 
