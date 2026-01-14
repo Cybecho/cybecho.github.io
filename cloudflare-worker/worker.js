@@ -19,8 +19,14 @@ const CONFIG = {
     'http://127.0.0.1:1313'
   ],
 
-  // Gemini API 설정
-  GEMINI_MODEL: 'gemma-3-4b-it',
+  // Gemini API 설정 - 성능 순으로 정렬 (fallback 순서)
+  // Rate limit 발생 시 다음 모델로 자동 전환
+  GEMINI_MODELS: [
+    'gemma-3-27b',   // 최고 성능
+    'gemma-3-12b',   // 고성능
+    'gemma-3-4b',    // 중간 성능
+    'gemma-3-2b',    // 경량
+  ],
   GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/',
 
   // Rate Limiting (KV 없이 메모리 기반 - Worker 재시작시 리셋)
@@ -148,62 +154,95 @@ ${context}
 
 위 블로그 글들을 참고하여 사용자의 질문에 답변해 주세요.`;
 
-      // Gemini API 호출
-      const geminiUrl = `${CONFIG.GEMINI_API_URL}${CONFIG.GEMINI_MODEL}:generateContent?key=${apiKey}`;
-
-      const geminiResponse = await fetch(geminiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{
-            parts: [{ text: systemPrompt + '\n\n' + userMessage }]
-          }],
-          generationConfig: {
-            temperature: 0.7,
-            maxOutputTokens: 1024,
-            topP: 0.9
-          },
-          safetySettings: [
-            { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_ONLY_HIGH" },
-            { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_ONLY_HIGH" },
-            { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_ONLY_HIGH" },
-            { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_ONLY_HIGH" }
-          ]
-        })
+      // Gemini API 호출 - 다중 모델 fallback 전략
+      const requestBody = JSON.stringify({
+        contents: [{
+          parts: [{ text: systemPrompt + '\n\n' + userMessage }]
+        }],
+        generationConfig: {
+          temperature: 0.7,
+          maxOutputTokens: 1024,
+          topP: 0.9
+        },
+        safetySettings: [
+          { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_ONLY_HIGH" },
+          { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_ONLY_HIGH" },
+          { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_ONLY_HIGH" },
+          { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_ONLY_HIGH" }
+        ]
       });
 
-      if (!geminiResponse.ok) {
-        const errorText = await geminiResponse.text();
-        console.error('Gemini API error:', errorText);
+      let lastError = null;
+      let usedModel = null;
 
-        if (geminiResponse.status === 429) {
-          return errorResponse('AI 서비스가 일시적으로 바쁩니다. 잠시 후 다시 시도해 주세요.', 429, origin);
-        }
-        return errorResponse('AI 응답 생성에 실패했습니다.', 500, origin);
-      }
+      // 모델 순회하며 시도 (성능 좋은 순서)
+      for (const model of CONFIG.GEMINI_MODELS) {
+        const geminiUrl = `${CONFIG.GEMINI_API_URL}${model}:generateContent?key=${apiKey}`;
 
-      const geminiData = await geminiResponse.json();
+        console.log(`[Magic Search] Trying model: ${model}`);
 
-      // 응답 추출
-      const responseText = geminiData.candidates?.[0]?.content?.parts?.[0]?.text;
-      if (!responseText) {
-        return errorResponse('AI 응답을 파싱할 수 없습니다.', 500, origin);
-      }
+        try {
+          const geminiResponse = await fetch(geminiUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: requestBody
+          });
 
-      // 성공 응답
-      return new Response(
-        JSON.stringify({
-          response: responseText,
-          remaining: rateLimit.remaining
-        }),
-        {
-          status: 200,
-          headers: {
-            'Content-Type': 'application/json',
-            ...corsHeaders(origin)
+          if (geminiResponse.ok) {
+            const geminiData = await geminiResponse.json();
+            const responseText = geminiData.candidates?.[0]?.content?.parts?.[0]?.text;
+
+            if (responseText) {
+              usedModel = model;
+              console.log(`[Magic Search] Success with model: ${model}`);
+
+              // 성공 응답
+              return new Response(
+                JSON.stringify({
+                  response: responseText,
+                  remaining: rateLimit.remaining,
+                  model: usedModel  // 사용된 모델 정보 포함
+                }),
+                {
+                  status: 200,
+                  headers: {
+                    'Content-Type': 'application/json',
+                    ...corsHeaders(origin)
+                  }
+                }
+              );
+            } else {
+              console.log(`[Magic Search] Empty response from ${model}, trying next...`);
+              lastError = 'Empty response';
+              continue;
+            }
           }
+
+          // 에러 처리
+          const errorStatus = geminiResponse.status;
+          const errorText = await geminiResponse.text();
+          console.log(`[Magic Search] Model ${model} failed with ${errorStatus}: ${errorText.substring(0, 200)}`);
+
+          // 429 (Rate Limit) 또는 5xx 에러 시 다음 모델 시도
+          if (errorStatus === 429 || errorStatus >= 500) {
+            lastError = `${model}: ${errorStatus}`;
+            continue;  // 다음 모델로
+          }
+
+          // 400, 403 등 다른 에러는 중단
+          lastError = errorText;
+          break;
+
+        } catch (fetchError) {
+          console.error(`[Magic Search] Fetch error for ${model}:`, fetchError.message);
+          lastError = fetchError.message;
+          continue;  // 네트워크 에러 시 다음 모델 시도
         }
-      );
+      }
+
+      // 모든 모델 실패
+      console.error('[Magic Search] All models failed. Last error:', lastError);
+      return errorResponse('AI 응답 생성에 실패했습니다. 모든 모델이 사용 불가합니다.', 500, origin);
 
     } catch (err) {
       console.error('Worker error:', err);
