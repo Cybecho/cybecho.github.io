@@ -270,6 +270,14 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
           } else {
             content += '\n';
           }
+
+          // paragraph 블록의 children 처리 (들여쓰기된 콘텐츠)
+          if (block.has_children) {
+            const childContent = await convertBlocks(block.id, postDir, indentLevel);
+            if (childContent.trim()) {
+              content += childContent;
+            }
+          }
           break;
           
         case 'heading_1':
@@ -389,7 +397,7 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
           if (block.code?.rich_text?.length > 0) {
             const language = block.code.language || '';
             const codeText = convertRichText(block.code.rich_text);
-            
+
             // Mermaid 코드블록인지 확인
             if (language.toLowerCase() === 'mermaid') {
               content += '```mermaid\n' + codeText + '\n```\n\n';
@@ -397,12 +405,34 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
               content += '```' + language + '\n' + codeText + '\n```\n\n';
             }
           }
+
+          // code 블록의 children 처리 (들여쓰기된 콘텐츠)
+          if (block.has_children) {
+            const childContent = await convertBlocks(block.id, postDir, indentLevel);
+            if (childContent.trim()) {
+              content += childContent;
+            }
+          }
           break;
           
         case 'quote':
           if (block.quote?.rich_text?.length > 0) {
-            content += '> ' + convertRichText(block.quote.rich_text) + '\n\n';
+            content += '> ' + convertRichText(block.quote.rich_text) + '\n';
           }
+
+          // quote 블록의 children 처리 (들여쓰기된 콘텐츠를 인용구로 유지)
+          if (block.has_children) {
+            const childContent = await convertBlocks(block.id, postDir, 0);
+            if (childContent.trim()) {
+              // 인용구 형태로 변환
+              const quotedChildContent = childContent.split('\n').map(line =>
+                line.trim() ? '> ' + line : '>'
+              ).join('\n');
+              content += quotedChildContent + '\n';
+            }
+          }
+
+          content += '\n';
           break;
           
         case 'callout':
@@ -427,23 +457,31 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
           
         case 'divider':
           content += '---\n\n';
+
+          // divider 블록의 children 처리 (들여쓰기된 콘텐츠)
+          if (block.has_children) {
+            const childContent = await convertBlocks(block.id, postDir, indentLevel);
+            if (childContent.trim()) {
+              content += childContent;
+            }
+          }
           break;
           
         case 'image':
           if (block.image?.file?.url || block.image?.external?.url) {
             const imageUrl = block.image.file?.url || block.image.external?.url;
-            
+
             try {
               // 이미지 다운로드 및 로컬 저장
               const imageFilename = createImageFilename(imageUrl);
               const imagePath = path.join(postDir, imageFilename);
-              
+
               // 이미지가 이미 존재하지 않으면 다운로드
               if (!fs.existsSync(imagePath)) {
                 console.log('Downloading image:', imageFilename);
                 await downloadImage(imageUrl, imagePath);
               }
-              
+
               // 상대 경로로 마크다운에 추가
               content += '![Image](' + imageFilename + ')\n\n';
             } catch (error) {
@@ -452,11 +490,27 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
               content += '![Image](' + imageUrl + ')\n\n';
             }
           }
+
+          // image 블록의 children 처리 (들여쓰기된 콘텐츠)
+          if (block.has_children) {
+            const childContent = await convertBlocks(block.id, postDir, indentLevel);
+            if (childContent.trim()) {
+              content += childContent;
+            }
+          }
           break;
           
         case 'video':
           if (block.video?.external?.url) {
             content += '🎥 [동영상 보기](' + block.video.external.url + ')\n\n';
+          }
+
+          // video 블록의 children 처리 (들여쓰기된 콘텐츠)
+          if (block.has_children) {
+            const childContent = await convertBlocks(block.id, postDir, indentLevel);
+            if (childContent.trim()) {
+              content += childContent;
+            }
           }
           break;
           
@@ -465,6 +519,14 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
           const bookmarkUrl = block.bookmark?.url || block.link_preview?.url;
           if (bookmarkUrl) {
             content += '🔗 [' + bookmarkUrl + '](' + bookmarkUrl + ')\n\n';
+          }
+
+          // bookmark/link_preview 블록의 children 처리 (들여쓰기된 콘텐츠)
+          if (block.has_children) {
+            const childContent = await convertBlocks(block.id, postDir, indentLevel);
+            if (childContent.trim()) {
+              content += childContent;
+            }
           }
           break;
           
@@ -507,6 +569,14 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
         case 'child_page':
           if (block.child_page?.title) {
             content += '📄 **[' + block.child_page.title + ']**\n\n';
+          }
+
+          // child_page 블록의 children 처리 (들여쓰기된 콘텐츠)
+          if (block.has_children) {
+            const childContent = await convertBlocks(block.id, postDir, indentLevel);
+            if (childContent.trim()) {
+              content += childContent;
+            }
           }
           break;
       }
