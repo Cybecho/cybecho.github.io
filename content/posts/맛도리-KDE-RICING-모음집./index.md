@@ -4,7 +4,7 @@ date: 2026-01-18T04:57:00.000Z
 draft: false
 tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
 series: ["Let's Linux!"]
-description: "다양한 KDE 테마 설정을 소개하며, 각 테마의 특징과 링크를 제공합니다. 페도라와 윈도우의 통합, 최신 쿠분투 기능, 밸브 디자인 영감을 받은 테마, 독특한 사용자 인터페이스, 극단적인 단순함을 추구하는 흑백 테마, 윈도우 에어로와 물고기 배경의 조화, 90년대 복고풍 감성을 담은 설정 등이 포함되어 있습니다."
+description: "다양한 KDE 테마 설정을 소개하며, 각 테마는 독특한 특징을 가지고 있습니다. 예를 들어, 페도라와 윈도우를 통합한 설정, 최신 쿠분투 기반의 현대적인 UI, 밸브의 디자인 언어를 반영한 게이밍 테마, 실험적인 레이아웃을 가진 독창적인 설정, 극단적인 단순함을 추구하는 흑백 테마, 윈도우 에어로 테마의 현대적 변형, 그리고 90년대 복고풍 감성을 담은 설정이 포함됩니다."
 notion_id: "2ec1bab9-e3f8-80aa-9134-d0dbda286c97"
 notion_url: "https://www.notion.so/KDE-RICING-2ec1bab9e3f880aa9134d0dbda286c97"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/KDE-RICING-2ec1bab9e3f880aa9134d0dbda286c97"
 # 맛도리 KDE RICING 모음집.
 
 > **Summary**
-> 다양한 KDE 테마 설정을 소개하며, 각 테마의 특징과 링크를 제공합니다. 페도라와 윈도우의 통합, 최신 쿠분투 기능, 밸브 디자인 영감을 받은 테마, 독특한 사용자 인터페이스, 극단적인 단순함을 추구하는 흑백 테마, 윈도우 에어로와 물고기 배경의 조화, 90년대 복고풍 감성을 담은 설정 등이 포함되어 있습니다.
+> 다양한 KDE 테마 설정을 소개하며, 각 테마는 독특한 특징을 가지고 있습니다. 예를 들어, 페도라와 윈도우를 통합한 설정, 최신 쿠분투 기반의 현대적인 UI, 밸브의 디자인 언어를 반영한 게이밍 테마, 실험적인 레이아웃을 가진 독창적인 설정, 극단적인 단순함을 추구하는 흑백 테마, 윈도우 에어로 테마의 현대적 변형, 그리고 90년대 복고풍 감성을 담은 설정이 포함됩니다.
 
 ---
 
@@ -24,7 +24,7 @@ notion_url: "https://www.notion.so/KDE-RICING-2ec1bab9e3f880aa9134d0dbda286c97"
 - **링크:** [Reddit 바로가기](https://www.reddit.com/r/unixporn/comments/1qcajv6/kde_my_fedorawindows_dual_boot_setup/)
 🔗 [https://github.com/vinceliuice/MacTahoe-kde](https://github.com/vinceliuice/MacTahoe-kde)
 
-![Image](image_fc9bb02b72fe.png)
+![Image](image_a6a5dcffa82d.png)
 
 ### 2. Kubuntu 25.10
 
@@ -39,8 +39,8 @@ notion_url: "https://www.notion.so/KDE-RICING-2ec1bab9e3f880aa9134d0dbda286c97"
 밸브(Valve)사와 스팀(Steam)의 디자인 언어에 영감을 받은 테마입니다. 마치 SteamOS를 데스크탑 환경으로 옮겨온 듯한 게이밍 감성을 전달합니다.
 
 - **특징:** 스팀 덱(Steam Deck) 스타일의 아이콘과 다크 모드 테마
-- **링크:** [Reddit 바로가기](https://www.reddit.com/r/unixporn/comments/1qbn8wd/kde_obsession_with_valve/)
-![Image](image_adb4dbdaaacd.png)
+- **링크:** [Reddit 바ㄴ로가기](https://www.reddit.com/r/unixporn/comments/1qbn8wd/kde_obsession_with_valve/)
+![Image](image_b7c945da25eb.png)
 
 ### 4. A Bit Different Aesthetic
 
@@ -48,7 +48,7 @@ notion_url: "https://www.notion.so/KDE-RICING-2ec1bab9e3f880aa9134d0dbda286c97"
 
 - **특징:** 전형적인 하단 바 형식을 탈피한 창의적인 인터페이스
 - **링크:** [Reddit 바로가기](https://www.reddit.com/r/unixporn/comments/1ogex5s/kde_i_went_for_something_a_bit_different_this/)
-![Image](image_85d98154ab28.png)
+![Image](image_b4dfb7308fd0.png)
 
 ### 5. Minimalist Monochrome
 
@@ -56,7 +56,7 @@ notion_url: "https://www.notion.so/KDE-RICING-2ec1bab9e3f880aa9134d0dbda286c97"
 
 - **특징:** 극도의 단순함, 높은 대비를 통한 가독성 확보
 - **링크:** [Reddit 바로가기](https://www.reddit.com/r/unixporn/comments/1g5im30/kde_plasma_minimalist_monochrome_because_color_is/)
-![Image](image_29ae31d12899.png)
+![Image](image_bcdc5579826a.png)
 
 ### 6. Aero Fish
 
@@ -64,7 +64,7 @@ notion_url: "https://www.notion.so/KDE-RICING-2ec1bab9e3f880aa9134d0dbda286c97"
 
 - **특징:** 유리 같은 투명도(Glass effect)와 푸른 색조의 강조
 - **링크:** [Reddit 바로가기](https://www.reddit.com/r/unixporn/comments/1l2c4fk/kde_aero_fish/)
-![Image](image_431eecb31a0d.png)
+![Image](image_70cad1ee42e2.png)
 
 ### 7. Retro Liminal
 
@@ -72,5 +72,5 @@ notion_url: "https://www.notion.so/KDE-RICING-2ec1bab9e3f880aa9134d0dbda286c97"
 
 - **특징:** 로우파이(Lo-fi) 스타일의 비주얼과 향수를 자극하는 UI
 - **링크:** [Reddit 바로가기](https://www.reddit.com/r/unixporn/comments/1m8h3we/kde_retro_liminal/)
-![Image](image_96decc338e16.png)
+![Image](image_908ef8c2a16f.png)
 

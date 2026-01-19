@@ -4,7 +4,7 @@ date: 2026-01-19T09:19:00.000Z
 draft: false
 tags: ["NAS"]
 series: ["Let's Homelab!", "Infra & Network"]
-description: "시놀로지 NAS는 UPnP를 통해 공유기의 포트포워딩을 자동 설정하여 외부 접속 경로를 확보하며, 클라이언트는 DNS를 통해 공인 IP를 확인하여 NAS에 접속한다. NAT Loopback 기능 덕분에 내부망에서도 외부 IP로 접속이 가능하고, 포트 번호 없이 접속 시 NAS가 자동으로 리다이렉트하여 관리 페이지로 안내한다. 수동 포트 설정이 우선시되므로, 포트 충돌 시 사용자는 명시적으로 포트를 입력해야 한다."
+description: "시놀로지 NAS는 UPnP를 통해 공유기의 포트포워딩을 자동 설정하여 외부 접속 경로를 확보하고, 클라이언트는 DDNS를 통해 공인 IP를 확인하여 NAS에 접속한다. NAT Loopback 기능 덕분에 내부망에서도 외부 IP로 접근할 수 있으며, 포트 번호 없이 접속할 경우 NAS가 자동으로 리다이렉트를 통해 관리 페이지로 안내한다. 수동 포트포워딩이 우선시되므로, 포트 충돌이 발생할 경우 사용자가 명시적으로 포트를 입력해야 한다."
 notion_id: "2ed1bab9-e3f8-802a-93a7-fee192646d7e"
 notion_url: "https://www.notion.so/Synology-NAS-ip-ddns-NAS-2ed1bab9e3f8802a93a7fee192646d7e"
 ---
@@ -12,19 +12,48 @@ notion_url: "https://www.notion.so/Synology-NAS-ip-ddns-NAS-2ed1bab9e3f8802a93a7
 # Synology NAS는 ip를 알려준적도 없는데, ddns를 키면 클라이언트는 어떻게 NAS를 인식할까?
 
 > **Summary**
-> 시놀로지 NAS는 UPnP를 통해 공유기의 포트포워딩을 자동 설정하여 외부 접속 경로를 확보하며, 클라이언트는 DNS를 통해 공인 IP를 확인하여 NAS에 접속한다. NAT Loopback 기능 덕분에 내부망에서도 외부 IP로 접속이 가능하고, 포트 번호 없이 접속 시 NAS가 자동으로 리다이렉트하여 관리 페이지로 안내한다. 수동 포트 설정이 우선시되므로, 포트 충돌 시 사용자는 명시적으로 포트를 입력해야 한다.
+> 시놀로지 NAS는 UPnP를 통해 공유기의 포트포워딩을 자동 설정하여 외부 접속 경로를 확보하고, 클라이언트는 DDNS를 통해 공인 IP를 확인하여 NAS에 접속한다. NAT Loopback 기능 덕분에 내부망에서도 외부 IP로 접근할 수 있으며, 포트 번호 없이 접속할 경우 NAS가 자동으로 리다이렉트를 통해 관리 페이지로 안내한다. 수동 포트포워딩이 우선시되므로, 포트 충돌이 발생할 경우 사용자가 명시적으로 포트를 입력해야 한다.
 
 ---
 
-![Image](image_9af5ab190ecf.png)
+![Image](image_db2481a9cb8c.png)
 
-![Image](image_be0092c5233a.png)
+![Image](image_678d5188cc11.png)
 
 ## [주제 1: NAS와 공유기 간의 UPnP 자동 설정 및 우선순위]
 
 시놀로지 NAS는 네트워크 환경 내에서 외부 접속 경로를 확보하기 위해 UPnP(Universal Plug and Play) 통신 규약을 활용하여 공유기의 포트포워딩 설정을 자동 제어한다. 사용자가 시놀로지 설정 내의 라우터 구성을 완료하면, NAS는 로컬 네트워크상의 게이트웨이를 탐색하여 관리 페이지 및 서비스에 필요한 특정 포트(5000, 5001, 80, 443 등)로 인입되는 패킷을 자신의 내부 IP 주소로 전달하도록 공유기에 요청한다. 공유기는 이 요청을 수용하여 내부 메모리에 외부 포트와 내부 IP를 매핑하는 테이블을 생성함으로써 사용자의 수동 설정 없이도 데이터 전달 경로를 구축한다. 다만, 공유기 관리자 페이지에서 직접 입력한 수동 포트포워딩 규칙은 UPnP를 통한 자동 규칙보다 높은 우선순위를 가지며, 만약 동일한 포트를 두고 다른 서버와 충돌이 발생할 경우 수동 설정된 경로로 패킷이 우선 전달된다.
 
-> UPnP는 실제로 IGD(Internet Gateway Device) 프로토콜을 기반으로 작동합니다. 
+> UPnP는 실제로 IGD(Internet Gateway Device) 프로토콜을 기반으로 작동합니다.
+
+기기는 SOAP(Simple Object Access Protocol) 메시지로 AddPortMapping 명령을 전송하여 라우터에 포트 매핑 규칙을 추가합니다. 
+
+```javascript
+<m:AddPortMapping>
+  <NewRemoteHost></NewRemoteHost>
+  <NewExternalPort>5000</NewExternalPort>
+  <NewProtocol>TCP</NewProtocol>
+  <NewInternalPort>5000</NewInternalPort>
+  <NewInternalClient>192.168.0.X</NewInternalClient>
+</m:AddPortMapping>
+```
+
+이 정보는 라우터의 메모리에 저장됩니다.
+
+**리스 타임(Lease Time) 메커니즘**
+
+허나, UPnP 포트포워딩은 영구적이지 않습니다. 
+
+대신 리스 타임이 설정됩니다. 
+
+예를 들어:
+
+- ASUS 라우터: 약 60분 리스 타임
+- 일부 라우터: 3-5분마다 만료된 리스 정리
+- 리스 타임 0: 무한 지속 (구현에 따라 상이)
+기기는 리스를 갱신해야 하며, 그렇지 않으면 포트포워딩 규칙이 자동으로 삭제됩니다. 
+
+이는 세션 기반으로 작동한다는 의미입니다.
 
 ## [주제 2: DNS 질의를 통한 공인 IP 식별 및 접속 경로 확립]
 
@@ -44,7 +73,7 @@ notion_url: "https://www.notion.so/Synology-NAS-ip-ddns-NAS-2ed1bab9e3f8802a93a7
 
 # QnA로 이해해보자
 
-![Image](image_17b2de76c657.png)
+![Image](image_d85a8dc31ea0.png)
 
 
 ### 1. NAS가 라우터에게 무엇을 "집어넣었나?"
