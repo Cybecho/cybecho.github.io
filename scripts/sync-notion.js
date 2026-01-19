@@ -586,12 +586,34 @@ async function syncNotionDatabase() {
         const postDir = 'content/posts/' + slug;
         const postFile = postDir + '/index.md';
 
+        // 🔧 제목 변경 감지 및 디렉토리 이동 처리
+        const oldSlug = cache[pageId]?.slug;
+        const hasSlugChanged = oldSlug && oldSlug !== slug;
+
+        if (hasSlugChanged) {
+          const oldPostDir = 'content/posts/' + oldSlug;
+          if (fs.existsSync(oldPostDir)) {
+            console.log('📝 Title changed, moving directory:', oldSlug, '→', slug);
+            try {
+              // 새 경로가 이미 존재하면 삭제 (충돌 방지)
+              if (fs.existsSync(postDir)) {
+                fs.rmSync(postDir, { recursive: true, force: true });
+              }
+              // 디렉토리 이름 변경
+              fs.renameSync(oldPostDir, postDir);
+              console.log('✅ Directory moved successfully');
+            } catch (error) {
+              console.error('❌ Failed to move directory:', error.message);
+            }
+          }
+        }
+
         // 향상된 캐시 검증 로직
-        const isCacheValid = cache[pageId] && 
+        const isCacheValid = cache[pageId] &&
                            cache[pageId].last_edited_time === lastEditedTime &&
                            cache[pageId].slug === slug &&
                            fs.existsSync(postFile);
-        
+
         if (isCacheValid) {
           console.log('✅ Skipped (cached):', originalTitle);
           // 캐시된 항목을 그대로 유지하되 처리 시간 업데이트
@@ -602,7 +624,7 @@ async function syncNotionDatabase() {
           skippedCount++;
           continue;
         }
-        
+
         // 부분 업데이트 확인 (파일은 있지만 캐시 정보가 다름)
         const isPartialUpdate = cache[pageId] && fs.existsSync(postFile);
         if (isPartialUpdate) {
