@@ -226,15 +226,38 @@ async function convertTableToMarkdown(tableBlock) {
 
 async function convertBlocks(pageId, postDir, indentLevel = 0) {
   try {
-    const blocks = await notion.blocks.children.list({
-      block_id: pageId,
-      page_size: 100
-    });
+    // 🔥 핵심 수정: 페이지네이션 처리 추가
+    // Notion API는 한 번에 최대 100개 블록만 반환하므로,
+    // has_more가 true면 next_cursor로 추가 블록을 가져와야 함
+    let allBlocks = [];
+    let hasMore = true;
+    let nextCursor = undefined;
+
+    while (hasMore) {
+      const response = await notion.blocks.children.list({
+        block_id: pageId,
+        page_size: 100,
+        start_cursor: nextCursor
+      });
+
+      allBlocks = allBlocks.concat(response.results);
+      hasMore = response.has_more;
+      nextCursor = response.next_cursor;
+
+      if (hasMore) {
+        console.log(`  📄 Fetching more blocks... (${allBlocks.length} so far)`);
+        await new Promise(resolve => setTimeout(resolve, 50)); // API 속도 제한 대응
+      }
+    }
+
+    if (allBlocks.length > 100) {
+      console.log(`  📊 Total blocks fetched: ${allBlocks.length} (pagination used)`);
+    }
 
     let content = '';
     const indent = '  '.repeat(indentLevel); // 들여쓰기용 공백
-    
-    for (const block of blocks.results) {
+
+    for (const block of allBlocks) {
       // 디버깅: 블록 구조 로깅
       if (block.type === 'toggle' || block.type === 'heading_1' || block.type === 'heading_2' || block.type === 'heading_3') {
         console.log(`\n=== DEBUG BLOCK ===`);
@@ -706,7 +729,9 @@ async function syncNotionDatabase() {
         const dateValue = page.properties['Date']?.date?.start || page.created_time;
         const tags = page.properties['Tags']?.multi_select?.map(tag => tag.name) || [];
         const themes = page.properties['Thems']?.multi_select?.map(theme => theme.name) || [];
-        const aiSummary = page.properties['AI 요약']?.rich_text?.[0]?.plain_text || '';
+        // 🔥 수정: AI 요약의 모든 rich_text 요소를 연결 (기존: 첫 번째 요소만 가져옴)
+        const aiSummaryRichText = page.properties['AI 요약']?.rich_text || [];
+        const aiSummary = aiSummaryRichText.map(rt => rt.plain_text || '').join('');
 
         // 포스트 디렉토리 먼저 생성 (이미지 다운로드에 필요)
         if (!fs.existsSync(postDir)) {
