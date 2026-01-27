@@ -4,7 +4,7 @@ date: 2026-01-25T05:55:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
 series: ["Meet The Bootc"]
-description: "이 시리즈는 Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 방법을 소개합니다. Podman을 사용하여 bootc 컨테이너 이미지를 생성하고, 이를 ISO 파일로 변환하여 USB에 설치하는 과정을 단계별로 설명합니다. 또한, 사용자 계정 설정, 이미지 빌드, 레지스트리 업로드, 업데이트 및 롤백 테스트를 포함하여 불변의 OS를 구축하는 방법을 다룹니다. 마지막으로, 여러 의문점에 대한 답변을 다음 포스트에서 다루겠다고 언급합니다."
+description: "Top-Down 방식을 통해 CentOS Stream 10 기반의 GUI 환경을 구축하는 방법을 소개하며, Podman을 사용하여 bootc 컨테이너 이미지를 생성하고 배포하는 과정, 사용자 계정 설정 및 비밀번호 해시 생성, ISO 파일 빌드 및 USB 부팅 미디어 제작을 단계별로 설명합니다. 또한, 업데이트와 롤백 기능을 테스트하여 불변의 OS를 구축하는 방법을 다룹니다."
 notion_id: "2f31bab9-e3f8-8002-9c73-d0c7b1f5ce1e"
 notion_url: "https://www.notion.so/Let-s-Bootc-1-beginner-for-bootc-2f31bab9e3f880029c73d0c7b1f5ce1e"
 ---
@@ -12,13 +12,13 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-beginner-for-bootc-2f31bab9e3f8
 # Let’s Bootc! [1] - beginner for bootc : 백문이 불어일견! 일단 빌드부터 해 봅시다.
 
 > **Summary**
-> 이 시리즈는 Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 방법을 소개합니다. Podman을 사용하여 bootc 컨테이너 이미지를 생성하고, 이를 ISO 파일로 변환하여 USB에 설치하는 과정을 단계별로 설명합니다. 또한, 사용자 계정 설정, 이미지 빌드, 레지스트리 업로드, 업데이트 및 롤백 테스트를 포함하여 불변의 OS를 구축하는 방법을 다룹니다. 마지막으로, 여러 의문점에 대한 답변을 다음 포스트에서 다루겠다고 언급합니다.
+> Top-Down 방식을 통해 CentOS Stream 10 기반의 GUI 환경을 구축하는 방법을 소개하며, Podman을 사용하여 bootc 컨테이너 이미지를 생성하고 배포하는 과정, 사용자 계정 설정 및 비밀번호 해시 생성, ISO 파일 빌드 및 USB 부팅 미디어 제작을 단계별로 설명합니다. 또한, 업데이트와 롤백 기능을 테스트하여 불변의 OS를 구축하는 방법을 다룹니다.
 
 ---
 
-![Image](image_6d8c2755a9ef.png)
+![Image](image_b7cec3f472ed.png)
 
-![Image](image_f58a3ef6d7a2.png)
+![Image](image_607b0af74cc5.png)
 
 # [1] beginner for bootc
 
@@ -62,7 +62,7 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-beginner-for-bootc-2f31bab9e3f8
 - 다섯째, 롤백을 테스트한다. 업데이트에 문제가 생겼을 때 이전 버전으로 돌아갈 수 있는지 확인한다.
 이 다섯 단계를 모두 거쳐야 bootc의 기본적인 워크플로우를 체험했다고 할 수 있습니다.
 
-![Image](image_d16f363712c0.png)
+![Image](image_3c59f9960d7d.png)
 
 ---
 
@@ -86,7 +86,7 @@ podman machine init --disk-size 50 --memory 8192
 podman machine start
 ```
 
-Podman은 내부적으로 Linux VM을 사용하여 컨테이너를 실행합니다. 이 구조는 이후 단계에서 중요한 역할을 하게 되지만, 현재 단계에서는 Podman이 설치되어 있으면 충분합니다.
+Podman은 내부적으로 Linux VM을 사용하여 컨테이너를 실행합니다.
 
 Linux 환경에서는 배포판의 패키지 매니저를 통해 Podman을 설치할 수 있습니다.
 
