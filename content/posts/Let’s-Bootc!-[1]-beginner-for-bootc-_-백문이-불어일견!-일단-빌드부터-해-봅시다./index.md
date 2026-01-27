@@ -4,7 +4,7 @@ date: 2026-01-25T05:55:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
 series: ["Meet The Bootc"]
-description: "Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, Podman을 사용하여 bootc 컨테이너 이미지를 생성하고 배포하는 과정을 설명합니다. 사용자 계정 설정, Containerfile 작성, 이미지 빌드 및 레지스트리 업로드, ISO 파일 변환, USB 부팅 미디어 제작, 업데이트 및 롤백 테스트를 포함한 12단계의 흐름을 통해 부팅 가능한 컨테이너의 기본 사이클을 경험하게 됩니다. 각 단계에서 발생할 수 있는 의문점들도 후속 포스트에서 다룰 예정입니다."
+description: "이 시리즈는 Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 방법을 소개합니다. Podman을 사용하여 bootc 컨테이너 이미지를 생성하고, 이를 ISO 파일로 변환하여 USB에 설치하는 과정을 단계별로 설명합니다. 또한, 사용자 계정 설정, 이미지 빌드, 레지스트리 업로드, 업데이트 및 롤백 테스트를 포함하여 불변의 OS를 구축하는 방법을 다룹니다. 마지막으로, 여러 의문점에 대한 답변을 다음 포스트에서 다루겠다고 언급합니다."
 notion_id: "2f31bab9-e3f8-8002-9c73-d0c7b1f5ce1e"
 notion_url: "https://www.notion.so/Let-s-Bootc-1-beginner-for-bootc-2f31bab9e3f880029c73d0c7b1f5ce1e"
 ---
@@ -12,15 +12,17 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-beginner-for-bootc-2f31bab9e3f8
 # Let’s Bootc! [1] - beginner for bootc : 백문이 불어일견! 일단 빌드부터 해 봅시다.
 
 > **Summary**
-> Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, Podman을 사용하여 bootc 컨테이너 이미지를 생성하고 배포하는 과정을 설명합니다. 사용자 계정 설정, Containerfile 작성, 이미지 빌드 및 레지스트리 업로드, ISO 파일 변환, USB 부팅 미디어 제작, 업데이트 및 롤백 테스트를 포함한 12단계의 흐름을 통해 부팅 가능한 컨테이너의 기본 사이클을 경험하게 됩니다. 각 단계에서 발생할 수 있는 의문점들도 후속 포스트에서 다룰 예정입니다.
+> 이 시리즈는 Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 방법을 소개합니다. Podman을 사용하여 bootc 컨테이너 이미지를 생성하고, 이를 ISO 파일로 변환하여 USB에 설치하는 과정을 단계별로 설명합니다. 또한, 사용자 계정 설정, 이미지 빌드, 레지스트리 업로드, 업데이트 및 롤백 테스트를 포함하여 불변의 OS를 구축하는 방법을 다룹니다. 마지막으로, 여러 의문점에 대한 답변을 다음 포스트에서 다루겠다고 언급합니다.
 
 ---
 
-![Image](image_430c610bee98.png)
+![Image](image_6d8c2755a9ef.png)
 
-![Image](image_8d328611fa5d.png)
+![Image](image_f58a3ef6d7a2.png)
 
-# [1] beginner for bootc : Quick Starter!
+# [1] beginner for bootc
+
+## Quick Starter!
 
 백문이 불여일견이라고, 저는 Top-Down 방식을 통해 이 시리즈를 풀어내보려 합니다.
 
@@ -60,7 +62,7 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-beginner-for-bootc-2f31bab9e3f8
 - 다섯째, 롤백을 테스트한다. 업데이트에 문제가 생겼을 때 이전 버전으로 돌아갈 수 있는지 확인한다.
 이 다섯 단계를 모두 거쳐야 bootc의 기본적인 워크플로우를 체험했다고 할 수 있습니다.
 
-![Image](image_371c173adeff.png)
+![Image](image_d16f363712c0.png)
 
 ---
 
@@ -395,4 +397,235 @@ podman push --compression-format=zstd ghcr.io/<username>/centos10-kde-bootc:v1
 ## 7. ISO 빌드
 
 레지스트리에 업로드한 이미지를 설치 가능한 ISO 파일로 변환합니다. 이 작업에는 `bootc-image-builder` 도구를 사용합니다.
+
+```bash
+# output 디렉토리 생성
+mkdir -p output
+
+sudo podman run \\
+  --rm \\
+  -it \\
+  --privileged \\
+  --pull=newer \\
+  --security-opt label=type:unconfined_t \\
+  -v $(pwd)/config.toml:/config.toml:ro \\
+  -v $(pwd)/output:/output \\
+  -v /var/lib/containers/storage:/var/lib/containers/storage \\
+  quay.io/centos-bootc/bootc-image-builder:latest \\
+  --type iso \\
+  --target-arch x86_64 \\
+  --config /config.toml \\
+  docker.io/myusername/centos10-kde-bootc:v1
+```
+
+> x86_64 아키텍처 지정: --target-arch x86_64 옵션을 추가하여 명시적으로 x86_64(AMD64) 아키텍처용 ISO를 생성합니다. Apple Silicon Mac 등에서 빌드할 경우 이 옵션이 없으면 ARM64 이미지가 생성될 수 있습니다.
+
+**GHCR을 사용하는 경우:**
+
+명령어가 다소 복잡해 보일 수 있습니다. 그리고 또, 각 옵션을 살펴보면 몇 가지 궁금한 점이 생깁니다.
+
+- `-privileged`가 필요한 이유는 무엇인지,
+- `v /var/lib/containers/storage:/var/lib/containers/storage`는 어떤 역할을 하는지,
+- `-type iso` 외에 다른 옵션에는 어떤 것들이 있는지 등…
+**주요 옵션 설명:**
+
+| 옵션 | 설명 |
+| --- | --- |
+| `--privileged` | 루프백 디바이스, 파일시스템 마운트 등 ISO 생성에 필요한 권한 |
+| `--security-opt label=type:unconfined_t` | SELinux 제약 해제 |
+| `-v .../containers/storage:...` | 로컬 이미지 스토리지 공유 (pull 없이 로컬 이미지 사용) |
+| `--type iso` | 출력 타입 (iso, qcow2, vmdk, raw, ami 등) |
+| `--target-arch` | 대상 아키텍처 (x86_64, aarch64) |
+| `--config` | config.toml 경로 |
+
+이러한 세부 사항은 별도의 포스트에서 자세히 다루도록 하겠습니다. 현재 단계에서는 "이 명령을 실행하면 ISO 파일이 생성된다"는 점만 이해하고 진행하시면 됩니다.
+
+빌드가 완료되면 `output` 디렉토리에 ISO 파일이 생성됩니다.
+
+```bash
+ls -lh output/bootiso/
+
+
+```
+
+`install.iso` 또는 비슷한 이름의 파일이 보일 것입니다.
+
+---
+
+## 8. USB 부팅 미디어 제작 및 설치
+
+이제 빌드된 ISO 파일을 USB에 굽는 작업을 시행하면 됩니다. BalenaEtcher, Rufus, 또는 Ventoy 등을 사용하시면 됩니다. 이 중에서 하나만 고르자면, 저는 Ventoy를 선호합니다. 한 번 설치해두면 ISO 파일을 간단히 폴더 안에만 넣어도 해도 부팅 가능한 상태가 되기 때문이지요… 관리가 용이합니다.
+
+그리고 이제 USB를 대상 컴퓨터에 꽂고 부팅해주세요. BIOS에서 USB 부팅 우선순위를 높여야 할 수도 있습니다.
+
+부팅하면 익숙한 화면이 나타납니다. RHEL이나 Fedora를 설치해본 적이 있다면 알아보실 겁니다. anaconda 설치 프레임워크입니다.
+
+근데 이상한게 하나 있습니다! 컨테이너 이미지로 OS를 배포한다면서, 왜 전통적인 설치 화면이 뜨는 걸까요? 이것도 나중에 풀어야 할 의문입니다.
+
+### GUI vs 자동 설치
+
+config.toml의 kickstart 설정에 따라 설치 방식이 달라집니다.
+
+| kickstart 옵션 | 설치 방식 |
+| --- | --- |
+| `graphical` | GUI 설치 - anaconda 그래픽 인터페이스로 디스크 선택 등 수동 설정 |
+| `text` | 텍스트 설치 - 터미널 기반 인터페이스 |
+| `text --non-interactive` | 완전 자동 설치 - 사용자 입력 없이 진행 |
+
+이 튜토리얼에서 고급 config.toml 예시에 `graphical`을 사용했다면, 설치 시에 anaconda GUI가 표시됩니다. 디스크 파티셔닝을 수동으로 설정하거나, 듀얼 부트 환경을 구성할 때 유용합니다.
+
+설치 과정은 일반적인 RHEL 계열 설치와 동일합니다. 디스크 파티션을 설정하고, 시간대를 선택하고, 설치를 진행합니다. config.toml에서 정의한 사용자 계정은 자동으로 생성됩니다.
+
+설치가 완료되면 재부팅합니다.
+
+---
+
+## 9. 설치 후 확인
+
+재부팅 후 SDDM 로그인 화면이 나타나면 설치가 성공적으로 완료된 것입니다. config.toml에서 설정한 사용자 이름과 비밀번호로 로그인합니다.
+
+터미널을 열어 몇 가지 사항을 확인해보겠습니다.
+
+```bash
+# 현재 부팅된 이미지 확인
+bootc status
+
+
+```
+
+출력 결과에서 `image` 항목을 확인합니다. `docker.io/myusername/centos10-kde-bootc:v1`와 같이 레지스트리 경로가 표시되어야 합니다.
+
+```bash
+# 출력 예시
+Booted image: docker.io/myusername/centos10-kde-bootc:v1
+    Digest: sha256:abc123...
+    Version: ...
+```
+
+경로가 올바르게 설정되지 않은 경우 `bootc switch` 명령을 통해 변경할 수 있습니다.
+
+```bash
+sudo bootc switch docker.io/myusername/centos10-kde-bootc:v1
+```
+
+이제 시스템이 해당 레지스트리의 이미지를 참조하게 됩니다.
+
+sudo가 정상적으로 작동하는지도 확인합니다.
+
+```bash
+sudo whoami
+```
+
+`root`가 출력되면 wheel 그룹 설정이 올바르게 적용된 것입니다.
+
+---
+
+## 10. 업데이트 테스트
+
+이제 업데이트 사이클을 테스트해보겠습니다. 먼저 이미지에 변경 사항을 적용합니다.
+
+빌드 환경으로 돌아가서 Containerfile을 수정합니다. 변경 사항을 쉽게 확인할 수 있도록 fastfetch 패키지를 추가하겠습니다.
+
+```docker
+FROM quay.io/centos-bootc/centos-bootc:stream10
+
+# ... 기존 내용 ...
+
+# 변경 확인용 패키지 추가
+RUN dnf -y install fastfetch
+```
+
+수정이 완료되면 다시 빌드하고 레지스트리에 푸시합니다.
+
+```bash
+podman build -t my-centos10-kde:v2 .
+podman tag my-centos10-kde:v2 docker.io/myusername/centos10-kde-bootc:v2
+podman push docker.io/myusername/centos10-kde-bootc:v2
+```
+
+대상 컴퓨터에서 업그레이드를 실행합니다.
+
+```bash
+# 새 버전으로 전환
+sudo bootc switch docker.io/myusername/centos10-kde-bootc:v2
+
+# 또는 같은 이미지의 최신 버전으로 업그레이드
+# sudo bootc upgrade
+```
+
+업그레이드가 완료되면 시스템을 재부팅합니다.
+
+```bash
+sudo reboot
+```
+
+재부팅 후 `fastfetch`를 실행해봅니다. 정상적으로 실행된다면 업데이트가 성공적으로 적용된 것입니다.
+
+여기서 흥미로운 점이 있습니다. 재부팅 속도가 예상보다 빠릅니다. 일반적인 dnf 업데이트 후 재부팅에 비해 상당히 빠른 편인데, 이유가 무엇일까요? OSTree와 연관이 있다는데, 정확한건 추후 포스트로 하나씩 풀어가도록 하겠습니다.
+
+---
+
+## 11. 롤백
+
+OS가 fastfetch가 설치된 상태로 업데이트 되었습니다.
+
+업데이트가 되었다는건? 문제가 생겼을 때 이전 버전으로 돌아가는 것도 가능하다는 소리겠지요.
+
+```bash
+sudo bootc rollback
+sudo reboot
+```
+
+재부팅하면 이전 버전으로 돌아가게 됩니다. `fastfetch`가 없어진 것을 확인할 수 있습니다.
+
+```bash
+# 현재 상태 확인
+bootc status
+```
+
+롤백 이미지와 부팅된 이미지가 표시됩니다.
+
+이 롤백 기능은 bootc의 핵심 가치 중 하나입니다. 업데이트 실패나 문제 발생 시 즉시 이전 상태로 복구할 수 있습니다. 기존 패키지 매니저로는 이러한 원자적 롤백이 어렵습니다.
+
+---
+
+## 12. 축하드립니다! bootc의 기본적인 흐름을 완수하셨습니다!
+
+축하드립니다! 이제 부팅 가능한 컨테이너인 bootc의 기본적인 사이클을 모두 경험하셨습니다. 생각보다 과정이 복잡하진 않으셨죠?
+
+명령어 하나하나로만 보면 조금 복잡해 보일 수 있지만, 사실 이 과정은 우리가 그동안 컨테이너를 만들어 왔던 방식과 크게 다르지 않았습니다.
+
+우리가 함께 진행한 과정은 Containerfile을 생성하고 ISO 이미지를 빌드하는 것부터 시작되었습니다. 이후 컨테이너 이미지를 원격 저장소에 푸시하고, 변경 사항이 필요할 때 OS 내부에서 직접 설치하는 대신 Containerfile을 수정하여 새로운 패키지를 설치하는 단계를 거쳤습니다.
+
+이러한 일련의 과정을 통해 여러분은 언제든지 이전 상태로 되돌릴 수 있으며, 효율적으로 관리 가능한 불변의 OS(Immutable OS)를 성공적으로 구축하셨습니다.
+
+---
+
+## 13. 하지만, 의문이 생길 것이다
+
+허나, 이 과정을 따라하면서 아마 여러 의문이 생겼을 것입니다.
+
+"그냥 Docker 이미지인 것 같은데, 왜 부팅이 되지?"
+
+"[quay.io/centos-bootc/centos-bootc:stream10](http://quay.io/centos-bootc/centos-bootc:stream10) 이 베이스 이미지에는 뭐가 들어있는 거지?"
+
+"왜 설치 화면에 anaconda가 뜨지?"
+
+"config.toml 파일은 정확히 무슨 역할을 하지? kickstart와는 뭐가 다른 거지?"
+
+"재부팅이 왜 이렇게 빠르지?"
+
+"Containerfile에서 왜 어떤 건 되고 어떤 건 안 되지?"
+
+"bootc-image-builder 명령어의 그 긴 옵션들은 각각 무슨 의미지?"
+
+"ISO로 굽는 것과 레지스트리에 올리는 것과 bootc switch, 이 행위들이 어디서 어떻게 연결되는 거지?"
+
+이 의문들은 이후 포스트에서 하나씩 풀어가도록 하시죠!
+
+다음 포스트에서는 첫 번째 질문, "컨테이너가 어떻게 OS가 되는가?" 에 대해 OCI 표준과 bootc 이미지의 구조를 살펴보겠습니다.
+
+## Reference
+
+[https://docs.redhat.com/ko/documentation/red_hat_enterprise_linux/10/html/using_image_mode_for_rhel_to_build_deploy_and_manage_operating_systems/deploying-the-rhel-bootc-images](https://docs.redhat.com/ko/documentation/red_hat_enterprise_linux/10/html/using_image_mode_for_rhel_to_build_deploy_and_manage_operating_systems/deploying-the-rhel-bootc-images)
 
