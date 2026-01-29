@@ -3,8 +3,8 @@ title: "Let’s Bootc! [7] - OSTree : bootc는 재부팅이 왜 이렇게 빠를
 date: 2026-01-25T10:46:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
-series: ["Meet The Bootc"]
-description: "OSTree는 운영체제의 원자적 업그레이드를 보장하는 기술로, Git의 content-addressed 모델을 활용하여 파일을 해시값으로 식별하고 하드링크를 사용하여 중복을 제거합니다. 이로 인해 재부팅이 빠르고 롤백이 용이하며, 기존 패키지 관리자의 문제점을 해결합니다. bootc 프로젝트는 OSTree의 개념을 OCI 컨테이너 이미지로 확장하여, 기존 도구와 인프라를 활용할 수 있도록 합니다."
+series: ["Let's Bootc!"]
+description: "OSTree는 운영체제 바이너리의 원자적 전환을 지원하는 기술로, Git의 content-addressed 모델을 기반으로 합니다. 시스템 업데이트 중 전원이 꺼져도 이전 또는 새로운 시스템 중 하나로 부팅되며, 하드링크를 사용하여 디스크 공간을 절약하고 롤백이 용이합니다. bootc 프로젝트는 OSTree의 개념을 OCI 컨테이너 이미지로 확장하여 기존 도구와 인프라를 활용합니다."
 notion_id: "2f31bab9-e3f8-8015-b890-ff96bf889269"
 notion_url: "https://www.notion.so/Let-s-Bootc-7-OSTree-bootc-2f31bab9e3f88015b890ff96bf889269"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Let-s-Bootc-7-OSTree-bootc-2f31bab9e3f88015b8
 # Let’s Bootc! [7] - OSTree : bootc는 재부팅이 왜 이렇게 빠를까?
 
 > **Summary**
-> OSTree는 운영체제의 원자적 업그레이드를 보장하는 기술로, Git의 content-addressed 모델을 활용하여 파일을 해시값으로 식별하고 하드링크를 사용하여 중복을 제거합니다. 이로 인해 재부팅이 빠르고 롤백이 용이하며, 기존 패키지 관리자의 문제점을 해결합니다. bootc 프로젝트는 OSTree의 개념을 OCI 컨테이너 이미지로 확장하여, 기존 도구와 인프라를 활용할 수 있도록 합니다.
+> OSTree는 운영체제 바이너리의 원자적 전환을 지원하는 기술로, Git의 content-addressed 모델을 기반으로 합니다. 시스템 업데이트 중 전원이 꺼져도 이전 또는 새로운 시스템 중 하나로 부팅되며, 하드링크를 사용하여 디스크 공간을 절약하고 롤백이 용이합니다. bootc 프로젝트는 OSTree의 개념을 OCI 컨테이너 이미지로 확장하여 기존 도구와 인프라를 활용합니다.
 
 ---
 
-![Image](image_ac684b54ba94.png)
+![Image](image_c6c58b73ee09.png)
 
 ## [6] 재부팅이 왜 이렇게 빠른가? - OSTree의 원자적 전환
 

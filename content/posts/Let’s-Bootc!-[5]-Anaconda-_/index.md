@@ -3,8 +3,8 @@ title: "Let’s Bootc! [5] - Anaconda : "
 date: 2026-01-25T07:18:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
-series: ["Meet The Bootc"]
-description: "Anaconda는 25년간 RHEL 계열 리눅스의 표준 설치 프로그램으로, kickstart 파일을 통해 반복 가능한 설치를 지원합니다. bootc-image-builder는 ISO를 생성할 때 anaconda를 활용하여 컨테이너 이미지를 배포하며, 기존의 검증된 설치 프로그램을 재활용하는 이유는 비용 절감과 호환성 때문입니다. toml 파일은 사용자 설정을 정의하고 kickstart 파일로 변환되어 anaconda에 전달됩니다. 새로운 기술이 반드시 새로워야 하는 것은 아니며, 기존 인프라를 최대한 활용하는 것이 중요합니다."
+series: ["Let's Bootc!"]
+description: "anaconda는 25년간 RHEL 계열 리눅스의 표준 설치 프로그램으로, kickstart 파일을 통해 반복 가능한 설치를 지원한다. bootc-image-builder는 ISO 생성 시 anaconda와 kickstart를 활용하여 컨테이너 이미지를 배포하는 방식으로, 기존의 검증된 도구를 재활용하는 접근법을 취하고 있다. 이는 운영체제 배포의 핵심 요소에 집중하면서도 기존 인프라를 최대한 활용할 수 있게 해준다."
 notion_id: "2f31bab9-e3f8-8086-a1ac-d80e854ab880"
 notion_url: "https://www.notion.so/Let-s-Bootc-5-Anaconda-Boot-Process-2f31bab9e3f88086a1acd80e854ab880"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Let-s-Bootc-5-Anaconda-Boot-Process-2f31bab9e
 # Let’s Bootc! [5] - Anaconda : 
 
 > **Summary**
-> Anaconda는 25년간 RHEL 계열 리눅스의 표준 설치 프로그램으로, kickstart 파일을 통해 반복 가능한 설치를 지원합니다. bootc-image-builder는 ISO를 생성할 때 anaconda를 활용하여 컨테이너 이미지를 배포하며, 기존의 검증된 설치 프로그램을 재활용하는 이유는 비용 절감과 호환성 때문입니다. toml 파일은 사용자 설정을 정의하고 kickstart 파일로 변환되어 anaconda에 전달됩니다. 새로운 기술이 반드시 새로워야 하는 것은 아니며, 기존 인프라를 최대한 활용하는 것이 중요합니다.
+> anaconda는 25년간 RHEL 계열 리눅스의 표준 설치 프로그램으로, kickstart 파일을 통해 반복 가능한 설치를 지원한다. bootc-image-builder는 ISO 생성 시 anaconda와 kickstart를 활용하여 컨테이너 이미지를 배포하는 방식으로, 기존의 검증된 도구를 재활용하는 접근법을 취하고 있다. 이는 운영체제 배포의 핵심 요소에 집중하면서도 기존 인프라를 최대한 활용할 수 있게 해준다.
 
 ---
 
-![Image](image_f4ed4da75bb4.png)
+![Image](image_2557ddc0727e.png)
 
 # 설치할 때 anaconda는 왜 나타나는가?
 

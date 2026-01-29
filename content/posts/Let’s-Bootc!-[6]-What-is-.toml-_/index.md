@@ -3,8 +3,8 @@ title: "Let’s Bootc! [6] - What is .toml ?"
 date: 2026-01-25T07:22:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
-series: ["Meet The Bootc"]
-description: "toml 파일은 bootc-image-builder가 디스크 이미지를 생성할 때 적용할 커스터마이징을 정의하며, 사용자 계정, SSH 키, 파티션 레이아웃, 커널 파라미터 및 kickstart 스크립트를 설정할 수 있다. 설정은 최초 설치 시점에 /etc에 기록되고, 이후 업그레이드 시 3-way merge를 통해 보존된다. 간단한 설정은 toml로, 복잡한 설치 로직은 kickstart 스크립트로 처리할 수 있다."
+series: ["Let's Bootc!"]
+description: "toml 파일은 bootc-image-builder가 디스크 이미지를 생성할 때 적용할 커스터마이징을 정의하며, 사용자 계정, SSH 키, 파티션 레이아웃, 커널 파라미터, kickstart 스크립트를 포함합니다. 이 설정들은 최초 설치 시 /etc에 기록되고, 이후 업그레이드 시 3-way merge를 통해 보존됩니다. 간단한 설정은 toml로, 복잡한 설치 로직은 kickstart 스크립트로 처리할 수 있습니다."
 notion_id: "2f31bab9-e3f8-8075-b164-d30b0f8c8050"
 notion_url: "https://www.notion.so/Let-s-Bootc-6-What-is-toml-2f31bab9e3f88075b164d30b0f8c8050"
 ---
@@ -12,13 +12,13 @@ notion_url: "https://www.notion.so/Let-s-Bootc-6-What-is-toml-2f31bab9e3f88075b1
 # Let’s Bootc! [6] - What is .toml ?
 
 > **Summary**
-> toml 파일은 bootc-image-builder가 디스크 이미지를 생성할 때 적용할 커스터마이징을 정의하며, 사용자 계정, SSH 키, 파티션 레이아웃, 커널 파라미터 및 kickstart 스크립트를 설정할 수 있다. 설정은 최초 설치 시점에 /etc에 기록되고, 이후 업그레이드 시 3-way merge를 통해 보존된다. 간단한 설정은 toml로, 복잡한 설치 로직은 kickstart 스크립트로 처리할 수 있다.
+> toml 파일은 bootc-image-builder가 디스크 이미지를 생성할 때 적용할 커스터마이징을 정의하며, 사용자 계정, SSH 키, 파티션 레이아웃, 커널 파라미터, kickstart 스크립트를 포함합니다. 이 설정들은 최초 설치 시 /etc에 기록되고, 이후 업그레이드 시 3-way merge를 통해 보존됩니다. 간단한 설정은 toml로, 복잡한 설치 로직은 kickstart 스크립트로 처리할 수 있습니다.
 
 ---
 
-![Image](image_c9c5cb47137e.png)
+![Image](image_16ab8a42f65f.png)
 
-![Image](image_be38b910a210.png)
+![Image](image_cb74c19bce65.png)
 
 # toml 파일은 무엇을 설정하는가?
 

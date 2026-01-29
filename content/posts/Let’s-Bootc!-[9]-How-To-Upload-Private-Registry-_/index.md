@@ -3,8 +3,8 @@ title: "Let’s Bootc! [9] - How To Upload Private Registry ?"
 date: 2026-01-25T12:37:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
-series: ["Meet The Bootc"]
-description: "프라이빗 레지스트리로 전환하기 위한 인증 설정에 대해 설명하며, 인증 파일인 auth.json 또는 containers-auth.json의 구조와 위치를 다룹니다. 인증 정보는 Base64로 인코딩되지만, 암호화되지 않으므로 접근 권한 관리가 중요합니다. bootc 시스템에서는 /etc/ostree/auth.json에 인증 파일을 두어야 하며, Kickstart를 통해 설치 시점에 주입하는 방법이 가장 안전합니다. 업데이트 시 충돌을 피하기 위해 인증 파일은 이미지에 포함시키지 않고 로컬에서 관리하는 것이 좋습니다."
+series: ["Let's Bootc!"]
+description: "프라이빗 레지스트리에 접근하기 위한 인증 설정 방법을 다루며, 인증 파일인 /etc/ostree/auth.json의 위치와 관리 방법, 그리고 Public 저장소에서 보안을 유지하는 방법을 설명한다. 인증 정보는 이미지에 포함시키지 않고 설치 시점에 주입하는 방식이 권장되며, /etc의 3-way merge 방식으로 업데이트 시에도 인증 파일이 유지될 수 있다."
 notion_id: "2f31bab9-e3f8-80dc-b043-cd19a464b895"
 notion_url: "https://www.notion.so/Let-s-Bootc-9-How-To-Upload-Private-Registry-2f31bab9e3f880dcb043cd19a464b895"
 ---
@@ -12,13 +12,13 @@ notion_url: "https://www.notion.so/Let-s-Bootc-9-How-To-Upload-Private-Registry-
 # Let’s Bootc! [9] - How To Upload Private Registry ?
 
 > **Summary**
-> 프라이빗 레지스트리로 전환하기 위한 인증 설정에 대해 설명하며, 인증 파일인 auth.json 또는 containers-auth.json의 구조와 위치를 다룹니다. 인증 정보는 Base64로 인코딩되지만, 암호화되지 않으므로 접근 권한 관리가 중요합니다. bootc 시스템에서는 /etc/ostree/auth.json에 인증 파일을 두어야 하며, Kickstart를 통해 설치 시점에 주입하는 방법이 가장 안전합니다. 업데이트 시 충돌을 피하기 위해 인증 파일은 이미지에 포함시키지 않고 로컬에서 관리하는 것이 좋습니다.
+> 프라이빗 레지스트리에 접근하기 위한 인증 설정 방법을 다루며, 인증 파일인 /etc/ostree/auth.json의 위치와 관리 방법, 그리고 Public 저장소에서 보안을 유지하는 방법을 설명한다. 인증 정보는 이미지에 포함시키지 않고 설치 시점에 주입하는 방식이 권장되며, /etc의 3-way merge 방식으로 업데이트 시에도 인증 파일이 유지될 수 있다.
 
 ---
 
-![Image](image_910ded4a6ba5.png)
+![Image](image_b521c8e67e24.png)
 
-![Image](image_474b35ea6a97.png)
+![Image](image_c3dfd207fe6f.png)
 
 ## [8] 프라이빗 레지스트리와 인증 설정
 

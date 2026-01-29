@@ -3,8 +3,8 @@ title: "왜 bootc 이미지 저장소로 Docker Hub가 아닌 GHCR을 선택했�
 date: 2026-01-18T06:04:00.000Z
 draft: false
 tags: ["Docker"]
-series: ["Infra & Network", "Let's Homelab!", "Let's Linux!", "Meet The Bootc"]
-description: "bootc는 컨테이너 이미지를 OS로 직접 부팅하는 기술로, Docker Hub의 한계를 극복하기 위해 GitHub Container Registry(GHCR)로 마이그레이션을 선택했다. Docker Hub는 대용량 이미지 전송 시 세션 타임아웃 문제와 같은 제한이 있었으나, GHCR은 무제한 저장 용량과 안정적인 대용량 전송을 제공한다. GHCR은 GitHub 생태계와 통합되어 있으며, bootc와 같은 대용량 이미지에 적합하다."
+series: ["Infra & Network", "Let's Homelab!", "Let's Linux!", "Let's Bootc!"]
+description: "bootc는 컨테이너 이미지를 OS로 부팅하는 기술로, Docker Hub의 한계로 인해 GHCR로 마이그레이션을 결정했다. Docker Hub는 대용량 이미지 전송에 적합하지 않으며, 반복적인 \"Access Denied\" 오류가 발생했다. 반면 GHCR은 무제한 저장 용량과 안정적인 대용량 전송을 제공하며, GitHub 생태계와 통합되어 있다. 결론적으로, GHCR은 bootc와 같은 대용량 이미지에 더 적합하다."
 notion_id: "2ec1bab9-e3f8-8018-b375-dacb5a22e952"
 notion_url: "https://www.notion.so/bootc-Docker-Hub-GHCR-2ec1bab9e3f88018b375dacb5a22e952"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/bootc-Docker-Hub-GHCR-2ec1bab9e3f88018b375dac
 # 왜 bootc 이미지 저장소로 Docker Hub가 아닌 GHCR을 선택했는가
 
 > **Summary**
-> bootc는 컨테이너 이미지를 OS로 직접 부팅하는 기술로, Docker Hub의 한계를 극복하기 위해 GitHub Container Registry(GHCR)로 마이그레이션을 선택했다. Docker Hub는 대용량 이미지 전송 시 세션 타임아웃 문제와 같은 제한이 있었으나, GHCR은 무제한 저장 용량과 안정적인 대용량 전송을 제공한다. GHCR은 GitHub 생태계와 통합되어 있으며, bootc와 같은 대용량 이미지에 적합하다.
+> bootc는 컨테이너 이미지를 OS로 부팅하는 기술로, Docker Hub의 한계로 인해 GHCR로 마이그레이션을 결정했다. Docker Hub는 대용량 이미지 전송에 적합하지 않으며, 반복적인 "Access Denied" 오류가 발생했다. 반면 GHCR은 무제한 저장 용량과 안정적인 대용량 전송을 제공하며, GitHub 생태계와 통합되어 있다. 결론적으로, GHCR은 bootc와 같은 대용량 이미지에 더 적합하다.
 
 ---
 
-![Image](image_dd3f563553a0.png)
+![Image](image_a032f5447661.png)
 
 # **배경: bootc와 컨테이너 기반 OS**
 
@@ -131,7 +131,7 @@ sudo reboot
 
 ## **결론**
 
-![Image](image_5e6cfb470c87.png)
+![Image](image_658c056cc1bb.png)
 
 Docker Hub가 나쁜 서비스는 아니다. 단지 **21GB짜리 OS 이미지**를 다루기엔 적합하지 않았을 뿐이다.
 

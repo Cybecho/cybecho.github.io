@@ -3,8 +3,8 @@ title: "Let’s Bootc! [11] - 시리즈를 마무리하며… 전체 흐름 정�
 date: 2026-01-25T13:10:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
-series: ["Meet The Bootc"]
-description: "bootc 시리즈의 여정을 정리하며, 기술적 이해와 경험을 공유한다. bootc는 OCI 표준을 따르며, 기존 도구와 인프라를 재활용하여 OS를 Containerfile로 정의하고, OSTree로 버전 관리한다. 이를 통해 효율적인 이미지 기반 배포와 관리가 가능하며, 다양한 유즈케이스에서 유용성을 발휘할 수 있다."
+series: ["Let's Bootc!"]
+description: "bootc 시리즈를 통해 bootc의 이해 과정을 회고하며, 기술적 흐름과 의문 해결 과정을 정리하였다. OCI 표준을 따르는 bootc 이미지는 기존 컨테이너 생태계를 재활용하고, 불변 인프라 원칙을 적용하여 OS를 Containerfile로 정의한다. 향후 엣지 디바이스 관리 및 개발 환경 표준화와 같은 다양한 유용한 시나리오를 제시하며, 전체 그림을 명확히 이해하게 되었다고 강조한다."
 notion_id: "2f31bab9-e3f8-8053-9c62-fcc5ece55c7c"
 notion_url: "https://www.notion.so/Let-s-Bootc-11-2f31bab9e3f880539c62fcc5ece55c7c"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Let-s-Bootc-11-2f31bab9e3f880539c62fcc5ece55c
 # Let’s Bootc! [11] - 시리즈를 마무리하며… 전체 흐름 정리
 
 > **Summary**
-> bootc 시리즈의 여정을 정리하며, 기술적 이해와 경험을 공유한다. bootc는 OCI 표준을 따르며, 기존 도구와 인프라를 재활용하여 OS를 Containerfile로 정의하고, OSTree로 버전 관리한다. 이를 통해 효율적인 이미지 기반 배포와 관리가 가능하며, 다양한 유즈케이스에서 유용성을 발휘할 수 있다.
+> bootc 시리즈를 통해 bootc의 이해 과정을 회고하며, 기술적 흐름과 의문 해결 과정을 정리하였다. OCI 표준을 따르는 bootc 이미지는 기존 컨테이너 생태계를 재활용하고, 불변 인프라 원칙을 적용하여 OS를 Containerfile로 정의한다. 향후 엣지 디바이스 관리 및 개발 환경 표준화와 같은 다양한 유용한 시나리오를 제시하며, 전체 그림을 명확히 이해하게 되었다고 강조한다.
 
 ---
 
-![Image](image_09b19c242ff9.png)
+![Image](image_392cf0f768b9.png)
 
 ## [10] 전체 흐름 정리: 이미지에서 부팅까지
 

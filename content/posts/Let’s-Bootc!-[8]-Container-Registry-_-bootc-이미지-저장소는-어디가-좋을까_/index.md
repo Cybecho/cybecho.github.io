@@ -3,8 +3,8 @@ title: "Let’s Bootc! [8] - Container Registry : bootc 이미지 저장소는 �
 date: 2026-01-25T11:22:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
-series: ["Meet The Bootc"]
-description: "bootc 이미지 저장소 선택 시 Docker Hub는 대용량 이미지 전송 시 타임아웃 문제가 발생하지만, GHCR은 안정적이고 Pull 제한이 없으며 GitHub 생태계와 통합되어 운영 편의성이 좋다. Harbor는 프라이빗 환경을 필요로 할 때 고려할 수 있는 선택지로, 엔터프라이즈 기능을 제공한다. 모든 저장소는 OCI 표준을 따르므로 필요에 따라 자유롭게 전환할 수 있다."
+series: ["Let's Bootc!"]
+description: "bootc 이미지 저장소 선택 시 Docker Hub는 대용량 이미지 전송 시 타임아웃 문제가 발생하며, GHCR은 안정적인 대용량 전송과 Pull 제한이 없고 GitHub 생태계와 통합되어 운영 편의성이 좋다. Harbor는 완전한 프라이빗 환경을 제공하지만 직접 운영해야 하는 부담이 있다. 세 가지 모두 OCI 표준을 따르므로 필요에 따라 자유롭게 전환할 수 있다."
 notion_id: "2f31bab9-e3f8-80a3-ba78-f06a8dc68340"
 notion_url: "https://www.notion.so/Let-s-Bootc-8-Container-Registry-bootc-2f31bab9e3f880a3ba78f06a8dc68340"
 ---
@@ -12,13 +12,13 @@ notion_url: "https://www.notion.so/Let-s-Bootc-8-Container-Registry-bootc-2f31ba
 # Let’s Bootc! [8] - Container Registry : bootc 이미지 저장소는 어디가 좋을까?
 
 > **Summary**
-> bootc 이미지 저장소 선택 시 Docker Hub는 대용량 이미지 전송 시 타임아웃 문제가 발생하지만, GHCR은 안정적이고 Pull 제한이 없으며 GitHub 생태계와 통합되어 운영 편의성이 좋다. Harbor는 프라이빗 환경을 필요로 할 때 고려할 수 있는 선택지로, 엔터프라이즈 기능을 제공한다. 모든 저장소는 OCI 표준을 따르므로 필요에 따라 자유롭게 전환할 수 있다.
+> bootc 이미지 저장소 선택 시 Docker Hub는 대용량 이미지 전송 시 타임아웃 문제가 발생하며, GHCR은 안정적인 대용량 전송과 Pull 제한이 없고 GitHub 생태계와 통합되어 운영 편의성이 좋다. Harbor는 완전한 프라이빗 환경을 제공하지만 직접 운영해야 하는 부담이 있다. 세 가지 모두 OCI 표준을 따르므로 필요에 따라 자유롭게 전환할 수 있다.
 
 ---
 
-![Image](image_974b8f73af7c.png)
+![Image](image_44499f00f082.png)
 
-![Image](image_823f167200c8.png)
+![Image](image_ee83fc48adac.png)
 
 ## [7] bootc 이미지 저장소는 어디가 좋을까?
 

@@ -3,8 +3,8 @@ title: "Let’s Bootc! [1] - Quick Starter : 백문이 불어일견!"
 date: 2026-01-25T05:55:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
-series: ["Meet The Bootc"]
-description: "Top-Down 방식을 통해 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, Podman을 사용하여 컨테이너 이미지를 생성하고 배포하는 방법을 설명합니다. 주요 단계로는 컨테이너 이미지 생성, ISO 파일 변환, USB 부팅 미디어 제작, 설치 후 업데이트 및 롤백 테스트가 포함됩니다. 각 단계에서 필요한 설정과 명령어를 제공하며, 부팅 가능한 불변의 OS를 구축하는 과정을 안내합니다."
+series: ["Let's Bootc!"]
+description: "Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, Podman을 사용하여 컨테이너 이미지를 생성하고 ISO 파일로 변환하는 과정을 설명합니다. 사용자는 단계별로 bootc의 기본적인 워크플로우를 경험하고, 업데이트 및 롤백 기능을 테스트하여 불변의 OS를 구축하는 방법을 배웁니다."
 notion_id: "2f31bab9-e3f8-8002-9c73-d0c7b1f5ce1e"
 notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029c73d0c7b1f5ce1e"
 ---
@@ -12,14 +12,14 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029
 # Let’s Bootc! [1] - Quick Starter : 백문이 불어일견!
 
 > **Summary**
-> Top-Down 방식을 통해 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, Podman을 사용하여 컨테이너 이미지를 생성하고 배포하는 방법을 설명합니다. 주요 단계로는 컨테이너 이미지 생성, ISO 파일 변환, USB 부팅 미디어 제작, 설치 후 업데이트 및 롤백 테스트가 포함됩니다. 각 단계에서 필요한 설정과 명령어를 제공하며, 부팅 가능한 불변의 OS를 구축하는 과정을 안내합니다.
+> Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, Podman을 사용하여 컨테이너 이미지를 생성하고 ISO 파일로 변환하는 과정을 설명합니다. 사용자는 단계별로 bootc의 기본적인 워크플로우를 경험하고, 업데이트 및 롤백 기능을 테스트하여 불변의 OS를 구축하는 방법을 배웁니다.
 
 ---
 
 
-![Image](image_b3260b178acd.png)
+![Image](image_1a8ae1c73ff4.png)
 
-![Image](image_25917bb61870.png)
+![Image](image_d913a2013fc7.png)
 
 # [1] Quick Starter
 
@@ -63,7 +63,7 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029
 - 다섯째, 롤백을 테스트한다. 업데이트에 문제가 생겼을 때 이전 버전으로 돌아갈 수 있는지 확인한다.
 이 다섯 단계를 모두 거쳐야 bootc의 기본적인 워크플로우를 체험했다고 할 수 있습니다.
 
-![Image](image_29fc6e155738.png)
+![Image](image_5257e6f42972.png)
 
 ---
 
