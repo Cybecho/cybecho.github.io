@@ -4,7 +4,7 @@ date: 2026-01-25T13:10:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
 series: ["Let's Bootc!"]
-description: "bootc 시리즈를 통해 bootc의 이해 과정을 회고하며, 기술적 흐름과 의문 해결 과정을 정리하였다. OCI 표준을 따르는 bootc 이미지는 기존 컨테이너 생태계를 재활용하고, 불변 인프라 원칙을 적용하여 OS를 Containerfile로 정의한다. 향후 엣지 디바이스 관리 및 개발 환경 표준화와 같은 다양한 유용한 시나리오를 제시하며, 전체 그림을 명확히 이해하게 되었다고 강조한다."
+description: "bootc 시리즈를 통해 기술을 이해하는 여정을 회고하며, bootc 이미지의 구조와 작동 원리, 기존 도구의 재활용, 그리고 인프라 코드화의 중요성을 강조한다. 또한, bootc의 장점과 다양한 활용 가능성을 설명하고, 앞으로의 발전 방향에 대한 통찰을 공유한다."
 notion_id: "2f31bab9-e3f8-8053-9c62-fcc5ece55c7c"
 notion_url: "https://www.notion.so/Let-s-Bootc-11-2f31bab9e3f880539c62fcc5ece55c7c"
 ---
@@ -12,11 +12,13 @@ notion_url: "https://www.notion.so/Let-s-Bootc-11-2f31bab9e3f880539c62fcc5ece55c
 # Let’s Bootc! [11] - 시리즈를 마무리하며… 전체 흐름 정리
 
 > **Summary**
-> bootc 시리즈를 통해 bootc의 이해 과정을 회고하며, 기술적 흐름과 의문 해결 과정을 정리하였다. OCI 표준을 따르는 bootc 이미지는 기존 컨테이너 생태계를 재활용하고, 불변 인프라 원칙을 적용하여 OS를 Containerfile로 정의한다. 향후 엣지 디바이스 관리 및 개발 환경 표준화와 같은 다양한 유용한 시나리오를 제시하며, 전체 그림을 명확히 이해하게 되었다고 강조한다.
+> bootc 시리즈를 통해 기술을 이해하는 여정을 회고하며, bootc 이미지의 구조와 작동 원리, 기존 도구의 재활용, 그리고 인프라 코드화의 중요성을 강조한다. 또한, bootc의 장점과 다양한 활용 가능성을 설명하고, 앞으로의 발전 방향에 대한 통찰을 공유한다.
 
 ---
 
-![Image](image_392cf0f768b9.png)
+![Image](image_cc5b7658f96d.png)
+
+![Image](image_d27c92f59ca4.png)
 
 ## [10] 전체 흐름 정리: 이미지에서 부팅까지
 

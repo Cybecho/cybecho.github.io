@@ -4,7 +4,7 @@ date: 2026-01-25T05:55:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
 series: ["Let's Bootc!"]
-description: "Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, Podman을 사용하여 컨테이너 이미지를 생성하고 ISO 파일로 변환하는 과정을 설명합니다. 사용자는 단계별로 bootc의 기본적인 워크플로우를 경험하고, 업데이트 및 롤백 기능을 테스트하여 불변의 OS를 구축하는 방법을 배웁니다."
+description: "Top-Down 방식을 통해 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, KDE Plasma 데스크톱 환경을 설치하는 방법을 설명합니다. Podman을 사용하여 컨테이너 이미지를 빌드하고, 이를 ISO 파일로 변환하여 USB에 굽는 과정과 업데이트 및 롤백 테스트를 포함한 기본적인 워크플로우를 체험합니다. 각 단계에서 필요한 명령어와 주의사항을 상세히 안내하며, 최종적으로 불변의 운영 체제를 구축하는 방법을 다룹니다."
 notion_id: "2f31bab9-e3f8-8002-9c73-d0c7b1f5ce1e"
 notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029c73d0c7b1f5ce1e"
 ---
@@ -12,14 +12,14 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029
 # Let’s Bootc! [1] - Quick Starter : 백문이 불어일견!
 
 > **Summary**
-> Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, Podman을 사용하여 컨테이너 이미지를 생성하고 ISO 파일로 변환하는 과정을 설명합니다. 사용자는 단계별로 bootc의 기본적인 워크플로우를 경험하고, 업데이트 및 롤백 기능을 테스트하여 불변의 OS를 구축하는 방법을 배웁니다.
+> Top-Down 방식을 통해 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, KDE Plasma 데스크톱 환경을 설치하는 방법을 설명합니다. Podman을 사용하여 컨테이너 이미지를 빌드하고, 이를 ISO 파일로 변환하여 USB에 굽는 과정과 업데이트 및 롤백 테스트를 포함한 기본적인 워크플로우를 체험합니다. 각 단계에서 필요한 명령어와 주의사항을 상세히 안내하며, 최종적으로 불변의 운영 체제를 구축하는 방법을 다룹니다.
 
 ---
 
 
-![Image](image_1a8ae1c73ff4.png)
+![Image](image_3258e009aacc.png)
 
-![Image](image_d913a2013fc7.png)
+![Image](image_56e8f6055d9d.png)
 
 # [1] Quick Starter
 
@@ -35,6 +35,7 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029
 
 “이게 무엇인지…”, “왜 이 방식을 쓰고 왜 이렇게 구성했는지…”, “내가 지금 뭘 따라 하고 있는 건지…” 헷갈리는 게 많고 의문도 많을 테지요, 일단은 단계별로 하나씩 자세히 풀어가고자 하며, 그때 생기는 의문들이 이후 포스트의 출발점이 될 것이니 일단 한번 따라와 보시기 바랍니다.
 
+
 ---
 
 ## 오늘 만들 것
@@ -46,6 +47,7 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029
 빌드하기 전에 저장 용량에 대해서도 한 가지 짚고 넘어가야 됩니다. Podman을 사용해서 컨테이너 이미지를 빌드하고 이미지를 ISO로 변환하는 과정에서 디스크 공간이 꽤 필요합니다. 그래서 50GB 정도는 확보해 두는 것을 권장드립니다.
 
 빌드 중에 공간이 부족해서 실패하면 처음부터 다시 해야 되는데, 그 시간이 굉장히 아깝기 때문이죠.
+
 
 ---
 
@@ -63,7 +65,7 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029
 - 다섯째, 롤백을 테스트한다. 업데이트에 문제가 생겼을 때 이전 버전으로 돌아갈 수 있는지 확인한다.
 이 다섯 단계를 모두 거쳐야 bootc의 기본적인 워크플로우를 체험했다고 할 수 있습니다.
 
-![Image](image_5257e6f42972.png)
+![Image](image_18f377d9bd86.png)
 
 ---
 
@@ -71,59 +73,80 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029
 
 자, 그러면 이제 본격적으로 시작 해 볼까요?
 
+> 참고: Apple Silicon Mac에서 x86_64 이미지를 크로스 빌드하면 QEMU 에뮬레이션으로 인해 빌드가 불안정할 수 있기 때문에, 네이티브 x86_64 Linux환경이나, WSL2 + Ubuntu 24.04 호경에서 빌드하는 것이 안정적입니다. 또한 Ubuntu 22.04 이하는 Podman 버전이 오래되어 bootc와 호환성 문제가 발생할 수 있으니, 버전에 유의해주시길 바랍니다.
+
 ---
 
 ## 1. 환경 구성
 
-### 1-1. Podman 설치 및 설정
+- WSL2 or Linux 환경의 경우 → 1-1 진행 후 1-3으로 이동하세요
+- macOS/Windows  환경의 경우 → 1-2 부터 진행 후 1-3으로 이동하세요
+### 1-1. WSL2 환경의 경우
 
-본 실습에서는 Podman을 활용합니다. Docker를 사용하셔도 무방하나, bootc 생태계가 Podman을 중심으로 구성되어 있어 Podman 사용을 권장합니다.
-
-```bash
-# Podman 머신 생성 (디스크 50GB, 메모리 8GB 할당)
-podman machine init --disk-size 50 --memory 8192
-
-# 머신 시작
-podman machine start
-```
-
-Podman은 내부적으로 Linux VM을 사용하여 컨테이너를 실행합니다.
-
-Linux 환경에서는 배포판의 패키지 매니저를 통해 Podman을 설치할 수 있습니다.
-
-```bash
-# RHEL/CentOS/Fedora
-sudo dnf install podman
-
-# Ubuntu/Debian
-sudo apt install podman
-```
-
-### 1-2. (Optional) WSL2 환경에서의 추가 설정
-
-Windows의 WSL2에서 Podman을 사용할 경우, systemd 활성화가 필요합니다. Podman이 systemd에 의존하기 때문입니다.
-
-```bash
-# WSL 설정 파일 생성/수정
-sudo bash -c 'printf "[boot]\\nsystemd=true\\n" > /etc/wsl.conf'
-```
-
-그 후 PowerShell에서 WSL을 재시작합니다.
+WSL2 환경이 아닌 경우, 1-2로 바로 이동하셔도 무관합니다.
 
 ```powershell
-wsl --shutdown
+# WSL2 업데이트
+wsl --update
+
+# WSL2 환경이라면, Ubuntu 24.04버전 이상을 권장합니다.
+wsl --install -d Ubuntu-24.04
+
+# 버전 확인
+wsl -l -v
+
+# Ubuntu24.04 명시적 실행. (보통 install후 자동으로 실행됩니다.)
+# wsl -d Ubuntu-24.04
 ```
 
 재시작 후 Ubuntu를 다시 열면 systemd가 활성화됩니다.
 
-> 참고: Apple Silicon Mac에서 x86_64 이미지를 크로스 빌드하면 QEMU 에뮬레이션으로 인해 빌드가 불안정할 수 있기 때문에, 네이티브 x86_64 Linux환경이나, WSL2 + Ubuntu 24.04 호경에서 빌드하는 것이 안정적입니다. 또한 Ubuntu 22.04 이하는 Podman 버전이 오래되어 bootc와 호환성 문제가 발생할 수 있으니, 버전에 유의해주시길 바랍니다.
+본 실습에서는 bootc 생태계가 Podman을 중심으로 구성되어 있어 Podman을 사용할 것입니다.
 
-### 1-4. 레지스트리 계정 준비
+```bash
+# 패키지 업그레이드 & 업데이트
+sudo apt update -y
+sudo apt upgrade -y
 
-빌드한 이미지를 업로드할 레지스트리 계정이 필요합니다. Docker Hub 또는 GitHub Container Registry(GHCR) 중 하나를 선택하시면 됩니다. 본 글에서는 Docker Hub를 기준으로 설명하겠습니다.
+# Podman + rootless 품질 개선 패키지(권장)
+sudo apt install -y podman uidmap slirp4netns fuse-overlayfs
+
+# 버전 확인
+podman --version
+podman info
+
+#동작 테스트
+podman run --rm docker.io/library/alpine:latest uname -a
+```
+
+### 1-2. macOS/Windows 환경의 경우
+
+그리고 Podman 머신을 하나 생성해 줍시다.
+
+```bash
+# Podman 머신 생성 (디스크 50GB, 메모리 8GB 할당)
+podman machine init --rootful --disk-size 50 --memory 8192 podman-machine-bootc
+
+# 생성된 머신 확인
+podman machine ls
+
+# 머신 시작
+podman machine start podman-machine-bootc
+```
+
+머신을 생성하는 과정에서 fedora 이미지를 받아오는것을 확인할 수 있지만, 그보다는 `--rootful` 옵션이 눈에 들어올 겁니다.
+
+해당 옵션을 간단히 말하면, ISO를 만들려면 Linux 파일시스템을 직접 써야 하고, 그건 커널 권한 없이는 불가능합니다. 그래서 rootful이 필요합니다. "그게 정확히 무슨 뜻이지?"라는 의문이 드시는것이 당연합니다만… 해당 포스트는 Quick Starter이니, 이와 관련된 내용은 다음 포스트에서 다루도록 하겠습니다. 지금은 일단 따라 진행합시다.
+
+### 1-3. 레지스트리 계정 준비
+
+빌드한 이미지를 업로드할 레지스트리 계정이 필요합니다. Docker Hub 또는 GitHub Container Registry(GHCR), Habor중 취향에 맞게 하나를 선택하시면 됩니다.
+
+본 글에서는 Docker Hub를 기준으로 설명하겠습니다.
 
 ```bash
 # Docker Hub 로그인
+# Username 및 Password(Token) 입력
 podman login docker.io
 ```
 
@@ -177,7 +200,11 @@ podman run -it --rm alpine mkpasswd -m sha512 "내비밀번호"
 python3 -c 'import crypt; print(crypt.crypt("내비밀번호", crypt.mksalt(crypt.METHOD_SHA512)))'
 ```
 
-  비밀번호를 명령어에 직접 입력하는 방식이므로, 히스토리에 남지 않도록 주의하세요. 보안이 중요한 환경에서는 방법 1이나 2를 권장합니다.
+![Image](image_1fc0f0c16b5e.png)
+
+일단 저는 임의대로 비밀번호를 `0000` 으로 입력했을때 발생하는 해시값을 확인할 수 있습니다…^^
+
+비밀번호를 명령어에 직접 입력하는 방식이므로, 히스토리에 남지 않도록 주의하세요. 보안이 중요한 환경에서는 방법 1이나 2를 권장합니다.
 
 어떤 방법을 사용하든 결과물은 `$6$`로 시작하는 문자열이며, 이 값을 config.toml 파일에 입력하면 됩니다.
 
@@ -201,6 +228,7 @@ cd ~/bootc-project
 **옵션 1: 기본 설정 (간단, 자동 파티셔닝)**
 
 ```toml
+cat > config.toml <<'EOF'
 # 사용자 계정 정의 (설치 시 자동 생성됨)
 [[customizations.user]]
 name = "myuser"                          # 로그인할 사용자명
@@ -219,12 +247,14 @@ groups = ["wheel"]                       # wheel 그룹: sudo 권한 부여
 # password = "$6$..."
 # key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAB... user@example.com"
 # groups = ["wheel"]
+EOF
 
 ```
 
 **옵션 2: GUI 설치 + kickstart (권장, 수동 파티셔닝 가능)**
 
 ```toml
+cat > config.toml <<'EOF'
 # 커널 부팅 옵션 (디버깅 시 부팅 로그 확인용)
 [customizations.kernel]
 append = "console=tty0 systemd.show_status=true"
@@ -257,7 +287,7 @@ systemctl set-default graphical.target
 # 설치 완료 후 자동 재부팅
 reboot
 """
-
+EOF
 ```
 
 > 옵션 선택 기준은 다음과 같습니다.
@@ -272,26 +302,27 @@ reboot
 이제 OS 이미지의 내용을 정의하는 Containerfile을 작성하도록 합니다.
 
 ```docker
+cat > Containerfile <<'EOF'
 FROM quay.io/centos-bootc/centos-bootc:stream10
 
 # CRB(CodeReady Builder) 저장소 활성화 - 개발/빌드 도구에 필요
 # EPEL 저장소 추가 - 추가 패키지 제공
-RUN dnf config-manager --set-enabled crb && \\
-    dnf install -y epel-release && \\
+RUN dnf config-manager --set-enabled crb && \
+    dnf install -y epel-release && \
     dnf -y update
 
 # KDE Plasma 데스크톱 환경 설치
 RUN dnf -y group install "KDE Plasma Workspaces"
 
 # SDDM 디스플레이 매니저 및 필수 패키지 설치
-RUN dnf -y install sddm dolphin konsole kate firefox \\
+RUN dnf -y install sddm dolphin konsole kate firefox \
     NetworkManager-wifi NetworkManager-tui
 
 # 한글 폰트 및 입력기
 RUN dnf -y install langpacks-ko ibus ibus-hangul ibus-setup dconf
 
 # SDDM 활성화 및 그래픽 타겟 설정
-RUN systemctl enable sddm && \\
+RUN systemctl enable sddm && \
     systemctl set-default graphical.target
 
 # wheel 그룹에 대해 sudo 권한 설정 (비밀번호 필요)
@@ -303,7 +334,7 @@ RUN dnf clean all
 # bootc 이미지임을 나타내는 레이블 (필수)
 LABEL containers.bootc=1
 LABEL ostree.bootable=1
-
+EOF
 
 ```
 
@@ -328,17 +359,17 @@ Containerfile과 config.toml이 준비되었으면 이미지를 빌드합니다.
 
 ```bash
 cd ~/bootc-project
-podman build -t my-centos10-kde:v1 .
+sudo podman build -t my-centos10-kde:v1 .
 ```
 
-> 만약 WSL2 환경이라면, sudo를 사용하세요:
-> ```bash
-> sudo podman build -t my-centos10-kde:v1 .
-> ```
+> sudo를 붙이는 이유는, Podman이 일반 사용자(rootless)로 빌드한 이미지와 root(rootful)로 빌드한 이미지를 서로 다른 저장소에 따로 보관하기 때문입니다. 
+> 우리는 최종 목표가 이 이미지를 기반으로 ISO(디스크 이미지)를 만드는 것이고, ISO를 만드는 과정(예: bootc-image-builder)은 보통 root 권한으로 실행되면서 root 저장소(`/var/lib/containers/storage`)에 있는 이미지만 바로 참조합니다. 
 >
-> sudo를 사용하면 root storage에 이미지가 저장되어, 이후 ISO 빌드와 푸시 과정에서 동일한 스토리지를 참조할 수 있습니다.
+> 그래서 빌드 단계부터 sudo를 붙여 root 저장소에 이미지를 만들어 두면, 이후 ISO 빌드 단계가 같은 이미지를 “그대로” 찾아서 이어서 작업할 수 있고, 중간에 이미지가 안 보여서 다시 빌드하거나 저장소 간 복사/재배포 같은 번거로운 작업을 피할 수 있습니다.
 >
 >
+
+![Image](image_9aa8753dded1.png)
 
 빌드에는 시간이 다소 소요됩니다. KDE 패키지 그룹의 크기가 상당하기 때문입니다.
 

@@ -4,7 +4,7 @@ date: 2026-01-25T06:55:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
 series: ["Let's Bootc!"]
-description: "bootc 시스템의 파일시스템은 세 가지 영역으로 나뉘며, 각각의 특성이 다릅니다. /usr는 완전히 불변이며, 패키지 설치는 이미지 빌드 시에만 가능하고, /etc는 수정 가능하지만 3-way merge가 적용되어 업데이트 시 충돌이 발생할 수 있습니다. /var는 완전히 가변이며, 애플리케이션 데이터와 상태를 저장하는 곳으로 이미지 업데이트의 영향을 받지 않습니다. 이러한 구조는 불변 인프라 원칙을 구현한 것으로, 시스템을 수정하기보다는 교체하는 접근 방식을 강조합니다."
+description: "bootc 시스템의 파일시스템은 세 가지 영역으로 나뉘며, 각각의 특성이 다릅니다. /usr는 완전히 불변이며, 패키지 설치는 이미지 빌드 시에만 가능하고, /etc는 수정 가능하지만 3-way merge가 적용되어 로컬 수정과 이미지 변경이 충돌할 수 있습니다. /var는 완전히 가변이며, 애플리케이션 데이터와 상태가 저장됩니다. 이러한 구조는 불변 인프라 원칙을 구현한 것으로, 시스템을 수정하기보다는 교체하는 접근 방식을 강조합니다."
 notion_id: "2f31bab9-e3f8-80a9-8973-e760ec39500c"
 notion_url: "https://www.notion.so/Let-s-Bootc-4-File-System-2f31bab9e3f880a98973e760ec39500c"
 ---
@@ -12,13 +12,14 @@ notion_url: "https://www.notion.so/Let-s-Bootc-4-File-System-2f31bab9e3f880a9897
 # Let’s Bootc! [4] - File System
 
 > **Summary**
-> bootc 시스템의 파일시스템은 세 가지 영역으로 나뉘며, 각각의 특성이 다릅니다. /usr는 완전히 불변이며, 패키지 설치는 이미지 빌드 시에만 가능하고, /etc는 수정 가능하지만 3-way merge가 적용되어 업데이트 시 충돌이 발생할 수 있습니다. /var는 완전히 가변이며, 애플리케이션 데이터와 상태를 저장하는 곳으로 이미지 업데이트의 영향을 받지 않습니다. 이러한 구조는 불변 인프라 원칙을 구현한 것으로, 시스템을 수정하기보다는 교체하는 접근 방식을 강조합니다.
+> bootc 시스템의 파일시스템은 세 가지 영역으로 나뉘며, 각각의 특성이 다릅니다. /usr는 완전히 불변이며, 패키지 설치는 이미지 빌드 시에만 가능하고, /etc는 수정 가능하지만 3-way merge가 적용되어 로컬 수정과 이미지 변경이 충돌할 수 있습니다. /var는 완전히 가변이며, 애플리케이션 데이터와 상태가 저장됩니다. 이러한 구조는 불변 인프라 원칙을 구현한 것으로, 시스템을 수정하기보다는 교체하는 접근 방식을 강조합니다.
 
 ---
 
-![Image](image_d752836cc427.png)
+![Image](image_4efea7977a84.png)
 
-![Image](image_3c0c1356e18f.png)
+![Image](image_7ed5242aef78.png)
+
 
 # 어디에 쓸 수 있고, 어디에 못 쓰는가? - bootc의 파일시스템 구조
 
@@ -38,13 +39,13 @@ Containerfile을 작성하다 보면 이상한 일을 겪습니다. 분명 `RUN 
 
 전통적인 Linux 시스템에서 파일시스템은 단순합니다. **‘everything is a file’** 이라는 철학에 걸맞게, 모든 디렉토리가 읽기/쓰기 가능하고, `dnf install`이나 `apt install`로 패키지를 설치하면 그 자리에서 바로 `/usr/bin`에 바이너리가 들어가고 `/etc`에 설정 파일이 생성됩니다. 재부팅 없이도 변경사항이 즉시 적용됩니다.
 
-![Image](image_9ec3cfb8d638.png)
+![Image](image_511354046c93.png)
 
 허나, bootc 시스템은 다릅니다. 부팅된 시스템에서 `/usr`에 무언가를 쓰려고 하면 "Read-only file system" 에러가 발생합니다. 마치 `podman run --read-only`로 컨테이너를 실행한 것과 비슷한 상태입니다.
 
 왜 이런 제약을 두었을까요? 이 질문에 답하기 전에, 먼저 bootc가 파일시스템을 어떻게 나누는지 살펴보겠습니다.
 
-![Image](image_ac5d8d510f05.png)
+![Image](image_9bd753db04c7.png)
 
 ---
 
@@ -52,7 +53,7 @@ Containerfile을 작성하다 보면 이상한 일을 겪습니다. 분명 `RUN 
 
 bootc 시스템의 파일시스템은 크게 세 가지 영역으로 구분됩니다. 완전히 불변인 영역, 조건부로 병합되는 영역, 그리고 완전히 가변인 영역입니다.
 
-![Image](image_6c45be27d23e.png)
+![Image](image_a6bd86959292.png)
 
 ### /usr - 완전히 불변인 영역
 
@@ -98,7 +99,7 @@ bootc 문서는 이렇게 설명합니다. `/var`에 포함된 컨테이너 이�
 
 실무적으로 이것이 의미하는 바는 다음과 같습니다. `/var` 아래에 디렉토리 구조를 미리 만들어두고 싶다면, `systemd-tmpfiles.d`를 사용하거나 systemd 유닛의 `StateDirectory=` 옵션을 활용해야 합니다. Containerfile에서 직접 데이터를 넣는 방식은 초기 설치 시에만 적용됩니다.
 
-![Image](image_b04b99cbd2e7.png)
+![Image](image_0cfa8cb9f989.png)
 
 ---
 
