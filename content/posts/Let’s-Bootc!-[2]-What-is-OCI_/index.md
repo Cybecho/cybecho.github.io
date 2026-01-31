@@ -4,7 +4,7 @@ date: 2026-01-25T06:50:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
 series: ["Let's Bootc!"]
-description: "OCI는 컨테이너 생태계의 표준을 정의하여 Docker와 Podman 등 다양한 도구에서 호환성을 제공합니다. bootc는 OCI 표준을 활용하여 기존의 컨테이너 도구와 레지스트리를 그대로 사용할 수 있으며, 커널과 initramfs를 포함한 부팅 가능한 컨테이너 이미지를 제공합니다. 이를 통해 전체 OS 이미지를 다시 받을 필요 없이 업데이트가 가능해집니다."
+description: "OCI는 컨테이너 생태계의 표준을 정의하여 Docker와 Podman 간의 호환성을 보장합니다. bootc는 OCI 이미지를 사용하여 운영체제를 업데이트하며, 기존 도구와 레지스트리를 그대로 활용할 수 있습니다. bootc 이미지는 커널과 initramfs를 포함하여 부팅 가능한 컨테이너 개념을 구현합니다."
 notion_id: "2f31bab9-e3f8-8091-a5d0-fb9961b84981"
 notion_url: "https://www.notion.so/Let-s-Bootc-2-What-is-OCI-2f31bab9e3f88091a5d0fb9961b84981"
 ---
@@ -12,17 +12,17 @@ notion_url: "https://www.notion.so/Let-s-Bootc-2-What-is-OCI-2f31bab9e3f88091a5d
 # Let’s Bootc! [2] - What is OCI?
 
 > **Summary**
-> OCI는 컨테이너 생태계의 표준을 정의하여 Docker와 Podman 등 다양한 도구에서 호환성을 제공합니다. bootc는 OCI 표준을 활용하여 기존의 컨테이너 도구와 레지스트리를 그대로 사용할 수 있으며, 커널과 initramfs를 포함한 부팅 가능한 컨테이너 이미지를 제공합니다. 이를 통해 전체 OS 이미지를 다시 받을 필요 없이 업데이트가 가능해집니다.
+> OCI는 컨테이너 생태계의 표준을 정의하여 Docker와 Podman 간의 호환성을 보장합니다. bootc는 OCI 이미지를 사용하여 운영체제를 업데이트하며, 기존 도구와 레지스트리를 그대로 활용할 수 있습니다. bootc 이미지는 커널과 initramfs를 포함하여 부팅 가능한 컨테이너 개념을 구현합니다.
 
 ---
 
-![Image](image_4f333734d875.png)
+![Image](image_ed0d26277eb5.png)
 
-![Image](image_28fc2b9098ab.png)
+![Image](image_e471a0c93231.png)
 
-## [2] OCI 표준과 bootc: 컨테이너가 OS가 되기까지
+## OCI 표준과 bootc: 컨테이너가 OS가 되기까지
 
-### 컨테이너가 부팅이 된다고?
+### 1. 컨테이너가 부팅이 된다고?
 
 퀵스타트를 따라 bootc 이미지를 빌드하고 부팅해본 분이라면 한 번쯤 이런 생각이 들었을 것입니다. 
 
@@ -34,7 +34,7 @@ Bootc에서는 Containerfile을 작성하고, `podman build`로 빌드하고, �
 
 ---
 
-### OCI가 필요했던 이유
+### 2. OCI가 탄생하게 된 배경
 
 OCI는 Open Container Initiative의 약자입니다. 
 
@@ -54,7 +54,7 @@ OCI는 Open Container Initiative의 약자입니다.
 
 OCI는 이런 파편화를 막기 위해 탄생했습니다. 웹 기술에서 HTML, CSS, JavaScript가 브라우저에 관계없이 동작하는 것처럼, 컨테이너도 도구에 관계없이 동일하게 동작해야 한다는 사명을 가지고 세상에 나타나게 되었죠…!
 
-![Image](image_57cac2ffc260.png)
+![Image](image_b453c5d9bcac.png)
 
 ---
 
@@ -70,7 +70,7 @@ OCI는 현재 세 가지 스펙을 정의하고 있습니다.
 
 이 세 가지가 맞물려 돌아갑니다. 이미지 스펙으로 이미지를 만들고, 배포 스펙으로 레지스트리에 올리고, 런타임 스펙으로 실행합니다. 그리고 이 모든 과정에서 어떤 도구를 쓰든 상관없습니다. 표준을 따르기만 하면 됩니다.
 
-![Image](image_2607efa7a400.png)
+![Image](image_27857b4ae5c7.png)
 
 ---
 
@@ -78,7 +78,7 @@ OCI는 현재 세 가지 스펙을 정의하고 있습니다.
 
 이 표준 덕분에 우리는 Docker Hub에서 받은 이미지를 Podman으로 실행할 수 있습니다. containerd에서 빌드한 이미지를 CRI-O에서 돌릴 수 있습니다. 쿠버네티스가 다양한 컨테이너 런타임을 지원할 수 있는 것도 이 표준 덕분입니다.
 
-![Image](image_b51ecc1ac185.png)
+![Image](image_6400fca3d1ff.png)
 
 레지스트리도 마찬가지입니다. Docker Hub, GitHub Container Registry, Quay.io, Harbor. 이들은 모두 OCI Distribution Specification을 따릅니다. 그래서 같은 명령어로 이미지를 푸시하고 풀할 수 있습니다. `podman push`든 `docker push`든 대상 레지스트리가 달라도 동작합니다.
 
@@ -102,7 +102,7 @@ OCI 컨테이너 이미지를 사용해서 운영체제를 업데이트한다는
 - 첫째, 기존 컨테이너 도구를 그대로 쓸 수 있습니다. Podman이든 Docker든, OCI 이미지를 만들 수 있는 도구라면 무엇이든 bootc 이미지를 빌드할 수 있습니다. 새로운 도구를 배울 필요가 없습니다.
 - 둘째, 기존 레지스트리 인프라를 그대로 쓸 수 있습니다. Docker Hub에 이미지를 올려도 되고, GHCR을 써도 되고, 회사 내부의 Harbor를 써도 됩니다. OCI Distribution Specification을 따르는 레지스트리라면 어디든 상관없습니다.
 - 셋째, 이미지 레이어 구조를 그대로 활용합니다. OCI 이미지는 레이어로 구성됩니다. 베이스 이미지 위에 변경 사항을 레이어로 쌓아 올리는 구조입니다. bootc도 이 구조를 그대로 사용합니다. 업데이트할 때 변경된 레이어만 받으면 됩니다. 전체 OS 이미지를 매번 다시 받을 필요가 없습니다.
-![Image](image_fae7adc14ff9.png)
+![Image](image_01dc83e6f640.png)
 
 Red Hat 문서에서도 이 점을 설명하고 있습니다. "rhel-10-bootc 컨테이너 이미지는 OCI 이미지 형식을 재사용합니다." 즉, 새로운 형식을 만든 게 아니라, rhel역시 기존 형식을 그대로 가져다 쓴 것이라는 것이죠.
 

@@ -4,7 +4,7 @@ date: 2026-01-25T05:55:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
 series: ["Let's Bootc!"]
-description: "Top-Down 방식을 통해 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, KDE Plasma 데스크톱 환경을 설치하는 방법을 설명합니다. Podman을 사용하여 컨테이너 이미지를 빌드하고, 이를 ISO 파일로 변환하여 USB에 굽는 과정과 업데이트 및 롤백 테스트를 포함한 기본적인 워크플로우를 체험합니다. 각 단계에서 필요한 명령어와 주의사항을 상세히 안내하며, 최종적으로 불변의 운영 체제를 구축하는 방법을 다룹니다."
+description: "Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, KDE Plasma 데스크톱 환경을 설치하고, Podman을 사용하여 컨테이너 이미지를 빌드하고 ISO 파일로 변환하는 과정을 설명합니다. 과정에는 사용자 계정 설정, 이미지 빌드, 레지스트리 업로드, USB 부팅 미디어 제작, 설치 후 확인 및 업데이트와 롤백 테스트가 포함됩니다. 최종적으로 bootc의 기본적인 사이클을 경험하고, 여러 의문에 대한 후속 포스트를 예고합니다."
 notion_id: "2f31bab9-e3f8-8002-9c73-d0c7b1f5ce1e"
 notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029c73d0c7b1f5ce1e"
 ---
@@ -12,14 +12,14 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029
 # Let’s Bootc! [1] - Quick Starter : 백문이 불어일견!
 
 > **Summary**
-> Top-Down 방식을 통해 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, KDE Plasma 데스크톱 환경을 설치하는 방법을 설명합니다. Podman을 사용하여 컨테이너 이미지를 빌드하고, 이를 ISO 파일로 변환하여 USB에 굽는 과정과 업데이트 및 롤백 테스트를 포함한 기본적인 워크플로우를 체험합니다. 각 단계에서 필요한 명령어와 주의사항을 상세히 안내하며, 최종적으로 불변의 운영 체제를 구축하는 방법을 다룹니다.
+> Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, KDE Plasma 데스크톱 환경을 설치하고, Podman을 사용하여 컨테이너 이미지를 빌드하고 ISO 파일로 변환하는 과정을 설명합니다. 과정에는 사용자 계정 설정, 이미지 빌드, 레지스트리 업로드, USB 부팅 미디어 제작, 설치 후 확인 및 업데이트와 롤백 테스트가 포함됩니다. 최종적으로 bootc의 기본적인 사이클을 경험하고, 여러 의문에 대한 후속 포스트를 예고합니다.
 
 ---
 
 
-![Image](image_3258e009aacc.png)
+![Image](image_070eec6c44d8.png)
 
-![Image](image_56e8f6055d9d.png)
+![Image](image_13479a634b82.png)
 
 # [1] Quick Starter
 
@@ -65,7 +65,7 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029
 - 다섯째, 롤백을 테스트한다. 업데이트에 문제가 생겼을 때 이전 버전으로 돌아갈 수 있는지 확인한다.
 이 다섯 단계를 모두 거쳐야 bootc의 기본적인 워크플로우를 체험했다고 할 수 있습니다.
 
-![Image](image_18f377d9bd86.png)
+![Image](image_7bfc47b2aa09.png)
 
 ---
 
@@ -121,7 +121,7 @@ podman run --rm docker.io/library/alpine:latest uname -a
 
 ### 1-2. macOS/Windows 환경의 경우
 
-그리고 Podman 머신을 하나 생성해 줍시다.
+Bootc 빌드를 위한 Podman 머신을 하나 생성해 줍시다.
 
 ```bash
 # Podman 머신 생성 (디스크 50GB, 메모리 8GB 할당)
@@ -136,18 +136,20 @@ podman machine start podman-machine-bootc
 
 머신을 생성하는 과정에서 fedora 이미지를 받아오는것을 확인할 수 있지만, 그보다는 `--rootful` 옵션이 눈에 들어올 겁니다.
 
-해당 옵션을 간단히 말하면, ISO를 만들려면 Linux 파일시스템을 직접 써야 하고, 그건 커널 권한 없이는 불가능합니다. 그래서 rootful이 필요합니다. "그게 정확히 무슨 뜻이지?"라는 의문이 드시는것이 당연합니다만… 해당 포스트는 Quick Starter이니, 이와 관련된 내용은 다음 포스트에서 다루도록 하겠습니다. 지금은 일단 따라 진행합시다.
+해당 옵션을 간단히 말하면, ISO를 만들려면 Linux 파일시스템을 직접 써야 하고, 그건 커널 권한 없이는 불가능합니다. 그래서 rootful이 필요합니다. "그게 정확히 무슨 뜻이지?"라는 의문이 드시는것이 당연합니다만… 해당 포스트는 Quick Starter이니, 이와 관련된 내용은 다음 포스트에서 다루도록 하겠습니다.
+
+지금은 일단 따라 진행합시다.
 
 ### 1-3. 레지스트리 계정 준비
 
-빌드한 이미지를 업로드할 레지스트리 계정이 필요합니다. Docker Hub 또는 GitHub Container Registry(GHCR), Habor중 취향에 맞게 하나를 선택하시면 됩니다.
+이제 빌드한 bootc 이미지를 업로드할 레지스트리 계정이 필요합니다. Docker Hub 또는 GitHub Container Registry(GHCR), Habor중 취향에 맞게 하나를 선택하시면 됩니다.
 
 본 글에서는 Docker Hub를 기준으로 설명하겠습니다.
 
 ```bash
 # Docker Hub 로그인
 # Username 및 Password(Token) 입력
-podman login docker.io
+sudo podman login docker.io
 ```
 
 ---
@@ -162,20 +164,26 @@ bootc 이미지에는 기본 사용자 계정이 포함되어 있지 않습니�
 
 넷 중 아무거나 하나로 진행하셔도 무방합니다. 이 튜토리얼 에서는, **방법 1** 을 통해 진행하도록 하겠습니다.
 
-- **방법 1: openssl 사용 (macOS, Linux 공통)**
+<details>
+<summary>**방법 1: openssl 사용 (macOS, Linux 공통)**</summary>
+
 ```bash
 # SHA512 해시 생성 (비밀번호 입력 프롬프트가 뜸)
 openssl passwd -6
 ```
 
-  명령을 실행하면 비밀번호 입력 프롬프트가 표시됩니다. 비밀번호를 입력하면 `$6$`로 시작하는 긴 문자열이 출력되며, 이것이 SHA512 해시값입니다.
+명령을 실행하면 비밀번호 입력 프롬프트가 표시됩니다. 비밀번호를 입력하면 `$6$`로 시작하는 긴 문자열이 출력되며, 이것이 SHA512 해시값입니다.
 
 ```bash
 # 출력 예시
 $6$rounds=656000$randomsalt$Abc123...긴문자열...xyz
 ```
 
-- **방법 2: mkpasswd 사용 (Linux)**
+</details>
+
+<details>
+<summary>**방법 2: mkpasswd 사용 (Linux)**</summary>
+
 ```bash
 # Debian/Ubuntu
 sudo apt install whois
@@ -186,21 +194,31 @@ sudo dnf install mkpasswd
 mkpasswd -m sha512crypt
 ```
 
-- **방법 3: Docker/Podman으로 mkpasswd 실행 (OS 무관)**
-  macOS와 같이 mkpasswd가 기본적으로 제공되지 않는 환경에서 유용한 방법입니다.
+</details>
+
+<details>
+<summary>**방법 3: Docker/Podman으로 mkpasswd 실행 (OS 무관)**</summary>
+
+macOS와 같이 mkpasswd가 기본적으로 제공되지 않는 환경에서 유용한 방법입니다.
 
 ```bash
 podman run -it --rm alpine mkpasswd -m sha512 "내비밀번호"
 ```
 
-- **방법 4: Python crypt 모듈 사용 (Python 3 설치 환경)**
-  Python이 설치된 환경에서 간편하게 사용할 수 있는 방법입니다.
+</details>
+
+<details>
+<summary>**방법 4: Python crypt 모듈 사용 (Python 3 설치 환경)**</summary>
+
+Python이 설치된 환경에서 간편하게 사용할 수 있는 방법입니다.
 
 ```bash
 python3 -c 'import crypt; print(crypt.crypt("내비밀번호", crypt.mksalt(crypt.METHOD_SHA512)))'
 ```
 
-![Image](image_1fc0f0c16b5e.png)
+</details>
+
+![Image](image_1af019be3a0b.png)
 
 일단 저는 임의대로 비밀번호를 `0000` 으로 입력했을때 발생하는 해시값을 확인할 수 있습니다…^^
 
@@ -369,15 +387,17 @@ sudo podman build -t my-centos10-kde:v1 .
 >
 >
 
-![Image](image_9aa8753dded1.png)
+![Image](image_ce8aeedca7ae.png)
 
 빌드에는 시간이 다소 소요됩니다. KDE 패키지 그룹의 크기가 상당하기 때문입니다.
 
 빌드가 완료되면 이미지 크기를 확인해보겠습니다.
 
 ```bash
-podman images my-centos10-kde
+sudo podman images my-centos10-kde
 ```
+
+![Image](image_34758b9a0919.png)
 
 일반적으로 5GB에서 10GB 사이의 크기로 빌드됩니다. 추가 패키지를 설치할 경우 15GB를 초과할 수 있습니다.
 
@@ -385,46 +405,54 @@ podman images my-centos10-kde
 
 ## 6. 레지스트리 업로드
 
-빌드한 이미지를 Docker Hub 레지스트리에 업로드 합니다.
+빌드한 이미지가 Local이 아닌, DockerHub를 가르키도록 태그를 설정하고, Docker Hub 레지스트리에 이미지를 업로드 합니다.
 
 ```bash
 # 태그 붙이기 (docker.io/사용자명/이미지명:태그)
-podman tag my-centos10-kde:v1 docker.io/myusername/centos10-kde-bootc:v1
+sudo podman tag my-centos10-kde:v1 docker.io/${USERNAME}/centos10-kde-bootc:v1
 
 # 푸시
-podman push docker.io/myusername/centos10-kde-bootc:v1
+sudo podman push docker.io/${USERNAME}/centos10-kde-bootc:v1
 ```
 
-### 태그 작성 시 주의사항
+![Image](image_5b9208a51ff6.png)
+
+### 6-1. 태그 작성 시 주의사항
 
 태그를 지정할 때는 반드시 `docker.io/` 또는 `ghcr.io/`까지 포함한 **전체 경로**를 사용해야 합니다. 이후 `bootc switch`나 `bootc upgrade`를 실행할 때 이 전체 경로가 필요하기 때문입니다. 축약형을 사용하면 시스템이 레지스트리를 찾지 못하는 문제가 발생할 수 있습니다.
 
 대용량 이미지를 업로드할 때 Docker Hub에서 연결이 끊기는 문제가 발생할 수 있습니다. 특히 10GB를 초과하는 경우 이러한 현상이 자주 나타날 수 있습니다. 이런 상황에서는 GHCR(GitHub Container Registry)이나, Habor self-hosting 등을 대안으로 고려해볼 수 있으며, 이에 대한 자세한 내용은 별도 포스트에서 다루도록 하겠습니다.
 
+### 6-2. [hub.docker.com](http://hub.docker.com/) 에서 이미지 확인
+
+업로드한 저장소로 접속하여 정상적으로 업로드가 된 것을 확인해 보도록 합시다.
+
+![Image](image_2f7c25eb2b1a.png)
+
 ---
 
 ## 7. ISO 빌드
 
-레지스트리에 업로드한 이미지를 설치 가능한 ISO 파일로 변환합니다. 이 작업에는 `bootc-image-builder` 도구를 사용합니다.
+자, 이제 레지스트리에 업로드한 이미지를 설치 가능한 ISO 파일로 변환하는 작업을 시행하도록 합니다. 이 작업에는 `bootc-image-builder` 도구를 사용합니다.
 
 ```bash
 # output 디렉토리 생성
 mkdir -p output
 
-sudo podman run \\
-  --rm \\
-  -it \\
-  --privileged \\
-  --pull=newer \\
-  --security-opt label=type:unconfined_t \\
-  -v $(pwd)/config.toml:/config.toml:ro \\
-  -v $(pwd)/output:/output \\
-  -v /var/lib/containers/storage:/var/lib/containers/storage \\
-  quay.io/centos-bootc/bootc-image-builder:latest \\
-  --type iso \\
-  --target-arch x86_64 \\
-  --config /config.toml \\
-  docker.io/myusername/centos10-kde-bootc:v1
+sudo podman run \
+  --rm \
+  -it \
+  --privileged \
+  --pull=newer \
+  --security-opt label=type:unconfined_t \
+  -v "$(pwd)/config.toml:/config.toml:ro" \
+  -v "$(pwd)/output:/output" \
+  -v /var/lib/containers/storage:/var/lib/containers/storage \
+  quay.io/centos-bootc/bootc-image-builder:latest \
+  --type iso \
+  --target-arch x86_64 \
+  --config /config.toml \
+  docker.io/${USERNAME}/centos10-kde-bootc:v1
 ```
 
 > x86_64 아키텍처 지정: --target-arch x86_64 옵션을 추가하여 명시적으로 x86_64(AMD64) 아키텍처용 ISO를 생성합니다. Apple Silicon Mac 등에서 빌드할 경우 이 옵션이 없으면 ARM64 이미지가 생성될 수 있습니다.
@@ -440,7 +468,7 @@ sudo podman run \\
 | `--target-arch` | 대상 아키텍처 (x86_64, aarch64) |
 | `--config` | config.toml 경로 |
 
-이러한 세부 사항은 별도의 포스트에서 자세히 다루도록 하겠습니다. 현재 단계에서는 "이 명령을 실행하면 ISO 파일이 생성된다"는 점만 이해하고 진행하시면 됩니다.
+현재 단계에서는 "이 명령을 실행하면 ISO 파일이 생성된다"는 점만 이해하고 진행하시면 됩니다.
 
 빌드가 완료되면 `output` 디렉토리에 ISO 파일이 생성됩니다.
 
@@ -450,15 +478,26 @@ ls -lh output/bootiso/
 
 `install.iso` 또는 비슷한 이름의 파일이 보일 것입니다.
 
+![Image](image_df4953a09848.png)
+
 ---
 
 ## 8. USB 부팅 미디어 제작 및 설치
 
-이제 빌드된 ISO 파일을 USB에 굽는 작업을 시행하면 됩니다. BalenaEtcher, Rufus, 또는 Ventoy 등을 사용하시면 됩니다. 이 중에서 하나만 고르자면, 저는 Ventoy를 선호합니다. 한 번 설치해두면 ISO 파일을 간단히 폴더 안에만 넣어도 해도 부팅 가능한 상태가 되기 때문이지요… 관리가 용이합니다.
+이제 빌드된 ISO 파일을 USB에 굽는 작업을 시행하면 됩니다. BalenaEtcher, Rufus, 또는 Ventoy 등을 사용하시면 됩니다. 이 중에서 하나만 고르자면, 저는 관리가 용이한 Ventoy를 선호합니다. 한 번 설치해두면 ISO 파일을 간단히 폴더 안에만 넣어도 해도 부팅 가능한 상태가 되기 때문이지요… 
 
-그리고 이제 USB를 대상 컴퓨터에 꽂고 부팅해주세요. BIOS에서 USB 부팅 우선순위를 높여야 할 수도 있습니다.
+Ventoy 다운로드 및 사용법은 아래 링크들을 참고해주세요.
 
-부팅하면 익숙한 화면이 나타납니다. RHEL이나 Fedora를 설치해본 적이 있다면 알아보실 겁니다. anaconda 설치 프레임워크입니다.
+🔗 [https://www.ventoy.net/en/download.html](https://www.ventoy.net/en/download.html)
+
+🔗 [https://devpro.kr/posts/Ventoy%EB%A1%9C-%EB%B6%80%ED%8C%85-USB-%EB%A7%8C%EB%93%A4%EA%B8%B0/](https://devpro.kr/posts/Ventoy%EB%A1%9C-%EB%B6%80%ED%8C%85-USB-%EB%A7%8C%EB%93%A4%EA%B8%B0/)
+
+부팅 가능한 USB를 제작하셨다면, 이제 USB를 대상 컴퓨터에 꽂고 부팅해주세요. (BIOS에서 USB 부팅 우선순위를 높여야 할 수도 있습니다.)
+
+
+부팅하면 익숙한 화면이 나타납니다. 
+
+RHEL이나 Fedora를 설치할때볼 수 있는 바로 anaconda 설치 프레임워크입니다.
 
 > GUI vs 자동 설치
 > config.toml의 kickstart 설정에 따라 설치 방식이 달라집니다.
