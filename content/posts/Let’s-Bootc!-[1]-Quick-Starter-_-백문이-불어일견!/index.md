@@ -4,7 +4,7 @@ date: 2026-01-25T05:55:00.000Z
 draft: false
 tags: ["Docker", "Infra"]
 series: ["Let's Bootc!"]
-description: "Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, KDE Plasma 데스크톱 환경을 설치하고, Podman을 사용하여 컨테이너 이미지를 빌드하고 ISO 파일로 변환하는 과정을 설명합니다. 과정에는 사용자 계정 설정, 이미지 빌드, 레지스트리 업로드, USB 부팅 미디어 제작, 설치 후 확인 및 업데이트와 롤백 테스트가 포함됩니다. 최종적으로 bootc의 기본적인 사이클을 경험하고, 여러 의문에 대한 후속 포스트를 예고합니다."
+description: "Top-Down 방식을 통해 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, KDE Plasma 데스크톱 환경을 설치하고, Podman을 사용하여 컨테이너 이미지를 빌드하고 ISO 파일로 변환하는 과정을 설명합니다. 또한, 사용자 계정 설정, 이미지 배포, 업데이트 및 롤백 테스트를 포함한 기본적인 워크플로우를 체험합니다."
 notion_id: "2f31bab9-e3f8-8002-9c73-d0c7b1f5ce1e"
 notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029c73d0c7b1f5ce1e"
 ---
@@ -12,14 +12,14 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029
 # Let’s Bootc! [1] - Quick Starter : 백문이 불어일견!
 
 > **Summary**
-> Top-Down 방식으로 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, KDE Plasma 데스크톱 환경을 설치하고, Podman을 사용하여 컨테이너 이미지를 빌드하고 ISO 파일로 변환하는 과정을 설명합니다. 과정에는 사용자 계정 설정, 이미지 빌드, 레지스트리 업로드, USB 부팅 미디어 제작, 설치 후 확인 및 업데이트와 롤백 테스트가 포함됩니다. 최종적으로 bootc의 기본적인 사이클을 경험하고, 여러 의문에 대한 후속 포스트를 예고합니다.
+> Top-Down 방식을 통해 CentOS Stream 10 기반의 GUI 환경을 구축하는 실습을 진행하며, KDE Plasma 데스크톱 환경을 설치하고, Podman을 사용하여 컨테이너 이미지를 빌드하고 ISO 파일로 변환하는 과정을 설명합니다. 또한, 사용자 계정 설정, 이미지 배포, 업데이트 및 롤백 테스트를 포함한 기본적인 워크플로우를 체험합니다.
 
 ---
 
 
-![Image](image_070eec6c44d8.png)
+![Image](image_f448e89d06b0.png)
 
-![Image](image_13479a634b82.png)
+![Image](image_08181aa709e0.png)
 
 # [1] Quick Starter
 
@@ -65,7 +65,7 @@ notion_url: "https://www.notion.so/Let-s-Bootc-1-Quick-Starter-2f31bab9e3f880029
 - 다섯째, 롤백을 테스트한다. 업데이트에 문제가 생겼을 때 이전 버전으로 돌아갈 수 있는지 확인한다.
 이 다섯 단계를 모두 거쳐야 bootc의 기본적인 워크플로우를 체험했다고 할 수 있습니다.
 
-![Image](image_7bfc47b2aa09.png)
+![Image](image_623a37c53f72.png)
 
 ---
 
@@ -218,7 +218,7 @@ python3 -c 'import crypt; print(crypt.crypt("내비밀번호", crypt.mksalt(cryp
 
 </details>
 
-![Image](image_1af019be3a0b.png)
+![Image](image_43ebed2fe46c.png)
 
 일단 저는 임의대로 비밀번호를 `0000` 으로 입력했을때 발생하는 해시값을 확인할 수 있습니다…^^
 
@@ -387,7 +387,7 @@ sudo podman build -t my-centos10-kde:v1 .
 >
 >
 
-![Image](image_ce8aeedca7ae.png)
+![Image](image_fb5fbd90465e.png)
 
 빌드에는 시간이 다소 소요됩니다. KDE 패키지 그룹의 크기가 상당하기 때문입니다.
 
@@ -397,7 +397,7 @@ sudo podman build -t my-centos10-kde:v1 .
 sudo podman images my-centos10-kde
 ```
 
-![Image](image_34758b9a0919.png)
+![Image](image_e88bd56ef9fe.png)
 
 일반적으로 5GB에서 10GB 사이의 크기로 빌드됩니다. 추가 패키지를 설치할 경우 15GB를 초과할 수 있습니다.
 
@@ -415,7 +415,7 @@ sudo podman tag my-centos10-kde:v1 docker.io/${USERNAME}/centos10-kde-bootc:v1
 sudo podman push docker.io/${USERNAME}/centos10-kde-bootc:v1
 ```
 
-![Image](image_5b9208a51ff6.png)
+![Image](image_ada0c8168202.png)
 
 ### 6-1. 태그 작성 시 주의사항
 
@@ -427,13 +427,33 @@ sudo podman push docker.io/${USERNAME}/centos10-kde-bootc:v1
 
 업로드한 저장소로 접속하여 정상적으로 업로드가 된 것을 확인해 보도록 합시다.
 
-![Image](image_2f7c25eb2b1a.png)
+![Image](image_16b44673caab.png)
 
 ---
 
 ## 7. ISO 빌드
 
 자, 이제 레지스트리에 업로드한 이미지를 설치 가능한 ISO 파일로 변환하는 작업을 시행하도록 합니다. 이 작업에는 `bootc-image-builder` 도구를 사용합니다.
+
+```bash
+# output 디렉토리 생성
+mkdir -p output
+
+sudo podman run \
+  --rm \
+  -it \
+  --privileged \
+  --pull=newer \
+  --security-opt label=type:unconfined_t \
+  -v "$(pwd)/config.toml:/config.toml:ro" \
+  -v "$(pwd)/output:/output" \
+  -v /var/lib/containers/storage:/var/lib/containers/storage \
+  quay.io/centos-bootc/bootc-image-builder:latest \
+  --type iso \
+  --target-arch x86_64 \
+  --config /config.toml \
+  docker.io/${USERNAME}/centos10-kde-bootc:v1
+```
 
 ```bash
 # output 디렉토리 생성
@@ -478,7 +498,7 @@ ls -lh output/bootiso/
 
 `install.iso` 또는 비슷한 이름의 파일이 보일 것입니다.
 
-![Image](image_df4953a09848.png)
+![Image](image_c71179ac9b5e.png)
 
 ---
 
@@ -491,6 +511,8 @@ Ventoy 다운로드 및 사용법은 아래 링크들을 참고해주세요.
 🔗 [https://www.ventoy.net/en/download.html](https://www.ventoy.net/en/download.html)
 
 🔗 [https://devpro.kr/posts/Ventoy%EB%A1%9C-%EB%B6%80%ED%8C%85-USB-%EB%A7%8C%EB%93%A4%EA%B8%B0/](https://devpro.kr/posts/Ventoy%EB%A1%9C-%EB%B6%80%ED%8C%85-USB-%EB%A7%8C%EB%93%A4%EA%B8%B0/)
+
+![Image](image_df3b2ddf48b4.png)
 
 부팅 가능한 USB를 제작하셨다면, 이제 USB를 대상 컴퓨터에 꽂고 부팅해주세요. (BIOS에서 USB 부팅 우선순위를 높여야 할 수도 있습니다.)
 
@@ -563,7 +585,10 @@ sudo whoami
 빌드 환경으로 돌아가서 Containerfile을 수정합니다. 변경 사항을 쉽게 확인할 수 있도록 fastfetch 패키지를 추가하겠습니다.
 
 ```docker
-FROM quay.io/centos-bootc/centos-bootc:stream10
+# EPEL 저장소 추가 - 추가 패키지 제공
+RUN dnf config-manager --set-enabled crb && \
+    dnf install -y epel-release && \
+    dnf -y update
 
 # ... 기존 내용 ...
 
@@ -574,16 +599,16 @@ RUN dnf -y install fastfetch
 수정이 완료되면 다시 빌드하고 레지스트리에 푸시합니다.
 
 ```bash
-podman build -t my-centos10-kde:v2 .
-podman tag my-centos10-kde:v2 docker.io/myusername/centos10-kde-bootc:v2
-podman push docker.io/myusername/centos10-kde-bootc:v2
+sudo podman build -t my-centos10-kde:v2 .
+sudo podman tag my-centos10-kde:v2 docker.io/${USERNAME}/centos10-kde-bootc:v2
+sudo podman push docker.io/${USERNAME}/centos10-kde-bootc:v2
 ```
 
 대상 컴퓨터에서 업그레이드를 실행합니다.
 
 ```bash
 # 새 버전으로 전환
-sudo bootc switch docker.io/myusername/centos10-kde-bootc:v2
+sudo bootc switch docker.io/${USERNAME}/centos10-kde-bootc:v2
 
 # 또는 같은 이미지의 최신 버전으로 업그레이드
 # sudo bootc upgrade
