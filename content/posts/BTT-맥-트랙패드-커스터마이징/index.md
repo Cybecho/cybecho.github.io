@@ -16,9 +16,9 @@ notion_url: "https://www.notion.so/BTT-22c5f0a75ace4e5e91ca0f7d474930a2"
 
 ---
 
-![Image](image_8ab1d28a6673.png)
+![Image](image_fba64df5f230.png)
 
 🔗 [https://allgg.tistory.com/29](https://allgg.tistory.com/29)
 
-![Image](image_43d33bec5533.png)
+![Image](image_58fca7d5135c.png)
 

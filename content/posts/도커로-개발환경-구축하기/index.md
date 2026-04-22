@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/36137e082f6a4281b300e4020ed659f4"
 
 ---
 
-![Image](image_60387c47f876.png)
+![Image](image_9b44500cf691.png)
 
 🔗 [https://labs.brandi.co.kr//2021/01/20/hwangsg.html](https://labs.brandi.co.kr//2021/01/20/hwangsg.html)
 

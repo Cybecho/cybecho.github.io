@@ -16,50 +16,50 @@ notion_url: "https://www.notion.so/05-4262fa2a444d4d13b1a608a8da0b762c"
 
 ---
 
-![Image](image_6088b4929b81.png)
+![Image](image_15ff42987a89.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=SNjgew0VhHY&list=PLO-mt5Iu5TeZF8xMHqtT_DhAPKmjF6i3x&index=6)
 
 > 🔥 **랜덤한 타일이 배치된 타일맵을 그려보자**
-> ![Image](image_1c8d89667d00.png)
+> ![Image](image_72aec054d7db.png)
 >
-> ![Image](image_5a2ea5cd84c4.png)
+> ![Image](image_1a890de5f698.png)
 >
-> ![Image](image_d7741da2078e.png)
+> ![Image](image_c9e4a805eda7.png)
 >
 > > 🔥 **Runt Tile이란 인접한 타일에 따라 이미지가 정해지는 타일 (랜덤생성 타일)**
 >
-> ![Image](image_aa2e379f47b4.png)
+> ![Image](image_e00fa9e9b079.png)
 >
-> ![Image](image_b009cfeb1b89.png)
+> ![Image](image_348ef839914a.png)
 >
 > ## Tile Palette에 RanTile 적용시켜서 랜덤타일 생성될 틀을 만들어준다
 >
-> ![Image](image_2a3b2636a9e2.png)
+> ![Image](image_f21343f29e3f.png)
 >
-> ![Image](image_bdb36ea12d3c.png)
+> ![Image](image_8ff7f6609881.png)
 >
-> ![Image](image_ba0489670377.png)
+> ![Image](image_482c489b3aa5.png)
 >
 >
 
 > 🔥 ****랜덤타일맵 생성 - 1****
-> ![Image](image_4646f0462710.png)
+> ![Image](image_117d02637144.png)
 >
 > 하이어라키에 Tilemap에 `Tilemap Collider 2D` 와 `Compsite Collider 2D` 를 추가해준다
 >
 > > 🔥 **`Compsite Collider 2D` : 잘게 나눠진 그리드 속에 나뉜 타일을 하나로 합쳐주는 컴포넌트**
 >
-> ![Image](image_8b40aca5823d.png)
+> ![Image](image_1884bef94597.png)
 >
-> ![Image](image_83b48abb8f1e.png)
+> ![Image](image_8948f08695c2.png)
 >
-> ![Image](image_9cc81bf31319.png)
+> ![Image](image_a528fa85f6da.png)
 >
 > ## 그리고 Tilemap의 Tag설정을 ‘Ground’ 로 설정해준다
 >
 >
-> ![Image](image_19af71858120.png)
+> ![Image](image_ad9ed7335552.png)
 >
 >
 
@@ -67,9 +67,9 @@ notion_url: "https://www.notion.so/05-4262fa2a444d4d13b1a608a8da0b762c"
 >
 > ## 게임메모리를 생성하는 이유는 게임메모리 자체를 메모리에 얹어버릴것임
 >
-> ![Image](image_0eb1bc4c44f5.png)
+> ![Image](image_c20459ed9a8c.png)
 >
-> ![Image](image_68c1526eb77d.png)
+> ![Image](image_e51d04d969c9.png)
 >
 >
 > 파이썬의 Main 함수를 따로 만들어서 미리 만들어둔 함수를 미리 불러와서 사용하는거랑 비슷한 논리..
@@ -94,7 +94,7 @@ notion_url: "https://www.notion.so/05-4262fa2a444d4d13b1a608a8da0b762c"
 > }
 > ```
 >
-> ![Image](image_40c464c98b5b.png)
+> ![Image](image_be5c12bc869a.png)
 >
 > # 코드작성
 >
@@ -163,7 +163,7 @@ notion_url: "https://www.notion.so/05-4262fa2a444d4d13b1a608a8da0b762c"
 > }
 > ```
 >
-> ![Image](image_d2e3619d2866.png)
+> ![Image](image_f4e388afce2f.png)
 >
 > 만약 이런식으로 X축으로 화면을 벗어났을경우, 
 >
@@ -173,12 +173,12 @@ notion_url: "https://www.notion.so/05-4262fa2a444d4d13b1a608a8da0b762c"
 >
 > 해당코드와 같은 수평적으로 벗어난 상태이니 그에 해당되는 코드가 시작된다는 뜻
 >
-> ![Image](image_781e4b57e1ba.png)
+> ![Image](image_64bd3dc68aa7.png)
 >
 >
 > 이 4개의 타일이 계속해서 재활용되며 이동되는 로직인데, 그림으로 설명하면 다음과 같다
 >
-> ![Image](image_ac47acff53db.png)
+> ![Image](image_dd4cf72c487b.png)
 >
 > > 🔥 **시잇팔 버그발생! **
 > > ```c#
@@ -196,7 +196,7 @@ notion_url: "https://www.notion.so/05-4262fa2a444d4d13b1a608a8da0b762c"
 > > 아니 public으로 설정도해뒀고 문제없는데 왜 자꾸 버그가 날까… 보아하니
 > >
 > >
-> > ![Image](image_9e0fb5940f3d.png)
+> > ![Image](image_8a29a884e835.png)
 > >
 > > 게임스타트를 투르면 GameManager에 설정해뒀던 Player가 날아가버린다.. 뭐야 이 버그
 > >
@@ -236,32 +236,32 @@ notion_url: "https://www.notion.so/05-4262fa2a444d4d13b1a608a8da0b762c"
 >
 
 > 🔥 **카메라를 설정해주자**
-> ![Image](image_382c1d353d33.png)
+> ![Image](image_bcba2427a81b.png)
 >
 >
 > 해상도가 짝수여야 다음 에러를 해결할 수 있다
 >
-> ![Image](image_f358a9818f8e.png)
+> ![Image](image_b9038f7a5d54.png)
 >
-> ![Image](image_6c03833ea146.png)
+> ![Image](image_5e96be83a310.png)
 >
 >
 > ## 플레이어를 따라다니는 카메라를 구현해보자
 >
-> ![Image](image_6cb94931e27e.png)
+> ![Image](image_4a05df70ae95.png)
 >
-> ![Image](image_3c8611c2a311.png)
+> ![Image](image_9b5a5be94cda.png)
 >
 > > 🔥 **Virtual Camera는 Main Camera의 감독역할을 하게된다**
 >
-> ![Image](image_16c3e83bc106.png)
+> ![Image](image_6408004fc7a5.png)
 >
 > ### Virtual Camera : 야 MainCamera! Player를 따라다녀!
 >
 > 라는 의미…
 >
 >
-> ![Image](image_bfb40e1581e1.png)
+> ![Image](image_45fe9eb29a97.png)
 >
 >
 

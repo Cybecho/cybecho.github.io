@@ -4,15 +4,15 @@ date: 2024-02-11T03:37:00.000Z
 draft: false
 tags: ["ubuntu"]
 series: ["Let's Linux!"]
-description: "To install Notion on Ubuntu, open the terminal and add the Notion repository with the command "
-notion_id: "aa4988ac-00af-4391-9b62-30e80b8c8bfb"
-notion_url: "https://www.notion.so/Ubuntu-How-to-install-notion-aa4988ac00af43919b6230e80b8c8bfb"
+description: "To install Notion on Ubuntu, open the terminal and add the Notion repository with echo \"deb [trusted=yes] <https://apt.fury.io/notion-repackaged/> /\" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list, then update with sudo apt update, and finally install it using sudo snap install notion-snap-reborn."
+notion_id: "aa144742-0257-4823-b913-c7c6eb7cb119"
+notion_url: "https://www.notion.so/Ubuntu-How-to-install-notion-aa14474202574823b913c7c6eb7cb119"
 ---
 
 # Ubuntu - How to install notion
 
 > **Summary**
-> To install Notion on Ubuntu, open the terminal and add the Notion repository with the command 
+> To install Notion on Ubuntu, open the terminal and add the Notion repository with echo "deb [trusted=yes] <https://apt.fury.io/notion-repackaged/> /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list, then update with sudo apt update, and finally install it using sudo snap install notion-snap-reborn.
 
 ---
 

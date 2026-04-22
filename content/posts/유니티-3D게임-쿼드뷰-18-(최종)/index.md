@@ -19,7 +19,7 @@ notion_url: "https://www.notion.so/3D-18-f5c063cd60784af191c3f24f494aa538"
 🎥 [동영상 보기](https://www.youtube.com/watch?v=9g4prUqF2oA&t=5s)
 
 > 🔥 **각 사운드별로 AudioSource가 담긴 자식 오브젝트를 추가해줍니다**
-> ![Image](image_caef8f2cb14c.png)
+> ![Image](image_3dcd020427e1.png)
 >
 >
 
@@ -56,7 +56,7 @@ notion_url: "https://www.notion.so/3D-18-f5c063cd60784af191c3f24f494aa538"
 >     }
 > ```
 >
-> ![Image](image_8ba868670384.png)
+> ![Image](image_417b7917aa6d.png)
 >
 >
 

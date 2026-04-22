@@ -21,35 +21,35 @@ notion_url: "https://www.notion.so/03-d531dc12ab0540a2b2f40136913bd252"
 > 🔥 ****기존에 유니티에서 제공하던 Input System 은 구식 방법으로. 새롭게 유니티에서 배포하는 Input 패키지를 설치하여 더 나은 방법으로 플레이어의 움직임 로직을 구현합니다****
 
 > 🔥 **Window - Package Manager 에서 Unity Registriy 이동하여 Input System 설치**
-> ![Image](image_7a64ce40ccdb.png)
+> ![Image](image_149d00bbe00b.png)
 >
-> ![Image](image_85d8be90440a.png)
+> ![Image](image_1ef2b3e00111.png)
 >
 >
 
 > 🔥 **설치 후에 컴포넌트 Player Input을 검색하면 새롭게 컴포넌트가 추가된것을 확인할 수 있습니다 **
 >
-> ![Image](image_4fa0dae5fd2b.png)
+> ![Image](image_2ba197631528.png)
 >
 >
 > Create Actions 를 해주면
 >
-> ![Image](image_da07c860ced5.png)
+> ![Image](image_64ae3a926569.png)
 >
 >
 
 > 🔥 **Interactions에서 Input이 어떻게 눌렸을때 Move값이 변할지 설정할 수 있습니다. 기본적으로 Press 즉 버튼이 눌리자마자 값이 변하는 형태입니다**
-> ![Image](image_92be739a3b70.png)
+> ![Image](image_adc7755175ca.png)
 >
 >
 
 > 🔥 **아 그리고 저장도 잊지 마세요 전 오토세이브를 켜뒀습니다**
-> ![Image](image_061a59b790f6.png)
+> ![Image](image_610ecf0ebf0f.png)
 >
 >
 
 > 🔥 **그리고 Player Input에서 제공하는 함수를 참고해봅시다. Vs Code에서 자동완성 기능을 지원하지 않아서 참고해야해요**
-> ![Image](image_2e6b555cd889.png)
+> ![Image](image_e95cefbdc8c6.png)
 >
 >
 
@@ -97,7 +97,7 @@ public class Player : MonoBehaviour
 ```
 
 > 🔥 **해당 라이브러리의 함수를 이용하면 기존 방법에서 사용하던  노말라이즈를 자동으로 적용해줍니다 아래 사진을 보면 대각선 이동중인데 가로1 세로1의 상대적 길이를 계산하여 (2루트) 대각선 길이를 상대적으로 계산해줬습니다**
-> ![Image](image_910a009c6215.png)
+> ![Image](image_00df7f79b502.png)
 >
 >
 

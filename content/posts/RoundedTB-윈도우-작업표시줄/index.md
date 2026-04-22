@@ -18,7 +18,7 @@ notion_url: "https://www.notion.so/RoundedTB-ef0a2195da244953b37878ce114b857c"
 
 둥글게 커스터마이징
 
-![Image](image_a0d744ca3f7b.png)
+![Image](image_31096a70eb11.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=2AawuA9Qs2I)
 

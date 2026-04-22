@@ -43,12 +43,12 @@ notion_url: "https://www.notion.so/3D-12-58df85f97db2460f9d28c50ddbea8630"
 > }
 > ```
 >
-> ![Image](image_03694a81abd8.png)
+> ![Image](image_f6af99cb6d4f.png)
 >
 >
 
 > 🔥 **보스 바위공격 구현**
-> ![Image](image_8d13b30af619.png)
+> ![Image](image_3552f5c03fe1.png)
 >
 >
 

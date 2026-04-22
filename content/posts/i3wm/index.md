@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/i3wm-242197e71102495c807e0d7eb2896288"
 
 ---
 
-![Image](image_8ad6d09922e1.png)
+![Image](image_da9c7bc2b06f.png)
 
 ### install on Arch Linux
 

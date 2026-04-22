@@ -16,9 +16,9 @@ notion_url: "https://www.notion.so/MAC-f6a1d2ebcb49442c92ead8b21f67269d"
 
 ---
 
-![Image](image_e64709aaa977.png)
+![Image](image_acd392c8bbed.png)
 
 🔗 [https://answers.microsoft.com/en-us/windows/forum/all/potential-solution-what-is-this-red-microphone/71c3bbd8-8357-4cc7-88d4-aab0649ea991](https://answers.microsoft.com/en-us/windows/forum/all/potential-solution-what-is-this-red-microphone/71c3bbd8-8357-4cc7-88d4-aab0649ea991)
 
-![Image](image_43bc357bb4b6.png)
+![Image](image_94e451e4af4b.png)
 

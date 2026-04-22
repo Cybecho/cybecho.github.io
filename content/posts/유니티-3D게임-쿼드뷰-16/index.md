@@ -19,11 +19,11 @@ notion_url: "https://www.notion.so/3D-16-1aab9cfe6a8649cab7a81e1bc9d689ea"
 🎥 [동영상 보기](https://www.youtube.com/watch?v=7B9BsVnG8D8&list=PLO-mt5Iu5TeYkrBzWKuTCl6IUm_bA6BKy&index=16)
 
 > 🔥 **메뉴용 카메라를 따로 생성하고 애니메이션을 제작하여 메뉴 카메라에 삽입**
-> ![Image](image_aace18be751c.png)
+> ![Image](image_e971d1c9b715.png)
 >
-> ![Image](image_b64f68d111a9.png)
+> ![Image](image_395e1fb30973.png)
 >
-> ![Image](image_6549e724a604.png)
+> ![Image](image_3d303e4d2d35.png)
 >
 >
 
@@ -44,7 +44,7 @@ notion_url: "https://www.notion.so/3D-16-1aab9cfe6a8649cab7a81e1bc9d689ea"
 >
 
 > 🔥 **GameManager.cs 생성하여 메뉴 관리**
-> ![Image](image_48333291b5d5.png)
+> ![Image](image_c5e2b16f2204.png)
 >
 > ## 인게임에 쓰이는 요소들을 변수들로 설정
 >
@@ -92,7 +92,7 @@ notion_url: "https://www.notion.so/3D-16-1aab9cfe6a8649cab7a81e1bc9d689ea"
 > }
 > ```
 >
-> ![Image](image_fb542c772089.png)
+> ![Image](image_e4527d1cba97.png)
 >
 >
 
@@ -166,7 +166,7 @@ notion_url: "https://www.notion.so/3D-16-1aab9cfe6a8649cab7a81e1bc9d689ea"
 > >     }
 > > ```
 > >
-> > ![Image](image_f65853e1c6e4.png)
+> > ![Image](image_0323eb075a0c.png)
 > >
 > >
 >

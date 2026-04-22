@@ -85,16 +85,16 @@ Git Desktop만 있으면 안돼!
 
 ## CMD에서 다음과 같이 명령어를 입력하고 다음과 같은 멘트가 나온다면 성공…
 
-![Image](image_e542b625e6dd.png)
+![Image](image_9cc167389759.png)
 
 # 후에 Commit Error가 난 지점까지 Undo 해준다
 
-![Image](image_de4f28054180.png)
+![Image](image_7a2fbe6a8faa.png)
 
 
 ## 그 후에  다시 Commit 및 Push를 해보면
 
-![Image](image_f01f65312e87.png)
+![Image](image_167f74592736.png)
 
 
 

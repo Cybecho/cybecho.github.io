@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/win-8cc34530c5bc4147911d0ce6b54b2822"
 
 ---
 
-![Image](image_07bb42a8f9ac.png)
+![Image](image_e0e37ec06891.png)
 
 🔗 [https://m.cafe.daum.net/sigmarion3/Nnp/60?svc=cafeapi](https://m.cafe.daum.net/sigmarion3/Nnp/60?svc=cafeapi)
 
@@ -32,7 +32,7 @@ notion_url: "https://www.notion.so/win-8cc34530c5bc4147911d0ce6b54b2822"
 
 [https://insertintoblog.tistory.com/14](https://insertintoblog.tistory.com/14)
 
-[](https://insertintoblog.tistory.com/14)[
+[
 ](https://insertintoblog.tistory.com/14)[Windows 키 + 단축키 정리](https://insertintoblog.tistory.com/14)[
 ](https://insertintoblog.tistory.com/14)[* 해당 화면은 PowerToys 를 설치하면 볼 수 있다. - PowerToys는 다음에 글 쓰는걸로.. * 자주 쓸만한것들은 빨간색으로 바꿨다. * 대부분 직접 눌러보며 본인에게 유용한 기능을 찾는것을 추천드린다.](https://insertintoblog.tistory.com/14)[
 ](https://insertintoblog.tistory.com/14)[insertintoblog.tistory.com](https://insertintoblog.tistory.com/14)
@@ -51,7 +51,7 @@ Windows + V 키의 경우 매우 유용한 기능이다. (윈도우 1809 이후 
 
 [https://superuser.com/questions/630112/disable-taskbar-hotkey/725556#725556](https://superuser.com/questions/630112/disable-taskbar-hotkey/725556#725556)
 
-[](https://superuser.com/questions/630112/disable-taskbar-hotkey/725556#725556)[
+[
 ](https://superuser.com/questions/630112/disable-taskbar-hotkey/725556#725556)[Disable taskbar hotkey?](https://superuser.com/questions/630112/disable-taskbar-hotkey/725556#725556)[
 ](https://superuser.com/questions/630112/disable-taskbar-hotkey/725556#725556)[On Windows 8 pressing "Windows + T" in any program moves keyboard focus to the taskbar. I want to assign a different function to this hotkey, but the default is overriding my custom one. How can I](https://superuser.com/questions/630112/disable-taskbar-hotkey/725556#725556)[
 ](https://superuser.com/questions/630112/disable-taskbar-hotkey/725556#725556)[superuser.com](https://superuser.com/questions/630112/disable-taskbar-hotkey/725556#725556)

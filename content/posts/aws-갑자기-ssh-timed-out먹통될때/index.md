@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/aws-ssh-timed-out-e78dab66ac074e9f913418cadbf
 
 ---
 
-![Image](image_8e43e7882c13.png)
+![Image](image_a962192e200c.png)
 
 🔗 [https://breakcoding.tistory.com/393](https://breakcoding.tistory.com/393)
 

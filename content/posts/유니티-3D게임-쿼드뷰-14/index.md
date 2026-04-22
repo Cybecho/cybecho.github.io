@@ -22,41 +22,41 @@ notion_url: "https://www.notion.so/3D-14-1326f328573e43608b0e060a3f305b1a"
 
 EX)인게임 플란넬, 게임오버 플란넬, 게임스타트 플란넬**
 
-![Image](image_781045281f8a.png)
+![Image](image_f2c34ef3c18b.png)
 
 > 🔥 **우클릭 - UI - canvas 클릭하면 등장하는 EventSystem은 입력키를받는 컴포넌트라 생각하면 된다**
-> ![Image](image_82cd6fd8683d.png)
+> ![Image](image_98f6421fe245.png)
 >
 >
 
 > 🔥 **RectTransform → 스크린좌표임 월드좌표와 다릅니다**
-> ![Image](image_5a05febfbaa1.png)
+> ![Image](image_b0fdc6594832.png)
 >
 >
 
 > 🔥 **Set Native Size 이미지를 원래 크기로 맞추는 기능**
-> ![Image](image_8b478d0c0110.png)
+> ![Image](image_3f10eebd7778.png)
 >
 >
 
 > 🔥 **UI Text 글자크기가 박스보다 클경우 사라지는 현상을 해결하는방법은 다음과같다**
-> ![Image](image_25df0131e5c8.png)
+> ![Image](image_b64c2f517412.png)
 >
 >
 
 > 🔥 **선명한 글자를 얻는 방법은 다음과같다
 스케일을 줄인다 → 줄인 비율만큼 폰트사이즈를 늘린다**
-> ![Image](image_9e72bc3cd1dd.png)
+> ![Image](image_7473bef9f456.png)
 >
 >
 
 > 🔥 **UI 중심과 위치의 방향 기준**
-> ![Image](image_9c5024a3d253.png)
+> ![Image](image_cf8d5db48648.png)
 >
 >
 
 > 🔥 **HP구현방법**
-> ![Image](image_92ca2eed04a8.png)
+> ![Image](image_ddd2abc12819.png)
 >
 > ### 패널안에 Empty Group만들고 배경Image 자식으로 설정 후에 이미타입 simple로 변경하고 Set Native Size 누른 후에 다시 Slice 해둔다음에 배경 Image 속에 자식으로 피통이 될 내부 Image를 생성해 배경 Image와 동일한작업을하고 앵커피벗은 우측으로 고정 (피깎이는걸 구현하기 위해) 
 >

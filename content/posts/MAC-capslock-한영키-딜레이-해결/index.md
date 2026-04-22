@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-capslock-dfc47e00418946a0aea3a3a88cc3ad37
 
 ---
 
-![Image](image_a1c69c229bc2.png)
+![Image](image_cd20fce0aefe.png)
 
 🔗 [https://itbluebook.tistory.com/3](https://itbluebook.tistory.com/3)
 

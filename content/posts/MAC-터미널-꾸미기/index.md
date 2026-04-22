@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-63e097ada26544faaf8a4fa0267323b8"
 
 ---
 
-![Image](image_f8bb18983e21.png)
+![Image](image_66c1405d097d.png)
 
 🔗 [https://velog.io/@saemsol/Oh-My-Zsh](https://velog.io/@saemsol/Oh-My-Zsh)
 

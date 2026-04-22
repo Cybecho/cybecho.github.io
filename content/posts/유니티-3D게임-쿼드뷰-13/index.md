@@ -21,9 +21,9 @@ notion_url: "https://www.notion.so/3D-13-fad748f6bb6f458e898981b1bbf80599"
 > 🔥 **gameObject.layer = 14; 이런느낌으로  레이어를 변경해서 특정 레이어와 충돌하게하거나 하지않게 만들어서 관리할 수 있다**
 
 > 🔥 **상속을 받더라도 부모의 스크립트의 변수가 public 이여야만 자식 스크립트에서 사용이 가능합니다**
-> ![Image](image_a202d7465c20.png)
+> ![Image](image_380288dcc8cc.png)
 >
-> ![Image](image_5b08b3a00ffc.png)
+> ![Image](image_0d3c902762af.png)
 >
 >
 
@@ -94,7 +94,7 @@ notion_url: "https://www.notion.so/3D-13-fad748f6bb6f458e898981b1bbf80599"
 > 🔥 **근데 이렇게 짜면 어미클래스인 Enemy에서 초기화 한 컴포넌트정보가 제대로 들어가있지 않는다 왜그럴까?**
 > ### 이유는 자식함수의 Awake()는 자식 클래스’만’ 단독실행 하기 때문에 어미클래스의 Awake()는 제대로 실행되지 않습니다
 >
-> ![Image](image_8bf0c0be3531.png)
+> ![Image](image_5b7130a5bbaa.png)
 >
 > ```c#
 > //Enemy.cs
@@ -221,9 +221,9 @@ notion_url: "https://www.notion.so/3D-13-fad748f6bb6f458e898981b1bbf80599"
 >
 
 > 🔥 **MeleeArea와 충돌했을때 버그나는 이유는 MeleeArea에 Bullet을 넣지 않았기 때문…**
-> ![Image](image_e0924261b73e.png)
+> ![Image](image_550b6b951af5.png)
 >
-> ![Image](image_cad972106864.png)
+> ![Image](image_63ce45f47b85.png)
 >
 >
 

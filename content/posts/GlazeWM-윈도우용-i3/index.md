@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/GlazeWM-i3-e197a8a316584a1c9fbe25f3c16f1317"
 
 ---
 
-![Image](image_b1f7dbfbcb12.png)
+![Image](image_100cff961912.png)
 
 🔗 [https://github.com/glzr-io/glazewm](https://github.com/glzr-io/glazewm)
 

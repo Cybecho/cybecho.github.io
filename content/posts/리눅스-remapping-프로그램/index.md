@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/remapping-43146a4ffc384d90b1115f0714c131f0"
 
 ---
 
-![Image](image_a1d31a6a038f.png)
+![Image](image_83d28d7f2a6a.png)
 
 🔗 [https://www.reddit.com/r/linuxquestions/comments/j0t8qt/keyboard_remapping_any_alternatives_for_karabiner/](https://www.reddit.com/r/linuxquestions/comments/j0t8qt/keyboard_remapping_any_alternatives_for_karabiner/)
 

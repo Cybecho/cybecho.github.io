@@ -40,14 +40,14 @@ notion_url: "https://www.notion.so/3D-06-22cc513f82e64ca78cf9052009c4663e"
 >
 > 또한, 충돌 레이어 또한 설정해줘야한다 다른 리지드바디와 충돌했기 때문이기에 레이어를 다르게한다
 >
-> ![Image](image_26e290277b66.png)
+> ![Image](image_9a23aafa38db.png)
 >
-> ![Image](image_1cb70393951a.png)
+> ![Image](image_9067965dfc9f.png)
 >
 >
 > Edit - ProjectSettings - Physics - Layer Collision Matrix
 >
-> ![Image](image_9e6825f1032e.png)
+> ![Image](image_fe62ded7b17c.png)
 >
 >
 
@@ -66,7 +66,7 @@ notion_url: "https://www.notion.so/3D-06-22cc513f82e64ca78cf9052009c4663e"
 >     }
 > ```
 >
-> ![Image](image_c99c678045c7.png)
+> ![Image](image_06f2fa8a7b34.png)
 >
 > ```c#
 > bool isBorder; //벽과 닿았나 안닿았나?
@@ -77,7 +77,7 @@ notion_url: "https://www.notion.so/3D-06-22cc513f82e64ca78cf9052009c4663e"
 >
 
 > 🔥 **아… Layer 가 아니라 Tag 설정을 해서 코드가 실행이 안된거구나**
-> ![Image](image_d3c18e605d76.png)
+> ![Image](image_132ab28f398d.png)
 >
 >
 
@@ -107,16 +107,16 @@ notion_url: "https://www.notion.so/3D-06-22cc513f82e64ca78cf9052009c4663e"
 > # “근데 아이템에 스피어 콜라이더는 두갠데예?”
 >
 > > 🔥 **GetCompnent() 쓰면 첫번째 컴포넌트만 가져온다 고로 첫번째에있는(위에있는) 콜라이더 정보를 가져온다 그래서 <u>**물리를 담당하는 콜라이더가 상위에 있어야하고**</u>, 아이템 충돌을 감지하는 콜라이더가 아래있어야한다**
-> > ![Image](image_080d6204a548.png)
+> > ![Image](image_97396495d2e6.png)
 > >
 > >
 >
 > # “Is Trigger가 상위에 있는데, 이거 어케내림?”
 >
 > > 🔥 **우클릭 눌러서 Move Up 시켜주면 Open Prefab 뜨는데 거기서 Move Up 시켜주면 된다**
-> > ![Image](image_dc2651809fa4.png)
+> > ![Image](image_69de89b910be.png)
 > >
-> > ![Image](image_86a97aace912.png)
+> > ![Image](image_6e30d6651781.png)
 > >
 > > 오픈 프리팹 들어가서 다시 Move up
 > >

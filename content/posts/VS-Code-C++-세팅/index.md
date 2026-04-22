@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VS-Code-C-877b6f3e0e2f4285bc5dc174ff5e5110"
 
 ---
 
-![Image](image_796582e03ddd.png)
+![Image](image_ce051c6190b5.png)
 
 # 설치
 
@@ -32,19 +32,19 @@ notion_url: "https://www.notion.so/VS-Code-C-877b6f3e0e2f4285bc5dc174ff5e5110"
 > 💡 **헤더파일 포함 방법**
 > ---
 >
-> ![Image](image_c2f8720b2625.png)
+> ![Image](image_dfac7836dbc5.png)
 >
 > 일단 이건 제 폴더 화면이구요 ch1.cpp가 메인함수이고, 리소스에 add함수(헤더파일 및 바디)를 넣었습니다.
 >
 > # add.cpp
 >
-> ![Image](image_954cce3281be.png)
+> ![Image](image_b05ef3695479.png)
 >
-> ![Image](image_ef049691b493.png)
+> ![Image](image_d9ec70d9b93b.png)
 >
 > # add.h
 >
-> ![Image](image_196ac363f7ca.png)
+> ![Image](image_d9ed844725fe.png)
 >
 >
 > ---

@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/MAC-2-d244244932314e9a95385c7ae5dc1b08"
 
 ---
 
-![Image](image_06d2a725ca09.png)
+![Image](image_70726c243b7d.png)
 
 
 🔗 [https://velog.io/@easyhwan/Mac-맥북-터미널-꾸미기-iTerm2-Oh-My-Zsh](https://velog.io/@easyhwan/Mac-맥북-터미널-꾸미기-iTerm2-Oh-My-Zsh)

@@ -4,7 +4,7 @@ date: 2023-12-02T00:00:00.000Z
 draft: false
 tags: ["Arch"]
 series: ["Let's Linux!"]
-description: "Arch Linux에서 한글 입력기를 설치하기 위해 필요한 폰트를 설치하고, "
+description: "Arch Linux에서 한글 입력기를 설치하기 위해 필요한 폰트를 설치하고, local.conf 파일을 생성하여 폰트 설정을 구성하는 방법을 설명합니다. 필요한 명령어와 설정 파일의 내용도 포함되어 있습니다."
 notion_id: "afdf1194-804d-40aa-8c73-3809f2b8c22f"
 notion_url: "https://www.notion.so/install-Korean-on-Arch-afdf1194804d40aa8c733809f2b8c22f"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/install-Korean-on-Arch-afdf1194804d40aa8c7338
 # install Korean on Arch
 
 > **Summary**
-> Arch Linux에서 한글 입력기를 설치하기 위해 필요한 폰트를 설치하고, 
+> Arch Linux에서 한글 입력기를 설치하기 위해 필요한 폰트를 설치하고, local.conf 파일을 생성하여 폰트 설정을 구성하는 방법을 설명합니다. 필요한 명령어와 설정 파일의 내용도 포함되어 있습니다.
 
 ---
 

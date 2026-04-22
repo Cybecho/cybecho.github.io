@@ -128,12 +128,12 @@ notion_url: "https://www.notion.so/3D-17-1402a9ea4e6d4d58b0c8674f341514bf"
 > }
 > ```
 >
-> ![Image](image_7acc3583479c.png)
+> ![Image](image_e94b0d401e94.png)
 >
 >
 
 > 🔥 **버튼 네비게이션을 None으로 해줘야 버튼으로 클릭이 안됩니다**
-> ![Image](image_02a2832fb946.png)
+> ![Image](image_e2c9450e053e.png)
 >
 >
 

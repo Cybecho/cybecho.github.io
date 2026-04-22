@@ -4,7 +4,7 @@ date: 2024-02-19T00:00:00.000Z
 draft: false
 tags: ["WINDOWS"]
 series: ["Don't Hate Windows!"]
-description: "윈도우 터미널의 투명도를 설정하는 방법에 대한 설명과 포커스 모드 설정 방법이 포함되어 있으며, 배터리 효율을 향상시키면 투명도가 복원될 수 있다는 내용이 언급되어 있습니다. 설정 JSON에서 "
+description: "윈도우 터미널의 투명도를 설정하는 방법에 대한 설명과 포커스 모드 설정 방법이 포함되어 있으며, 배터리 효율을 향상시키면 투명도가 복원될 수 있다는 내용이 언급되어 있습니다. 설정 JSON에서 \\\\\"compatibility.enableUnfocusedAcrylic\\\\\": true 옵션을 활성화하면 포커스가 아닐 때도 투명하게 설정할 수 있습니다."
 notion_id: "0b98ec4d-2516-4c44-85b1-962094710534"
 notion_url: "https://www.notion.so/0b98ec4d25164c4485b1962094710534"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/0b98ec4d25164c4485b1962094710534"
 # 윈도우 터미널 투명하게
 
 > **Summary**
-> 윈도우 터미널의 투명도를 설정하는 방법에 대한 설명과 포커스 모드 설정 방법이 포함되어 있으며, 배터리 효율을 향상시키면 투명도가 복원될 수 있다는 내용이 언급되어 있습니다. 설정 JSON에서 
+> 윈도우 터미널의 투명도를 설정하는 방법에 대한 설명과 포커스 모드 설정 방법이 포함되어 있으며, 배터리 효율을 향상시키면 투명도가 복원될 수 있다는 내용이 언급되어 있습니다. 설정 JSON에서 \\"compatibility.enableUnfocusedAcrylic\\": true 옵션을 활성화하면 포커스가 아닐 때도 투명하게 설정할 수 있습니다.
 
 ---
 
-![Image](image_c8e03124f213.png)
+![Image](image_f68dd1f6fcc3.png)
 
 
 ## 윈도우 터미널 투명 설정
@@ -33,6 +33,21 @@ in your settings json`**"compatibility.enableUnfocusedAcrylic": true**`, [<u>**W
 
 > **근데 터미널 미리보기에선 위에 옵션 설정할 필요 없이, 
 그냥 자동으로 다중 투명블러가 적용되는듯?**
+> ```javascript
+> "defaults": 
+>         {
+>             "backgroundImageOpacity": 0.5, // 수정해도 안바뀜
+>             "colorScheme": "One Half Dark",
+>             "font": 
+>             {
+>                 "face": "MesloLGS NF"
+>             },
+>             "opacity": 50, // 터미널 미리보기에서는 얘만 수정해주면 됨
+>             "useAcrylic": true
+>         },
+> ```
+>
+>
 
 ## 포커스 모드 설정
 

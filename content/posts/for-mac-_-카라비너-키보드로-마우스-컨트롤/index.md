@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/for-mac-264702d1bd8d4677b5117e3e7d0a44b2"
 
 ---
 
-![Image](image_141144ab7173.png)
+![Image](image_078bb6f40d81.png)
 
 🔗 [https://www.youtube.com/watch?v=U2gMzPqkrCI&t=11s](https://www.youtube.com/watch?v=U2gMzPqkrCI&t=11s)
 
@@ -26,9 +26,9 @@ notion_url: "https://www.notion.so/for-mac-264702d1bd8d4677b5117e3e7d0a44b2"
 ~/.config/karabiner/assets/complex_modifications
 ```
 
-![Image](image_852034ab08b8.png)
+![Image](image_b23b652db7b9.png)
 
-![Image](image_48e82656e306.png)
+![Image](image_6aa18eaadf01.png)
 
 
 # T480 용 (opt → cmd input) 수정한 버전

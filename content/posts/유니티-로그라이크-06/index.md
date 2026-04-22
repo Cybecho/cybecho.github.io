@@ -16,14 +16,14 @@ notion_url: "https://www.notion.so/06-af7c1c92c7794ec08935e4b379cfa259"
 
 ---
 
-![Image](image_b464443f417f.png)
+![Image](image_1226eeab5620.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=0aUCu1BcZxs&list=PLO-mt5Iu5TeZF8xMHqtT_DhAPKmjF6i3x&index=7)
 
 > 🔥 **적 스프라이트를 가져오고 리지드바디를 추가한 후에 회전하지 않도록 Freeze Rotation값을 잠가준다**
-> ![Image](image_916f6ae8b9b4.png)
+> ![Image](image_98adac26f745.png)
 >
-> ![Image](image_785c627d765a.png)
+> ![Image](image_6936decf43ba.png)
 >
 >
 
@@ -72,7 +72,7 @@ notion_url: "https://www.notion.so/06-af7c1c92c7794ec08935e4b379cfa259"
 >     }
 > ```
 >
-> ![Image](image_c1d94233e4a5.png)
+> ![Image](image_c3e4f36ee3cf.png)
 >
 >
 
@@ -111,7 +111,7 @@ notion_url: "https://www.notion.so/06-af7c1c92c7794ec08935e4b379cfa259"
 > }
 > ```
 >
-> ![Image](image_1d03e102f425.png)
+> ![Image](image_dc5608224d0a.png)
 >
 >
 

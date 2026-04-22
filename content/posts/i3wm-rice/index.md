@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/i3wm-rice-0a926befb69449a9a4d1618d38822f49"
 
 ---
 
-![Image](image_ace351eed8ff.png)
+![Image](image_143eaaf28fc8.png)
 
 🔗 [https://www.youtube.com/watch?v=6xqjA6vhqR8](https://www.youtube.com/watch?v=6xqjA6vhqR8)
 
@@ -24,13 +24,29 @@ notion_url: "https://www.notion.so/i3wm-rice-0a926befb69449a9a4d1618d38822f49"
 
 **i3 gaps 는 i3와 병합됨**
 
+🔗 [https://www.reddit.com/r/i3wm/comments/yjeoc9/psa_i3gaps_has_been_merged_into_i3/](https://www.reddit.com/r/i3wm/comments/yjeoc9/psa_i3gaps_has_been_merged_into_i3/)
+
 **옵션 바**
+
+🔗 [https://github.com/adi1090x/polybar-themes](https://github.com/adi1090x/polybar-themes)
+
+🔗 [https://github.com/polybar/polybar](https://github.com/polybar/polybar)
 
 **검색 엔진 개선**
 
+🔗 [https://github.com/davatorium/rofi](https://github.com/davatorium/rofi)
+
 **그냥 간지 원툴**
 
+🔗 [https://github.com/Swordfish90/cool-retro-term](https://github.com/Swordfish90/cool-retro-term)
+
 **윈도우 반투명 및 라운드**
+
+🔗 [https://github.com/jbenden/i3-gaps-rounded](https://github.com/jbenden/i3-gaps-rounded)
+
+🔗 [https://github.com/yshui/picom](https://github.com/yshui/picom)
+
+🔗 [https://www.youtube.com/watch?v=t6Klg7CvUxA](https://www.youtube.com/watch?v=t6Klg7CvUxA)
 
 ## 유저 세팅
 

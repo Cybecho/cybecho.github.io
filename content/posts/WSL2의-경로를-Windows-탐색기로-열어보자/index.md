@@ -4,7 +4,7 @@ date: 2023-09-15T00:00:00.000Z
 draft: false
 tags: ["WINDOWS", "ubuntu"]
 series: ["Don't Hate Windows!"]
-description: "WSL2에서는 Windows 탐색기를 직접 사용할 수 없지만, "
+description: "WSL2에서는 Windows 탐색기를 직접 사용할 수 없지만, explorer.exe . 명령어를 통해 현재 작업 중인 디렉토리를 Windows 탐색기로 열 수 있다. 이 방법은 네트워크 연결을 통해 이루어진다."
 notion_id: "4d0f25cc-d7c8-4706-b1a7-49562669b27c"
 notion_url: "https://www.notion.so/WSL2-Windows-4d0f25ccd7c84706b1a749562669b27c"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/WSL2-Windows-4d0f25ccd7c84706b1a749562669b27c
 # WSL2의 경로를 Windows 탐색기로 열어보자
 
 > **Summary**
-> WSL2에서는 Windows 탐색기를 직접 사용할 수 없지만, 
+> WSL2에서는 Windows 탐색기를 직접 사용할 수 없지만, explorer.exe . 명령어를 통해 현재 작업 중인 디렉토리를 Windows 탐색기로 열 수 있다. 이 방법은 네트워크 연결을 통해 이루어진다.
 
 ---
 
-![Image](image_01357d198540.png)
+![Image](image_ec7290aa9734.png)
 
 🔗 [https://coding-groot.tistory.com/101](https://coding-groot.tistory.com/101)
 

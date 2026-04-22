@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/11-696f1831c3f74ca99e95df5a3fe977e8"
 
 ---
 
-![Image](image_31efba460a3c.png)
+![Image](image_ed612daf0374.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=dBQHtMI-Og4&list=PLO-mt5Iu5TeZF8xMHqtT_DhAPKmjF6i3x&index=11)
 
@@ -123,19 +123,19 @@ notion_url: "https://www.notion.so/11-696f1831c3f74ca99e95df5a3fe977e8"
 > }
 > ```
 >
-> ![Image](image_2b7c55ab398b.png)
+> ![Image](image_2f480b2ae958.png)
 >
 >
 
 > 🔥 **프리팹을 다른 스프라이트로 변경했을때 콜라이더 크기가 다를경우 콜라이더 컴포넌트를 Reset시켜주면 해결됩니다**
-> ![Image](image_55abb8db0328.png)
+> ![Image](image_5099c04d6713.png)
 >
 >
 
 > 🔥 **추가한 원거리공격을 poolmanager 에 등록해봅시다**
-> ![Image](image_aa2355256b17.png)
+> ![Image](image_be495cbb2c1c.png)
 >
-> ![Image](image_eb9a727ad7f2.png)
+> ![Image](image_39f35b111118.png)
 >
 >
 > 그 후에 Weapons.cs 를 수정해줍시다
@@ -247,7 +247,7 @@ notion_url: "https://www.notion.so/11-696f1831c3f74ca99e95df5a3fe977e8"
 >
 > ## 총알은 발사하며 나아가야하기때문에 따로 Rigidbody를 프리팹에 추가해줍니다
 >
-> ![Image](image_e8423411c9e6.png)
+> ![Image](image_0a9269622b35.png)
 >
 > Bullet 코드도 수정해줘야해요
 >

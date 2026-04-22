@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Docker-socket-82adb5e873784b12a106f80977c8ef7
 
 ---
 
-![Image](image_7e9ed6d89261.png)
+![Image](image_66946725b7c4.png)
 
 ```shell
 sudo systemctl stop docker
@@ -32,8 +32,14 @@ sudo systemctl stop docker
 표시되는 메시지는  명령을 사용하여 Docker 서비스를 중지했을 때 Docker 소켓(docker.socket)이 여전히 활성 상태이거나 활성화되어 있음을 나타냅니다. 이것이 무엇을 의미하는지 설명하면 다음과 같습니다.
 
 > **Docker 서비스**
+> Docker는 컨테이너를 실행하고 관리할 수 있는 컨테이너화 플랫폼입니다. Docker 서비스(docker.service)는 컨테이너 작업을 처리하는 백그라운드 서비스인 Docker 데몬을 관리하는 역할을 합니다.
+>
+>
 
 > **Docker 소켓 **
+> Docker 소켓(docker.socket)은 들어오는Docker API 요청을 수신하는 시스템 소켓입니다. 이는 기본적으로 Docker 클라이언트(예: Docker 명령줄 도구)와 Docker 데몬 간의 통신 채널을 제공합니다. Docker 명령을 실행하면 이 소켓을 통해 Docker 데몬과 통신합니다.
+>
+>
 
 docker.socket이 활성화된 상태로 유지되는 이유는 Docker 명령이 실행될 수 있고 필요할 때 Docker 데몬이 시작될 수 있도록 하기 위한 것입니다. Docker는 명령줄 인터페이스(docker 명령)를 통해 관리되도록 설계되었으며 이러한 명령은 소켓을 사용하여 Docker 데몬과 통신합니다.
 

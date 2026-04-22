@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/for-mac-tex-shinobi-ANSII-5dc1aa70914641b6992
 
 ---
 
-![Image](image_29bbc655f090.png)
+![Image](image_4a5451369ed9.png)
 
 🔗 [https://matdulgi.tistory.com/124](https://matdulgi.tistory.com/124)
 
@@ -429,7 +429,7 @@ notion_url: "https://www.notion.so/for-mac-tex-shinobi-ANSII-5dc1aa70914641b6992
 
 (T480은 alt 하고 cmd 위치가 달라서 조정해줘야한다)
 
-![Image](image_f600b392125f.png)
+![Image](image_cbc76be2af2e.png)
 
 🔗 [https://genesy.github.io/karabiner-complex-rules-generator/#eyJ0aXRsZSI6IlQ0ODBfQ3VzdG9tX0lKS0xVTyIsInJ1bGVzIjpbeyJkZXNjcmlwdGlvbiI6IlQ0ODBfSUpLTCIsIm1hbmlwdWxhdG9ycyI6W3sidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfYWx0Il19LCJrZXlfY29kZSI6ImkifSwidG8iOlt7InJlcGVhdCI6dHJ1ZSwia2V5X2NvZGUiOiJ1cF9hcnJvdyJ9XX0seyJ0eXBlIjoiYmFzaWMiLCJmcm9tIjp7Im1vZGlmaWVycyI6eyJtYW5kYXRvcnkiOlsibGVmdF9hbHQiXX0sImtleV9jb2RlIjoiaiJ9LCJ0byI6W3sicmVwZWF0Ijp0cnVlLCJrZXlfY29kZSI6ImxlZnRfYXJyb3cifV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfYWx0Il19LCJrZXlfY29kZSI6ImsifSwidG8iOlt7InJlcGVhdCI6dHJ1ZSwia2V5X2NvZGUiOiJkb3duX2Fycm93In1dfSx7InR5cGUiOiJiYXNpYyIsImZyb20iOnsibW9kaWZpZXJzIjp7Im1hbmRhdG9yeSI6WyJsZWZ0X2FsdCJdfSwia2V5X2NvZGUiOiJsIn0sInRvIjpbeyJyZXBlYXQiOnRydWUsImtleV9jb2RlIjoicmlnaHRfYXJyb3cifV19XX0seyJkZXNjcmlwdGlvbiI6IlQ0ODBfVU8iLCJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsibW9kaWZpZXJzIjp7Im1hbmRhdG9yeSI6WyJsZWZ0X2FsdCJdfSwia2V5X2NvZGUiOiJ1In0sInRvIjpbeyJyZXBlYXQiOnRydWUsImtleV9jb2RlIjoibGVmdF9hcnJvdyIsIm1vZGlmaWVycyI6WyJsZWZ0X2d1aSJdfV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfYWx0Il19LCJrZXlfY29kZSI6Im8ifSwidG8iOlt7InJlcGVhdCI6dHJ1ZSwia2V5X2NvZGUiOiJyaWdodF9hcnJvdyIsIm1vZGlmaWVycyI6WyJsZWZ0X2d1aSJdfV19XX0seyJkZXNjcmlwdGlvbiI6IlQ0ODBfU0hJRlQgKyBJSktMIiwibWFuaXB1bGF0b3JzIjpbeyJ0eXBlIjoiYmFzaWMiLCJmcm9tIjp7Im1vZGlmaWVycyI6eyJtYW5kYXRvcnkiOlsibGVmdF9hbHQiXSwib3B0aW9uYWwiOlsibGVmdF9zaGlmdCJdfSwia2V5X2NvZGUiOiJpIn0sInRvIjpbeyJyZXBlYXQiOnRydWUsImtleV9jb2RlIjoidXBfYXJyb3ciLCJtb2RpZmllcnMiOlsibGVmdF9zaGlmdCJdfV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfYWx0Il0sIm9wdGlvbmFsIjpbImxlZnRfc2hpZnQiXX0sImtleV9jb2RlIjoiaiJ9LCJ0byI6W3sicmVwZWF0Ijp0cnVlLCJrZXlfY29kZSI6ImxlZnRfYXJyb3ciLCJtb2RpZmllcnMiOlsibGVmdF9zaGlmdCJdfV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfYWx0Il0sIm9wdGlvbmFsIjpbImxlZnRfc2hpZnQiXX0sImtleV9jb2RlIjoiayJ9LCJ0byI6W3sicmVwZWF0Ijp0cnVlLCJrZXlfY29kZSI6ImRvd25fYXJyb3ciLCJtb2RpZmllcnMiOlsibGVmdF9zaGlmdCJdfV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfYWx0Il0sIm9wdGlvbmFsIjpbImxlZnRfc2hpZnQiXX0sImtleV9jb2RlIjoibCJ9LCJ0byI6W3sicmVwZWF0Ijp0cnVlLCJrZXlfY29kZSI6InJpZ2h0X2Fycm93IiwibW9kaWZpZXJzIjpbImxlZnRfc2hpZnQiXX1dfV19LHsiZGVzY3JpcHRpb24iOiJUNDgwX1NISUZUICsgVU8iLCJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsibW9kaWZpZXJzIjp7Im1hbmRhdG9yeSI6WyJsZWZ0X2FsdCJdLCJvcHRpb25hbCI6WyJsZWZ0X3NoaWZ0Il19LCJrZXlfY29kZSI6InUifSwidG8iOlt7InJlcGVhdCI6dHJ1ZSwia2V5X2NvZGUiOiJsZWZ0X2Fycm93IiwibW9kaWZpZXJzIjpbImxlZnRfZ3VpIiwibGVmdF9zaGlmdCJdLCJsYXp5IjpmYWxzZSwiaGFsdCI6ZmFsc2V9XX0seyJ0eXBlIjoiYmFzaWMiLCJmcm9tIjp7Im1vZGlmaWVycyI6eyJtYW5kYXRvcnkiOlsibGVmdF9hbHQiXSwib3B0aW9uYWwiOlsibGVmdF9zaGlmdCJdfSwia2V5X2NvZGUiOiJvIn0sInRvIjpbeyJyZXBlYXQiOnRydWUsImtleV9jb2RlIjoicmlnaHRfYXJyb3ciLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiLCJsZWZ0X3NoaWZ0Il19XX1dfSx7ImRlc2NyaXB0aW9uIjoiVDQ4MF9PcHQrSUsiLCJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsibW9kaWZpZXJzIjp7Im1hbmRhdG9yeSI6WyJsZWZ0X2d1aSIsImxlZnRfc2hpZnQiXX0sImtleV9jb2RlIjoiaSJ9LCJ0byI6W3sicmVwZWF0Ijp0cnVlLCJrZXlfY29kZSI6InVwX2Fycm93IiwibW9kaWZpZXJzIjpbImxlZnRfYWx0IiwibGVmdF9zaGlmdCJdfV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfZ3VpIiwibGVmdF9zaGlmdCJdfSwia2V5X2NvZGUiOiJrIn0sInRvIjpbeyJyZXBlYXQiOnRydWUsImtleV9jb2RlIjoiZG93bl9hcnJvdyIsIm1vZGlmaWVycyI6WyJsZWZ0X2FsdCIsImxlZnRfc2hpZnQiXX1dfV19LHsiZGVzY3JpcHRpb24iOiJUNDgwX09wdCtDbWQrVUtJIiwibWFuaXB1bGF0b3JzIjpbeyJ0eXBlIjoiYmFzaWMiLCJmcm9tIjp7Im1vZGlmaWVycyI6eyJtYW5kYXRvcnkiOlsibGVmdF9ndWkiLCJsZWZ0X2FsdCJdfSwia2V5X2NvZGUiOiJ1In0sInRvIjpbeyJyZXBlYXQiOnRydWUsImtleV9jb2RlIjoidSIsInBvaW50aW5nX2J1dHRvbiI6IiIsIm1vZGlmaWVycyI6WyJsZWZ0X2d1aSJdfV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfZ3VpIiwibGVmdF9hbHQiXX0sImtleV9jb2RlIjoiaSJ9LCJ0byI6W3sicmVwZWF0Ijp0cnVlLCJrZXlfY29kZSI6ImkiLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiXX1dfSx7InR5cGUiOiJiYXNpYyIsImZyb20iOnsibW9kaWZpZXJzIjp7Im1hbmRhdG9yeSI6WyJsZWZ0X2d1aSIsImxlZnRfYWx0Il19LCJrZXlfY29kZSI6ImsifSwidG8iOlt7InJlcGVhdCI6dHJ1ZSwia2V5X2NvZGUiOiJrIiwibW9kaWZpZXJzIjpbImxlZnRfZ3VpIl19XX1dfV19](https://genesy.github.io/karabiner-complex-rules-generator/#eyJ0aXRsZSI6IlQ0ODBfQ3VzdG9tX0lKS0xVTyIsInJ1bGVzIjpbeyJkZXNjcmlwdGlvbiI6IlQ0ODBfSUpLTCIsIm1hbmlwdWxhdG9ycyI6W3sidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfYWx0Il19LCJrZXlfY29kZSI6ImkifSwidG8iOlt7InJlcGVhdCI6dHJ1ZSwia2V5X2NvZGUiOiJ1cF9hcnJvdyJ9XX0seyJ0eXBlIjoiYmFzaWMiLCJmcm9tIjp7Im1vZGlmaWVycyI6eyJtYW5kYXRvcnkiOlsibGVmdF9hbHQiXX0sImtleV9jb2RlIjoiaiJ9LCJ0byI6W3sicmVwZWF0Ijp0cnVlLCJrZXlfY29kZSI6ImxlZnRfYXJyb3cifV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfYWx0Il19LCJrZXlfY29kZSI6ImsifSwidG8iOlt7InJlcGVhdCI6dHJ1ZSwia2V5X2NvZGUiOiJkb3duX2Fycm93In1dfSx7InR5cGUiOiJiYXNpYyIsImZyb20iOnsibW9kaWZpZXJzIjp7Im1hbmRhdG9yeSI6WyJsZWZ0X2FsdCJdfSwia2V5X2NvZGUiOiJsIn0sInRvIjpbeyJyZXBlYXQiOnRydWUsImtleV9jb2RlIjoicmlnaHRfYXJyb3cifV19XX0seyJkZXNjcmlwdGlvbiI6IlQ0ODBfVU8iLCJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsibW9kaWZpZXJzIjp7Im1hbmRhdG9yeSI6WyJsZWZ0X2FsdCJdfSwia2V5X2NvZGUiOiJ1In0sInRvIjpbeyJyZXBlYXQiOnRydWUsImtleV9jb2RlIjoibGVmdF9hcnJvdyIsIm1vZGlmaWVycyI6WyJsZWZ0X2d1aSJdfV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfYWx0Il19LCJrZXlfY29kZSI6Im8ifSwidG8iOlt7InJlcGVhdCI6dHJ1ZSwia2V5X2NvZGUiOiJyaWdodF9hcnJvdyIsIm1vZGlmaWVycyI6WyJsZWZ0X2d1aSJdfV19XX0seyJkZXNjcmlwdGlvbiI6IlQ0ODBfU0hJRlQgKyBJSktMIiwibWFuaXB1bGF0b3JzIjpbeyJ0eXBlIjoiYmFzaWMiLCJmcm9tIjp7Im1vZGlmaWVycyI6eyJtYW5kYXRvcnkiOlsibGVmdF9hbHQiXSwib3B0aW9uYWwiOlsibGVmdF9zaGlmdCJdfSwia2V5X2NvZGUiOiJpIn0sInRvIjpbeyJyZXBlYXQiOnRydWUsImtleV9jb2RlIjoidXBfYXJyb3ciLCJtb2RpZmllcnMiOlsibGVmdF9zaGlmdCJdfV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfYWx0Il0sIm9wdGlvbmFsIjpbImxlZnRfc2hpZnQiXX0sImtleV9jb2RlIjoiaiJ9LCJ0byI6W3sicmVwZWF0Ijp0cnVlLCJrZXlfY29kZSI6ImxlZnRfYXJyb3ciLCJtb2RpZmllcnMiOlsibGVmdF9zaGlmdCJdfV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfYWx0Il0sIm9wdGlvbmFsIjpbImxlZnRfc2hpZnQiXX0sImtleV9jb2RlIjoiayJ9LCJ0byI6W3sicmVwZWF0Ijp0cnVlLCJrZXlfY29kZSI6ImRvd25fYXJyb3ciLCJtb2RpZmllcnMiOlsibGVmdF9zaGlmdCJdfV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfYWx0Il0sIm9wdGlvbmFsIjpbImxlZnRfc2hpZnQiXX0sImtleV9jb2RlIjoibCJ9LCJ0byI6W3sicmVwZWF0Ijp0cnVlLCJrZXlfY29kZSI6InJpZ2h0X2Fycm93IiwibW9kaWZpZXJzIjpbImxlZnRfc2hpZnQiXX1dfV19LHsiZGVzY3JpcHRpb24iOiJUNDgwX1NISUZUICsgVU8iLCJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsibW9kaWZpZXJzIjp7Im1hbmRhdG9yeSI6WyJsZWZ0X2FsdCJdLCJvcHRpb25hbCI6WyJsZWZ0X3NoaWZ0Il19LCJrZXlfY29kZSI6InUifSwidG8iOlt7InJlcGVhdCI6dHJ1ZSwia2V5X2NvZGUiOiJsZWZ0X2Fycm93IiwibW9kaWZpZXJzIjpbImxlZnRfZ3VpIiwibGVmdF9zaGlmdCJdLCJsYXp5IjpmYWxzZSwiaGFsdCI6ZmFsc2V9XX0seyJ0eXBlIjoiYmFzaWMiLCJmcm9tIjp7Im1vZGlmaWVycyI6eyJtYW5kYXRvcnkiOlsibGVmdF9hbHQiXSwib3B0aW9uYWwiOlsibGVmdF9zaGlmdCJdfSwia2V5X2NvZGUiOiJvIn0sInRvIjpbeyJyZXBlYXQiOnRydWUsImtleV9jb2RlIjoicmlnaHRfYXJyb3ciLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiLCJsZWZ0X3NoaWZ0Il19XX1dfSx7ImRlc2NyaXB0aW9uIjoiVDQ4MF9PcHQrSUsiLCJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsibW9kaWZpZXJzIjp7Im1hbmRhdG9yeSI6WyJsZWZ0X2d1aSIsImxlZnRfc2hpZnQiXX0sImtleV9jb2RlIjoiaSJ9LCJ0byI6W3sicmVwZWF0Ijp0cnVlLCJrZXlfY29kZSI6InVwX2Fycm93IiwibW9kaWZpZXJzIjpbImxlZnRfYWx0IiwibGVmdF9zaGlmdCJdfV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfZ3VpIiwibGVmdF9zaGlmdCJdfSwia2V5X2NvZGUiOiJrIn0sInRvIjpbeyJyZXBlYXQiOnRydWUsImtleV9jb2RlIjoiZG93bl9hcnJvdyIsIm1vZGlmaWVycyI6WyJsZWZ0X2FsdCIsImxlZnRfc2hpZnQiXX1dfV19LHsiZGVzY3JpcHRpb24iOiJUNDgwX09wdCtDbWQrVUtJIiwibWFuaXB1bGF0b3JzIjpbeyJ0eXBlIjoiYmFzaWMiLCJmcm9tIjp7Im1vZGlmaWVycyI6eyJtYW5kYXRvcnkiOlsibGVmdF9ndWkiLCJsZWZ0X2FsdCJdfSwia2V5X2NvZGUiOiJ1In0sInRvIjpbeyJyZXBlYXQiOnRydWUsImtleV9jb2RlIjoidSIsInBvaW50aW5nX2J1dHRvbiI6IiIsIm1vZGlmaWVycyI6WyJsZWZ0X2d1aSJdfV19LHsidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJtb2RpZmllcnMiOnsibWFuZGF0b3J5IjpbImxlZnRfZ3VpIiwibGVmdF9hbHQiXX0sImtleV9jb2RlIjoiaSJ9LCJ0byI6W3sicmVwZWF0Ijp0cnVlLCJrZXlfY29kZSI6ImkiLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiXX1dfSx7InR5cGUiOiJiYXNpYyIsImZyb20iOnsibW9kaWZpZXJzIjp7Im1hbmRhdG9yeSI6WyJsZWZ0X2d1aSIsImxlZnRfYWx0Il19LCJrZXlfY29kZSI6ImsifSwidG8iOlt7InJlcGVhdCI6dHJ1ZSwia2V5X2NvZGUiOiJrIiwibW9kaWZpZXJzIjpbImxlZnRfZ3VpIl19XX1dfV19)
 
@@ -839,7 +839,6 @@ notion_url: "https://www.notion.so/for-mac-tex-shinobi-ANSII-5dc1aa70914641b6992
 >
 > 1. Hammerspoon 설치
 >
-> - 
 > [https://github.com/Hammerspoon/hammerspoon/releases/tag/0.9.97](https://github.com/Hammerspoon/hammerspoon/releases/tag/0.9.97)
 >
 > 2. Hammerspoon Preferences
@@ -851,6 +850,90 @@ notion_url: "https://www.notion.so/for-mac-tex-shinobi-ANSII-5dc1aa70914641b6992
 > - Accessibility is enabled. You're all set!
 > - Enable Accessbility (녹색)
 > 3. Open Config (init.lua)
+>
+> ```c++
+> // 아래 내용을 복사해서 붙여넣기
+>
+> local function keyCode(key, modifiers)
+>
+> modifiers = modifiers or {}
+>
+> return function()
+>
+> hs.eventtap.event.newKeyEvent(modifiers, string.lower(key), true):post()
+>
+> hs.timer.usleep(1000)
+>
+> hs.eventtap.event.newKeyEvent(modifiers, string.lower(key), false):post()
+>
+> end
+>
+> end
+>
+> local function remapKey(modifiers, key, keyCode)
+>
+> hs.hotkey.bind(modifiers, key, keyCode, nil, keyCode)
+>
+> end
+>
+> remapKey({'ctrl'}, 'h', keyCode('left'))
+>
+> remapKey({'ctrl'}, 'j', keyCode('down'))
+>
+> remapKey({'ctrl'}, 'k', keyCode('up'))
+>
+> remapKey({'ctrl'}, 'l', keyCode('right'))
+>
+> remapKey({'ctrl', 'shift'}, 'h', keyCode('left', {'shift'}))
+>
+> remapKey({'ctrl', 'shift'}, 'j', keyCode('down', {'shift'}))
+>
+> remapKey({'ctrl', 'shift'}, 'k', keyCode('up', {'shift'}))
+>
+> remapKey({'ctrl', 'shift'}, 'l', keyCode('right', {'shift'}))
+>
+> remapKey({'ctrl', 'cmd'}, 'h', keyCode('left', {'cmd'}))
+>
+> remapKey({'ctrl', 'cmd'}, 'j', keyCode('down', {'cmd'}))
+>
+> remapKey({'ctrl', 'cmd'}, 'k', keyCode('up', {'cmd'}))
+>
+> remapKey({'ctrl', 'cmd'}, 'l', keyCode('right', {'cmd'}))
+>
+> remapKey({'ctrl', 'shift', 'cmd'}, 'h', keyCode('left', {'shift', 'cmd'}))
+>
+> remapKey({'ctrl', 'shift', 'cmd'}, 'j', keyCode('down', {'shift', 'cmd'}))
+>
+> remapKey({'ctrl', 'shift', 'cmd'}, 'k', keyCode('up', {'shift', 'cmd'}))
+>
+> remapKey({'ctrl', 'shift', 'cmd'}, 'l', keyCode('right', {'shift', 'cmd'}))
+>
+> remapKey({'ctrl', 'alt'}, 'h', keyCode('left', {'alt'}))
+>
+> remapKey({'ctrl', 'alt'}, 'j', keyCode('down', {'alt'}))
+>
+> remapKey({'ctrl', 'alt'}, 'k', keyCode('up', {'alt'}))
+>
+> remapKey({'ctrl', 'alt'}, 'l', keyCode('right', {'alt'}))
+>
+> remapKey({'ctrl', 'shift', 'alt'}, 'h', keyCode('left', {'shift', 'alt'}))
+>
+> remapKey({'ctrl', 'shift', 'alt'}, 'j', keyCode('down', {'shift', 'alt'}))
+>
+> remapKey({'ctrl', 'shift', 'alt'}, 'k', keyCode('up', {'shift', 'alt'}))
+>
+> remapKey({'ctrl', 'shift', 'alt'}, 'l', keyCode('right', {'shift', 'alt'}))
+>
+> remapKey({'ctrl', 'cmd', 'alt'}, 'h', keyCode('left', {'cmd', 'alt'}))
+>
+> remapKey({'ctrl', 'cmd', 'alt'}, 'j', keyCode('down', {'cmd', 'alt'}))
+>
+> remapKey({'ctrl', 'cmd', 'alt'}, 'k', keyCode('up', {'cmd', 'alt'}))
+>
+> remapKey({'ctrl', 'cmd', 'alt'}, 'l', keyCode('right', {'cmd', 'alt'}))
+>
+> // 위 내용을 복사해서 붙여넣기
+> ```
 >
 > 4. Reload Config
 >

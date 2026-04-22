@@ -20,7 +20,7 @@ notion_url: "https://www.notion.so/02-b4b74f0ffe844f619ef21f438c04a435"
 
 # 프리팹 수정 후 오버라이즈 꼭 Apply
 
-![Image](image_815dd7104785.png)
+![Image](image_601ebd34294b.png)
 
 ```c#
 //제네레이터 내부 스크립트 파일에서 특정 초 이상 지나가면 오브젝트를 삭제하는 코드
@@ -33,11 +33,11 @@ Destroy(newpipe,5.0f);
 
 하이어라키에서 우클릭 - UI - Canvas
 
-![Image](image_228683bed393.png)
+![Image](image_6dfe5611d611.png)
 
 
 > 🔥 **Rect Transform?**
-> ![Image](image_893668f30fc4.png)
+> ![Image](image_f3613ccb3516.png)
 >
 > 특정 좌표를 기준점으로 상대적인 위치값을 가지는것. 따라서 각기다른 화면비율에따라 UI 위치가 유동적으로 변함
 >
@@ -81,7 +81,7 @@ public class Score : MonoBehaviour
 
 Prefab 내부에 Empty 생성하여 Box Collider 생성
 
-![Image](image_e892cd4b9386.png)
+![Image](image_7ed12b99a085.png)
 
 Is Trigger를 선택해둬야 콜라이더가 아니라 트리거 설정이되서 물리적 충돌이 생기지 않는다
 
@@ -106,5 +106,5 @@ public class ScoreUp : MonoBehaviour
 
 게임오버 씬 생성하고 UI 캔버스 생성하고 패널 추가하여 백그라운드 추가 후 Image추가해서 사진넣을때 Preserve Aspect 추가해두면 이미지 비율에 맞게 크기 설정 가능
 
-![Image](image_146ae4c72157.png)
+![Image](image_2bea81aba342.png)
 

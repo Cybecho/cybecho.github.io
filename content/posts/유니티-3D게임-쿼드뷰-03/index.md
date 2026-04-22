@@ -19,12 +19,12 @@ notion_url: "https://www.notion.so/3D-03-7ea9930ae7404a2c9055ef447a04cf8a"
 🎥 [동영상 보기](https://youtu.be/u2DLOay5oO8)
 
 > 🔥 **프리팹 만들고 나서 태그를 추가해서 enum으로 지정한 값과 Tag값을 둘 다 설정해줘야합니다 굳이 따지자면 Tag가 더 상위의 개념이 아닐까**
-> ![Image](image_c7829d2037e5.png)
+> ![Image](image_5edd6ddc4281.png)
 >
 >
 
 > 🔥 **프리팹 만들고 나서 꼭 포지션을 000 으로 바꿔주세요**
-> ![Image](image_89a7106fa419.png)
+> ![Image](image_d17864aa0738.png)
 >
 >
 
@@ -35,9 +35,9 @@ notion_url: "https://www.notion.so/3D-03-7ea9930ae7404a2c9055ef447a04cf8a"
 > public GameObject[] Weapons; //player.cs 에 public변수 설정
 > ```
 >
-> ![Image](image_3e1e2590e1c7.png)
+> ![Image](image_4255893c73e2.png)
 >
-> ![Image](image_e9440f65bdcd.png)
+> ![Image](image_40fd717a582f.png)
 >
 >
 

@@ -4,7 +4,7 @@ date: 2023-05-28T00:00:00.000Z
 draft: false
 tags: ["MAC", "shell"]
 series: ["Let's MAC!"]
-description: "MAC 터미널에서 crontab을 사용하여 스케줄링할 때 오류 로그를 특정 디렉토리에 저장하도록 설정하는 방법을 설명합니다. append 모드("
+description: "MAC 터미널에서 crontab을 사용하여 스케줄링할 때 오류 로그를 특정 디렉토리에 저장하도록 설정하는 방법을 설명합니다. append 모드(>>)를 사용하면 로그가 덮어쓰이지 않고 추가되지만, overwrite 모드(>)를 사용하면 기존 로그를 덮어쓰게 되어 로그 파일 크기를 관리할 수 있습니다."
 notion_id: "677c16f2-934e-426b-89fa-328f33fa6e58"
 notion_url: "https://www.notion.so/MAC-crontab-log-677c16f2934e426b89fa328f33fa6e58"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/MAC-crontab-log-677c16f2934e426b89fa328f33fa6
 # MAC crontab 에서 결과물 log로 저장하기
 
 > **Summary**
-> MAC 터미널에서 crontab을 사용하여 스케줄링할 때 오류 로그를 특정 디렉토리에 저장하도록 설정하는 방법을 설명합니다. append 모드(
+> MAC 터미널에서 crontab을 사용하여 스케줄링할 때 오류 로그를 특정 디렉토리에 저장하도록 설정하는 방법을 설명합니다. append 모드(>>)를 사용하면 로그가 덮어쓰이지 않고 추가되지만, overwrite 모드(>)를 사용하면 기존 로그를 덮어쓰게 되어 로그 파일 크기를 관리할 수 있습니다.
 
 ---
 

@@ -4,7 +4,7 @@ date: 2023-12-02T00:00:00.000Z
 draft: false
 tags: ["Arch"]
 series: ["Let's Linux!"]
-description: "To install VSCode on Arch, use the command "
+description: "To install VSCode on Arch, use the command sudo pacman -S code. To remove it, use sudo pacman -R code."
 notion_id: "922331b8-104f-4c8c-b7f9-51fe8be964b1"
 notion_url: "https://www.notion.so/install-VScode-on-Arch-922331b8104f4c8cb7f951fe8be964b1"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/install-VScode-on-Arch-922331b8104f4c8cb7f951
 # install VScode on Arch
 
 > **Summary**
-> To install VSCode on Arch, use the command 
+> To install VSCode on Arch, use the command sudo pacman -S code. To remove it, use sudo pacman -R code.
 
 ---
 

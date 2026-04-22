@@ -4,7 +4,7 @@ date: 2023-09-14T00:00:00.000Z
 draft: false
 tags: ["WINDOWS", "ubuntu"]
 series: ["Don't Hate Windows!"]
-description: "Ubuntu에서 자주 사용하는 명령어를 alias로 설정하는 방법과 zsh 플러그인 설치 방법을 설명합니다. "
+description: "Ubuntu에서 자주 사용하는 명령어를 alias로 설정하는 방법과 zsh 플러그인 설치 방법을 설명합니다. cd ~/../../mnt/c 명령어를 win으로 설정하고, zsh-autosuggestions 및 zsh-syntax-highlighting 플러그인을 설치하여 명령어 자동 완성과 구문 강조 기능을 추가하는 방법을 안내합니다."
 notion_id: "de719076-4d87-414a-9cb2-3ac4dbc73514"
 notion_url: "https://www.notion.so/Windows-WSL2-de7190764d87414a9cb23ac4dbc73514"
 ---
@@ -12,11 +12,11 @@ notion_url: "https://www.notion.so/Windows-WSL2-de7190764d87414a9cb23ac4dbc73514
 # Windows WSL2 명령어 직접 만들어 사용하기
 
 > **Summary**
-> Ubuntu에서 자주 사용하는 명령어를 alias로 설정하는 방법과 zsh 플러그인 설치 방법을 설명합니다. 
+> Ubuntu에서 자주 사용하는 명령어를 alias로 설정하는 방법과 zsh 플러그인 설치 방법을 설명합니다. cd ~/../../mnt/c 명령어를 win으로 설정하고, zsh-autosuggestions 및 zsh-syntax-highlighting 플러그인을 설치하여 명령어 자동 완성과 구문 강조 기능을 추가하는 방법을 안내합니다.
 
 ---
 
-![Image](image_d2c9046e94aa.png)
+![Image](image_5e5184915268.png)
 
 # 단순 명령어 alias 명칭 설정
 

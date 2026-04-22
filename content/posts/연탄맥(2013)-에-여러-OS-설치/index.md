@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/2013-OS-acef8a38d071491f89f2f981070e9b7d"
 
 ---
 
-![Image](image_7c931b389d36.png)
+![Image](image_831ee7a69f5b.png)
 
 # 연탄맥에 윈도우 설치 후 d300 활성화
 
@@ -26,7 +26,7 @@ notion_url: "https://www.notion.so/2013-OS-acef8a38d071491f89f2f981070e9b7d"
 
 🔗 [https://www.amd.com/en/support/kb/release-notes/apple-boot-camp](https://www.amd.com/en/support/kb/release-notes/apple-boot-camp)
 
-![Image](image_bfa7db8f26ae.png)
+![Image](image_ea9ffb98ed4b.png)
 
 
 # 드라이브 날리고 우분투 네이티브 설치

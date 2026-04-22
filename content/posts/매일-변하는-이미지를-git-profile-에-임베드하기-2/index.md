@@ -4,7 +4,7 @@ date: 2023-03-26T00:00:00.000Z
 draft: false
 tags: ["Git", "ubuntu", "Python", "GCP"]
 series: ["진심글쓰기", "Git", "Tips"]
-description: "파이썬을 사용하여 웹사이트에서 이미지 URL을 크롤링하고, 이를 "
+description: "파이썬을 사용하여 웹사이트에서 이미지 URL을 크롤링하고, 이를 README.md 파일에 임베드하는 방법을 설명합니다. Ubuntu에 파이썬과 pip를 설치하는 과정과 beautifulsoup4 라이브러리를 이용한 이미지 크롤링 코드 작성법, 그리고 crontab을 이용한 스케줄링 방법을 다룹니다. 또한, 이미지 URL을 저장할 때 'small'을 'large'로 변경하는 방법도 포함되어 있습니다."
 notion_id: "89a99397-fa52-4970-a8db-c161bfaaa5a9"
 notion_url: "https://www.notion.so/git-profile-2-89a99397fa524970a8dbc161bfaaa5a9"
 ---
@@ -12,7 +12,7 @@ notion_url: "https://www.notion.so/git-profile-2-89a99397fa524970a8dbc161bfaaa5a
 # 매일 변하는 이미지를 git profile 에 임베드하기 2
 
 > **Summary**
-> 파이썬을 사용하여 웹사이트에서 이미지 URL을 크롤링하고, 이를 
+> 파이썬을 사용하여 웹사이트에서 이미지 URL을 크롤링하고, 이를 README.md 파일에 임베드하는 방법을 설명합니다. Ubuntu에 파이썬과 pip를 설치하는 과정과 beautifulsoup4 라이브러리를 이용한 이미지 크롤링 코드 작성법, 그리고 crontab을 이용한 스케줄링 방법을 다룹니다. 또한, 이미지 URL을 저장할 때 'small'을 'large'로 변경하는 방법도 포함되어 있습니다.
 
 ---
 

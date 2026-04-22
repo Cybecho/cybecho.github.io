@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/1-13eab0d8288144948c2a5433567082ca"
 
 ---
 
-![Image](image_44da4ba47193.png)
+![Image](image_8375e17952c2.png)
 
 > 🔥 **강의영상**
 > 🔗 [https://youtu.be/cnhZuV91fXM](https://youtu.be/cnhZuV91fXM)
@@ -70,11 +70,11 @@ print(ts.list_post(page_number),"+++++++++++++++++++++++++++++++ 2 \n\n")
 
 ## 1. 노션 페이지에서 개발자모드 접근
 
-![Image](image_a730b19021a1.png)
+![Image](image_040106bd8a50.png)
 
 ## 2. Application - Cookies로 이동
 
-![Image](image_fad8ab5b4a39.png)
+![Image](image_c261fc3352e3.png)
 
 ```python
 8b04bb8b1c1732ab220f8f76677efebdc1dd3451e175737efee4fded151e2f8bf8d899b3ea7e1ebe6bd8ee363f5d80a587dead1a2d80b3f42b36268b532bb4503c5a7347ad92aacf35dce010dde3
@@ -82,13 +82,13 @@ print(ts.list_post(page_number),"+++++++++++++++++++++++++++++++ 2 \n\n")
 
 ## 3.필터창에 token을 치고 값을 얻어옴
 
-![Image](image_c2de5ad23fa8.png)
+![Image](image_29aca59eee3e.png)
 
 ## 4. Local Storage에서 글이 적힐 PublicSpaceData공간을 할당해준다
 
-![Image](image_599440c36fdd.png)
+![Image](image_9dfe0b533571.png)
 
-![Image](image_0b4557d7ad95.png)
+![Image](image_e84e527e7959.png)
 
 PublicSpaceData를 찾아서 우측에 데이터를 사용할것임
 
@@ -98,7 +98,7 @@ PublicSpaceData를 찾아서 우측에 데이터를 사용할것임
 
 ## 5.근데 선생님.. 노션 횟수 차감 되는디요???
 
-![Image](image_c07b52eb446f.png)
+![Image](image_da8f00cdb1bc.png)
 
 # 티스토리 자동업로드 기본 세팅
 
@@ -106,11 +106,11 @@ PublicSpaceData를 찾아서 우측에 데이터를 사용할것임
 
 여기서 티스토리 API를 신청해야함
 
-![Image](image_53da0722ad88.png)
+![Image](image_3d5747c75b29.png)
 
 서비스 URL과 콜백은 내 블로그 주소로
 
-![Image](image_71e34f188cc3.png)
+![Image](image_73a00cb00db8.png)
 
 키를 받을 수 있음
 
@@ -124,14 +124,14 @@ PublicSpaceData를 찾아서 우측에 데이터를 사용할것임
 https://www.tistory.com/oauth/authorize?client_id=[APPID]&redirect_uri=[SERVICEURL]&response_type=code
 ```
 
-![Image](image_e2cdd76e2574.png)
+![Image](image_0dc01559dfcc.png)
 
-![Image](image_718fb4a422c0.png)
+![Image](image_48f78faeb91f.png)
 
 그럼 이제부터 뒤에 액세스 토큰이 뜸
 
 
-![Image](image_a40b81a4dd3f.png)
+![Image](image_ef110d68f105.png)
 
  네트워크 들어가서 아래 정보를 ‘한줄로’ 넣어준다
 
@@ -144,9 +144,9 @@ code=[Authorize Code]&
 grant_type=authorization_code
 ```
 
-![Image](image_4c41641fce3c.png)
+![Image](image_af6c1c7a81f8.png)
 
-![Image](image_be56d99c0a40.png)
+![Image](image_3a96cb4b0936.png)
 
 발급받은 토큰은 Preview에서 확인이 가능하다
 

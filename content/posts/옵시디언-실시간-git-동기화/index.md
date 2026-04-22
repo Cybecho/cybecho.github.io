@@ -49,6 +49,9 @@ notion_url: "https://www.notion.so/git-a4df124389ff4750ad90c679111dd1d0"
 
 - Obsidian 은 로컬 기반 메모 어플이 기본이라, **동기화**를 하기 위해서는 따로 유료 서비스를 구매해야한다.
 - 문제는.. ***1회성 결제가 아닌, 구독형***이라는 것이다.😔
+> - ~~이건 뭐.. 애플보다 더 도둑놈 같잖아..?~~
+>
+
 - 뭐..? ㅋㅋㅋㅋㅋㅋㅋㅋㅋ 매달 $10 이고, 1년 한번에 결제하면 할인해서 $96 라고..? ㅋㅋㅋㅋ
 나는 이정도의 금액을 주고 사용할만한 여유가 없었다..ㅋㅋㅜㅜㅜ
 
@@ -65,6 +68,9 @@ notion_url: "https://www.notion.so/git-a4df124389ff4750ad90c679111dd1d0"
 ### Obsidian-git 과 iCloud 의 환장할 조합 😡
 
 > 내가 구축하고 싶은 환경
+> - 집에서 사용하는 맥북, 회사에서 사용하는 맥북, 아이패드, 아이폰이 같은 `Obsidian Vault` 를 사용하고, 실시간 동기화를 통해 문서를 편집하고 조회한다.
+> - `Obsidian-git` 을 통해 내 개인 `Github` 계정에 문서들을 실시간으로 백업 시키고, 불러온다.
+>
 
 ### Obsidian Sync 의 대체인 iCloud
 
@@ -93,9 +99,22 @@ notion_url: "https://www.notion.so/git-a4df124389ff4750ad90c679111dd1d0"
 ### Working Copy - Git client
 
 - 이 어플리케이션은 아이폰과 아이패드에서 `Github Repository` 를 관리할 수 있는 어플이다.(더 자세히는 형상관리 저장소를 불러올 수 있다. `Bitbucket, Gitlab` 도 모두 사용가능하다.)
+> - 이 녀석을 통해 `Obsidian` 의 문서들을 동기화 시킬 것이다.
+>
+
 ## 🔑 3. 따라하세요! 실시간 동기화, 안정성 둘다 해결 🎉
 
 > 전체적인 플로우 🤖
+> 1. 모바일 기기 (아이패드, 아이폰) 에 `Working Copy` 를 설치한다.
+> 1. 본인 Github 계정에서 `Private Repository` 를 생성한다. (공개하고 싶은 Obsidian Vault 라면 Public 으로해도 무관)
+> 1. 생성된 Repository 를 로컬 PC 에 연동시키고, 로컬 디렉토리에 (문서를 이미 작성했다면) 문서를 옮기고, commit, push 해준다.
+> 1. PC 에서는 `Obsidian-git` 플러그인으로 자동 push, pull 이 되어 연동이 된다.
+> 1. `Working Copy` 를 실행하고, 2.에서 생성했던 Repository 를 clone 한다.
+> 1. Obsidian 에서 모바일 로컬 vault 를 생성한다.
+> 1. `Working Copy` 를 통해 5. 에서 clone 했던 Repository 를 6.에서 생성한 로컬 vault 와 링크시킨다.
+> 1. 모바일 환경에서 `Working Copy` 를 통해 직접 git pull 를 진행해준다.
+> 1. 모바일 환경에서 `Working Copy` 를 통해 직접 git commit, push 을 진행해준다.
+>
 
 위의 단계가 전체적인 환경 구축 시나리오다.
 
@@ -104,22 +123,109 @@ notion_url: "https://www.notion.so/git-a4df124389ff4750ad90c679111dd1d0"
 더군다나, Git 이라는 형상관리 환경에 익숙한 개발자라면 더더욱 손쉽고 이해가 잘될것이다.
 
 > 1. 모바일 기기 (아이패드, 아이폰) 에 Working Copy 를 설치한다.
+> - 설치하세욧 !!🍎
+>
 
 > 2. 본인 Github 계정에서 Private Repository 를 생성한다.
+> ![Image](image_f16ba875bdd9.png)
+>
+> - Obsidian 문서 전용 Github Repository
+> - Private 으로 해놓아서 나만 조회가 가능하다.
+>
 
 > 3. 생성된 Repository 를 로컬 PC 에 연동시키고, 로컬 디렉토리에 (문서를 이미 작성했다면) 문서를 옮기고, commit, push 해준다.
+> ![Image](image_21154f954100.png)
+>
+> - 나는 바탕화면 (Desktop) 에 Obsidian 이라는 폴더를 만들었고, 거기에 2.에서 생성한 repository 를 clone 하여 로컬과 연동했다.
+>
 
 > 4. PC 에서는 Obsidian-git 플러그인으로 자동 push, pull 이 되어 연동이 된다.
+> ![Image](image_921fe4c3e46d.png)
+>
+> - 로컬 PC와 Github Repository 가 잘 연동되었다면, Obsidian-git 설치후 해줄 설정은 두가지 밖에 없다.
+> - **Vault backup interval** 설정 : 몇분 간격으로 commit, push 를 할 것인지에 대한 설정이다. 나는 10분으로 했다.
+> - **Auto pull interval** : 몇분 간격으로 pull 할것인지에 대한 설정이다. 나는 1분으로 했다. (실시간 동기화를 위해)
+> - 10분마다 변화를 감지하여 Github Repository 로 push하고, 1분 간격으로 Repository 에서 계속 pull 해온다. 즉, 실시간으로 동기화를 시도한다.
+>
 
 > 5. Working Copy 를 실행하고, 2.에서 생성했던 Repository 를 clone 한다.
+> ![Image](image_78fe822dadd5.png)
+>
+> - `Clone repository` 클릭
+> - 나는 이미 Clone을 해놓아서, 좌측에 Documents 라는 Repository 가 이미 생성된것을 확인할 수 있다.
+> ![Image](image_5a0d893263c8.png)
+>
+> - 나는 이미 로그인을 해서 바로 Repository 가 뜨지만, 처음 Clone 을 하려면 로그인을 해야한다.
+> ![Image](image_dd44d27cc4a3.png)
+>
+> - https 를 선택하고, 우측 상단에 clone 클릭 !
+>
 
 > 6. Obsidian 에서 모바일 로컬 vault 를 생성한다.
+> ![Image](image_6cdef861d600.png)
+>
+> - Create new vault 클릭
+> ![Image](image_d2ef0fcdb2cb.png)
+>
+> - 🚨 무조건 Store in iCloud 는 비활성화 해아한다.
+>
 
 > 7. Working Copy 를 통해 5. 에서 clone 했던 Repository 를 6.에서 생성한 로컬 vault 와 링크시킨다.
+> ![Image](image_ccb2b9a2c3a2.png)
+>
+> - 여기서 `Directory` 클릭
+> ![Image](image_e316cdb204cc.png)
+>
+> - 나의 iPad -> Obsidian 클릭
+> ![Image](image_412d1c58e11d.png)
+>
+> - 에서 생성했던 모바일 로컬 vault 를 클릭하고, 우측 상단의 열기를 클릭한다.
+> ![Image](image_fa072fe85cea.png)
+>
+> - 위의 과정을 통해, `Working Copy` 에서 Clone 한 Github Repository 와, 내 모바일 내부의 폴더가 Git으로 연결이 된것이다.
+>
 
 > 8. 모바일 환경에서 Working Copy 를 통해 직접 git pull 을 진행해준다.
+> ![Image](image_f4ecd5bb9d4a.png)
+>
+> - PC Obsidian 에서 문서가 수정되었고, Obsidian-git 을 통해 자동으로 push 된 것을, iPad 에서 Working Copy 를 통해 pull을 한 상황.
+> - 정상적으로 pull 이 진행된 것을 알 수 있다.
+>
 
 > 9. 모바일 환경에서 Working Copy 를 통해 직접 git commit, push 을 진행해준다.
+> ![Image](image_11a2b8ec5d38.png)
+>
+> - iPad 에서 글을 수정해본다.
+> ![Image](image_ba764763f002.png)
+>
+> - `Working Copy` 를 통해 commit 을 진행한다.
+> - 빨간 네모를 보면 해당 Repository 가 commit 할 file 이 있다고 알려준다.
+> - 파란네모는 Git 명령을 수행할 수 있다. 말풍선 같은 모양이 commit 버튼이다. 클릭하자.
+> ![Image](image_b069a87bc4e2.png)
+>
+> - commit 할 파일을 아래에서 체크해준다.
+> - commit 메세지를 작성하고 우측 Commit 을 누르면 commit 이 진행된다.
+> - 나는 push도 한번에 하기위해 push 버튼을 활성화 했다.
+> ![Image](image_5128014c4a3a.png)
+>
+> - 성공적으로 commit 과 push가 이루어진것을 확인할 수 있다.
+> - 아래에 보이는 Commits Today 를 통해 정상적으로 잘 된것을 확인할 수 있다.
+> ![Image](image_9a40087d71fd.png)
+>
+> - `Working Copy` 는 Repository 의 커밋 히스토리도 조회 가능하다.
+> ![Image](image_9ca4c82aaf92.png)
+>
+> - 방금 push 한 커밋 메세지를 클릭하면, 어떤 파일이 변경되었는지 확인 가능하다.
+> - Git 으로 할 수 있는 대부분의 명령을 제공해주고 있다.
+> ![Image](image_3e1e052de76a.png)
+>
+> - 실제로 PC 에서 확인해보아도 동일하게 잘 push 가 된것을 확인 할 수 있다.
+> ![Image](image_260d1cd43d23.png)
+>
+> - PC Obsidian 은 Obsidian-git 을 통해 자동으로 pull 받아와서 동기화를 한다.
+> - 파란 네모를 통해, iPad로 작성한 파일이 잘 반영된걸 확인가능하다.
+> - 우측 빨간 네모를 통해, 방금 pull 받은 파일이 무엇인지 확인 가능하다.
+>
 
 ### 🚨 제한 사항
 
@@ -132,6 +238,11 @@ notion_url: "https://www.notion.so/git-a4df124389ff4750ad90c679111dd1d0"
 > 만약, 문서의 수정을 PC 에서 주로 하고, 모바일로는 일정 체크나, 문서 확인만 주로 한다면 무료로 충분히 이용할 수 있다. 🍭모바일로 문서 수정을 해야할 일이 많다면, 유료 결제를 해야하는데 이게 또 생각보다 저렴하다.구독형이 아닌, 평생 1번 결제이며 단돈 3만원!! Obsidian-sync 보다 훨씬 저렴하다.
 
 > 물론, 모바일에서는 직접 pull 을 받아야하고, 문서를 작성 후에 commit 과 push 를 해야한다지만..
+> ***개발자인 내 입장에서는 소스코드를 관리하는 것처럼 문서를 관리한다고 생각하니 불편함을 느낄 것이 없었다.*** 🎉
+>
+> 게다가, Working Copy 가 Obsidian 에 종속적인 녀석이 아니다보니, 다른 방법으로도 또 사용할 길이 많아서 일석이조였다.
+>
+>
 
 ## 🍭 결론 : 행복한 Obsidian 생태계 구현 🍉
 

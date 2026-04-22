@@ -117,9 +117,9 @@ notion_url: "https://www.notion.so/12-39b7bec2674b4ad5aa6683c7f02e326c"
 >
 
 > 🔥 **애니메이션에서 이벤트를 추가하여 스크립트를 추가해봅시다**
-> ![Image](image_0a320ec02531.png)
+> ![Image](image_7de16a463cd5.png)
 >
-> ![Image](image_72dc14067076.png)
+> ![Image](image_6d66f7d82d04.png)
 >
 > 애니메이션이 포함되어있는 Prefab으로 이동하면 그 프리팹 내부에 컴포넌트에 저장된 스크립트속에있는 함수를 불러올 수 있습니다
 >
@@ -147,7 +147,7 @@ notion_url: "https://www.notion.so/12-39b7bec2674b4ad5aa6683c7f02e326c"
 >     public Player player;
 > ```
 >
-> ![Image](image_f89c5f165dbe.png)
+> ![Image](image_5fbecc02d020.png)
 >
 >
 
