@@ -1,13 +1,29 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<html lang="ko">
 
 <head>
+    {{/* 설명 폴백: 글 설명 → 페이지 요약 → 사이트 부제 */}}
+    {{- $desc := .Site.Params.subtitle -}}
+    {{- if .Description -}}
+        {{- $desc = .Description -}}
+    {{- else if and (not .IsHome) .IsPage -}}
+        {{- $desc = .Summary | plainify | strings.Chomp | truncate 160 -}}
+    {{- end -}}
+    {{/* 대표 이미지: featured_image → 작가 아바타 폴백 */}}
+    {{- $img := "" -}}
+    {{- if .Params.featured_image -}}
+        {{- $img = .Params.featured_image | absURL -}}
+    {{- else -}}
+        {{- if .Site.Params.author.avatar -}}
+            {{- $img = .Site.Params.author.avatar | absURL -}}
+        {{- end -}}
+    {{- end -}}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
+    <meta name="description" content="{{ $desc }}">
     <meta name="author" content="{{ .Site.Params.author.name }}">
     <meta name="keywords" content="{{ if .Params.tags }}{{ delimit .Params.tags ", " }}{{ else if .Site.Params.keywords }}{{ delimit .Site.Params.keywords ", " }}{{ else }}프로그래밍, 개발, 기술블로그, Hugo, GitHub{{ end }}">
     <meta name="robots" content="index, follow">
@@ -15,34 +31,34 @@
 
     <!-- Schema.org for Google -->
     <meta itemprop="name" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-    <meta itemprop="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
-    {{ if .Params.featured_image }}
-    <meta itemprop="image" content="{{ .Params.featured_image | absURL }}">{{ end }}
+    <meta itemprop="description" content="{{ $desc }}">
+    {{ with $img }}
+    <meta itemprop="image" content="{{ . }}">{{ end }}
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
     <meta property="og:description"
-        content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
-    <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+        content="{{ $desc }}">
+    <meta property="og:type" content="{{ if .IsHome }}website{{ else if .IsPage }}article{{ else }}website{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:locale" content="ko_KR">
-    {{ if .Params.featured_image }}
-    <meta property="og:image" content="{{ .Params.featured_image | absURL }}">{{ end }}
+    {{ with $img }}
+    <meta property="og:image" content="{{ . }}">{{ end }}
     {{ if .Date }}
-    <meta property="article:published_time" content="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" }}">{{ end }}
+    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
     {{ if .Lastmod }}
-    <meta property="article:modified_time" content="{{ .Lastmod.Format " 2006-01-02T15:04:05Z07:00" }}">{{ end }}
+    <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
     {{ with .Params.tags }}{{ range . }}
     <meta property="article:tag" content="{{ . }}">{{ end }}{{ end }}
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="{{ if $img }}summary_large_image{{ else }}summary{{ end }}">
     <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
     <meta name="twitter:description"
-        content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}">
-    {{ if .Params.featured_image }}
-    <meta name="twitter:image" content="{{ .Params.featured_image | absURL }}">{{ end }}
+        content="{{ $desc }}">
+    {{ with $img }}
+    <meta name="twitter:image" content="{{ . }}">{{ end }}
 
     <!-- Favicon -->
     <link rel="icon" type="image/gif" href="https://minecraft.wiki/images/Enchanted_Stone_Shovel.gif?33e82">
@@ -69,8 +85,12 @@
     "@type": "{{ if .IsHome }}WebSite{{ else }}{{ if eq .Type "posts" }}BlogPosting{{ else }}WebPage{{ end }}{{ end }}",
     "name": "{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}",
     "headline": "{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}",
-    "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.subtitle }}{{ end }}",
+    "description": "{{ $desc }}",
     "url": "{{ .Permalink }}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ .Permalink }}"
+    },
     {{ if .IsHome }}
     "potentialAction": {
       "@type": "SearchAction",
@@ -94,8 +114,8 @@
     },
     "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
     "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
-    {{ if .Params.featured_image }}
-    "image": "{{ .Params.featured_image | absURL }}",
+    {{ with $img }}
+    "image": "{{ . }}",
     {{ end }}
     {{ if .Params.tags }}
     "keywords": [{{ range $i, $tag := .Params.tags }}{{ if $i }}, {{ end }}"{{ $tag }}"{{ end }}],
