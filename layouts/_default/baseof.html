@@ -91,13 +91,6 @@
       "@type": "WebPage",
       "@id": "{{ .Permalink }}"
     },
-    {{ if .IsHome }}
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "{{ .Site.BaseURL }}search/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    },
-    {{ end }}
     {{ if eq .Type "posts" }}
     "author": {
       "@type": "Person",
