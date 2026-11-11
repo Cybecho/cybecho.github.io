@@ -92,3 +92,10 @@ test('cache order is stable when database result order changes',async t=>{
  const f=fixture(t);const pages=[page(),page(ID2)];const args={...f,notion:client(pages),databaseId:'db',renderer,logger};await syncNotionDatabase(args);const before=fs.readFileSync(path.join(f.root,'.notion_cache_git.json'),'utf8');
  await syncNotionDatabase({...args,notion:client([...pages].reverse())});assert.equal(fs.readFileSync(path.join(f.root,'.notion_cache_git.json'),'utf8'),before);
 });
+test('error diagnostics identify content guard without exposing source text or URLs',()=>{
+ const {errorDiagnostic}=require('../scripts/sync-notion');
+ const info=errorDiagnostic(new Error(`Refusing to replace nonempty article with empty body: ${ID}`));
+ assert.equal(info.reason,'EMPTY_BODY_GUARD');assert.equal(info.page_id,ID);
+ const hidden=JSON.stringify(errorDiagnostic(new Error('private source text https://example.com/?secret=abc')));
+ assert(!hidden.includes('private source text'));assert(!hidden.includes('secret=abc'));
+});

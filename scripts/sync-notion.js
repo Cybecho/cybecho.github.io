@@ -231,10 +231,33 @@ async function main() {
   await syncNotionDatabase({ notion, databaseId: process.env.DATABASE_ID });
 }
 
+function errorDiagnostic(error) {
+  const reasons = [
+    ['Refusing to replace nonempty article with empty body:', 'EMPTY_BODY_GUARD'],
+    ['New article path collision:', 'PATH_COLLISION'],
+    ['Planned article path collision:', 'PATH_COLLISION'],
+    ['Invalid date for page', 'INVALID_DATE'],
+    ['Invalid rendered body for page', 'INVALID_BODY'],
+    ['Invalid database', 'INVALID_DATABASE_RESPONSE'],
+    ['Missing publication status', 'INVALID_STATUS'],
+    ['Image download HTTP', 'IMAGE_HTTP_ERROR'],
+    ['Image exceeds size limit', 'IMAGE_TOO_LARGE'],
+    ['Empty image response', 'EMPTY_IMAGE'],
+    ['Image redirect', 'IMAGE_REDIRECT_ERROR'],
+  ];
+  const message = String(error.message || '');
+  const reason = reasons.find(([prefix]) => message.startsWith(prefix))?.[1] || 'SYNC_ERROR';
+  const pageId = message.match(/\b[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}\b/i)?.[0];
+  // Only static classification, UUID and code locations; never response bodies,
+  // source text, signed URLs or authentication values.
+  const frames = String(error.stack || '').split('\n').filter(line => /^\s+at /.test(line)).slice(0, 4);
+  return { reason, ...(pageId ? { page_id: pageId } : {}), frames };
+}
+
 if (require.main === module) main().catch(error => {
   // Do not serialize API responses: they may contain private workspace data.
-  console.error('Notion sync failed; deployment stopped:', error.code || error.name || 'Error');
+  console.error('Notion sync failed; deployment stopped:', error.code || error.name || 'Error', JSON.stringify(errorDiagnostic(error)));
   process.exitCode = 1;
 });
 
-module.exports = { syncNotionDatabase, getAllPages, statusOf, managedPosts, createSlug, renderPost, unpublish, main };
+module.exports = { syncNotionDatabase, getAllPages, statusOf, managedPosts, createSlug, renderPost, unpublish, main, errorDiagnostic };
