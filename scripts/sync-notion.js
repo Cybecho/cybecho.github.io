@@ -211,7 +211,8 @@ async function syncNotionDatabase({ notion, databaseId, root = process.cwd(), re
       updated++;
     }
     for (const change of changes) atomicWrite(change.file, change.source ? fs.readFileSync(change.source) : change.bytes);
-    const serialized = JSON.stringify(nextCache, null, 2) + '\n';
+    const stableCache = Object.fromEntries(Object.entries(nextCache).sort(([a], [b]) => a.localeCompare(b)));
+    const serialized = JSON.stringify(stableCache, null, 2) + '\n';
     const cachePath = path.join(root, CACHE_FILE);
     const existingCache = fs.existsSync(cachePath) ? fs.readFileSync(cachePath, 'utf8') : '';
     if (serialized !== existingCache) atomicWrite(cachePath, serialized);

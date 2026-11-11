@@ -64,3 +64,18 @@ test('query rejects duplicate IDs, malformed status and repeated pagination curs
  await assert.rejects(getAllPages(client([{id:ID,properties:{}}]),'db'),/status/);
  let n=0;const notion=client([]);notion.databases.query=async()=>({results:n++?[]:[page()],has_more:true,next_cursor:'same'});await assert.rejects(getAllPages(notion,'db'),/pagination/);
 });
+test('confirmed empty legacy placeholder is not treated as real source content',async t=>{
+ const f=fixture(t);fs.writeFileSync(f.file,`---\ndraft: false\nnotion_id: "${ID}"\n---\n\n# Title\n\n> **Summary**\n> Summary text\n\n---\n\n*이 글은 Notion에서 가져왔습니다.*\n\n[원본 보기](https://www.notion.so/example)\n`);
+ fs.writeFileSync(path.join(f.root,'.notion_cache_git.json'),JSON.stringify({[ID]:{slug:'old-slug',has_content:false}}));
+ await syncNotionDatabase({...f,notion:client([page()]),databaseId:'db',renderer:{convertBlocks:async()=>''},logger});
+ assert.doesNotMatch(fs.readFileSync(f.file,'utf8'),/원본 보기/);
+});
+test('repaired zero-byte assets are applied from staging',async t=>{
+ const f=fixture(t);const asset=path.join(path.dirname(f.file),'image_abcdefabcdef.png');fs.writeFileSync(asset,'');
+ await syncNotionDatabase({...f,notion:client([page()]),databaseId:'db',renderer:{convertBlocks:async(id,dir)=>{fs.writeFileSync(path.join(dir,'image_abcdefabcdef.png'),'repaired bytes');return '![image](image_abcdefabcdef.png)';}},logger});
+ assert.equal(fs.readFileSync(asset,'utf8'),'repaired bytes');
+});
+test('cache order is stable when database result order changes',async t=>{
+ const f=fixture(t);const pages=[page(),page(ID2)];const args={...f,notion:client(pages),databaseId:'db',renderer,logger};await syncNotionDatabase(args);const before=fs.readFileSync(path.join(f.root,'.notion_cache_git.json'),'utf8');
+ await syncNotionDatabase({...args,notion:client([...pages].reverse())});assert.equal(fs.readFileSync(path.join(f.root,'.notion_cache_git.json'),'utf8'),before);
+});

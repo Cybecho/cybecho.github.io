@@ -16,11 +16,11 @@ Notion signing parameters no longer change image identity. Only known Notion S3 
 
 Repository images are never removed by the optimization. After Hugo renders, `prepare-build.js` can omit only generated `image_<hash>` files that are byte-identical to another file in the same bundle, are not referenced anywhere in the scanned source or rendered output, and leave at least one copy. Article references, encoded references and cross-article references are preserved conservatively. Old unreferenced duplicate image URLs may stop being served; original bytes remain in Git. This is not general garbage collection.
 
-The initial local production build had 1,981,544,280 bytes. Its audit found 2,824 unreferenced duplicate output assets totaling 1,050,200,876 bytes. CI refuses output at or above 1,000,000,000 bytes. Recheck size as new posts accumulate; do not delete unique originals to make the check pass.
+The initial local production build had 1,981,544,280 bytes. Its audit found 2,824 unreferenced duplicate output assets totaling 1,050,200,876 bytes. After preserving Hugo-computed modification dates, the output is 931,343,711 bytes. All 644 sitemap URLs and their modification dates match the original build, and all 1,083 internal image references resolve. CI refuses output at or above 1,000,000,000 bytes. Recheck size as new posts accumulate; do not delete unique originals to make the check pass.
 
 ## Verification and recovery
 
-Run `npm ci` and `npm test`. Production uses Node 20 and Hugo extended 0.169.0, pinned to the previously successful build. A local build without Notion secrets verifies committed content only:
+Run `npm ci` and `npm test` (32 regression tests at stabilization). Staging captures Hugo-computed GitInfo dates before copying content, so source-relative metadata is preserved without changing source front matter. Production uses Node 20 and Hugo extended 0.169.0, pinned to the previously successful build. A local build without Notion secrets verifies committed content only:
 
 ```
 node scripts/prepare-build.js stage content /tmp/hugo-content-fresh

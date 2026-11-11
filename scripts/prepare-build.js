@@ -4,6 +4,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
+const os = require('node:os');
+const { execFileSync } = require('node:child_process');
 const { convertImagePaths } = require('./convert-archive-images-for-build');
 const IMAGE = /\.(?:png|jpe?g|gif|webp|avif|ico|bmp|tiff?)$/i;
 const GENERATED_IMAGE = /^image_[a-f0-9]{12,64}\.(?:png|jpe?g|gif|webp|avif)$/i;
@@ -26,7 +28,49 @@ function filesUnder(root) {
   return files;
 }
 
-function prepareContent(source, destination) {
+function gitLastmod(source) {
+  let root;
+  try { root = execFileSync('git', ['-C', source, 'rev-parse', '--show-toplevel'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim(); }
+  catch { return new Map(); }
+  const configPath = path.join(root, 'hugo.toml');
+  const configured = fs.existsSync(configPath) && /^enableGitInfo\s*=\s*true\s*(?:#.*)?$/mi.test(fs.readFileSync(configPath, 'utf8'));
+  const enabled = process.env.HUGO_ENABLEGITINFO === undefined ? configured : process.env.HUGO_ENABLEGITINFO.toLowerCase() === 'true';
+  if (!enabled) return new Map();
+  // Ask Hugo itself: GitInfo availability/precedence can differ from `git log`
+  // (notably quoted Unicode paths). Never infer dates from checkout timestamps.
+  const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'hugo-metadata-'));
+  try {
+    const layouts = path.join(temporary, 'layouts');
+    fs.mkdirSync(layouts);
+    fs.writeFileSync(path.join(layouts, 'index.json'), '{{- $pages := slice -}}{{- range site.AllPages -}}{{- if and .File .GitInfo -}}{{- $pages = $pages | append (dict "file" .File.Path "lastmod" .Lastmod) -}}{{- end -}}{{- end -}}{{- $pages | jsonify -}}');
+    const config = path.join(temporary, 'metadata.json');
+    fs.writeFileSync(config, JSON.stringify({ layoutDir: layouts, staticDir: [],
+      ignoreFiles: ['\\.(png|jpg|jpeg|gif|webp|avif|svg|woff|woff2|ttf|eot)$'],
+      outputs: { home: ['JSON'], page: [], section: [], taxonomy: [], term: [] } }));
+    const output = path.join(temporary, 'output');
+    execFileSync(process.env.HUGO_BINARY || 'hugo', ['--source', root, '--contentDir', source,
+      '--config', `${configPath},${config}`, '--destination', output,
+      '--buildFuture', '--buildDrafts', '--buildExpired'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'], maxBuffer: 10 * 1024 * 1024 });
+    const metadata = JSON.parse(fs.readFileSync(path.join(output, 'index.json'), 'utf8'));
+    if (!Array.isArray(metadata)) throw new Error('Invalid Hugo metadata snapshot');
+    return new Map(metadata.map(item => {
+      const file = path.resolve(source, item.file);
+      if (!file.startsWith(source + path.sep)) throw new Error('Invalid Hugo metadata path');
+      return [file, item.lastmod];
+    }));
+  } finally { fs.rmSync(temporary, { recursive: true, force: true }); }
+}
+
+function preserveLastmod(text, date) {
+  if (!date) return text;
+  if (!Number.isFinite(Date.parse(date))) throw new Error('Invalid Git lastmod date');
+  const header = text.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
+  if (!header) throw new Error('Cannot preserve GitInfo for unsupported front matter');
+  if (/^lastmod\s*:/mi.test(header[1])) return text;
+  return text.replace(/^---\r?\n/, `---\nlastmod: ${JSON.stringify(date)}\n`);
+}
+
+function prepareContent(source, destination, { lastmodDates } = {}) {
   source = path.resolve(source);
   destination = path.resolve(destination);
   if (destination === source || destination.startsWith(source + path.sep) || source.startsWith(destination + path.sep)) {
@@ -35,6 +79,7 @@ function prepareContent(source, destination) {
   // Require a fresh destination so this command cannot erase an unrelated directory.
   if (fs.existsSync(destination)) throw new Error('Build staging directory must not already exist');
   const files = filesUnder(source);
+  const dates = lastmodDates || gitLastmod(source, files);
   const privateBundles = files.filter(file => path.basename(file) === 'index.md').filter(file => {
     const text = fs.readFileSync(file, 'utf8');
     const header = text.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/)?.[1] || '';
@@ -50,8 +95,10 @@ function prepareContent(source, destination) {
     const relative = path.relative(source, file);
     const output = path.join(destination, relative);
     fs.mkdirSync(path.dirname(output), { recursive: true });
-    if (relative.startsWith('archives' + path.sep) && relative.endsWith('.md')) {
-      fs.writeFileSync(output, convertImagePaths(fs.readFileSync(file, 'utf8')));
+    if (relative.endsWith('.md')) {
+      let text = preserveLastmod(fs.readFileSync(file, 'utf8'), dates.get(file));
+      if (relative.startsWith('archives' + path.sep)) text = convertImagePaths(text);
+      fs.writeFileSync(output, text);
     } else {
       fs.copyFileSync(file, output, fs.constants.COPYFILE_FICLONE);
     }
@@ -127,4 +174,4 @@ async function main() {
   } else throw new Error('Usage: prepare-build.js stage SOURCE DEST | audit PUBLIC [SOURCE_ROOT ...] | compact PUBLIC [SOURCE_ROOT ...]');
 }
 if (require.main === module) main().catch(error => { console.error(error.message); process.exitCode = 1; });
-module.exports = { prepareContent, auditDuplicates, compactOutput };
+module.exports = { prepareContent, preserveLastmod, gitLastmod, auditDuplicates, compactOutput };

@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
-const { prepareContent, compactOutput } = require('../scripts/prepare-build');
+const { prepareContent, preserveLastmod, compactOutput } = require('../scripts/prepare-build');
 function fixture(t) { const root = fs.mkdtempSync(path.join(os.tmpdir(), 'build-test-')); t.after(() => fs.rmSync(root, { recursive: true, force: true })); return root; }
 function write(root, name, text) { const file = path.join(root, name); fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, text); return file; }
 const a = 'image_111111111111.png', b = 'image_222222222222.png', c = 'image_333333333333.png';
@@ -66,4 +66,18 @@ test('managed unpublished bundles and resources never enter build staging', t =>
   assert(fs.existsSync(path.join(source, 'posts/private/' + a)));
   assert(fs.existsSync(path.join(destination, 'posts/public/index.md')));
   assert(fs.existsSync(path.join(destination, 'posts/manual/index.md')));
+});
+
+test('build-only lastmod preserves GitInfo while explicit dates and source stay unchanged', t => {
+  const root = fixture(t), source = path.join(root, 'content'), destination = path.join(root, 'staged');
+  const original = '---\ntitle: Example\ndate: 2020-01-01\n---\nBody';
+  const file = write(source, 'posts/post/index.md', original);
+  const date = '2026-11-10T09:08:03Z';
+  prepareContent(source, destination, { lastmodDates: new Map([[file, date]]) });
+  assert.equal(fs.readFileSync(file, 'utf8'), original);
+  assert.match(fs.readFileSync(path.join(destination, 'posts/post/index.md'), 'utf8'), /lastmod: "2026-11-10T09:08:03Z"/);
+  const explicit = original.replace('title:', 'lastmod: 2021-01-01\ntitle:');
+  assert.equal(preserveLastmod(explicit, date), explicit);
+  assert.equal(preserveLastmod(original, undefined), original);
+  assert.throws(() => preserveLastmod(original, 'bad date'), /Invalid/);
 });
