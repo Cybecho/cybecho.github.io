@@ -141,37 +141,39 @@ async function syncNotionDatabase({ notion, databaseId, root = process.cwd(), re
   const cache = readCache(root);
   const managed = managedPosts(root);
   const pages = await getAllPages(notion, databaseId);
-  const byId = new Map(pages.map(p => [idKey(p.id), p]));
-  // Missing pages may have been archived, moved or made inaccessible. Confirm
-  // explicitly; a 403/404 is NOT proof of deletion and blocks deployment.
+  const ids = new Set(pages.map(page => idKey(page.id)));
+  const entries = pages.map(page => ({ page, publicationStatus: statusOf(page) }));
+  // Publication is an allowlist: only Published pages in the complete current
+  // database snapshot may be public. Absence is NOT proof of Draft/deletion.
+  // Keep missing source material recoverable, label its state unverified, and
+  // exclude it from output without attempting to bypass integration access.
   for (const [key, posts] of managed) {
-    if (byId.has(key)) continue;
-    const page = await notion.pages.retrieve({ page_id: posts[0].id });
-    if (!page || idKey(page.id) !== key) throw new Error('Mismatched retrieved page ID');
-    statusOf(page);
-    if (statusOf(page) === 'Published') throw new Error(`Published page missing from database snapshot: ${page.id}`);
-    byId.set(key, page);
+    if (!ids.has(key)) entries.push({ page: { id: posts[0].id }, publicationStatus: null });
   }
   const stage = fs.mkdtempSync(path.join(os.tmpdir(), 'notion-sync-'));
   const changes = [];
   const plannedOwners = new Map();
   const nextCache = {};
   const render = renderer || createRenderer(notion);
-  let updated = 0, skipped = 0, unpublished = 0;
+  let updated = 0, skipped = 0, unpublished = 0, unverified = 0;
   try {
     // Render every changed article successfully before replacing any source.
-    for (const [key, page] of byId) {
+    for (const { page, publicationStatus } of entries) {
+      const key = idKey(page.id);
       const posts = managed.get(key) || [];
       const oldCacheKey = Object.keys(cache).find(id => idKey(id) === key);
       const previous = cache[oldCacheKey] || {};
       const canonical = posts.find(p => p.slug === previous.slug) || posts[0];
-      if (statusOf(page) !== 'Published') {
+      if (publicationStatus !== 'Published') {
         for (const post of posts) {
           const text = unpublish(post.text);
           if (text !== post.text) changes.push({ file: post.file, bytes: text });
         }
         if (posts.length) {
-          nextCache[page.id] = { ...previous, slug: canonical.slug, status: 'unpublished' };
+          nextCache[page.id] = { ...previous, slug: canonical.slug,
+            status: publicationStatus === null ? 'unverified' : 'unpublished',
+            source_status: publicationStatus };
+          if (publicationStatus === null) unverified++;
           unpublished += posts.filter(p => !/^draft:\s*true\s*$/m.test(frontMatter(p.text))).length;
         }
         continue;
@@ -216,7 +218,7 @@ async function syncNotionDatabase({ notion, databaseId, root = process.cwd(), re
     const cachePath = path.join(root, CACHE_FILE);
     const existingCache = fs.existsSync(cachePath) ? fs.readFileSync(cachePath, 'utf8') : '';
     if (serialized !== existingCache) atomicWrite(cachePath, serialized);
-    const result = { published: pages.filter(p => statusOf(p) === 'Published').length, updated, skipped, unpublished };
+    const result = { published: pages.filter(p => statusOf(p) === 'Published').length, updated, skipped, unpublished, unverified };
     logger.log('Notion sync complete:', JSON.stringify(result));
     return result;
   } finally { fs.rmSync(stage, { recursive: true, force: true }); }
