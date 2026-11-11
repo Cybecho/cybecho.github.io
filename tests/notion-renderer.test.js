@@ -118,3 +118,26 @@ test('document responses report only safe host metadata and never replace valid 
  await assert.rejects(downloadImage(url,dest),error=>error.code==='IMAGE_NOT_IMAGE'&&error.asset_host==='127.0.0.1'&&!error.message.includes('secret')&&!error.message.includes('private'));
  assert.equal(fs.readFileSync(dest,'utf8'),'existing');assert.deepEqual(fs.readdirSync(root),['image.png']);
 });
+
+test('failed stable external image preserves exact target with structured warning',async t=>{
+ const dir=temp(t);const warnings=[];const url='https://img.etnews.com/2020/image.jpg';
+ const notion=client(async()=>response([{id:'11111111-1111-4111-8111-111111111111',type:'image',image:{type:'external',external:{url}}}]));
+ const renderer=createRenderer(notion,{downloadImage:async()=>{const error=new Error('Private endpoint diagnostic https://secret.invalid/?token=x');error.code='ABORT_ERR';throw error;},onAssetWarning:warning=>warnings.push(warning),delayMs:0});
+ assert.equal(await renderer.convertBlocks('page',dir),`![Image](<${url}>)\n\n`);
+ assert.deepEqual(warnings,[{host:'img.etnews.com',code:'ABORT_ERR',block_id:'11111111-1111-4111-8111-111111111111'}]);
+ assert(!JSON.stringify(warnings).includes('https:'));assert.deepEqual(fs.readdirSync(dir),[]);
+});
+test('ambiguous external URLs and Notion file images never degrade to remote fallback',async t=>{
+ const dir=temp(t);
+ const urls=['https://example.com/a.png?token=x','https://example.com/a.png#fragment','https://user:secret@example.com/a.png','http://example.com/a.png','https://prod-files-secure.s3.us-west-2.amazonaws.com/a.png','https://www.notion.so/a.png','https://file.notionusercontent.com/a.png','https://127.0.0.1/a.png','https://example.com/a.png?'];
+ for(const url of urls){const renderer=createRenderer(imagePage(url),{downloadImage:async()=>{throw new Error('download failed');},onAssetWarning:()=>assert.fail('No ambiguous fallback'),delayMs:0});await assert.rejects(renderer.convertBlocks('page',dir),/download failed/);}
+ const file=createRenderer(client(async()=>response([{type:'image',image:{type:'file',file:{url:'https://example.com/stable.png'}}}])),{downloadImage:async()=>{throw new Error('file download failed');},onAssetWarning:()=>assert.fail('No file fallback'),delayMs:0});
+ await assert.rejects(file.convertBlocks('page',dir),/file download failed/);
+});
+test('image requests use descriptive agent and image accept without spoofed referer',async t=>{
+ const dir=temp(t);let headers;
+ const png=await require('sharp')({create:{width:1,height:1,channels:3,background:'#123456'}}).png().toBuffer();
+ const server=http.createServer((req,res)=>{headers=req.headers;res.end(png);});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));t.after(()=>server.close());
+ await downloadImage(`http://127.0.0.1:${server.address().port}/image.png`,path.join(dir,'image.png'));
+ assert.match(headers['user-agent'],/CybechoBlog-NotionSync/);assert.match(headers.accept,/image\//);assert.equal(headers.referer,undefined);
+});

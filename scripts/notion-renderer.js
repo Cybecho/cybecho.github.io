@@ -6,6 +6,7 @@ const https = require('node:https');
 const http = require('node:http');
 const { Transform } = require('node:stream');
 const { pipeline } = require('node:stream/promises');
+const { isIP } = require('node:net');
 
 // Only Notion-hosted S3 credentials are ephemeral. External query parameters can
 // select different images and must remain part of the asset identity.
@@ -27,6 +28,22 @@ function createImageFilename(imageUrl) {
   const hash = crypto.createHash('sha256').update(identity).digest('hex').slice(0, 24);
   const ext = path.extname(new URL(imageUrl).pathname).toLowerCase();
   return `image_${hash}${/\.(png|jpe?g|gif|webp|svg|avif)$/i.test(ext) ? ext : '.png'}`;
+}
+
+function stableExternalImageUrl(value) {
+  try {
+    if (typeof value !== 'string' || /[\s<>]/.test(value)) return false;
+    const url = new URL(value);
+    const host = url.hostname.toLowerCase();
+    if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash
+        || value.includes('?') || value.includes('#') || url.port) return false;
+    if (!host.includes('.') || isIP(host.replace(/^\[|\]$/g, ''))
+        || /(?:^|\.)(?:localhost|local|internal|invalid|test)$/.test(host)) return false;
+    // These service domains commonly carry uploaded/private or expiring files,
+    // even when a particular URL currently has no visible signing query.
+    if (/(?:^|\.)(?:amazonaws\.com|amazonaws\.com\.cn|notion\.so|notion\.site|notion\.com|notionusercontent\.com|notion-static\.com)$/.test(host)) return false;
+    return true;
+  } catch { return false; }
 }
 
 async function validImageFile(file) {
@@ -55,7 +72,10 @@ async function downloadImage(imageUrl, imagePath, options = {}) {
     assetHost = url.hostname;
     if (!['https:', 'http:'].includes(url.protocol)) throw new Error('Unsupported image protocol');
     const response = await new Promise((resolve, reject) => {
-      const req = transport(url).get(url, { signal: controller.signal }, resolve);
+      const req = transport(url).get(url, { signal: controller.signal, headers: {
+        'User-Agent': 'CybechoBlog-NotionSync/1.0 (+https://cybecho.github.io/)',
+        'Accept': 'image/avif,image/webp,image/png,image/jpeg,image/gif,image/svg+xml,image/*;q=0.8'
+      } }, resolve);
       req.on('error', reject);
     });
     if (response.statusCode >= 300 && response.statusCode < 400) {
@@ -167,7 +187,7 @@ function createRenderer(notion, options = {}) {
     const legacy = await reuseLegacyImage(url, dir);
     if (legacy) return legacy;
     try { await imageDownload(url, target); }
-    catch (error) { error.asset_host ||= new URL(url).hostname; throw error; }
+    catch (error) { error.asset_host ||= new URL(url).hostname; error.asset_download_failed = true; throw error; }
     if (!fs.existsSync(target) || !fs.statSync(target).size) throw new Error('Image download did not create a complete file');
     // Keep all existing assets. Reuse an existing byte-identical legacy image
     // rather than adding a new copy when migrating from signed-URL filenames.
@@ -489,8 +509,18 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
               const imageFilename = await saveImage(imageUrl, postDir);
               content += '![Image](' + imageFilename + ')\n\n';
             } catch (error) {
-
-              throw error;
+              const external = !block.image.file && block.image.external?.url === imageUrl;
+              if (!external || !error.asset_download_failed || !stableExternalImageUrl(imageUrl)) throw error;
+              const warning = {
+                host: new URL(imageUrl).hostname,
+                code: /^[A-Z][A-Z0-9_]{0,63}$/.test(error.code || '') ? error.code : 'IMAGE_DOWNLOAD_FAILED',
+                block_id: /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(block.id || '') ? block.id : undefined
+              };
+              if (options.onAssetWarning) options.onAssetWarning(warning);
+              else console.warn('External image retained:', JSON.stringify(warning));
+              // Keep the exact source target, escaping only Markdown delimiters.
+              const destination = imageUrl.replace(/</g, '%3C').replace(/>/g, '%3E');
+              content += '![Image](<' + destination + '>)\n\n';
             }
           }
 
@@ -614,4 +644,4 @@ function convertRichText(richTextArray) {
 }
 
 
-module.exports = { createRenderer, convertRichText, createImageFilename, stableImageIdentity, downloadImage };
+module.exports = { createRenderer, convertRichText, createImageFilename, stableImageIdentity, stableExternalImageUrl, downloadImage };

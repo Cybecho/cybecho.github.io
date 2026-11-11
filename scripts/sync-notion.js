@@ -136,7 +136,7 @@ function atomicWrite(file, bytes) {
   finally { fs.rmSync(temporary, { force: true }); }
 }
 
-async function syncNotionDatabase({ notion, databaseId, root = process.cwd(), renderer, logger = console } = {}) {
+async function syncNotionDatabase({ notion, databaseId, root = process.cwd(), renderer, rendererFactory = createRenderer, logger = console } = {}) {
   if (!notion || !databaseId) throw new Error('Notion client and DATABASE_ID are required');
   const cache = readCache(root);
   const managed = managedPosts(root);
@@ -154,7 +154,16 @@ async function syncNotionDatabase({ notion, databaseId, root = process.cwd(), re
   const changes = [];
   const plannedOwners = new Map();
   const nextCache = {};
-  const render = renderer || createRenderer(notion, { legacyAssetRoot: path.join(root, 'content/posts') });
+  const assetWarnings = [];
+  let renderingPageId;
+  const render = renderer || rendererFactory(notion, {
+    legacyAssetRoot: path.join(root, 'content/posts'),
+    onAssetWarning(warning) {
+      const detail = { page_id: renderingPageId, host: warning.host, code: warning.code };
+      assetWarnings.push(detail);
+      logger.warn?.('::warning::External image could not be cached; original reference retained and retry required: ' + JSON.stringify(detail));
+    }
+  });
   let updated = 0, skipped = 0, unpublished = 0, unverified = 0;
   try {
     // Render every changed article successfully before replacing any source.
@@ -187,7 +196,7 @@ async function syncNotionDatabase({ notion, databaseId, root = process.cwd(), re
       if (!canonical && fs.existsSync(destination)) throw new Error(`New article path collision: ${slug}`);
       const file = path.join(destination, 'index.md');
       const hasDraft = canonical && /^draft:\s*true\s*$/m.test(frontMatter(canonical.text));
-      const valid = canonical && previous.last_edited_time === page.last_edited_time && previous.has_content === true && previous.status !== 'unpublished' && !hasDraft && (!previous.content_hash || previous.content_hash === digest(canonical.text));
+      const valid = canonical && previous.last_edited_time === page.last_edited_time && previous.has_content === true && previous.status !== 'unpublished' && previous.status !== 'unverified' && !previous.asset_warnings && !hasDraft && (!previous.content_hash || previous.content_hash === digest(canonical.text));
       if (valid) {
         nextCache[page.id] = previous;
         skipped++;
@@ -197,8 +206,11 @@ async function syncNotionDatabase({ notion, databaseId, root = process.cwd(), re
       if (canonical) fs.cpSync(destination, stageDir, { recursive: true, mode: fs.constants.COPYFILE_FICLONE });
       else fs.mkdirSync(stageDir, { recursive: true });
       let body;
+      const warningCountBefore = assetWarnings.length;
+      renderingPageId = page.id;
       try { body = await render.convertBlocks(page.id, stageDir); }
       catch (error) { error.sync_page_id = page.id; throw error; }
+      finally { renderingPageId = undefined; }
       if (typeof body !== 'string') throw new Error(`Invalid rendered body for page ${page.id}`);
       // An actual empty page is allowed only if it doesn't erase known content.
       if (!body.trim() && (previous.has_content === true || (canonical && hasMeaningfulBody(canonical.text)))) throw new Error(`Refusing to replace nonempty article with empty body: ${page.id}`);
@@ -211,7 +223,7 @@ async function syncNotionDatabase({ notion, databaseId, root = process.cwd(), re
       changes.push({ file, bytes: post.text });
       // Preserve other existing URLs for a historically duplicated page. If it
       // was unpublished, all copies must remain nonpublic except canonical.
-      nextCache[page.id] = { last_edited_time: page.last_edited_time, title: post.title, slug, tags: post.tags, themes: post.themes, has_content: Boolean(body.trim()), content_hash: digest(post.text), sync_version: SYNC_VERSION, status: 'published' };
+      nextCache[page.id] = { last_edited_time: page.last_edited_time, title: post.title, slug, tags: post.tags, themes: post.themes, has_content: Boolean(body.trim()), content_hash: digest(post.text), sync_version: SYNC_VERSION, status: 'published', asset_warnings: assetWarnings.length - warningCountBefore };
       updated++;
     }
     for (const change of changes) atomicWrite(change.file, change.source ? fs.readFileSync(change.source) : change.bytes);
@@ -220,7 +232,7 @@ async function syncNotionDatabase({ notion, databaseId, root = process.cwd(), re
     const cachePath = path.join(root, CACHE_FILE);
     const existingCache = fs.existsSync(cachePath) ? fs.readFileSync(cachePath, 'utf8') : '';
     if (serialized !== existingCache) atomicWrite(cachePath, serialized);
-    const result = { published: pages.filter(p => statusOf(p) === 'Published').length, updated, skipped, unpublished, unverified };
+    const result = { published: pages.filter(p => statusOf(p) === 'Published').length, updated, skipped, unpublished, unverified, asset_warnings: assetWarnings.length };
     logger.log('Notion sync complete:', JSON.stringify(result));
     return result;
   } finally { fs.rmSync(stage, { recursive: true, force: true }); }

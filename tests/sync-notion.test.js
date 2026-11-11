@@ -99,3 +99,13 @@ test('error diagnostics identify content guard without exposing source text or U
  const hidden=JSON.stringify(errorDiagnostic(new Error('private source text https://example.com/?secret=abc')));
  assert(!hidden.includes('private source text'));assert(!hidden.includes('secret=abc'));
 });
+test('external asset warnings keep good body and force retry without advancing to a cache hit',async t=>{
+ const f=fixture(t);let attempts=0, warn=true;
+ const rendererFactory=(_client,options)=>({convertBlocks:async()=>{attempts++;if(warn)options.onAssetWarning({host:'images.example.com',code:'ETIMEDOUT'});return 'Recovered body with original external image reference';}});
+ const args={...f,notion:client([page()]),databaseId:'db',rendererFactory,logger};
+ const first=await syncNotionDatabase(args);assert.equal(first.asset_warnings,1);assert.match(fs.readFileSync(f.file,'utf8'),/Recovered body/);
+ const entry=JSON.parse(fs.readFileSync(path.join(f.root,'.notion_cache_git.json'),'utf8'))[ID];assert.equal(entry.asset_warnings,1);assert.equal(entry.has_content,true);
+ await syncNotionDatabase(args);assert.equal(attempts,2);
+ warn=false;await syncNotionDatabase(args);assert.equal(attempts,3);
+ const last=await syncNotionDatabase(args);assert.equal(last.skipped,1);assert.equal(attempts,3);assert.equal(last.asset_warnings,0);
+});
