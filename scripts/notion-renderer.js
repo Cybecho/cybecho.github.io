@@ -29,6 +29,18 @@ function createImageFilename(imageUrl) {
   return `image_${hash}${/\.(png|jpe?g|gif|webp|svg|avif)$/i.test(ext) ? ext : '.png'}`;
 }
 
+async function validImageFile(file) {
+  try {
+    const sharp = require('sharp');
+    const image = sharp(file, { failOn: 'error', limitInputPixels: 40 * 1000 * 1000 });
+    const metadata = await image.metadata();
+    if (!['jpeg', 'png', 'gif', 'webp', 'avif', 'heif', 'tiff', 'svg'].includes(metadata.format)
+        || !metadata.width || !metadata.height) return false;
+    await image.stats();
+    return true;
+  } catch { return false; }
+}
+
 async function downloadImage(imageUrl, imagePath, options = {}) {
   const timeoutMs = options.timeoutMs ?? 30000;
   const maxBytes = options.maxBytes ?? 32 * 1024 * 1024;
@@ -37,7 +49,10 @@ async function downloadImage(imageUrl, imagePath, options = {}) {
   const temporary = `${imagePath}.${crypto.randomUUID()}.part`;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
+  let assetHost;
+
   async function request(url, redirects) {
+    assetHost = url.hostname;
     if (!['https:', 'http:'].includes(url.protocol)) throw new Error('Unsupported image protocol');
     const response = await new Promise((resolve, reject) => {
       const req = transport(url).get(url, { signal: controller.signal }, resolve);
@@ -54,11 +69,6 @@ async function downloadImage(imageUrl, imagePath, options = {}) {
       response.resume();
       throw new Error(`Image download HTTP ${response.statusCode}`);
     }
-    const contentType = String(response.headers['content-type'] || '').toLowerCase();
-    if (contentType.includes('text/html') || contentType.includes('application/json')) {
-      response.resume();
-      throw new Error('Image endpoint returned a document rather than an image');
-    }
     let bytes = 0;
     const limiter = new Transform({ transform(chunk, encoding, callback) {
       bytes += chunk.length;
@@ -66,16 +76,76 @@ async function downloadImage(imageUrl, imagePath, options = {}) {
     } });
     await pipeline(response, limiter, fs.createWriteStream(temporary, { flags: 'wx' }), { signal: controller.signal });
     if (!bytes) throw new Error('Empty image response');
+    // MIME is advisory: some CDNs label real images as HTML, while error pages
+    // can claim image/png. Decode bounded image bytes before accepting either.
+    if (!await validImageFile(temporary)) {
+      const error = new Error('Image endpoint returned invalid image bytes');
+      error.code = 'IMAGE_NOT_IMAGE';
+      throw error;
+    }
     fs.renameSync(temporary, imagePath);
     return imagePath;
   }
   try { return await request(new URL(imageUrl), 0); }
+  catch (error) {
+    if (assetHost) error.asset_host = assetHost;
+    throw error;
+  }
   finally { clearTimeout(timer); fs.rmSync(temporary, { force: true }); }
 }
 
 function createRenderer(notion, options = {}) {
   const imageDownload = options.downloadImage || downloadImage;
   const delayMs = options.delayMs ?? 20;
+  let legacyAssets;
+  function legacyFilename(url) {
+    // Reproduce the old algorithm exactly. Never match by title or image order.
+    const hash = crypto.createHash('md5').update(url).digest('hex').slice(0, 12);
+    const extension = ['.png', '.jpg', '.jpeg', '.gif', '.webp'].find(ext => url.includes(ext)) || '.png';
+    return `image_${hash}${extension}`;
+  }
+  function legacyCandidates(name, dir) {
+    const local = path.join(dir, name);
+    if (fs.existsSync(local)) return [local];
+    if (!options.legacyAssetRoot) return [];
+    if (!legacyAssets) {
+      legacyAssets = new Map();
+      const root = path.resolve(options.legacyAssetRoot);
+      if (!fs.existsSync(root)) return [];
+      if (fs.lstatSync(root).isSymbolicLink()) throw new Error('Legacy asset root must not be a symlink');
+      for (const bundle of fs.readdirSync(root, { withFileTypes: true })) {
+        if (!bundle.isDirectory()) continue;
+        const bundleDir = path.join(root, bundle.name);
+        for (const entry of fs.readdirSync(bundleDir, { withFileTypes: true })) {
+          if (!entry.isFile() || !/^image_[a-f0-9]{12}\.(png|jpe?g|gif|webp)$/.test(entry.name)) continue;
+          const matches = legacyAssets.get(entry.name) || [];
+          matches.push(path.join(bundleDir, entry.name));
+          legacyAssets.set(entry.name, matches);
+        }
+      }
+    }
+    return legacyAssets.get(name) || [];
+  }
+  async function reuseLegacyImage(url, dir) {
+    const filename = legacyFilename(url);
+    const valid = [];
+    for (const file of legacyCandidates(filename, dir)) {
+      const stat = fs.lstatSync(file);
+      if (!stat.isFile() || stat.size === 0 || stat.size > 32 * 1024 * 1024) continue;
+      if (await validImageFile(file)) {
+        valid.push({ file, digest: crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex') });
+      }
+    }
+    if (!valid.length) return null;
+    if (new Set(valid.map(item => item.digest)).size !== 1) {
+      const error = new Error('Conflicting validated legacy image cache entries');
+      error.code = 'IMAGE_CACHE_CONFLICT'; error.asset_host = new URL(url).hostname;
+      throw error;
+    }
+    const target = path.join(dir, filename);
+    if (valid[0].file !== target) fs.copyFileSync(valid[0].file, target, fs.constants.COPYFILE_EXCL);
+    return filename;
+  }
   async function listAllChildren(blockId) {
     const blocks = [];
     const cursors = new Set();
@@ -94,7 +164,10 @@ function createRenderer(notion, options = {}) {
     const filename = createImageFilename(url);
     const target = path.join(dir, filename);
     if (fs.existsSync(target) && fs.statSync(target).size > 0) return filename;
-    await imageDownload(url, target);
+    const legacy = await reuseLegacyImage(url, dir);
+    if (legacy) return legacy;
+    try { await imageDownload(url, target); }
+    catch (error) { error.asset_host ||= new URL(url).hostname; throw error; }
     if (!fs.existsSync(target) || !fs.statSync(target).size) throw new Error('Image download did not create a complete file');
     // Keep all existing assets. Reuse an existing byte-identical legacy image
     // rather than adding a new copy when migrating from signed-URL filenames.

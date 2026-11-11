@@ -154,7 +154,7 @@ async function syncNotionDatabase({ notion, databaseId, root = process.cwd(), re
   const changes = [];
   const plannedOwners = new Map();
   const nextCache = {};
-  const render = renderer || createRenderer(notion);
+  const render = renderer || createRenderer(notion, { legacyAssetRoot: path.join(root, 'content/posts') });
   let updated = 0, skipped = 0, unpublished = 0, unverified = 0;
   try {
     // Render every changed article successfully before replacing any source.
@@ -196,7 +196,9 @@ async function syncNotionDatabase({ notion, databaseId, root = process.cwd(), re
       const stageDir = path.join(stage, slug);
       if (canonical) fs.cpSync(destination, stageDir, { recursive: true, mode: fs.constants.COPYFILE_FICLONE });
       else fs.mkdirSync(stageDir, { recursive: true });
-      const body = await render.convertBlocks(page.id, stageDir);
+      let body;
+      try { body = await render.convertBlocks(page.id, stageDir); }
+      catch (error) { error.sync_page_id = page.id; throw error; }
       if (typeof body !== 'string') throw new Error(`Invalid rendered body for page ${page.id}`);
       // An actual empty page is allowed only if it doesn't erase known content.
       if (!body.trim() && (previous.has_content === true || (canonical && hasMeaningfulBody(canonical.text)))) throw new Error(`Refusing to replace nonempty article with empty body: ${page.id}`);
@@ -241,17 +243,19 @@ function errorDiagnostic(error) {
     ['Invalid database', 'INVALID_DATABASE_RESPONSE'],
     ['Missing publication status', 'INVALID_STATUS'],
     ['Image download HTTP', 'IMAGE_HTTP_ERROR'],
+    ['Image endpoint returned a document', 'IMAGE_NOT_IMAGE'],
     ['Image exceeds size limit', 'IMAGE_TOO_LARGE'],
     ['Empty image response', 'EMPTY_IMAGE'],
     ['Image redirect', 'IMAGE_REDIRECT_ERROR'],
   ];
   const message = String(error.message || '');
   const reason = reasons.find(([prefix]) => message.startsWith(prefix))?.[1] || 'SYNC_ERROR';
-  const pageId = message.match(/\b[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}\b/i)?.[0];
+  const pageId = String(error.sync_page_id || message).match(/\b[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}\b/i)?.[0];
+  const host = typeof error.asset_host === 'string' && /^[a-z0-9.-]{1,253}$/i.test(error.asset_host) ? error.asset_host : undefined;
   // Only static classification, UUID and code locations; never response bodies,
   // source text, signed URLs or authentication values.
   const frames = String(error.stack || '').split('\n').filter(line => /^\s+at /.test(line)).slice(0, 4);
-  return { reason, ...(pageId ? { page_id: pageId } : {}), frames };
+  return { reason, ...(pageId ? { page_id: pageId } : {}), ...(host ? { asset_host: host } : {}), frames };
 }
 
 if (require.main === module) main().catch(error => {

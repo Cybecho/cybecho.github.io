@@ -56,21 +56,65 @@ test('unknown container descendants, formatting and code remain rendered', async
 });
 test('download is atomic, follows relative redirect, rejects failures, bounds time and size', async t => {
  const dir=temp(t);
+ const png=await require('sharp')({create:{width:2,height:2,channels:3,background:'#123456'}}).png().toBuffer();
  const server=http.createServer((req,res)=>{
   if(req.url==='/redirect'){res.writeHead(302,{location:'/ok'});return res.end();}
   if(req.url==='/loop'){res.writeHead(302,{location:'/loop'});return res.end();}
   if(req.url==='/bad'){res.writeHead(503);return res.end('bad');}
   if(req.url==='/slow')return;
   if(req.url==='/empty')return res.end();
-  res.end('image bytes');
+  if(req.url==='/html'){res.setHeader('Content-Type','image/png');return res.end('<html>Error</html>');}
+  if(req.url==='/mislabeled')res.setHeader('Content-Type','text/html');
+  res.end(png);
  });
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  t.after(()=>{server.closeAllConnections();server.close();});
  const url=`http://127.0.0.1:${server.address().port}`;const dest=path.join(dir,'image.png');
- await downloadImage(url+'/redirect',dest);assert.equal(fs.readFileSync(dest,'utf8'),'image bytes');
- for(const [route,options] of [['/bad',{}],['/loop',{maxRedirects:1}],['/slow',{timeoutMs:20}],['/ok',{maxBytes:2}],['/empty',{}]]) {
+ await downloadImage(url+'/redirect',dest);assert.deepEqual(fs.readFileSync(dest),png);
+ await downloadImage(url+'/mislabeled',dest);assert.deepEqual(fs.readFileSync(dest),png);
+ for(const [route,options] of [['/html',{}],['/bad',{}],['/loop',{maxRedirects:1}],['/slow',{timeoutMs:20}],['/ok',{maxBytes:2}],['/empty',{}]]) {
   await assert.rejects(downloadImage(url+route,dest,options));
-  assert.equal(fs.readFileSync(dest,'utf8'),'image bytes');
+  assert.deepEqual(fs.readFileSync(dest),png);
   assert.deepEqual(fs.readdirSync(dir),['image.png']);
  }
+});
+
+function legacyName(url) { return 'image_'+require('node:crypto').createHash('md5').update(url).digest('hex').slice(0,12)+'.png'; }
+const imagePage = url => client(async()=>response([{type:'image',image:{external:{url}}}]));
+test('valid exact legacy URL cache is reused locally or copied across historical bundles', async t=>{
+ const root=temp(t);const legacyRoot=path.join(root,'old'),stage=path.join(root,'stage');fs.mkdirSync(path.join(legacyRoot,'old-post'),{recursive:true});fs.mkdirSync(stage);
+ const url='https://example.com/image.png?size=100';const name=legacyName(url);
+ const png=await require('sharp')({create:{width:2,height:2,channels:3,background:'#123456'}}).png().toBuffer();
+ const source=path.join(legacyRoot,'old-post',name);fs.writeFileSync(source,png);
+ const renderer=createRenderer(imagePage(url),{legacyAssetRoot:legacyRoot,downloadImage:async()=>{throw new Error('Must use proven cache');},delayMs:0});
+ assert.equal(await renderer.convertBlocks('page',stage),`![Image](${name})\n\n`);
+ assert.deepEqual(fs.readFileSync(path.join(stage,name)),png);assert.deepEqual(fs.readFileSync(source),png);
+ const local=createRenderer(imagePage(url),{downloadImage:async()=>{throw new Error('Must use local legacy cache');},delayMs:0});
+ assert.equal(await local.convertBlocks('page',stage),`![Image](${name})\n\n`);
+});
+test('invalid legacy documents are not trusted and query variants never cross-match',async t=>{
+ const root=temp(t),stage=path.join(root,'stage'),old=path.join(root,'old');fs.mkdirSync(stage);fs.mkdirSync(path.join(old,'bundle'),{recursive:true});
+ const url='https://example.com/image.png?size=100';fs.writeFileSync(path.join(old,'bundle',legacyName(url)),'<html>Error</html>');
+ let attempted=0;
+ const renderer=createRenderer(imagePage(url),{legacyAssetRoot:old,downloadImage:async()=>{attempted++;throw new Error('endpoint failure');},delayMs:0});
+ await assert.rejects(renderer.convertBlocks('page',stage),error=>error.asset_host==='example.com');assert.equal(attempted,1);
+ const png=await require('sharp')({create:{width:2,height:2,channels:3,background:'#123456'}}).png().toBuffer();fs.writeFileSync(path.join(old,'bundle',legacyName(url)),png);
+ const different=createRenderer(imagePage(url.replace('100','200')),{legacyAssetRoot:old,downloadImage:async()=>{throw new Error('query cache miss');},delayMs:0});
+ await assert.rejects(different.convertBlocks('page',stage),/query cache miss/);
+});
+test('conflicting valid global legacy cache entries fail instead of guessing',async t=>{
+ const root=temp(t),stage=path.join(root,'stage'),old=path.join(root,'old');fs.mkdirSync(stage);
+ const url='https://example.com/image.png';
+ for(const [bundle,color] of [['one','#000000'],['two','#ffffff']]){
+  fs.mkdirSync(path.join(old,bundle),{recursive:true});const png=await require('sharp')({create:{width:2,height:2,channels:3,background:color}}).png().toBuffer();fs.writeFileSync(path.join(old,bundle,legacyName(url)),png);
+ }
+ const renderer=createRenderer(imagePage(url),{legacyAssetRoot:old,downloadImage:async()=>{throw new Error('must not guess');},delayMs:0});
+ await assert.rejects(renderer.convertBlocks('page',stage),error=>error.code==='IMAGE_CACHE_CONFLICT'&&error.asset_host==='example.com');assert.deepEqual(fs.readdirSync(stage),[]);
+});
+test('document responses report only safe host metadata and never replace valid destination',async t=>{
+ const root=temp(t),dest=path.join(root,'image.png');fs.writeFileSync(dest,'existing');
+ const server=http.createServer((req,res)=>{res.setHeader('Content-Type','image/png');res.end('{"error":"private diagnostic"}');});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));t.after(()=>server.close());
+ const url=`http://127.0.0.1:${server.address().port}/private-path?secret=value`;
+ await assert.rejects(downloadImage(url,dest),error=>error.code==='IMAGE_NOT_IMAGE'&&error.asset_host==='127.0.0.1'&&!error.message.includes('secret')&&!error.message.includes('private'));
+ assert.equal(fs.readFileSync(dest,'utf8'),'existing');assert.deepEqual(fs.readdirSync(root),['image.png']);
 });
