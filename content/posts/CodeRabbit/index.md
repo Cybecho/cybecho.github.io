@@ -1,11 +1,11 @@
 ---
 title: "CodeRabbit"
 date: 2024-12-17T23:23:00.000Z
-draft: false
+draft: true
 series: ["AI", "개발환경"]
 description: "CodeRabbit은 AI를 활용하여 코드 리뷰를 자동화하고 효율화하는 플랫폼으로, GitHub 및 GitLab과 통합되어 맥락 기반 피드백을 제공합니다. 주요 기능으로는 AI 기반 코드 리뷰, 라인별 코드 제안, 실시간 채팅, 자동 생성된 릴리스 노트가 있으며, 코드 품질 향상과 리뷰 시간 단축을 통해 팀의 생산성을 높입니다. 대규모 개발 팀, 오픈 소스 프로젝트, 스타트업에 적합하며, 사용자는 무료 체험 후 리포지토리를 연결하여 쉽게 시작할 수 있습니다. 보안과 프라이버시도 중요하게 다루어집니다."
 notion_id: "15f1bab9-e3f8-8067-b7a8-c97f47129278"
-notion_url: "https://www.notion.so/CodeRabbit-15f1bab9e3f88067b7a8c97f47129278"
+
 ---
 
 # CodeRabbit
