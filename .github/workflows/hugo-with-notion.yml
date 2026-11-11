@@ -2,136 +2,154 @@ name: Hugo with Direct Notion API
 
 on:
   push:
-    branches: ["main", "claude/*"]
+    branches: ["main", "claude/*", "fix/*"]
+  pull_request:
+    branches: ["main"]
   schedule:
     - cron: '0 2 * * *'
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: read
 
+# A failed or stale run must never replace a newer site. PRs do not block production.
 concurrency:
-  group: "pages"
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pages: read
+    outputs:
+      source_sha: ${{ steps.persist.outputs.source_sha }}
     steps:
-      - name: Checkout
+      - name: Checkout exact source revision
         uses: actions/checkout@v4
         with:
           submodules: true
           fetch-depth: 0
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Run regression tests
+        run: npm test
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          # Last verified production build: Actions run 42788037284.
+          hugo-version: '0.169.0'
           extended: true
 
-      # Notion 동기화 스크립트 실행
+      - name: Reject outdated production source
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA" || {
+            echo '::error::Main changed since this run was queued. Refusing stale sync/deployment.'
+            exit 1
+          }
+
       - name: Notion to Hugo Sync
-        run: |
-          npm init -y
-          npm install @notionhq/client sharp
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        env:
+          NOTION_SECRET: ${{ secrets.NOTION_SECRET }}
+          DATABASE_ID: ${{ secrets.DATABASE_ID }}
+        run: npm run sync
 
-          NOTION_SECRET="${{ secrets.NOTION_SECRET }}" DATABASE_ID="${{ secrets.DATABASE_ID }}" node scripts/sync-notion.js
-
-      # URL 향상 처리 (제목 추출)
-      - name: Enhance URLs with Titles
-        run: |
-          echo "Enhancing URLs with page titles..."
-          node scripts/enhance-urls.js || echo "URL enhancement completed with warnings"
-
-      # 동기화된 파일들을 저장소에 커밋 (Archives 변환 전에 커밋)
-      # main 브랜치에서만 커밋, claude/* 브랜치에서는 테스트만 수행
-      - name: Commit Notion sync changes
-        run: |
-          CURRENT_BRANCH=${GITHUB_REF#refs/heads/}
-          echo "Current branch: $CURRENT_BRANCH"
-
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-
-          # 작업 디렉토리 완전 정리
-          echo "Cleaning working directory..."
-          git add -A
-
-          if ! git diff --staged --quiet; then
-            echo "Changes detected"
-
-            # main 브랜치에서만 커밋 및 푸시
-            if [[ "$CURRENT_BRANCH" == "main" ]]; then
-              echo "Main branch detected, committing and pushing..."
-
-              # 변경사항 커밋
-              git commit -m "feat: Notion 포스트 동기화 업데이트"
-
-              # Pull with rebase to get latest changes
-              echo "Pulling latest changes with rebase..."
-              git pull --rebase origin main || {
-                echo "Rebase conflict detected, aborting..."
-                git rebase --abort
-                echo "Will retry on next scheduled run"
-                exit 0
-              }
-
-              # Push changes
-              echo "Pushing changes..."
-              git push origin main || {
-                echo "Push failed, will retry on next scheduled run"
-                exit 0
-              }
-
-              echo "Successfully pushed changes"
-            else
-              echo "Feature branch detected, skipping commit and push (test only)"
-              echo "Sync would create/update $(git diff --staged --name-only | wc -l) files"
-            fi
-          else
-            echo "No changes to commit"
-          fi
-
-      # Archives 디렉토리 이미지 경로 변환 (로컬 작업용 -> Hugo 빌드용)
-      # 원본 파일은 수정하지 않고, 빌드 시점에만 변환하여 Hugo에서 사용
-      # 이 변환된 내용은 커밋하지 않음 (빌드용으로만 사용)
-      - name: Convert Archive Image Paths for Build
-        run: |
-          echo "Converting archive image paths for Hugo build (temporary conversion)..."
-          node scripts/convert-archive-images-for-build.js
+      # External URL-title enrichment is deliberately outside the critical path.
+      # Existing labels are valid links; arbitrary third-party fetches must not
+      # hang publishing or rewrite unrelated content during a sync.
+      - name: Stage content without changing source archives
+        run: node scripts/prepare-build.js stage content "$RUNNER_TEMP/hugo-content"
 
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
+        run: hugo --gc --minify --buildFuture --contentDir "$RUNNER_TEMP/hugo-content" --cleanDestinationDir
+
+      - name: Compact verified duplicate output assets
         run: |
-          echo "Building Hugo site..."
-          hugo --gc --minify --buildFuture
+          roots=(content layouts static themes hugo.toml)
+          for optional in assets data config; do
+            if [[ -d "$optional" ]]; then roots+=("$optional"); fi
+          done
+          node scripts/prepare-build.js compact public "${roots[@]}" | tee "$RUNNER_TEMP/asset-audit.json"
+
+      - name: Validate Pages output
+        run: |
+          test -s public/index.html
+          test -s public/index.xml
+          test -s public/index.json
+          test -s public/sitemap.xml
+          bytes=$(du -sb public | cut -f1)
+          echo "Pages output: $bytes bytes" | tee -a "$GITHUB_STEP_SUMMARY"
+          cat "$RUNNER_TEMP/asset-audit.json" >> "$GITHUB_STEP_SUMMARY"
+          if (( bytes >= 1000000000 )); then
+            echo '::error::Pages output is at least 1 GB. Refusing oversized deployment; original assets are preserved.'
+            exit 1
+          fi
+
+      - name: Persist only validated Notion changes
+        id: persist
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA" || {
+            echo '::error::Main changed during build. Refusing to rebase or deploy a stale artifact.'
+            exit 1
+          }
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -- content/posts .notion_cache_git.json
+          if ! git diff --staged --quiet; then
+            git commit -m "fix: persist validated Notion sync"
+            # A normal fast-forward push rejects any concurrent source change.
+            git push origin HEAD:main
+          fi
+          echo "source_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Upload artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     needs: build
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
+      - name: Verify artifact still matches main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXPECTED_SHA: ${{ needs.build.outputs.source_sha }}
+        run: |
+          current=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq .object.sha)
+          test "$current" = "$EXPECTED_SHA" || {
+            echo '::error::Main changed after build. Refusing stale deployment.'
+            exit 1
+          }
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
