@@ -3,7 +3,7 @@
 ## Publishing contract
 
 - Only pages whose Status is exactly Published may be rendered. A complete database snapshot is required before applying changes. An unclassified Status is unpublished.
-- Managed articles absent from the snapshot are checked individually. An inaccessible page (403/404) is ambiguous, so the build stops rather than deleting articles. Restore integration access or explicitly resolve the source page before rerunning.
+- Notion is the publication authority: only pages positively confirmed Published in the complete current database snapshot are public. Managed articles absent from that snapshot are excluded from output and recorded as `unverified`, never assumed deleted or Draft. Source files/assets remain recoverable. The sync does not attempt to read those pages outside the integration’s database access. When a page reappears as Published it is refreshed and republished. A failed or partial database query still stops the whole deployment.
 - Draft/archived articles and their resources are excluded from disposable build input. Source Markdown and assets stay in Git, including historical duplicate paths for the same Notion ID. Previously published material remains in Git history; this is not history erasure.
 - API, nested-block, pagination and image failures stop publishing. All changed articles are rendered in temporary directories before any source file is replaced. Failed runs do not commit or deploy.
 - Existing article slugs remain fixed after title changes. New articles use a title plus full Notion page ID to avoid collisions. Historical duplicate URLs remain intact; publishing updates the canonical copy, while unpublishing hides every copy.
@@ -20,7 +20,7 @@ The initial local production build had 1,981,544,280 bytes. Its audit found 2,82
 
 ## Verification and recovery
 
-Run `npm ci` and `npm test` (32 regression tests at stabilization). Staging captures Hugo-computed GitInfo dates before copying content, so source-relative metadata is preserved without changing source front matter. Production uses Node 20 and Hugo extended 0.169.0, pinned to the previously successful build. A local build without Notion secrets verifies committed content only:
+Run `npm ci` and `npm test` (34 regression tests at stabilization). Staging captures Hugo-computed GitInfo dates before copying content, so source-relative metadata is preserved without changing source front matter. Production uses Node 20 and Hugo extended 0.169.0, pinned to the previously successful build. A local build without Notion secrets verifies committed content only:
 
 ```
 node scripts/prepare-build.js stage content /tmp/hugo-content-fresh

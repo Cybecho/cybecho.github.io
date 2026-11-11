@@ -36,10 +36,23 @@ test('Published to Draft hides every historical duplicate, preserves body and un
  const result=await syncNotionDatabase({...f,notion:client([page(ID,'Draft')]),databaseId:'db',renderer,logger});
  assert.equal(result.unpublished,2);assert.match(fs.readFileSync(f.file,'utf8'),/draft: true/);assert.match(fs.readFileSync(f.file,'utf8'),/Original good body/);assert.match(fs.readFileSync(path.join(f.root,'content/posts/duplicate/index.md'),'utf8'),/draft: true/);assert.equal(fs.readFileSync(path.join(f.root,'content/posts/manual/index.md'),'utf8'),'manual');
 });
-test('missing page must be explicitly confirmed and inaccessible page fails closed',async t=>{
- const f=fixture(t);const before=snapshot(f.root);
- await assert.rejects(syncNotionDatabase({...f,notion:client([],async()=>{throw new Error('404');}),databaseId:'db',renderer,logger}),/404/);assert.deepEqual(snapshot(f.root),before);
- const result=await syncNotionDatabase({...f,notion:client([],async()=>({...page(),archived:true})),databaseId:'db',renderer,logger}); assert.equal(result.unpublished,1);
+test('complete snapshot excludes unverified pages without inferring deletion or reading outside database access',async t=>{
+ const f=fixture(t);let retrieved=false;
+ const result=await syncNotionDatabase({...f,notion:client([],async()=>{retrieved=true;throw new Error('access denied');}),databaseId:'db',renderer,logger});
+ assert.equal(retrieved,false);assert.equal(result.unpublished,1);assert.equal(result.unverified,1);
+ assert.match(fs.readFileSync(f.file,'utf8'),/draft: true/);assert.match(fs.readFileSync(f.file,'utf8'),/Original good body/);
+ const entry=JSON.parse(fs.readFileSync(path.join(f.root,'.notion_cache_git.json'),'utf8'))[ID];assert.equal(entry.status,'unverified');assert.equal(entry.source_status,null);
+});
+test('unverified page returns to public only after Notion confirms Published',async t=>{
+ const f=fixture(t,{cached:true});const args={...f,databaseId:'db',renderer,logger};
+ await syncNotionDatabase({...args,notion:client([])});
+ const result=await syncNotionDatabase({...args,notion:client([page()])});
+ assert.equal(result.updated,1);assert.match(fs.readFileSync(f.file,'utf8'),/draft: false/);
+ assert.equal(JSON.parse(fs.readFileSync(path.join(f.root,'.notion_cache_git.json'),'utf8'))[ID].status,'published');
+});
+test('known Draft is distinguished from unverified source status',async t=>{
+ const f=fixture(t);const result=await syncNotionDatabase({...f,notion:client([page(ID,'Draft')]),databaseId:'db',renderer,logger});
+ const entry=JSON.parse(fs.readFileSync(path.join(f.root,'.notion_cache_git.json'),'utf8'))[ID];assert.equal(entry.status,'unpublished');assert.equal(entry.source_status,'Draft');assert.equal(result.unverified,0);
 });
 test('renaming title preserves existing URL and joins all title fragments',async t=>{
  const f=fixture(t);const p=page();p.properties['제목'].title=[{plain_text:'Renamed '},{plain_text:'title'}];
