@@ -3264,6 +3264,18 @@
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.539Z"
   },
+  "2db1bab9-e3f8-811b-b3cc-d4f86f839325": {
+    "last_edited_time": "2026-11-20T08:29:00.000Z",
+    "title": "재시도의 핵심은 '다시'가 아니라 '기다렸다가 다시'입니다",
+    "slug": "재시도의-핵심은-'다시'가-아니라-'기다렸다가-다시'입니다-2db1bab9e3f8811bb3ccd4f86f839325",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "7b778227cb46ac325e3af8476b91ff9a4a3461c9862e82798be808ce1007e8ae",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "2dc1bab9-e3f8-800c-b9c3-deb19dbbd03d": {
     "last_edited_time": "2026-01-11T05:14:00.000Z",
     "title": "brew 에서 cask가 붙은것과 안붙은것의 차이는, GUI어플리케이션이냐 CLI명령어 차이에 있는것이다? ",
@@ -3277,6 +3289,23 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.539Z"
+  },
+  "2dc1bab9-e3f8-8026-adac-cb4f4260b4d5": {
+    "last_edited_time": "2026-11-20T08:29:00.000Z",
+    "title": "Auto Claude: 클로드 코드를 칸반 보드로 굴리면 AI 팀이 됩니다",
+    "slug": "Auto-Claude_-클로드-코드를-칸반-보드로-굴리면-AI-팀이-됩니다-2dc1bab9e3f88026adaccb4f4260b4d5",
+    "tags": [
+      "AI",
+      "Claude"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "8cad52ac677d09e1cb5ee40a17d00cc58d79c458e851e6052ae3811e45b1fa70",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "2dc1bab9-e3f8-802a-bb8b-e1f94fbbc87b": {
     "last_edited_time": "2026-01-11T07:41:00.000Z",
@@ -3293,6 +3322,35 @@
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.539Z"
   },
+  "2dc1bab9-e3f8-80eb-959c-d36a307b3ff4": {
+    "last_edited_time": "2026-11-20T08:27:00.000Z",
+    "title": "클로드 코드 워크플로우, 노드로 그린 그림이 그대로 스킬이 된다",
+    "slug": "클로드-코드-워크플로우,-노드로-그린-그림이-그대로-스킬이-된다-2dc1bab9e3f880eb959cd36a307b3ff4",
+    "tags": [
+      "AI",
+      "Claude"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "1396e7ac0a90cd88a795a6be723d2640baea7110f5ad575fc5c0178659b218c2",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2dc1bab9-e3f8-811d-8b03-d54f51c78d26": {
+    "last_edited_time": "2026-11-20T08:29:00.000Z",
+    "title": "클로드 코드가 7일 걸리는 일, 시지푸스는 1시간에 끝냅니다",
+    "slug": "클로드-코드가-7일-걸리는-일,-시지푸스는-1시간에-끝냅니다-2dc1bab9e3f8811d8b03d54f51c78d26",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "ee3e7cb44d39d92c9a5b8bb1fbbeeb39097006101748a530e13475b7f7259fba",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "2dc1bab9-e3f8-81cd-a31c-d1b35bbf40e2": {
     "last_edited_time": "2026-01-11T07:38:00.000Z",
     "title": "OS를 직접 구축해보자 (자료정리)",
@@ -3302,6 +3360,22 @@
     "themes": [],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.539Z"
+  },
+  "2dc1bab9-e3f8-81df-8410-dc3ff911ae27": {
+    "last_edited_time": "2026-11-20T08:28:00.000Z",
+    "title": "에이전트 엔지니어링: 출시가 끝이 아니라 배우는 방법이다",
+    "slug": "에이전트-엔지니어링_-출시가-끝이-아니라-배우는-방법이다-2dc1bab9e3f881df8410dc3ff911ae27",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "6a73f95b5d54fa56ff8a8339015fc964a4976076d64af8cfd6cab74b60967343",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "2dd1bab9-e3f8-80c7-874b-f7b1ad21da7a": {
     "last_edited_time": "2026-01-28T04:51:00.000Z",
@@ -3316,6 +3390,23 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.539Z"
+  },
+  "2dd1bab9-e3f8-81fb-a9f1-d1e79ea29f8f": {
+    "last_edited_time": "2026-11-20T08:29:00.000Z",
+    "title": "에이전트 스킬의 핵심은 지식이 아니라 온디맨드 로딩이다",
+    "slug": "에이전트-스킬의-핵심은-지식이-아니라-온디맨드-로딩이다-2dd1bab9e3f881fba9f1d1e79ea29f8f",
+    "tags": [
+      "AI",
+      "Claude"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "b75c1f151ca30de285d631e8bb79ee83862f171e07ba53dff87fca4dfff53b6b",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "2e01bab9-e3f8-800f-a707-efb81b953afb": {
     "last_edited_time": "2026-01-11T05:09:00.000Z",
@@ -3348,6 +3439,34 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.552Z"
+  },
+  "2e21bab9-e3f8-814b-9d2c-c1b947cab0e4": {
+    "last_edited_time": "2026-11-20T08:30:00.000Z",
+    "title": "에이전트 토큰 63% 낭비, 임베딩 말고 구조로 찾는 게 답이다",
+    "slug": "에이전트-토큰-63%-낭비,-임베딩-말고-구조로-찾는-게-답이다-2e21bab9e3f8814b9d2cc1b947cab0e4",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "b84a7d2a9f779e37095d21adec047d3b50cc5072f8509a15e213632a00528806",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2e31bab9-e3f8-811a-98b5-f92ac84d2c3d": {
+    "last_edited_time": "2026-11-20T08:29:00.000Z",
+    "title": "MCP 도구, 안 쓰는 건 꺼두는 게 토큰 절약의 지름길입니다",
+    "slug": "MCP-도구,-안-쓰는-건-꺼두는-게-토큰-절약의-지름길입니다-2e31bab9e3f8811a98b5f92ac84d2c3d",
+    "tags": [
+      "Util"
+    ],
+    "themes": [
+      "오픈소스"
+    ],
+    "has_content": true,
+    "content_hash": "02994637951c0c9c4d7307d05247d73783dae956fcda7baf0a63033dcd29e56c",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "2e51bab9-e3f8-8062-95d4-f25fe8a3abf9": {
     "last_edited_time": "2026-01-11T10:02:00.000Z",
@@ -3481,6 +3600,30 @@
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.539Z"
   },
+  "2e91bab9-e3f8-812e-975e-dda0bc588fb0": {
+    "last_edited_time": "2026-11-20T08:30:00.000Z",
+    "title": "Electron 없이 Mermaid를 네이티브로 그리는 마크다운 에디터",
+    "slug": "Electron-없이-Mermaid를-네이티브로-그리는-마크다운-에디터-2e91bab9e3f8812e975edda0bc588fb0",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "c42419803522e47e6c25ab437d239c86a2c3b8d06d69316a6eae7664f769ed55",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2e91bab9-e3f8-81fa-a7fc-f58bda2bcea3": {
+    "last_edited_time": "2026-11-20T08:29:00.000Z",
+    "title": "컨텍스트 엔지니어링의 핵심은 많이 주는 게 아니라 덜어내는 것이다",
+    "slug": "컨텍스트-엔지니어링의-핵심은-많이-주는-게-아니라-덜어내는-것이다-2e91bab9e3f881faa7fcf58bda2bcea3",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "bd37d6019559cdaf1456118f2c353be671466aeeb914dbf5f21d493ed46fd74b",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "2e99bfee-f2da-4c76-ac8e-ecca4dc23fe6": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "유니티 3D게임 쿼드뷰 01",
@@ -3594,6 +3737,22 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.539Z"
+  },
+  "2ec1bab9-e3f8-81ce-84b9-da95e16677b6": {
+    "last_edited_time": "2026-11-20T08:29:00.000Z",
+    "title": "월 100달러짜리 AI 시스템 오퍼레이터, 로컬에서 무료로 돌리는 방법이 있다",
+    "slug": "월-100달러짜리-AI-시스템-오퍼레이터,-로컬에서-무료로-돌리는-방법이-있다-2ec1bab9e3f881ce84b9da95e16677b6",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "c48d643fa5054bbe543ec886de387fde224e675063baa513f1cbffae9e23a3b4",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "2ed1bab9-e3f8-802a-93a7-fee192646d7e": {
     "last_edited_time": "2026-01-19T10:27:00.000Z",
@@ -3801,6 +3960,18 @@
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.538Z"
   },
+  "2ef1bab9-e3f8-8176-af4e-d94f53a58a03": {
+    "last_edited_time": "2026-11-20T08:29:00.000Z",
+    "title": "클로드 vs 오픈AI, 모토로라와 인텔처럼 결국 납기와 인프라가 승자를 가른다",
+    "slug": "클로드-vs-오픈AI,-모토로라와-인텔처럼-결국-납기와-인프라가-승자를-가른다-2ef1bab9e3f88176af4ed94f53a58a03",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "d30c18920b713271c543106add373725a756588a7b4ff2a7c43409152dfe1d36",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "2f01bab9-e3f8-80eb-a6cd-d21ba7d97b87": {
     "last_edited_time": "2026-01-22T10:02:00.000Z",
     "title": "Wsl2 와 Hyver V 사이에 무엇이 있길래, 호스트와 VM간 통신이 바로 안될까?",
@@ -3814,6 +3985,22 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.538Z"
+  },
+  "2f21bab9-e3f8-804c-a682-efaa641ef6e4": {
+    "last_edited_time": "2026-11-20T08:29:00.000Z",
+    "title": "HPE DL360 Gen10 전면부, LED 색깔과 깜빡임만으로 고장 부위를 찾습니다",
+    "slug": "HPE-DL360-Gen10-전면부,-LED-색깔과-깜빡임만으로-고장-부위를-찾습니다-2f21bab9e3f8804ca682efaa641ef6e4",
+    "tags": [
+      "Infra"
+    ],
+    "themes": [
+      "Infra & Network"
+    ],
+    "has_content": true,
+    "content_hash": "d1f4fbd00dcb8590634f71f91afc82619d87fe6372c6cfc0a6594f49596ee354",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "2f31bab9-e3f8-8002-9c73-d0c7b1f5ce1e": {
     "last_edited_time": "2026-02-01T06:22:00.000Z",
@@ -3984,6 +4171,51 @@
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.537Z"
   },
+  "2f41bab9-e3f8-8102-986d-fdb0c0d741e5": {
+    "last_edited_time": "2026-11-20T08:29:00.000Z",
+    "title": "클로드 코드 Swarms, 이제 AI가 혼자가 아니라 팀으로 일합니다",
+    "slug": "클로드-코드-Swarms,-이제-AI가-혼자가-아니라-팀으로-일합니다-2f41bab9e3f88102986dfdb0c0d741e5",
+    "tags": [
+      "AI",
+      "Claude"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "92ae0e66cc5b3ac750bf002a18dc345951b4cf5fc3022e21441539410807e29e",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 1
+  },
+  "2f41bab9-e3f8-8105-bfdd-e3fe9daf0c9c": {
+    "last_edited_time": "2026-11-20T08:29:00.000Z",
+    "title": "게임 스프라이트 만드는 데 1주일? 에테르AI에서는 1분이면 됩니다",
+    "slug": "게임-스프라이트-만드는-데-1주일_-에테르AI에서는-1분이면-됩니다-2f41bab9e3f88105bfdde3fe9daf0c9c",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "3b2cbc1fe27c594d832168d4b6090d919fd5affa2b29d7289ef69fb22caffb87",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2f41bab9-e3f8-816a-845b-e7f5a8d80d13": {
+    "last_edited_time": "2026-11-20T08:29:00.000Z",
+    "title": "Clawdbot, 메신저로 말하면 컴퓨터가 알아서 일한다",
+    "slug": "Clawdbot,-메신저로-말하면-컴퓨터가-알아서-일한다-2f41bab9e3f8816a845be7f5a8d80d13",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e1d1341ac1d66dccf4a5b27ec2d615a5593b69ddfd837cf1d9e5f488a0303070",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "2f48bf1a-b837-43e6-986f-36193237cc47": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "aws 비용 폭탄 방지",
@@ -3997,6 +4229,23 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.554Z"
+  },
+  "2f51bab9-e3f8-805e-a3a2-eef92b8cb681": {
+    "last_edited_time": "2026-11-20T08:29:00.000Z",
+    "title": "Let's Bootc! [5] - OSTree는 운영체제 바이너리를 위한 Git이다",
+    "slug": "Let's-Bootc!-[5]-OSTree는-운영체제-바이너리를-위한-Git이다-2f51bab9e3f8805ea3a2eef92b8cb681",
+    "tags": [
+      "Docker",
+      "Infra"
+    ],
+    "themes": [
+      "Let's Bootc!"
+    ],
+    "has_content": true,
+    "content_hash": "19565e3c806c94646be03d986d51791b989c576283e591eba2dcc853302851d2",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "2f61bab9-e3f8-8002-b619-d9405283a14c": {
     "last_edited_time": "2026-01-28T04:51:00.000Z",
@@ -4012,6 +4261,23 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.537Z"
+  },
+  "2f61bab9-e3f8-8059-bf86-da1f35bbf632": {
+    "last_edited_time": "2026-11-20T08:28:00.000Z",
+    "title": "bootc 이미지가 부팅되는 이유? 커널이 이미지 안에 있습니다",
+    "slug": "bootc-이미지가-부팅되는-이유_-커널이-이미지-안에-있습니다-2f61bab9e3f88059bf86da1f35bbf632",
+    "tags": [
+      "Docker",
+      "Infra"
+    ],
+    "themes": [
+      "Let's Bootc!"
+    ],
+    "has_content": true,
+    "content_hash": "ba00e62082a72dcf94426ba9e8d0579d5b28f29736dfd0e1cf4502a7f3861090",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "2f61bab9-e3f8-809f-9fcc-d70730c3ab17": {
     "last_edited_time": "2026-01-28T04:51:00.000Z",
