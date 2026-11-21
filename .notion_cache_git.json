@@ -4734,6 +4734,38 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "30f1bab9-e3f8-814d-bf15-dbd0f33d7d44": {
+    "last_edited_time": "2026-11-21T05:04:00.000Z",
+    "title": "Happy Coder: 오픈클로가 부담스러우면, 핸드폰 채팅으로 클로드 코드를 씁니다",
+    "slug": "Happy-Coder_-오픈클로가-부담스러우면,-핸드폰-채팅으로-클로드-코드를-씁니다-30f1bab9e3f8814dbf15dbd0f33d7d44",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "6a57a8db7975c77bea158023fd81616722258be0bca9b2fef201beca4142f329",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30f1bab9-e3f8-8164-95e0-fcec4c8c7f0e": {
+    "last_edited_time": "2026-11-21T05:04:00.000Z",
+    "title": "클로드 코드 비용 90% 줄이는 비결, 캐시를 깨뜨리지 않는 설계에 있습니다",
+    "slug": "클로드-코드-비용-90%-줄이는-비결,-캐시를-깨뜨리지-않는-설계에-있습니다-30f1bab9e3f8816495e0fcec4c8c7f0e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "5df56854e9ae02222b4b102e3ccc50ef86825b0e0c9cd95380a0acd24a88f642",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "30f1bab9-e3f8-817a-aab8-da5b41a7e6dc": {
     "last_edited_time": "2026-11-21T02:54:00.000Z",
     "title": "에이전트가 짠 코드, 사람이 읽지 말고 기계가 남긴 증거로 검증합니다",
