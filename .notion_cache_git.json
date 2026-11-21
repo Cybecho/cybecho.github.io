@@ -4718,6 +4718,22 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "30e1bab9-e3f8-81cb-9a5a-c9a23758037f": {
+    "last_edited_time": "2026-11-21T04:37:00.000Z",
+    "title": "OpenHunt: 바이브 코딩으로 만든 제품, AI가 먼저 읽고 사람이 검증합니다",
+    "slug": "OpenHunt_-바이브-코딩으로-만든-제품,-AI가-먼저-읽고-사람이-검증합니다-30e1bab9e3f881cb9a5ac9a23758037f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ed97a8405df2686e8e7a8c9422d34716b75dfc2b047134afae0e839f80da9755",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "30f1bab9-e3f8-817a-aab8-da5b41a7e6dc": {
     "last_edited_time": "2026-11-21T02:54:00.000Z",
     "title": "에이전트가 짠 코드, 사람이 읽지 말고 기계가 남긴 증거로 검증합니다",
