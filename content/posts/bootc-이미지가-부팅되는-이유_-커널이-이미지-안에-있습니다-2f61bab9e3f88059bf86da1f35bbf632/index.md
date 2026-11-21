@@ -1,5 +1,5 @@
 ---
-title: "bootc 이미지가 부팅되는 이유? 커널이 이미지 안에 있습니다"
+title: "bootc: 이미지가 부팅되는 이유? 커널이 이미지 안에 있습니다"
 date: 2026-01-25T06:54:00.000Z
 draft: false
 tags: ["Docker","Infra"]
@@ -8,7 +8,7 @@ description: "bootc 이미지는 커널과 initramfs를 포함해 부팅에 필�
 notion_id: "2f61bab9-e3f8-8059-bf86-da1f35bbf632"
 ---
 
-# bootc 이미지가 부팅되는 이유? 커널이 이미지 안에 있습니다
+# bootc: 이미지가 부팅되는 이유? 커널이 이미지 안에 있습니다
 
 > **Summary**
 > bootc 이미지는 커널과 initramfs를 포함해 부팅에 필요한 파일을 제공하지만, 이것만으로는 부팅되지 않습니다. bootc install이 디스크를 파티셔닝하고 부트로더를 설치한 뒤 이미지를 OSTree 형식으로 배치해야 독립적인 OS로 부팅할 수 있으며, podman run으로 실행하면 호스트 커널을 사용하는 일반 컨테이너로 동작합니다.

@@ -3265,13 +3265,13 @@
     "accessed_at": "2026-11-10T09:07:59.539Z"
   },
   "2db1bab9-e3f8-811b-b3cc-d4f86f839325": {
-    "last_edited_time": "2026-11-20T08:29:00.000Z",
-    "title": "재시도의 핵심은 '다시'가 아니라 '기다렸다가 다시'입니다",
+    "last_edited_time": "2026-11-21T02:28:00.000Z",
+    "title": "attempt: 재시도의 핵심은 '다시'가 아니라 '기다렸다가 다시'입니다",
     "slug": "재시도의-핵심은-'다시'가-아니라-'기다렸다가-다시'입니다-2db1bab9e3f8811bb3ccd4f86f839325",
     "tags": [],
     "themes": [],
     "has_content": true,
-    "content_hash": "7b778227cb46ac325e3af8476b91ff9a4a3461c9862e82798be808ce1007e8ae",
+    "content_hash": "5ef5c7d71864257759bdc6bc83f9f96a3ddbed0c0ccc26132dbd45c0bf069332",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
@@ -3323,8 +3323,8 @@
     "accessed_at": "2026-11-10T09:07:59.539Z"
   },
   "2dc1bab9-e3f8-80eb-959c-d36a307b3ff4": {
-    "last_edited_time": "2026-11-20T08:27:00.000Z",
-    "title": "클로드 코드 워크플로우, 노드로 그린 그림이 그대로 스킬이 된다",
+    "last_edited_time": "2026-11-21T02:29:00.000Z",
+    "title": "CC Workflow Studio: 클로드 코드 워크플로우, 노드로 그린 그림이 그대로 스킬이 된다",
     "slug": "클로드-코드-워크플로우,-노드로-그린-그림이-그대로-스킬이-된다-2dc1bab9e3f880eb959cd36a307b3ff4",
     "tags": [
       "AI",
@@ -3334,19 +3334,19 @@
       "AI"
     ],
     "has_content": true,
-    "content_hash": "1396e7ac0a90cd88a795a6be723d2640baea7110f5ad575fc5c0178659b218c2",
+    "content_hash": "853be7702dc0501253eef9a701b16060d2fecb15fc5d98f3aff3c0e2528815e3",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
   },
   "2dc1bab9-e3f8-811d-8b03-d54f51c78d26": {
-    "last_edited_time": "2026-11-20T08:29:00.000Z",
-    "title": "클로드 코드가 7일 걸리는 일, 시지푸스는 1시간에 끝냅니다",
+    "last_edited_time": "2026-11-21T02:29:00.000Z",
+    "title": "Oh My OpenCode: 클로드 코드가 7일 걸리는 일, 시지푸스는 1시간에 끝냅니다",
     "slug": "클로드-코드가-7일-걸리는-일,-시지푸스는-1시간에-끝냅니다-2dc1bab9e3f8811d8b03d54f51c78d26",
     "tags": [],
     "themes": [],
     "has_content": true,
-    "content_hash": "ee3e7cb44d39d92c9a5b8bb1fbbeeb39097006101748a530e13475b7f7259fba",
+    "content_hash": "ef1b4b41d78e879d7df21912364900f5e8fb22dfad5b3f38bd9a0112fb17060b",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
@@ -3362,7 +3362,7 @@
     "accessed_at": "2026-11-10T09:07:59.539Z"
   },
   "2dc1bab9-e3f8-81df-8410-dc3ff911ae27": {
-    "last_edited_time": "2026-11-20T08:28:00.000Z",
+    "last_edited_time": "2026-11-20T17:06:00.000Z",
     "title": "에이전트 엔지니어링: 출시가 끝이 아니라 배우는 방법이다",
     "slug": "에이전트-엔지니어링_-출시가-끝이-아니라-배우는-방법이다-2dc1bab9e3f881df8410dc3ff911ae27",
     "tags": [
@@ -3441,20 +3441,20 @@
     "accessed_at": "2026-11-10T09:07:59.552Z"
   },
   "2e21bab9-e3f8-814b-9d2c-c1b947cab0e4": {
-    "last_edited_time": "2026-11-20T08:30:00.000Z",
-    "title": "에이전트 토큰 63% 낭비, 임베딩 말고 구조로 찾는 게 답이다",
+    "last_edited_time": "2026-11-21T02:29:00.000Z",
+    "title": "Mantic: 에이전트 토큰 63% 낭비, 임베딩 말고 구조로 찾는 게 답이다",
     "slug": "에이전트-토큰-63%-낭비,-임베딩-말고-구조로-찾는-게-답이다-2e21bab9e3f8814b9d2cc1b947cab0e4",
     "tags": [],
     "themes": [],
     "has_content": true,
-    "content_hash": "b84a7d2a9f779e37095d21adec047d3b50cc5072f8509a15e213632a00528806",
+    "content_hash": "db642819819a6942400cecaa1d319d49d9b869aa4aded8dd433f762a420799af",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
   },
   "2e31bab9-e3f8-811a-98b5-f92ac84d2c3d": {
-    "last_edited_time": "2026-11-20T08:29:00.000Z",
-    "title": "MCP 도구, 안 쓰는 건 꺼두는 게 토큰 절약의 지름길입니다",
+    "last_edited_time": "2026-11-21T02:29:00.000Z",
+    "title": "mcproxy: MCP 도구, 안 쓰는 건 꺼두는 게 토큰 절약의 지름길입니다",
     "slug": "MCP-도구,-안-쓰는-건-꺼두는-게-토큰-절약의-지름길입니다-2e31bab9e3f8811a98b5f92ac84d2c3d",
     "tags": [
       "Util"
@@ -3463,7 +3463,7 @@
       "오픈소스"
     ],
     "has_content": true,
-    "content_hash": "02994637951c0c9c4d7307d05247d73783dae956fcda7baf0a63033dcd29e56c",
+    "content_hash": "c898e401925999835d09ec4c82376303d48fdf7e06aa556dd2f83e84fefdd330",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
@@ -3601,13 +3601,13 @@
     "accessed_at": "2026-11-10T09:07:59.539Z"
   },
   "2e91bab9-e3f8-812e-975e-dda0bc588fb0": {
-    "last_edited_time": "2026-11-20T08:30:00.000Z",
-    "title": "Electron 없이 Mermaid를 네이티브로 그리는 마크다운 에디터",
+    "last_edited_time": "2026-11-21T02:29:00.000Z",
+    "title": "Ferrite: Electron 없이 Mermaid를 네이티브로 그리는 마크다운 에디터",
     "slug": "Electron-없이-Mermaid를-네이티브로-그리는-마크다운-에디터-2e91bab9e3f8812e975edda0bc588fb0",
     "tags": [],
     "themes": [],
     "has_content": true,
-    "content_hash": "c42419803522e47e6c25ab437d239c86a2c3b8d06d69316a6eae7664f769ed55",
+    "content_hash": "5a805acf8e784f44a360a8071cd30226c0ad6f3196bfb47fd249c77318ce05d8",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
@@ -3739,8 +3739,8 @@
     "accessed_at": "2026-11-10T09:07:59.539Z"
   },
   "2ec1bab9-e3f8-81ce-84b9-da95e16677b6": {
-    "last_edited_time": "2026-11-20T08:29:00.000Z",
-    "title": "월 100달러짜리 AI 시스템 오퍼레이터, 로컬에서 무료로 돌리는 방법이 있다",
+    "last_edited_time": "2026-11-21T02:28:00.000Z",
+    "title": "TerminaI: 월 100달러짜리 AI 시스템 오퍼레이터, 로컬에서 무료로 돌리는 방법이 있다",
     "slug": "월-100달러짜리-AI-시스템-오퍼레이터,-로컬에서-무료로-돌리는-방법이-있다-2ec1bab9e3f881ce84b9da95e16677b6",
     "tags": [
       "AI"
@@ -3749,7 +3749,7 @@
       "AI"
     ],
     "has_content": true,
-    "content_hash": "c48d643fa5054bbe543ec886de387fde224e675063baa513f1cbffae9e23a3b4",
+    "content_hash": "03b343622707c7bf2ae2a0ebe33414fb51033149892461fa9410ddf824520123",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
@@ -4201,8 +4201,8 @@
     "asset_warnings": 0
   },
   "2f41bab9-e3f8-816a-845b-e7f5a8d80d13": {
-    "last_edited_time": "2026-11-20T08:29:00.000Z",
-    "title": "Clawdbot, 메신저로 말하면 컴퓨터가 알아서 일한다",
+    "last_edited_time": "2026-11-21T02:29:00.000Z",
+    "title": "Clawdbot: 메신저로 말하면 컴퓨터가 알아서 일한다",
     "slug": "Clawdbot,-메신저로-말하면-컴퓨터가-알아서-일한다-2f41bab9e3f8816a845be7f5a8d80d13",
     "tags": [
       "AI"
@@ -4211,7 +4211,55 @@
       "AI"
     ],
     "has_content": true,
-    "content_hash": "e1d1341ac1d66dccf4a5b27ec2d615a5593b69ddfd837cf1d9e5f488a0303070",
+    "content_hash": "ebb4d77884aa2a0ee733ac590093de23d59383357c091ba5783b46b854ff74f9",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2f41bab9-e3f8-816b-9452-f35574c449cc": {
+    "last_edited_time": "2026-11-21T02:29:00.000Z",
+    "title": "NotebookLM MCP: 에이전트가 크롬을 몰아 노트북에 직접 질문한다",
+    "slug": "NotebookLM-MCP_-에이전트가-크롬을-몰아-노트북에-직접-질문한다-2f41bab9e3f8816b9452f35574c449cc",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "5f3b7932984afb5303af595da7e6d0d54c7b092cabf701457fae366079399389",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2f41bab9-e3f8-81de-850b-c66c1f9db0fc": {
+    "last_edited_time": "2026-11-21T02:29:00.000Z",
+    "title": "pdf2video: PDF 보고서를 영상으로 바꾸면, 읽는 대신 봅니다",
+    "slug": "pdf2video_-PDF-보고서를-영상으로-바꾸면,-읽는-대신-봅니다-2f41bab9e3f881de850bc66c1f9db0fc",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "fa79f028024398bf1d2cfef26b7613e11cfe4589b6c337bc9eb42822ab98e65c",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2f41bab9-e3f8-81e6-a612-f21ab371d8d2": {
+    "last_edited_time": "2026-11-21T02:02:00.000Z",
+    "title": "Agentic OS, OS가 바뀌는 게 아니라 에이전트 층이 새로 생기는 겁니다",
+    "slug": "Agentic-OS,-OS가-바뀌는-게-아니라-에이전트-층이-새로-생기는-겁니다-2f41bab9e3f881e6a612f21ab371d8d2",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "ca9c72ca96818d529f729a635e5813e84fff06e8a5eb500f803ee3ea1ae0ac0e",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2f41bab9-e3f8-81f0-a07b-e4011c4d7ad7": {
+    "last_edited_time": "2026-11-21T02:29:00.000Z",
+    "title": "FinRobot: AI 주식 분석 로봇, 숫자는 코드가 계산하고 결론은 토론이 정합니다",
+    "slug": "FinRobot_-AI-주식-분석-로봇,-숫자는-코드가-계산하고-결론은-토론이-정합니다-2f41bab9e3f881f0a07be4011c4d7ad7",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "0e2b5de50055959d8b381485d2dca22f54e1897a65e77d5b75c62cfb5215f9d6",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
@@ -4263,8 +4311,8 @@
     "accessed_at": "2026-11-10T09:07:59.537Z"
   },
   "2f61bab9-e3f8-8059-bf86-da1f35bbf632": {
-    "last_edited_time": "2026-11-20T08:28:00.000Z",
-    "title": "bootc 이미지가 부팅되는 이유? 커널이 이미지 안에 있습니다",
+    "last_edited_time": "2026-11-21T02:28:00.000Z",
+    "title": "bootc: 이미지가 부팅되는 이유? 커널이 이미지 안에 있습니다",
     "slug": "bootc-이미지가-부팅되는-이유_-커널이-이미지-안에-있습니다-2f61bab9e3f88059bf86da1f35bbf632",
     "tags": [
       "Docker",
@@ -4274,7 +4322,7 @@
       "Let's Bootc!"
     ],
     "has_content": true,
-    "content_hash": "ba00e62082a72dcf94426ba9e8d0579d5b28f29736dfd0e1cf4502a7f3861090",
+    "content_hash": "49c3b181282a33298573ab146fde518e7b38cbae3ece256abd73cebd9c4288f8",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
@@ -4294,6 +4342,63 @@
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.537Z"
   },
+  "2f61bab9-e3f8-818a-83d0-d22891bc73c5": {
+    "last_edited_time": "2026-11-21T02:03:00.000Z",
+    "title": "클로드 코드 + Ghostty, 적은 도구가 더 많은 일을 해냅니다",
+    "slug": "클로드-코드-+-Ghostty,-적은-도구가-더-많은-일을-해냅니다-2f61bab9e3f8818a83d0d22891bc73c5",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "개발환경"
+    ],
+    "has_content": true,
+    "content_hash": "d39851b84828fee518d4040205997e7020166f2717b754f00d038ca8e6c4a642",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2f61bab9-e3f8-819d-9620-f3fe8dd6bf0b": {
+    "last_edited_time": "2026-11-21T02:14:00.000Z",
+    "title": "바이브 코딩, 긴 프롬프트 대신 화면을 짚어주면 됩니다",
+    "slug": "바이브-코딩,-긴-프롬프트-대신-화면을-짚어주면-됩니다-2f61bab9e3f8819d9620f3fe8dd6bf0b",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "ddeb2da3c8ffc256538539368fa5f86dfa66de39ffb423b8d11d469c6458c467",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2f71bab9-e3f8-8044-acc8-fa6250b51c7b": {
+    "last_edited_time": "2026-11-21T02:29:00.000Z",
+    "title": "Podman: rootful vs rootless, 디스크 이미지를 만들 때만 rootful이 필요합니다",
+    "slug": "Podman_-rootful-vs-rootless,-디스크-이미지를-만들-때만-rootful이-필요합니다-2f71bab9e3f88044acc8fa6250b51c7b",
+    "tags": [
+      "Docker",
+      "Infra"
+    ],
+    "themes": [
+      "Let's Bootc!"
+    ],
+    "has_content": true,
+    "content_hash": "5cb01a67621776bd3e0acba1a652e01bda2870a977bdebcbf48f93a1129176b7",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2f71bab9-e3f8-814c-b94f-f6dd7f75ba90": {
+    "last_edited_time": "2026-11-21T02:29:00.000Z",
+    "title": "Playwriter: 에이전트 브라우저 자동화, 새 크롬 말고 내 크롬을 쓰는 게 답이다",
+    "slug": "Playwriter_-에이전트-브라우저-자동화,-새-크롬-말고-내-크롬을-쓰는-게-답이다-2f71bab9e3f8814cb94ff6dd7f75ba90",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "c501f544a52b6c254df6f553fbdb007e1ebb95f9a0e4fa37e6eed60038c791c1",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "2f81bab9-e3f8-8068-a215-e982f06ccd66": {
     "last_edited_time": "2026-01-30T05:20:00.000Z",
     "title": "Podman에서 sudo를 붙였을때와 붙이지 않았을때, 이미지가 저장되는 위치가 다르다고?",
@@ -4308,6 +4413,34 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.537Z"
+  },
+  "2fa1bab9-e3f8-8165-aa7c-d1440d26ac34": {
+    "last_edited_time": "2026-11-21T02:04:00.000Z",
+    "title": "옵시디언 온톨로지, 오픈클로의 환각을 멈추게 합니다",
+    "slug": "옵시디언-온톨로지,-오픈클로의-환각을-멈추게-합니다-2fa1bab9e3f88165aa7cd1440d26ac34",
+    "tags": [
+      "obsidian"
+    ],
+    "themes": [
+      "Tips"
+    ],
+    "has_content": true,
+    "content_hash": "c617501f6ce03f220fb96cc22b7975ee58d0d3e522b82c2cc78f80a2ecdc0319",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2fa1bab9-e3f8-81b5-8b27-d545c8dc560f": {
+    "last_edited_time": "2026-11-21T02:03:00.000Z",
+    "title": "클로드 코드, 하나씩 시키면 손해입니다. 병렬로 굴리는 게 답입니다",
+    "slug": "클로드-코드,-하나씩-시키면-손해입니다.-병렬로-굴리는-게-답입니다-2fa1bab9e3f881b58b27d545c8dc560f",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "789f61281487dc7a14ca54dd0594e176b765e3d6dc8739f4348dc3d817e688c0",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "2fc1bab9-e3f8-80ca-9e96-df942aa73394": {
     "last_edited_time": "2026-02-03T23:13:00.000Z",
@@ -4346,6 +4479,260 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.536Z"
+  },
+  "3091bab9-e3f8-81fa-94c3-fac68728b7ca": {
+    "last_edited_time": "2026-11-21T02:47:00.000Z",
+    "title": "MonoSketch: 다이어그램은 그림이 아니라 텍스트로 그립니다",
+    "slug": "MonoSketch_-다이어그램은-그림이-아니라-텍스트로-그립니다-3091bab9e3f881fa94c3fac68728b7ca",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "31894a0697007d2c427eb68d4701b15be100ac2067556b8bfd2996777d2cf986",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30a1bab9-e3f8-81da-9343-dd23e069ab53": {
+    "last_edited_time": "2026-11-21T02:49:00.000Z",
+    "title": "ZVec: 벡터 DB는 서버가 아니라 앱 안에 들어가는 겁니다",
+    "slug": "ZVec_-벡터-DB는-서버가-아니라-앱-안에-들어가는-겁니다-30a1bab9e3f881da9343dd23e069ab53",
+    "tags": [
+      "Util"
+    ],
+    "themes": [
+      "오픈소스"
+    ],
+    "has_content": true,
+    "content_hash": "dde25c299c4622fdbdb30c3926332b72e791d8cdbfa672a4eccc36d19d229568",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30b1bab9-e3f8-813e-971a-e7f3d9522bda": {
+    "last_edited_time": "2026-11-21T02:49:00.000Z",
+    "title": "BMAD-METHOD: 에이전트끼리 대화하게 하면, 생각이 그대로 코드가 됩니다",
+    "slug": "BMAD-METHOD_-에이전트끼리-대화하게-하면,-생각이-그대로-코드가-됩니다-30b1bab9e3f8813e971ae7f3d9522bda",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "20cfb8a0b2a71220433cb5be4788230a5d250794da2c40628b8e92ad7cb169fa",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30b1bab9-e3f8-8175-9391-c84cd3f1ce81": {
+    "last_edited_time": "2026-11-21T02:47:00.000Z",
+    "title": "OpenClaw: 오래된 PC가 24시간 주식 투자 어시스턴트가 됩니다",
+    "slug": "OpenClaw_-오래된-PC가-24시간-주식-투자-어시스턴트가-됩니다-30b1bab9e3f881759391c84cd3f1ce81",
+    "tags": [
+      "AI",
+      "Python"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "be5ff732c5d41328fb2ee76f25c25024aa60125ab97cd442c6826b941491a982",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30b1bab9-e3f8-81a9-99c6-f2fea764f5d5": {
+    "last_edited_time": "2026-11-21T02:46:00.000Z",
+    "title": "TOON: LLM에 보내는 JSON, 토큰을 절반으로 줄이고 정확도는 그대로 가져갑니다",
+    "slug": "TOON_-LLM에-보내는-JSON,-토큰을-절반으로-줄이고-정확도는-그대로-가져갑니다-30b1bab9e3f881a999c6f2fea764f5d5",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "오픈소스",
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "904aed1996a930bc1f8ff9bb6486cfeb402e081a5958fef4e7f6da829617b175",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30b1bab9-e3f8-81de-a1d5-f386e516ede9": {
+    "last_edited_time": "2026-11-21T02:46:00.000Z",
+    "title": "AI 에이전트, 챗봇이 아니라 일을 대신하는 동료입니다",
+    "slug": "AI-에이전트,-챗봇이-아니라-일을-대신하는-동료입니다-30b1bab9e3f881dea1d5f386e516ede9",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "24cb77133a31d04447fb90f531eaee9b69f3496f99110bb9c39707da91f6a96d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30b1bab9-e3f8-81e4-9c41-ee72b1135659": {
+    "last_edited_time": "2026-11-21T02:48:00.000Z",
+    "title": "멀티에이전트 논문 14편, 에이전트 수가 아니라 역할과 검증이 답이다",
+    "slug": "멀티에이전트-논문-14편,-에이전트-수가-아니라-역할과-검증이-답이다-30b1bab9e3f881e49c41ee72b1135659",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "4feb44b4c114fd71402223552789deac6a418ca0a0b9cf18c4a86d7f1cb0c506",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30b1bab9-e3f8-81fe-bc1d-d20bad8aec59": {
+    "last_edited_time": "2026-11-21T02:49:00.000Z",
+    "title": "Code to Canvas: 클로드 코드로 만든 화면, 피그마에서 편집 가능한 프레임이 됩니다",
+    "slug": "Code-to-Canvas_-클로드-코드로-만든-화면,-피그마에서-편집-가능한-프레임이-됩니다-30b1bab9e3f881febc1dd20bad8aec59",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "e04c55e6046d21cf1c057713bbbbf1fab388e45c04e27fea2ee562d0c083be2b",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30c1bab9-e3f8-8127-8828-cba8fcdda4fd": {
+    "last_edited_time": "2026-11-21T02:48:00.000Z",
+    "title": "AI에게 자유도를 주면, 기능은 알아서 생깁니다",
+    "slug": "AI에게-자유도를-주면,-기능은-알아서-생깁니다-30c1bab9e3f881278828cba8fcdda4fd",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "da824b90c10d9f2d49d75802e1f73c87492106adc14a92650a0bace607383f73",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30c1bab9-e3f8-8132-975e-ef9fcb38570b": {
+    "last_edited_time": "2026-11-21T02:48:00.000Z",
+    "title": "Anna's Archive: LLM이 배운 만큼, 기부로 돌려달라는 요청입니다",
+    "slug": "Anna's-Archive_-LLM이-배운-만큼,-기부로-돌려달라는-요청입니다-30c1bab9e3f88132975eef9fcb38570b",
+    "tags": [],
+    "themes": [],
+    "has_content": true,
+    "content_hash": "b3753401456b031e44e1fd2f86e32222c9a97e2dcc03641dc59d78aa7f701a47",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30c1bab9-e3f8-8156-9f91-ea5b626353ab": {
+    "last_edited_time": "2026-11-21T03:37:00.000Z",
+    "title": "클로드 코드 팀, 비싼 모델은 리더 한 명이면 충분합니다",
+    "slug": "클로드-코드-팀,-비싼-모델은-리더-한-명이면-충분합니다-30c1bab9e3f881569f91ea5b626353ab",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "f05a98748e3b2f768e14f97bff4f8609182a07ea576fd30c6ebac41d713c9c19",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30c1bab9-e3f8-8173-be31-e59a8bcfd79c": {
+    "last_edited_time": "2026-11-21T03:38:00.000Z",
+    "title": "Open Interpreter: PDF 양식 채우기부터 경비 정산까지, AI가 내 파일로 직접 처리합니다",
+    "slug": "Open-Interpreter_-PDF-양식-채우기부터-경비-정산까지,-AI가-내-파일로-직접-처리합니다-30c1bab9e3f88173be31e59a8bcfd79c",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4e71cf501fb0c2368ff3247a3913f9f058e5f186925f0c827e1a2a65999fb9af",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30c1bab9-e3f8-817e-93ec-f44cc1c2c131": {
+    "last_edited_time": "2026-11-21T03:41:00.000Z",
+    "title": "playground: 디자인 결정, 말로 하지 말고 눈으로 고르세요",
+    "slug": "playground_-디자인-결정,-말로-하지-말고-눈으로-고르세요-30c1bab9e3f8817e93ecf44cc1c2c131",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "c6d89ebe23c8f356b3bb1240d5357a9defe1992957218e0d5ae4b24906ec716d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30d1bab9-e3f8-8179-b082-ff49ba4313a9": {
+    "last_edited_time": "2026-11-21T03:45:00.000Z",
+    "title": "Dance of Tal: AI 탐지 테스트를 통과한 지원서, 비결은 생각과 표현의 분리입니다",
+    "slug": "Dance-of-Tal_-AI-탐지-테스트를-통과한-지원서,-비결은-생각과-표현의-분리입니다-30d1bab9e3f88179b082ff49ba4313a9",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "8e75bd85f947a9116d78e532752ed5da6c290755d3ed9a8bcc4b441c4527106f",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30d1bab9-e3f8-81c5-9ee6-fa2892bcb89e": {
+    "last_edited_time": "2026-11-21T03:44:00.000Z",
+    "title": "클로드 코드, 질문에 답하는 게 아니라 직접 고치고 실행합니다",
+    "slug": "클로드-코드,-질문에-답하는-게-아니라-직접-고치고-실행합니다-30d1bab9e3f881c59ee6fa2892bcb89e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "1944a65c58273448ef14b94414ac5dad843d95ccae10002f1fc6f78f44ef909b",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30e1bab9-e3f8-8194-94b1-c36f0ccc83bf": {
+    "last_edited_time": "2026-11-21T03:45:00.000Z",
+    "title": "just-bash: 에이전트에게 셸을 주되, 디스크에는 닿지 않게 하는 게 답입니다",
+    "slug": "just-bash_-에이전트에게-셸을-주되,-디스크에는-닿지-않게-하는-게-답입니다-30e1bab9e3f8819494b1c36f0ccc83bf",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "146c87f523e575bb140d472390505c792e5817b9c03c0b85fdfbad82f79dae14",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "30f1bab9-e3f8-817a-aab8-da5b41a7e6dc": {
+    "last_edited_time": "2026-11-21T02:54:00.000Z",
+    "title": "에이전트가 짠 코드, 사람이 읽지 말고 기계가 남긴 증거로 검증합니다",
+    "slug": "에이전트가-짠-코드,-사람이-읽지-말고-기계가-남긴-증거로-검증합니다-30f1bab9e3f8817aaab8da5b41a7e6dc",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ab7a8cdfdfcf27ba8691c5c5c14da1354616549089f7cb88c336a69c15b919ae",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "324a28ab-6122-422d-ae6e-e989ed1148c0": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",

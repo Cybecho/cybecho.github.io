@@ -1,5 +1,5 @@
 ---
-title: "클로드 코드 워크플로우, 노드로 그린 그림이 그대로 스킬이 된다"
+title: "CC Workflow Studio: 클로드 코드 워크플로우, 노드로 그린 그림이 그대로 스킬이 된다"
 date: 2026-01-02T00:37:00.000Z
 draft: false
 tags: ["AI","Claude"]
@@ -8,7 +8,7 @@ description: "CC Workflow Studio는 VSCode에서 멀티에이전트 워크플로
 notion_id: "2dc1bab9-e3f8-80eb-959c-d36a307b3ff4"
 ---
 
-# 클로드 코드 워크플로우, 노드로 그린 그림이 그대로 스킬이 된다
+# CC Workflow Studio: 클로드 코드 워크플로우, 노드로 그린 그림이 그대로 스킬이 된다
 
 > **Summary**
 > CC Workflow Studio는 VSCode에서 멀티에이전트 워크플로우를 시각적으로 설계하고, 이를 Claude Code의 스킬과 에이전트 파일로 내보내 실행하는 도구입니다. n8n처럼 일반 자동화를 실행하기보다 에이전트의 작업 흐름을 설계하는 데 초점을 두며, CLI와 MCP를 지원해 다양한 도구와 프로젝트에 연동할 수 있습니다. 워크플로우를 코드처럼 버전 관리하고 팀과 공유해 업무 지식과 절차를 실행 가능한 자산으로 만들 수 있습니다.
