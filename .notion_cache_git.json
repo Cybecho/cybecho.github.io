@@ -5262,6 +5262,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3121bab9-e3f8-8197-abca-ca815a9c5252": {
+    "last_edited_time": "2026-11-22T04:10:00.000Z",
+    "title": "GLM-5: 오퍼스급 추론이 무료라면, 일단 써보고 판단하면 됩니다",
+    "slug": "GLM-5_-오퍼스급-추론이-무료라면,-일단-써보고-판단하면-됩니다-3121bab9e3f88197abcaca815a9c5252",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "773efa48ec5f8795866ed367d9885788381cbe5f8409730308e3358e08599679",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3131bab9-e3f8-811b-9ea4-df7ff1a6fac4": {
+    "last_edited_time": "2026-11-22T04:11:00.000Z",
+    "title": "Dance of Tal: 프롬프트는 매번 새로 쓰지 말고, 검증된 걸 받아 쓰면 됩니다",
+    "slug": "Dance-of-Tal_-프롬프트는-매번-새로-쓰지-말고,-검증된-걸-받아-쓰면-됩니다-3131bab9e3f8811b9ea4df7ff1a6fac4",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a52907ade667789bd0c5d271be14c0f2e5635a3f516e9a1b50b0f7757b36c4d8",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3131bab9-e3f8-81c7-9f24-c83818ad4a3e": {
+    "last_edited_time": "2026-11-22T04:11:00.000Z",
+    "title": "NanoClaw: 에이전트는 컨테이너에 가두고, 대화는 메신저로 하면 됩니다",
+    "slug": "NanoClaw_-에이전트는-컨테이너에-가두고,-대화는-메신저로-하면-됩니다-3131bab9e3f881c79f24c83818ad4a3e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a1fe9d1751975ac92d93b5a4409f95cb0a8dabccecf962da778a1f4d6e35976c",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3171bab9-e3f8-8170-b373-e5ebb75d8a79": {
+    "last_edited_time": "2026-11-22T04:11:00.000Z",
+    "title": "SearXNG: 에이전트 검색, API 키 없이 내 서버에서 직접 해결합니다",
+    "slug": "SearXNG_-에이전트-검색,-API-키-없이-내-서버에서-직접-해결합니다-3171bab9e3f88170b373e5ebb75d8a79",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "0db9164d0854a5f4cc2bb9a9301668fb2df345b9e9bed5407afbec04ab90da17",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3171bab9-e3f8-819c-90db-d9c9da269fd7": {
+    "last_edited_time": "2026-11-22T04:11:00.000Z",
+    "title": "AI 에이전트 시대 생존 전략 9가지, 프롬프트가 아니라 환경 설계가 답입니다",
+    "slug": "AI-에이전트-시대-생존-전략-9가지,-프롬프트가-아니라-환경-설계가-답입니다-3171bab9e3f8819c90dbd9c9da269fd7",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "612b8337c4ca986d1424c732110f9e56401a26a3e5a92c4e00764b549e31149d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3171bab9-e3f8-81c8-8bb8-f7d45b69d354": {
+    "last_edited_time": "2026-11-22T04:11:00.000Z",
+    "title": "llmfit: 내 컴퓨터에서 돌아가는 LLM, 다운로드 전에 먼저 골라줍니다",
+    "slug": "llmfit_-내-컴퓨터에서-돌아가는-LLM,-다운로드-전에-먼저-골라줍니다-3171bab9e3f881c88bb8f7d45b69d354",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "0780ec48d3af92701602c8d1f6be431fd6ac4071d62bbc0a9429747a2a02920d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3191bab9-e3f8-8154-8b47-f62f11340826": {
+    "last_edited_time": "2026-11-22T04:11:00.000Z",
+    "title": "다이소 MCP: 헛걸음 전에 AI에게 물어보면, 재고 있는 매장이 보입니다",
+    "slug": "다이소-MCP_-헛걸음-전에-AI에게-물어보면,-재고-있는-매장이-보입니다-3191bab9e3f881548b47f62f11340826",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "8ce11dfb19d2f13ad9d693cda1f24976e968bedf13c77e2d7c0593eb912e5885",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3191bab9-e3f8-81ca-93b0-d96f0a4ea18a": {
+    "last_edited_time": "2026-11-22T04:11:00.000Z",
+    "title": "LuxShot: 복사 안 되는 화면 글자, 단축키 하나로 클립보드에 담습니다",
+    "slug": "LuxShot_-복사-안-되는-화면-글자,-단축키-하나로-클립보드에-담습니다-3191bab9e3f881ca93b0d96f0a4ea18a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9f47b8f2b62d837526b97bbb0d557a6d5edb8ed62cea767014be663de4e4770a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3191bab9-e3f8-81fc-8aee-e3de671134c4": {
+    "last_edited_time": "2026-11-22T04:11:00.000Z",
+    "title": "tutor-skills: AI가 먼저 묻는 공부법, 2주 매일 30분으로 자격증을 땄습니다",
+    "slug": "tutor-skills_-AI가-먼저-묻는-공부법,-2주-매일-30분으로-자격증을-땄습니다-3191bab9e3f881fc8aeee3de671134c4",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "258b5241023acac781794f1e2b2cef56c6d8a82fedc894cc278a88f1de2bb027",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "31c1bab9-e3f8-812d-8b29-d03b0e9a086c": {
+    "last_edited_time": "2026-11-22T04:11:00.000Z",
+    "title": "클로드 코드 가이드: 두꺼운 설명서가 아니라 필요할 때 펼치는 지도입니다",
+    "slug": "클로드-코드-가이드_-두꺼운-설명서가-아니라-필요할-때-펼치는-지도입니다-31c1bab9e3f8812d8b29d03b0e9a086c",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "49fa514736fbaebea90e8c54809fdcde147418b1a1741a396e8a9d730475960d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "324a28ab-6122-422d-ae6e-e989ed1148c0": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "유니티 로그라이크 04",
