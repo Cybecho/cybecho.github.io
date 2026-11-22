@@ -6253,6 +6253,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "32c1bab9-e3f8-814b-9fbc-d1b7c5608f84": {
+    "last_edited_time": "2026-11-22T14:27:00.000Z",
+    "title": "Auto-Research Trading: 전략은 사람이 짜지 않습니다. AI가 백테스트 103번으로 찾아냅니다",
+    "slug": "Auto-Research-Trading_-전략은-사람이-짜지-않습니다.-AI가-백테스트-103번으로-찾아냅니다-32c1bab9e3f8814b9fbcd1b7c5608f84",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "d413f2f383ca1764bf6382a192366bcceda572e6491116a0f3622c1ce9f23e29",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32c1bab9-e3f8-815d-bcc4-caeb82ca6239": {
+    "last_edited_time": "2026-11-22T14:27:00.000Z",
+    "title": "OpenGranola: 회의 중 필요한 말을, 내 노트에서 찾아 띄워줍니다",
+    "slug": "OpenGranola_-회의-중-필요한-말을,-내-노트에서-찾아-띄워줍니다-32c1bab9e3f8815dbcc4caeb82ca6239",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "8f903162ca91f2f3607b0b1090ae7b321feca13e0d49ea470dcc7d33b5e2dac0",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32c1bab9-e3f8-8166-ae83-c16e0a4985e9": {
+    "last_edited_time": "2026-11-22T14:27:00.000Z",
+    "title": "OpenGauss: 수학책 문장을 Lean 코드로 바꾸면, 증명은 기계가 검증합니다",
+    "slug": "OpenGauss_-수학책-문장을-Lean-코드로-바꾸면,-증명은-기계가-검증합니다-32c1bab9e3f88166ae83c16e0a4985e9",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "da2227f7cd82de8366cbca4139d3f76f729312e465ab682e03cfc87b9ffae39e",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32c1bab9-e3f8-8170-b8fe-fedfcfe65c65": {
+    "last_edited_time": "2026-11-22T14:28:00.000Z",
+    "title": "개발자 생태계를 가진 쪽이 이깁니다. AI 시대의 승부는 모델이 아니라 일하는 방식입니다",
+    "slug": "개발자-생태계를-가진-쪽이-이깁니다.-AI-시대의-승부는-모델이-아니라-일하는-방식입니다-32c1bab9e3f88170b8fefedfcfe65c65",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "743a9f4fcaf54780769287a95d09717f3bc872c01eab04f157f08d6918e5f798",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32c1bab9-e3f8-819d-a2d4-d9053e399486": {
+    "last_edited_time": "2026-11-22T14:27:00.000Z",
+    "title": "OpenGauss: 4시간 제한으로 무제한 아리스토텔레스를 이겼습니다. 판정은 커널이 합니다",
+    "slug": "OpenGauss_-4시간-제한으로-무제한-아리스토텔레스를-이겼습니다.-판정은-커널이-합니다-32c1bab9e3f8819da2d4d9053e399486",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e2811d41925a65e137645f115dbc68962527044e0738371dee6ad04daa6056bd",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32c1bab9-e3f8-81b1-93b1-c5ed03043cc5": {
+    "last_edited_time": "2026-11-22T14:27:00.000Z",
+    "title": "클로드 코드 팁 50가지, 전부 외울 필요 없습니다. 가장 불편한 것 하나부터 바꾸면 됩니다",
+    "slug": "클로드-코드-팁-50가지,-전부-외울-필요-없습니다.-가장-불편한-것-하나부터-바꾸면-됩니다-32c1bab9e3f881b193b1c5ed03043cc5",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a71aa94f0e6cfb6b4b714a4865429baf8b584947be12f91983b492983a6adede",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32c1bab9-e3f8-81d6-867f-db3e0573c20b": {
+    "last_edited_time": "2026-11-22T14:28:00.000Z",
+    "title": "Auto-Research Trading: AI가 전략을 스스로 진화시키면, 시장은 AI끼리의 대결이 됩니다",
+    "slug": "Auto-Research-Trading_-AI가-전략을-스스로-진화시키면,-시장은-AI끼리의-대결이-됩니다-32c1bab9e3f881d6867fdb3e0573c20b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "f55401505344aae012fd8460cde98fe1187cfe9f932da11dbe2fc14660e93f82",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32c1bab9-e3f8-81f5-866e-f24ad9b8f095": {
+    "last_edited_time": "2026-11-22T14:28:00.000Z",
+    "title": "PaperBanana: 논문 그림, 이제 그리는 게 아니라 말로 시키면 됩니다",
+    "slug": "PaperBanana_-논문-그림,-이제-그리는-게-아니라-말로-시키면-됩니다-32c1bab9e3f881f5866ef24ad9b8f095",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ea447aaeabad4671596a6cf98cf3f6d0538b02abb5f799edf9524330ceafdeb0",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32d1bab9-e3f8-817d-8269-d712b7d1d0c8": {
+    "last_edited_time": "2026-11-22T14:28:00.000Z",
+    "title": "LLM으로 수만 줄 프로젝트를 유지하는 법: 코드는 AI가 쓰고, 설계는 사람이 합니다",
+    "slug": "LLM으로-수만-줄-프로젝트를-유지하는-법_-코드는-AI가-쓰고,-설계는-사람이-합니다-32d1bab9e3f8817d8269d712b7d1d0c8",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "8a7683df65e3cd19447851ea75350070cecc44469dcb0d12deb3d75a158e5549",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32d1bab9-e3f8-81a7-bd7e-f68368dfb395": {
+    "last_edited_time": "2026-11-22T14:28:00.000Z",
+    "title": "OpenDataLoader PDF: 출시 일주일 만에 깃허브 트렌딩 1위, 하루에 별 1,800개가 찍혔습니다",
+    "slug": "OpenDataLoader-PDF_-출시-일주일-만에-깃허브-트렌딩-1위,-하루에-별-1,800개가-찍혔습니다-32d1bab9e3f881a7bd7ef68368dfb395",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4a2b59c0bada7722f18502af78a3b9428b2fd96c3246e64ba635c3edf80e6e12",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3473fd81-d43d-4cd3-a87f-3ad75a11a3f3": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "MAC 터미널 자동완성 Amazon Q",
