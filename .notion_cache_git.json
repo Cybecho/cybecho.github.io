@@ -4640,6 +4640,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3031bab9-e3f8-8112-8daa-e24233708366": {
+    "last_edited_time": "2026-11-22T03:49:00.000Z",
+    "title": "Mole: 맥 청소, 유료 앱 4개가 하던 일을 터미널 명령어 하나로 끝냅니다",
+    "slug": "Mole_-맥-청소,-유료-앱-4개가-하던-일을-터미널-명령어-하나로-끝냅니다-3031bab9e3f881128daae24233708366",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "65a40bebb7dbc4374bb263e864d921aeb21232a7ca015f6ec07275b1f6fd2a2b",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3031bab9-e3f8-812d-b105-d6f911a150ab": {
+    "last_edited_time": "2026-11-22T03:49:00.000Z",
+    "title": "Claude Code 스킬 10만 개 중 살아남은 4개, 기준은 매일 쓰는지입니다",
+    "slug": "Claude-Code-스킬-10만-개-중-살아남은-4개,-기준은-매일-쓰는지입니다-3031bab9e3f8812db105d6f911a150ab",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9d61c7b2c4b0f7f494f222ac7fea9a216363bc9a3354e89114a82b1de6281ce8",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3041bab9-e3f8-8148-bc3f-c805691298fd": {
+    "last_edited_time": "2026-11-22T03:49:00.000Z",
+    "title": "Obsidian CLI: 터미널에서 노트를 다루면, 클릭할 일이 사라집니다",
+    "slug": "Obsidian-CLI_-터미널에서-노트를-다루면,-클릭할-일이-사라집니다-3041bab9e3f88148bc3fc805691298fd",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "d0c3556c4469dd8aec9539ba8d1a2e383c3e9158101510fcd54c296038bc0afb",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3041bab9-e3f8-8176-8d59-ffb77dfce05f": {
+    "last_edited_time": "2026-11-22T03:49:00.000Z",
+    "title": "Zotero + Obsidian: 논문은 폴더에 쌓는 게 아니라 구조를 잡는 겁니다",
+    "slug": "Zotero-+-Obsidian_-논문은-폴더에-쌓는-게-아니라-구조를-잡는-겁니다-3041bab9e3f881768d59ffb77dfce05f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "0493e9dc1eb0380c0a6e3aa5e23286f3428a8b950eada3c2ef99dbfa0d295cba",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3051bab9-e3f8-810f-a613-fc9f8da3d961": {
+    "last_edited_time": "2026-11-22T03:49:00.000Z",
+    "title": "에이전트를 장시간 일하게 하려면, 프롬프트가 아니라 절차·실행·압축입니다",
+    "slug": "에이전트를-장시간-일하게-하려면,-프롬프트가-아니라-절차·실행·압축입니다-3051bab9e3f8810fa613fc9f8da3d961",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "3e6aed5fba6c375e0cc37348e7105bfe0a6369ad22a67223ce987f9cc8af66fa",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3051bab9-e3f8-8125-9ec7-d0414315d785": {
+    "last_edited_time": "2026-11-22T03:49:00.000Z",
+    "title": "논문 수백 편, 손으로 받지 말고 DOI부터 API 순서대로 흘려보내면 됩니다",
+    "slug": "논문-수백-편,-손으로-받지-말고-DOI부터-API-순서대로-흘려보내면-됩니다-3051bab9e3f881259ec7d0414315d785",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "cc33f965b9c8ea6c0a30fc8ae327781c9221313a5868a40244408309cf05d02e",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3051bab9-e3f8-814d-9cb0-d922dad10e43": {
+    "last_edited_time": "2026-11-22T03:49:00.000Z",
+    "title": "Excalidraw MCP: 다이어그램은 이제 그리는 게 아니라 말로 시키는 겁니다",
+    "slug": "Excalidraw-MCP_-다이어그램은-이제-그리는-게-아니라-말로-시키는-겁니다-3051bab9e3f8814d9cb0d922dad10e43",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "7671fe22cdbf69b37d623f6d833a64d300ca3f67db79963269eaaf86350b44f1",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3051bab9-e3f8-8182-bd02-fadfb303b6ae": {
+    "last_edited_time": "2026-11-22T03:49:00.000Z",
+    "title": "Codex: 인간은 코드를 쓰지 않습니다, 환경을 설계합니다",
+    "slug": "Codex_-인간은-코드를-쓰지-않습니다,-환경을-설계합니다-3051bab9e3f88182bd02fadfb303b6ae",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4dd5b5eb6881bc76fe1da1957360729e684f106a13c98ba227cf3737c900cfb3",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3061bab9-e3f8-810f-b091-fb82a274bd3c": {
+    "last_edited_time": "2026-11-22T03:50:00.000Z",
+    "title": "noapi-google-search-mcp: API 키 없이 로컬 LLM이 구글 검색을 직접 합니다",
+    "slug": "noapi-google-search-mcp_-API-키-없이-로컬-LLM이-구글-검색을-직접-합니다-3061bab9e3f8810fb091fb82a274bd3c",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e30d12eebad980956827847d9d3400aa927d52879adc8b85ed598fff29f73a4b",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3061bab9-e3f8-8115-b486-f23ecbac083b": {
+    "last_edited_time": "2026-11-22T03:50:00.000Z",
+    "title": "AGI가 왔다고요? 이미 일하는 방식이 바뀌고 있습니다",
+    "slug": "AGI가-왔다고요_-이미-일하는-방식이-바뀌고-있습니다-3061bab9e3f88115b486f23ecbac083b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "2a8fdedf66617e433cbcf0b904dba66aca8af09d64ac59582a1c206d0ea9dd95",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3091bab9-e3f8-81fa-94c3-fac68728b7ca": {
     "last_edited_time": "2026-11-21T02:47:00.000Z",
     "title": "MonoSketch: 다이어그램은 그림이 아니라 텍스트로 그립니다",
