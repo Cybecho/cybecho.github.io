@@ -7463,6 +7463,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "38f1bab9-e3f8-8128-ba01-d9f229505087": {
+    "last_edited_time": "2026-11-22T17:51:00.000Z",
+    "title": "청년창업 세액감면, 통장 하나 신고 안 하면 그 해 감면이 통째로 날아갑니다",
+    "slug": "청년창업-세액감면,-통장-하나-신고-안-하면-그-해-감면이-통째로-날아갑니다-38f1bab9e3f88128ba01d9f229505087",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "1579451d19b76c1f3122e7937fa57d9d53ceff7a6dd563d9d43eb187bf348e33",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "38f1bab9-e3f8-81d9-a104-ce2eec76a967": {
+    "last_edited_time": "2026-11-22T17:51:00.000Z",
+    "title": ".self: 내 서버의 주소, 빌리는 게 아니라 갖는 겁니다",
+    "slug": "self_-내-서버의-주소,-빌리는-게-아니라-갖는-겁니다-38f1bab9e3f881d9a104ce2eec76a967",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4a6b039380da6db445d331f1862dd006464ef24c60cff9c849224f75850c0a22",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3901bab9-e3f8-81aa-a3fd-cf451d6c9d25": {
+    "last_edited_time": "2026-11-22T17:51:00.000Z",
+    "title": "월 배당 12%는 월 12%가 아닙니다. 연 12% 목표, 원금을 깎아 줄 수도 있습니다",
+    "slug": "월-배당-12%는-월-12%가-아닙니다.-연-12%-목표,-원금을-깎아-줄-수도-있습니다-3901bab9e3f881aaa3fdcf451d6c9d25",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9b0ddd1153a9d73c661de904e3c1575462e951fbb1591f91bcffaf5a61ac1198",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3901bab9-e3f8-81c0-ae9d-de61dbefe5a9": {
+    "last_edited_time": "2026-11-22T17:51:00.000Z",
+    "title": "아틀라시안도 디자인 기준을 파일 하나로 옮겼습니다. 프로토타입은 됐고, 프로덕션은 비쌌습니다",
+    "slug": "아틀라시안도-디자인-기준을-파일-하나로-옮겼습니다.-프로토타입은-됐고,-프로덕션은-비쌌습니다-3901bab9e3f881c0ae9dde61dbefe5a9",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a71600127251e5d09ddab6dd94b724f3fe3a2d5fe7ce7eec2f1e982411f2ed58",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3901bab9-e3f8-81e4-992f-f758a631d8f5": {
+    "last_edited_time": "2026-11-22T17:51:00.000Z",
+    "title": "Outer Shell: 서버에 터미널만 두지 않습니다. SSH 위에 그래픽 셸을 올립니다",
+    "slug": "Outer-Shell_-서버에-터미널만-두지-않습니다.-SSH-위에-그래픽-셸을-올립니다-3901bab9e3f881e4992ff758a631d8f5",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "2b6c4167fe66287d83d898a09a837ba5f1724f5ddddfee2572baf64d1ee363b2",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3911bab9-e3f8-817c-9dcc-d14393951c8e": {
+    "last_edited_time": "2026-11-22T17:51:00.000Z",
+    "title": "국민연금 포트폴리오, 국내주식이 7개월 만에 18%에서 25%가 됐습니다",
+    "slug": "국민연금-포트폴리오,-국내주식이-7개월-만에-18%에서-25%가-됐습니다-3911bab9e3f8817c9dccd14393951c8e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "0d80c031c7ba3ac90bdca3087df30b72dadf217fcd5211689d2253307d330cbf",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3921bab9-e3f8-8190-b97e-fb70849ad57b": {
+    "last_edited_time": "2026-11-22T17:51:00.000Z",
+    "title": "OCRmyPDF: 스캔 PDF는 그대로 두고, 검색만 되게 만듭니다",
+    "slug": "OCRmyPDF_-스캔-PDF는-그대로-두고,-검색만-되게-만듭니다-3921bab9e3f88190b97efb70849ad57b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e4809307f50648a8780d92b7c160ec1cbc7fb14ef617fdf54915fa209f9f43a9",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3931bab9-e3f8-8175-8a27-d9d4a90d8a86": {
+    "last_edited_time": "2026-11-22T17:51:00.000Z",
+    "title": "에이전트는 goal로 수렴합니다. 프롬프트를 잘 쓰는 시대는 끝났습니다",
+    "slug": "에이전트는-goal로-수렴합니다.-프롬프트를-잘-쓰는-시대는-끝났습니다-3931bab9e3f881758a27d9d4a90d8a86",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "3a61e714c3d003bf70bdee73e065b084408de2a5391876a03f79da2c49e85820",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3941bab9-e3f8-81ca-a6fe-d13de5f9f5ac": {
+    "last_edited_time": "2026-11-22T17:51:00.000Z",
+    "title": "StyleGallery: 에이전트에게 깃허브 링크 하나 던지면, 웹사이트가 참고서대로 고쳐집니다",
+    "slug": "StyleGallery_-에이전트에게-깃허브-링크-하나-던지면,-웹사이트가-참고서대로-고쳐집니다-3941bab9e3f881caa6fed13de5f9f5ac",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "3f39ed06eacb82fc6a218561fe4fa16130f411e2b8d045fee80058f0bf774b12",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3961bab9-e3f8-81b5-84c5-c0aff2e7149a": {
+    "last_edited_time": "2026-11-22T17:52:00.000Z",
+    "title": "리멤버를 1,100억에 사고 2,500억에 팔았습니다. 비싸게 산 게 아니라 비싸게 만든 겁니다",
+    "slug": "리멤버를-1,100억에-사고-2,500억에-팔았습니다.-비싸게-산-게-아니라-비싸게-만든-겁니다-3961bab9e3f881b584c5c0aff2e7149a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "bf8869a4c7495059430a4bd644c2cee62567b01c7a7e46536d4b88925ec31ebe",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "39ad5223-d16d-489b-a97d-4dcd626b0636": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "유니티 3D게임 쿼드뷰 09",
