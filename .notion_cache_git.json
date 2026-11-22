@@ -7303,6 +7303,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3831bab9-e3f8-813f-8790-e43071fb0a81": {
+    "last_edited_time": "2026-11-22T17:45:00.000Z",
+    "title": "Korean Law MCP: 법령을 찾는 게 아닙니다. 판례가 살아있는지까지 검증합니다",
+    "slug": "Korean-Law-MCP_-법령을-찾는-게-아닙니다.-판례가-살아있는지까지-검증합니다-3831bab9e3f8813f8790e43071fb0a81",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "fbf620efd0aee2906401f258d67f15bca51b778cdb4fec4ce4eac48d79a735b2",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3831bab9-e3f8-8177-acd6-e833667aecae": {
+    "last_edited_time": "2026-11-22T17:45:00.000Z",
+    "title": "예쁜 부품이 예쁜 UI를 만들지 않습니다. 서로 맞는 부품이 만듭니다",
+    "slug": "예쁜-부품이-예쁜-UI를-만들지-않습니다.-서로-맞는-부품이-만듭니다-3831bab9e3f88177acd6e833667aecae",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ed8303f84b5b584b57ae7805311dd92752adc759db97d8ee88bcee57b3905f29",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3841bab9-e3f8-811d-9ae8-dec894298f4b": {
+    "last_edited_time": "2026-11-22T17:45:00.000Z",
+    "title": "OKF: 에이전트끼리 지식을 나누는 방법, 새 도구가 아니라 폴더 하나입니다",
+    "slug": "OKF_-에이전트끼리-지식을-나누는-방법,-새-도구가-아니라-폴더-하나입니다-3841bab9e3f8811d9ae8dec894298f4b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "bb630097cd02e7aa1a3b4087699c97d335a336c852109b153128485dc5033e1a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3841bab9-e3f8-81b5-9e86-c9f7af17fd95": {
+    "last_edited_time": "2026-11-22T17:45:00.000Z",
+    "title": "Hermes Agent: 채팅창이 아니라 서버에서 24시간 일하는 게 차이입니다",
+    "slug": "Hermes-Agent_-채팅창이-아니라-서버에서-24시간-일하는-게-차이입니다-3841bab9e3f881b59e86c9f7af17fd95",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "2b7aca7dcd4faf6c89febfd3dae2d4aaacab22e9eabfb12da8b940723dac8a9f",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3841bab9-e3f8-81e3-bce9-d28be94c0d6e": {
+    "last_edited_time": "2026-11-22T17:46:00.000Z",
+    "title": "Mond: 스캔 결과 수천 개, AI가 1차 분석하고 결정은 사람이 합니다",
+    "slug": "Mond_-스캔-결과-수천-개,-AI가-1차-분석하고-결정은-사람이-합니다-3841bab9e3f881e3bce9d28be94c0d6e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "3510bc8ab979cabd835b8d91a19b8a90102c534b17c7e06b456f7c94349543e9",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3881bab9-e3f8-8106-822d-d5e437397441": {
+    "last_edited_time": "2026-11-22T17:45:00.000Z",
+    "title": "REA: 소스 코드 없는 앱, 에이전트가 바이너리까지 뜯어봅니다",
+    "slug": "REA_-소스-코드-없는-앱,-에이전트가-바이너리까지-뜯어봅니다-3881bab9e3f88106822dd5e437397441",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "6cb7dbcc39ebd2afeeebf5de66db426cf45b68dc22de548257dd5fda8fdb2e73",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3891bab9-e3f8-8101-b123-f9d0eafb7703": {
+    "last_edited_time": "2026-11-22T17:45:00.000Z",
+    "title": "AI가 노트 연결까지 대신해주면, 내 노트는 내 것이 아닙니다",
+    "slug": "AI가-노트-연결까지-대신해주면,-내-노트는-내-것이-아닙니다-3891bab9e3f88101b123f9d0eafb7703",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "260c82091ef037707b95c6bf5f053adb801e946ca9c0914bc673f23bdb16914f",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "38a1bab9-e3f8-8170-a865-c4a77cfeaffd": {
+    "last_edited_time": "2026-11-22T17:45:00.000Z",
+    "title": "봇 탐지는 당신이 뭘 하는지 안 봅니다. 브라우저가 뒤에서 흘리는 신호를 봅니다",
+    "slug": "봇-탐지는-당신이-뭘-하는지-안-봅니다.-브라우저가-뒤에서-흘리는-신호를-봅니다-38a1bab9e3f88170a865c4a77cfeaffd",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "edfdfc1e4bd3c6aecded82e75d5b7e4afa6a54980497a754180e2b7e2f3a8c7f",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "38b1bab9-e3f8-8186-83a9-fa78848dc04c": {
+    "last_edited_time": "2026-11-22T17:46:00.000Z",
+    "title": "Cafe24 LLM Router: 모델 고르는 일을 API에 맡기면, 코드는 한 줄도 안 바뀝니다",
+    "slug": "Cafe24-LLM-Router_-모델-고르는-일을-API에-맡기면,-코드는-한-줄도-안-바뀝니다-38b1bab9e3f8818683a9fa78848dc04c",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "6fbe8095c4417e1b72901371771e69eac2c6e8eaa6a8c0ed38a3fb4609550b34",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "38f1bab9-e3f8-8106-bcfd-ea2026616d8b": {
+    "last_edited_time": "2026-11-22T17:46:00.000Z",
+    "title": "광고대행사 영업루트 8가지, 결국 남는 건 릴스·쇼츠입니다",
+    "slug": "광고대행사-영업루트-8가지,-결국-남는-건-릴스·쇼츠입니다-38f1bab9e3f88106bcfdea2026616d8b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "c1c64cb72715a7c15a55af269281cc5c5e33d0b50f3502af34a4359dc67f34b0",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "39ad5223-d16d-489b-a97d-4dcd626b0636": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "유니티 3D게임 쿼드뷰 09",
