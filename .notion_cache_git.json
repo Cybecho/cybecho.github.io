@@ -6776,6 +6776,118 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3591bab9-e3f8-813b-a639-c5d2c62a4ea7": {
+    "last_edited_time": "2026-11-22T16:17:00.000Z",
+    "title": "OpenKB: 문서를 넣으면 위키가 됩니다. 지식은 다시 찾지 않고 쌓입니다",
+    "slug": "OpenKB_-문서를-넣으면-위키가-됩니다.-지식은-다시-찾지-않고-쌓입니다-3591bab9e3f8813ba639c5d2c62a4ea7",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "107ea00d41ee5315779954dff3f92e74cd4e1856b034c5a0c2a0dbd105617f2c",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "35b1bab9-e3f8-8143-809b-ff18afaaba1a": {
+    "last_edited_time": "2026-11-22T16:19:00.000Z",
+    "title": "OpenDesign: 클로드 디자인의 오픈소스 대안, 반년 만에 별 10만 개가 찍혔습니다",
+    "slug": "OpenDesign_-클로드-디자인의-오픈소스-대안,-반년-만에-별-10만-개가-찍혔습니다-35b1bab9e3f88143809bff18afaaba1a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "dd6c3bc0bc90cccef16a7808f7ed6a6af8e2eebc8d4e97a556cec9a01e1f63e8",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "35b1bab9-e3f8-81da-ab36-ee03faa5c39b": {
+    "last_edited_time": "2026-11-22T16:19:00.000Z",
+    "title": "유명한 사이트 디자인을 파일 하나로 가져오면, AI가 만든 화면이 달라집니다",
+    "slug": "유명한-사이트-디자인을-파일-하나로-가져오면,-AI가-만든-화면이-달라집니다-35b1bab9e3f881daab36ee03faa5c39b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "65667fbb3b7fc8d602c9ec400be98db578d86a398590ba32b721f6981c50e0f5",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "35c1bab9-e3f8-81f1-bdc9-fb479073475b": {
+    "last_edited_time": "2026-11-22T16:17:00.000Z",
+    "title": "레퍼런스 186개를 모아두면, AI가 만든 화면이 달라집니다",
+    "slug": "레퍼런스-186개를-모아두면,-AI가-만든-화면이-달라집니다-35c1bab9e3f881f1bdc9fb479073475b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "3370abf104b9e1b498426fda426bf45664c5599c238f7ea9d72f90b2d11a04c7",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "35d1bab9-e3f8-8151-bc51-e6600c3dc06a": {
+    "last_edited_time": "2026-11-22T16:17:00.000Z",
+    "title": "Refero Styles: 2,000개 제품의 디자인 감각을 파일 하나로 복사하면, AI 화면이 달라집니다",
+    "slug": "Refero-Styles_-2,000개-제품의-디자인-감각을-파일-하나로-복사하면,-AI-화면이-달라집니다-35d1bab9e3f88151bc51e6600c3dc06a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "f2ece05c44c5a58cd56929e356fb528f57705bfb9f5964258927d1fdb9744869",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "35d1bab9-e3f8-81c4-a826-e8533f59da7a": {
+    "last_edited_time": "2026-11-22T16:17:00.000Z",
+    "title": "디자인 시스템은 직접 만들지 않습니다. 커뮤니티에서 받아오면 됩니다",
+    "slug": "디자인-시스템은-직접-만들지-않습니다.-커뮤니티에서-받아오면-됩니다-35d1bab9e3f881c4a826e8533f59da7a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "256c7f172d0f967ef302322119187c60cdd84bf3f19d78ed86cec02575a076ff",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "35f1bab9-e3f8-817f-b417-d7c23615811e": {
+    "last_edited_time": "2026-11-22T16:19:00.000Z",
+    "title": "바이럴 영상 프롬프트가 오픈소스처럼 공유됩니다. 중요한 건 AI가 아니라 카메라 무빙입니다",
+    "slug": "바이럴-영상-프롬프트가-오픈소스처럼-공유됩니다.-중요한-건-AI가-아니라-카메라-무빙입니다-35f1bab9e3f8817fb417d7c23615811e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "f7f4f3c3b50856b56b5eca5a2b8cf08b980cc51edf2b6d83e89838fa477f4e79",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "360ac7b1-3655-45b7-aa8a-b46e5562b1d7": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "Obsidian - 벤다이어그램 언어 Mermaid 플러그인",
@@ -6805,6 +6917,54 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.554Z"
+  },
+  "3621bab9-e3f8-8129-b3fd-e304fcaeb1e5": {
+    "last_edited_time": "2026-11-22T16:18:00.000Z",
+    "title": "Hermes Agent Self-Evolution: 프롬프트는 사람이 고치는 게 아닙니다. 실패 기록이 스스로 고칩니다",
+    "slug": "Hermes-Agent-Self-Evolution_-프롬프트는-사람이-고치는-게-아닙니다.-실패-기록이-스스로-고칩니다-3621bab9e3f88129b3fde304fcaeb1e5",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9ad9bf8a83b415600d5537469480bb21afc939e628dd53db987535dfd2777ce4",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3651bab9-e3f8-81a3-841d-d9a5248a079a": {
+    "last_edited_time": "2026-11-22T16:18:00.000Z",
+    "title": "Browser Harness: 내 크롬을 에이전트에게 통째로 맡기면, 없는 도구는 그 자리에서 만듭니다",
+    "slug": "Browser-Harness_-내-크롬을-에이전트에게-통째로-맡기면,-없는-도구는-그-자리에서-만듭니다-3651bab9e3f881a3841dd9a5248a079a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e5276b9521348fb2e0ca22196dd2e756bf06dc9c53fc3ade60e5cee346b98996",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3651bab9-e3f8-81fa-b0e3-d21b449eeeb6": {
+    "last_edited_time": "2026-11-22T16:18:00.000Z",
+    "title": "Chromux: 크롬을 AI 따로 유저 따로 쓰면, 브라우저가 에이전트의 손이 됩니다",
+    "slug": "Chromux_-크롬을-AI-따로-유저-따로-쓰면,-브라우저가-에이전트의-손이-됩니다-3651bab9e3f881fab0e3d21b449eeeb6",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "48461a10e903403e89e5e1174c1fd4b354e8690743cf9116ffae3a8e45a05cf6",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "3738fece-05c5-471d-83f6-3f99a0edf40a": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
