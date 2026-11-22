@@ -6573,6 +6573,102 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3361bab9-e3f8-813d-aeed-de69f11a35a3": {
+    "last_edited_time": "2026-11-22T15:35:00.000Z",
+    "title": "디자인 감각을 파일 하나로 적어두면, AI가 만든 화면이 달라집니다",
+    "slug": "디자인-감각을-파일-하나로-적어두면,-AI가-만든-화면이-달라집니다-3361bab9e3f8813daeedde69f11a35a3",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "95676584c20b12e8d3a7f56f9e3b3bc2e6f634d090217b6033a70d200e77bea1",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3361bab9-e3f8-81da-a823-cb785da0f009": {
+    "last_edited_time": "2026-11-22T15:33:00.000Z",
+    "title": "cokacdir: 코딩 에이전트는 새로 살 필요 없습니다. 텔레그램에서 쓰던 구독 그대로 씁니다",
+    "slug": "cokacdir_-코딩-에이전트는-새로-살-필요-없습니다.-텔레그램에서-쓰던-구독-그대로-씁니다-3361bab9e3f881daa823cb785da0f009",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9e1d5337fc4df0ae4ad1e621c82e010265654afcde4fea041ceb76102488062e",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "33b1bab9-e3f8-817e-801f-ed8d4775e275": {
+    "last_edited_time": "2026-11-22T15:33:00.000Z",
+    "title": "Agent Skills: AI가 테스트를 건너뛰지 못하게 하려면, 절차를 스킬로 강제하면 됩니다",
+    "slug": "Agent-Skills_-AI가-테스트를-건너뛰지-못하게-하려면,-절차를-스킬로-강제하면-됩니다-33b1bab9e3f8817e801fed8d4775e275",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "6d94a14a54dd1c709403efafc60bb54274d91a6b1d7f115902ff79d3c60f4983",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "33b1bab9-e3f8-81e6-9649-db0905d93e65": {
+    "last_edited_time": "2026-11-22T15:33:00.000Z",
+    "title": "Codex: 기획서 100쪽 대신 불릿 10개, 부탁보다 PR이 빠릅니다",
+    "slug": "Codex_-기획서-100쪽-대신-불릿-10개,-부탁보다-PR이-빠릅니다-33b1bab9e3f881e69649db0905d93e65",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e81f30c0cd85bc44b7b20110a7a520103be4c401ed8bfc59229593410b1a6dc7",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "33c1bab9-e3f8-81f6-b54e-cb6ed3582566": {
+    "last_edited_time": "2026-11-22T15:33:00.000Z",
+    "title": "LLM-Wiki: 매번 처음부터 다시 묻지 않습니다. 지식은 한 번 정리하고 계속 쌓입니다",
+    "slug": "LLM-Wiki_-매번-처음부터-다시-묻지-않습니다.-지식은-한-번-정리하고-계속-쌓입니다-33c1bab9e3f881f6b54ecb6ed3582566",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "28076f1ef34a8cff7e29630c8be37c9aeaab32e579d422c4c9a8263b2f3cec67",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3441bab9-e3f8-814e-8af2-d91774cd306e": {
+    "last_edited_time": "2026-11-22T15:33:00.000Z",
+    "title": "Gemini CLI: 복잡한 일은 서브에이전트에게 맡기면, 메인 세션은 가볍게 남습니다",
+    "slug": "Gemini-CLI_-복잡한-일은-서브에이전트에게-맡기면,-메인-세션은-가볍게-남습니다-3441bab9e3f8814e8af2d91774cd306e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "27008aae6ccf6c26a6386b33d7671a84b2a45da51da7789149697d1e76843233",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3473fd81-d43d-4cd3-a87f-3ad75a11a3f3": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "MAC 터미널 자동완성 Amazon Q",
@@ -6586,6 +6682,38 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.546Z"
+  },
+  "34d1bab9-e3f8-8111-a79a-f2162f941c57": {
+    "last_edited_time": "2026-11-22T15:34:00.000Z",
+    "title": "ClawSweeper: AI 50개를 병렬로 돌리면, 쌓인 이슈 4,000개가 하루 만에 정리됩니다",
+    "slug": "ClawSweeper_-AI-50개를-병렬로-돌리면,-쌓인-이슈-4,000개가-하루-만에-정리됩니다-34d1bab9e3f88111a79af2162f941c57",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "b308c8147bc2d950d904b92b4eff2064b58cd37ea44435453c3b64d0d891951d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "34e1bab9-e3f8-810c-bfc9-e27d0285644a": {
+    "last_edited_time": "2026-11-22T15:34:00.000Z",
+    "title": "Scrapling: 반응 4개로 시작한 크롤러가 18개월 만에 깃허브 1위가 됐습니다",
+    "slug": "Scrapling_-반응-4개로-시작한-크롤러가-18개월-만에-깃허브-1위가-됐습니다-34e1bab9e3f8810cbfc9e27d0285644a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "31e5f751705b5b93e17b9a3ef85249fc1cfa6ae3b27ff14b0180554d63c9f3f9",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "354fb72f-efb3-4eb3-9091-5076922da124": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
@@ -6615,6 +6743,38 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.557Z"
+  },
+  "3581bab9-e3f8-8179-81dc-c325c39e682e": {
+    "last_edited_time": "2026-11-22T15:34:00.000Z",
+    "title": "Hermes Agent: 에이전트가 자기 도구를 직접 만들면, 학습 속도가 곱해집니다",
+    "slug": "Hermes-Agent_-에이전트가-자기-도구를-직접-만들면,-학습-속도가-곱해집니다-3581bab9e3f8817981dcc325c39e682e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "3d597e65e62cc93b722ddec984cdabe0f7d052e74b3059e13778b55b461b40f0",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3591bab9-e3f8-8128-8ab2-f55d608dbe7e": {
+    "last_edited_time": "2026-11-22T15:34:00.000Z",
+    "title": "에이전트가 계정을 만들고 도메인을 사고 배포까지 합니다. 사람은 허락만 하면 됩니다",
+    "slug": "에이전트가-계정을-만들고-도메인을-사고-배포까지-합니다.-사람은-허락만-하면-됩니다-3591bab9e3f881288ab2f55d608dbe7e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "64393dedcec2e91fa6921e603065e4db2bb56f82bfa2593df17165b5246b1e66",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "360ac7b1-3655-45b7-aa8a-b46e5562b1d7": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
