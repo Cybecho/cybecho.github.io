@@ -6966,6 +6966,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3661bab9-e3f8-8139-bc99-c1702b0a1b29": {
+    "last_edited_time": "2026-11-22T17:03:00.000Z",
+    "title": "구글 공식 GEO 가이드: AI 검색 최적화, 따로 할 게 없습니다",
+    "slug": "구글-공식-GEO-가이드_-AI-검색-최적화,-따로-할-게-없습니다-3661bab9e3f88139bc99c1702b0a1b29",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4f690c107bcd1d57961a1471842fe148f4cbefc9a0b4645082c44711f1a318e1",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3661bab9-e3f8-81dc-b462-ee0d4cb1b039": {
+    "last_edited_time": "2026-11-22T17:03:00.000Z",
+    "title": "Pascal Editor: 에이전트가 건물 장면을 직접 읽고 고칩니다. 설계가 에이전트의 일이 됩니다",
+    "slug": "Pascal-Editor_-에이전트가-건물-장면을-직접-읽고-고칩니다.-설계가-에이전트의-일이-됩니다-3661bab9e3f881dcb462ee0d4cb1b039",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ad3de3ee6f64fdce04ac6beb718b84e043de63211f80538f8f38c0b670b84e63",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3671bab9-e3f8-8121-95d1-fb25bf3eccad": {
+    "last_edited_time": "2026-11-22T17:03:00.000Z",
+    "title": "Mirage: S3도 슬랙도 지메일도, 에이전트에게는 그냥 파일입니다",
+    "slug": "Mirage_-S3도-슬랙도-지메일도,-에이전트에게는-그냥-파일입니다-3671bab9e3f8812195d1fb25bf3eccad",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "148ea02f27cea002e1ec1fa2966fe989f8aa95e6ee38656d7d950974f793212f",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "36b1bab9-e3f8-80b9-b536-dcffb0ef66da": {
+    "last_edited_time": "2026-11-22T17:04:00.000Z",
+    "title": "birdclaw: 트위터 기록을 서버가 아니라 내 컴퓨터에 두면, 잊었던 트윗이 바로 찾아집니다",
+    "slug": "birdclaw_-트위터-기록을-서버가-아니라-내-컴퓨터에-두면,-잊었던-트윗이-바로-찾아집니다-36b1bab9e3f880b9b536dcffb0ef66da",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "7133db694b1c7192dd48eaa65614215193aff53973afe049ea1523216b5bf7a3",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "36c1bab9-e3f8-818a-bdf5-cca8f7ae2e30": {
+    "last_edited_time": "2026-11-22T17:04:00.000Z",
+    "title": "llms.txt: 구글이 라이트하우스에 넣었습니다. 하지만 검색 순위에 도움은 안 됩니다",
+    "slug": "llms.txt_-구글이-라이트하우스에-넣었습니다.-하지만-검색-순위에-도움은-안-됩니다-36c1bab9e3f8818abdf5cca8f7ae2e30",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "56fb402388170e37e9518eea60e86f13cd028a4a42571dc5c91a0c736fcff6ee",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "36c1bab9-e3f8-81e0-b5b4-d3556c0fe52f": {
+    "last_edited_time": "2026-11-22T17:04:00.000Z",
+    "title": "Codex: 활용 사례가 12개에서 52개로 늘었습니다. 코딩 도구가 아니라 팀 전체의 일감 창구가 됩니다",
+    "slug": "Codex_-활용-사례가-12개에서-52개로-늘었습니다.-코딩-도구가-아니라-팀-전체의-일감-창구가-됩니다-36c1bab9e3f881e0b5b4d3556c0fe52f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "048886d463e5c505e1980505f2e3b8d45836f21a0e15306a073ae10e256816fc",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3721bab9-e3f8-8154-96ac-e35d0aa21453": {
+    "last_edited_time": "2026-11-22T17:04:00.000Z",
+    "title": "Patina: AI 티를 벗기면, 뜻은 그대로 남습니다",
+    "slug": "Patina_-AI-티를-벗기면,-뜻은-그대로-남습니다-3721bab9e3f8815496ace35d0aa21453",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9aa5afab176c28feea4955cb39cdf5fd53c48679b39a5c6b6e870605ff5cbbd9",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3721bab9-e3f8-8158-9a80-fd9a601206ae": {
+    "last_edited_time": "2026-11-22T17:04:00.000Z",
+    "title": "35만 원짜리 중고 데이터센터 GPU, 게이밍 PC에 꽂으면 27B 모델이 집에서 돌아갑니다",
+    "slug": "35만-원짜리-중고-데이터센터-GPU,-게이밍-PC에-꽂으면-27B-모델이-집에서-돌아갑니다-3721bab9e3f881589a80fd9a601206ae",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a6d79c57aa2afd066c5eb38e4fc7d95cabb515c67b6884f591bd63a8c0fe8ffb",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3731bab9-e3f8-81ba-a5b0-dd19d02f5267": {
+    "last_edited_time": "2026-11-22T17:04:00.000Z",
+    "title": "Codex: 슬라이드, 직접 만들지 않습니다. 시키면 한 장씩 그려줍니다",
+    "slug": "Codex_-슬라이드,-직접-만들지-않습니다.-시키면-한-장씩-그려줍니다-3731bab9e3f881baa5b0dd19d02f5267",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "c5563641e970af119f837f7c16f61a67e0cad628514ec9b05151ef241a477dba",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3731bab9-e3f8-81c4-a49b-d9c897679ea7": {
+    "last_edited_time": "2026-11-22T17:04:00.000Z",
+    "title": "Codex: 슬라이드 이미지, 예쁘게 뽑는 길과 고쳐 쓰는 길은 다릅니다",
+    "slug": "Codex_-슬라이드-이미지,-예쁘게-뽑는-길과-고쳐-쓰는-길은-다릅니다-3731bab9e3f881c4a49bd9c897679ea7",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e925742c720b11b9af0bbc3b8aba3adcbd0dacf34f0c5c8ee76b684ee4aa03a5",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3738fece-05c5-471d-83f6-3f99a0edf40a": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "VS code 투명화 (vs code설치가 손상된 것 같습니다)",
@@ -6982,6 +7142,166 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.552Z"
+  },
+  "3771bab9-e3f8-816c-ac2a-da00e96543d9": {
+    "last_edited_time": "2026-11-22T17:11:00.000Z",
+    "title": "구글 공식 GEO 진단 도구, 점수가 없습니다. 대신 분수가 나옵니다",
+    "slug": "구글-공식-GEO-진단-도구,-점수가-없습니다.-대신-분수가-나옵니다-3771bab9e3f8816cac2ada00e96543d9",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "5c543a9bda3af2fb03f41638a13dbcf91e2f3b96e19275579f36b43979ceab55",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3791bab9-e3f8-8100-b4d9-d873b5efdf31": {
+    "last_edited_time": "2026-11-22T17:11:00.000Z",
+    "title": "LazyCodex: 큰 코드베이스에서는 프롬프트가 아니라 하네스가 일합니다",
+    "slug": "LazyCodex_-큰-코드베이스에서는-프롬프트가-아니라-하네스가-일합니다-3791bab9e3f88100b4d9d873b5efdf31",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "fb249f564ea8393962d7083237b71bd2ab767859e5cb7982a55588ad37e7ba75",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3791bab9-e3f8-814f-93f9-e9a6ad83656d": {
+    "last_edited_time": "2026-11-22T17:12:00.000Z",
+    "title": "C++ 40년사: 겨울이 와도 안 죽는 언어, 하드웨어를 직접 만지기 때문입니다",
+    "slug": "C++-40년사_-겨울이-와도-안-죽는-언어,-하드웨어를-직접-만지기-때문입니다-3791bab9e3f8814f93f9e9a6ad83656d",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "69112235541c8302036b3015e19c1a7339ee16b1aaa009847e02e53863e048ed",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "37a1bab9-e3f8-8128-abe3-ea2e4edc7f87": {
+    "last_edited_time": "2026-11-22T17:12:00.000Z",
+    "title": "AI팀은 허상입니다. 메인 에이전트 하나가 프로세스를 돌려야 합니다",
+    "slug": "AI팀은-허상입니다.-메인-에이전트-하나가-프로세스를-돌려야-합니다-37a1bab9e3f88128abe3ea2e4edc7f87",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "5872aafcb9550210b0d3aae579cabddcd71400bb04807cbf07c4582e48e9900b",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "37a1bab9-e3f8-81c2-b8db-f71ff459e3ac": {
+    "last_edited_time": "2026-11-22T17:12:00.000Z",
+    "title": "서치콘솔에 생성형 AI 보고서가 생겼습니다. 보이는 건 노출뿐입니다",
+    "slug": "서치콘솔에-생성형-AI-보고서가-생겼습니다.-보이는-건-노출뿐입니다-37a1bab9e3f881c2b8dbf71ff459e3ac",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "0ff5de2da2ac382bab0c5039f638b24785f4b8f044e96e399f3a1ab79aa3f26e",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "37c1bab9-e3f8-8129-991b-e71a9b0c86d2": {
+    "last_edited_time": "2026-11-22T17:12:00.000Z",
+    "title": "소프트웨어 해커톤은 끝났습니다. 이제 전선과 API가 주인공입니다",
+    "slug": "소프트웨어-해커톤은-끝났습니다.-이제-전선과-API가-주인공입니다-37c1bab9e3f88129991be71a9b0c86d2",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "be1f1f05e16cd63a72fea9f02e18bc8267733996c0f3bbbc24d0bcb6fd3fdbfe",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "37d1bab9-e3f8-81b4-a799-def099dc0824": {
+    "last_edited_time": "2026-11-22T17:12:00.000Z",
+    "title": "AI가 코드를 다 쓰는 시대, 30배 엔지니어의 차이는 취향입니다",
+    "slug": "AI가-코드를-다-쓰는-시대,-30배-엔지니어의-차이는-취향입니다-37d1bab9e3f881b4a799def099dc0824",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "d8418dbd4252028f036d8c479f49e599aea2583ed6ef960b92c096428d018044",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3801bab9-e3f8-8110-a000-c7c184ce7f1b": {
+    "last_edited_time": "2026-11-22T17:12:00.000Z",
+    "title": "Codex Product Design: 기획부터 디자인, 개발까지 한 대화로 끝냅니다",
+    "slug": "Codex-Product-Design_-기획부터-디자인,-개발까지-한-대화로-끝냅니다-3801bab9e3f88110a000c7c184ce7f1b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "950bc5dea393a61726faed75863064c6554979afce819b52319323bfacda7e06",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3811bab9-e3f8-817c-96c3-d10653ee52db": {
+    "last_edited_time": "2026-11-22T17:12:00.000Z",
+    "title": "im-not-ai: AI가 쓴 글을 고치는 게 아닙니다. 사람 말투로 되돌립니다",
+    "slug": "im-not-ai_-AI가-쓴-글을-고치는-게-아닙니다.-사람-말투로-되돌립니다-3811bab9e3f8817c96c3d10653ee52db",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4af227a8a4256bf68fe65fae919068b66a9872f05a03a3c1e04222f554283275",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3821bab9-e3f8-818b-8502-ef8dd09f6412": {
+    "last_edited_time": "2026-11-22T17:12:00.000Z",
+    "title": "Awesome Copilot: 코딩 스킬 376개를 모아두면, 코파일럿이 매번 같은 순서로 일합니다",
+    "slug": "Awesome-Copilot_-코딩-스킬-376개를-모아두면,-코파일럿이-매번-같은-순서로-일합니다-3821bab9e3f8818b8502ef8dd09f6412",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ddc60dc37dad4d26f617f55a8addbd4e66d20c37fbd5f4360030ee7a8bdbc24f",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "39ad5223-d16d-489b-a97d-4dcd626b0636": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
