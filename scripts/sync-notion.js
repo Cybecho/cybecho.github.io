@@ -87,6 +87,18 @@ function createSlug(title, id) {
   return `${slug || 'post'}-${idKey(id)}`;
 }
 
+function firstImage(body) {
+  // First image in the rendered body. The cover diagram sits right after the
+  // 3-line summary, so the first image is the post's representative image.
+  // Used as featured_image so templates can build og:image from the post's
+  // own image instead of the author avatar.
+  const md = body.match(/!\[[^\]]*\]\(\s*<?([^)\s>]+)>?/);
+  if (md) return md[1];
+  const html = body.match(/<image\s[^>]*source=["']([^"']+)["']/i);
+  if (html) return html[1];
+  return '';
+}
+
 function renderPost(page, blockContent) {
   const props = page.properties || {};
   const title = (props['제목']?.title || Object.values(props).find(p => p.type === 'title')?.title || []).map(t => t.plain_text || t.text?.content || '').join('') || 'Untitled';
@@ -95,10 +107,12 @@ function renderPost(page, blockContent) {
   const tags = props.Tags?.multi_select?.map(t => t.name) || [];
   const themes = props.Thems?.multi_select?.map(t => t.name) || [];
   const summary = (props['AI 요약']?.rich_text || []).map(t => t.plain_text || t.text?.content || '').join('');
+  const featured = firstImage(blockContent);
   let header = `---\ntitle: ${yaml(title)}\ndate: ${date.toISOString()}\ndraft: false\n`;
   if (tags.length) header += `tags: ${JSON.stringify(tags)}\n`;
   if (themes.length) header += `series: ${JSON.stringify(themes)}\n`;
   if (summary) header += `description: ${yaml(summary)}\n`;
+  if (featured) header += `featured_image: ${yaml(featured)}\n`;
   header += `notion_id: ${yaml(page.id)}\n---\n\n`;
   // Do not publish source workspace URLs or raw API objects.
   let content = `# ${title}\n\n`;
