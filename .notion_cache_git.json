@@ -4183,7 +4183,7 @@
       "AI"
     ],
     "has_content": true,
-    "content_hash": "92ae0e66cc5b3ac750bf002a18dc345951b4cf5fc3022e21441539410807e29e",
+    "content_hash": "5d1c6f1111c7b521260fb8002782bb9eb647d81800845af87def163ea1798f34",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 1
@@ -4442,6 +4442,70 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "2fb1bab9-e3f8-8077-bc5a-e8f1eb7db0a9": {
+    "last_edited_time": "2026-11-21T06:04:00.000Z",
+    "title": "클로드 스킬, 매번 설명하지 말고 한 번 가르치면 됩니다",
+    "slug": "클로드-스킬,-매번-설명하지-말고-한-번-가르치면-됩니다-2fb1bab9e3f88077bc5ae8f1eb7db0a9",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "85d8a017d96db60ecead0651bfd60d3cca814e9d091982d83c9bfe872763bbe7",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2fb1bab9-e3f8-819b-ac1c-d447f4be5f1b": {
+    "last_edited_time": "2026-11-21T06:04:00.000Z",
+    "title": "노트북LM에 제미나이 젬을 붙이면, 같은 설명을 매번 반복하지 않습니다",
+    "slug": "노트북LM에-제미나이-젬을-붙이면,-같은-설명을-매번-반복하지-않습니다-2fb1bab9e3f8819bac1cd447f4be5f1b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "fd4d19ae56c4a61cea33d769f3014454f603814221b4e507c1ce1e82b5021464",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2fb1bab9-e3f8-819e-9531-cb02018274d4": {
+    "last_edited_time": "2026-11-21T06:04:00.000Z",
+    "title": "oh-my-agent: 에이전트 한 명이 아니라 역할이 나뉜 팀이 일합니다",
+    "slug": "oh-my-agent_-에이전트-한-명이-아니라-역할이-나뉜-팀이-일합니다-2fb1bab9e3f8819e9531cb02018274d4",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a3bea0905e19f2908b5d44f1d876db313fefebb2f7dcfd8d63b2f259d7d454a0",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "2fc1bab9-e3f8-806e-b247-d9f27fdfcfb6": {
+    "last_edited_time": "2026-11-21T06:04:00.000Z",
+    "title": "Obsidian + NotebookLM + Antigravity: 영상 하나를 넣으면 블로그 글과 인포그래픽이 노트에 쌓입니다",
+    "slug": "Obsidian-+-NotebookLM-+-Antigravity_-영상-하나를-넣으면-블로그-글과-인포그래픽이-노트에-쌓입니다-2fc1bab9e3f8806eb247d9f27fdfcfb6",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e96ed90d366a6fb5d2cc621e1c9464f351a41efad85234b2ffbac3dc13b64a14",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "2fc1bab9-e3f8-80ca-9e96-df942aa73394": {
     "last_edited_time": "2026-02-03T23:13:00.000Z",
     "title": "한국서비스 API 모음 저장소",
@@ -4456,6 +4520,22 @@
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.536Z"
   },
+  "2fc1bab9-e3f8-8193-b69f-e8b31f121817": {
+    "last_edited_time": "2026-11-21T06:04:00.000Z",
+    "title": "OpenSpec: PRD를 완벽하게 짜지 말고, 바뀔 때마다 spec을 고치면 됩니다",
+    "slug": "OpenSpec_-PRD를-완벽하게-짜지-말고,-바뀔-때마다-spec을-고치면-됩니다-2fc1bab9e3f88193b69fe8b31f121817",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4a7de80862b1d8ad99c3545af61c7f5eb61fd9d1f9ced6e7a49764afe8ed0696",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3001bab9-e3f8-8170-b39d-c31e9043995b": {
     "last_edited_time": "2026-02-07T03:35:00.000Z",
     "title": "AI플랜모드 시각화",
@@ -4465,6 +4545,38 @@
     "themes": [],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.536Z"
+  },
+  "3001bab9-e3f8-8174-975e-c0caf747a29c": {
+    "last_edited_time": "2026-11-21T06:04:00.000Z",
+    "title": "Claude Opus 4.6 쓰는 법: 한 번만 말하고, 맥락부터 주고, 멈출 때를 정하세요",
+    "slug": "Claude-Opus-4.6-쓰는-법_-한-번만-말하고,-맥락부터-주고,-멈출-때를-정하세요-3001bab9e3f88174975ec0caf747a29c",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "65a7937c07f146f746bbb4593ceed18ee6fc7e02d11bd57aa851954d498093ea",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3001bab9-e3f8-81a6-befd-e106a30cb243": {
+    "last_edited_time": "2026-11-21T06:05:00.000Z",
+    "title": "Fluid: AI가 인프라를 만지게 하려면, 진짜가 아니라 복제본을 줘야 합니다",
+    "slug": "Fluid_-AI가-인프라를-만지게-하려면,-진짜가-아니라-복제본을-줘야-합니다-3001bab9e3f881a6befde106a30cb243",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "8bafeb2b572efe5231fc8e0e0b66b11a8011a148783faf597ca0b811760f8d2e",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "3011bab9-e3f8-808a-b893-c9403e7d4e6e": {
     "last_edited_time": "2026-02-08T22:48:00.000Z",
@@ -4479,6 +4591,54 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.536Z"
+  },
+  "3011bab9-e3f8-81f9-bb7c-ea9e8c46fb91": {
+    "last_edited_time": "2026-11-21T06:05:00.000Z",
+    "title": "Shannon: 경고가 아니라 익스플로잇으로 증명하는 AI 보안 테스트입니다",
+    "slug": "Shannon_-경고가-아니라-익스플로잇으로-증명하는-AI-보안-테스트입니다-3011bab9e3f881f9bb7cea9e8c46fb91",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "70a5eea231c401d0d903b27d2057415a65d880c61d14ebab3a501691a5cbc75d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3021bab9-e3f8-81d2-a12e-e095c2f1a9dc": {
+    "last_edited_time": "2026-11-21T06:05:00.000Z",
+    "title": "Opus 만능 프롬프트: AI를 기술 공동창업자로 쓰면, 5분 만에 진짜 제품이 나옵니다",
+    "slug": "Opus-만능-프롬프트_-AI를-기술-공동창업자로-쓰면,-5분-만에-진짜-제품이-나옵니다-3021bab9e3f881d2a12ee095c2f1a9dc",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "bb3ca4e5295ca0b05c9cb51a38e61957c55f9af783b63c15d0b190721017e1a1",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3021bab9-e3f8-81dc-b1eb-f36212986c92": {
+    "last_edited_time": "2026-11-21T06:05:00.000Z",
+    "title": "Claude Code 70가지 팁, 핵심은 명령어가 아니라 컨텍스트입니다",
+    "slug": "Claude-Code-70가지-팁,-핵심은-명령어가-아니라-컨텍스트입니다-3021bab9e3f881dcb1ebf36212986c92",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "58c2656b3121e5e13bf81da51a9e68b01d650029589470e40a5719d8b4b239ca",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "3091bab9-e3f8-81fa-94c3-fac68728b7ca": {
     "last_edited_time": "2026-11-21T02:47:00.000Z",
