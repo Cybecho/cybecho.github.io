@@ -1,0 +1,86 @@
+# Compress large PNGs in place (one-time fix, re-runnable)
+#
+# Why: Pages output exceeded the 1GB gate (Hugo run #803 failed at
+# 1,005,046,007 bytes). The bulk is PNG screenshots under content/posts
+# (806MB across 1,046 files; 105 files >2MB = 556MB, mostly old
+# Bootc-series screenshots of 6-9MB each). Orphan cleanup found 0 files,
+# so compression is the lever left.
+#
+# How: pngquant lossy-compresses each PNG in place, keeping the exact
+# same filename, so no markdown references change and no post needs
+# re-rendering. Quality 70-85 keeps screenshots visually near-identical.
+# Files whose compressed version is not smaller are left untouched
+# (--skip-if-larger).
+#
+# Persistence note: the Notion sync only re-renders posts whose Notion
+# content changed, so compressed images stay compressed. If a post is
+# later edited in Notion, its images are re-downloaded at original size;
+# re-run this workflow then (workflow_dispatch, any time).
+#
+# Safety: only touches content/posts/*.png larger than the threshold.
+# Never touches static/covers (already WebP), markdown, or anything else.
+
+name: Compress large PNGs
+
+on:
+  workflow_dispatch:
+    inputs:
+      min_size_mb:
+        description: "Compress PNGs larger than this (MB) under content/posts"
+        required: false
+        default: "1"
+      quality:
+        description: "pngquant quality range (min-max)"
+        required: false
+        default: "70-85"
+
+permissions:
+  contents: write
+
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pngquant
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq pngquant
+
+      - name: Compress PNGs in place
+        run: |
+          set -e
+          MIN_MB="${{ inputs.min_size_mb }}"
+          Q="${{ inputs.quality }}"
+          echo "Threshold: PNGs larger than ${MIN_MB}MB under content/posts, quality ${Q}"
+          find content/posts -name '*.png' -size "+${MIN_MB}M" -print0 > /tmp/candidates.txt
+          COUNT=$(tr -cd '\0' < /tmp/candidates.txt | wc -c)
+          BEFORE=$(xargs -0 -a /tmp/candidates.txt stat -c%s 2>/dev/null | awk '{s+=$1} END {print s+0}')
+          echo "candidates: ${COUNT} files, ${BEFORE} bytes total"
+          DONE=0
+          while IFS= read -r -d '' f; do
+            before=$(stat -c%s "$f")
+            if pngquant --force --ext .png --quality="${Q}" --speed 1 --skip-if-larger "$f" 2>/dev/null; then
+              after=$(stat -c%s "$f")
+              if [ "$after" -lt "$before" ]; then
+                DONE=$((DONE+1))
+                echo "compressed: $f ${before} -> ${after}"
+              fi
+            fi
+          done < /tmp/candidates.txt
+          AFTER=$(xargs -0 -a /tmp/candidates.txt stat -c%s 2>/dev/null | awk '{s+=$1} END {print s+0}')
+          echo "files compressed: ${DONE} of ${COUNT}"
+          echo "bytes before: ${BEFORE}"
+          echo "bytes after:  ${AFTER}"
+          echo "bytes freed:  $((BEFORE - AFTER))"
+
+      - name: Commit compressed images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "nothing to commit (no file got smaller)"
+          else
+            git commit -m "compress: pngquant large PNGs in content/posts (in place, filenames unchanged)"
+            git push
+          fi
