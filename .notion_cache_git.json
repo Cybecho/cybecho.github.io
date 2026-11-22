@@ -7813,6 +7813,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3a31bab9-e3f8-8176-bb4e-d88b0ffe2cfc": {
+    "last_edited_time": "2026-11-22T18:09:00.000Z",
+    "title": "LeafWiki: 위키 하나 띄우는 데 바이너리 한 개면 됩니다. 웹서버도 DB도 따로 없습니다",
+    "slug": "LeafWiki_-위키-하나-띄우는-데-바이너리-한-개면-됩니다.-웹서버도-DB도-따로-없습니다-3a31bab9e3f88176bb4ed88b0ffe2cfc",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "59234bd4c67902a5dc5d0a0097054999984bb341771eed3964eb7b911a86862a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-818a-991e-f0cd828ade78": {
+    "last_edited_time": "2026-11-22T18:09:00.000Z",
+    "title": "에이전트의 실력은 모델이 아니라 루프 네 개가 만듭니다",
+    "slug": "에이전트의-실력은-모델이-아니라-루프-네-개가-만듭니다-3a31bab9e3f8818a991ef0cd828ade78",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a49b4ebc17d398948e0811b8864ed2c6a4b6386b3bbac0e7f169f3424276f841",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-81ae-a3b1-fa031bd7d1ed": {
+    "last_edited_time": "2026-11-22T18:09:00.000Z",
+    "title": ".self: 공짜 도메인에 박수치기 전에, 무료 도메인의 전례부터 봐야 합니다",
+    "slug": "self_-공짜-도메인에-박수치기-전에,-무료-도메인의-전례부터-봐야-합니다-3a31bab9e3f881aea3b1fa031bd7d1ed",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "f22e38b99c758223b93bb56a8cb73aaca0badb0dc62dd078358687c89b8c5bf5",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-81b2-b5e6-f4c42af00edb": {
+    "last_edited_time": "2026-11-22T18:09:00.000Z",
+    "title": "Agent Skills: 설치 버튼은 없습니다. 스킬 폴더를 에이전트 옆에 두는 게 설치입니다",
+    "slug": "Agent-Skills_-설치-버튼은-없습니다.-스킬-폴더를-에이전트-옆에-두는-게-설치입니다-3a31bab9e3f881b2b5e6f4c42af00edb",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "cee8d878b74bf5bad204ff7519f2446c5da6b5915741bbe723be300aa56d93b5",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-81ba-928f-dd56c5c706c5": {
+    "last_edited_time": "2026-11-22T18:09:00.000Z",
+    "title": "카톡 자동 답장, 돌리는 건 쉬운데 걸리면 계정이 통째로 날아갑니다",
+    "slug": "카톡-자동-답장,-돌리는-건-쉬운데-걸리면-계정이-통째로-날아갑니다-3a31bab9e3f881ba928fdd56c5c706c5",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9037f4d682d4f0d4fe7eba270931fb1dc49afe413f4ee368b73c66ed1d83f669",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-81c0-8cd8-c455707d642c": {
+    "last_edited_time": "2026-11-22T18:09:00.000Z",
+    "title": "광고비는 끄는 순간 멈춥니다. 영상은 올린 뒤에도 계속 일합니다",
+    "slug": "광고비는-끄는-순간-멈춥니다.-영상은-올린-뒤에도-계속-일합니다-3a31bab9e3f881c08cd8c455707d642c",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "7baae9cba631242ed025d5b764e2fe5718d0230837952d14ac1506cb9d47c861",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-81c1-9be4-cb21e1b1ad7f": {
+    "last_edited_time": "2026-11-22T18:09:00.000Z",
+    "title": "orca: 터미널 10개를 켜는 게 아닙니다. 작업마다 창 하나씩 나누는 겁니다",
+    "slug": "orca_-터미널-10개를-켜는-게-아닙니다.-작업마다-창-하나씩-나누는-겁니다-3a31bab9e3f881c19be4cb21e1b1ad7f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "1f731c83ca545cf4366f1d5debbceb79a4207649824679fb1876c708fa55d070",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-81c9-a1f3-e65369a928e0": {
+    "last_edited_time": "2026-11-22T18:09:00.000Z",
+    "title": "하네스의 알맹이는 결국 소프트웨어 공학입니다. 바뀐 건 규율이 사는 자리뿐입니다",
+    "slug": "하네스의-알맹이는-결국-소프트웨어-공학입니다.-바뀐-건-규율이-사는-자리뿐입니다-3a31bab9e3f881c9a1f3e65369a928e0",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a45a1d3423b1bd4f93700ed99563e86995d7050331d5075fbf41af81d757133c",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-81cc-bd22-e1f946c44653": {
+    "last_edited_time": "2026-11-22T18:09:00.000Z",
+    "title": "법령 100개를 한 장씩 그림으로 그리면, 전문가가 아니어도 제도가 보입니다",
+    "slug": "법령-100개를-한-장씩-그림으로-그리면,-전문가가-아니어도-제도가-보입니다-3a31bab9e3f881ccbd22e1f946c44653",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4a9a9a341147be83629aa8e1ff8396407c600676f77e03d02c175f3fc388c07c",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-81ea-ade7-cde0eb1c3935": {
+    "last_edited_time": "2026-11-22T18:10:00.000Z",
+    "title": "해커톤에서 키보드를 만지면 바닷가재 머리띠를 씁니다. 사람은 자고 AI가 10만 줄을 썼습니다",
+    "slug": "해커톤에서-키보드를-만지면-바닷가재-머리띠를-씁니다.-사람은-자고-AI가-10만-줄을-썼습니다-3a31bab9e3f881eaade7cde0eb1c3935",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "850e519640a08f1694653c8a8dab73578d8dbc74a527e6ccc38d4f172555fb3d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3cadbe24-b8c2-4e0a-a2b1-a94d234bfb13": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "Synology NAS 외부 포트오픈이 안되는 환경에서 서버 운영하기 2탄 (Feat. 클라우드플레어 터널)",
