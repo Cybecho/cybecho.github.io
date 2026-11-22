@@ -1,0 +1,190 @@
+name: Cleanup orphan images (one-time)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Delete verified orphan images
+        run: |
+          python3 - <<'PYEOF'
+          import os
+          files = """
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_029070d82077.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_0577d5e775ff.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_0b830df3da51.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_11ff71862394.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_2607efa7a400.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_27fa3638d682.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_28fc2b9098ab.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_302a65723cab.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_38c926d98070.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_3c57f7e7f1e7.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_42bfa90ba350.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_43fa8dccc678.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_4e321608a3fe.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_4f333734d875.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_57cac2ffc260.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_5abd1d27b4c0.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_5ae635748e39.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_61f738b298dc.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_6a9df1552fb5.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_6b8454e73cd3.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_6fe743d0d193.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_70d7c740d45a.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_781c7fecf876.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_86d6b95f19a3.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_8e4e6216a970.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_98f4368f7fc0.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_99fc2e7a5c8d.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_9b300d305cd3.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_a249b3d8fcfd.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_a9183301131a.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_aff1d9cc9ab5.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_b51ecc1ac185.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_c70560e33e22.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_d15b6778c08b.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_d356a33a06f7.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_dceedb95699d.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_dd3d84cdbc3c.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_df05ffebd8d7.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_df15f20a39f7.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_ed46d955b886.png
+          content/posts/Let’s-Bootc!-[2]-What-is-OCI_/image_fae7adc14ff9.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_043a70b4c245.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_1297a3075991.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_29678da634a3.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_2fe66e0c5a48.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_3bc0464886c7.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_40eaf8ff1941.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_451b4b6f10dd.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_4b600e92db3f.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_4c7cbf1ad0c5.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_6c78e39b00ce.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_6ece4363ed19.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_787eb7fe041d.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_7c109dc69234.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_b65d7a22f8b1.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_c15e22cef55f.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_dca275344f4f.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_e34d27db2994.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_f1d25b3fb58b.png
+          content/posts/Let’s-Bootc!-[0]-Meet-The-Bootc/image_f858e1f2f961.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_070eec6c44d8.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_08181aa709e0.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_0db46e80939d.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_13479a634b82.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_16b44673caab.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_18f377d9bd86.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_1a8ae1c73ff4.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_1af019be3a0b.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_1fc0f0c16b5e.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_25917bb61870.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_29fc6e155738.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_2f7c25eb2b1a.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_3258e009aacc.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_34758b9a0919.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_371c173adeff.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_3c59f9960d7d.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_430c610bee98.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_43ebed2fe46c.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_5257e6f42972.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_56e8f6055d9d.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_5b9208a51ff6.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_5ca2c0d525b3.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_607b0af74cc5.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_623a37c53f72.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_6d8c2755a9ef.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_7bfc47b2aa09.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_8d328611fa5d.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_9aa8753dded1.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_ada0c8168202.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_b3260b178acd.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_b7cec3f472ed.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_c71179ac9b5e.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_ce8aeedca7ae.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_d16f363712c0.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_d913a2013fc7.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_df3b2ddf48b4.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_df4953a09848.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_e88bd56ef9fe.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_f1e66ad09183.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_f448e89d06b0.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_f58a3ef6d7a2.png
+          content/posts/Let’s-Bootc!-[1]-Quick-Starter-_-百聞不如一見/image_fb5fbd90465e.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_2b4d7be97ead.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_3c0c1356e18f.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_3d9ffcb96251.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_41be3b5c5287.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_5050b5b4c29b.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_615505d78693.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_6c45be27d23e.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_9605ca838d58.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_9ec3cfb8d638.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_a587d460bc4f.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_ac5d8d510f05.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_b04b99cbd2e7.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_bbcb83c9de4d.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_c0af5b322d0f.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_d2dbe040228a.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_d752836cc427.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_e40aa2fb769f.png
+          content/posts/Let’s-Bootc!-[4]-File-System/image_e814f472fd73.png
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_0cb4a35367f7.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_0f7a32c59ac2.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_1601de030ec7.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_180aa70ea7fc.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_181424794821.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_245754dd563c.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_282d8f192eb1.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_452a6d4e0f8d.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_540f7accd385.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_57529f646bb6.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_577aa696ad4c.png
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_5eb37a612a0d.png
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_676eee9ac1e7.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_71391fb12586.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_77fb9087accf.png
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_84d6179bccd0.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_8ddf7f63a9ff.png
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_8ea8292c5569.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_90dc761168e2.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_959f66425b25.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_96396217cf18.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_971dde195870.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_a5ea0d637bd0.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_a84a98738139.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_cd434b582442.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_d9bceaa294a2.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_e1428fcd16a8.png
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_f639b5dfdeff.jpeg
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_f80bd5e8438c.png
+          content/posts/자작-NAS를-구축해봅시다-(하드웨어편)/image_fdabebd41ec7.jpeg
+          """.splitlines()
+          deleted = 0
+          for p in files:
+              p = p.strip()
+              if not p:
+                  continue
+              assert p.startswith("content/posts/") and "/image_" in p, p
+              if os.path.exists(p):
+                  os.remove(p)
+                  deleted += 1
+              else:
+                  print("MISSING (already gone):", p)
+          print(f"deleted {deleted} files")
+          PYEOF
+      - name: Commit deletions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "nothing to delete" && exit 0
+          git commit -m "chore: remove 150 orphan images (401MB) unreferenced by posts"
+          git push
