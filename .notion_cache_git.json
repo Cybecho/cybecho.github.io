@@ -5422,6 +5422,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "31c1bab9-e3f8-8132-ad58-ed6f0a0ec20e": {
+    "last_edited_time": "2026-11-22T04:22:00.000Z",
+    "title": "클로드 코드 가이드: 부탁은 가끔 놓치고, 훅은 절대 놓치지 않습니다",
+    "slug": "클로드-코드-가이드_-부탁은-가끔-놓치고,-훅은-절대-놓치지-않습니다-31c1bab9e3f88132ad58ed6f0a0ec20e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "c2a209be2cc8d8c926f3070c1f5b3c727a47dd456cabdcd66a0a231547ca7691",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "31e1bab9-e3f8-8150-8494-c9505e092ffd": {
+    "last_edited_time": "2026-11-22T04:23:00.000Z",
+    "title": "tutor-skills: 교재를 노트로 바꾸면, 퀴즈가 약점을 먼저 찾아줍니다",
+    "slug": "tutor-skills_-교재를-노트로-바꾸면,-퀴즈가-약점을-먼저-찾아줍니다-31e1bab9e3f881508494c9505e092ffd",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e9501962ce36956a5a6bf9e00acdf49e9671a4ace71b0e69fcec0247751afb1f",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "31e1bab9-e3f8-8186-8ef8-cec9ca878104": {
+    "last_edited_time": "2026-11-22T04:23:00.000Z",
+    "title": "Superset: 에이전트 한 명이 아니라 여러 명을 한 창에서 굴립니다",
+    "slug": "Superset_-에이전트-한-명이-아니라-여러-명을-한-창에서-굴립니다-31e1bab9e3f881868ef8cec9ca878104",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "b1a869b3538cae4f102f4505f08a006ce0da73dc65253474372e65b8c4983428",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "31e1bab9-e3f8-818b-b958-f247c9ebc88c": {
+    "last_edited_time": "2026-11-22T04:23:00.000Z",
+    "title": "클로드 코드 플레이북: 59챕터 무료 한국어 가이드, 설치부터 멀티에이전트까지 레벨대로 밟으면 됩니다",
+    "slug": "클로드-코드-플레이북_-59챕터-무료-한국어-가이드,-설치부터-멀티에이전트까지-레벨대로-밟으면-됩니다-31e1bab9e3f8818bb958f247c9ebc88c",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "1d7af8bf06afdd02697007a48000ab903bdffa0de02cbe10f24e4806b086f2cc",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "31e1bab9-e3f8-81a4-8c19-c3654bc6cd5c": {
+    "last_edited_time": "2026-11-22T04:23:00.000Z",
+    "title": "MVP는 끝났습니다, 이제는 사랑받는 최소 제품이 기준입니다",
+    "slug": "MVP는-끝났습니다,-이제는-사랑받는-최소-제품이-기준입니다-31e1bab9e3f881a48c19c3654bc6cd5c",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ce38bf9d6a2f65770a75bb253b73ebd845e2e3457068df7fa592abded29b378d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "31e1bab9-e3f8-81ad-84bc-ede2c1197586": {
+    "last_edited_time": "2026-11-22T04:23:00.000Z",
+    "title": "파일시스템이 다시 주목받는 이유, 에이전트의 기억은 파일에 저장됩니다",
+    "slug": "파일시스템이-다시-주목받는-이유,-에이전트의-기억은-파일에-저장됩니다-31e1bab9e3f881ad84bcede2c1197586",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "0f71d7aee6427e16356f33f599a03bda1870130f2676bef826fe577374cece93",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "31e1bab9-e3f8-81f7-9112-c5f97eec1ef9": {
+    "last_edited_time": "2026-11-22T04:22:00.000Z",
+    "title": "MiroFish: 미래를 맞히는 게 아니라, 디지털 세계에서 미리 리허설합니다",
+    "slug": "MiroFish_-미래를-맞히는-게-아니라,-디지털-세계에서-미리-리허설합니다-31e1bab9e3f881f79112c5f97eec1ef9",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "7a251faedfbc2ddbb751da03faa493f69976369ecbdcd3f6ffe1e42271f3290b",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "31f1bab9-e3f8-8114-a507-fb77262e5ef6": {
+    "last_edited_time": "2026-11-22T04:23:00.000Z",
+    "title": "파이썬 크롤러가 자꾸 입구컷 당하는 이유, 문제는 코드가 아니라 지문입니다",
+    "slug": "파이썬-크롤러가-자꾸-입구컷-당하는-이유,-문제는-코드가-아니라-지문입니다-31f1bab9e3f88114a507fb77262e5ef6",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "62f7a542d0741ff2fd1ac0ad3ee385bb303bd37d4ed79f9da5ba91328ec4ecdd",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "31f1bab9-e3f8-812f-9144-d66b82ea2704": {
+    "last_edited_time": "2026-11-22T04:24:00.000Z",
+    "title": "GSD: 큰 프로젝트에서 Claude가 멍청해진다면, 컨텍스트를 갈아끼우면 됩니다",
+    "slug": "GSD_-큰-프로젝트에서-Claude가-멍청해진다면,-컨텍스트를-갈아끼우면-됩니다-31f1bab9e3f8812f9144d66b82ea2704",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "58716f1d51856d36da1320105d1c602d1095c4d05ab558efeca51f46136f5b6e",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "31f1bab9-e3f8-8149-99ff-c407e7141cd7": {
+    "last_edited_time": "2026-11-22T04:23:00.000Z",
+    "title": "BridgeMind: 바이브 코딩으로 백만 달러를 노리는 법, 제품이 곧 방송입니다",
+    "slug": "BridgeMind_-바이브-코딩으로-백만-달러를-노리는-법,-제품이-곧-방송입니다-31f1bab9e3f8814999ffc407e7141cd7",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ecfeb8e3d22c68ee9b6a7a7f0c1a7206e04de2672b2f1c19931eb569d042e8e8",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "324a28ab-6122-422d-ae6e-e989ed1148c0": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "유니티 로그라이크 04",
