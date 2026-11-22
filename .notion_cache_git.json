@@ -6061,6 +6061,22 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "32b1bab9-e3f8-8114-88a2-d84ed388c72a": {
+    "last_edited_time": "2026-11-22T14:13:00.000Z",
+    "title": "OpenPencil: Figma 파일을 그대로 열고, AI가 캔버스 위에서 직접 디자인합니다",
+    "slug": "OpenPencil_-Figma-파일을-그대로-열고,-AI가-캔버스-위에서-직접-디자인합니다-32b1bab9e3f8811488a2d84ed388c72a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "b8580ebf9f6e90d95afa43c30c1f2a79c5d04f23ca0c54df287e713e14e126af",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "32b1bab9-e3f8-8189-bd1d-c3724cd06908": {
     "last_edited_time": "2026-11-22T13:58:00.000Z",
     "title": "TradingAgents: 헤지펀드 한 팀을 통째로 흉내 내면, 매매 결정이 달라집니다",
@@ -6073,6 +6089,54 @@
     ],
     "has_content": true,
     "content_hash": "51095cc40780cd788ca3d5b32378a44444dc95e35327134d19e9e552ba9836d3",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32b1bab9-e3f8-818f-ab43-c457776f91e8": {
+    "last_edited_time": "2026-11-22T14:12:00.000Z",
+    "title": "AI 크리에이터 48명, 팔로우가 아니라 따라 만드는 게 먼저입니다",
+    "slug": "AI-크리에이터-48명,-팔로우가-아니라-따라-만드는-게-먼저입니다-32b1bab9e3f8818fab43c457776f91e8",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "f8402f1e701093da4e7011698cb4d76f3e3912fbe165d283d7e67840ec03f13b",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32b1bab9-e3f8-81c9-af8e-f1f7f1d7fb74": {
+    "last_edited_time": "2026-11-22T14:12:00.000Z",
+    "title": "Patchright: import 한 줄만 바꾸면, 봇 탐지가 브라우저를 못 알아봅니다",
+    "slug": "Patchright_-import-한-줄만-바꾸면,-봇-탐지가-브라우저를-못-알아봅니다-32b1bab9e3f881c9af8ef1f7f1d7fb74",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "b3cf8cbf85998e89c4f07b52b64a0d54fd4c322c71e8237fdcdb1e5f352a33f8",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32b1bab9-e3f8-81ee-bf07-c6dfe1abfb02": {
+    "last_edited_time": "2026-11-22T14:13:00.000Z",
+    "title": "MonoPix: AI가 그린 가짜 픽셀아트, 격자만 맞추면 진짜가 됩니다",
+    "slug": "MonoPix_-AI가-그린-가짜-픽셀아트,-격자만-맞추면-진짜가-됩니다-32b1bab9e3f881eebf07c6dfe1abfb02",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "bda42e2ea81df48c79229e4bbb631af67cb42f7be88138eb31b2c29e2a311df7",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
@@ -6092,6 +6156,102 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.554Z"
+  },
+  "32c1bab9-e3f8-811e-8bd3-f84acd03ab2f": {
+    "last_edited_time": "2026-11-22T14:13:00.000Z",
+    "title": "Matrix: AI가 10만 개가 넘으면, 어떤 AI에게 맡길지는 검색이 정합니다",
+    "slug": "Matrix_-AI가-10만-개가-넘으면,-어떤-AI에게-맡길지는-검색이-정합니다-32c1bab9e3f8811e8bd3f84acd03ab2f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4d30882bae96dbb4619f3d69f247627b1d242d5aea420c91da5c83df1056f351",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32c1bab9-e3f8-8134-9c56-c4da16899a4d": {
+    "last_edited_time": "2026-11-22T14:13:00.000Z",
+    "title": "오픈AI가 Astral을 인수했습니다. 코딩 에이전트 전쟁은 모델이 아니라 도구 싸움입니다",
+    "slug": "오픈AI가-Astral을-인수했습니다.-코딩-에이전트-전쟁은-모델이-아니라-도구-싸움입니다-32c1bab9e3f881349c56c4da16899a4d",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "7ca79141d755548495ba4201fbf2f83a94349bf1f6015481f3be5d0b82ade9d0",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32c1bab9-e3f8-8135-b132-f2f19e05e5ec": {
+    "last_edited_time": "2026-11-22T14:13:00.000Z",
+    "title": "autoresearch: 프롬프트를 에이전트에게 맡기면, 스킬이 스스로 56%에서 92%가 됩니다",
+    "slug": "autoresearch_-프롬프트를-에이전트에게-맡기면,-스킬이-스스로-56%에서-92%가-됩니다-32c1bab9e3f88135b132f2f19e05e5ec",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "af3a664d9e74a7771678cd68e2587196a46cf8cda4888d96537547fba7502440",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32c1bab9-e3f8-8138-907f-ff477cf4b968": {
+    "last_edited_time": "2026-11-22T14:13:00.000Z",
+    "title": "Pascal Editor: 브라우저만 켜면 3D 건물 설계가 됩니다. 설치도, 라이선스도 필요 없습니다",
+    "slug": "Pascal-Editor_-브라우저만-켜면-3D-건물-설계가-됩니다.-설치도,-라이선스도-필요-없습니다-32c1bab9e3f88138907fff477cf4b968",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4a9b89845badf249e41f94d694b072417c5e530c834eef0fb53019f886278765",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32c1bab9-e3f8-8143-873f-f0477978cf5f": {
+    "last_edited_time": "2026-11-22T14:13:00.000Z",
+    "title": "OpenSquirrel: 에이전트 네 개를 한 화면에 띄우면, 터미널 탭을 헤맬 일이 없습니다",
+    "slug": "OpenSquirrel_-에이전트-네-개를-한-화면에-띄우면,-터미널-탭을-헤맬-일이-없습니다-32c1bab9e3f88143873ff0477978cf5f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "0fd6a9a33b1dc1c9399fb75c314f6913386aafe62b2bafb92ccd4cd2a0dbd942",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32c1bab9-e3f8-814a-96b1-f66c0798dece": {
+    "last_edited_time": "2026-11-22T14:13:00.000Z",
+    "title": "Jina Reader: URL 앞에 한 줄만 붙이면, AI가 웹을 깨끗하게 읽습니다",
+    "slug": "Jina-Reader_-URL-앞에-한-줄만-붙이면,-AI가-웹을-깨끗하게-읽습니다-32c1bab9e3f8814a96b1f66c0798dece",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4bfaaf95773dd4f74fa2080fd4652c74f383950e7dbf0ea35842987aea3a2fcd",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "3473fd81-d43d-4cd3-a87f-3ad75a11a3f3": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
