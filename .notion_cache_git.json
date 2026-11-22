@@ -7623,6 +7623,54 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3971bab9-e3f8-8130-88bc-d9bdcc0ca6eb": {
+    "last_edited_time": "2026-11-22T17:59:00.000Z",
+    "title": "카카오톡 자동 답장, 답장 만드는 건 쉬운데 보내는 게 최종 보스입니다",
+    "slug": "카카오톡-자동-답장,-답장-만드는-건-쉬운데-보내는-게-최종-보스입니다-3971bab9e3f8813088bcd9bdcc0ca6eb",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ad3f6bd03e0dd6541e071cafe5598ad1b48cb9e67cccef5a2a92980d55a0d3ab",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3971bab9-e3f8-815a-82f8-f6426906bf11": {
+    "last_edited_time": "2026-11-22T17:59:00.000Z",
+    "title": "Agent Skills: 프롬프트를 파일로 쌓아두면, 에이전트가 매번 같은 품질로 만듭니다",
+    "slug": "Agent-Skills_-프롬프트를-파일로-쌓아두면,-에이전트가-매번-같은-품질로-만듭니다-3971bab9e3f8815a82f8f6426906bf11",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "6eeba2e37683f4d13e1c040c801a85607539beb6266a35e5075a1cb7ce8bab67",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "39a1bab9-e3f8-8146-8bca-e1e244e37ad4": {
+    "last_edited_time": "2026-11-22T17:59:00.000Z",
+    "title": "전자책 15만 권, 사는 게 아니라 빌리면 됩니다. 예약도 대기 줄도 없습니다",
+    "slug": "전자책-15만-권,-사는-게-아니라-빌리면-됩니다.-예약도-대기-줄도-없습니다-39a1bab9e3f881468bcae1e244e37ad4",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "42cdff3996cf9b5514ee02db18ba406f3fa8bca0e12d46bab5ba4c65aba29db4",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "39ad5223-d16d-489b-a97d-4dcd626b0636": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "유니티 3D게임 쿼드뷰 09",
@@ -7638,6 +7686,22 @@
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.557Z"
   },
+  "39b1bab9-e3f8-8129-b31b-c000b23c02ce": {
+    "last_edited_time": "2026-11-22T17:59:00.000Z",
+    "title": "Flint: 에이전트에게 차트 코드를 맡기지 마세요. 의미를 적으면 컴파일러가 그립니다",
+    "slug": "Flint_-에이전트에게-차트-코드를-맡기지-마세요.-의미를-적으면-컴파일러가-그립니다-39b1bab9e3f88129b31bc000b23c02ce",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "7da72c554607e2e8289c091bf53a7d72da528e9ca5778a88f6037211b4e1c229",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "39b7bec2-674b-4ad5-aa66-83c7f02e326c": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "유니티 로그라이크 12",
@@ -7652,6 +7716,102 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.556Z"
+  },
+  "3a21bab9-e3f8-8123-b21b-d2808fc73119": {
+    "last_edited_time": "2026-11-22T17:59:00.000Z",
+    "title": "Cerebras: AI 경쟁의 다음 전장은 모델이 아니라 회사의 기억입니다",
+    "slug": "Cerebras_-AI-경쟁의-다음-전장은-모델이-아니라-회사의-기억입니다-3a21bab9e3f88123b21bd2808fc73119",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "abf401852b89585511ddabadb8915fef933d5d3406544292cbf4c3a7f5ed02b9",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-811c-8cd1-c8b91d79a29b": {
+    "last_edited_time": "2026-11-22T17:59:00.000Z",
+    "title": "Papermake: PDF를 만드는 일, 이제 템플릿을 발행하고 API로 뽑습니다",
+    "slug": "Papermake_-PDF를-만드는-일,-이제-템플릿을-발행하고-API로-뽑습니다-3a31bab9e3f8811c8cd1c8b91d79a29b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "906a312890eeac560cdc81fc63dfa4cbc8aa62adbfdb83d3c95bb12bf6ae9e76",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-813e-81e7-d883c9551c71": {
+    "last_edited_time": "2026-11-22T17:59:00.000Z",
+    "title": "Outer Loop: 브라우저가 SSH를 알면, 서버 앱이 그냥 열립니다",
+    "slug": "Outer-Loop_-브라우저가-SSH를-알면,-서버-앱이-그냥-열립니다-3a31bab9e3f8813e81e7d883c9551c71",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "5f9c6ba3a8d1cc99817477ee3b3091e28a092110e437ea4b0a6c87c0f64fa3f9",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-8140-adcd-d21c4c965ff4": {
+    "last_edited_time": "2026-11-22T18:00:00.000Z",
+    "title": "Feather Wiki: 위키 하나가 HTML 파일 한 장이면, 서버도 DB도 필요 없습니다",
+    "slug": "Feather-Wiki_-위키-하나가-HTML-파일-한-장이면,-서버도-DB도-필요-없습니다-3a31bab9e3f88140adcdd21c4c965ff4",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a465aedc838294e16dc78105f73fe7a858dda7410aa297135937b345492f0e82",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-8156-a2a6-d2a97c87a64d": {
+    "last_edited_time": "2026-11-22T18:00:00.000Z",
+    "title": "Kimi K3: 코딩 품질은 똑같은데, 가격은 3분의 1입니다",
+    "slug": "Kimi-K3_-코딩-품질은-똑같은데,-가격은-3분의-1입니다-3a31bab9e3f88156a2a6d2a97c87a64d",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9f04e103b5cd971da2fc41c037a3b794c515017a2632e0cbee64c3119a8d160c",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a31bab9-e3f8-815b-8183-ceb03a8cf277": {
+    "last_edited_time": "2026-11-22T18:00:00.000Z",
+    "title": "OpenWiki: 에이전트가 읽을 문서는 사람이 쓰지 않습니다. 코드가 바뀌면 문서가 따라옵니다",
+    "slug": "OpenWiki_-에이전트가-읽을-문서는-사람이-쓰지-않습니다.-코드가-바뀌면-문서가-따라옵니다-3a31bab9e3f8815b8183ceb03a8cf277",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9d9cce407b001b4a2ef8ff52672ad765014c388a9057fead0c23dce228245060",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "3cadbe24-b8c2-4e0a-a2b1-a94d234bfb13": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
