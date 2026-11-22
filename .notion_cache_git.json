@@ -5917,6 +5917,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3251bab9-e3f8-818d-b3e2-f64a75bf6872": {
+    "last_edited_time": "2026-11-22T13:57:00.000Z",
+    "title": "Spec Kit: 코딩 전에 문서를 쓰면, 에이전트가 엉뚱한 코드를 짜지 않습니다",
+    "slug": "Spec-Kit_-코딩-전에-문서를-쓰면,-에이전트가-엉뚱한-코드를-짜지-않습니다-3251bab9e3f8818db3e2f64a75bf6872",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a9f5b62d782ddec91386da0683f2895ee7ffd00114e91238844626f5bfcc476e",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3251bab9-e3f8-818e-b6f6-cfe8f06aa9c2": {
+    "last_edited_time": "2026-11-22T13:57:00.000Z",
+    "title": "2025년 랜섬웨어 피해 7,458건, 역대 최다입니다. 하반기 줄었다고 안심하면 안 됩니다",
+    "slug": "2025년-랜섬웨어-피해-7,458건,-역대-최다입니다.-하반기-줄었다고-안심하면-안-됩니다-3251bab9e3f8818eb6f6cfe8f06aa9c2",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "babcf5f07ef4d3e48a5ec94235b31fa2164bb3959a7bd70e608fcaa58c56b243",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3271bab9-e3f8-814c-914d-f47adc4a08d9": {
+    "last_edited_time": "2026-11-22T13:57:00.000Z",
+    "title": "OpenJarvis: 개인 AI는 클라우드가 아니라 내 컴퓨터에서 돌아가면 됩니다",
+    "slug": "OpenJarvis_-개인-AI는-클라우드가-아니라-내-컴퓨터에서-돌아가면-됩니다-3271bab9e3f8814c914df47adc4a08d9",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e5ad3f7aeddb104a13731c30a58deb776dd562a601dbe9b00705a9d610f43cfd",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3271bab9-e3f8-818f-8e38-e1532fa41f7a": {
+    "last_edited_time": "2026-11-22T13:57:00.000Z",
+    "title": "OpenDataLoader PDF: PDF를 마크다운으로 미리 다듬으면, 토큰도 답도 아낍니다",
+    "slug": "OpenDataLoader-PDF_-PDF를-마크다운으로-미리-다듬으면,-토큰도-답도-아낍니다-3271bab9e3f8818f8e38e1532fa41f7a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ebc85f1185e9d5230893bb0835c8f48ab8a0a42ac4ba4e7c244ecaa787200533",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3281bab9-e3f8-8100-91a2-d1c0f3cd8741": {
+    "last_edited_time": "2026-11-22T13:57:00.000Z",
+    "title": "Recordly: 그냥 녹화만 해도, 데모 영상이 프로처럼 나옵니다",
+    "slug": "Recordly_-그냥-녹화만-해도,-데모-영상이-프로처럼-나옵니다-3281bab9e3f8810091a2d1c0f3cd8741",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ed4881e82a242825664abf687ea6e660444942642db4b9f37d731d0177fa250d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3281bab9-e3f8-8134-8eb6-fed95b9a09ac": {
+    "last_edited_time": "2026-11-22T13:57:00.000Z",
+    "title": "Agent Orchestrator: 30개 에이전트를 돌리면, 병목은 코드가 아니라 사람입니다",
+    "slug": "Agent-Orchestrator_-30개-에이전트를-돌리면,-병목은-코드가-아니라-사람입니다-3281bab9e3f881348eb6fed95b9a09ac",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "faa2b7d07ffe9892d32f5745499650a6e554f5ba1bc7d7a988e5225e81cc93fe",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3281bab9-e3f8-8148-9709-c84e29a07793": {
+    "last_edited_time": "2026-11-22T13:57:00.000Z",
+    "title": "스킬은 마크다운 한 장이 아니라 폴더입니다. 검증 스킬이 품질을 가장 크게 바꿉니다",
+    "slug": "스킬은-마크다운-한-장이-아니라-폴더입니다.-검증-스킬이-품질을-가장-크게-바꿉니다-3281bab9e3f881489709c84e29a07793",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "d32397c20129a2820a0e39ef2521d9a49a8c7ce7d9410dda0cedd30353a1ec24",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3281bab9-e3f8-81a5-9f8a-da6d19407006": {
+    "last_edited_time": "2026-11-22T13:57:00.000Z",
+    "title": "cmux: 에이전트 여러 개를 동시에 돌린다면, 누가 나를 부르는지 한눈에 보입니다",
+    "slug": "cmux_-에이전트-여러-개를-동시에-돌린다면,-누가-나를-부르는지-한눈에-보입니다-3281bab9e3f881a59f8ada6d19407006",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "6d93a03c192cfd149dc2b93c92ddd46303d8e67bd8ff3c1f8cfdd89f27252b0a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3291bab9-e3f8-8138-9386-e46376e4c4f3": {
+    "last_edited_time": "2026-11-22T13:58:00.000Z",
+    "title": "클로드 코드로 해외 송금 비교 서비스를 만들었습니다. AI는 1을 10으로 만드는 가속기입니다",
+    "slug": "클로드-코드로-해외-송금-비교-서비스를-만들었습니다.-AI는-1을-10으로-만드는-가속기입니다-3291bab9e3f881389386e46376e4c4f3",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "26ea83d53736b70add4651d4278a911a6bdf05d7d2b101be917c044c34b20fed",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32b1bab9-e3f8-8189-bd1d-c3724cd06908": {
+    "last_edited_time": "2026-11-22T13:58:00.000Z",
+    "title": "TradingAgents: 헤지펀드 한 팀을 통째로 흉내 내면, 매매 결정이 달라집니다",
+    "slug": "TradingAgents_-헤지펀드-한-팀을-통째로-흉내-내면,-매매-결정이-달라집니다-32b1bab9e3f88189bd1dc3724cd06908",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "51095cc40780cd788ca3d5b32378a44444dc95e35327134d19e9e552ba9836d3",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "32b957a2-d119-4fa9-89e5-e4d722ed4dbd": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "Ubuntu에 C++ 세팅",
