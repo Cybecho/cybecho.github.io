@@ -4800,6 +4800,134 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3071bab9-e3f8-8186-a3f7-d184da3662f7": {
+    "last_edited_time": "2026-11-22T04:01:00.000Z",
+    "title": "Mallo: 타이핑은 그만, 말하면 커서에 바로 입력됩니다",
+    "slug": "Mallo_-타이핑은-그만,-말하면-커서에-바로-입력됩니다-3071bab9e3f88186a3f7d184da3662f7",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "37d5724a8e28bcffb902dc4ee19bfecb5506283ac5826c35695393c98931a4c5",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3071bab9-e3f8-81a0-907c-d19d56721ced": {
+    "last_edited_time": "2026-11-22T04:01:00.000Z",
+    "title": "MicroGPT: GPT의 핵심은 200줄이면 됩니다, 나머지는 효율일 뿐입니다",
+    "slug": "MicroGPT_-GPT의-핵심은-200줄이면-됩니다,-나머지는-효율일-뿐입니다-3071bab9e3f881a0907cd19d56721ced",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "cead3767bbd374a881a1b4e16e9c05507dec32499e0f0d95d6cae780e8a6b792",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3071bab9-e3f8-81c4-b570-edaeddb9e6aa": {
+    "last_edited_time": "2026-11-22T04:01:00.000Z",
+    "title": "OpenClaw: 스킬보다 쓸 곳이 먼저입니다",
+    "slug": "OpenClaw_-스킬보다-쓸-곳이-먼저입니다-3071bab9e3f881c4b570edaeddb9e6aa",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "c0292deb54781f1c5bdc3b67b634b0c17fbab0fed55af47b3b7defff04222831",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3081bab9-e3f8-819d-80cb-f432fd808762": {
+    "last_edited_time": "2026-11-22T04:02:00.000Z",
+    "title": "OpenClaw: 에이전트 말투는 모델이 아니라 SOUL.md 하나로 정합니다",
+    "slug": "OpenClaw_-에이전트-말투는-모델이-아니라-SOUL.md-하나로-정합니다-3081bab9e3f8819d80cbf432fd808762",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "2afacc607cb679662558a24a6bf8377cb5a444cb599e84abc4b9769c9876183c",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3081bab9-e3f8-81a6-8f90-ceba0f29a730": {
+    "last_edited_time": "2026-11-22T04:02:00.000Z",
+    "title": "CloudRouter: 에이전트는 로컬에 두고, 일은 클라우드 VM·GPU로 보냅니다",
+    "slug": "CloudRouter_-에이전트는-로컬에-두고,-일은-클라우드-VM·GPU로-보냅니다-3081bab9e3f881a68f90ceba0f29a730",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "1f7ad1bab862a734e627da9fde98276684b3bd6ff921bbf17ca62a566e74f978",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3081bab9-e3f8-81ed-9521-e242c58f74ce": {
+    "last_edited_time": "2026-11-22T04:02:00.000Z",
+    "title": "클로드 스킬, 만들고 끝이 아니라 테스트 3가지로 증명해야 합니다",
+    "slug": "클로드-스킬,-만들고-끝이-아니라-테스트-3가지로-증명해야-합니다-3081bab9e3f881ed9521e242c58f74ce",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "1b9b6280fbf84635607ee785d9c2afb87ff6b91101696e3758fccbee638a79cf",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3091bab9-e3f8-8165-9f60-c31d576e7978": {
+    "last_edited_time": "2026-11-22T04:02:00.000Z",
+    "title": "코드를 보지 않고 소프트웨어를 만든다고요? 비결은 리뷰가 아니라 증명입니다",
+    "slug": "코드를-보지-않고-소프트웨어를-만든다고요_-비결은-리뷰가-아니라-증명입니다-3091bab9e3f881659f60c31d576e7978",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "8c99e91d45a3054953dc0fabe441540971602b027928c03b22295fc0342bfc19",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3091bab9-e3f8-81e7-aec2-e4b45f1a9c69": {
+    "last_edited_time": "2026-11-22T04:02:00.000Z",
+    "title": "Bubble Tea: 터미널 UI, 이제 웹처럼 컴포넌트로 조립하면 됩니다",
+    "slug": "Bubble-Tea_-터미널-UI,-이제-웹처럼-컴포넌트로-조립하면-됩니다-3091bab9e3f881e7aec2e4b45f1a9c69",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "801c6265a6294b78973b606dd544e6b7817047dfad451872dca01f3e50f7577e",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3091bab9-e3f8-81fa-94c3-fac68728b7ca": {
     "last_edited_time": "2026-11-21T02:47:00.000Z",
     "title": "MonoSketch: 다이어그램은 그림이 아니라 텍스트로 그립니다",
@@ -5098,6 +5226,38 @@
     ],
     "has_content": true,
     "content_hash": "ab7a8cdfdfcf27ba8691c5c5c14da1354616549089f7cb88c336a69c15b919ae",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3101bab9-e3f8-8111-a64d-efdd945cd036": {
+    "last_edited_time": "2026-11-22T04:02:00.000Z",
+    "title": "Pixel Agents: 에이전트가 지금 뭘 하는지, 로그가 아니라 캐릭터 움직임으로 봅니다",
+    "slug": "Pixel-Agents_-에이전트가-지금-뭘-하는지,-로그가-아니라-캐릭터-움직임으로-봅니다-3101bab9e3f88111a64defdd945cd036",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a0a461e1e049f01c215c067b1cd6049300d27370009cf38104c9aded37796ae8",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3111bab9-e3f8-81c2-9a04-f7c3a188e067": {
+    "last_edited_time": "2026-11-22T04:02:00.000Z",
+    "title": "프론트엔드 코드를 3개월 동안 한 줄도 안 썼다고요? 프로토타입은 코드로 만듭니다",
+    "slug": "프론트엔드-코드를-3개월-동안-한-줄도-안-썼다고요_-프로토타입은-코드로-만듭니다-3111bab9e3f881c29a04f7c3a188e067",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e0f5b6f628404c859bf777494348bd1a7b6c3a0cd191deb406233af5f2da4e0c",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
