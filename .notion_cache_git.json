@@ -5678,6 +5678,22 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3211bab9-e3f8-8100-b029-d61786de113b": {
+    "last_edited_time": "2026-11-22T05:13:00.000Z",
+    "title": "Markdown for Agents: 웹을 지키던 방패가 에이전트에게 길을 열어줍니다",
+    "slug": "Markdown-for-Agents_-웹을-지키던-방패가-에이전트에게-길을-열어줍니다-3211bab9e3f88100b029d61786de113b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4699de0b5f75401f7897b8f142172b93fd6b515d54e0ad4cb36cb78bdacf36d2",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3211bab9-e3f8-813e-9363-da6e93d00e6d": {
     "last_edited_time": "2026-11-22T04:58:00.000Z",
     "title": "app-store-screenshots: 앱스토어 스크린샷, 말로 시키면 에디터까지 만들어줍니다",
@@ -5706,6 +5722,38 @@
     ],
     "has_content": true,
     "content_hash": "1bab3a776e1e78caa9e1c99ff32bb50a984c3df88fc472d784b70b941c0538a1",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3211bab9-e3f8-8174-832d-e8794db4d935": {
+    "last_edited_time": "2026-11-22T05:13:00.000Z",
+    "title": "AutoClip: 긴 영상은 링크 하나면, 하이라이트 클립 10개로 나옵니다",
+    "slug": "AutoClip_-긴-영상은-링크-하나면,-하이라이트-클립-10개로-나옵니다-3211bab9e3f88174832de8794db4d935",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "bdc4942b2048865462983b817dfbaacda6679e5a7b64b4e6ded9888e0a602f4a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3211bab9-e3f8-818e-bc85-d58b2f35a68a": {
+    "last_edited_time": "2026-11-22T05:14:00.000Z",
+    "title": "korea-stock-mcp: 수십 MB짜리 공시도 목차부터 보면, 필요한 부분만 쏙 가져옵니다",
+    "slug": "korea-stock-mcp_-수십-MB짜리-공시도-목차부터-보면,-필요한-부분만-쏙-가져옵니다-3211bab9e3f8818ebc85d58b2f35a68a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9b0f9a97bc302c84b0f237e4e8d5f46c72a3c3cd4990574784b902af4e33301c",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
@@ -5742,6 +5790,102 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3211bab9-e3f8-81bd-bf94-d14ebe5dda21": {
+    "last_edited_time": "2026-11-22T05:14:00.000Z",
+    "title": "DOT Studio: 터미널이 아니라 캔버스에서 에이전트를 조립하면 됩니다",
+    "slug": "DOT-Studio_-터미널이-아니라-캔버스에서-에이전트를-조립하면-됩니다-3211bab9e3f881bdbf94d14ebe5dda21",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "bb2f940295a6d837818b377ba385828e7ff802cd7ddc5de8351e49677f4970d7",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3221bab9-e3f8-810f-b00e-d36bb4ab4b0d": {
+    "last_edited_time": "2026-11-22T05:14:00.000Z",
+    "title": "Lightpanda: 화면을 그리지 않는 브라우저, 크롤링이 9배 빨라집니다",
+    "slug": "Lightpanda_-화면을-그리지-않는-브라우저,-크롤링이-9배-빨라집니다-3221bab9e3f8810fb00ed36bb4ab4b0d",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "94b615d18e83316f373b68317ead2d814d6a081eb141f24fd2e31f76d51f9b5a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3221bab9-e3f8-8156-b1ea-d1fe219d9c9d": {
+    "last_edited_time": "2026-11-22T05:14:00.000Z",
+    "title": "Defuddle: 웹페이지 본문만 뽑아 마크다운으로 바꾸면, AI에게 읽힐 준비가 끝납니다",
+    "slug": "Defuddle_-웹페이지-본문만-뽑아-마크다운으로-바꾸면,-AI에게-읽힐-준비가-끝납니다-3221bab9e3f88156b1ead1fe219d9c9d",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "97e274045f59d5d6c3217fa2dd3aef105c3977957e1ece2526569056912b40d5",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3221bab9-e3f8-818b-9079-e11b162e5524": {
+    "last_edited_time": "2026-11-22T05:14:00.000Z",
+    "title": "gstack: 슬래시 하나로 전문가 6명을 부르면, 혼자서도 팀처럼 일합니다",
+    "slug": "gstack_-슬래시-하나로-전문가-6명을-부르면,-혼자서도-팀처럼-일합니다-3221bab9e3f8818b9079e11b162e5524",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "edf9e83fdab30e794fd5bb60d6afac7b77ac1b572038a2487a55c2ee9fa07efe",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3231bab9-e3f8-817f-b3f8-e6797a7155ae": {
+    "last_edited_time": "2026-11-22T05:14:00.000Z",
+    "title": "CLI-Anything: 에이전트 시대의 인터페이스는 클릭이 아니라 명령어입니다",
+    "slug": "CLI-Anything_-에이전트-시대의-인터페이스는-클릭이-아니라-명령어입니다-3231bab9e3f8817fb3f8e6797a7155ae",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "2839f5c0d05a461b1c298441d70151c374f58e41b3b8c89a05bdd52c4a8bdbae",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3241bab9-e3f8-81e7-bbd6-d715821005fa": {
+    "last_edited_time": "2026-11-22T05:14:00.000Z",
+    "title": "Deep Agents: 클로드 코드의 설계도를 통째로 가져오면, 모델은 골라 쓸 수 있습니다",
+    "slug": "Deep-Agents_-클로드-코드의-설계도를-통째로-가져오면,-모델은-골라-쓸-수-있습니다-3241bab9e3f881e7bbd6d715821005fa",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "5eefd1b82b236f85f494f0511a157c596fd08c639eaea8b12a39c5cc6704ba97",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "324a28ab-6122-422d-ae6e-e989ed1148c0": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "유니티 로그라이크 04",
@@ -5756,6 +5900,22 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.556Z"
+  },
+  "3251bab9-e3f8-8141-b5bb-cf609eb81c56": {
+    "last_edited_time": "2026-11-22T05:14:00.000Z",
+    "title": "OpenAI API, 하루 250만 토큰까지 무료입니다. 단, 대가는 데이터입니다",
+    "slug": "OpenAI-API,-하루-250만-토큰까지-무료입니다.-단,-대가는-데이터입니다-3251bab9e3f88141b5bbcf609eb81c56",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "449d91ee50d3dede3df59c4d2cbf366235b0e40af91cf6df591c67ea2ea2fbda",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "32b957a2-d119-4fa9-89e5-e4d722ed4dbd": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
