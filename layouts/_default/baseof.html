@@ -9,11 +9,35 @@
     {{- else if and (not .IsHome) .IsPage -}}
         {{- $desc = .Summary | plainify | strings.Chomp | truncate 160 -}}
     {{- end -}}
-    {{/* 대표 이미지: featured_image → 작가 아바타 폴백 */}}
+    {{/* 대표 이미지: featured_image → 본문 첫 이미지 → 작가 아바타 폴백 */}}
     {{- $img := "" -}}
     {{- if .Params.featured_image -}}
-        {{- $img = .Params.featured_image | absURL -}}
-    {{- else -}}
+        {{- $featured := .Params.featured_image -}}
+        {{- if or (strings.HasPrefix $featured "http://") (strings.HasPrefix $featured "https://") (strings.HasPrefix $featured "/") -}}
+            {{- $img = $featured | absURL -}}
+        {{- else -}}
+            {{- with .Resources.GetMatch $featured -}}
+                {{- $img = .Permalink -}}
+            {{- else -}}
+                {{- $img = $featured | absURL -}}
+            {{- end -}}
+        {{- end -}}
+    {{- else if .IsPage -}}
+        {{- $matches := findRESubmatch `<img[^>]*src="([^"]+)"` .Content -}}
+        {{- if $matches -}}
+            {{- $src := index (index $matches 0) 1 -}}
+            {{- if or (strings.HasPrefix $src "http://") (strings.HasPrefix $src "https://") (strings.HasPrefix $src "/") -}}
+                {{- $img = $src | absURL -}}
+            {{- else -}}
+                {{- with .Resources.GetMatch $src -}}
+                    {{- $img = .Permalink -}}
+                {{- else -}}
+                    {{- $img = $src | absURL -}}
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+    {{- if not $img -}}
         {{- if .Site.Params.author.avatar -}}
             {{- $img = .Site.Params.author.avatar | absURL -}}
         {{- end -}}
