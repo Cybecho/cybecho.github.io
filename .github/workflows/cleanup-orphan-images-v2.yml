@@ -1,0 +1,69 @@
+name: Cleanup orphan images (dynamic)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Find and delete orphan images
+        run: |
+          python3 - <<'PYEOF'
+          import os
+          # Orphan = image file under content/posts/ whose basename is not
+          # referenced by any .md file under content/ (body or front matter).
+          # Safety rules:
+          #  - only files named image_* with an image extension are candidates
+          #  - never delete index.md or any non-image file
+          #  - abort if no references were found at all (parsing failure guard)
+          roots = ["content"]
+          exts = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".avif"}
+          refs = set()
+          md_files = []
+          for root, _dirs, files in os.walk("content"):
+              for f in files:
+                  if f.endswith(".md"):
+                      md_files.append(os.path.join(root, f))
+          for path in md_files:
+              with open(path, encoding="utf-8", errors="ignore") as fh:
+                  text = fh.read()
+              # every image reference contains its basename, e.g.
+              # ![](image_abc123.png) or featured_image: image_abc123.png
+              for token in text.replace("(", " ").replace(")", " ").replace('"', " ").replace("'", " ").split():
+                  base = os.path.basename(token)
+                  if base.startswith("image_") and os.path.splitext(base)[1].lower() in exts:
+                      refs.add(base)
+          print(f"md files scanned: {len(md_files)}")
+          print(f"distinct image basenames referenced: {len(refs)}")
+          assert len(refs) > 100, "reference set suspiciously small, aborting"
+          deleted = 0
+          freed = 0
+          for root, _dirs, files in os.walk("content/posts"):
+              for f in files:
+                  if not f.startswith("image_"):
+                      continue
+                  if os.path.splitext(f)[1].lower() not in exts:
+                      continue
+                  if f in refs:
+                      continue
+                  path = os.path.join(root, f)
+                  size = os.path.getsize(path)
+                  os.remove(path)
+                  deleted += 1
+                  freed += size
+                  print(f"deleted {path} ({size} bytes)")
+          print(f"deleted {deleted} files, freed {freed} bytes ({freed/1048576:.1f} MB)")
+          PYEOF
+      - name: Commit deletions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "nothing to delete" && exit 0
+          git commit -m "chore: remove orphan images unreferenced by posts (dynamic scan)"
+          git push
