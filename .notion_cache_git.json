@@ -6381,6 +6381,22 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "32d1bab9-e3f8-814f-b5c4-db9cccf3c29a": {
+    "last_edited_time": "2026-11-22T15:08:00.000Z",
+    "title": "목표만 주면 AI가 며칠 동안 연구를 끝냅니다. 밤새 안 돌리는 게 손해입니다",
+    "slug": "목표만-주면-AI가-며칠-동안-연구를-끝냅니다.-밤새-안-돌리는-게-손해입니다-32d1bab9e3f8814fb5c4db9cccf3c29a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "f80b327903c919f6d7e0290cb1716981704741c2acd347f71ac4f3aa9addd9ae",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "32d1bab9-e3f8-817d-8269-d712b7d1d0c8": {
     "last_edited_time": "2026-11-22T14:28:00.000Z",
     "title": "LLM으로 수만 줄 프로젝트를 유지하는 법: 코드는 AI가 쓰고, 설계는 사람이 합니다",
@@ -6409,6 +6425,150 @@
     ],
     "has_content": true,
     "content_hash": "4a2b59c0bada7722f18502af78a3b9428b2fd96c3246e64ba635c3edf80e6e12",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32f1bab9-e3f8-8146-953e-e739da14303e": {
+    "last_edited_time": "2026-11-22T15:08:00.000Z",
+    "title": "클로드 코드로 빨라지는 법, 프롬프트가 아닙니다. 마찰을 없애는 인프라입니다",
+    "slug": "클로드-코드로-빨라지는-법,-프롬프트가-아닙니다.-마찰을-없애는-인프라입니다-32f1bab9e3f88146953ee739da14303e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a20bb7387f8585a795cdf845613acacc3b4c9e3e0c2b486f4493fead93941654",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32f1bab9-e3f8-81c4-92e1-d9f6a22688e9": {
+    "last_edited_time": "2026-11-22T15:08:00.000Z",
+    "title": "건즈 온라인: 다운로드 없이 링크만 열면, 20년 전 게임이 브라우저에서 돌아갑니다",
+    "slug": "건즈-온라인_-다운로드-없이-링크만-열면,-20년-전-게임이-브라우저에서-돌아갑니다-32f1bab9e3f881c492e1d9f6a22688e9",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "05b282e118159b1c289ef5e73f368ecf0709d17d61863737465ac742a6e1d235",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "32f1bab9-e3f8-81d1-b743-c70f32a194d1": {
+    "last_edited_time": "2026-11-22T15:09:00.000Z",
+    "title": "클로드 코드, 프롬프트만 치면 안 됩니다. 결과를 정하는 건 하네스 구조입니다",
+    "slug": "클로드-코드,-프롬프트만-치면-안-됩니다.-결과를-정하는-건-하네스-구조입니다-32f1bab9e3f881d1b743c70f32a194d1",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "925ba1f6b4902f71de3674504aa0d9b4cd736d9127bcf53bfcbdb765bb62b828",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3321bab9-e3f8-8113-ba27-ca79a5c17ec2": {
+    "last_edited_time": "2026-11-22T15:09:00.000Z",
+    "title": "Codex: 코드 생성기로 쓰면 손해입니다. 워크플로우로 써야 생산성이 됩니다",
+    "slug": "Codex_-코드-생성기로-쓰면-손해입니다.-워크플로우로-써야-생산성이-됩니다-3321bab9e3f88113ba27ca79a5c17ec2",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "365e5ffa0162260d5aafd3db7473178d03ba5e9dc8c0a181ae384a7eb7b850d3",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3331bab9-e3f8-8107-b368-fe4ca63914a5": {
+    "last_edited_time": "2026-11-22T15:09:00.000Z",
+    "title": "Codex: 한 줄 프롬프트보다 쌓이는 설정이 먼저입니다",
+    "slug": "Codex_-한-줄-프롬프트보다-쌓이는-설정이-먼저입니다-3331bab9e3f88107b368fe4ca63914a5",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "c6f1aa4eac44ded3cc7fbc1d5be0e20b6fbe175e3c17e128bb2e7c54bcc60f0d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3331bab9-e3f8-8146-aebc-cd9b25295e3b": {
+    "last_edited_time": "2026-11-22T15:09:00.000Z",
+    "title": "하네스 엔지니어링: 모델을 바꾸기 전에, 실패가 안 돌아오게 하네스를 바꿉니다",
+    "slug": "하네스-엔지니어링_-모델을-바꾸기-전에,-실패가-안-돌아오게-하네스를-바꿉니다-3331bab9e3f88146aebccd9b25295e3b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "501514e196ee6266897622f0def5b82d24e84b7592057fc3c8ee6b4511f4bde8",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3341bab9-e3f8-81ad-84db-d0725b55b3a4": {
+    "last_edited_time": "2026-11-22T15:09:00.000Z",
+    "title": "Feynman: 논문 하나 시키면 30분 뒤 출처 달린 메타 분석이 옵니다",
+    "slug": "Feynman_-논문-하나-시키면-30분-뒤-출처-달린-메타-분석이-옵니다-3341bab9e3f881ad84dbd0725b55b3a4",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "40b84df1f88686f5c945e8612b9aa2ff200d1a2ff67339ae149927cc857891e8",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3341bab9-e3f8-81ff-b45a-cbebf10e082f": {
+    "last_edited_time": "2026-11-22T15:09:00.000Z",
+    "title": "Korean Law MCP: 법령을 검색하는 게 아니라, AI에게 법령을 직접 물어보면 됩니다",
+    "slug": "Korean-Law-MCP_-법령을-검색하는-게-아니라,-AI에게-법령을-직접-물어보면-됩니다-3341bab9e3f881ffb45acbebf10e082f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "28d850b57a4da4e5ec258b12c071e28476c314ee594a3d73e211738079fee4bc",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3351bab9-e3f8-8141-92a5-c2f080b9b4a6": {
+    "last_edited_time": "2026-11-22T15:09:00.000Z",
+    "title": "클로드 코드, 쓰는 기능이 전부가 아닙니다. 숨은 15가지가 일하는 방식을 바꿉니다",
+    "slug": "클로드-코드,-쓰는-기능이-전부가-아닙니다.-숨은-15가지가-일하는-방식을-바꿉니다-3351bab9e3f8814192a5c2f080b9b4a6",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9d84e013bfde2a333d191b6d58de3827b67b4cf44a7ef61e367b76e6709f026f",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
