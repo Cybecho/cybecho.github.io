@@ -9092,6 +9092,54 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3e81bab9-e3f8-8183-a45e-c2a40d913e40": {
+    "last_edited_time": "2026-11-23T02:10:00.000Z",
+    "title": "GET 요청만으로 충분했습니다. 에이전트 700개가 만든 8만 개 페이로드의 기록입니다",
+    "slug": "GET-요청만으로-충분했습니다.-에이전트-700개가-만든-8만-개-페이로드의-기록입니다-3e81bab9e3f88183a45ec2a40d913e40",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "c6099e52dce0d420ab5f7b03a41e3c71ff7bbdd24b746b71aebf55b9516c9cb6",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e81bab9-e3f8-819d-9dbd-cf3d32d0cc3c": {
+    "last_edited_time": "2026-11-23T02:10:00.000Z",
+    "title": "kordoc: HWP 파일이 RAG의 병목이라면, 파싱부터 바꿔야 합니다",
+    "slug": "kordoc_-HWP-파일이-RAG의-병목이라면,-파싱부터-바꿔야-합니다-3e81bab9e3f8819d9dbdcf3d32d0cc3c",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "6e7d7e4378d48e473765b2dd22b7a6b8dbcb370fd98ccae1a4746fd5f1c9b4ea",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e81bab9-e3f8-81a3-905f-f9dce66f77be": {
+    "last_edited_time": "2026-11-23T02:10:00.000Z",
+    "title": "OS란 대체 무엇인가요? 앱이 사라지는 시대, 자원 배분이 본업으로 남습니다",
+    "slug": "OS란-대체-무엇인가요_-앱이-사라지는-시대,-자원-배분이-본업으로-남습니다-3e81bab9e3f881a3905ff9dce66f77be",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "de232bc2f2701855cecde7cdad1ee8308885f4c3aea3ceed85ceac348e902e07",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3e81bab9-e3f8-81b3-836d-fb4ae711ba45": {
     "last_edited_time": "2026-11-23T02:00:00.000Z",
     "title": "Atlas: 커밋만 보고는 알 수 없습니다. 어떤 프롬프트가 그 줄을 만들었는지, 그게 기록됩니다",
@@ -9120,6 +9168,118 @@
     ],
     "has_content": true,
     "content_hash": "6de939dd942e6e4be20bfe4b81f06998407fd433db448dbf9924307b530dba17",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e81bab9-e3f8-81f6-b5ac-e1bc5818afdc": {
+    "last_edited_time": "2026-11-23T02:10:00.000Z",
+    "title": "Cloudflare Security Audit Skill: 에이전트 보안 감사는 말이 아니라 검증된 기록으로 남깁니다",
+    "slug": "Cloudflare-Security-Audit-Skill_-에이전트-보안-감사는-말이-아니라-검증된-기록으로-남깁니다-3e81bab9e3f881f6b5ace1bc5818afdc",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "2ae434761d1338708564437fe55a0a92945edf66840268779c7789733a5b8360",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e91bab9-e3f8-8165-a701-d3c024b3c780": {
+    "last_edited_time": "2026-11-23T02:10:00.000Z",
+    "title": "Whiteboard: AI가 짠 코드, 줄줄 읽지 말고 그림으로 검토합니다",
+    "slug": "Whiteboard_-AI가-짠-코드,-줄줄-읽지-말고-그림으로-검토합니다-3e91bab9e3f88165a701d3c024b3c780",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "c294da214bb1f89bba76fe290e5ad7dcdff8b7dbabab8ab86d10be3a0df86812",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e91bab9-e3f8-81ba-97c2-fcc0a255c8ef": {
+    "last_edited_time": "2026-11-23T02:10:00.000Z",
+    "title": "REFOURIER: 파일을 올리지 않고 PDF·HWP를 바꿉니다. 변환은 내 브라우저 안에서 끝납니다",
+    "slug": "REFOURIER_-파일을-올리지-않고-PDF·HWP를-바꿉니다.-변환은-내-브라우저-안에서-끝납니다-3e91bab9e3f881ba97c2fcc0a255c8ef",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "61470810d7d14fd01798f14fe85c38d6ce325b536454b665370a5f4ea2dbab31",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e91bab9-e3f8-81eb-9b48-e83e3217d856": {
+    "last_edited_time": "2026-11-23T02:10:00.000Z",
+    "title": "Madeira: 탈옥 없이 아이폰에서 PC 게임을 돌립니다. 네 겹 번역이 한 번에 일어납니다",
+    "slug": "Madeira_-탈옥-없이-아이폰에서-PC-게임을-돌립니다.-네-겹-번역이-한-번에-일어납니다-3e91bab9e3f881eb9b48e83e3217d856",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "de464362862cb99745315d93637313a2bbb7ea3f699b38e7e5cd56550dc6062e",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3ea1bab9-e3f8-817d-8cf1-e57fa62dc4e6": {
+    "last_edited_time": "2026-11-23T02:10:00.000Z",
+    "title": "Google AI Edge Gallery: 인터넷 없이 폰에서 LLM이 돌아갑니다. 대화는 기기 밖으로 안 나갑니다",
+    "slug": "Google-AI-Edge-Gallery_-인터넷-없이-폰에서-LLM이-돌아갑니다.-대화는-기기-밖으로-안-나갑니다-3ea1bab9e3f8817d8cf1e57fa62dc4e6",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "42f35ff286622c643a7a636118fe6afabe611bca0e0a12b6619b88f7c352f2e9",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3ea1bab9-e3f8-8191-88be-d7c72607ab57": {
+    "last_edited_time": "2026-11-23T02:10:00.000Z",
+    "title": "schift-ocr-1-beta: 한국어 은행 양식 60장, 오류율 0.067로 읽어냅니다",
+    "slug": "schift-ocr-1-beta_-한국어-은행-양식-60장,-오류율-0.067로-읽어냅니다-3ea1bab9e3f8819188bed7c72607ab57",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "0ed697c1f258eb4c226da8d1a254d17e034d0fc9fa73b717e65a826b5d32735a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3ea1bab9-e3f8-81c1-bc19-cca931c4f838": {
+    "last_edited_time": "2026-11-23T02:11:00.000Z",
+    "title": "EZPZ File: 계약서를 모르는 서버에 올리지 마세요. 브라우저 안에서 편집부터 변환까지 끝냅니다",
+    "slug": "EZPZ-File_-계약서를-모르는-서버에-올리지-마세요.-브라우저-안에서-편집부터-변환까지-끝냅니다-3ea1bab9e3f881c1bc19cca931c4f838",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "5ef25b200cb8b77baf1e0ba88eb93ad2c565c1e75424c0d869ca65614eee1fef",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
