@@ -10256,6 +10256,22 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "41d1bab9-e3f8-815f-a626-ee1837622172": {
+    "last_edited_time": "2026-11-23T03:44:00.000Z",
+    "title": "Phone Harness: 에이전트에게 진짜 폰을 맡기면, 화면을 보고 직접 누릅니다",
+    "slug": "Phone-Harness_-에이전트에게-진짜-폰을-맡기면,-화면을-보고-직접-누릅니다-41d1bab9e3f8815fa626ee1837622172",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "278b253809c06a69060f0f72ab10fc2c55c733eba6f948e3f706123c28b22871",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "41d1bab9-e3f8-81b9-879c-e4f5966b7cc2": {
     "last_edited_time": "2026-11-23T03:23:00.000Z",
     "title": "나만의 AI, 내 컴퓨터에 둡니다. 계정도 구독료도 없이, 오프라인에서도 돌아갑니다",
@@ -10268,6 +10284,150 @@
     ],
     "has_content": true,
     "content_hash": "635a0b3ba866c7c29ff06a752917925ce7247654f29836e518af3601ef54b153",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41d1bab9-e3f8-81b9-b3fa-e77b1758cec6": {
+    "last_edited_time": "2026-11-23T03:44:00.000Z",
+    "title": "Next ADE, Hide: 에이전트 10개를 띄워도 확인할 건 나를 부르는 일뿐입니다",
+    "slug": "Next-ADE,-Hide_-에이전트-10개를-띄워도-확인할-건-나를-부르는-일뿐입니다-41d1bab9e3f881b9b3fae77b1758cec6",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "1f8128827ce5cb5658def32db7b91d647c60fbabddcd0b8ddc4d6db10e4693d7",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41e1bab9-e3f8-8185-8a8d-eabc5ff7eb8c": {
+    "last_edited_time": "2026-11-23T03:44:00.000Z",
+    "title": "모델을 바꾸면 하네스도 바꿔야 할까요? 같은 하네스, 모델만 바꿨는데 순위가 11계단 움직였습니다",
+    "slug": "모델을-바꾸면-하네스도-바꿔야-할까요_-같은-하네스,-모델만-바꿨는데-순위가-11계단-움직였습니다-41e1bab9e3f881858a8deabc5ff7eb8c",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9aa90b2f269a14bf40824c0d3cca0d8bc5aedb2ebc465c38d83822825331ccfb",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41e1bab9-e3f8-819e-9654-e9bb0842e717": {
+    "last_edited_time": "2026-11-23T03:44:00.000Z",
+    "title": "EMP: 448GB 서버가 1.8TB 작업을 돌립니다. 남는 메모리를 빌려 쓰면 됩니다",
+    "slug": "EMP_-448GB-서버가-1.8TB-작업을-돌립니다.-남는-메모리를-빌려-쓰면-됩니다-41e1bab9e3f8819e9654e9bb0842e717",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9fa8a2dcafd61009a598fd97e6a1e3bb7f8c678971238cf9f53ef276fbcc8b87",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41f1bab9-e3f8-8141-8047-f6be2875f62e": {
+    "last_edited_time": "2026-11-23T03:44:00.000Z",
+    "title": "웹 서버 1,500만 개, VM 한 대에 올렸습니다. 커널을 비우면 됩니다",
+    "slug": "웹-서버-1,500만-개,-VM-한-대에-올렸습니다.-커널을-비우면-됩니다-41f1bab9e3f881418047f6be2875f62e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "380406027162c6dd645d9f9411a5146d400f921f0bc25e426a6a0c1644c43c43",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41f1bab9-e3f8-8161-80d7-f4df077e871e": {
+    "last_edited_time": "2026-11-23T03:45:00.000Z",
+    "title": "colab-t4-local-api: 그래픽카드 없이, Colab T4를 내 컴퓨터의 로컬 API로 씁니다",
+    "slug": "colab-t4-local-api_-그래픽카드-없이,-Colab-T4를-내-컴퓨터의-로컬-API로-씁니다-41f1bab9e3f8816180d7f4df077e871e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ffd0dd441df9bedd1ee2c4d6f2f683ef5e181f41d9695dc12a5cfa3e80393546",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41f1bab9-e3f8-816f-8277-d4c69d80dc67": {
+    "last_edited_time": "2026-11-23T03:45:00.000Z",
+    "title": "LibreGet: 링크 하나 붙이면 끝입니다. 1,800개 사이트 다운로드가 도구 하나로 모입니다",
+    "slug": "LibreGet_-링크-하나-붙이면-끝입니다.-1,800개-사이트-다운로드가-도구-하나로-모입니다-41f1bab9e3f8816f8277d4c69d80dc67",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "b6049925d5beee8d403680997590919805c5b43a5e950d8f407665d4621a9196",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41f1bab9-e3f8-81b6-b9dc-c83e3cbf45ec": {
+    "last_edited_time": "2026-11-23T03:46:00.000Z",
+    "title": "colab-t4-local-api: 그래픽카드가 없어도 됩니다. 무료 클라우드 GPU가 내 컴퓨터의 AI 서버가 됩니다",
+    "slug": "colab-t4-local-api_-그래픽카드가-없어도-됩니다.-무료-클라우드-GPU가-내-컴퓨터의-AI-서버가-됩니다-41f1bab9e3f881b6b9dcc83e3cbf45ec",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "087b0bbece4ab2a1dab5a76556cc554c56046abac483ec7b55b8cd51c6a195e7",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41f1bab9-e3f8-81b7-9ed4-c129bd80ebca": {
+    "last_edited_time": "2026-11-23T03:46:00.000Z",
+    "title": "Awesome ChatGPT Prompts: 좋은 질문은 만들지 말고 복사하세요. 별 17만 개가 이유입니다",
+    "slug": "Awesome-ChatGPT-Prompts_-좋은-질문은-만들지-말고-복사하세요.-별-17만-개가-이유입니다-41f1bab9e3f881b79ed4c129bd80ebca",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "b935527d81f70664e8e76e82d9120f8f6228840c5c347f2a5d2a0a1dd5aef54f",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41f1bab9-e3f8-81e2-8ed6-fbbb9d65b4a0": {
+    "last_edited_time": "2026-11-23T03:45:00.000Z",
+    "title": "cf: 1.0 RC가 나왔습니다. 명령어 2,900개, 에이전트가 더는 curl을 손으로 짜지 않습니다",
+    "slug": "cf_-1.0-RC가-나왔습니다.-명령어-2,900개,-에이전트가-더는-curl을-손으로-짜지-않습니다-41f1bab9e3f881e28ed6fbbb9d65b4a0",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "499dba0c7d9a50f6ec8fb3ed942f2ed3da17ea82b83633c700494f89b8de359b",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
