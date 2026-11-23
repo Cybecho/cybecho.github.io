@@ -8948,6 +8948,22 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3e31bab9-e3f8-8149-8d32-de157ae0cac9": {
+    "last_edited_time": "2026-11-23T01:59:00.000Z",
+    "title": "HyperFrames: 비디오 편집기가 아니라, HTML 파일이 곧 비디오입니다",
+    "slug": "HyperFrames_-비디오-편집기가-아니라,-HTML-파일이-곧-비디오입니다-3e31bab9e3f881498d32de157ae0cac9",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "30fe6d78ea7988618b9ce4cc936a552f018d61df2236f6f5b47004df9aa35950",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3e31bab9-e3f8-8166-9a46-fdfe87be50bd": {
     "last_edited_time": "2026-11-23T01:48:00.000Z",
     "title": "디자인 하네스는 거창한 도구가 아닙니다. 텍스트 폴더 하나와 실제 컴포넌트면 됩니다",
@@ -8960,6 +8976,150 @@
     ],
     "has_content": true,
     "content_hash": "1863e00a5558dc998802944723507b1f34c281e63adb91c3afd7cd7caa8b9b28",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e41bab9-e3f8-812e-8f51-fb43cdff2da9": {
+    "last_edited_time": "2026-11-23T01:59:00.000Z",
+    "title": "Agit: 대화는 깃처럼 관리합니다. 세션도 커밋하고, 브랜치하고, 포크합니다",
+    "slug": "Agit_-대화는-깃처럼-관리합니다.-세션도-커밋하고,-브랜치하고,-포크합니다-3e41bab9e3f8812e8f51fb43cdff2da9",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "403bde645ba6263835406bf6dbede424f4bb7cad7cd813f227865aa93ed60958",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e41bab9-e3f8-8168-9b30-c4e2d08fc882": {
+    "last_edited_time": "2026-11-23T01:59:00.000Z",
+    "title": "코드는 빨라졌는데 머지는 그대로입니다. CI가 새 병목이 됐습니다",
+    "slug": "코드는-빨라졌는데-머지는-그대로입니다.-CI가-새-병목이-됐습니다-3e41bab9e3f881689b30c4e2d08fc882",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "03be6f611374fec7df360292d7725197dffae8a43eb974e3a34925ca2cb0fc51",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e61bab9-e3f8-8197-8f06-c665a51a7a2a": {
+    "last_edited_time": "2026-11-23T01:59:00.000Z",
+    "title": "Tailscale: 연결은 이미 됩니다. 이제는 패킷이 흐르는 길을 넓힙니다",
+    "slug": "Tailscale_-연결은-이미-됩니다.-이제는-패킷이-흐르는-길을-넓힙니다-3e61bab9e3f881978f06c665a51a7a2a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "cb31b8964b93fd3336e1f4719485f6e0eb0926ac2289cf9a7d69b9e850688280",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e81bab9-e3f8-8006-be05-fa2fe60e9c40": {
+    "last_edited_time": "2026-11-23T01:59:00.000Z",
+    "title": "VoiceStudio: 월 22달러 음성 요금제, 내 컴퓨터에서 0원으로 끝냅니다",
+    "slug": "VoiceStudio_-월-22달러-음성-요금제,-내-컴퓨터에서-0원으로-끝냅니다-3e81bab9e3f88006be05fa2fe60e9c40",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "fa8e808485423dccad3f7f22255571d508d00e023b98d523c7ab1d6c519f32fa",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e81bab9-e3f8-80b1-a34e-da3b1efbe96e": {
+    "last_edited_time": "2026-11-23T01:59:00.000Z",
+    "title": "AI 글쓰기 티, 언어마다 다릅니다. 한국어·영어·일본어·중국어 도구 5가지로 다듬습니다",
+    "slug": "AI-글쓰기-티,-언어마다-다릅니다.-한국어·영어·일본어·중국어-도구-5가지로-다듬습니다-3e81bab9e3f880b1a34eda3b1efbe96e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "659f4a29457f5f6ff0788490d29c46fe3b9a40074f2abac23b385cf589c95a0d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e81bab9-e3f8-8107-b802-ea5e0c8650df": {
+    "last_edited_time": "2026-11-23T01:59:00.000Z",
+    "title": "JEV-Star: 스타크래프트 II 최강 AI를 이긴 비결, 빠른 손과 긴 계획의 분업입니다",
+    "slug": "JEV-Star_-스타크래프트-II-최강-AI를-이긴-비결,-빠른-손과-긴-계획의-분업입니다-3e81bab9e3f88107b802ea5e0c8650df",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "5987b238f403aa3518391d1bea5d72acf103cc7d806b0165be178023ddb59d6c",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e81bab9-e3f8-814e-b6aa-ccbb83f8c342": {
+    "last_edited_time": "2026-11-23T02:00:00.000Z",
+    "title": "Agent-Reach: 에이전트에게 눈을 달아주면, 인터넷이 통째로 읽힙니다",
+    "slug": "Agent-Reach_-에이전트에게-눈을-달아주면,-인터넷이-통째로-읽힙니다-3e81bab9e3f8814eb6aaccbb83f8c342",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "0454f5e5643a74e0552d5b9fc7178b09178581ce5b917ddb8e015a25f0cc3fba",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e81bab9-e3f8-81b3-836d-fb4ae711ba45": {
+    "last_edited_time": "2026-11-23T02:00:00.000Z",
+    "title": "Atlas: 커밋만 보고는 알 수 없습니다. 어떤 프롬프트가 그 줄을 만들었는지, 그게 기록됩니다",
+    "slug": "Atlas_-커밋만-보고는-알-수-없습니다.-어떤-프롬프트가-그-줄을-만들었는지,-그게-기록됩니다-3e81bab9e3f881b3836dfb4ae711ba45",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "d262e942353ef37c6b3f338bba08fc2a4865579f6370511c44a64cc966040dcd",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e81bab9-e3f8-81c4-bf83-ffc04ed4d3a9": {
+    "last_edited_time": "2026-11-23T02:00:00.000Z",
+    "title": "Virtio-nvgpu: GPU 한 장을 가상 머신 12개가 나눠 씁니다. 베어메탈과 2% 차이입니다",
+    "slug": "Virtio-nvgpu_-GPU-한-장을-가상-머신-12개가-나눠-씁니다.-베어메탈과-2%-차이입니다-3e81bab9e3f881c4bf83ffc04ed4d3a9",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "6de939dd942e6e4be20bfe4b81f06998407fd433db448dbf9924307b530dba17",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
