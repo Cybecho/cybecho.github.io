@@ -9632,6 +9632,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "40a1bab9-e3f8-811e-a7e0-e3af6263839a": {
+    "last_edited_time": "2026-11-23T02:39:00.000Z",
+    "title": "agent-desktop: 마우스를 뺏지 않고 에이전트가 내 컴퓨터를 씁니다. 화면이 아니라 구조를 읽습니다",
+    "slug": "agent-desktop_-마우스를-뺏지-않고-에이전트가-내-컴퓨터를-씁니다.-화면이-아니라-구조를-읽습니다-40a1bab9e3f8811ea7e0e3af6263839a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ef2b31856e4e772cefe17c6a8fd20665379bfb7aca42376a86ed12a64ac32086",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "40b1bab9-e3f8-8175-8e0c-e6665fb9dcf8": {
+    "last_edited_time": "2026-11-23T02:39:00.000Z",
+    "title": "pg-jev: SQL에 말로 조건을 적으면, 벡터 없이 행을 골라냅니다",
+    "slug": "pg-jev_-SQL에-말로-조건을-적으면,-벡터-없이-행을-골라냅니다-40b1bab9e3f881758e0ce6665fb9dcf8",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "2ea2647e86adf295a9d7cd22a1aa9be5569c0a6c9bbfd6249984ad9a2167053d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "40d1bab9-e3f8-815c-b9aa-e3653364de07": {
+    "last_edited_time": "2026-11-23T02:40:00.000Z",
+    "title": "Phone Harness MCP: 설치 없이 URL 하나로, 클라우드의 진짜 아이폰을 에이전트에게 맡깁니다",
+    "slug": "Phone-Harness-MCP_-설치-없이-URL-하나로,-클라우드의-진짜-아이폰을-에이전트에게-맡깁니다-40d1bab9e3f8815cb9aae3653364de07",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "f42f4d8f8aa62adfda106c29ac4bbd503dd7c19f1376e71bbffe8ec6b77b661d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "40d1bab9-e3f8-8189-8a1e-eea43de4f777": {
+    "last_edited_time": "2026-11-23T02:40:00.000Z",
+    "title": "전화 비서, 010 번호 그대로 받습니다. 맥과 작은 보드 한 장이면 됩니다",
+    "slug": "전화-비서,-010-번호-그대로-받습니다.-맥과-작은-보드-한-장이면-됩니다-40d1bab9e3f881898a1eeea43de4f777",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "cbfef6a46babe53e8b0e189029b4c6ec416cf375b3d6758ec2a2e0027e9295fb",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "40e1bab9-e3f8-814f-ac0a-eba7793cff0d": {
+    "last_edited_time": "2026-11-23T02:40:00.000Z",
+    "title": "voxl: 에이전트에게 화면을 60프레임으로 보여주면, 기다림이 사라집니다",
+    "slug": "voxl_-에이전트에게-화면을-60프레임으로-보여주면,-기다림이-사라집니다-40e1bab9e3f8814fac0aeba7793cff0d",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a86d40ea8e9ff5769d6221fc3f2a3123d01fb41d9ad1b5e74950d3de8a9fce97",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "40e1bab9-e3f8-8172-a7de-de1c66ff64d3": {
+    "last_edited_time": "2026-11-23T02:40:00.000Z",
+    "title": "n8n-mcp: 말로 시키면 워크플로우가 짜집니다. 블록은 이제 AI가 잇습니다",
+    "slug": "n8n-mcp_-말로-시키면-워크플로우가-짜집니다.-블록은-이제-AI가-잇습니다-40e1bab9e3f88172a7dede1c66ff64d3",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "66d9b6d9af62468a37bdb83563a6e58454043c791b0a7dc35c97f2eca5d1d847",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "40e1bab9-e3f8-81f0-8801-f31d008384e8": {
+    "last_edited_time": "2026-11-23T02:40:00.000Z",
+    "title": "Auto Ontology: 매출 숫자가 틀리면 빠른 답은 소용없습니다. 의미 지도를 먼저 만듭니다",
+    "slug": "Auto-Ontology_-매출-숫자가-틀리면-빠른-답은-소용없습니다.-의미-지도를-먼저-만듭니다-40e1bab9e3f881f08801f31d008384e8",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "b4873c2c79d8a25718ce78c66a1f20fdc5d709b326c26e859b2a13fa41e9a026",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "40f1bab9-e3f8-811c-a3db-cde3a90f8b62": {
+    "last_edited_time": "2026-11-23T02:40:00.000Z",
+    "title": "ai-goofish-monitor: 원하는 중고 매물이 뜨자마자, AI가 골라서 알려줍니다",
+    "slug": "ai-goofish-monitor_-원하는-중고-매물이-뜨자마자,-AI가-골라서-알려줍니다-40f1bab9e3f8811ca3dbcde3a90f8b62",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "b9d12b6629cad9306e194a8b8121970f182fafe812d0a3eaa5a469f16b8c1d81",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4101bab9-e3f8-8195-9237-e80710f15e62": {
+    "last_edited_time": "2026-11-23T02:40:00.000Z",
+    "title": "SaaS의 해자는 기능이 아닙니다. 코드가 읽히는 시대, 무엇이 남을까요?",
+    "slug": "SaaS의-해자는-기능이-아닙니다.-코드가-읽히는-시대,-무엇이-남을까요_-4101bab9e3f881959237e80710f15e62",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "12247b5a5d90e633cd6b30ae8caa2b12e9c5f66471ab0aa5dd9f6f502e2ea57a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4121bab9-e3f8-814a-b30a-fe7b31f3f136": {
+    "last_edited_time": "2026-11-23T02:40:00.000Z",
+    "title": "Claude Opus 5.5: 영상은 찍는 게 아닙니다. 코드로 그려서 녹화합니다",
+    "slug": "Claude-Opus-5.5_-영상은-찍는-게-아닙니다.-코드로-그려서-녹화합니다-4121bab9e3f8814ab30afe7b31f3f136",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "df57ecc12b3a0b803d00f4454bc6c6e4c9f296ed888905118855f79ce0c90283",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "4262fa2a-444d-4d13-b1a6-08a8da0b762c": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "유니티 로그라이크 05",
