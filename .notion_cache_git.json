@@ -9444,6 +9444,134 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3f61bab9-e3f8-81d4-9f8d-c99a76211200": {
+    "last_edited_time": "2026-11-23T02:29:00.000Z",
+    "title": "iPhone Use: 말 한 마디면 AI가 진짜 아이폰을 만집니다. 화면이 아니라 UI 구조를 읽습니다",
+    "slug": "iPhone-Use_-말-한-마디면-AI가-진짜-아이폰을-만집니다.-화면이-아니라-UI-구조를-읽습니다-3f61bab9e3f881d49f8dc99a76211200",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "b823fba1a23743b74f5d72b0df82c5b1f326af4a405c3e900c3c344a1305f1e9",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3f71bab9-e3f8-8197-bd73-fcf7dde78593": {
+    "last_edited_time": "2026-11-23T02:29:00.000Z",
+    "title": "REA: 프로그램 속을 뜯어보지 않아도 됩니다. 에이전트에게 물으면 답이 옵니다",
+    "slug": "REA_-프로그램-속을-뜯어보지-않아도-됩니다.-에이전트에게-물으면-답이-옵니다-3f71bab9e3f88197bd73fcf7dde78593",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "3496d4350a7d17579f015957eabbdc2ab08b5d6b313b2904cc3983e674084ba2",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3f81bab9-e3f8-81e5-81e1-dfc81048c5f1": {
+    "last_edited_time": "2026-11-23T02:30:00.000Z",
+    "title": "REA: 앱 소스 없이 기능의 속을 봅니다. 설치 한 줄이면 에이전트가 증거까지 가져옵니다",
+    "slug": "REA_-앱-소스-없이-기능의-속을-봅니다.-설치-한-줄이면-에이전트가-증거까지-가져옵니다-3f81bab9e3f881e581e1dfc81048c5f1",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "fde149c85d2f002e3bbd0f81251670bce6ae25075268a5b2786e50ab61e84963",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3f91bab9-e3f8-814d-afc5-df0c7ba8ccae": {
+    "last_edited_time": "2026-11-23T02:30:00.000Z",
+    "title": "PentAGI: 목표만 말하면 에이전트 팀이 알아서 침투 테스트를 이어갑니다",
+    "slug": "PentAGI_-목표만-말하면-에이전트-팀이-알아서-침투-테스트를-이어갑니다-3f91bab9e3f8814dafc5df0c7ba8ccae",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "6dde283a18c909ecfc99812dc9dd422ba7d27a2551c22b617dfe43e272269fbb",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3fc1bab9-e3f8-8102-b5c0-f17c845fa48c": {
+    "last_edited_time": "2026-11-23T02:30:00.000Z",
+    "title": "REA: 1996년 게임의 소리 계산, 63바이트까지 똑같이 되살렸습니다",
+    "slug": "REA_-1996년-게임의-소리-계산,-63바이트까지-똑같이-되살렸습니다-3fc1bab9e3f88102b5c0f17c845fa48c",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "7cab07d5ac034696c8ab3c38d07848c35b32ce77380633104e9ee0e346d0a107",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3fd1bab9-e3f8-811d-b7d0-c12611472788": {
+    "last_edited_time": "2026-11-23T02:30:00.000Z",
+    "title": "chums: 손목에서 에이전트에게 말하면, 맥이 대신 일합니다",
+    "slug": "chums_-손목에서-에이전트에게-말하면,-맥이-대신-일합니다-3fd1bab9e3f8811db7d0c12611472788",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "bd39f31ac5d6619c73478576884ae8f780969c51b9cdc7b023adae85a34dd68e",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3fe1bab9-e3f8-8113-b2b8-cf135760ba7b": {
+    "last_edited_time": "2026-11-23T02:30:00.000Z",
+    "title": "MOSS-Image: 포스터 글자가 깨지지 않습니다. 글자와 위치를 프롬프트로 정합니다",
+    "slug": "MOSS-Image_-포스터-글자가-깨지지-않습니다.-글자와-위치를-프롬프트로-정합니다-3fe1bab9e3f88113b2b8cf135760ba7b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e160e7c3e09dcc40b8b7f7b93b72559847be9da820f0d63d1cdbb523f252b8bb",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3ff1bab9-e3f8-81ee-b759-d80ebdaab1c4": {
+    "last_edited_time": "2026-11-23T02:30:00.000Z",
+    "title": "OpenDesign Motion: 최상위 모델 없이도 모션 그래픽을 만듭니다. 모델은 골라 쓰는 것입니다",
+    "slug": "OpenDesign-Motion_-최상위-모델-없이도-모션-그래픽을-만듭니다.-모델은-골라-쓰는-것입니다-3ff1bab9e3f881eeb759d80ebdaab1c4",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a54ea5e9af1c5a4ef617e9e61ea01407d14dcdb1f39369be31b577bdb2f3043b",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "4003008f-6f1c-4be0-a6c9-bcf5dad94569": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "obsidian 단축키 설정",
@@ -9458,6 +9586,22 @@
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.553Z"
   },
+  "4011bab9-e3f8-819b-bf2a-ff7944bbbb05": {
+    "last_edited_time": "2026-11-23T02:30:00.000Z",
+    "title": "PixelRAG: 논문은 읽었습니다. 이제 저장소를 직접 돌려봅니다",
+    "slug": "PixelRAG_-논문은-읽었습니다.-이제-저장소를-직접-돌려봅니다-4011bab9e3f8819bbf2aff7944bbbb05",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "f58a9938caa190135f40f0c6147fc418065efcb49c58032d111852e1d4c0e4b7",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "4032f7a0-0bb1-4c29-b86e-8ded6670c405": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "Rainmeter - 윈도우에 MAC 스타일 위젯 추가하기",
@@ -9471,6 +9615,22 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.548Z"
+  },
+  "4081bab9-e3f8-8144-85c0-e66a87be8118": {
+    "last_edited_time": "2026-11-23T02:30:00.000Z",
+    "title": "Unlimited OCR 2: 수백 페이지 논문, 자르지 않고 한 번에 읽습니다",
+    "slug": "Unlimited-OCR-2_-수백-페이지-논문,-자르지-않고-한-번에-읽습니다-4081bab9e3f8814485c0e66a87be8118",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "35fd7009936e852bac9350a8edbbf31d50d81fe7d2ea94ad05a6ddcf2429ce77",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "4262fa2a-444d-4d13-b1a6-08a8da0b762c": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
