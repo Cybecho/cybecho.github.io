@@ -9284,6 +9284,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3ec1bab9-e3f8-8197-94fa-d4294eeb66fe": {
+    "last_edited_time": "2026-11-23T02:20:00.000Z",
+    "title": "cf: 대시보드를 여는 대신, 에이전트에게 말로 시키면 됩니다",
+    "slug": "cf_-대시보드를-여는-대신,-에이전트에게-말로-시키면-됩니다-3ec1bab9e3f8819794fad4294eeb66fe",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "27c010a37d3c23d9528edd57fb2530ed01b1ce3c2e4b4a83508d47d82f3e8a4b",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3ed1bab9-e3f8-81e7-acfe-ce07e127f583": {
+    "last_edited_time": "2026-11-23T02:20:00.000Z",
+    "title": "motion-video-skill: 90초 영상, 감으로 만들지 말고 게이트를 통과시켜 만듭니다",
+    "slug": "motion-video-skill_-90초-영상,-감으로-만들지-말고-게이트를-통과시켜-만듭니다-3ed1bab9e3f881e7acfece07e127f583",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "b1ce518d6089c846e91aac0a7094fdf5e22a4053960b5ea9dfb21a11e359eac5",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3ee1bab9-e3f8-8101-96af-fbf8b36a72f6": {
+    "last_edited_time": "2026-11-23T02:20:00.000Z",
+    "title": "OpenMontage: 영상 하나 만드는 데 12개 파이프라인이 돕니다. 코딩 어시스턴트가 스튜디오가 됩니다",
+    "slug": "OpenMontage_-영상-하나-만드는-데-12개-파이프라인이-돕니다.-코딩-어시스턴트가-스튜디오가-됩니다-3ee1bab9e3f8810196affbf8b36a72f6",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a652f28fc20d3bff744662885dc7e9cc8af98fcdc19872f5e26f1c6480fe5cd0",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3ee1bab9-e3f8-8170-bdd7-fe15fe1df87b": {
+    "last_edited_time": "2026-11-23T02:20:00.000Z",
+    "title": "Graft: 에이전트에게 코드 지도를 주면, 탐색이 46% 줄고 답은 그대로입니다",
+    "slug": "Graft_-에이전트에게-코드-지도를-주면,-탐색이-46%-줄고-답은-그대로입니다-3ee1bab9e3f88170bdd7fe15fe1df87b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "696e2f9a38548e478b7d35291ebd9bae170b3bd36446bc6e63c1ff66dbb4f084",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3f11bab9-e3f8-810c-9306-fdb3b7d2ad29": {
+    "last_edited_time": "2026-11-23T02:20:00.000Z",
+    "title": "Obscura: 크롬을 통째로 띄우지 않습니다. 30MB짜리 엔진이 같은 일을 해냅니다",
+    "slug": "Obscura_-크롬을-통째로-띄우지-않습니다.-30MB짜리-엔진이-같은-일을-해냅니다-3f11bab9e3f8810c9306fdb3b7d2ad29",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "32021d9b5cd0f1cb4e4391f545365b868badb38541aefad307f901052d8468ed",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3f41bab9-e3f8-8148-86fb-e04a19ac56aa": {
+    "last_edited_time": "2026-11-23T02:20:00.000Z",
+    "title": "손으로 코드를 짜는 시대는 끝났습니다. 이제는 루프를 설계하는 일입니다",
+    "slug": "손으로-코드를-짜는-시대는-끝났습니다.-이제는-루프를-설계하는-일입니다-3f41bab9e3f8814886fbe04a19ac56aa",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "466c8b758198210ee4ca5e8e2a9c60c0741b3c09ea54355ffe6cad1eb17a5339",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3f41bab9-e3f8-81cd-9901-d7e591cc54aa": {
+    "last_edited_time": "2026-11-23T02:20:00.000Z",
+    "title": "Rebalancer: 26만 5천 개를 12초에 나누는 비결은 배정 문제를 말로 적는 것입니다",
+    "slug": "Rebalancer_-26만-5천-개를-12초에-나누는-비결은-배정-문제를-말로-적는-것입니다-3f41bab9e3f881cd9901d7e591cc54aa",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "da9190f4fd2f7e6cf993626fa9f980f7a3b9e6f405c9a6ee235a4d5d394665ff",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3f51bab9-e3f8-811b-96d0-d765530b796b": {
+    "last_edited_time": "2026-11-23T02:20:00.000Z",
+    "title": "AnyPS5: PS5 게임을 에뮬레이션 없이 PC 네이티브 실행 파일로 바꿉니다",
+    "slug": "AnyPS5_-PS5-게임을-에뮬레이션-없이-PC-네이티브-실행-파일로-바꿉니다-3f51bab9e3f8811b96d0d765530b796b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9269f1ce7e71420028af774ae777fee7181a011d874ef3777a320a7f2ca8eda4",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3f61bab9-e3f8-814d-940f-e3e39cf09dbd": {
+    "last_edited_time": "2026-11-23T02:21:00.000Z",
+    "title": "ff-tracking: 촬영도 녹음도 없습니다. 6초짜리 영상, 픽셀부터 소리까지 전부 코드입니다",
+    "slug": "ff-tracking_-촬영도-녹음도-없습니다.-6초짜리-영상,-픽셀부터-소리까지-전부-코드입니다-3f61bab9e3f8814d940fe3e39cf09dbd",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "b9834872cb181a32f16122c380037f1e304579b9ccf96e342859537bf319771a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3f61bab9-e3f8-815a-821b-f5beb623dd7b": {
+    "last_edited_time": "2026-11-23T02:21:00.000Z",
+    "title": "PiDurableKit: 아이폰에서 에이전트가 죽지 않습니다. 꺼져도 이어서 일합니다",
+    "slug": "PiDurableKit_-아이폰에서-에이전트가-죽지-않습니다.-꺼져도-이어서-일합니다-3f61bab9e3f8815a821bf5beb623dd7b",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9d8e1e164ce45616aecf5f629076555e8937c1caa4ced6e4fe116f9b07bc928a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "4003008f-6f1c-4be0-a6c9-bcf5dad94569": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "obsidian 단축키 설정",
