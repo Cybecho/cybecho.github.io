@@ -8790,6 +8790,118 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3de1bab9-e3f8-8116-a81a-dfbe9cfadfa2": {
+    "last_edited_time": "2026-11-23T01:47:00.000Z",
+    "title": "BrowserSkill: 에이전트가 새 브라우저를 띄우는 대신, 이미 로그인된 내 브라우저를 빌려 씁니다",
+    "slug": "BrowserSkill_-에이전트가-새-브라우저를-띄우는-대신,-이미-로그인된-내-브라우저를-빌려-씁니다-3de1bab9e3f88116a81adfbe9cfadfa2",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "70ab549818ff5dd6ee4e754b4b6c37d80a26e74115f50f7d008dd1f671cabf19",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3de1bab9-e3f8-8148-a04e-e46454e5c3dc": {
+    "last_edited_time": "2026-11-23T01:47:00.000Z",
+    "title": "아스트라: '예쁘게 해줘'만 외치면 평생 걸립니다. 재료 시트 한 장이 먼저입니다",
+    "slug": "아스트라_-'예쁘게-해줘'만-외치면-평생-걸립니다.-재료-시트-한-장이-먼저입니다-3de1bab9e3f88148a04ee46454e5c3dc",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "1f17b60b84d8bd26ee8ff228b0d2abee36e39bbbc84c0fb6a98c4381020b208d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3de1bab9-e3f8-81a4-bcf0-e9e707e26715": {
+    "last_edited_time": "2026-11-23T01:47:00.000Z",
+    "title": "CartCut: 자막 달고 무음 자르는 일, 이제 돈 내고 기다릴 필요가 없습니다",
+    "slug": "CartCut_-자막-달고-무음-자르는-일,-이제-돈-내고-기다릴-필요가-없습니다-3de1bab9e3f881a4bcf0e9e707e26715",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "755f5f7b7c2045f8c02f7feb564efa0b8e7ae7a809ff46d4962d41dd8c5449a7",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3df1bab9-e3f8-814d-86ee-f57c12affe37": {
+    "last_edited_time": "2026-11-23T01:47:00.000Z",
+    "title": "Senior-thinking-skills: \"시니어처럼 생각해\" 대신, 판단 과정을 23개 스킬로 쪼갰습니다",
+    "slug": "Senior-thinking-skills_-_시니어처럼-생각해_-대신,-판단-과정을-23개-스킬로-쪼갰습니다-3df1bab9e3f8814d86eef57c12affe37",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9744064e85410644f208c45e375743d0555a73fa8748816905309454a933c3f6",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3df1bab9-e3f8-8163-97c3-dfd56ccffbec": {
+    "last_edited_time": "2026-11-23T01:47:00.000Z",
+    "title": "OpenSpec: 코드부터 짜지 말고, 명세부터 합의하세요. 에이전트와 싸우는 시간이 줄어듭니다",
+    "slug": "OpenSpec_-코드부터-짜지-말고,-명세부터-합의하세요.-에이전트와-싸우는-시간이-줄어듭니다-3df1bab9e3f8816397c3dfd56ccffbec",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "b1b194139404e1b0296af0cc80cc78bdd05559ede26726f74cfc9c945c3cf64d",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e01bab9-e3f8-8130-8675-dae708415ccf": {
+    "last_edited_time": "2026-11-23T01:47:00.000Z",
+    "title": "Cloudflare Quick Tunnels: 계정 없이, 명령어 하나로 로컬 서버를 인터넷에 공개합니다",
+    "slug": "Cloudflare-Quick-Tunnels_-계정-없이,-명령어-하나로-로컬-서버를-인터넷에-공개합니다-3e01bab9e3f881308675dae708415ccf",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "1dd3e3cf8bd3aeeeba7671a6c44bcb8b2430f350a929f65d882ed13a70245228",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e01bab9-e3f8-8198-ba4f-d5fe1a2007d9": {
+    "last_edited_time": "2026-11-23T01:47:00.000Z",
+    "title": "Jev Search: 검색은 AI가 계획하고, 답 대신 링크와 점수를 돌려줍니다",
+    "slug": "Jev-Search_-검색은-AI가-계획하고,-답-대신-링크와-점수를-돌려줍니다-3e01bab9e3f88198ba4fd5fe1a2007d9",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "05413e96b9d195ccb5d554bc32103e25810122e7a4a607dd357a5cbbcc7e9ed3",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3e0c232f-2fdd-4127-94d1-e59566f4cc5b": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "Proxmox 최적화를 위한 10가지 핵심 설정",
@@ -8803,6 +8915,54 @@
     ],
     "has_content": true,
     "accessed_at": "2026-11-10T09:07:59.546Z"
+  },
+  "3e21bab9-e3f8-812e-9420-d2abdef0ac1c": {
+    "last_edited_time": "2026-11-23T01:48:00.000Z",
+    "title": "데모는 되는데 프로덕션은 안 됩니다. 모델이 아니라 하네스가 문제입니다",
+    "slug": "데모는-되는데-프로덕션은-안-됩니다.-모델이-아니라-하네스가-문제입니다-3e21bab9e3f8812e9420d2abdef0ac1c",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "6044bd908752049572cda202c209f17c1ed02f775a1f123ca054e943cd734fc8",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e31bab9-e3f8-8138-bb6d-d174e6f1aa03": {
+    "last_edited_time": "2026-11-23T01:48:00.000Z",
+    "title": "AutoRAG Agent: 파일을 한곳에 모으지 않고, 그 자리에서 찾아 답합니다",
+    "slug": "AutoRAG-Agent_-파일을-한곳에-모으지-않고,-그-자리에서-찾아-답합니다-3e31bab9e3f88138bb6dd174e6f1aa03",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "66302f4ac1b4c6e0d223d16e000ebbb2b49ead4f22b160e8d6f48ae64169b68f",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3e31bab9-e3f8-8166-9a46-fdfe87be50bd": {
+    "last_edited_time": "2026-11-23T01:48:00.000Z",
+    "title": "디자인 하네스는 거창한 도구가 아닙니다. 텍스트 폴더 하나와 실제 컴포넌트면 됩니다",
+    "slug": "디자인-하네스는-거창한-도구가-아닙니다.-텍스트-폴더-하나와-실제-컴포넌트면-됩니다-3e31bab9e3f881669a46fdfe87be50bd",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "1863e00a5558dc998802944723507b1f34c281e63adb91c3afd7cd7caa8b9b28",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "4003008f-6f1c-4be0-a6c9-bcf5dad94569": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
