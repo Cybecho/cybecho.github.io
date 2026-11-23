@@ -9792,6 +9792,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "4121bab9-e3f8-8194-b7cb-de85d1abe490": {
+    "last_edited_time": "2026-11-23T02:53:00.000Z",
+    "title": "reverse-engineer-marketing: 경쟁사가 커진 이유, 말이 아니라 날짜로 읽습니다",
+    "slug": "reverse-engineer-marketing_-경쟁사가-커진-이유,-말이-아니라-날짜로-읽습니다-4121bab9e3f88194b7cbde85d1abe490",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "f19ad8191b59d4981f2a73696484504a3c6252659c70ac1414137ae7db6e05cd",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4131bab9-e3f8-8191-a87b-d27bb1b32570": {
+    "last_edited_time": "2026-11-23T02:53:00.000Z",
+    "title": "AI 에이전트 20개가 머리를 터뜨린다면, 탭을 늘리지 말고 큐로 바꾸세요",
+    "slug": "AI-에이전트-20개가-머리를-터뜨린다면,-탭을-늘리지-말고-큐로-바꾸세요-4131bab9e3f88191a87bd27bb1b32570",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e3cb72a43f0ef16d26746d7a8e1e98259a60a1989fb048e1efc74fc664416ab6",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4141bab9-e3f8-81f9-8c56-c79a53298b5f": {
+    "last_edited_time": "2026-11-23T02:53:00.000Z",
+    "title": "앱을 꼭 스토어에 올려야 할까요? 웹이면 충분하고도 남습니다",
+    "slug": "앱을-꼭-스토어에-올려야-할까요_-웹이면-충분하고도-남습니다-4141bab9e3f881f98c56c79a53298b5f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9f9cd3b70c8c950f29be81ea386e8732afff7f75ba68d75687efee463cb5e4e6",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4151bab9-e3f8-8151-a9b4-c6bef6c55fbf": {
+    "last_edited_time": "2026-11-23T02:53:00.000Z",
+    "title": "Jev 활용법: 에이전트 루프 전에 갈림길을 정합니다. 빠른 판단이 루프를 이끕니다",
+    "slug": "Jev-활용법_-에이전트-루프-전에-갈림길을-정합니다.-빠른-판단이-루프를-이끕니다-4151bab9e3f88151a9b4c6bef6c55fbf",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "bd42393332f9e0f209663d01c3477716998741548398b34feb12b467433f2826",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4161bab9-e3f8-81cb-a421-fb48d596be1c": {
+    "last_edited_time": "2026-11-23T02:53:00.000Z",
+    "title": "AI 앱이 돈을 못 버는 이유, 코드를 못 짜서가 아닙니다. 파는 순서가 틀렸습니다",
+    "slug": "AI-앱이-돈을-못-버는-이유,-코드를-못-짜서가-아닙니다.-파는-순서가-틀렸습니다-4161bab9e3f881cba421fb48d596be1c",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4ec38f32fd7fff9129c90c70b7a9a5c8f0bb22df5eb8b3f30094d5147e0cdd29",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4171bab9-e3f8-81b2-b41d-de031131cca6": {
+    "last_edited_time": "2026-11-23T02:53:00.000Z",
+    "title": "DeepSeek: 월 20달러 구독이 없습니다. 채팅도, 가중치도 원래 공짜입니다",
+    "slug": "DeepSeek_-월-20달러-구독이-없습니다.-채팅도,-가중치도-원래-공짜입니다-4171bab9e3f881b2b41dde031131cca6",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a6e2fc6595641e907fe4a5228d5b901a615ffac892acf98665a0bd60902f4424",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4171bab9-e3f8-81ba-9219-ecef4e75c68e": {
+    "last_edited_time": "2026-11-23T02:54:00.000Z",
+    "title": "화면 동작은 매번 새로 짜지 않습니다. 쪼개서 재사용하면 에이전트가 조립합니다",
+    "slug": "화면-동작은-매번-새로-짜지-않습니다.-쪼개서-재사용하면-에이전트가-조립합니다-4171bab9e3f881ba9219ecef4e75c68e",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a46f916b105cc3f2ca6f9a9b95047d7c2ad6795d8b8df26048e21f626e1f9966",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4171bab9-e3f8-81e5-a256-df0d208a1cab": {
+    "last_edited_time": "2026-11-23T02:54:00.000Z",
+    "title": "estella: 2D와 3D를 한 엔진에 담고, 에이전트가 직접 게임을 만듭니다",
+    "slug": "estella_-2D와-3D를-한-엔진에-담고,-에이전트가-직접-게임을-만듭니다-4171bab9e3f881e5a256df0d208a1cab",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "fb7232f14244ab5cc3ef8149127bce055991cadc5eaeac179caa9b4d493ed7a5",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4171bab9-e3f8-81ef-9088-f8922909aaa6": {
+    "last_edited_time": "2026-11-23T02:54:00.000Z",
+    "title": "봇 트래픽 80%를 줄인 비결은 정교한 분석이 아닙니다. 함정 하나면 됩니다",
+    "slug": "봇-트래픽-80%를-줄인-비결은-정교한-분석이-아닙니다.-함정-하나면-됩니다-4171bab9e3f881ef9088f8922909aaa6",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ef6a13e1e7feeddc480173983f206f9e935e4a6d87d13678b1b2c9b54d3f5668",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4181bab9-e3f8-815f-a62e-c51edf699720": {
+    "last_edited_time": "2026-11-23T02:54:00.000Z",
+    "title": "DeepSeek: 앱 기능이 API로 풀렸습니다. 검색·파일·음성을 파라미터 몇 개로 켭니다",
+    "slug": "DeepSeek_-앱-기능이-API로-풀렸습니다.-검색·파일·음성을-파라미터-몇-개로-켭니다-4181bab9e3f8815fa62ec51edf699720",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4a00cb2fb72c9622303c18c72c4c17d4cdea9bcbc5c083963034239eeb57d2e9",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "4262fa2a-444d-4d13-b1a6-08a8da0b762c": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "유니티 로그라이크 05",
