@@ -8453,6 +8453,86 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3c21bab9-e3f8-816b-84e3-ea6c7ca035e1": {
+    "last_edited_time": "2026-11-23T01:21:00.000Z",
+    "title": "NULNUL: 능력을 더 주는 게 아니라, 있는 능력을 찾게 하는 하네스입니다",
+    "slug": "NULNUL_-능력을-더-주는-게-아니라,-있는-능력을-찾게-하는-하네스입니다-3c21bab9e3f8816b84e3ea6c7ca035e1",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e7412923845aa3cfb74c5247a901021ccafe02a75aa8245d4cc66cc6f3649596",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3c41bab9-e3f8-810a-be30-e6b7edb3cc4f": {
+    "last_edited_time": "2026-11-23T01:21:00.000Z",
+    "title": "ELI5: 어려운 기술, 글로 설명하지 말고 그림 한 장으로 보여줍니다",
+    "slug": "ELI5_-어려운-기술,-글로-설명하지-말고-그림-한-장으로-보여줍니다-3c41bab9e3f8810abe30e6b7edb3cc4f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "e5bf50670a0edfa33cc7cc103c114b95fa3ee4b9069cee238bc6e5f02719c13c",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3c71bab9-e3f8-8102-b593-eb10c5ac4db0": {
+    "last_edited_time": "2026-11-23T01:21:00.000Z",
+    "title": "claude-obsidian: 자료만 던지면 AI가 읽고 엮어 지식 그래프로 만듭니다",
+    "slug": "claude-obsidian_-자료만-던지면-AI가-읽고-엮어-지식-그래프로-만듭니다-3c71bab9e3f88102b593eb10c5ac4db0",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "8b5f65dcdc7ad3aaff94ea2b5749449cc81727442322e2b82166cacc89455c14",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3c71bab9-e3f8-8106-91a3-cbb47e5f9ccc": {
+    "last_edited_time": "2026-11-23T01:21:00.000Z",
+    "title": "Claude SEO: 명령어 하나로 18개 에이전트가 사이트를 감사합니다",
+    "slug": "Claude-SEO_-명령어-하나로-18개-에이전트가-사이트를-감사합니다-3c71bab9e3f8810691a3cbb47e5f9ccc",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "54516c805dca5632f805007d97931374bba352a70702aaf757ecfb2f7699b6a9",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3c91bab9-e3f8-816f-9230-db88ef2a9dd6": {
+    "last_edited_time": "2026-11-23T01:22:00.000Z",
+    "title": "PixelRAG: 문서를 텍스트로 바꾸지 않고 스크린샷으로 검색하면 표 속 숫자까지 읽어냅니다",
+    "slug": "PixelRAG_-문서를-텍스트로-바꾸지-않고-스크린샷으로-검색하면-표-속-숫자까지-읽어냅니다-3c91bab9e3f8816f9230db88ef2a9dd6",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "66515eb89d3b6baf3e65ffaf56873e9eb69c6d9f3fe0ca1aa2947f54e7806602",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3cadbe24-b8c2-4e0a-a2b1-a94d234bfb13": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "Synology NAS 외부 포트오픈이 안되는 환경에서 서버 운영하기 2탄 (Feat. 클라우드플레어 터널)",
@@ -8466,6 +8546,86 @@
     ],
     "has_content": true,
     "content_hash": "459980438d59eedff928366863a1a2581217b221de44f5eff4c3fbca370a1ae6",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3cd1bab9-e3f8-8181-9b06-e8442bd0ccba": {
+    "last_edited_time": "2026-11-23T01:22:00.000Z",
+    "title": "무주택 생애최초, 첫 집은 아홉 가지 도구로 가격부터 확인합니다",
+    "slug": "무주택-생애최초,-첫-집은-아홉-가지-도구로-가격부터-확인합니다-3cd1bab9e3f881819b06e8442bd0ccba",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9030404a956d89c708088f8eb01ebe10acd8c713ba2e5463e1c99da43220d1bc",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3cf1bab9-e3f8-8150-a240-e50f14ad5476": {
+    "last_edited_time": "2026-11-23T01:22:00.000Z",
+    "title": "자동화하지 말고 없애버려라: 빨라진 나쁜 일은 여전히 나쁜 일입니다",
+    "slug": "자동화하지-말고-없애버려라_-빨라진-나쁜-일은-여전히-나쁜-일입니다-3cf1bab9e3f88150a240e50f14ad5476",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "2d66ef0ef488d963ba934126fa39dd01e35904fb782386746430146514867568",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3cf1bab9-e3f8-817d-bb79-e86f3c49ce7f": {
+    "last_edited_time": "2026-11-23T01:22:00.000Z",
+    "title": "stickman-video-director: 문장 하나를 1분짜리 스틱맨 영상으로 바꾸는 법",
+    "slug": "stickman-video-director_-문장-하나를-1분짜리-스틱맨-영상으로-바꾸는-법-3cf1bab9e3f8817dbb79e86f3c49ce7f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "c8727fa5914f93b6b3754aca312998eb5b3fc4092f277d7d04cd5e340a8f0dc6",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3cf1bab9-e3f8-81fd-9207-f7c2c5865e86": {
+    "last_edited_time": "2026-11-23T01:22:00.000Z",
+    "title": "Gemini 영상 이해: 90분 강의도 필요한 장면만 골라 봅니다",
+    "slug": "Gemini-영상-이해_-90분-강의도-필요한-장면만-골라-봅니다-3cf1bab9e3f881fd9207f7c2c5865e86",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "499f2cc25b40e459f7434fd3be7859d5de1cc1f7e673b4a13ffaa802b439ffea",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3d01bab9-e3f8-81a1-8555-ee499eeb497a": {
+    "last_edited_time": "2026-11-23T01:22:00.000Z",
+    "title": "AI 예산 넉 달 만에 소진, 우버는 덜 쓰는 대신 낭비를 걷어냈습니다",
+    "slug": "AI-예산-넉-달-만에-소진,-우버는-덜-쓰는-대신-낭비를-걷어냈습니다-3d01bab9e3f881a18555ee499eeb497a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "548fb201b132e880a4584607e55bcbcaa1fb38d0baae3f7d179bf67e6a4e14a1",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
