@@ -8630,6 +8630,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3d01bab9-e3f8-81aa-ab43-e7af0a0bf4cb": {
+    "last_edited_time": "2026-11-23T01:31:00.000Z",
+    "title": "Claude Commerce Agents: 쇼핑 AI 에이전트, 사는 쪽과 파는 쪽 두 개를 한 번에 만듭니다",
+    "slug": "Claude-Commerce-Agents_-쇼핑-AI-에이전트,-사는-쪽과-파는-쪽-두-개를-한-번에-만듭니다-3d01bab9e3f881aaab43e7af0a0bf4cb",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "c57282d0ac49caf312b943fcc5932c08c77986fff538b6e502f395e096a93e5a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3d01bab9-e3f8-81fc-98fa-d25262130235": {
+    "last_edited_time": "2026-11-23T01:31:00.000Z",
+    "title": "kakao-auto: 카톡 대화방 90개, 새벽 2시에 사람 없이 CSV로 정리합니다",
+    "slug": "kakao-auto_-카톡-대화방-90개,-새벽-2시에-사람-없이-CSV로-정리합니다-3d01bab9e3f881fc98fad25262130235",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "11ab84b61ea65e1666aecae3411b633687e5ac4598d8790403edd84716468b77",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3d41bab9-e3f8-8181-8027-f9f6993b43a2": {
+    "last_edited_time": "2026-11-23T01:31:00.000Z",
+    "title": "구독료 대신 오픈소스 7가지, 파일은 내 컴퓨터에 남습니다",
+    "slug": "구독료-대신-오픈소스-7가지,-파일은-내-컴퓨터에-남습니다-3d41bab9e3f881818027f9f6993b43a2",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "df31aaed996acfdfbb801e671ba268682b2c85ccad9f819a9b0aa98d56cdf29f",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3d71bab9-e3f8-81cd-80d2-f560c5583256": {
+    "last_edited_time": "2026-11-23T01:31:00.000Z",
+    "title": "ChatGPT Small Business Collection: 16개 도구를 연결하면 답변이 아니라 일이 됩니다",
+    "slug": "ChatGPT-Small-Business-Collection_-16개-도구를-연결하면-답변이-아니라-일이-됩니다-3d71bab9e3f881cd80d2f560c5583256",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "19bb89a01c872971e3cd7a55697d76dcdc2ebcdcc236ed3bd0a5d9a9313cbcab",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3d91bab9-e3f8-8113-8c5a-c5b6195583e6": {
+    "last_edited_time": "2026-11-23T01:31:00.000Z",
+    "title": "free-claude-code: 클로드 코드는 그대로, 모델만 무료로 바꾸는 방법입니다",
+    "slug": "free-claude-code_-클로드-코드는-그대로,-모델만-무료로-바꾸는-방법입니다-3d91bab9e3f881138c5ac5b6195583e6",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "805627227981de79645fd747300052cd9a432e8ce3f1ac176cbccd1ce81a2dc4",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3d91bab9-e3f8-81e1-96f1-fb4c2ea06794": {
+    "last_edited_time": "2026-11-23T01:32:00.000Z",
+    "title": "archify: 예쁜 아키텍처 그림이 아니라, 검증받은 시스템 지도입니다",
+    "slug": "archify_-예쁜-아키텍처-그림이-아니라,-검증받은-시스템-지도입니다-3d91bab9e3f881e196f1fb4c2ea06794",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "07f27775a618eee3e7f276fd5212dcf1ca7d42894afb5f803528046d66b520be",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3db1bab9-e3f8-80d0-8e50-cffac2c519c5": {
+    "last_edited_time": "2026-11-23T01:31:00.000Z",
+    "title": "WikiSkill: 에이전트가 실패를 기억하면, 작은 모델도 큰 모델을 이깁니다",
+    "slug": "WikiSkill_-에이전트가-실패를-기억하면,-작은-모델도-큰-모델을-이깁니다-3db1bab9e3f880d08e50cffac2c519c5",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "f2a5209756b06dae89c485902e13ca33c90db6c96e06703db62d90e3f5ffd882",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3db1bab9-e3f8-810b-8136-d8b6fe3093fd": {
+    "last_edited_time": "2026-11-23T01:31:00.000Z",
+    "title": "aside-codemode: 55초 걸리던 검색이 1초로 줄었습니다. 이미 있던 엔진을 꺼내 쓴 것뿐입니다",
+    "slug": "aside-codemode_-55초-걸리던-검색이-1초로-줄었습니다.-이미-있던-엔진을-꺼내-쓴-것뿐입니다-3db1bab9e3f8810b8136d8b6fe3093fd",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "470a008b3075b97259f17375918832a78dde63e09babe501680d0d2d402b2acd",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3dc1bab9-e3f8-8159-9235-e46214851a94": {
+    "last_edited_time": "2026-11-23T01:31:00.000Z",
+    "title": "코드를 손으로 다 쓰는 시대가 끝나고 있습니다. 현실과 동떨어진 쿵푸 고수가 되지 마세요",
+    "slug": "코드를-손으로-다-쓰는-시대가-끝나고-있습니다.-현실과-동떨어진-쿵푸-고수가-되지-마세요-3dc1bab9e3f881599235e46214851a94",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "124898853af23bf25ce505e7c4dff652ce83d1eae4086719d78649675f862ca4",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3de1bab9-e3f8-8115-96b8-e77a26da2c2f": {
+    "last_edited_time": "2026-11-23T01:32:00.000Z",
+    "title": "영상 편집, 이제 타임라인이 아니라 말로 합니다. 9월에만 스킬 6개가 쏟아졌습니다",
+    "slug": "영상-편집,-이제-타임라인이-아니라-말로-합니다.-9월에만-스킬-6개가-쏟아졌습니다-3de1bab9e3f8811596b8e77a26da2c2f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "4cb86da147676348086ff67d531f36f99df6b016ab72dd94f718af0c09a4c8f3",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3e0c232f-2fdd-4127-94d1-e59566f4cc5b": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "Proxmox 최적화를 위한 10가지 핵심 설정",
