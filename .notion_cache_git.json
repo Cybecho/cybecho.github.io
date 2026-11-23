@@ -10384,6 +10384,22 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "41f1bab9-e3f8-8199-a8e5-d59fc95e2d14": {
+    "last_edited_time": "2026-11-23T04:04:00.000Z",
+    "title": "Gemma 4 12B Heretic: 12GB 그래픽카드면 됩니다. 한 달 10만 명이 고른 로컬 모델입니다",
+    "slug": "Gemma-4-12B-Heretic_-12GB-그래픽카드면-됩니다.-한-달-10만-명이-고른-로컬-모델입니다-41f1bab9e3f88199a8e5d59fc95e2d14",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "14d6f6aeec35b68c0fdd6d63e13b11484ccfe758d50a1f6e2ef17b97443e2750",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "41f1bab9-e3f8-81b6-b9dc-c83e3cbf45ec": {
     "last_edited_time": "2026-11-23T03:46:00.000Z",
     "title": "colab-t4-local-api: 그래픽카드가 없어도 됩니다. 무료 클라우드 GPU가 내 컴퓨터의 AI 서버가 됩니다",
@@ -10428,6 +10444,86 @@
     ],
     "has_content": true,
     "content_hash": "499dba0c7d9a50f6ec8fb3ed942f2ed3da17ea82b83633c700494f89b8de359b",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41f1bab9-e3f8-81f6-8178-df8ba6937637": {
+    "last_edited_time": "2026-11-23T04:04:00.000Z",
+    "title": "OpenMotion: DeepSeek에서도 최상위 모델급 동영상을 만듭니다. 템플릿 300개가 비결입니다",
+    "slug": "OpenMotion_-DeepSeek에서도-최상위-모델급-동영상을-만듭니다.-템플릿-300개가-비결입니다-41f1bab9e3f881f68178df8ba6937637",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "d57119ee486974af7d61b5a874371b929c50ccd8ba352f3959577611cf555d07",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4201bab9-e3f8-817a-8a03-cb556eec7373": {
+    "last_edited_time": "2026-11-23T04:05:00.000Z",
+    "title": "QuePaxa: 리더가 죽어도 멈추지 않습니다. 왕복 1회로 합의하는 법입니다",
+    "slug": "QuePaxa_-리더가-죽어도-멈추지-않습니다.-왕복-1회로-합의하는-법입니다-4201bab9e3f8817a8a03cb556eec7373",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "5708a6f1003d0814f70190292ad875e40fe13d5ac1cf8b177abb485064d2d4cb",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4201bab9-e3f8-8189-8fa7-d6cd66fcd77f": {
+    "last_edited_time": "2026-11-23T04:04:00.000Z",
+    "title": "Open Source Canvas: 구독료 없이 내 GPU로 영상을 만듭니다. 노드 보드 하나면 됩니다",
+    "slug": "Open-Source-Canvas_-구독료-없이-내-GPU로-영상을-만듭니다.-노드-보드-하나면-됩니다-4201bab9e3f881898fa7d6cd66fcd77f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9af8739fce53c31648d9f309075d77c7227077458dcff56c978b27a2f0a2059a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4201bab9-e3f8-818f-8ec3-cf980f3f83ae": {
+    "last_edited_time": "2026-11-23T04:04:00.000Z",
+    "title": "영어 공부, 교재 말고 스레드 짧은 글로 시작하세요. 하루 10분이 쌓입니다",
+    "slug": "영어-공부,-교재-말고-스레드-짧은-글로-시작하세요.-하루-10분이-쌓입니다-4201bab9e3f8818f8ec3cf980f3f83ae",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "51163e60e50285dac60876e4db13a931bc81bd8fa433b9247e5d81b182b3b9c6",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "4201bab9-e3f8-81aa-b83b-f7673a74b832": {
+    "last_edited_time": "2026-11-23T04:04:00.000Z",
+    "title": "시스템 설계까지 AI가 한다면, 인간에게 남는 일은 무엇일까요?",
+    "slug": "시스템-설계까지-AI가-한다면,-인간에게-남는-일은-무엇일까요_-4201bab9e3f881aab83bf7673a74b832",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "93e6bc455eddc3867a1b1f93e592d183b6623e6fadcbb4853287774b092a411d",
     "sync_version": 2,
     "status": "published",
     "asset_warnings": 0
