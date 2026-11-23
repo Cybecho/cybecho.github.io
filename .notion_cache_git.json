@@ -7973,6 +7973,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "3a41bab9-e3f8-8144-937b-e0f240caac49": {
+    "last_edited_time": "2026-11-22T18:26:00.000Z",
+    "title": "Ontology Playground: 에이전트에게 필요한 건 스키마가 아니라 의미입니다",
+    "slug": "Ontology-Playground_-에이전트에게-필요한-건-스키마가-아니라-의미입니다-3a41bab9e3f88144937be0f240caac49",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "690786fd79bf256059ceb32c6e2113399d7a0d7d5b7592249ee849aa43b081d2",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a41bab9-e3f8-81e3-9ca6-ce298fd3785f": {
+    "last_edited_time": "2026-11-22T18:26:00.000Z",
+    "title": "sfs: 에이전트마다 따로 쌓던 기억, 폴더 하나에 모으면 팀의 두뇌가 됩니다",
+    "slug": "sfs_-에이전트마다-따로-쌓던-기억,-폴더-하나에-모으면-팀의-두뇌가-됩니다-3a41bab9e3f881e39ca6ce298fd3785f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "15403f731982f27c12200663663ce5d0d1a8f439cabbe667f5303de3e5202901",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a71bab9-e3f8-8104-88be-c54c6bc30527": {
+    "last_edited_time": "2026-11-22T18:26:00.000Z",
+    "title": "Hyperframes: 모션그래픽 영상, 애프터이펙트가 아니라 HTML로 만듭니다",
+    "slug": "Hyperframes_-모션그래픽-영상,-애프터이펙트가-아니라-HTML로-만듭니다-3a71bab9e3f8810488bec54c6bc30527",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ddc8b29f49fcc80f198b2a3dd7b6fef820dc5cc1f901221fee2f514a96229b4f",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a71bab9-e3f8-8166-abea-de6f72f85b2a": {
+    "last_edited_time": "2026-11-22T18:26:00.000Z",
+    "title": "쿠파스로 월 300만 원, 터진 글 100개를 뜯어보니 답은 구조 복사에 있었습니다",
+    "slug": "쿠파스로-월-300만-원,-터진-글-100개를-뜯어보니-답은-구조-복사에-있었습니다-3a71bab9e3f88166abeade6f72f85b2a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "8f1eaee914864cbbbd28fc9338014d8430a797af035f9379de8aec3e813ece47",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a71bab9-e3f8-817c-8890-e54354bf7a34": {
+    "last_edited_time": "2026-11-22T18:26:00.000Z",
+    "title": "Agent Skills 설계, 길게 쓰는 게 아닙니다. 짧게 나눠서 필요할 때만 여는 겁니다",
+    "slug": "Agent-Skills-설계,-길게-쓰는-게-아닙니다.-짧게-나눠서-필요할-때만-여는-겁니다-3a71bab9e3f8817c8890e54354bf7a34",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "255dae281921700d93756afa6d8686c29b21262ab6af5cfd365536768191a9f0",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a71bab9-e3f8-81ad-9c8e-e0451d16415a": {
+    "last_edited_time": "2026-11-22T18:26:00.000Z",
+    "title": "부가세 셀프신고, 규모가 작으면 혼자 해도 됩니다. 홈택스가 절반은 채워줍니다",
+    "slug": "부가세-셀프신고,-규모가-작으면-혼자-해도-됩니다.-홈택스가-절반은-채워줍니다-3a71bab9e3f881ad9c8ee0451d16415a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "ff5cbf4eaea3824bf527fafff7c759727eb767cd84f3ae7ba8a3d9f9dc4e6d98",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a81bab9-e3f8-8187-9fcd-d29053736fa4": {
+    "last_edited_time": "2026-11-22T18:27:00.000Z",
+    "title": "규칙을 쌓을수록 못해집니다. 지우는 게 잘 쓰는 법입니다",
+    "slug": "규칙을-쌓을수록-못해집니다.-지우는-게-잘-쓰는-법입니다-3a81bab9e3f881879fcdd29053736fa4",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "f0deaa36a1f694f7bf8194f1d87a2c674829a93d9928b53208d9fe7a23ed9fef",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a81bab9-e3f8-81f0-ba1c-e6e9732da5db": {
+    "last_edited_time": "2026-11-22T18:27:00.000Z",
+    "title": "쿠팡파트너스 대충 하면 월 수익 0원입니다. 클릭이 아니라 구매가 돈입니다",
+    "slug": "쿠팡파트너스-대충-하면-월-수익-0원입니다.-클릭이-아니라-구매가-돈입니다-3a81bab9e3f881f0ba1ce6e9732da5db",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "0395483d70ddc5371fc140099f9900ab174ba5f5945eca59afb34c16752da0ec",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3a91bab9-e3f8-817f-a580-f73ef1d2cd09": {
+    "last_edited_time": "2026-11-22T18:27:00.000Z",
+    "title": "수집을 200번 시켰더니, 시스템이 수집을 덜 믿게 됐습니다",
+    "slug": "수집을-200번-시켰더니,-시스템이-수집을-덜-믿게-됐습니다-3a91bab9e3f8817fa580f73ef1d2cd09",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "d6388758f6ac2470cb9d33ac34f100f49e1a9ad46b8525fc1951a87ad04f8e46",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "3aa1bab9-e3f8-80a7-974e-d6524a90d865": {
+    "last_edited_time": "2026-11-22T18:27:00.000Z",
+    "title": "로블록스 하나로 억대 연봉, 비결은 아이디어가 아니라 반복되는 재미입니다",
+    "slug": "로블록스-하나로-억대-연봉,-비결은-아이디어가-아니라-반복되는-재미입니다-3aa1bab9e3f880a7974ed6524a90d865",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "9106fa2bbcd762dc5a33042d4af4877818270d3865dd0eb79e6c3eff246044d3",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "3cadbe24-b8c2-4e0a-a2b1-a94d234bfb13": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "Synology NAS 외부 포트오픈이 안되는 환경에서 서버 운영하기 2탄 (Feat. 클라우드플레어 터널)",
