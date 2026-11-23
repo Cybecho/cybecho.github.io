@@ -10112,6 +10112,166 @@
     "status": "published",
     "asset_warnings": 0
   },
+  "41b1bab9-e3f8-8178-9480-e038ba5f0d2d": {
+    "last_edited_time": "2026-11-23T03:23:00.000Z",
+    "title": "spritecast: 일러스트 한 장으로 8방향 걷기 스프라이트를 만듭니다. 그리는 건 AI, 걷는 건 3D입니다",
+    "slug": "spritecast_-일러스트-한-장으로-8방향-걷기-스프라이트를-만듭니다.-그리는-건-AI,-걷는-건-3D입니다-41b1bab9e3f881789480e038ba5f0d2d",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "8c07847d479b317a499a6bcc6969bb8c719210b7088b21fd0c838efebce1c403",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41b1bab9-e3f8-817d-ba7c-f72f28e74215": {
+    "last_edited_time": "2026-11-23T03:22:00.000Z",
+    "title": "도구를 하나씩 부르던 시대가 끝났습니다. 이제 코드 한 번이면 됩니다",
+    "slug": "도구를-하나씩-부르던-시대가-끝났습니다.-이제-코드-한-번이면-됩니다-41b1bab9e3f8817dba7cf72f28e74215",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "1e334243a11baf9c11109f0be211fe320a0a16968d97b3aa745ec78a9f5f0ba8",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41b1bab9-e3f8-8191-be64-ee7beddd3b57": {
+    "last_edited_time": "2026-11-23T03:22:00.000Z",
+    "title": "CI가 빨라졌는데 왜 빌드는 여전히 느릴까요? 시장은 이미 세 갈래로 나뉘었습니다",
+    "slug": "CI가-빨라졌는데-왜-빌드는-여전히-느릴까요_-시장은-이미-세-갈래로-나뉘었습니다-41b1bab9e3f88191be64ee7beddd3b57",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "0365a447b3849eea266bb07efa84764a96f9352b9324e6190caecaee2db7bad6",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41b1bab9-e3f8-81a3-afc0-d80f576c4f83": {
+    "last_edited_time": "2026-11-23T03:22:00.000Z",
+    "title": "UAC: IDE로 이사 가지 마세요. 에이전트 열 개가 기다리는 곳으로 옵니다",
+    "slug": "UAC_-IDE로-이사-가지-마세요.-에이전트-열-개가-기다리는-곳으로-옵니다-41b1bab9e3f881a3afc0d80f576c4f83",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "c86c798185b20248fb68c0887593de2fcd01a0365e10f1e36b15d0bd619f94e7",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41b1bab9-e3f8-81d1-9f83-c019e41c1e4f": {
+    "last_edited_time": "2026-11-23T03:22:00.000Z",
+    "title": "임베딩 모델, 클수록 좋은가요? 0.1B가 0.6B를 이겼습니다",
+    "slug": "임베딩-모델,-클수록-좋은가요_-0.1B가-0.6B를-이겼습니다-41b1bab9e3f881d19f83c019e41c1e4f",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "95b6c438d8160b9bd5db77c7d877c03e164b0c7afb6061812645a7f4f19a967a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41c1bab9-e3f8-813c-a287-c91d2e145f73": {
+    "last_edited_time": "2026-11-23T03:22:00.000Z",
+    "title": "AI 엔지니어링, 도구부터 배우면 안 됩니다. 부품을 직접 만들어 봐야 합니다",
+    "slug": "AI-엔지니어링,-도구부터-배우면-안-됩니다.-부품을-직접-만들어-봐야-합니다-41c1bab9e3f8813ca287c91d2e145f73",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "bd6fed0ab902c2406fc50202409b2ec6dec8e5c1c04f014ac5608c1ffa924c25",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41c1bab9-e3f8-81b0-ac4f-cb7a727c2da2": {
+    "last_edited_time": "2026-11-23T03:23:00.000Z",
+    "title": "소프트웨어가 무너지는 이유는 버그가 아닙니다. 아무도 전체를 이해하지 못하기 때문입니다",
+    "slug": "소프트웨어가-무너지는-이유는-버그가-아닙니다.-아무도-전체를-이해하지-못하기-때문입니다-41c1bab9e3f881b0ac4fcb7a727c2da2",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "19949154e89c89fc983f0dd6951e33b6d2a5ef00680cac9d87e2058dcf6e84af",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41d1bab9-e3f8-810f-89c9-e7e78aade21a": {
+    "last_edited_time": "2026-11-23T03:23:00.000Z",
+    "title": "무검열 AI, 막힌다고 끝이 아닙니다. 내 컴퓨터에 직접 두는 모델 7가지",
+    "slug": "무검열-AI,-막힌다고-끝이-아닙니다.-내-컴퓨터에-직접-두는-모델-7가지-41d1bab9e3f8810f89c9e7e78aade21a",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "00fdbf30645d15377c9b373ab243625f240530ebe2cf8a9d6efc4bcda396b40a",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41d1bab9-e3f8-8151-9e2d-c6f36ca99033": {
+    "last_edited_time": "2026-11-23T03:23:00.000Z",
+    "title": "last30days: 검색 기준을 바꾸면, 30일치 사람들의 반응이 한 장으로 모입니다",
+    "slug": "last30days_-검색-기준을-바꾸면,-30일치-사람들의-반응이-한-장으로-모입니다-41d1bab9e3f881519e2dc6f36ca99033",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "a9393236f79e61c5d345e0a3a49fd5b5bcbb950ee64416edf51fb08cf9447811",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
+  "41d1bab9-e3f8-81b9-879c-e4f5966b7cc2": {
+    "last_edited_time": "2026-11-23T03:23:00.000Z",
+    "title": "나만의 AI, 내 컴퓨터에 둡니다. 계정도 구독료도 없이, 오프라인에서도 돌아갑니다",
+    "slug": "나만의-AI,-내-컴퓨터에-둡니다.-계정도-구독료도-없이,-오프라인에서도-돌아갑니다-41d1bab9e3f881b9879ce4f5966b7cc2",
+    "tags": [
+      "AI"
+    ],
+    "themes": [
+      "AI"
+    ],
+    "has_content": true,
+    "content_hash": "635a0b3ba866c7c29ff06a752917925ce7247654f29836e518af3601ef54b153",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
+  },
   "4262fa2a-444d-4d13-b1a6-08a8da0b762c": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
     "title": "유니티 로그라이크 05",
