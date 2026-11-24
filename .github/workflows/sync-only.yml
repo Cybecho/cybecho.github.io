@@ -1,0 +1,81 @@
+# One-time helper: persist the Notion sync without building or deploying.
+#
+# Why: the main Hugo workflow persists synced content only AFTER the
+# 1 GB Pages-output validation passes. A bulk re-render (e.g. 617 posts
+# after a series/tag change) re-downloads images at original size, so the
+# validation fails and nothing is persisted — every later run re-downloads
+# the same images and fails again. This workflow runs only the sync and
+# persists its result, so the normal compress + deploy cycle can proceed:
+#   1. dispatch this workflow (sync + persist)
+#   2. dispatch "Compress large PNGs" (compresses the persisted originals)
+#   3. dispatch "Hugo with Direct Notion API" (sync is a no-op, output fits)
+# It never builds, validates, or deploys anything.
+
+name: Sync Notion only (persist, no deploy)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  sync-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout exact source revision
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Reject outdated production source
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA" || {
+            echo '::error::Main changed since this run was queued. Refusing stale sync.'
+            exit 1
+          }
+
+      - name: Notion to Hugo Sync
+        if: github.ref == 'refs/heads/main'
+        env:
+          NOTION_SECRET: ${{ secrets.NOTION_SECRET }}
+          DATABASE_ID: ${{ secrets.DATABASE_ID }}
+        run: npm run sync
+
+      - name: Persist synced content
+        if: github.ref == 'refs/heads/main'
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA" || {
+            echo '::error::Main changed during sync. Refusing to push.'
+            exit 1
+          }
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -- content/posts .notion_cache_git.json
+          if ! git diff --staged --quiet; then
+            git commit -m "sync: persist Notion sync (one-time, no deploy)"
+            git push origin HEAD:main
+          else
+            echo "nothing to persist"
+          fi
