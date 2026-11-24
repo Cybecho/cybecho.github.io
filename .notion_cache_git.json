@@ -2283,10 +2283,9 @@
     "asset_warnings": 0
   },
   "2121bab9-e3f8-8030-8218-c7854078f965": {
-    "last_edited_time": "2025-07-24T10:07:00.000Z",
-    "title": "VirtualBox에서 DHCP 캐시문제, 그냥 MAC주소 바꾸니까 편안~",
-    "slug": "VirtualBox에서-DHCP-캐시문제,-그냥-MAC주소-바꾸니까-편안~",
-    "processed_at": "2026-01-13T10:37:27.836Z",
+    "last_edited_time": "2026-11-24T07:07:00.000Z",
+    "title": "VirtualBox에서 DHCP 캐시문제, 그냥 MAC주소 바꾸니까 편안",
+    "slug": "VirtualBox에서-DHCP-캐시문제,-그냥-MAC주소-바꾸니까-편안-2121bab9e3f880308218c7854078f965",
     "tags": [
       "Infra"
     ],
@@ -2294,7 +2293,10 @@
       "Infra & Network"
     ],
     "has_content": true,
-    "accessed_at": "2026-11-10T09:07:59.542Z"
+    "content_hash": "84d3b8abf3951a3cd3f6042898329f2b2d2247bd1299d227cef4d86fb001a901",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "2141bab9-e3f8-8079-a1f0-d8de153cc6cc": {
     "last_edited_time": "2026-11-23T14:37:00.000Z",
