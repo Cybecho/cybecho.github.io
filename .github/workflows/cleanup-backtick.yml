@@ -1,0 +1,34 @@
+# ONE-TIME backtick bundle cleanup (2026-11-24).
+# Deletes the stale bundle whose directory name ends with a backtick
+# (from a typo'd Notion title). The title was already fixed in Notion;
+# the next Hugo sync re-renders the post under the clean slug.
+# After this push, dispatch "Hugo with Direct Notion API" manually
+# (bot pushes do not trigger workflow runs).
+name: Cleanup backtick bundle (one-time)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Delete backtick bundle
+        run: |
+          rm -rf 'content/posts/윈도우-원격데스크톱은-데이터를-얼마나-사용할까_`'
+          ls content/posts | wc -l
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A content/posts
+          git diff --cached --quiet || git commit -m "cleanup: remove backtick orphan bundle"
+          git push
