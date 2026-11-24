@@ -1,0 +1,37 @@
+---
+# ONE-TIME orphan bundle cleanup (2026-11-24).
+# Deletes 3 stale content/posts bundles left behind when a post's title
+# changed (new slug bundle written, old bundle never removed by the sync).
+# After this push, dispatch "Hugo with Direct Notion API" manually
+# (bot pushes do not trigger workflow runs).
+name: Cleanup orphan bundles (one-time)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Delete orphan bundles
+        run: |
+          rm -rf "content/posts/프롬프트-생각하는데-시간쓰지말고,-gemini를-이용해-아주-멋드러지게-뽑아내보자"
+          rm -rf "content/posts/라즈베리파이4b-에-ProxMox-설치"
+          rm -rf "content/posts/윈도우-원격데스크톱은-데이터를-얼마나-사용할까_"
+          ls content/posts | wc -l
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A content/posts
+          git diff --cached --quiet || git commit -m "cleanup: remove 3 orphan post bundles (stale slugs)"
+          git push
+---
