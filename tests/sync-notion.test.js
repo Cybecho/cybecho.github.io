@@ -124,3 +124,18 @@ test('malformed image reference (bare filename) warns and drops the image instea
   assert.equal(warnings.length, 1);
   assert.equal(warnings[0].code, 'IMAGE_INVALID_URL');
 });
+test('hosted file image that fails validation warns and drops the image instead of failing the sync', async t => {
+  const { createRenderer } = require('../scripts/notion-renderer');
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'renderer-test-'));
+  t.after(() => fs.rmSync(dir, { recursive: true, force: true }));
+  const blockId = 'a1a7f4a9-f9df-442b-9a46-39a02363c57b';
+  const notion = { blocks: { children: { list: async () => ({ results: [{ id: blockId, type: 'image', has_children: false, image: { file: { url: 'https://prod-files-secure.s3.us-west-2.amazonaws.com/36a23913-15d9-4aa9-9c5d-0d5e0a3a4c8f/3a3f32e9-84de-497d-9871-9de75ec4e7d4/icon2.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256' } } }], has_more: false }) } } };
+  const warnings = [];
+  const failingDownload = async () => { const e = new Error('Image endpoint returned invalid image bytes'); e.code = 'IMAGE_NOT_IMAGE'; throw e; };
+  const renderer = createRenderer(notion, { onAssetWarning: w => warnings.push(w), downloadImage: failingDownload });
+  const content = await renderer.convertBlocks('page-id', dir);
+  assert.doesNotMatch(content, /!\[Image\]/);
+  assert.equal(warnings.length, 1);
+  assert.equal(warnings[0].code, 'IMAGE_NOT_IMAGE');
+});
+
