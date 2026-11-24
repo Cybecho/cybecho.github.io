@@ -1,0 +1,22 @@
+name: Cleanup tilde bundle
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove old tilde bundle
+        run: |
+          rm -rf 'content/posts/VirtualBox에서-DHCP-캐시문제,-그냥-MAC주소-바꾸니까-편안~'
+          git status --short
+      - name: Commit deletion
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "nothing to commit" && exit 0
+          git commit -m "Remove stale tilde bundle for VirtualBox DHCP post"
+          git push
