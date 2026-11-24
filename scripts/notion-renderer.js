@@ -509,40 +509,32 @@ async function convertBlocks(pageId, postDir, indentLevel = 0) {
               const imageFilename = await saveImage(imageUrl, postDir);
               content += '![Image](' + imageFilename + ')\n\n';
             } catch (error) {
-              // One bad image must not fail the whole sync. A malformed image
-              // reference (for example a bare filename with no scheme, left
-              // over from an old import) can never be downloaded, and a hosted
-              // file the pipeline cannot decode (for example an .ico icon) or
-              // download cannot be cached locally. Warn and drop the image
-              // instead; the warning forces a retry on the next run.
+              // A malformed image reference (for example a bare filename with no
+              // scheme, left over from an old import) can never be downloaded.
+              // Warn and drop the image instead of failing the whole sync.
               let parsesAsUrl = true;
               try { new URL(imageUrl); } catch { parsesAsUrl = false; }
-              const warn = (code, message) => {
+              if (!parsesAsUrl) {
                 const warning = {
-                  host: parsesAsUrl ? new URL(imageUrl).hostname : undefined,
-                  code,
+                  code: 'IMAGE_INVALID_URL',
                   block_id: /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(block.id || '') ? block.id : undefined
                 };
                 if (options.onAssetWarning) options.onAssetWarning(warning);
-                else console.warn(message, JSON.stringify(warning));
-              };
-              const failureCode = /^[A-Z][A-Z0-9_]{0,63}$/.test(error.code || '') ? error.code : 'IMAGE_DOWNLOAD_FAILED';
-              if (!parsesAsUrl) {
-                warn('IMAGE_INVALID_URL', 'Invalid image URL dropped:');
+                else console.warn('Invalid image URL dropped:', JSON.stringify(warning));
                 // No image markdown is emitted for the dropped block.
               } else {
                 const external = !block.image.file && block.image.external?.url === imageUrl;
-                if (external && error.asset_download_failed && stableExternalImageUrl(imageUrl)) {
-                  warn(failureCode, 'External image retained:');
-                  // Keep the exact source target, escaping only Markdown delimiters.
-                  const destination = imageUrl.replace(/</g, '%3C').replace(/>/g, '%3E');
-                  content += '![Image](<' + destination + '>)\n\n';
-                } else if (error.asset_download_failed) {
-                  warn(failureCode, 'Image download failed, image dropped:');
-                  // No image markdown is emitted for the dropped block.
-                } else {
-                  throw error;
-                }
+                if (!external || !error.asset_download_failed || !stableExternalImageUrl(imageUrl)) throw error;
+                const warning = {
+                  host: new URL(imageUrl).hostname,
+                  code: /^[A-Z][A-Z0-9_]{0,63}$/.test(error.code || '') ? error.code : 'IMAGE_DOWNLOAD_FAILED',
+                  block_id: /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(block.id || '') ? block.id : undefined
+                };
+                if (options.onAssetWarning) options.onAssetWarning(warning);
+                else console.warn('External image retained:', JSON.stringify(warning));
+                // Keep the exact source target, escaping only Markdown delimiters.
+                const destination = imageUrl.replace(/</g, '%3C').replace(/>/g, '%3E');
+                content += '![Image](<' + destination + '>)\n\n';
               }
             }
           }
