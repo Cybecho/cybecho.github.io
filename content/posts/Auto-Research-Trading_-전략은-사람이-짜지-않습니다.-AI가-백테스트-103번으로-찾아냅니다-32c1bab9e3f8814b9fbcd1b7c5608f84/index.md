@@ -2,8 +2,8 @@
 title: "Auto-Research Trading: 전략은 사람이 짜지 않습니다. AI가 백테스트 103번으로 찾아냅니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "AI 에이전트가 전략 코드를 수정하고 백테스트를 반복해 103회 실험 끝에 샤프 지수 2.7에서 20.6으로 개선된 6개 신호 앙상블을 만들었습니다. 그러나 모든 실험이 같은 9개월 검증 구간을 사용해 과적합 가능성이 크므로, 결과는 실전 수익의 증거가 아니라 자율 연구 시스템의 작동 사례로 봐야 합니다."
 featured_image: "image_23d2c6e68cc1f02f7d5f0d61.webp"
 notion_id: "32c1bab9-e3f8-814b-9fbc-d1b7c5608f84"

@@ -2,8 +2,7 @@
 title: "Recordly: 그냥 녹화만 해도, 데모 영상이 프로처럼 나옵니다"
 date: 2026-03-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Tips"]
 description: "Recordly는 화면 녹화와 편집을 한곳에서 처리하는 무료 오픈소스 도구입니다. 커서 움직임을 바탕으로 자동 줌을 제안하고 커서 효과, 프레임, 웹캠, 타임라인 편집을 지원하며 MP4와 GIF로 내보낼 수 있습니다. 자동 줌은 직접 확인하고 수정해야 하며, 운영체제별 최소 조건과 일부 제한 사항도 있습니다."
 featured_image: "image_1cb11caee0dcf1a1a2736758.webp"
 notion_id: "3281bab9-e3f8-8100-91a2-d1c0f3cd8741"

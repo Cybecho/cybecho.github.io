@@ -2,8 +2,8 @@
 title: "Claude SEO: 명령어 하나로 18개 에이전트가 사이트를 감사합니다"
 date: 2026-08-25T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "클로드 SEO는 클로드 코드에서 명령어 하나로 여러 전문 에이전트가 기술 SEO, 콘텐츠, 스키마, AI 검색 대응 등을 감사하고 우선순위별 실행 계획을 제시하는 무료 오픈소스 플러그인입니다. 다만 클로드 코드 요금제가 별도로 필요하며, 전용 크롤러를 완전히 대체하지는 못하므로 결과를 검토하고 함께 활용하는 것이 좋습니다."
 featured_image: "image_e319f095c6f9d1e52675d8e2.webp"
 notion_id: "3c71bab9-e3f8-8106-91a3-cbb47e5f9ccc"

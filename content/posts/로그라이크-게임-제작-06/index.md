@@ -2,11 +2,11 @@
 title: "로그라이크 게임 제작 06"
 date: 2023-03-21T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 게임 습작"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "맵 로드시 랜덤 디자인 패턴을 적용하여 다양한 맵을 구현하는 방법을 설명합니다. 여러 패턴을 enum으로 정의하고, 맵 이동 시 랜덤으로 활성화하여 다채로운 경험을 제공합니다. 코드는 GameObject 리스트를 초기화하고, 맵 이동 시 랜덤 패턴을 불러오는 기능을 포함합니다."
+featured_image: "image_00423bfb2cf25ee96ef1ce0b.gif"
 notion_id: "a31ff9e4-ec22-452c-bd56-222bf041d922"
-notion_url: "https://www.notion.so/06-a31ff9e4ec22452cbd56222bf041d922"
 ---
 
 # 로그라이크 게임 제작 06
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/06-a31ff9e4ec22452cbd56222bf041d922"
 > 맵 로드시 랜덤 디자인 패턴을 적용하여 다양한 맵을 구현하는 방법을 설명합니다. 여러 패턴을 enum으로 정의하고, 맵 이동 시 랜덤으로 활성화하여 다채로운 경험을 제공합니다. 코드는 GameObject 리스트를 초기화하고, 맵 이동 시 랜덤 패턴을 불러오는 기능을 포함합니다.
 
 ---
+
+![Image](image_00423bfb2cf25ee96ef1ce0b.gif)
 
 enum 으로 여러개의 패턴 디자인을 넣어두고 
 

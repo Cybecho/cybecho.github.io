@@ -2,11 +2,11 @@
 title: "WSL2 용량 왜 안줄어드냐? - Diskpart를 활용한 가상 디스크 압축방법"
 date: 2026-01-18T05:12:00.000Z
 draft: false
-tags: ["WINDOWS", "ubuntu"]
-series: ["Don't Hate Windows!", "Let's Linux!"]
+tags: ["WINDOWS","ubuntu"]
+series: ["Don't Hate Windows!"]
 description: "WSL2의 가상 디스크는 동적 확장 방식으로 설계되어 있어, 리눅스에서 데이터를 삭제해도 윈도우에서 물리적 용량이 줄어들지 않는 문제가 발생한다. 이를 해결하기 위해서는 가상 디스크 내부 정리, TRIM 명령 실행, WSL 종료 후 VHDX 압축 단계를 거쳐야 한다. Podman의 컨테이너 이미지가 큰 용량을 차지하므로, 이를 정리하고 최종적으로 압축을 수행해야 실제 용량 회수가 가능하다."
+featured_image: "image_1e2d3e97c9fb.png"
 notion_id: "2ec1bab9-e3f8-80f7-a64d-e93eb1dcbfe1"
-notion_url: "https://www.notion.so/WSL2-Diskpart-2ec1bab9e3f880f7a64de93eb1dcbfe1"
 ---
 
 # WSL2 용량 왜 안줄어드냐? - Diskpart를 활용한 가상 디스크 압축방법
@@ -268,3 +268,21 @@ sudo fstrim -av || true
 
 ## 8) 검증: “Length” 대신 실제 점유 확인 포인트
 
+- `Get-Item Length`는 그대로일 수 있다.
+- 탐색기 파일 속성의 **“크기(디스크상)”**이 줄었는지 보는 게 직관적이다.
+- PowerShell에서 엄밀히 보려면 “디스크상 크기”를 별도로 측정해야 하는데(커널 API 필요), 운영 판단은 보통 탐색기 속성으로 충분하다.
+---
+
+## 9) 최종 결론(현재 상태 기준)
+
+- 네 `du` 출력은 **WSL이 실제로 77G를 사용 중**임을 이미 입증했다.
+- 그중 **43G는 Podman overlay**, 11G는 `/var/tmp`, 21G는 `/home`이어서,
+- VHDX(약 87GiB)가 큰 것은 “벌루닝만”이 아니라 **실데이터가 크기 때문**이다.
+- 따라서 해결은:
+  1. 실데이터(특히 `/var/lib/containers/storage/overlay`)를 줄이고
+  1. `fstrim`으로 discard 찍고
+  1. `wsl --shutdown` 후
+  1. `diskpart compact vdisk`로 회수
+    이 순서가 정답이다.
+
+- sparse(`-set-sparse`)는 네 환경에서 막혀 있어 실패한 것이고, **현재 축소의 필수 요건이 아니다.**

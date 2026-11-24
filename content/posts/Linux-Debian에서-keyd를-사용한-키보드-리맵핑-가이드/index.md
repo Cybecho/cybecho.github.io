@@ -2,11 +2,11 @@
 title: "Linux - Debian에서 keyd를 사용한 키보드 리맵핑 가이드"
 date: 2025-11-16T07:44:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
 series: ["Let's Linux!"]
 description: "Debian에서 Capslock 키를 레이어 키로 설정하여 i, j, k, l을 방향키로 매핑하는 방법을 설명합니다. 필수 패키지 설치, keyd 소스 다운로드 및 설치, systemd 서비스 활성화, 설정 파일 생성 및 적용 과정을 포함하며, 추가 팁으로 설정 파일 문법 확인, 서비스 재시작, 로그 확인 방법도 안내합니다."
+featured_image: "image_db053b1dcab5f6896697a930.png"
 notion_id: "2ad1bab9-e3f8-8099-8351-f4ad02c0dbc2"
-notion_url: "https://www.notion.so/Linux-Debian-keyd-2ad1bab9e3f880998351f4ad02c0dbc2"
 ---
 
 # Linux - Debian에서 keyd를 사용한 키보드 리맵핑 가이드
@@ -16,9 +16,11 @@ notion_url: "https://www.notion.so/Linux-Debian-keyd-2ad1bab9e3f880998351f4ad02c
 
 ---
 
+![Image](image_db053b1dcab5f6896697a930.png)
+
 # Capslock을 레이어 키로 활용하여 i j k l을 방향키로 사용하는 설정입니다.
 
-[Fedora 키보드 리맵핑](https://www.notion.so/68b0551fe7804f81be65d987ca9ae47e) 에 이어, Debian에서 키보드 리맵핑을 하는 방법을 다룹니다.
+[Fedora 키보드 리맵핑](https://app.notion.com/p/68b0551fe7804f81be65d987ca9ae47e) 에 이어, Debian에서 키보드 리맵핑을 하는 방법을 다룹니다.
 
 덕분에 오래된 x230에서 편안한 타이핑 라이프를 즐길 수 있어 기쁩니다 ^^
 

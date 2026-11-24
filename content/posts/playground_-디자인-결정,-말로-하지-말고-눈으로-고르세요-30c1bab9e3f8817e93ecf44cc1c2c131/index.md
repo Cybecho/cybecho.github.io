@@ -2,9 +2,10 @@
 title: "playground: 디자인 결정, 말로 하지 말고 눈으로 고르세요"
 date: 2026-02-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill"]
+series: ["AI Harness"]
 description: "playground는 클로드 코드에서 시각적 설정을 조정하고 결과를 실시간으로 미리 본 뒤, 선택한 내용을 자연어 프롬프트로 복사해 적용할 수 있게 해주는 공식 스킬입니다. 디자인, 데이터 탐색, 개념도 등 6가지 템플릿을 제공하며, 말로 설명하기 어려운 복잡하고 시각적인 작업에 특히 유용합니다."
+featured_image: "image_807a43dad1428699e1f3af4f.webp"
 notion_id: "30c1bab9-e3f8-817e-93ec-f44cc1c2c131"
 ---
 

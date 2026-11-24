@@ -2,11 +2,11 @@
 title: "Claude code 빡고수의 엔지니어링을 엿보자"
 date: 2026-01-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "Claude Code의 활용 가이드는 AI를 개발 전 주기에 통합하는 방법을 제시하며, 문제를 세분화하고 명확한 지시를 통해 AI의 성능을 극대화하는 전략을 강조합니다. 작업 모드 선택, 컨텍스트 관리, 환경 설정, 고급 자동화 및 Git 통합을 통해 생산성을 높이고 보안을 강화하는 방법을 설명합니다. 단계별 학습 로드맵을 통해 개발자는 AI와 협력하여 시스템을 설계하고 지휘하는 역할로 성장해야 합니다."
+featured_image: "image_6838251e995d2dc7f6fed76e.png"
 notion_id: "2ed1bab9-e3f8-81c6-be58-d6a12a146fde"
-notion_url: "https://www.notion.so/Claude-code-2ed1bab9e3f881c6be58d6a12a146fde"
 ---
 
 # Claude code 빡고수의 엔지니어링을 엿보자
@@ -28,7 +28,7 @@ Opus 정리 : [https://claude.ai/share/fcc59fe1-f6bf-4870-aaa2-3e3d549b2012](htt
 
 ---
 
-![Image](image_d29b351e0151.png)
+![Image](image_6838251e995d2dc7f6fed76e.png)
 
 
 > 본 문서는 2025년 Anthropic 해커톤 우승자인 ykdojo와 Anthropic의 DevRel인 Ado Kukic의 실전 노하우를 집대성한 Claude Code 활용 가이드를 분석하여 정리한 기록입니다. 인공지능이 단순한 보조 도구를 넘어 개발 전 주기에 관여하는 에이전트로 진화함에 따라, 개발자가 취해야 할 사고방식과 구체적인 기술적 전략을 체계적으로 서술합니다.

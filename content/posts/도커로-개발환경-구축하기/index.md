@@ -2,11 +2,11 @@
 title: "도커로 개발환경 구축하기"
 date: 2023-07-25T00:00:00.000Z
 draft: false
-tags: ["Docker", "WINDOWS", "ubuntu"]
-series: ["개발환경"]
+tags: ["Docker","WINDOWS","ubuntu"]
+series: ["Dev Environment"]
 description: "도커를 사용하여 파이썬 개발환경을 구축하는 방법을 설명하며, 도커 이미지를 다운로드하고 실행하는 과정, Dockerfile 작성법, 그리고 VSCode에서 도커 컨테이너에 접근하는 방법을 안내합니다. 이를 통해 C++ 프로젝트에서 필요한 라이브러리를 관리하고, 재현 가능한 개발 환경을 만드는 데 도움을 줍니다."
+featured_image: "image_9b44500cf691.png"
 notion_id: "36137e08-2f6a-4281-b300-e4020ed659f4"
-notion_url: "https://www.notion.so/36137e082f6a4281b300e4020ed659f4"
 ---
 
 # 도커로 개발환경 구축하기

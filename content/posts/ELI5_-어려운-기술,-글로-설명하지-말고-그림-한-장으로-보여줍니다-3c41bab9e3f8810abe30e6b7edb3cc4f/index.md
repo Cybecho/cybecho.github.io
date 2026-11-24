@@ -2,8 +2,8 @@
 title: "ELI5: 어려운 기술, 글로 설명하지 말고 그림 한 장으로 보여줍니다"
 date: 2026-08-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill"]
+series: ["AI Harness"]
 description: "ELI5 스킬은 /eli5 명령으로 어려운 기술을 글보다 큰 그림 중심의 독립형 HTML 자료로 설명해 줍니다. 모듈의 동작, 설계 선택, 장애 원인을 빠르게 파악하고 비전문가나 새 팀원에게 설명하는 데 유용하지만, 정확한 명세·경계 조건·보안 감사·코드 수정에는 적합하지 않으므로 그림으로 개요를 잡은 뒤 공식 문서와 코드로 세부 내용을 확인해야 합니다."
 featured_image: "image_00db67683afa97a1d710fe0b.webp"
 notion_id: "3c41bab9-e3f8-810a-be30-e6b7edb3cc4f"

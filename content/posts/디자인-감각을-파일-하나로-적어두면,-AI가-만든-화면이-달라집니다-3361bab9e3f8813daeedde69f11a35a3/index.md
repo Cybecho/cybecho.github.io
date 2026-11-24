@@ -2,8 +2,8 @@
 title: "디자인 감각을 파일 하나로 적어두면, AI가 만든 화면이 달라집니다"
 date: 2026-04-03T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering"]
+series: ["AI Harness"]
 description: "DESIGN.md 파일은 색상, 폰트, 여백, 디자인 원칙을 정리해 AI가 일관된 브랜드 화면을 만들도록 돕습니다. Stitch로 생성하거나 직접 작성하고, 공식 도구로 구조와 접근성을 검사할 수 있습니다. 유명 서비스의 디자인 파일을 참고할 수 있지만, 스펙은 아직 알파 단계이므로 형식 변화와 브랜드 모방에 주의해야 합니다."
 featured_image: "image_18dc6262f83a8309427d19ca.webp"
 notion_id: "3361bab9-e3f8-813d-aeed-de69f11a35a3"

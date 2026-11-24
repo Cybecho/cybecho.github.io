@@ -2,8 +2,8 @@
 title: "구글 공식 GEO 가이드: AI 검색 최적화, 따로 할 게 없습니다"
 date: 2026-05-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["blog-monetization"]
+series: ["블로그 수익 글쓰기"]
 description: "구글 공식 가이드에 따르면 AI 검색 최적화는 따로 없습니다. AI 오버뷰와 AI 모드는 핵심 검색 순위·품질 시스템 위에서 돌아가기 때문입니다. llms.txt, 청킹, AI 전용 스키마 같은 꼼수는 안 해도 되고, 대신 직접 경험이 담긴 비상품화 콘텐츠와 색인·스니펫·서치 콘솔까지 챙긴 기술 구조가 남습니다."
 featured_image: "image_10d9ac2a8b000aca9db785a3.webp"
 notion_id: "3661bab9-e3f8-8139-bc99-c1702b0a1b29"

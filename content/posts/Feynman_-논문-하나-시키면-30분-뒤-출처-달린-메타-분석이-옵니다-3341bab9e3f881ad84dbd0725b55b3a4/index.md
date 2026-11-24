@@ -2,8 +2,8 @@
 title: "Feynman: 논문 하나 시키면 30분 뒤 출처 달린 메타 분석이 옵니다"
 date: 2026-04-01T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","rag"]
+series: ["AI Harness"]
 description: "Feynman은 논문 조사·검증·비평·집필을 네 에이전트가 나눠 수행해 출처가 확인된 연구 분석을 만드는 무료 오픈소스 도구입니다. 다양한 문헌 검색과 PDF 분석을 지원하지만, 모델 연결은 별도로 필요하고 유료 논문은 열 수 없습니다. AI 검증도 완벽하지 않으므로 결과는 사람이 확인해야 합니다."
 featured_image: "image_aade39035cbc51c2fef22f83.webp"
 notion_id: "3341bab9-e3f8-81ad-84db-d0725b55b3a4"

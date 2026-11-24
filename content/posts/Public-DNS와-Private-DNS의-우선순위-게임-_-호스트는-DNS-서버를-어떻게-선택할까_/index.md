@@ -2,11 +2,11 @@
 title: "Public DNS와 Private DNS의 우선순위 게임 : 호스트는 DNS 서버를 어떻게 선택할까?"
 date: 2025-03-23T04:13:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
 series: ["Infra & Network"]
 description: "DNS의 기본 원리와 Public DNS 및 Private DNS의 상호작용을 이해하는 실습을 통해, 호스트가 어떤 DNS 서버를 참조하는지 확인하는 것이 핵심입니다. Windows VM에서 Ubuntu 서버를 통해 DNS 요청이 처리되는 흐름을 설명하며, 각 서버의 역할과 DNS 쿼리 처리 과정을 정리합니다. 실습을 통해 DNS 동작 방식, Public과 Private DNS의 차이점, 네트워크 문제 해결 능력을 향상시킬 수 있습니다."
+featured_image: "image_2d3efcd7fe36.png"
 notion_id: "1bf1bab9-e3f8-805c-ae61-ea18890f5d6f"
-notion_url: "https://www.notion.so/Public-DNS-Private-DNS-DNS-1bf1bab9e3f8805cae61ea18890f5d6f"
 ---
 
 # Public DNS와 Private DNS의 우선순위 게임 : 호스트는 DNS 서버를 어떻게 선택할까?
@@ -108,6 +108,13 @@ flowchart LR
 # 자, 그러면 본격적으로 실습을 시작해봅시다!
 
 > 참고로 아래 튜토리얼은 단순히 VirtualBox 기준이기에, Proxmox 용으로 실습하시려면 알잘딱으로 네트워크 설정을 다르게 가져가야하는데… 
+> [저번주](/48b4053128b04813837d0348784a1728)에 Proxmox 네트워크 설정 하신 내용 기억나시죠?
+>
+> Bridge 모드라던가 NAT라던가 웅앵웅… 등등… 그거 적절히 섞어 사용하시면 될 듯 합니다.
+>
+> 그럼 병욱 없는 병욱팀에서 믿음직한 분대장 해송님 혁준님 잘 부탁드립니다.
+>
+>
 
 ![Image](image_5e9231bd80d8.png)
 
@@ -154,10 +161,45 @@ flowchart TD
 ## VM 정리
 
 > 요약 Ver
+> - 모든 VM은 인접한 VM간의 통신이 가능하다.
+> - 해당 실습에서 [www.BABO.com](http://www.babo.com/) 은 유저가 직접 설정한 존파일 주소이다
+> - Windows ↔ UbuntuServer2(PublicDNS) ↔ UbuntuServer1(PriavteDNS) 순으로 DNS요청이 들어간다
+> - Ubuntu Server 1 (private DNS) : 도커 DNS , 네이티브 Nginx
+>   - [www.BABO1.com](http://www.babo1.com/) 이나 [www.BABO2.com](http://www.babo2.com/) 은 private DNS에서 처리해준다 windows10 VM에게.
+> - Ubuntu Server 2 (public DNS) : 네이티브 DNS , 네이티브 Apache
+>   - [www.google.com](http://www.google.com/) 이나 [www.naver.com](http://www.naver.com/) 은 public DNS에서 처리해준다 windows10 VM에게.
+> - Windows
+> - 결국 Apache 와 Dns같이 각각의 우분투 서버를 요청하는건에 대해서는 UbuntuServer2 에서 UbuntuServer1로 요청을 보내야하고, [www.google.com](http://www.google.com/) 이나 [www.naver.com](http://www.naver.com/) 과 같은 주소들은 public DNS를 처리하는 UbuntuServer2에서 처리해줘야한다.
+>
 
 ---
 
 > **조금 더 정리해보자면…**
+> **1. VM 구성:**
+>
+> - **Windows VM:** 사용자가 웹 브라우저를 통해 웹 사이트에 접속하는 역할을 합니다.
+> - **Ubuntu Server 1 (Private DNS):**
+>   - Docker 컨테이너 기반의 DNS 서버를 운영합니다.
+>   - 네이티브 Nginx 웹 서버를 운영합니다.
+>   - www.BABO1.com 또는 www.BABO2.com과 같은 Private 도메인에 대한 DNS 요청을 처리하고 Windows VM에게 응답합니다.
+> - **Ubuntu Server 2 (Public DNS):**
+>   - 네이티브 DNS 서버를 운영합니다.
+>   - 네이티브 Apache 웹 서버를 운영합니다.
+>   - www.google.com 또는 www.naver.com과 같은 Public 도메인에 대한 DNS 요청을 처리하고 Windows VM에게 응답합니다.
+> **2. DNS 요청 흐름:**
+>
+> Windows VM에서 DNS 요청이 발생하면 다음과 같은 순서로 처리됩니다.
+>
+> 1. Windows VM은 설정된 DNS 서버인 Ubuntu Server 2 (Public DNS)에게 DNS 요청을 보냅니다.
+> 1. Ubuntu Server 2 (Public DNS)는 요청된 도메인이 Private 도메인(www.BABO1.com, www.BABO2.com)인지 확인합니다.
+>   - 만약 Private 도메인이라면, Ubuntu Server 1 (Private DNS)에게 DNS 요청을 전달합니다.
+>   - 만약 Public 도메인(www.google.com, www.naver.com)이라면, 자체적으로 DNS 요청을 처리하고 Windows VM에게 응답합니다.
+> 1. Ubuntu Server 1 (Private DNS)는 Private 도메인에 대한 DNS 정보를 가지고 있으므로, 요청을 처리하고 Ubuntu Server 2 (Public DNS)를 통해 Windows VM에게 응답합니다.
+> **핵심 요약:**
+>
+> - Ubuntu Server 2 (Public DNS)는 Public 도메인에 대한 요청을 직접 처리하고, Private 도메인에 대한 요청은 Ubuntu Server 1 (Private DNS)에게 전달합니다.
+> - 웹 서버(Apache, Nginx)에 대한 요청은 각 서버가 위치한 VM (Ubuntu Server 2, Ubuntu Server 1)에서 처리됩니다.
+>
 
 
 ## IP 설정

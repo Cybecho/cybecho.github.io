@@ -2,8 +2,8 @@
 title: "OpenDataLoader PDF: PDF를 마크다운으로 미리 다듬으면, 토큰도 답도 아낍니다"
 date: 2026-03-18T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["rag","coding"]
+series: ["AI Harness"]
 description: "OpenDataLoader PDF는 PDF를 구조가 살아 있는 마크다운과 JSON으로 바꿔주는 무료 오픈소스 파서로, RAG 파이프라인에 넣기 전 전처리 단계입니다. 2단 레이아웃의 읽기 순서와 표 구조를 유지하고 머리말·바닥글 잡음을 걸러내며, 요소마다 좌표가 붙어 답의 출처를 정확히 가리킬 수 있습니다. 로컬 CPU만으로 빠르고 결정적으로 동작하고, 복잡한 표·스캔·수식은 하이브리드 모드로 넘기면 됩니다."
 featured_image: "image_80116218fbaaa55ab5ae40bb.webp"
 notion_id: "3271bab9-e3f8-818f-8e38-e1532fa41f7a"

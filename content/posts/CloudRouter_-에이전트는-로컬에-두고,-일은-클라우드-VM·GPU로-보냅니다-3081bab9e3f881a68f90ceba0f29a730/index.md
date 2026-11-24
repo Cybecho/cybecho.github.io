@@ -2,8 +2,8 @@
 title: "CloudRouter: 에이전트는 로컬에 두고, 일은 클라우드 VM·GPU로 보냅니다"
 date: 2026-02-15T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","harness"]
+series: ["AI Harness"]
 description: "클라우드라우터는 코딩 에이전트에게 클라우드 VM·GPU를 직접 띄우게 해주는 스킬이자 CLI로, 에이전트는 로컬에 머물고 일만 클라우드로 보내는 구조입니다. start와 exec 명령만으로 샌드박스를 만들고 명령을 실행하며, --gpu 옵션으로 T4부터 B200까지 GPU를 골라 쓸 수 있고 최대 10개까지 병렬로 돌릴 수 있습니다. VM마다 VNC 데스크톱과 VS Code, 주피터 랩이 붙고 크롬 브라우저 자동화까지 되지만, 인증 없이 공개되는 포트 포워딩 주소는 절대 공유하면 안 됩니다."
 featured_image: "image_828ce6bf28d6a3f83156166f.webp"
 notion_id: "3081bab9-e3f8-81a6-8f90-ceba0f29a730"

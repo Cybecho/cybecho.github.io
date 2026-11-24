@@ -3,10 +3,10 @@ title: "for mac : tex shinobi & 카라비너 ANSII배열 키맵핑"
 date: 2023-11-25T00:00:00.000Z
 draft: false
 tags: ["MAC"]
-series: ["개발환경"]
+series: ["Dev Environment"]
 description: "맥에서 Tex Shinobi와 카라비너를 사용하여 키 매핑을 설정하는 방법에 대한 안내. Karabiner Complex Rules Generator를 통해 IJKL 및 UO 키 조합을 설정하고, T480 모델에 맞게 조정하는 방법도 설명. Hammerspoon을 사용하여 CTRL+HJKL로 방향키 이동을 설정하는 방법도 포함되어 있습니다."
+featured_image: "image_4a5451369ed9.png"
 notion_id: "5dc1aa70-9146-41b6-992f-eb7d09b52a1d"
-notion_url: "https://www.notion.so/for-mac-tex-shinobi-ANSII-5dc1aa70914641b6992feb7d09b52a1d"
 ---
 
 # for mac : tex shinobi & 카라비너 ANSII배열 키맵핑

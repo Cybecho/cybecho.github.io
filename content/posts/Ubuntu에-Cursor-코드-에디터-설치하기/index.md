@@ -2,11 +2,11 @@
 title: "Ubuntu에 Cursor 코드 에디터 설치하기"
 date: 2024-12-15T10:19:00.000Z
 draft: false
-tags: ["ubuntu", "popOS"]
+tags: ["ubuntu"]
 series: ["Let's Linux!"]
 description: "Cursor는 AI 기반 코드 에디터로, Ubuntu에서 설치하는 방법은 AppImage 파일 다운로드, 실행 권한 부여, 실행 방법, 그리고 AppImageLauncher를 통한 시스템 통합을 포함합니다. 설치 후 더 스마트하게 코딩할 수 있습니다."
+featured_image: "image_bb5d508c8011.png"
 notion_id: "15d1bab9-e3f8-80f4-9348-d3d278813994"
-notion_url: "https://www.notion.so/Ubuntu-Cursor-15d1bab9e3f880f49348d3d278813994"
 ---
 
 # Ubuntu에 Cursor 코드 에디터 설치하기

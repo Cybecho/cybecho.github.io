@@ -2,8 +2,8 @@
 title: "WebMCP: 대시보드 스위치 하나로 웹사이트가 에이전트용 도구가 됩니다"
 date: 2026-08-08T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp","browser-automation"]
+series: ["AI Harness"]
 description: "WebMCP는 웹사이트가 대시보드 스위치 하나로 브라우저 AI 에이전트용 구조화된 도구를 제공하도록 하는 프리뷰 기능입니다. 코드를 수정하거나 별도 API 서버를 구축할 필요 없이 페이지의 기능을 에이전트가 직접 호출할 수 있으며, 콘텐츠 크리덴셜과 사이트 MCP 서버 연동 팩이 제공됩니다. 아직 개발자 프리뷰이자 표준 초안 단계로 브라우저 지원은 제한적입니다."
 featured_image: "image_92178b702960b49f9a9e9925.webp"
 notion_id: "3b61bab9-e3f8-8166-b0ec-c0dffe067c3c"

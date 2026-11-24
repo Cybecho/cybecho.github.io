@@ -2,11 +2,11 @@
 title: "Notion에 Git 커밋 잔디 불러오기"
 date: 2023-02-16T00:00:00.000Z
 draft: false
-tags: ["Git", "Notion"]
-series: ["Git", "Tips"]
+tags: ["Git","Notion"]
+series: ["Let's Git"]
 description: "노션에 Git 커밋 잔디를 연동하는 방법에 대한 설명으로, HTML 블록을 사용하여 GitHub 커밋 그래프를 노션에 삽입하는 방법과 관련된 링크 및 코드 예시가 포함되어 있다. 버전 2에서는 추가적인 업데이트가 언급된다."
+featured_image: "image_1ab8215804199be1a71bf624.png"
 notion_id: "c9ce520a-1965-4cfb-a9db-23acb77de99a"
-notion_url: "https://www.notion.so/Notion-Git-c9ce520a19654cfba9db23acb77de99a"
 ---
 
 # Notion에 Git 커밋 잔디 불러오기
@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Notion-Git-c9ce520a19654cfba9db23acb77de99a"
 
 ---
 
-![Image](image_faa87f6679a3.png)
+![Image](image_1ab8215804199be1a71bf624.png)
 
 # 버전1
 

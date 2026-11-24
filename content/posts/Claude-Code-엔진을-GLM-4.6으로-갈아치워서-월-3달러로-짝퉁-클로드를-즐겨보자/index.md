@@ -2,11 +2,10 @@
 title: "Claude Code 엔진을 GLM 4.6으로 갈아치워서 월 3달러로 짝퉁 클로드를 즐겨보자"
 date: 2025-10-26T07:41:00.000Z
 draft: false
-tags: ["AI", "Claude"]
-series: ["AI"]
+tags: ["Claude","coding"]
+series: ["AI Harness"]
 description: "AI 코딩 도구 '클로드 코드'의 높은 비용 문제를 해결하기 위해, GLM-4.6 엔진으로 교체하여 월 3달러로 이용할 수 있는 방법을 소개합니다. GLM-4.6은 Sonnet 4.5의 약 90% 성능을 제공하며, 사용자는 클로드 코드의 편리한 UI를 유지하면서 비용을 대폭 절감할 수 있습니다. 이 조합은 코딩 품질보다 비용 효율성을 중시하는 사용자에게 적합합니다."
 notion_id: "2981bab9-e3f8-8088-8e1c-e6b5df73278a"
-notion_url: "https://www.notion.so/Claude-Code-GLM-4-6-3-2981bab9e3f880888e1ce6b5df73278a"
 ---
 
 # Claude Code 엔진을 GLM 4.6으로 갈아치워서 월 3달러로 짝퉁 클로드를 즐겨보자

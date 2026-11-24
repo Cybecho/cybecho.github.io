@@ -2,8 +2,8 @@
 title: "Agit: 대화는 깃처럼 관리합니다. 세션도 커밋하고, 브랜치하고, 포크합니다"
 date: 2026-09-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "Agit은 클로드 코드 등의 AI 대화를 브랜치·커밋·체리픽으로 저장하고 관리하며, 다른 코딩 도구로 포크하거나 공유할 수 있게 해 줍니다. 비밀키를 감지해 자리표시자로 바꾸지만 평범한 비밀번호는 놓칠 수 있어 주의가 필요합니다. 오픈소스 도구로, 세션을 지속 가능한 자산으로 다루는 새로운 방식을 제안합니다."
 featured_image: "image_7b47a87acf07a3b49e070423.webp"
 notion_id: "3e41bab9-e3f8-812e-8f51-fb43cdff2da9"

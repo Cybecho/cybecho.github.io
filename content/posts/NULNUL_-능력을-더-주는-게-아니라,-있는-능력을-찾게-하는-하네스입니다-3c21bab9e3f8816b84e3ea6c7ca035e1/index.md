@@ -2,8 +2,8 @@
 title: "NULNUL: 능력을 더 주는 게 아니라, 있는 능력을 찾게 하는 하네스입니다"
 date: 2026-08-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness","skill"]
+series: ["AI Harness"]
 description: "NULNUL은 Codex와 Claude Code용 skills-only 하네스로, 새 능력을 추가하기 전에 저장소에 이미 있는 rule·skill·plugin·agent를 먼저 찾아 재사용하고 부족한 부분만 최소한으로 보완합니다. 반복되는 실패는 이번 작업만 고치지 않고 작은 하네스 개선안으로 만들어, 실행 에이전트와 분리된 Gate에서 검증한 뒤에만 승격합니다. 여러 세션에 걸친 작업은 장황한 기록 대신 짧고 검증 가능한 체크포인트만 남겨, 다음 세션이 적은 토큰으로 이어서 일합니다."
 featured_image: "image_2c3bf4ce77efb74aa2baeb15.webp"
 notion_id: "3c21bab9-e3f8-816b-84e3-ea6c7ca035e1"

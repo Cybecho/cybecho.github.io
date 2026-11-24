@@ -2,11 +2,11 @@
 title: "Ubuntu에 C++ 세팅"
 date: 2023-09-18T00:00:00.000Z
 draft: false
-tags: ["ubuntu", "C++"]
-series: ["Let's Linux!", "개발환경"]
+tags: ["ubuntu"]
+series: ["Let's Linux!"]
 description: "Ubuntu에서 C++ 개발 환경을 설정하는 방법: apt 업데이트 후 g++ 또는 build-essential 설치, CMake 설치, VSCode에서 C/C++ 확장 설치 및 설정, tasks.json 파일 생성 및 단축키 설정을 포함합니다."
+featured_image: "image_702d9a919ca6.png"
 notion_id: "32b957a2-d119-4fa9-89e5-e4d722ed4dbd"
-notion_url: "https://www.notion.so/Ubuntu-C-32b957a2d1194fa989e5e4d722ed4dbd"
 ---
 
 # Ubuntu에 C++ 세팅

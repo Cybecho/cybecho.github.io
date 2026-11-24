@@ -2,7 +2,10 @@
 title: "Mantic: 에이전트 토큰 63% 낭비, 임베딩 말고 구조로 찾는 게 답이다"
 date: 2026-01-08T00:00:00.000Z
 draft: false
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "구조 기반 검색은 파일 내용을 읽지 않고 경로, 파일명, 폴더 깊이, Git 메타데이터로 필요한 파일을 찾아 임베딩·벡터 DB·LLM 호출 없이 토큰과 비용을 줄입니다. 크로미움 48만 개 파일을 0.46초에 검색하며, 코드가 로컬에 머물러 프라이버시도 지킵니다. 다만 단순 문자열 검색이나 초대형 저장소에서는 다른 도구와 용도에 맞게 선택해야 합니다."
+featured_image: "image_a50c8fa1eca7ec87994324ea.webp"
 notion_id: "2e21bab9-e3f8-814b-9d2c-c1b947cab0e4"
 ---
 

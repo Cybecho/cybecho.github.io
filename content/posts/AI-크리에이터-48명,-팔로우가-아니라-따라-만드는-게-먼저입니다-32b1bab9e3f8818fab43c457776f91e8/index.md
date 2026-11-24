@@ -2,8 +2,8 @@
 title: "AI 크리에이터 48명, 팔로우가 아니라 따라 만드는 게 먼저입니다"
 date: 2026-03-22T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "2026년에 주목할 AI 크리에이터 48명을 자동화, 도구·튜토리얼, 바이브 코딩 등 8개 분야로 소개합니다. 팔로워 수보다 실제 제작·교육·출시 경험을 기준으로 골랐으며, 모두 팔로우하기보다 관심 분야에서 10명을 선택해 매일 하나씩 따라 만들고 결과를 공개해 포트폴리오로 쌓는 것이 핵심입니다."
 featured_image: "image_bdb0deb204bc74cc2acdcf87.webp"
 notion_id: "32b1bab9-e3f8-818f-ab43-c457776f91e8"

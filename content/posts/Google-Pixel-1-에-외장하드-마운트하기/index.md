@@ -2,11 +2,10 @@
 title: "Google Pixel 1 에 외장하드 마운트하기"
 date: 2024-07-18T12:34:00.000Z
 draft: false
-tags: ["Other"]
-series: ["Let's Homelab!", "HW", "구글픽셀 개조기"]
+series: ["HW"]
 description: "픽셀1 폰에서 OTG 외장하드를 마운트하는 방법: 개발자 모드와 USB 디버깅 활성화, ADB 설치 및 명령어 실행, 외장하드 연결 및 설정, 구글 포토를 통한 사진 백업 방법을 설명합니다. 무선 업로드도 가능하지만 속도가 느립니다."
+featured_image: "image_fef459014fdc.webp"
 notion_id: "1a28f3ae-da11-4b03-8043-5ba02c83e9e1"
-notion_url: "https://www.notion.so/Google-Pixel-1-1a28f3aeda114b0380435ba02c83e9e1"
 ---
 
 # Google Pixel 1 에 외장하드 마운트하기

@@ -2,11 +2,11 @@
 title: "Vim 을 꾸며봅시다"
 date: 2024-04-18T08:10:00.000Z
 draft: false
-tags: ["WINDOWS", "ubuntu", "Debian", "Arch", "MAC", "IDE", "VIM"]
-series: ["Let's Linux!", "개발환경"]
+tags: ["WINDOWS","ubuntu","Debian"]
+series: ["Let's Linux!"]
 description: "Vim을 설치하고 설정하는 방법에 대한 안내로, Windows와 Debian 계열에서 init.vim 파일을 설정하는 방법, 추천 플러그인, 그리고 자동완성 기능을 위한 CoC 설치 방법을 포함하고 있습니다. 플러그인은 vimrc 파일이나 init.vim 파일을 통해 관리할 수 있습니다."
+featured_image: "image_a45b11e45978.png"
 notion_id: "8cfdb875-ba1f-4b0c-bd55-d2d5f1f4d9db"
-notion_url: "https://www.notion.so/Vim-8cfdb875ba1f4b0cbd55d2d5f1f4d9db"
 ---
 
 # Vim 을 꾸며봅시다

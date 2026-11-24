@@ -2,8 +2,8 @@
 title: "spritecast: 일러스트 한 장으로 8방향 걷기 스프라이트를 만듭니다. 그리는 건 AI, 걷는 건 3D입니다"
 date: 2026-11-17T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill","image-generation"]
+series: ["AI Media"]
 description: "spritecast는 일러스트 한 장에서 8방향 걷기 스프라이트를 만드는 무료 MIT 라이선스 클로드 코드 플러그인입니다. 걷는 일은 3D가 하고, 이미지 모델은 각 프레임을 일러스트의 화풍으로 다시 그리기만 합니다. 캐릭터·소품·바닥·아이템까지 전부 같은 게임 카메라 각도에서 나오니, 등각 게임이 오려 붙인 것처럼 보이지 않습니다. 플러그인 자체는 무료이고, 그림과 3D 비용만 각 서비스에 직접 냅니다. 걷는 캐릭터 한 명은 약 3달러, 소품 하나는 약 0.07달러이고, 유료 단계마다 금액을 확인받고 진행합니다."
 featured_image: "image_772a5a11334af8ed159d0158.webp"
 notion_id: "41b1bab9-e3f8-8178-9480-e038ba5f0d2d"

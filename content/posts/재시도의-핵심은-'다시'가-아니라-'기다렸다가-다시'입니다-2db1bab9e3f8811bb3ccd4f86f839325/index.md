@@ -2,7 +2,10 @@
 title: "attempt: 재시도의 핵심은 '다시'가 아니라 '기다렸다가 다시'입니다"
 date: 2026-01-02T00:00:00.000Z
 draft: false
+tags: ["coding"]
+series: ["Dev Environment"]
 description: "attempt는 지수 백오프와 지터로 실패한 명령을 기다렸다가 재시도하는 CLI입니다. 종료 코드나 출력에 따라 일시적 실패는 다시 시도하고 영구적 실패는 멈춰, 서비스 준비 대기와 네트워크 오류 처리에 유용합니다. Bash에 의존하지 않으며 무료로 사용할 수 있습니다."
+featured_image: "image_e8f0a4e6bfd060b6ded3a337.webp"
 notion_id: "2db1bab9-e3f8-811b-b3cc-d4f86f839325"
 ---
 

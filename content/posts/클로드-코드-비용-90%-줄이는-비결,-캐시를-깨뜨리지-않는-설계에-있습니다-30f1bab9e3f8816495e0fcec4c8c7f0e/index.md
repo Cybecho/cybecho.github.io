@@ -2,9 +2,10 @@
 title: "클로드 코드 비용 90% 줄이는 비결, 캐시를 깨뜨리지 않는 설계에 있습니다"
 date: 2026-02-22T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering","coding"]
+series: ["AI Harness"]
 description: "프롬프트 캐싱은 앞부분부터 정확히 일치하는 내용만 재사용하므로, 정적 프롬프트와 도구 순서를 고정하고 변경 사항은 뒤쪽 메시지로 전달해야 합니다. 도구는 제거하지 말고 가벼운 스텁으로 숨기며, 대화를 압축할 때도 기존 접두사를 유지하면 캐시 적중률을 높이고 비용을 줄일 수 있습니다."
+featured_image: "image_6db52d00552dc9162d511063.webp"
 notion_id: "30f1bab9-e3f8-8164-95e0-fcec4c8c7f0e"
 ---
 

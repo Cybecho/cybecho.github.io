@@ -2,11 +2,10 @@
 title: "한국서비스 API 모음 저장소"
 date: 2026-02-03T23:11:00.000Z
 draft: false
-tags: ["Util"]
-series: ["오픈소스"]
+series: ["Let's Open Source"]
 description: "한국 서비스 개발을 위한 180개 이상의 로컬 API와 1,000개 이상의 글로벌 API를 체계적으로 수집하여 제공하는 저장소로, 자동화된 링크 체크 시스템을 통해 데이터의 신뢰성을 확보하고 있다. API는 공공 및 인프라, 금융 및 비즈니스, 생활 서비스, 기술 및 미디어, 엔터테인먼트 등 5개 대분류로 구조화되어 있으며, 키워드 검색 기능을 통해 사용자가 필요한 API를 신속하게 찾을 수 있도록 지원한다. 정기적인 업데이트로 최신 정보를 유지하고 있으며, 특정 카테고리의 API 추천과 사용자 맞춤형 도움도 제공된다."
+featured_image: "image_444f59d8fcb0cf11909bc3db.png"
 notion_id: "2fc1bab9-e3f8-80ca-9e96-df942aa73394"
-notion_url: "https://www.notion.so/API-2fc1bab9e3f880ca9e96df942aa73394"
 ---
 
 # 한국서비스 API 모음 저장소
@@ -15,6 +14,8 @@ notion_url: "https://www.notion.so/API-2fc1bab9e3f880ca9e96df942aa73394"
 > 한국 서비스 개발을 위한 180개 이상의 로컬 API와 1,000개 이상의 글로벌 API를 체계적으로 수집하여 제공하는 저장소로, 자동화된 링크 체크 시스템을 통해 데이터의 신뢰성을 확보하고 있다. API는 공공 및 인프라, 금융 및 비즈니스, 생활 서비스, 기술 및 미디어, 엔터테인먼트 등 5개 대분류로 구조화되어 있으며, 키워드 검색 기능을 통해 사용자가 필요한 API를 신속하게 찾을 수 있도록 지원한다. 정기적인 업데이트로 최신 정보를 유지하고 있으며, 특정 카테고리의 API 추천과 사용자 맞춤형 도움도 제공된다.
 
 ---
+
+![Image](image_444f59d8fcb0cf11909bc3db.png)
 
 [https://github.com/yybmion/public-apis-4Kr](https://github.com/yybmion/public-apis-4Kr)
 

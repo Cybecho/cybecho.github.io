@@ -2,8 +2,8 @@
 title: "HyperFrames: 비디오 편집기가 아니라, HTML 파일이 곧 비디오입니다"
 date: 2026-09-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "영상 편집 앱을 켜지 않고 HTML 파일 하나로 비디오를 만듭니다. index.html이 곧 비디오 컴포지션이고, 말로 설명하면 코딩 에이전트가 HTML을 쓰고 브라우저에서 미리본 뒤 MP4로 렌더링합니다. 같은 입력이면 같은 결과가 나오는 결정적 렌더링이라 자동화 파이프라인에 잘 맞고, GSAP·Lottie·CSS·Three.js 같은 애니메이션 런타임은 Frame Adapter로 연결해 프레임 단위로 정확하게 재생합니다. React도 빌드 단계도 필요 없고 Apache 2.0이라 상업 이용에 제한이 없지만, 렌더링은 기본적으로 내 컴퓨터에서 돌아가고 Node.js 22와 FFmpeg이 필요합니다."
 featured_image: "image_7e8c223787856a4bc4d8ccdb.webp"
 notion_id: "3e31bab9-e3f8-8149-8d32-de157ae0cac9"

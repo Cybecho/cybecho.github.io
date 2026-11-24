@@ -2,8 +2,7 @@
 title: "구독료 대신 오픈소스 7가지, 파일은 내 컴퓨터에 남습니다"
 date: 2026-09-07T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Let's Homelab!"]
 description: "LibreOffice, Joplin, Zotero, KeePassXC, Thunderbird, GitHub Desktop, and Nextcloud can replace common office subscriptions while keeping files and settings under your control. Start with the six desktop apps unless you can manage a server for Nextcloud, and plan backups before moving your files."
 featured_image: "image_ce15ca725ebfd50c57005e47.webp"
 notion_id: "3d41bab9-e3f8-8181-8027-f9f6993b43a2"

@@ -2,8 +2,8 @@
 title: "Awesome Copilot: 코딩 스킬 376개를 모아두면, 코파일럿이 매번 같은 순서로 일합니다"
 date: 2026-06-17T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill","coding"]
+series: ["AI Harness"]
 description: "코파일럿 스킬은 SKILL.md에 반복 작업의 절차와 규칙을 저장해 필요할 때 일관되게 실행하도록 돕습니다. 공식 모음에는 커밋, 리팩터링, 보안 검토 등 다양한 스킬이 있으며, 필요한 것만 설치해 사용할 수 있지만 커뮤니티 제작 스킬은 내용을 확인한 뒤 적용하는 것이 안전합니다."
 featured_image: "image_50e67609da81989990e39a3e.webp"
 notion_id: "3821bab9-e3f8-818b-8502-ef8dd09f6412"

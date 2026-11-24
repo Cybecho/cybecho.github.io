@@ -2,11 +2,11 @@
 title: "유니티 로그라이크 05"
 date: 2023-03-03T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 클론 게임 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "무한 맵 구현, 플레이어를 따라다니는 카메라 설정, 게임 매니저를 활용한 코드 관리, 랜덤 타일 생성 및 타일맵 콜라이더 설정에 대한 내용을 다루고 있으며, Unity에서 로그라이크 클론 게임 개발을 위한 다양한 기술적 요소를 설명하고 있습니다."
+featured_image: "image_15ff42987a89.png"
 notion_id: "4262fa2a-444d-4d13-b1a6-08a8da0b762c"
-notion_url: "https://www.notion.so/05-4262fa2a444d4d13b1a608a8da0b762c"
 ---
 
 # 유니티 로그라이크 05

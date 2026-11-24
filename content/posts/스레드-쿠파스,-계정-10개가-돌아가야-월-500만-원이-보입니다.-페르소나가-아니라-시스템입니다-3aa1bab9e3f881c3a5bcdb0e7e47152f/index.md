@@ -2,8 +2,8 @@
 title: "스레드 쿠파스, 계정 10개가 돌아가야 월 500만 원이 보입니다. 페르소나가 아니라 시스템입니다"
 date: 2026-07-27T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["blog-monetization"]
+series: ["블로그 수익 글쓰기"]
 description: "스레드 쿠팡파트너스 수익화는 계정 하나보다 여러 계정을 요일과 시간대별로 분산 운영하는 시스템이 핵심입니다. 계정이 노출 제한을 받으면 쉬게 하거나 교체하고, 한 기기에 계정을 무리하게 몰아 생성하면 연쇄 정지 위험이 커집니다. 월 500만 원은 운영자의 주장일 뿐 보장된 수익은 아닙니다."
 featured_image: "image_c3d39f9723cadba0cbd72380.webp"
 notion_id: "3aa1bab9-e3f8-81c3-a5bc-db0e7e47152f"

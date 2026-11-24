@@ -2,11 +2,11 @@
 title: "유니티 로그라이크 03"
 date: 2023-03-03T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 클론 게임 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "유니티의 새로운 Player Input 시스템을 설치하여 플레이어의 움직임 로직을 개선하는 방법을 설명합니다. Input System 설치 후, Player Input 컴포넌트를 추가하고, 입력 값에 따라 이동 벡터를 설정하는 방법을 코드 예제와 함께 안내합니다. 기존 방법보다 더 나은 성능을 제공하며, 대각선 이동 시 상대적 길이를 자동으로 계산합니다."
+featured_image: "image_149d00bbe00b.png"
 notion_id: "d531dc12-ab05-40a2-b2f4-0136913bd252"
-notion_url: "https://www.notion.so/03-d531dc12ab0540a2b2f40136913bd252"
 ---
 
 # 유니티 로그라이크 03

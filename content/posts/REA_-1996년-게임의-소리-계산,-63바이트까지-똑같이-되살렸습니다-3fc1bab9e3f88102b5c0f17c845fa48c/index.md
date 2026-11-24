@@ -2,8 +2,8 @@
 title: "REA: 1996년 게임의 소리 계산, 63바이트까지 똑같이 되살렸습니다"
 date: 2026-10-18T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "에이전트는 1996년 게임 DX-Ball의 좌우 음량 계산 함수를 실행 파일의 명령어, 호출 인자, 메모리 값을 분석해 복원했습니다. 원본과 3,205번 비교해 컴파일된 63바이트가 모두 일치했으며, 이는 함수 하나의 복원이지 게임 전체의 완성을 뜻하지는 않습니다."
 featured_image: "image_759b376e3d302adc0ce83b55.webp"
 notion_id: "3fc1bab9-e3f8-8102-b5c0-f17c845fa48c"

@@ -2,11 +2,11 @@
 title: "RST와 AHCI가 도대체 뭔데 날 이리 괴롭힐까? - Dell XPS 13 9365에 Ubuntu 듀얼부팅하기"
 date: 2025-07-29T09:01:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
-series: ["Let's Linux!", "HW"]
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
+series: ["Let's Linux!"]
 description: "Dell XPS 13 9365에서 Windows 10과 Ubuntu의 듀얼 부팅을 설정하는 과정에서 Intel RST 모드로 인한 문제를 해결하기 위한 경험을 공유한다. AHCI 모드로 변경하기 위해 BIOS 설정을 조정하고, Windows 안전 모드를 활성화한 후 Ubuntu 설치를 진행하는 정확한 절차를 설명하며, 이 과정에서의 시행착오와 배운 점을 기록한다."
+featured_image: "image_0b823c979f37.png"
 notion_id: "23f1bab9-e3f8-8052-9fe3-d7b6c9ce2761"
-notion_url: "https://www.notion.so/RST-AHCI-Dell-XPS-13-9365-Ubuntu-23f1bab9e3f880529fe3d7b6c9ce2761"
 ---
 
 # RST와 AHCI가 도대체 뭔데 날 이리 괴롭힐까? - Dell XPS 13 9365에 Ubuntu 듀얼부팅하기

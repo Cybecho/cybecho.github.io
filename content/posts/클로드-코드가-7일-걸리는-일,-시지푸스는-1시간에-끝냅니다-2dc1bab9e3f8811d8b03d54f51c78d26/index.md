@@ -2,7 +2,10 @@
 title: "Oh My OpenCode: 클로드 코드가 7일 걸리는 일, 시지푸스는 1시간에 끝냅니다"
 date: 2026-01-09T00:00:00.000Z
 draft: false
+tags: ["agent","harness"]
+series: ["AI Harness"]
 description: "Oh My OpenCode는 여러 AI 에이전트가 디자인, 코딩, 리뷰, 문서 작업을 동시에 수행하고 오류가 나면 스스로 복구하며 완료까지 반복하는 OpenCode 플러그인입니다. 무료 모델로도 사용할 수 있으며, 반복적이고 복잡한 작업을 효율적으로 처리하는 것이 핵심입니다."
+featured_image: "image_18e8bc35e1c0c953af4bf5e8.webp"
 notion_id: "2dc1bab9-e3f8-811d-8b03-d54f51c78d26"
 ---
 

@@ -2,8 +2,8 @@
 title: "목표만 주면 AI가 며칠 동안 연구를 끝냅니다. 밤새 안 돌리는 게 손해입니다"
 date: 2026-03-25T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "명확한 목표와 검증 기준, 지침·진척도 파일을 마련하면 AI 에이전트가 코딩·실험·디버깅을 며칠간 자율적으로 수행해 연구를 크게 앞당길 수 있습니다. 다만 결과의 정확성과 완성도를 끝까지 검증하는 일은 여전히 사람의 몫입니다."
 featured_image: "image_a08e9ee670a6acf1eddd64e0.webp"
 notion_id: "32d1bab9-e3f8-814f-b5c4-db9cccf3c29a"

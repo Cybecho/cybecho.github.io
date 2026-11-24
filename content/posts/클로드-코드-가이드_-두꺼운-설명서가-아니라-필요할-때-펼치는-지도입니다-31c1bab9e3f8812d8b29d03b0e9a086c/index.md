@@ -2,8 +2,8 @@
 title: "클로드 코드 가이드: 두꺼운 설명서가 아니라 필요할 때 펼치는 지도입니다"
 date: 2026-03-07T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "클로드 코드는 코드베이스를 읽고 수정하며 테스트까지 수행하는 에이전틱 도구로, 컨텍스트 수집·행동·검증의 반복 루프를 이해하면 효과적으로 활용할 수 있습니다. 퀵 레퍼런스와 일상 시나리오를 참고하고, 반복되는 작업은 규칙·스킬·훅으로 정리하며, 컨텍스트 사용량에 따라 압축하거나 새 세션을 시작하세요."
 featured_image: "image_8e7d0d2cfdaa8f4b6e9f22b9.webp"
 notion_id: "31c1bab9-e3f8-812d-8b29-d03b0e9a086c"

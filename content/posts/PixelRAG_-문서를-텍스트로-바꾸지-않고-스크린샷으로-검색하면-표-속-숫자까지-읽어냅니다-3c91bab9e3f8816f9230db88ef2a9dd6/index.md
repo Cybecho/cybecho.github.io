@@ -2,8 +2,8 @@
 title: "PixelRAG: 문서를 텍스트로 바꾸지 않고 스크린샷으로 검색하면 표 속 숫자까지 읽어냅니다"
 date: 2026-08-27T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["rag"]
+series: ["AI Harness"]
 description: "PixelRAG는 문서를 텍스트로 파싱하지 않고 스크린샷으로 렌더링해 이미지 자체를 검색하는 시각 기반 RAG로, 표와 차트, 레이아웃이 그대로 남아 표 속 수치 질문에도 답할 수 있습니다. pixelshot 렌더링과 Qwen3-VL-Embedding 기반 FAISS 인덱스로 동작하며, 위키백과 828만 문서 인덱스를 설치나 API 키 없이 바로 써볼 수 있습니다. 논문 기준 여섯 개 벤치마크에서 텍스트 기반 RAG보다 정확도가 18.1% 높았다고 보고됐고, 플러그인을 쓰면 코딩 도우미도 페이지를 이미지로 직접 읽을 수 있습니다."
 featured_image: "image_65e94cd21f3037783f2498ad.webp"
 notion_id: "3c91bab9-e3f8-816f-9230-db88ef2a9dd6"

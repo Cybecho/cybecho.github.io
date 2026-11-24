@@ -2,11 +2,10 @@
 title: "Copyparty - 거의 모든 기기를 파일 서버로 만드는 오픈소스"
 date: 2025-07-30T02:38:00.000Z
 draft: false
-tags: ["Util"]
-series: ["오픈소스", "Let's Homelab!", "구글픽셀 개조기"]
+series: ["Let's Open Source"]
 description: "Copyparty는 파이썬 파일 하나로 다양한 기기를 파일 서버로 변환하는 오픈소스 프로젝트로, 복잡한 설정 없이 즉시 실행할 수 있는 실용성을 제공합니다. HTTP, WebDAV, FTP 등 다양한 프로토콜을 지원하며, 사용자 계정 관리와 임시 공유 링크 생성 기능도 포함되어 있습니다. 이 프로젝트는 안정적인 파일 전송과 함께 미디어 스트리밍, 파일 탐색 및 문서 편집 기능을 제공하여 개인 로컬 네트워크의 핵심 인프라로 자리 잡을 수 있습니다."
+featured_image: "image_93ec8ec17104.png"
 notion_id: "2401bab9-e3f8-80d4-9296-f15fe73d6138"
-notion_url: "https://www.notion.so/Copyparty-2401bab9e3f880d49296f15fe73d6138"
 ---
 
 # Copyparty - 거의 모든 기기를 파일 서버로 만드는 오픈소스
@@ -19,6 +18,11 @@ notion_url: "https://www.notion.so/Copyparty-2401bab9e3f880d49296f15fe73d6138"
 ![Image](image_93ec8ec17104.png)
 
 > 두근거리는 윤태님의 오전 알람…
+> [https://news.hada.io/topic?id=22224&utm_source=slack&utm_medium=bot&utm_campaign=T03RSCWHMT6](https://news.hada.io/topic?id=22224&utm_source=slack&utm_medium=bot&utm_campaign=T03RSCWHMT6)
+>
+> 🔗 [https://github.com/9001/copyparty](https://github.com/9001/copyparty)
+>
+>
 
 ![Image](image_8aaa12f900cc.png)
 
@@ -54,6 +58,11 @@ notion_url: "https://www.notion.so/Copyparty-2401bab9e3f880d49296f15fe73d6138"
 ## 그렇다면 나는 왜 안정적인 파일 서버가 필요했나?
 
 > **내가 이게 왜 필요하게 되었는가?**
+> 1. 기존에는 CX파일탐색기의 FTP기능을 사용하였음
+> 1. 하지만 해당 어플리케이션은 프로세스기에, 간헐적으로 항상끊겼음
+> 1. 이는 SLA를 해치는 요소였기에, 안정적인 안드로이드 파일 서버가 필요하였음
+> 1. 그러던 와중, Copyparty라는 서비스를 찾게 되었음.
+>
 
 ### 불안정한 안드로이드 파일 서버 CX탐색기에게 작별을 고하며…
 
@@ -67,11 +76,16 @@ PC와 스마트폰 사이에서 파일을 주고받는 것은 아주 흔한 일�
 
 프로젝트의 GitHub 페이지와 소개 영상을 살펴보니 그 기능의 깊이에 놀라지 않을 수 없었습니다. HTTP, WebDAV, FTP 등 다양한 프로토콜 지원은 기본이고, 멀티스레드를 활용한 빠른 속도와 중단된 지점부터 다시 시작하는 이어올리기/받기 기능, 계정별 권한 관리, 임시 공유 링크 생성 등 상상했던 파일 서버의 모든 기능이 담겨 있었습니다. 특히 업로드 도중에도 해당 파일의 다운로드를 시작할 수 있는 'Race the Beam' 기능 시연 영상은 이 프로젝트가 지향하는 바를 명확히 보여주었습니다.
 
-![Image](image_30dc6950825c.png)
+![Image](image_4251f4ed603e0207d12aecd5.png)
 
 안드로이드 스마트폰에 설치하는 과정은 놀라울 정도로 간단했습니다. 먼저 리눅스 환경을 제공하는 Termux 앱을 설치한 후, 공식 설명서에 있는 명령어 한 줄을 붙여넣는 것으로 모든 준비가 끝났습니다.
 
 > install Termux + its companion app `Termux:API` (see ocv.me/termux) and then copy-paste this into Termux (long-tap) all at once:
+> [Termux](https://termux.com/)
+>
+> [ocv.me/termux](https://ocv.me/termux/)
+>
+>
 
 ```shell
 yes | pkg upgrade && termux-setup-storage && yes | pkg install python termux-api && python -m ensurepip && python -m pip install --user -U copyparty && { grep -qE 'PATH=.*\.local/bin' ~/.bashrc 2>/dev/null || { echo 'PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && . ~/.bashrc; }; }
@@ -802,7 +816,7 @@ pkg install ffmpeg
 copyparty
 ```
 
-![Image](image_120fff678fd1.png)
+![Image](image_4ef805a4bce4aaaea08e78bc.png)
 
 ### PhotoSync와 copyparty 통합 (WebDav 활용)
 
@@ -847,7 +861,7 @@ cd ~
 
 ```
 
-![Image](image_f49721571630.png)
+![Image](image_ade97c46f332.png)
 
 1. **설정 디렉토리 생성:**`copyparty`는 기본적으로 `~/.config` 디렉토리에서 설정을 찾으려 시도합니다. 관련 경고 메시지를 방지하고 깔끔한 관리를 위해 이 디렉토리를 미리 만들어 줍니다.
 ```shell

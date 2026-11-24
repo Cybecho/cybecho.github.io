@@ -3,10 +3,10 @@ title: "MAC 원격접속시 단축키 눌림상태 오류 해결"
 date: 2023-06-01T00:00:00.000Z
 draft: false
 tags: ["MAC"]
-series: ["원격 라이프!", "Let's MAC!"]
+series: ["Let's Remote Life"]
 description: "JUMP DESKTOP 앱을 사용하여 원격으로 MAC에 접속할 때 'F' 키가 'cmd + F'로 인식되는 오류가 발생한다. 이 문제는 두벌식 입력에서 영문자 입력으로 변경함으로써 해결할 수 있다. MAC 환경에서 단축키 사용이 편리해진다."
+featured_image: "image_5adfd6e51d82.png"
 notion_id: "a1f07d60-3fce-4087-b1c2-ad32e913fafc"
-notion_url: "https://www.notion.so/MAC-a1f07d603fce4087b1c2ad32e913fafc"
 ---
 
 # MAC 원격접속시 단축키 눌림상태 오류 해결

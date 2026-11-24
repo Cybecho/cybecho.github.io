@@ -2,11 +2,11 @@
 title: "로그라이크 게임 제작 02"
 date: 2023-03-15T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 게임 습작"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "유니티 로그라이크 게임 제작을 위한 플레이어 이동 및 회전 구현 방법을 설명하며, 기존 인풋 시스템을 활용하여 플레이어의 위치 이동과 애니메이션 활성화를 위한 코드를 제공한다."
+featured_image: "image_749db5312064.png"
 notion_id: "0d698e28-b4db-41bf-9568-85301bb9e0be"
-notion_url: "https://www.notion.so/02-0d698e28b4db41bf956885301bb9e0be"
 ---
 
 # 로그라이크 게임 제작 02

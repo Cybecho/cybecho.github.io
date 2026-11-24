@@ -2,8 +2,8 @@
 title: "last30days: 검색 기준을 바꾸면, 30일치 사람들의 반응이 한 장으로 모입니다"
 date: 2026-11-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "last30days는 최근 30일간 레딧·X·유튜브·틱톡·폴리마켓 등에서 사람들의 반응을 수집하고, 추천·좋아요·조회 수와 베팅 확률을 기준으로 정리해 출처 링크와 인용이 포함된 브리핑을 만듭니다. 빠르게 여론을 파악하는 출발점으로 유용하지만, 인기가 정확성을 보장하지 않고 오래된 배경은 다루지 않으므로 원문을 확인해야 합니다."
 featured_image: "image_89c6dfbfa70b127b12ac63e9.webp"
 notion_id: "41d1bab9-e3f8-8151-9e2d-c6f36ca99033"

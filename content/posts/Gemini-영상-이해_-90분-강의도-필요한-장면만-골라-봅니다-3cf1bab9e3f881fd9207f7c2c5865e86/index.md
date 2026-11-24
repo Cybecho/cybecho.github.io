@@ -2,8 +2,8 @@
 title: "Gemini 영상 이해: 90분 강의도 필요한 장면만 골라 봅니다"
 date: 2026-09-02T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "Gemini의 에이전틱 영상 이해는 자막·프레임·오디오를 활용해 질문에 필요한 구간만 찾아 분석합니다. 긴 영상의 토큰 사용량과 비용을 줄이면서 정확도를 높이며, processing 설정을 agentic으로 바꾸면 사용할 수 있습니다. 짧은 영상이나 전체를 빠짐없이 분석해야 하는 작업에는 기존 정적 처리가 더 적합합니다."
 featured_image: "image_d21c1f40e7c2a397c3e9c6b8.webp"
 notion_id: "3cf1bab9-e3f8-81fd-9207-f7c2c5865e86"

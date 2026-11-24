@@ -2,8 +2,8 @@
 title: "Refero Styles: 2,000개 제품의 디자인 감각을 파일 하나로 복사하면, AI 화면이 달라집니다"
 date: 2026-05-11T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering","coding"]
+series: ["AI Harness"]
 description: "Refero Styles는 2,000개가 넘는 제품의 색상, 타이포그래피, 간격, 레이아웃, 컴포넌트 규칙을 담은 무료 DESIGN.md 갤러리로, 파일을 복사해 AI 코딩 에이전트에 제공하면 원하는 스타일의 화면을 만들 수 있습니다. 자주 쓰는 스타일은 스킬로 저장할 수 있으며, 디자인 언어만 참고하고 브랜드명·로고·이미지·문구는 사용하지 않도록 주의해야 합니다."
 featured_image: "image_340fed13c6ce6d177ee37381.webp"
 notion_id: "35d1bab9-e3f8-8151-bc51-e6600c3dc06a"

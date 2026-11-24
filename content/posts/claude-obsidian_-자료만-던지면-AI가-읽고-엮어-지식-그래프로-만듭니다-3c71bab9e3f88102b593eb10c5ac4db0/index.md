@@ -2,8 +2,8 @@
 title: "claude-obsidian: 자료만 던지면 AI가 읽고 엮어 지식 그래프로 만듭니다"
 date: 2026-08-25T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["rag","agent"]
+series: ["AI Harness"]
 description: "claude-obsidian은 inbox 폴더에 자료를 넣으면 AI가 출처를 기록하고 기존 노트와 연결해 지식 그래프로 정리하는 무료 오픈소스 도구입니다. 읽기 전용 질문과 링크 점검을 지원하며, 변경 전 검증과 복구 기능으로 노트를 보호하고 파일은 사용자의 컴퓨터에 마크다운으로 남습니다. PDF·전자책 추출과 자동 웹 콘텐츠 가져오기 등은 지원하지 않습니다."
 featured_image: "image_a2fb48eb8376278afea9ee0e.webp"
 notion_id: "3c71bab9-e3f8-8102-b593-eb10c5ac4db0"

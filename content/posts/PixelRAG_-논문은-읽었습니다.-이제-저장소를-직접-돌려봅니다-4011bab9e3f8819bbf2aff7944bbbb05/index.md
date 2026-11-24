@@ -2,8 +2,8 @@
 title: "PixelRAG: 논문은 읽었습니다. 이제 저장소를 직접 돌려봅니다"
 date: 2026-10-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["rag"]
+series: ["AI Harness"]
 description: "PixelRAG 검색은 문서를 텍스트로 변환하지 않고 스크린샷 타일로 보존해 표와 차트, 레이아웃을 시각적으로 검색합니다. pixelshot으로 페이지를 캡처하고 pixelrag로 임베딩과 인덱스를 만들 수 있으며, 로컬 문서 검색과 API 서버 운영은 물론 828만 개 위키백과 페이지를 미리 색인한 호스팅 API도 이용할 수 있습니다."
 featured_image: "image_841e1e1d8c40a8e15f93961a.webp"
 notion_id: "4011bab9-e3f8-819b-bf2a-ff7944bbbb05"

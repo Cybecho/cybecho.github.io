@@ -2,8 +2,8 @@
 title: "Obscura: 크롬을 통째로 띄우지 않습니다. 30MB짜리 엔진이 같은 일을 해냅니다"
 date: 2026-10-06T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["browser-automation","mcp"]
+series: ["AI Harness"]
 description: "Obscura는 크롬을 통째로 띄우는 대신 필요한 부분만 갖춘 헤드리스 브라우저 엔진으로, 메모리 30MB·바이너리 약 70MB·페이지 로드 85ms로 헤드리스 크롬보다 훨씬 가볍습니다. 자바스크립트는 V8으로 직접 실행하고 CDP를 말해 기존 자동화 코드를 그대로 연결하며, 명령어 세 개로 페이지 가져오기·CDP 서버·병렬 크롤링을 하고 MCP 서버로 에이전트에게 브라우저 도구를 건넵니다. 스텔스 모드와 3,520개 트래커 차단이 내장됐지만 만능은 아니고 젊은 프로젝트라 크롬과 다르게 동작하는 CSS나 웹 API가 있을 수 있으니, 가벼움의 대가를 알고 쓰는 것이 순서입니다."
 featured_image: "image_d8c4db578d2536185a245ba0.webp"
 notion_id: "3f11bab9-e3f8-810c-9306-fdb3b7d2ad29"

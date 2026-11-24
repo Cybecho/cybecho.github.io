@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 11"
 date: 2023-02-22T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "카메라 쉐이크 기능을 구현하고, 탄피와 몬스터 충돌 시 발생하던 에러를 해결했으며, 미사일 피격 시 폭발 효과를 구현했습니다. 카메라 흔들림은 플레이어가 데미지를 입었을 때 발생하고, 특정 조건에서 객체를 삭제하는 코드의 중복 문제를 수정했습니다."
+featured_image: "image_6d5d2e529ab8.png"
 notion_id: "56f24504-34fb-4ec5-bafc-b29ddb4258ba"
-notion_url: "https://www.notion.so/3D-11-56f2450434fb4ec5bafcb29ddb4258ba"
 ---
 
 # 유니티 3D게임 쿼드뷰 11

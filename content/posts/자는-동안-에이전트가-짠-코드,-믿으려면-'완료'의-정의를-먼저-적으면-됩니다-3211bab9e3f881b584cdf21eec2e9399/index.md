@@ -2,8 +2,8 @@
 title: "자는 동안 에이전트가 짠 코드, 믿으려면 '완료'의 정의를 먼저 적으면 됩니다"
 date: 2026-03-12T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "자는 동안 에이전트가 짠 코드는 테스트가 초록불이어도 믿기 어렵습니다. 같은 AI가 쓰고 검사하면 자기 축하 기계가 되어 원래 의도와 다른 오해는 잡히지 않기 때문입니다. 해법은 코드보다 먼저 '완료'의 정의를 평문 수용 기준으로 적고, 헤드리스 모드와 브라우저 자동화로 기준별 통과·실패를 판정하는 4단계 파이프라인입니다."
 featured_image: "image_745b286f5e7c02f30362e5df.webp"
 notion_id: "3211bab9-e3f8-81b5-84cd-f21eec2e9399"

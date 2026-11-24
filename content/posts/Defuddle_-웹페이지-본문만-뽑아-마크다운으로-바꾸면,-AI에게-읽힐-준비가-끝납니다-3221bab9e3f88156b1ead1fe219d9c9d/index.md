@@ -2,8 +2,8 @@
 title: "Defuddle: 웹페이지 본문만 뽑아 마크다운으로 바꾸면, AI에게 읽힐 준비가 끝납니다"
 date: 2026-03-14T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["browser-automation","rag"]
+series: ["AI Harness"]
 description: "Defuddle는 웹페이지의 광고·메뉴·댓글 등을 제거하고 본문을 정돈해 마크다운으로 변환하는 무료 오픈소스 도구입니다. CLI, 브라우저·Node.js 라이브러리, 호스티드 API로 사용할 수 있으며 유튜브 자막도 추출합니다. 아직 개발 중이므로 중요한 결과는 직접 확인하는 것이 좋습니다."
 featured_image: "image_16204ad297576fe07a099fee.webp"
 notion_id: "3221bab9-e3f8-8156-b1ea-d1fe219d9c9d"

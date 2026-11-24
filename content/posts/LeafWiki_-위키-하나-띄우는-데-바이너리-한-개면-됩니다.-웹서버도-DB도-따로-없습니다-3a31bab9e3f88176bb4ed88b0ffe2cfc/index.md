@@ -2,8 +2,7 @@
 title: "LeafWiki: 위키 하나 띄우는 데 바이너리 한 개면 됩니다. 웹서버도 DB도 따로 없습니다"
 date: 2026-07-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Let's Homelab!"]
 description: "LeafWiki는 위키 전체를 Go 바이너리 한 개로 띄우는 셀프 호스팅 위키입니다. 웹서버도 DB 서버도 따로 없습니다. 글은 디스크에 마크다운 파일 그대로 저장되고, 링크·태그·검색 인덱스만 옆에 있는 가벼운 SQLite에 둡니다. 트리 내비게이션·전체 텍스트 검색·리비전·백링크까지 갖췄지만, 실시간 협업 편집은 없습니다. 작은 팀과 홈랩이 딱 맞는 자리입니다."
 featured_image: "image_788f3232633319502d314c1e.webp"
 notion_id: "3a31bab9-e3f8-8176-bb4e-d88b0ffe2cfc"

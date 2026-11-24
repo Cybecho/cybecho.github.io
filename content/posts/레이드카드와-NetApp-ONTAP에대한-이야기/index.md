@@ -2,11 +2,10 @@
 title: "레이드카드와 NetApp ONTAP에대한 이야기"
 date: 2025-06-16T12:35:00.000Z
 draft: false
-tags: ["Other", "Util"]
 series: ["HW"]
 description: "레이드카드는 여러 하드드라이브를 하나의 볼륨으로 관리하여 데이터 안전성과 성능을 향상시키는 하드웨어이며, 원격 관리 기능이 필요하다. PCIe 대역폭은 단순한 데이터 전송을 넘어 실시간 처리 능력을 나타내며, NetApp ONTAP은 소프트웨어 정의 스토리지로 하드웨어 RAID의 한계를 넘어선다. 데이터 관리의 복잡성이 증가하면서, ONTAP은 멀티 클라우드 환경 지원, 실시간 데이터 복제 등 현대의 다양한 요구사항을 충족할 수 있다."
+featured_image: "image_bdd1c8d69f8d.png"
 notion_id: "2141bab9-e3f8-80ed-9387-eb558dc98303"
-notion_url: "https://www.notion.so/NetApp-ONTAP-2141bab9e3f880ed9387eb558dc98303"
 ---
 
 # 레이드카드와 NetApp ONTAP에대한 이야기

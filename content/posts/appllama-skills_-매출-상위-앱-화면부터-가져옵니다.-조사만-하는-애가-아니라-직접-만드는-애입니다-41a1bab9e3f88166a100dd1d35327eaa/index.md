@@ -2,8 +2,8 @@
 title: "appllama-skills: 매출 상위 앱 화면부터 가져옵니다. 조사만 하는 애가 아니라 직접 만드는 애입니다"
 date: 2026-11-16T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill","agent"]
+series: ["AI Harness"]
 description: "appllama-skills는 매출 상위 iOS 앱의 화면과 성과 지표를 조사하고, 검증된 디자인 패턴을 네이티브 수준의 화면으로 구현·검증하도록 돕는 두 가지 스킬을 제공합니다. 앱의 온보딩부터 가격 화면까지 살펴 구조와 패턴만 참고하고 1:1 복사는 피해야 하며, 조사용 MCP는 유료이고 라이브러리는 iOS 앱만 지원합니다."
 featured_image: "image_bf7a1bd7df14970a8dc4e502.webp"
 notion_id: "41a1bab9-e3f8-8166-a100-dd1d35327eaa"

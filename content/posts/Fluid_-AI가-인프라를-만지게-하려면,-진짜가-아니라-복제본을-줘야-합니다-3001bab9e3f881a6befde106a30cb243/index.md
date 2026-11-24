@@ -2,8 +2,8 @@
 title: "Fluid: AI가 인프라를 만지게 하려면, 진짜가 아니라 복제본을 줘야 합니다"
 date: 2026-02-07T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness"]
+series: ["AI Harness"]
 description: "Fluid는 프로덕션 인프라를 격리된 샌드박스에 복제해 AI가 안전하게 명령을 실행하고 변경 사항을 검증하도록 합니다. 검증된 결과는 Ansible Playbook으로 생성되며, 사람의 검토와 승인을 거쳐 프로덕션에 적용됩니다. 짧은 수명의 SSH 인증서, 승인 절차, 감사 로그로 안전성을 강화합니다."
 featured_image: "image_973842e0349ebb02c0c5e819.webp"
 notion_id: "3001bab9-e3f8-81a6-befd-e106a30cb243"

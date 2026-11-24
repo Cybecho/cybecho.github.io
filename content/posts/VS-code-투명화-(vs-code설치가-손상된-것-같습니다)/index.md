@@ -2,11 +2,11 @@
 title: "VS code 투명화 (vs code설치가 손상된 것 같습니다)"
 date: 2023-12-03T00:00:00.000Z
 draft: false
-tags: ["MAC", "WINDOWS", "Arch", "ubuntu"]
-series: ["개발환경"]
+tags: ["MAC","WINDOWS","Arch"]
+series: ["Dev Environment"]
 description: "VS Code의 투명 배경 설정 방법에 대한 안내로, Windows와 Linux는 특정 링크를 통해 설정할 수 있으며, Mac에서는 추가 확장을 설치해야 합니다. 설치 후 경고 메시지가 나타날 수 있으나 무시해도 안전하며, 다양한 설정 옵션과 문제 해결 방법도 제공됩니다."
+featured_image: "image_4480dea891ac.png"
 notion_id: "3738fece-05c5-471d-83f6-3f99a0edf40a"
-notion_url: "https://www.notion.so/VS-code-vs-code-3738fece05c5471d83f63f99a0edf40a"
 ---
 
 # VS code 투명화 (vs code설치가 손상된 것 같습니다)
@@ -35,9 +35,9 @@ notion_url: "https://www.notion.so/VS-code-vs-code-3738fece05c5471d83f63f99a0edf
 
 이 확장은 VS Code의 체크섬 확인 CSS 파일을 편집하여 작동합니다. 즉, Vibrancy Continued를 설치하고 활성화한 후 경고 메시지가 나타납니다. 이 경고는 무시해도 안전하며 모든 변경 사항은 되돌릴 수 있습니다. 톱니바퀴를 클릭하고 **다시 표시 안 함을** 선택하여 숨깁니다.
 
-![Image](image_1c9bcc3b635e.png)
+![Image](<https://github.com/illixion/vscode-vibrancy-continued/raw/HEAD/warn.png>)
 
-![Image](image_ecda80eefa3b.png)
+![Image](<https://github.com/illixion/vscode-vibrancy-continued/raw/HEAD/warnfix.png>)
 
 VS Code 제목 표시줄의 "[지원되지 않음]" 경고를 수정하려면 [VSCode 체크섬 수정](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums) 확장 기능을 참조하세요 .
 
@@ -54,11 +54,11 @@ VS Code 제목 표시줄의 "[지원되지 않음]" 경고를 수정하려면 [
 # 시작하기
 
 1. 선택한 VSCode 테마가 'Dark+' 또는 [지원되는 테마 중 하나인지 확인하세요.](https://marketplace.visualstudio.com/items?itemName=illixion.vscode-vibrancy-continued#vscode_vibrancy.theme)
-![Image](image_e677e286f0c6.png)
+![Image](<https://github.com/illixion/vscode-vibrancy-continued/raw/HEAD/step-1.png>)
 
 1. [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=illixion.vscode-vibrancy-continued) 에서 확장을 설치합니다 .
 1. F1을 누르고 "Reload Vibrancy" 명령을 활성화하세요.
-![Image](image_36ddce2a1701.png)
+![Image](<https://github.com/illixion/vscode-vibrancy-continued/raw/HEAD/step-3.png>)
 
 1. 메시지가 표시되면 VSCode를 다시 시작합니다.
 VS Code가 업데이트될 때마다 동일한 단계를 사용하여 Vibrancy를 다시 활성화하세요.

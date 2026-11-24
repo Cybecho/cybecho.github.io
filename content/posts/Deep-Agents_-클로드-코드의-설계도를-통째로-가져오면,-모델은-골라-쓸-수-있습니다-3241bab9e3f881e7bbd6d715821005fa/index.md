@@ -2,8 +2,8 @@
 title: "Deep Agents: 클로드 코드의 설계도를 통째로 가져오면, 모델은 골라 쓸 수 있습니다"
 date: 2026-03-15T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness","agent"]
+series: ["AI Harness"]
 description: "Deep Agents는 계획, 서브 에이전트, 파일시스템, 승인 절차를 갖춘 오픈소스 에이전트 하네스로, 특정 모델에 종속되지 않아 도구 호출이 가능한 다양한 모델을 사용할 수 있습니다. LangGraph 기반으로 장기 작업과 실무 배포를 지원하며, 도구와 샌드박스로 안전 경계를 설정할 수 있습니다."
 featured_image: "image_76cf124f6cd468c52f030318.webp"
 notion_id: "3241bab9-e3f8-81e7-bbd6-d715821005fa"

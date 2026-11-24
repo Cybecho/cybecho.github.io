@@ -3,7 +3,7 @@ title: "하루 20달러 파밍 3"
 date: 2023-05-01T00:00:00.000Z
 draft: false
 tags: ["Python","ubuntu"]
-series: ["매크로개발"]
+series: ["Let's Macro"]
 description: "계정을 100개 정도 자동으로 생성하기 위한 파이썬 코드와 방법을 설명하며, 웹사이트 가입 절차를 자동화하는 매크로 개발에 대한 내용을 포함하고 있습니다. 코드 예제와 함께 랜덤 이름 생성 방법도 제시됩니다."
 notion_id: "bc8a7cd2-1f45-4662-850a-c3b65c4aa05f"
 ---

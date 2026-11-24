@@ -2,8 +2,8 @@
 title: "Ontology Playground: 에이전트에게 필요한 건 스키마가 아니라 의미입니다"
 date: 2026-07-21T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "온톨로지는 데이터의 저장 방식이 아니라 의미와 관계를 정의해 에이전트가 조직의 언어를 이해하도록 돕습니다. Microsoft의 무료 오픈소스 Ontology Playground에서는 브라우저에서 온톨로지를 만들고, 탐색하고, RDF·XML·JSON으로 내보내거나 가져올 수 있으며, 학습 과정과 실습 기능도 제공합니다. 다만 도구만으로 의미가 정해지는 것은 아니므로, 먼저 조직 내에서 핵심 용어의 뜻을 합의해야 합니다."
 featured_image: "image_c6297b8806e51e50fb077515.webp"
 notion_id: "3a41bab9-e3f8-8144-937b-e0f240caac49"

@@ -2,8 +2,8 @@
 title: "PaperBanana: 논문 그림, 이제 그리는 게 아니라 말로 시키면 됩니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","image-generation"]
+series: ["AI Media"]
 description: "PaperBanana는 방법론 텍스트와 캡션을 바탕으로 논문 그림을 생성하고, 여러 에이전트가 계획·스타일 적용·비평·수정을 반복하는 프레임워크입니다. 비공식 오픈소스 구현은 명령어로 그림과 통계 그래프를 만들고 Claude Code 스킬로도 사용할 수 있지만, 결과의 정확성을 직접 확인해야 하며 API 비용과 설치 부담을 고려해야 합니다."
 featured_image: "image_c537d287c24294a2d5a9e3d2.webp"
 notion_id: "32c1bab9-e3f8-81f5-866e-f24ad9b8f095"

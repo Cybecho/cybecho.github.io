@@ -2,8 +2,8 @@
 title: "Open Source Canvas: 구독료 없이 내 GPU로 영상을 만듭니다. 노드 보드 하나면 됩니다"
 date: 2026-11-22T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation","local-llm"]
+series: ["AI Media"]
 description: "Open Source Canvas는 프롬프트, 이미지, 모델을 노드로 연결해 내 컴퓨터의 GPU와 ComfyUI로 영상과 이미지를 생성하는 오픈소스 도구입니다. MIT 라이선스이며 구독료 없이 작업과 결과물을 보드에 저장할 수 있지만, 초기 단계라 일부 상용 모델 연동은 아직 지원되지 않고 영상 생성에는 충분한 메모리가 필요합니다."
 featured_image: "image_6346f9c7226212b2e6bf6f20.webp"
 notion_id: "4201bab9-e3f8-8189-8fa7-d6cd66fcd77f"

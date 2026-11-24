@@ -2,8 +2,8 @@
 title: "cf-crawl: 사이트 전체를 긁어오는 일, 이제 명령어 한 줄이면 됩니다"
 date: 2026-03-12T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["browser-automation","rag"]
+series: ["AI Harness"]
 description: "Cloudflare의 /crawl 엔드포인트와 Claude Code 스킬 cf-crawl을 이용하면 시작 URL 하나로 사이트를 크롤링해 페이지별 마크다운 파일로 저장할 수 있습니다. 경로 필터, 렌더링 설정, 변경 페이지 재수집 등의 옵션을 지원하며, 문서 수집과 RAG 자료 구축, 모니터링 등에 활용할 수 있습니다."
 featured_image: "image_d815f648ede7e4a6ee4438f7.webp"
 notion_id: "3211bab9-e3f8-81a8-85ca-fa661274a990"

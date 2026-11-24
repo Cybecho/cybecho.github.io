@@ -3,10 +3,10 @@ title: "민팅 매크로 개발 02"
 date: 2023-02-20T00:00:00.000Z
 draft: false
 tags: ["Python"]
-series: ["매크로개발"]
+series: ["Let's Macro"]
 description: "xpath를 사용하여 클릭 기능을 구현하려 했으나, 로그인 계정마다 xpath가 달라져 클릭이 실패했다. pyautogui와 RGB_CLICK 함수를 활용하여 팝업을 인식하고 클릭하는 방법으로 문제를 해결했으며, 최종적으로는 잘못된 URL로 인해 실제 코드를 잘못 실행한 결과를 겪었다."
+featured_image: "image_491751c2868d.png"
 notion_id: "c2294260-e7cb-45d5-bdde-56cb7f503298"
-notion_url: "https://www.notion.so/02-c2294260e7cb45d5bdde56cb7f503298"
 ---
 
 # 민팅 매크로 개발 02

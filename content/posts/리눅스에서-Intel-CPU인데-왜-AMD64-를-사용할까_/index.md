@@ -2,11 +2,11 @@
 title: "리눅스에서 Intel CPU인데 왜 AMD64 를 사용할까?"
 date: 2023-09-16T00:00:00.000Z
 draft: false
-tags: ["이론", "ubuntu"]
+tags: ["ubuntu"]
 series: ["Let's Linux!"]
 description: "리눅스를 설치할 때 AMD64 아키텍처를 사용하는 이유는 인텔의 IA-64 아키텍처와의 호환성 문제를 해결하기 위해 AMD가 개발한 AMD64가 32비트 IA-32와 호환되면서도 64비트를 지원하기 때문입니다. 인텔은 AMD64를 라이선스 받아 자사 CPU에 탑재하며, 이로 인해 amd64라는 이름이 널리 사용됩니다. 결론적으로, IA-32는 32비트를, amd64는 64비트를 나타냅니다."
+featured_image: "image_f062222c1e0076afa37d5f3a.png"
 notion_id: "a0ac9800-a9fe-4b64-baad-03d35754ea0c"
-notion_url: "https://www.notion.so/Intel-CPU-AMD64-a0ac9800a9fe4b64baad03d35754ea0c"
 ---
 
 # 리눅스에서 Intel CPU인데 왜 AMD64 를 사용할까?
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/Intel-CPU-AMD64-a0ac9800a9fe4b64baad03d35754e
 > 리눅스를 설치할 때 AMD64 아키텍처를 사용하는 이유는 인텔의 IA-64 아키텍처와의 호환성 문제를 해결하기 위해 AMD가 개발한 AMD64가 32비트 IA-32와 호환되면서도 64비트를 지원하기 때문입니다. 인텔은 AMD64를 라이선스 받아 자사 CPU에 탑재하며, 이로 인해 amd64라는 이름이 널리 사용됩니다. 결론적으로, IA-32는 32비트를, amd64는 64비트를 나타냅니다.
 
 ---
+
+![Image](image_f062222c1e0076afa37d5f3a.png)
 
 🔗 [https://xetown.com/topics/1531860](https://xetown.com/topics/1531860)
 

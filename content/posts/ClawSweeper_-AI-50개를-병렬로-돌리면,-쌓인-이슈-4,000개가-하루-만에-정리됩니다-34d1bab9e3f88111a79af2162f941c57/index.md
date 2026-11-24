@@ -2,8 +2,8 @@
 title: "ClawSweeper: AI 50개를 병렬로 돌리면, 쌓인 이슈 4,000개가 하루 만에 정리됩니다"
 date: 2026-04-26T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","harness"]
+series: ["AI Harness"]
 description: "ClawSweeper는 Codex AI 50개를 병렬로 활용해 오픈소스 저장소의 이슈와 PR을 검토하고, 확실한 근거와 안전장치가 있는 경우에만 종료를 제안·실행하는 유지보수 봇입니다. 공개 첫날 불필요한 이슈 4,000개를 정리했으며, 검토 기록과 실시간 상태 확인으로 오작동을 막습니다. 다만 비용은 공개되지 않았고, 성과 수치는 프로젝트 측 집계입니다."
 featured_image: "image_a94b451d16304352cf58373b.webp"
 notion_id: "34d1bab9-e3f8-8111-a79a-f2162f941c57"

@@ -2,11 +2,11 @@
 title: "분산컴퓨팅의 주요 과제 4가지"
 date: 2025-04-09T09:34:00.000Z
 draft: false
-tags: ["Distributed Computing", "ComputerArchitecture", "Infra"]
-series: ["분산컴퓨팅을 공부해보자"]
+tags: ["Distributed Computing","Infra"]
+series: ["Infra & Network"]
 description: "분산 시스템은 강력한 성능과 안정성을 제공하지만, 동시성 문제, 부분 장애, 성능 저하, 데이터 일관성 유지 등의 도전 과제가 존재한다. 각 시스템 간의 작업 순서 설정, 장애 발생 시 대처, 네트워크 병목 문제 해결, 그리고 여러 컴퓨터 간의 데이터 일관성 유지가 중요한 이슈로 다뤄진다."
+featured_image: "image_e9b74f22f626d4a06da55545.png"
 notion_id: "1d01bab9-e3f8-807c-a320-dc9bc859bb14"
-notion_url: "https://www.notion.so/4-1d01bab9e3f8807ca320dc9bc859bb14"
 ---
 
 # 분산컴퓨팅의 주요 과제 4가지
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/4-1d01bab9e3f8807ca320dc9bc859bb14"
 > 분산 시스템은 강력한 성능과 안정성을 제공하지만, 동시성 문제, 부분 장애, 성능 저하, 데이터 일관성 유지 등의 도전 과제가 존재한다. 각 시스템 간의 작업 순서 설정, 장애 발생 시 대처, 네트워크 병목 문제 해결, 그리고 여러 컴퓨터 간의 데이터 일관성 유지가 중요한 이슈로 다뤄진다.
 
 ---
+
+![Image](image_e9b74f22f626d4a06da55545.png)
 
 ## 분산컴퓨팅은 생각보다 골때린 문제들이 있음
 
@@ -55,7 +57,7 @@ notion_url: "https://www.notion.so/4-1d01bab9e3f8807ca320dc9bc859bb14"
 
 여러 컴퓨터에 흩어져있는 데이터의 복제본들을 어떻게 일관되게 유지할거냐? 문제인데, 사실 컴퓨터는 어떠한 값을 복사해서 작업했다가 돌려둠…
 
-근데 이거 싱글노드 컴퓨터의 단일스레드에서도 [Untitled](https://www.notion.so/94fc12fb2048426c8c16d38184e91262) 관련해서 문제가 골치아픈데… 분산컴퓨팅 세계에서는 그 복잡성의 레이어가 더욱 높아짐.
+근데 이거 싱글노드 컴퓨터의 단일스레드에서도 [Untitled](https://app.notion.com/p/94fc12fb2048426c8c16d38184e91262) 관련해서 문제가 골치아픈데… 분산컴퓨팅 세계에서는 그 복잡성의 레이어가 더욱 높아짐.
 
 더욱 상위 차원에서 각 노드간 일관된 데이터를 고민해봐야함.
 

@@ -2,8 +2,8 @@
 title: "pg-jev: SQL에 말로 조건을 적으면, 벡터 없이 행을 골라냅니다"
 date: 2026-11-01T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "pg-jev는 자연어 조건을 PostgreSQL의 필터·정렬·분류에 활용하는 확장으로, 임베딩 없이 판단 모델의 확률·선택지·점수를 SQL에서 사용할 수 있습니다. 캐시 덕분에 반복 실행은 빠르지만, 조건에 따라 모든 행을 검사하고 데이터가 외부 API로 전송될 수 있으므로 비용과 개인정보 보호에 유의해야 합니다."
 featured_image: "image_af3b407968e60fc4f12e3c3e.webp"
 notion_id: "40b1bab9-e3f8-8175-8e0c-e6665fb9dcf8"

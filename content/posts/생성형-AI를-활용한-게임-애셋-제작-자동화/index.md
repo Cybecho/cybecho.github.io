@@ -2,11 +2,11 @@
 title: "생성형 AI를 활용한 게임 애셋 제작 자동화"
 date: 2024-03-18T05:36:00.000Z
 draft: false
-tags: ["생성형 이미지"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "미드저니를 사용하여 이미지를 생성하고, KADIM을 통해 3D 모델을 제작하며, Mixamo 또는 Text to Animation AI로 애니메이션을 생성하는 방법을 설명합니다. 애프터이펙트를 활용하여 프레임 단위로 이미지를 추출해 스프라이트를 제작하는 과정도 포함되어 있습니다."
+featured_image: "image_e074fc2da33f783a61ddf4b0.png"
 notion_id: "dbcd2fbc-4692-49f3-abc4-e1204e514f6b"
-notion_url: "https://www.notion.so/AI-dbcd2fbc469249f3abc4e1204e514f6b"
 ---
 
 # 생성형 AI를 활용한 게임 애셋 제작 자동화
@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/AI-dbcd2fbc469249f3abc4e1204e514f6b"
 
 ---
 
-![Image](image_7bf1f53109e3.png)
+![Image](image_e074fc2da33f783a61ddf4b0.png)
 
 ```latex
 큰 아이디어는 다음과 같다

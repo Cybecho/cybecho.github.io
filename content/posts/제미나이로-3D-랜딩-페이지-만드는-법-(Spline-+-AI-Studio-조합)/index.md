@@ -2,11 +2,11 @@
 title: "제미나이로 3D 랜딩 페이지 만드는 법 (Spline + AI Studio 조합)"
 date: 2025-12-26T16:14:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["image-generation"]
+series: ["AI Media"]
 description: "Spline, Pinterest, 및 Google AI Studio를 활용하여 코딩 없이 고품질의 3D 인터랙티브 랜딩 페이지를 만드는 방법을 설명합니다. Spline에서 3D 모델을 찾고, Google AI Studio에 임베드 코드를 입력한 후, 스타일 레퍼런스를 업로드하여 랜딩 페이지를 생성합니다. 예시로는 테슬라 옵티머스 로봇 스타일, 애플 Vision OS 제품 소개 페이지 등이 있습니다."
+featured_image: "image_930cd83af0f55a1437a8336d.png"
 notion_id: "2d51bab9-e3f8-8016-a576-f807c8988220"
-notion_url: "https://www.notion.so/3D-Spline-AI-Studio-2d51bab9e3f88016a576f807c8988220"
 ---
 
 # 제미나이로 3D 랜딩 페이지 만드는 법 (Spline + AI Studio 조합)
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/3D-Spline-AI-Studio-2d51bab9e3f88016a576f807c
 > Spline, Pinterest, 및 Google AI Studio를 활용하여 코딩 없이 고품질의 3D 인터랙티브 랜딩 페이지를 만드는 방법을 설명합니다. Spline에서 3D 모델을 찾고, Google AI Studio에 임베드 코드를 입력한 후, 스타일 레퍼런스를 업로드하여 랜딩 페이지를 생성합니다. 예시로는 테슬라 옵티머스 로봇 스타일, 애플 Vision OS 제품 소개 페이지 등이 있습니다.
 
 ---
+
+![Image](image_930cd83af0f55a1437a8336d.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=4DS9nLOk8To)
 

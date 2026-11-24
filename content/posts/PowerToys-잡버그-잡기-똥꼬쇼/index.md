@@ -2,11 +2,11 @@
 title: "PowerToys 잡버그 잡기 똥꼬쇼"
 date: 2023-11-04T00:00:00.000Z
 draft: false
-tags: ["WINDOWS", "POWER_TOYS"]
+tags: ["WINDOWS"]
 series: ["Don't Hate Windows!"]
 description: "키보드 핫키 버그 문제를 해결하기 위해 Alt + U와 O를 사용하여 맵핑하는 방법을 제안하며, 특정 명령어가 작동하지 않는 버그를 언급합니다. 버전 0.75.1에서 발생하는 문제는 버전 다운그레이드로도 해결되지 않으며, 0.74.1로 다운그레이드할 경우 상황이 개선된 것으로 보입니다."
+featured_image: "image_eba6fe84bd242210531e2900.png"
 notion_id: "f5eebcb5-be9a-4bfe-8531-9af9a14b63d4"
-notion_url: "https://www.notion.so/PowerToys-f5eebcb5be9a4bfe85319af9a14b63d4"
 ---
 
 # PowerToys 잡버그 잡기 똥꼬쇼
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/PowerToys-f5eebcb5be9a4bfe85319af9a14b63d4"
 > 키보드 핫키 버그 문제를 해결하기 위해 Alt + U와 O를 사용하여 맵핑하는 방법을 제안하며, 특정 명령어가 작동하지 않는 버그를 언급합니다. 버전 0.75.1에서 발생하는 문제는 버전 다운그레이드로도 해결되지 않으며, 0.74.1로 다운그레이드할 경우 상황이 개선된 것으로 보입니다.
 
 ---
+
+![Image](image_eba6fe84bd242210531e2900.png)
 
 # 아오 키보드 핫키 버그 왜이렇게 많냐??
 

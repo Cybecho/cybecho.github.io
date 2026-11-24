@@ -2,8 +2,8 @@
 title: "MicroGPT: GPT의 핵심은 200줄이면 됩니다, 나머지는 효율일 뿐입니다"
 date: 2026-02-15T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "외부 라이브러리 없이 파이썬 표준 라이브러리만으로 데이터셋 준비부터 토큰화, 자동 미분, GPT 구조, Adam 학습과 추론까지 구현한 200줄짜리 MicroGPT를 소개합니다. 작은 모델을 통해 GPT의 핵심 알고리즘을 직접 살펴볼 수 있으며, 대규모 모델도 같은 기본 구조에 효율성을 더한 것임을 보여줍니다."
 featured_image: "image_ccbf68a27db6de96c0fdddf5.webp"
 notion_id: "3071bab9-e3f8-81a0-907c-d19d56721ced"

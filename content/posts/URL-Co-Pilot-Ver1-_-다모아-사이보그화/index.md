@@ -3,10 +3,10 @@ title: "URL Co-Pilot Ver1 : 다모아 사이보그화"
 date: 2023-02-16T00:00:00.000Z
 draft: false
 tags: ["Python"]
-series: ["매크로개발", "진심글쓰기"]
+series: ["Let's Macro"]
 description: "URL을 키매핑하여 웹사이트 이동을 반자동화하는 프로그램에 대한 내용으로, 파이썬 코드 재시작 방법과 관련된 코드 예시가 포함되어 있습니다. 매크로 개발과 진심 글쓰기를 주제로 하며, Tkinter를 사용한 최상위 창 만들기 및 모니터 해상도 얻기와 관련된 참고 코드도 제공됩니다."
+featured_image: "image_e9af06b34086cd0369b9eb58.png"
 notion_id: "f3776e74-adb9-4a5b-a8bd-baecbc987170"
-notion_url: "https://www.notion.so/URL-Co-Pilot-Ver1-f3776e74adb94a5ba8bdbaecbc987170"
 ---
 
 # URL Co-Pilot Ver1 : 다모아 사이보그화
@@ -17,6 +17,8 @@ notion_url: "https://www.notion.so/URL-Co-Pilot-Ver1-f3776e74adb94a5ba8bdbaecbc9
 ---
 
 🔗 [https://github.com/HelloZOOO/URL-co-pilot](https://github.com/HelloZOOO/URL-co-pilot)
+
+![Image](image_e9af06b34086cd0369b9eb58.png)
 
 ```python
 #아이콘 포함하여 빌드하기

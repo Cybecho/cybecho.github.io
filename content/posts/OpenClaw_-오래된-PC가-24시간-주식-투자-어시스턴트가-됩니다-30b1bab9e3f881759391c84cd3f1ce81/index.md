@@ -2,9 +2,10 @@
 title: "OpenClaw: 오래된 PC가 24시간 주식 투자 어시스턴트가 됩니다"
 date: 2026-02-18T00:00:00.000Z
 draft: false
-tags: ["AI","Python"]
-series: ["AI"]
+tags: ["Python","agent"]
+series: ["AI Harness"]
 description: "OpenClaw를 오래된 PC에 설치하면 크론, 하트비트, 웹훅을 활용해 데이터 수집부터 전략 설계·매매·피드백까지 자동화하는 24시간 주식 투자 어시스턴트를 만들 수 있습니다. 일주일간의 실전 운영에서는 시스템이 정상 작동했지만 승률은 낮았으며, 데이트레이딩에 맞는 전략으로 개선하고 모의 투자와 피드백 루프로 충분히 검증하는 것이 중요합니다."
+featured_image: "image_17ebd12529b144b845678bec.webp"
 notion_id: "30b1bab9-e3f8-8175-9391-c84cd3f1ce81"
 ---
 

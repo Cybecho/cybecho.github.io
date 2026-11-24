@@ -2,8 +2,8 @@
 title: "AutoRAG Agent: 파일을 한곳에 모으지 않고, 그 자리에서 찾아 답합니다"
 date: 2026-09-22T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","rag"]
+series: ["AI Harness"]
 description: "내 컴퓨터에 흩어진 파일·메신저·메일을 한곳에 모으지 않고, 그 자리에서 찾아 답해주는 검색 에이전트입니다. 키워드 검색과 의미 검색을 합치고, 로컬 임베딩 모델로 인덱싱하니 검색 단계에서는 파일 내용이 내 컴퓨터를 떠나지 않습니다. 검색만 맡기는 Lite와 답변까지 받는 full 두 가지 모드가 있고, 코딩 에이전트에 검색 도구로 붙일 수도 있습니다."
 featured_image: "image_06b0c01415c8051182565909.webp"
 notion_id: "3e31bab9-e3f8-8138-bb6d-d174e6f1aa03"

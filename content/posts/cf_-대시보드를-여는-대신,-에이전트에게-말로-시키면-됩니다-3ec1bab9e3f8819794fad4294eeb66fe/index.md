@@ -2,8 +2,8 @@
 title: "cf: 대시보드를 여는 대신, 에이전트에게 말로 시키면 됩니다"
 date: 2026-10-01T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","mcp"]
+series: ["AI Harness"]
 description: "Cloudflare의 새 cf CLI는 에이전트를 주요 사용자로 설계해 3,000개 이상의 API 작업을 지원하고, JSON 출력과 자연어 명령 검색을 제공합니다. 타입스크립트 설정과 Vite를 기본으로 하며, cf migrate로 기존 프로젝트를 옮길 수 있습니다. CLI와 MCP 서버를 통해 에이전트가 대시보드 없이 인프라를 관리할 수 있도록 합니다."
 featured_image: "image_c0adc22a35680a52f99037f4.webp"
 notion_id: "3ec1bab9-e3f8-8197-94fa-d4294eeb66fe"

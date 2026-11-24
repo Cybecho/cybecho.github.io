@@ -2,11 +2,11 @@
 title: "Make  : AI 자동화 및 워크플로우 통합 서비스"
 date: 2024-07-14T07:20:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness"]
+series: ["AI Harness"]
 description: "Make.com은 AI 자동화 및 워크플로우 통합을 위한 플랫폼으로, 시각적 워크플로우 설계, 다양한 AI 도구 통합, 수천 개의 앱 연동 및 다양한 수준의 자동화 기능을 제공합니다."
+featured_image: "image_40b3148aa73d.png"
 notion_id: "7d875c8b-16e5-4439-8cda-76e2b9844123"
-notion_url: "https://www.notion.so/Make-AI-7d875c8b16e544398cda76e2b9844123"
 ---
 
 # Make  : AI 자동화 및 워크플로우 통합 서비스

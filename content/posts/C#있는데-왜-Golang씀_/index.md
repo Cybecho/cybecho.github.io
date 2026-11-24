@@ -2,11 +2,10 @@
 title: "C#있는데 왜 Golang씀?"
 date: 2025-07-21T08:43:00.000Z
 draft: false
-tags: ["Go"]
-series: ["Language"]
+series: ["Tips"]
 description: "C# 대신 Go를 선택하는 이유는 운영 비용 절감, 경량 동시성, 간단한 빌드 및 배포, 클라우드-네이티브 생태계에서의 표준 언어로서의 위치, 그리고 협업 비용 감소 때문이다. Go는 Docker, Kubernetes, Terraform 등 주요 도구와의 호환성 덕분에 인프라 및 시스템 엔지니어들에게 선호된다. 반면 C#은 비동기 처리에서 강력하지만, 복잡한 설정과 큰 이미지 용량으로 인해 마이크로서비스 및 CLI 도구에서는 Go가 더 유리하다."
+featured_image: "image_a783a6e4ed2acea2750656f3.png"
 notion_id: "2371bab9-e3f8-8010-b3f0-c4d2ec3f7001"
-notion_url: "https://www.notion.so/C-Golang-2371bab9e3f88010b3f0c4d2ec3f7001"
 ---
 
 # C#있는데 왜 Golang씀?
@@ -15,6 +14,8 @@ notion_url: "https://www.notion.so/C-Golang-2371bab9e3f88010b3f0c4d2ec3f7001"
 > C# 대신 Go를 선택하는 이유는 운영 비용 절감, 경량 동시성, 간단한 빌드 및 배포, 클라우드-네이티브 생태계에서의 표준 언어로서의 위치, 그리고 협업 비용 감소 때문이다. Go는 Docker, Kubernetes, Terraform 등 주요 도구와의 호환성 덕분에 인프라 및 시스템 엔지니어들에게 선호된다. 반면 C#은 비동기 처리에서 강력하지만, 복잡한 설정과 큰 이미지 용량으로 인해 마이크로서비스 및 CLI 도구에서는 Go가 더 유리하다.
 
 ---
+
+![Image](image_a783a6e4ed2acea2750656f3.png)
 
 > 왜 C#대신에 Go를 쓰는가? 인프라엔지니어나 시스템엔지니어나 클라우드엔지니어들이! C#도 코루틴이 있고, 심지어 C#의 async/await 쓰면 도중에 반환도 가능한데?
 

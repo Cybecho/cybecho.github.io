@@ -2,8 +2,8 @@
 title: "Unlimited OCR 2: 수백 페이지 논문, 자르지 않고 한 번에 읽습니다"
 date: 2026-10-29T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["rag"]
+series: ["AI Harness"]
 description: "수백 페이지 문서를 자르지 않고 한 번에 읽어 표·수식·읽는 순서 등 구조를 유지하는 OCR 모델이 공개됐습니다. SR-SWA로 관련 페이지와 시각 토큰만 선택해 처리 비용을 일정하게 유지하며, 코드와 가중치는 MIT 라이선스로 공개됐습니다. 성능 수치는 제작자 자체 측정으로 독립 검증이 필요하고, 제목 계층 인식은 약점으로 나타났습니다."
 featured_image: "image_465554ea15ea1f272def6d4a.webp"
 notion_id: "4081bab9-e3f8-8144-85c0-e66a87be8118"

@@ -2,11 +2,11 @@
 title: "Ubuntu ssh 원격 접속 for Ipad"
 date: 2023-06-01T00:00:00.000Z
 draft: false
-tags: ["ubuntu", "MAC"]
-series: ["Let's Linux!", "원격 라이프!"]
+tags: ["ubuntu","MAC"]
+series: ["Let's Linux!"]
 description: "아이패드에서 우분투 서버에 SSH 원격 접속을 위해 SSH 서버를 설치하고, 포트를 설정한 후, 비밀번호 없이 SSH 키를 이용해 접속하는 방법을 설명합니다. 필요한 명령어와 설정 파일 편집 방법도 포함되어 있습니다."
+featured_image: "image_9b7d3eb09b01.png"
 notion_id: "4b5fa5b2-8703-4745-b0cb-cc3a59b5f4cf"
-notion_url: "https://www.notion.so/Ubuntu-ssh-for-Ipad-4b5fa5b287034745b0cbcc3a59b5f4cf"
 ---
 
 # Ubuntu ssh 원격 접속 for Ipad
@@ -82,6 +82,10 @@ sudo nano /etc/ssh/sshd_config
 #Port 22 라고 적혀있는 곳이 있습니다. 포트번호를 별다른 설정하지 않아도 22번으로 설정되는 부분입니다.
 
 #Port 22 아래에 `Port 12345` 를 작성해줍니다.
+
+![Image](image_5e5d62c53b0105530d779827.png)
+
+![Image](image_fdf72b1bf5a67130d01fd849.png)
 
 
 ```shell

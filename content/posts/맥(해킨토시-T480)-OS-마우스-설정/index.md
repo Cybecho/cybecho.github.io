@@ -3,10 +3,10 @@ title: "맥(해킨토시 T480) OS 마우스 설정"
 date: 2023-11-28T00:00:00.000Z
 draft: false
 tags: ["MAC"]
-series: ["개발환경", "Let's MAC!"]
+series: ["Dev Environment"]
 description: "트랙패드와 빨콩 방향을 조정하고, 자연스러운 스크롤을 꺼야 하며, ScrollReverser 앱을 설치하여 쾌적한 환경을 설정할 수 있습니다."
+featured_image: "image_3abe50505713.png"
 notion_id: "1b27ab31-817e-4495-9d80-75990db369b7"
-notion_url: "https://www.notion.so/T480-OS-1b27ab31817e44959d8075990db369b7"
 ---
 
 # 맥(해킨토시 T480) OS 마우스 설정

@@ -2,8 +2,8 @@
 title: "에이전트의 실력은 모델이 아니라 루프 네 개가 만듭니다"
 date: 2026-07-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness","agent"]
+series: ["AI Harness"]
 description: "에이전트를 믿고 쓰려면 좋은 모델만으로는 부족하고, 작업에 맞는 하네스와 그 위의 루프가 필요합니다. 기본 루프가 일을 끝내고, 검증 루프가 그레이더로 품질을 지키고, 이벤트 루프가 알아서 실행하고, 개선 루프가 트레이스를 보고 하네스 자체를 고칩니다. 루프가 쌓일수록 사람의 일은 사라지지 않고, 판단이 필요한 지점이 네 군데로 늘어납니다."
 featured_image: "image_2b249c3384592b255bd04947.webp"
 notion_id: "3a31bab9-e3f8-818a-991e-f0cd828ade78"

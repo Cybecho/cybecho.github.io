@@ -2,8 +2,8 @@
 title: "전화 비서, 010 번호 그대로 받습니다. 맥과 작은 보드 한 장이면 됩니다"
 date: 2026-11-04T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["phone-automation"]
+series: ["On-Device AI"]
 description: "맥과 작은 보드를 블루투스로 연결해 기존 010 번호로 걸려오는 전화를 AI가 받고, 클라우드 모델로 응답하는 전화 비서 구상이다. 예약뿐 아니라 반복적인 업무 통화도 처리하고 내용을 정리해 전달할 수 있지만, 판단과 책임이 필요한 통화는 사람이 맡아야 한다. 구현 세부 사항은 공개되지 않았으며, AI임을 알려야 하는 고지와 상대방이 이를 알아듣지 못할 수 있다는 문제도 제기된다."
 featured_image: "image_f7236320333da7d3e7068288.webp"
 notion_id: "40d1bab9-e3f8-8189-8a1e-eea43de4f777"

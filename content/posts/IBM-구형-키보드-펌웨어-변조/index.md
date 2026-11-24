@@ -2,17 +2,16 @@
 title: "IBM 구형 키보드 펌웨어 변조"
 date: 2025-02-10T03:09:00.000Z
 draft: false
-tags: ["Other"]
-series: ["HW", "Tips"]
-description: "구형 IBM 키보드에서 "
+series: ["HW"]
+description: "구형 IBM 키보드에서 Fn 키를 Ctrl 키로, Ctrl 키를 Win 키로 재매핑하는 방법을 설명합니다. 레지스트리 편집기를 사용하여 Scancode Map 값을 수정하고, BIOS 설정을 통해 키 기능을 변경하는 방법도 안내합니다. 또한, KeyTweak, AutoHotkey와 같은 유틸리티를 활용하거나 물리적 하드웨어 개조 방법도 소개합니다. 각 방법의 장단점과 추천 순서도 포함되어 있습니다."
+featured_image: "image_551092535560.png"
 notion_id: "1961bab9-e3f8-805d-a851-fe877c67eb03"
-notion_url: "https://www.notion.so/IBM-1961bab9e3f8805da851fe877c67eb03"
 ---
 
 # IBM 구형 키보드 펌웨어 변조
 
 > **Summary**
-> 구형 IBM 키보드에서 
+> 구형 IBM 키보드에서 Fn 키를 Ctrl 키로, Ctrl 키를 Win 키로 재매핑하는 방법을 설명합니다. 레지스트리 편집기를 사용하여 Scancode Map 값을 수정하고, BIOS 설정을 통해 키 기능을 변경하는 방법도 안내합니다. 또한, KeyTweak, AutoHotkey와 같은 유틸리티를 활용하거나 물리적 하드웨어 개조 방법도 소개합니다. 각 방법의 장단점과 추천 순서도 포함되어 있습니다.
 
 ---
 

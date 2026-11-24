@@ -2,8 +2,7 @@
 title: "Mole: 맥 청소, 유료 앱 4개가 하던 일을 터미널 명령어 하나로 끝냅니다"
 date: 2026-02-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Let's MAC!"]
 description: "Mole은 캐시와 잔여 파일 청소, 앱 완전 삭제, 디스크 분석, 시스템 모니터링과 최적화를 하나의 무료 오픈소스 명령줄 도구로 제공합니다. 삭제 전에 --dry-run으로 대상과 용량을 확인하고, 화이트리스트와 휴지통 등 안전장치를 활용할 수 있습니다."
 featured_image: "image_c80d7d3f7f27e9ba43b434ce.webp"
 notion_id: "3031bab9-e3f8-8112-8daa-e24233708366"

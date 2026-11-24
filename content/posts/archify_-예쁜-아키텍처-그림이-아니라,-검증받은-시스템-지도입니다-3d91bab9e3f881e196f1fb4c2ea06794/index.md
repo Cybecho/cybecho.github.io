@@ -2,8 +2,8 @@
 title: "archify: 예쁜 아키텍처 그림이 아니라, 검증받은 시스템 지도입니다"
 date: 2026-09-12T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "archify convierte descripciones o código en diagramas interactivos mediante una representación JSON tipada que pasa por validaciones antes de compilarse, evitando componentes y relaciones inventados. Ofrece diez tipos de diagramas, comparación de cambios y diagnósticos de repositorios en un archivo HTML exportable; es gratuito y de código abierto."
 featured_image: "image_4d247d76f4769fdd27f577b5.webp"
 notion_id: "3d91bab9-e3f8-81e1-96f1-fb4c2ea06794"

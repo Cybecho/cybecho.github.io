@@ -2,8 +2,8 @@
 title: "Scrapling: 반응 4개로 시작한 크롤러가 18개월 만에 깃허브 1위가 됐습니다"
 date: 2026-04-27T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["browser-automation","coding"]
+series: ["AI Harness"]
 description: "Scrapling은 적응형 파서와 스텔스 브라우저 기능을 갖춘 파이썬 크롤링 프레임워크로, 사이트 구조가 바뀌어도 요소를 다시 찾고 다양한 웹페이지에서 데이터를 추출합니다. AI 에이전트 시대와 맞물려 빠르게 성장했지만, 봇 방지 우회가 항상 보장되는 것은 아니며 사용자는 사이트 약관과 저작권을 고려해야 합니다."
 featured_image: "image_88d66dcd39f4fcdddc4a094d.webp"
 notion_id: "34e1bab9-e3f8-810c-bfc9-e27d0285644a"

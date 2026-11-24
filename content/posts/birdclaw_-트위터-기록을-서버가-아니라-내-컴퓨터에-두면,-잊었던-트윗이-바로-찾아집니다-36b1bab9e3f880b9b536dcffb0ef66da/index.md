@@ -2,8 +2,8 @@
 title: "birdclaw: 트위터 기록을 서버가 아니라 내 컴퓨터에 두면, 잊었던 트윗이 바로 찾아집니다"
 date: 2026-05-25T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm","mcp"]
+series: ["Self-Hosted AI"]
 description: "birdclaw는 트위터 아카이브와 실시간 데이터를 로컬 SQLite에 저장해 트윗, DM, 좋아요, 북마크를 검색·관리할 수 있게 합니다. AI로 멘션과 DM의 우선순위를 정하고 하루 요약을 만들며, Git에 보관할 수 있는 텍스트 백업과 읽기 전용 MCP도 지원합니다. 아직 개발 중이며 스키마 변경 가능성, API 비용, 별도 AI 연결이 필요하다는 점에 유의해야 합니다."
 featured_image: "image_5834206605df1810a545c755.webp"
 notion_id: "36b1bab9-e3f8-80b9-b536-dcffb0ef66da"

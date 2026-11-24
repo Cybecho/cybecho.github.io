@@ -2,11 +2,10 @@
 title: "라즈베리파이를 이용하여 KVM을 만들어봐요"
 date: 2025-06-13T10:40:00.000Z
 draft: false
-tags: ["Other", "Util"]
 series: ["HW"]
 description: "라즈베리파이를 활용하여 KVM over IP를 구축하는 방법을 소개합니다. 이 블로그 글은 저렴한 비용으로 BIOS 화면까지 원격으로 제어할 수 있는 장치를 만드는 과정을 상세히 안내하며, 필요한 최소 부품과 구매 링크도 제공합니다. 또한, USB 스플리터의 필요성과 각 부품의 특징을 비교하여 최적의 선택을 도와줍니다."
+featured_image: "image_a58daa8a1b0d321bca00569b.png"
 notion_id: "2111bab9-e3f8-80a6-8557-ffa3ff921a60"
-notion_url: "https://www.notion.so/KVM-2111bab9e3f880a68557ffa3ff921a60"
 ---
 
 # 라즈베리파이를 이용하여 KVM을 만들어봐요
@@ -16,9 +15,16 @@ notion_url: "https://www.notion.so/KVM-2111bab9e3f880a68557ffa3ff921a60"
 
 ---
 
-![Image](image_b0f4665574ca.png)
+![Image](image_a58daa8a1b0d321bca00569b.png)
 
 > 아… 취업하고나니, 집에있는 윈도우 서버가 원인모를 문제로 다운될때마다, 직접 키는게 참 곤혹이다…
+> 스마트 플러그나 WOL로 깨울 수 있지만, 바이오스까지 건드리고싶다..
+>
+> 슬슬 KVM이 필요해질땐가….
+>
+> 남아있는 라즈베리파이를 활용할때가 되었나…
+>
+>
 
 ## 4B기준은 이것만 보면 될듯
 

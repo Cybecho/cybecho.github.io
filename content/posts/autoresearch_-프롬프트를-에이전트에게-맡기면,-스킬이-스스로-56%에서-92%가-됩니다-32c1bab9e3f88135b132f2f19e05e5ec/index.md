@@ -2,8 +2,8 @@
 title: "autoresearch: 프롬프트를 에이전트에게 맡기면, 스킬이 스스로 56%에서 92%가 됩니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering","skill"]
+series: ["AI Harness"]
 description: "autoresearch는 에이전트가 프롬프트를 한 번에 하나씩 바꾸고, 체크리스트로 평가해 개선을 유지하거나 되돌리는 반복 실험 방식입니다. 랜딩 페이지 카피 스킬의 통과율을 56%에서 92%로 높인 사례가 보고됐지만, 제작자 자체 보고이며 AI 채점 결과라 실제 전환율 향상을 의미하지는 않습니다. 성패는 측정 가능한 평가 기준을 잘 세우는 데 달려 있고, 주관적인 품질 판단과 기준 설계는 여전히 사람의 몫입니다."
 featured_image: "image_19de95a4e8066afe7e907031.webp"
 notion_id: "32c1bab9-e3f8-8135-b132-f2f19e05e5ec"

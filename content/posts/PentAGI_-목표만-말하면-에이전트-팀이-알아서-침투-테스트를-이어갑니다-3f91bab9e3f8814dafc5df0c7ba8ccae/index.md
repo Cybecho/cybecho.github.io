@@ -2,8 +2,8 @@
 title: "PentAGI: 목표만 말하면 에이전트 팀이 알아서 침투 테스트를 이어갑니다"
 date: 2026-10-15T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "PentAGI는 평문으로 점검 목표를 입력하면 총괄·조사·개발·실행 에이전트가 협력해 침투 테스트와 보고서 작성을 수행하는 오픈소스 시스템입니다. Docker 샌드박스와 호출 한도로 실행을 통제하고, 점검 기록과 지식을 저장해 이후 작업에 활용합니다. 강력한 자동화 도구인 만큼 반드시 허가받은 대상에만 사용해야 합니다."
 featured_image: "image_377f17b72296105884fbddf2.webp"
 notion_id: "3f91bab9-e3f8-814d-afc5-df0c7ba8ccae"

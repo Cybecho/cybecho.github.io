@@ -2,8 +2,8 @@
 title: "schift-ocr-1-beta: 한국어 은행 양식 60장, 오류율 0.067로 읽어냅니다"
 date: 2026-09-29T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["rag"]
+series: ["AI Harness"]
 description: "schift-ocr-1-beta는 한국어 금융 양식에 특화된 OCR 모델로, 자체 측정한 은행 양식 60장 테스트에서 문자 오류율 0.067을 기록해 비교 모델보다 좋은 성능을 보였습니다. 텍스트와 HTML 표, 블록 위치 정보를 출력하며 MIT 라이선스로 베타 공개됐지만, 슬라이드와 일반 문서에서는 우위를 주장하지 않고 긴 페이지나 복잡한 표는 결과 확인이 필요합니다."
 featured_image: "image_76e5259fdcadd412164febac.webp"
 notion_id: "3ea1bab9-e3f8-8191-88be-d7c72607ab57"

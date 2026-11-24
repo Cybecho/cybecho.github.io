@@ -2,11 +2,11 @@
 title: "MCP 엿보기 (Perflexity API?)"
 date: 2025-07-14T14:27:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp"]
+series: ["AI Harness"]
 description: "Claude를 중심으로 한 AI 기반 개인 생산성 통합 시스템은 여러 앱 간의 번거로움을 해소하고 정보를 효율적으로 관리하여 집중력을 향상시킵니다. 주요 기능으로는 통합 허브와 지능형 쿼리 분석이 있으며, 개인 지식 관리, 연구 보조, 자동화된 워크플로 실행, 비즈니스 인텔리전스 플랫폼 등 다양한 활용 방안을 제공합니다."
+featured_image: "image_2e1cbd5f2ad9.png"
 notion_id: "2301bab9-e3f8-8051-aee6-c038ca9386a7"
-notion_url: "https://www.notion.so/MCP-Perflexity-API-2301bab9e3f88051aee6c038ca9386a7"
 ---
 
 # MCP 엿보기 (Perflexity API?)

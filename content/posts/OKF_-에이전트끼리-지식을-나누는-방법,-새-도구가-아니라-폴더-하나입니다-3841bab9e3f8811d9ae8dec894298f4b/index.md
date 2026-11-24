@@ -2,8 +2,8 @@
 title: "OKF: 에이전트끼리 지식을 나누는 방법, 새 도구가 아니라 폴더 하나입니다"
 date: 2026-06-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "OKF는 에이전트가 쓰는 지식을 마크다운 파일들의 폴더로 표현하는 개방형 표준입니다. 파일 경로가 개념의 정체성이 되고, 필수 항목은 type 하나뿐이라 누구나 만들고 누구나 읽을 수 있습니다. LLM 위키 패턴을 형식화해 에이전트끼리 지식을 나누는 공용어를 만든 것이 핵심이지만, 소개 글은 v0.1 기준이라 v0.2의 신뢰 신호는 따로 봐야 합니다."
 featured_image: "image_28d8ee767ee7d4d5998c04d1.webp"
 notion_id: "3841bab9-e3f8-811d-9ae8-dec894298f4b"

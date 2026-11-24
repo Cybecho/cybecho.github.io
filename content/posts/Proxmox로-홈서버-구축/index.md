@@ -2,11 +2,11 @@
 title: "Proxmox로 홈서버 구축"
 date: 2024-06-13T13:17:00.000Z
 draft: false
-tags: ["Other", "ProxMox"]
+tags: ["ProxMox"]
 series: ["Let's Homelab!"]
 description: "Proxmox를 이용한 홈서버 구축에 대한 가이드를 제공하며, 도메인, 방화벽, 프록시 설정 및 다양한 튜토리얼 링크를 포함하고 있습니다. 또한, Proxmox에서의 Docker 활용 아이디어와 Synology 설치 방법에 대한 자료도 제시됩니다."
+featured_image: "image_34a37f9a4327.png"
 notion_id: "029d1e14-3d55-4abc-8b9a-6e5da8468f09"
-notion_url: "https://www.notion.so/Proxmox-029d1e143d554abc8b9a6e5da8468f09"
 ---
 
 # Proxmox로 홈서버 구축

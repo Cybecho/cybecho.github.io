@@ -2,8 +2,8 @@
 title: "코드는 빨라졌는데 머지는 그대로입니다. CI가 새 병목이 됐습니다"
 date: 2026-09-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "AI 코딩 에이전트의 확산으로 CI가 새 병목이 됐지만, 테스트 바깥의 시간을 줄이면 대기와 비용을 개선할 수 있습니다. 러너·도구를 교체하고 체크아웃과 설치를 최적화하며 작업을 묶고 테스트 샤딩과 모듈 공유를 개선해, 한 팀은 테스트가 4배 늘어난 상황에서도 PR 대기 시간을 6분 초과에서 5분 조금 넘는 수준으로 줄이고 테스트당 러너 시간을 절반으로 단축했습니다."
 featured_image: "image_bf4109affd34367b08841e53.webp"
 notion_id: "3e41bab9-e3f8-8168-9b30-c4e2d08fc882"

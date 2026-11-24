@@ -2,8 +2,8 @@
 title: "Shannon: 경고가 아니라 익스플로잇으로 증명하는 AI 보안 테스트입니다"
 date: 2026-02-09T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "Shannon은 웹 앱과 API를 실제로 공격해 취약점을 입증하고, 확인된 결과만 보고하는 오픈소스 자율 AI 펜테스터입니다. XBOW 벤치마크에서 96.15%의 성공률을 기록했으며 CI/CD에 연동할 수 있지만, 허가된 비운영 환경에서만 사용하고 결과는 사람이 검토해야 합니다."
 featured_image: "image_0fee5e9b64d6c4b7b252d0bc.webp"
 notion_id: "3011bab9-e3f8-81f9-bb7c-ea9e8c46fb91"

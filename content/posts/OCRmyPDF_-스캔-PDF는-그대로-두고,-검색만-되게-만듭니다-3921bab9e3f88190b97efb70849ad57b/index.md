@@ -2,8 +2,8 @@
 title: "OCRmyPDF: 스캔 PDF는 그대로 두고, 검색만 되게 만듭니다"
 date: 2026-07-03T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "스캔한 PDF는 속이 그림 한 장이라 검색도 복사도 안 되는데, OCRmyPDF는 인식한 글자를 이미지 아래층에 깔아 보이는 모양은 그대로 두고 검색과 복사가 되게 만듭니다. 문자 인식은 Tesseract 엔진이 맡아 100개 넘는 언어를 처리하고, 기본 출력은 장기 보관용 PDF/A입니다. 한 줄 명령으로 수천 장의 스캔 문서까지 처리할 수 있고, 로컬에서 돌아가 문서가 외부로 나가지 않지만, OCR이 완벽하지 않아 인용 전에는 원본과 대조해 확인해야 합니다."
 featured_image: "image_70c5facb8e1f1396f5e792b2.webp"
 notion_id: "3921bab9-e3f8-8190-b97e-fb70849ad57b"

@@ -2,8 +2,8 @@
 title: "OpenGauss: 수학책 문장을 Lean 코드로 바꾸면, 증명은 기계가 검증합니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "자동 정형화는 자연어 수학을 Lean 코드로 바꿔 기계가 증명을 검증하게 하며, OpenGauss는 에이전트와 컴파일러의 반복 검증으로 강한 소수 정리를 3주 만에 형식화했습니다. 다만 코드가 원문의 뜻과 일치하는지 확인하고, 설계와 방향을 제시하는 사람의 역할은 여전히 중요합니다."
 featured_image: "image_5c10d870054a5375750d5af5.webp"
 notion_id: "32c1bab9-e3f8-8166-ae83-c16e0a4985e9"

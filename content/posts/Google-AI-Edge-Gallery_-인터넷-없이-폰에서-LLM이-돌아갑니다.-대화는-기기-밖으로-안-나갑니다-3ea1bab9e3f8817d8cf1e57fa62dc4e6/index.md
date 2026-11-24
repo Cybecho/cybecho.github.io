@@ -2,8 +2,8 @@
 title: "Google AI Edge Gallery: 인터넷 없이 폰에서 LLM이 돌아갑니다. 대화는 기기 밖으로 안 나갑니다"
 date: 2026-09-29T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm","phone-automation"]
+series: ["On-Device AI"]
 description: "인터넷 없이 폰에서 LLM이 돌아갑니다. 대화·사진·음성이 기기 밖으로 나가지 않습니다. 채팅만 있는 앱이 아닙니다. 생각 과정 보기, 이미지 질문, 음성 받아쓰기, 프롬프트 실험실까지 한 앱에 모였습니다. 안드로이드 12+, 아이폰 iOS 17+에서 무료로 쓸 수 있고, 소스도 공개돼 있습니다. 실험 베타라 속도는 폰 성능에 따라 달라집니다."
 featured_image: "image_788d1b04841e76a1de11bcf2.webp"
 notion_id: "3ea1bab9-e3f8-817d-8cf1-e57fa62dc4e6"

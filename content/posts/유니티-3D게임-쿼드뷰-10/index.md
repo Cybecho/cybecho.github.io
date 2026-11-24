@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 10"
 date: 2023-02-21T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "애니메이션 문제 해결, Nav Mesh Agent 설정, BoxCollider와 충돌 오류 수정, 몬스터 타입별 기능 구현, 프리팹 생성 코드 포함. 공격 애니메이션이 정상 작동하도록 Has Exit Time 비활성화, 충돌 오류를 해결하기 위해 Bullet_Enemy 클래스를 새로 만들어 사용."
+featured_image: "image_eca983c4b8e5.png"
 notion_id: "4824ce1e-9ddb-457c-8f92-6bbcb1deeaa5"
-notion_url: "https://www.notion.so/3D-10-4824ce1e9ddb457c8f926bbcb1deeaa5"
 ---
 
 # 유니티 3D게임 쿼드뷰 10

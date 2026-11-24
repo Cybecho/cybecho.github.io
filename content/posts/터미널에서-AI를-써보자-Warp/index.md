@@ -2,11 +2,11 @@
 title: "터미널에서 AI를 써보자 Warp"
 date: 2026-01-21T07:42:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
 series: ["Let's Linux!"]
 description: "Warp는 Rust 언어로 개발된 GPU 가속 터미널 에뮬레이터로, AI 기술을 통해 자연어 명령어 변환 및 팀 협업 기능을 제공한다. macOS, Linux, Windows에서 설치 가능하며, 각 운영체제에 맞는 설치 방법이 안내되어 있다. 설치 후 계정 생성을 통해 개인화된 AI 설정과 워크플로 동기화가 이루어지며, 기존 셸 설정 파일을 쉽게 가져올 수 있다."
+featured_image: "image_db053b1dcab5f6896697a930.png"
 notion_id: "2ef1bab9-e3f8-8050-8c7e-ce7c3207cc5e"
-notion_url: "https://www.notion.so/AI-Warp-2ef1bab9e3f880508c7ece7c3207cc5e"
 ---
 
 # 터미널에서 AI를 써보자 Warp
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/AI-Warp-2ef1bab9e3f880508c7ece7c3207cc5e"
 > Warp는 Rust 언어로 개발된 GPU 가속 터미널 에뮬레이터로, AI 기술을 통해 자연어 명령어 변환 및 팀 협업 기능을 제공한다. macOS, Linux, Windows에서 설치 가능하며, 각 운영체제에 맞는 설치 방법이 안내되어 있다. 설치 후 계정 생성을 통해 개인화된 AI 설정과 워크플로 동기화가 이루어지며, 기존 셸 설정 파일을 쉽게 가져올 수 있다.
 
 ---
+
+![Image](image_db053b1dcab5f6896697a930.png)
 
 ![Image](image_6dfd7e1f1e65.png)
 

@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 07"
 date: 2023-02-14T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "피격받을 몬스터를 생성하고, 몬스터 사망 후 피격 판정을 받지 않게 설정하는 방법에 대한 설명. 스크립트에서 머터리얼을 불러오는 방법과 피격 처리 로직을 포함한 코드 예시 제공."
+featured_image: "image_a629c8592c74.png"
 notion_id: "dc3d9e44-cb15-45fd-ac6d-4766fa29a508"
-notion_url: "https://www.notion.so/3D-07-dc3d9e44cb1545fdac6d4766fa29a508"
 ---
 
 # 유니티 3D게임 쿼드뷰 07

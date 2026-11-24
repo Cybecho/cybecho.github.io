@@ -2,8 +2,8 @@
 title: "UAC: IDE로 이사 가지 마세요. 에이전트 열 개가 기다리는 곳으로 옵니다"
 date: 2026-11-17T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "UAC는 터미널·IDE·앱에 흩어진 여러 에이전트 세션을 한 화면에서 관리하는 관제 도구입니다. 세션을 주민처럼 보여주고, 승인이 필요한 에이전트를 먼저 띄워 바로 응답할 수 있으며, 타임라인·작업 보드·사용량·코드 검토도 제공합니다. 세션 간 작업을 나누거나 대화를 이어주지는 않으며, 에이전트가 하나뿐이라면 굳이 필요하지 않습니다."
 featured_image: "image_eaede64bf26af792195f664d.webp"
 notion_id: "41b1bab9-e3f8-81a3-afc0-d80f576c4f83"

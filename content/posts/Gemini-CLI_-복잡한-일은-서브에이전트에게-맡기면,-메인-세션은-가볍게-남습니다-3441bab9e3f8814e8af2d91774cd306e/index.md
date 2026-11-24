@@ -2,8 +2,8 @@
 title: "Gemini CLI: 복잡한 일은 서브에이전트에게 맡기면, 메인 세션은 가볍게 남습니다"
 date: 2026-04-16T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "Gemini CLI에 서브에이전트가 들어왔습니다. 복잡하고 반복적인 일은 독립된 컨텍스트 윈도우에서 도는 전문가 에이전트에게 맡기고, 메인 세션은 전체 목표와 최종 결정에만 집중합니다. 마크다운 파일 하나로 나만의 전문가를 만들 수 있고 여러 개를 병렬로 돌릴 수도 있지만, 큰 코드 편집을 병렬로 돌리면 충돌이 날 수 있어 주의가 필요합니다."
 featured_image: "image_0977c9360bbc7b98bd341758.webp"
 notion_id: "3441bab9-e3f8-814e-8af2-d91774cd306e"

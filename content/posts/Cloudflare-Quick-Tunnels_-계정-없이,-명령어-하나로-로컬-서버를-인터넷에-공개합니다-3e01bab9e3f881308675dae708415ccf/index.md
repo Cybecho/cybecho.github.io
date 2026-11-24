@@ -2,8 +2,8 @@
 title: "Cloudflare Quick Tunnels: 계정 없이, 명령어 하나로 로컬 서버를 인터넷에 공개합니다"
 date: 2026-09-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["Infra"]
+series: ["Infra & Network"]
 description: "Cloudflare Quick Tunnels는 계정 가입 없이 로컬 서버를 임시 HTTPS 주소로 공개하는 무료 서비스로, 명령어 하나면 팀과 바로 공유할 수 있습니다. 내 컴퓨터에서 나가는 연결을 쓰기 때문에 외부 포트를 열 필요가 없고, HTTPS와 DDoS 방어는 Cloudflare가 처리합니다. 링크만 아는 사람은 누구나 들어올 수 있지만, 이메일 일회용 PIN으로 초대장처럼 제한할 수도 있습니다. 프로세스를 멈추면 터널도 사라지고 호스트명도 매번 바뀌며, 동시 요청 200개 제한과 SSE 미지원 같은 제약이 있어 임시 미리보기와 테스트용이고, 상시 운영에는 계정 기반 일반 터널을 써야 합니다."
 featured_image: "image_7ab97f6251c86ff15c866bdf.webp"
 notion_id: "3e01bab9-e3f8-8130-8675-dae708415ccf"

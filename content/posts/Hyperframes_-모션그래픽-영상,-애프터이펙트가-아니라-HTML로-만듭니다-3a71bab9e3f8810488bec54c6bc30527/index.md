@@ -2,8 +2,8 @@
 title: "Hyperframes: 모션그래픽 영상, 애프터이펙트가 아니라 HTML로 만듭니다"
 date: 2026-07-24T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "Hyperframes를 사용하면 애프터이펙트 대신 평범한 HTML로 모션그래픽 영상을 만들 수 있습니다. 헤드리스 크롬이 프레임을 하나씩 정확히 렌더링하고 FFmpeg으로 인코딩해 재현 가능한 영상을 만들며, 코딩 에이전트가 기획부터 렌더링까지 지원합니다. 아파치 2.0 라이선스로 상업적으로도 렌더링 요금 없이 이용할 수 있지만, 아직 1.0 전이라 빠르게 바뀌며 글꼴·브라우저 환경에 따라 출력이 달라질 수 있습니다."
 featured_image: "image_556c01c1491523d4c04ae1d8.webp"
 notion_id: "3a71bab9-e3f8-8104-88be-c54c6bc30527"

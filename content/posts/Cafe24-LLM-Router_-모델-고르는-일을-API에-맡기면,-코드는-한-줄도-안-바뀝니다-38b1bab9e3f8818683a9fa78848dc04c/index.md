@@ -2,8 +2,8 @@
 title: "Cafe24 LLM Router: 모델 고르는 일을 API에 맡기면, 코드는 한 줄도 안 바뀝니다"
 date: 2026-06-26T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness"]
+series: ["AI Harness"]
 description: "카페24가 2026년 6월 23일 공개한 LLM 라우터는 120개 이상의 AI 모델을 단일 엔드포인트로 통합 호출하는 인프라입니다. 자동 라우터가 프롬프트를 분석해 코딩·추론·번역·창작 중 작업 유형을 판별하고 비용이 가장 잘 맞는 모델을 골라 연결합니다. 장애 시 대체 모델로 자동 전환하고 실패한 호출은 과금하지 않으며, 원화 종량제와 세금계산서 발행까지 지원합니다."
 featured_image: "image_efe12df3cddd32f217da553e.webp"
 notion_id: "38b1bab9-e3f8-8186-83a9-fa78848dc04c"

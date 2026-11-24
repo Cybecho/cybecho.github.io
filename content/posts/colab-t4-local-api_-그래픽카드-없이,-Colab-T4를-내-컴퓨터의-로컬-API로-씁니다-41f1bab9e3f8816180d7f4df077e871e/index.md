@@ -2,8 +2,8 @@
 title: "colab-t4-local-api: 그래픽카드 없이, Colab T4를 내 컴퓨터의 로컬 API로 씁니다"
 date: 2026-11-21T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm"]
+series: ["Self-Hosted AI"]
 description: "Colab T4에서 llama.cpp로 모델을 실행하고 로컬 게이트웨이를 통해 OpenAI 호환 API로 사용하는 도구 모음입니다. 모델은 Google Drive에 캐시되고 임시 터널과 설치별 인증 키로 연결을 보호하지만, 새 계정에서의 전체 검증과 라이선스가 아직 확정되지 않아 시험용으로 사용해야 합니다. Colab 제한을 준수하고 로컬 API를 루프백에만 열어 두는 것이 중요합니다."
 featured_image: "image_0adc6c2cafe7a7f5582003c8.webp"
 notion_id: "41f1bab9-e3f8-8161-80d7-f4df077e871e"

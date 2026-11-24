@@ -2,11 +2,11 @@
 title: "Docker.socket은 왜 항상 실행되어야 하는가?"
 date: 2023-07-25T00:00:00.000Z
 draft: false
-tags: ["Docker", "ubuntu"]
-series: ["Infra & Network", "Don't Hate Windows!"]
+tags: ["Docker","ubuntu"]
+series: ["Infra & Network"]
 description: "Docker 소켓은 Docker 명령이 실행될 수 있도록 항상 활성 상태여야 하며, 이를 통해 Docker 데몬이 필요할 때 자동으로 시작됩니다. 소켓이 활성화되면 사용자가 매번 수동으로 서비스를 시작할 필요 없이 Docker 명령을 신속하게 실행하고 컨테이너를 관리할 수 있습니다."
+featured_image: "image_66946725b7c4.png"
 notion_id: "82adb5e8-7378-4b12-a106-f80977c8ef72"
-notion_url: "https://www.notion.so/Docker-socket-82adb5e873784b12a106f80977c8ef72"
 ---
 
 # Docker.socket은 왜 항상 실행되어야 하는가?

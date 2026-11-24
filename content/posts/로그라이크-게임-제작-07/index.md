@@ -2,11 +2,11 @@
 title: "로그라이크 게임 제작 07"
 date: 2023-03-22T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 게임 습작"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "기둥의 opacity를 추가하고, 메탈릭 및 Smoothness 값을 조절하여 현실적인 광원 효과를 만드는 방법을 설명합니다. 또한, 박스 콜라이더를 카메라에 추가하여 특정 태그의 콜라이더와 충돌 시 MeshRender를 비활성화하는 방법을 다룹니다."
+featured_image: "image_246f521eebae.png"
 notion_id: "eaeb1169-7c03-4682-91a6-e17c748f7710"
-notion_url: "https://www.notion.so/07-eaeb11697c03468291a6e17c748f7710"
 ---
 
 # 로그라이크 게임 제작 07

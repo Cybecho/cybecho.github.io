@@ -2,8 +2,8 @@
 title: "AutoClip: 긴 영상은 링크 하나면, 하이라이트 클립 10개로 나옵니다"
 date: 2026-03-13T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "AutoClip은 긴 영상 링크를 입력하면 AI가 하이라이트를 찾아 최대 10개의 세로 숏폼 클립과 자막·표지·제목·설명·해시태그가 포함된 발행 패키지를 만들어주는 무료 오픈소스 도구입니다. 편집과 렌더링은 컴퓨터에서 처리하며, 클라우드 모델은 사용량에 따라 요금이 들고 로컬 모델을 쓰면 비용 없이 실행할 수 있습니다. 말이 중심인 영상에 적합하고, 클라우드 기능을 사용하면 자막·오디오·화면 샘플 등이 전송될 수 있으므로 설정을 확인해야 합니다."
 featured_image: "image_cef6999b320de136f699f20d.webp"
 notion_id: "3211bab9-e3f8-8174-832d-e8794db4d935"

@@ -2,8 +2,8 @@
 title: "AI 에이전트 시대 생존 전략 9가지, 프롬프트가 아니라 환경 설계가 답입니다"
 date: 2026-03-02T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "에이전트 시대에는 코딩 능력보다 에이전트가 잘 일할 환경을 설계하는 능력이 중요합니다. 작업 분해, 적절한 컨텍스트와 완료 기준 설정, 실패 복구, 진행 관찰, 메모리 관리, 병렬 작업과 추상화, 결과의 품질을 판단하는 감각 등 아홉 가지 역량을 기르고, 한 가지 워크플로우부터 실험하며 개선하는 것이 좋습니다."
 featured_image: "image_00ed313c42db1f07ee6502e5.webp"
 notion_id: "3171bab9-e3f8-819c-90db-d9c9da269fd7"

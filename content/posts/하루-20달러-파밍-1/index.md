@@ -3,8 +3,9 @@ title: "하루 20달러 파밍 1"
 date: 2023-04-26T00:00:00.000Z
 draft: false
 tags: ["Python","ubuntu","GCP"]
-series: ["매크로개발"]
+series: ["Let's Macro"]
 description: "셀레니움을 서버에 설치하고, 구글 클라우드 서비스를 활용하여 다수의 계정을 동시에 가동하여 효율성을 극대화하는 방법을 설명합니다. Ubuntu에 크롬과 웹드라이버를 설치하고, 필요한 라이브러리를 설치한 후, 셀레니움을 사용하여 웹 크롤링 코드를 작성하고 실행하는 과정이 포함되어 있습니다."
+featured_image: "image_3a7087808b933925bf60549d.jpg"
 notion_id: "47ef2cdc-5266-4676-bf3a-e1ccc6206571"
 ---
 

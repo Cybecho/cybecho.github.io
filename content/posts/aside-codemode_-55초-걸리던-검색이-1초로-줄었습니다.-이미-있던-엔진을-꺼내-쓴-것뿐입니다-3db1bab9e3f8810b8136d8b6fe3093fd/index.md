@@ -2,8 +2,8 @@
 title: "aside-codemode: 55초 걸리던 검색이 1초로 줄었습니다. 이미 있던 엔진을 꺼내 쓴 것뿐입니다"
 date: 2026-09-14T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "aside-codemode는 Aside에 이미 포함된 ripgrep을 에이전트가 활용하도록 해 검색 결과만 전달해 모델의 읽기 부담과 불필요한 출력을 줄입니다. 운영자가 보고한 55초에서 1초로의 개선은 독립적으로 검증되지 않았으며, 통제된 비교에서도 대량 검색과 요약에 효율성을 보였습니다."
 featured_image: "image_c171d542bc25f1ab6242132b.webp"
 notion_id: "3db1bab9-e3f8-810b-8136-d8b6fe3093fd"

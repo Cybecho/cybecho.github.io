@@ -2,8 +2,8 @@
 title: "OpenClaw: 스킬보다 쓸 곳이 먼저입니다"
 date: 2026-02-15T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "OpenClaw의 핵심 병목은 스킬이 아니라 일상에서 활용할 곳을 찾는 것입니다. 소셜 미디어, 생산성, 연구 등 6개 분야의 42가지 활용 사례 중 반복되는 일 하나를 골라 하루 동안 시험해 보고, 스킬 코드와 권한을 확인한 뒤 효과가 있으면 점차 확장하세요."
 featured_image: "image_975dcf9afdc3ff9176718af5.webp"
 notion_id: "3071bab9-e3f8-81c4-b570-edaeddb9e6aa"

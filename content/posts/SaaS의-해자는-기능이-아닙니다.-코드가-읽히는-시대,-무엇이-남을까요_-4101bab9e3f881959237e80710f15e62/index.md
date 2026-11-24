@@ -2,8 +2,7 @@
 title: "SaaS의 해자는 기능이 아닙니다. 코드가 읽히는 시대, 무엇이 남을까요?"
 date: 2026-11-06T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Essays"]
 description: "AI가 실행 파일을 분석해 기능을 재현하는 능력이 발전하면서 기능만으로 지켜온 SaaS의 해자는 약해질 수 있다. 다만 서버 코드에 접근할 수 없고 복원 코드는 원본이 아니며, 학습에는 법적 쟁점도 따른다. 코드가 공개돼도 살아남으려면 사용자 데이터, 연동, 신뢰, 습관처럼 코드 밖의 가치를 키워야 한다."
 featured_image: "image_49ec7dfebd71057fe648cd58.webp"
 notion_id: "4101bab9-e3f8-8195-9237-e80710f15e62"

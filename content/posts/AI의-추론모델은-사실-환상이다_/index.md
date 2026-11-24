@@ -2,11 +2,11 @@
 title: "AI의 추론모델은 사실 환상이다?"
 date: 2025-06-09T08:47:00.000Z
 draft: false
-tags: ["AI", "AI Generate"]
-series: ["AI"]
+tags: ["AI Generate"]
+series: ["Essays"]
 description: "AI의 추론 모델은 문제의 복잡성을 통해 그 강점과 한계를 이해하는 데 도움을 주며, 사고의 환상에 대한 논의를 포함하고 있습니다."
+featured_image: "image_930cd83af0f55a1437a8336d.png"
 notion_id: "20d1bab9-e3f8-8098-9097-fca7aacbebff"
-notion_url: "https://www.notion.so/AI-20d1bab9e3f880989097fca7aacbebff"
 ---
 
 # AI의 추론모델은 사실 환상이다?
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/AI-20d1bab9e3f880989097fca7aacbebff"
 > AI의 추론 모델은 문제의 복잡성을 통해 그 강점과 한계를 이해하는 데 도움을 주며, 사고의 환상에 대한 논의를 포함하고 있습니다.
 
 ---
+
+![Image](image_930cd83af0f55a1437a8336d.png)
 
 🔗 [https://machinelearning.apple.com/research/illusion-of-thinking](https://machinelearning.apple.com/research/illusion-of-thinking)
 

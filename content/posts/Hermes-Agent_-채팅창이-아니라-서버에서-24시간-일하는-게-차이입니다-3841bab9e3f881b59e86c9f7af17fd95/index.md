@@ -2,8 +2,8 @@
 title: "Hermes Agent: 채팅창이 아니라 서버에서 24시간 일하는 게 차이입니다"
 date: 2026-06-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "에이전트 공식 문서에는 쓰는 사람들이 직접 올린 활용 사례가 수십 개 모여 있습니다. 공통점은 하나입니다. 채팅창에서 묻고 답하는 게 아니라, 서버에서 24시간 돌며 먼저 메시지를 보냅니다. 업무·가정·개발·절약까지 쓰임새는 넓지만, 시작은 작은 워크플로우 하나부터가 정답에 가깝습니다."
 featured_image: "image_87912425b2268b3eb8bd7809.webp"
 notion_id: "3841bab9-e3f8-81b5-9e86-c9f7af17fd95"

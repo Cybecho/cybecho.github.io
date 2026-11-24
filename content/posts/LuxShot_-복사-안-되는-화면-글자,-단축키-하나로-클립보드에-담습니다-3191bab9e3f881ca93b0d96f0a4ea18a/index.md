@@ -2,8 +2,7 @@
 title: "LuxShot: 복사 안 되는 화면 글자, 단축키 하나로 클립보드에 담습니다"
 date: 2026-03-04T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Let's MAC!"]
 description: "화면 속 글자를 골라 바로 텍스트로 바꿔주는 macOS 메뉴바 OCR 도구 LuxShot을 소개합니다. 1MB가 안 되는 네이티브 앱으로, 단축키를 누르고 영역을 드래그하면 글자가 인식돼 클립보드에 들어갑니다. QR·바코드 인식, 줄바꿈 정리, 링크 자동 열기, 읽어주기, 기록 보관까지 되며 인식은 기기 안에서만 처리돼 외부로 나가지 않으니, 유료 OCR 앱의 핵심 기능을 완전 무료 오픈소스로 쓸 수 있습니다."
 featured_image: "image_f1beaddf1e516e0e983f17c4.webp"
 notion_id: "3191bab9-e3f8-81ca-93b0-d96f0a4ea18a"

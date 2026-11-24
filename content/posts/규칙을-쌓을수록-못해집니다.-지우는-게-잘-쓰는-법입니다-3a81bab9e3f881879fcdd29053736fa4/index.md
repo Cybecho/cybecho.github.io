@@ -2,8 +2,8 @@
 title: "규칙을 쌓을수록 못해집니다. 지우는 게 잘 쓰는 법입니다"
 date: 2026-07-25T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill","coding"]
+series: ["AI Harness"]
 description: "클로드 코드의 성능을 유지하면서 시스템 프롬프트 규칙을 80% 이상 줄인 사례를 바탕으로, 규칙은 쌓기보다 충돌을 줄이고 모델의 판단에 맡기는 것이 효과적이라고 설명합니다. CLAUDE.md에는 코드만으로 알 수 없는 함정과 팀 고유의 관례만 남기고, 가끔 필요한 지침은 스킬로 옮기거나 삭제하되, 변경 후 테스트로 확인해야 합니다."
 featured_image: "image_ede36d4c688ad9456fa3a31f.webp"
 notion_id: "3a81bab9-e3f8-8187-9fcd-d29053736fa4"

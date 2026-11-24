@@ -2,8 +2,8 @@
 title: "cokacdir: 코딩 에이전트는 새로 살 필요 없습니다. 텔레그램에서 쓰던 구독 그대로 씁니다"
 date: 2026-04-02T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["phone-automation","agent"]
+series: ["On-Device AI"]
 description: "cokacdir은 자체 AI 에이전트가 없는, 텔레그램에서 코딩 에이전트를 부리는 오픈소스 도구입니다. Claude Code·Codex·Gemini CLI·OpenCode에 일을 위임하므로, API 추가 과금 없이 이미 내는 구독 안에서 씁니다. 여러 봇을 한 그룹에 넣어 협업시키고, 스케줄 실행과 셸 명령까지 폰에서 굴릴 수 있습니다."
 featured_image: "image_16e7c35052b6f7efb0161e29.webp"
 notion_id: "3361bab9-e3f8-81da-a823-cb785da0f009"

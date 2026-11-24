@@ -2,11 +2,11 @@
 title: "로그라이크 게임 제작 03"
 date: 2023-03-17T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 게임 습작"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "유니티 로그라이크 게임에서 포스트 프로세싱을 설정하는 방법에 대한 튜토리얼로, Cinemachine을 사용하여 초점 대상을 애니메이션화하고 DepthOfField 프로파일을 설정하는 단계가 포함되어 있습니다. MainCamera에 포스트 프로세싱 컴포넌트를 추가하고 새로운 포스트 프로세싱 프로필을 생성하는 방법도 설명됩니다."
+featured_image: "image_ed54adc4aa1a.png"
 notion_id: "cf13efee-63d4-4806-a536-ffd3acfaea65"
-notion_url: "https://www.notion.so/03-cf13efee63d44806a536ffd3acfaea65"
 ---
 
 # 로그라이크 게임 제작 03
@@ -38,7 +38,7 @@ notion_url: "https://www.notion.so/03-cf13efee63d44806a536ffd3acfaea65"
 
 ![Image](image_de42d0d46ddd.png)
 
-![Image](image_e4a8ff3eb270.png)
+![Image](<https://forum.unity.com/attachments/upload_2020-8-27_13-38-32-png.688971/>)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=_w45Z1X-9xs)
 

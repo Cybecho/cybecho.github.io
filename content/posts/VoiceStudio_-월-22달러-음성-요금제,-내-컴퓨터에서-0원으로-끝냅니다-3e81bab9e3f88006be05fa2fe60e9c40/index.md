@@ -2,8 +2,8 @@
 title: "VoiceStudio: 월 22달러 음성 요금제, 내 컴퓨터에서 0원으로 끝냅니다"
 date: 2026-09-27T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm"]
+series: ["AI Media"]
 description: "VoiceStudio는 음성 복제, 영상 더빙, 받아쓰기, 오디오북 제작 등을 내 컴퓨터에서 처리하는 오픈소스 음성 스튜디오로, 계정이나 문자 수 과금 없이 음성 데이터를 로컬에 보관할 수 있습니다. 다양한 음성·전사 엔진과 자동화 기능을 지원하며 CPU에서도 실행되지만, 속도와 품질은 엔진과 하드웨어에 따라 달라집니다. 기본 엔진은 비상업용이므로 유료 작업에는 상업용 라이선스 엔진을 선택해야 합니다."
 featured_image: "image_f31bb947d0ec003e79cbc7ee.webp"
 notion_id: "3e81bab9-e3f8-8006-be05-fa2fe60e9c40"

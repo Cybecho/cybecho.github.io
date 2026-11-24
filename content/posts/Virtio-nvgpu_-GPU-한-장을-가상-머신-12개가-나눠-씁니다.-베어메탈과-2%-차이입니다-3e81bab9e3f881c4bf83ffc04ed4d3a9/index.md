@@ -2,8 +2,7 @@
 title: "Virtio-nvgpu: GPU 한 장을 가상 머신 12개가 나눠 씁니다. 베어메탈과 2% 차이입니다"
 date: 2026-09-27T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Let's Homelab!"]
 description: "virtio-nvgpu는 GPU 드라이버를 번역하지 않고 가상 머신에 직접 전달해 여러 게스트가 GPU 한 장을 공유하도록 하는 실험적 방식입니다. RTX 3060 테스트에서 12개 VM이 동시에 720p60 인코딩을 수행했고, 2ms 이상 걸리는 프레임의 성능은 베어메탈 대비 2% 이내였습니다. 다만 하드웨어 격리가 없어 서로 신뢰할 수 없는 사용자의 공유에는 적합하지 않으며, 지원 환경과 하드웨어도 제한적입니다."
 featured_image: "image_7a60c2101790af981f4595a7.webp"
 notion_id: "3e81bab9-e3f8-81c4-bf83-ffc04ed4d3a9"

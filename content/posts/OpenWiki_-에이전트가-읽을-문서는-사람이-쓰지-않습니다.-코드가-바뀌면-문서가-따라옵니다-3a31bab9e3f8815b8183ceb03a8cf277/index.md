@@ -2,8 +2,8 @@
 title: "OpenWiki: 에이전트가 읽을 문서는 사람이 쓰지 않습니다. 코드가 바뀌면 문서가 따라옵니다"
 date: 2026-07-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "OpenWiki는 코드베이스 문서를 에이전트가 읽는 형태로 만들고, 코드가 바뀌면 스스로 고치는 CLI입니다. 코드 모드는 저장소 안에 openwiki/ 위키를 만들고, 개인 모드는 메일·노션 등에서 개인 위키를 만듭니다. 문서는 한 번 쓰고 끝이 아닙니다. 근거가 붙은 사실 단위로 관리돼, 낡은 부분만 골라 다시 씁니다."
 featured_image: "image_8b4e78f11ffc946811f46637.webp"
 notion_id: "3a31bab9-e3f8-815b-8183-ceb03a8cf277"

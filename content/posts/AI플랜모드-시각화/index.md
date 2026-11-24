@@ -2,9 +2,11 @@
 title: "AI플랜모드 시각화"
 date: 2026-02-07T00:00:00.000Z
 draft: false
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "브라우저 기반 UI에서 에이전트가 생성한 코드 계획을 표시하고 리뷰할 수 있으며, 팀원과 쉽게 공유하고 피드백을 전송할 수 있다. 다양한 주석 기능과 함께 승인된 계획은 외부 노트 앱에 자동 저장된다. Plannotator UI를 통해 주석 달기, 승인 및 변경 요청 시 구조화된 피드백이 전달된다. 맥, 리눅스, 윈도우에서 설치 가능하다."
+featured_image: "image_23a727952ea2.png"
 notion_id: "3001bab9-e3f8-8170-b39d-c31e9043995b"
-notion_url: "https://www.notion.so/AI-3001bab9e3f88170b39dc31e9043995b"
 ---
 
 # AI플랜모드 시각화

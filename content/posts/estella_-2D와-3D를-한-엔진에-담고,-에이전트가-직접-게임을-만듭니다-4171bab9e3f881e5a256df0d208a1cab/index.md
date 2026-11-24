@@ -2,8 +2,8 @@
 title: "estella: 2D와 3D를 한 엔진에 담고, 에이전트가 직접 게임을 만듭니다"
 date: 2026-11-13T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","mcp"]
+series: ["AI Harness"]
 description: "estella는 2D와 3D를 한 엔진에 담은 빠른 게임 엔진입니다. TypeScript SDK로 게임 로직을 쓰고, C++ 코어가 WebAssembly로 빠르게 그립니다. 에디터 자체가 MCP 서버라서, 에이전트가 181개 도구를 직접 써서 게임을 만들고 확인하고 배포까지 돕습니다. 호출 한 번이 실행 취소 한 번이라 안전합니다. 프로젝트 하나가 웹·데스크톱·미니게임·플레이어블 광고·네이티브 모바일까지 나갑니다. 런타임과 SDK는 Apache-2.0이지만, 에디터 소스는 비공개이고 Spine은 별도 라이선스가 필요합니다."
 featured_image: "image_8fff98a8b2e6827d027b0c6d.webp"
 notion_id: "4171bab9-e3f8-81e5-a256-df0d208a1cab"

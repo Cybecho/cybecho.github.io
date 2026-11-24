@@ -2,9 +2,9 @@
 title: "ZVec: 벡터 DB는 서버가 아니라 앱 안에 들어가는 겁니다"
 date: 2026-02-17T00:00:00.000Z
 draft: false
-tags: ["Util"]
-series: ["오픈소스"]
+series: ["Let's Open Source"]
 description: "ZVec은 알리바바의 Proxima 엔진을 기반으로 한 오픈소스 벡터 데이터베이스로, 서버 없이 앱에 내장해 벡터·전문 검색과 필터를 결합한 하이브리드 검색을 제공합니다. 설치와 사용이 간편하고 온디바이스 RAG 등에 적합하지만, 아직 1.0 이전 버전이며 쓰기는 한 번에 하나의 프로세스만 가능합니다."
+featured_image: "image_c0107d1ed984edf1567b724d.webp"
 notion_id: "30a1bab9-e3f8-81da-9343-dd23e069ab53"
 ---
 

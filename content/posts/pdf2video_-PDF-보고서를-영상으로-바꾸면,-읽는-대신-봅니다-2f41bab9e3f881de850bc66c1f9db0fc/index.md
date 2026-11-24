@@ -2,7 +2,10 @@
 title: "pdf2video: PDF 보고서를 영상으로 바꾸면, 읽는 대신 봅니다"
 date: 2026-01-27T00:00:00.000Z
 draft: false
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "오픈소스 도구가 Claude로 PDF 내용을 분석하고 Remotion으로 영상화해, 페이지를 카드·확대·슬라이드·부채꼴 장면으로 보여줍니다. 핵심 제목과 설명, 진행률을 더해 복잡한 보고서나 논문을 짧은 영상으로 요약하며, Claude Code를 사용하면 설정과 렌더링도 자동화할 수 있습니다."
+featured_image: "image_b695b1e7b252e78df81e890e.webp"
 notion_id: "2f41bab9-e3f8-81de-850b-c66c1f9db0fc"
 ---
 

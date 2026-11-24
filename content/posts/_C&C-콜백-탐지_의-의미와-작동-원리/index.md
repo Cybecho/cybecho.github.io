@@ -2,11 +2,11 @@
 title: "\"C&C 콜백 탐지\"의 의미와 작동 원리"
 date: 2025-10-24T05:37:00.000Z
 draft: false
-tags: ["Security", "Infra"]
-series: ["Security"]
+tags: ["Infra"]
+series: ["Infra & Network"]
 description: "C&C 콜백 탐지는 악성코드가 외부 C&C 서버와 통신을 시도하는 행위를 포착한 보안 경고로, 이는 시스템이 이미 감염되었음을 의미합니다. 이 경고는 방어선이 돌파되었고, 현재 진행형 위협으로서 즉각적인 대응이 필요합니다. 악성코드는 명령을 수신하고 데이터 유출, 추가 악성코드 설치, 내부망 공격 등의 활동을 수행할 수 있습니다."
+featured_image: "image_01ffd67785f2.png"
 notion_id: "2961bab9-e3f8-8025-94f8-f4f4a3edd021"
-notion_url: "https://www.notion.so/C-C-2961bab9e3f8802594f8f4f4a3edd021"
 ---
 
 # "C&C 콜백 탐지"의 의미와 작동 원리

@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 05"
 date: 2023-02-09T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "UI 크기 조정, 무기 잔상 효과, 코루틴 함수와 IEnumerator 사용법, 마우스 방향 공격 및 Raycast 활용법에 대한 설명이 포함되어 있으며, 무기 설정, 공격 및 재장전 코드와 관련된 다양한 예시가 제공된다."
+featured_image: "image_8a726c64b389.png"
 notion_id: "297ca482-365a-43d6-8672-d9a0288c6047"
-notion_url: "https://www.notion.so/3D-05-297ca482365a43d68672d9a0288c6047"
 ---
 
 # 유니티 3D게임 쿼드뷰 05

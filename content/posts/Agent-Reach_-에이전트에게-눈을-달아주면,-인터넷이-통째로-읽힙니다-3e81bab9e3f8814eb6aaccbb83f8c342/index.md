@@ -2,8 +2,8 @@
 title: "Agent-Reach: 에이전트에게 눈을 달아주면, 인터넷이 통째로 읽힙니다"
 date: 2026-09-27T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","browser-automation"]
+series: ["AI Harness"]
 description: "Agent-Reach는 에이전트가 유튜브, 깃허브, 중국 플랫폼 등 여러 사이트의 정보를 읽도록 플랫폼별 도구를 설치하고, 막히면 대체 도구로 전환하는 명령줄 도구입니다. 읽기 전용이며 유료 API를 사용하지 않지만, 비공식 접근으로 채널이 중단되거나 계정이 제한될 수 있어 부계정 사용이 권장됩니다."
 featured_image: "image_d4efcd7cfa5a90c11c1966b4.webp"
 notion_id: "3e81bab9-e3f8-814e-b6aa-ccbb83f8c342"

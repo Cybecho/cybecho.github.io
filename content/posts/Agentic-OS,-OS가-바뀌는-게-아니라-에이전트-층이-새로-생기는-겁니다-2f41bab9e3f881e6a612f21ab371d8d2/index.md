@@ -2,7 +2,10 @@
 title: "Agentic OS, OS가 바뀌는 게 아니라 에이전트 층이 새로 생기는 겁니다"
 date: 2026-01-27T00:00:00.000Z
 draft: false
+tags: ["agent","mcp"]
+series: ["AI Harness"]
 description: "에이전트가 OS를 대체하는 것이 아니라 윈도우·맥·리눅스·클라우드 위에 새로운 작업 층으로 자리 잡아 파일과 앱을 연결하고 목표를 실행합니다. 코워크와 MCP를 통해 앱 연동과 다단계 작업을 하나의 흐름으로 처리하며, OS는 그대로 유지됩니다."
+featured_image: "image_4b388d1c27ab33b0859b51a5.webp"
 notion_id: "2f41bab9-e3f8-81e6-a612-f21ab371d8d2"
 ---
 

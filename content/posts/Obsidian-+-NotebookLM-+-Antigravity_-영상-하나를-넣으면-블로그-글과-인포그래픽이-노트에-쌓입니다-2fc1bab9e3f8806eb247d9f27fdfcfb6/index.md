@@ -2,8 +2,8 @@
 title: "Obsidian + NotebookLM + Antigravity: 영상 하나를 넣으면 블로그 글과 인포그래픽이 노트에 쌓입니다"
 date: 2026-02-03T23:06:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp"]
+series: ["AI Harness"]
 description: "Antigravity에서 NotebookLM MCP와 Obsidian MCP를 연결하면 유튜브 영상 등을 분석해 블로그 글과 인포그래픽으로 만들고 Obsidian 노트에 자동 저장할 수 있습니다. 설치에는 별도 API 키가 필요 없지만, NotebookLM MCP가 32개 도구를 사용하는 만큼 전체 도구 수를 관리하고 필요한 서버만 켜두는 것이 중요합니다."
 featured_image: "image_93f0f0a38cda6a24ada78bfc.webp"
 notion_id: "2fc1bab9-e3f8-806e-b247-d9f27fdfcfb6"

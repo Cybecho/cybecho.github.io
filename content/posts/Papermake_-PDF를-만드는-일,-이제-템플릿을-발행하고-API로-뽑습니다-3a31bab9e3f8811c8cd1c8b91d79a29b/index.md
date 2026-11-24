@@ -2,8 +2,8 @@
 title: "Papermake: PDF를 만드는 일, 이제 템플릿을 발행하고 API로 뽑습니다"
 date: 2026-07-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "Papermake는 Typst 템플릿을 API로 발행해 HTTP 호출 하나로 PDF를 뽑아내는 서버입니다. 템플릿은 도커 이미지처럼 버전과 태그로 관리하고, 렌더링 기록은 해시로 남아 어떤 PDF든 출처를 추적할 수 있습니다. Rust 단일 실행 파일에 S3 호환 스토리지와 ClickHouse만 있으면 직접 띄울 수 있지만, 아직 젊은 프로젝트라 렌더링 워커와 웹 화면은 초기 단계입니다."
 featured_image: "image_81ad26599ceb52acf1bf69ff.webp"
 notion_id: "3a31bab9-e3f8-811c-8cd1-c8b91d79a29b"

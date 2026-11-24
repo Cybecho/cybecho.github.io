@@ -2,8 +2,8 @@
 title: "봇 탐지는 당신이 뭘 하는지 안 봅니다. 브라우저가 뒤에서 흘리는 신호를 봅니다"
 date: 2026-06-25T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["browser-automation"]
+series: ["AI Harness"]
 description: "쇼핑몰이 봇을 막는 이유는 데이터가 곧 돈이기 때문입니다. 가격·재고·리뷰·랭킹이 실시간으로 새면 무기가 통째로 샙니다. 탐지는 마우스 움직임이 아니라 브라우저가 뒤에서 흘리는 신호를 봅니다. Runtime.enable 명령 하나면 클릭 한 번 없이도 봇으로 찍힙니다. 요즘 쏟아지는 무탐지 SaaS의 속은 십중팔구 패치된 드라이버 그대로라, 포장지에 돈을 내기 전에 알맹이를 먼저 볼 일입니다."
 featured_image: "image_6525e05c2369e382c9805759.webp"
 notion_id: "38a1bab9-e3f8-8170-a865-c4a77cfeaffd"

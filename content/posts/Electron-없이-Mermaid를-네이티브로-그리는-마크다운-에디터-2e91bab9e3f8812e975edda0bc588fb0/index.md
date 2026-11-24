@@ -2,7 +2,10 @@
 title: "Ferrite: Electron 없이 Mermaid를 네이티브로 그리는 마크다운 에디터"
 date: 2026-01-15T00:00:00.000Z
 draft: false
+tags: ["coding"]
+series: ["Dev Environment"]
 description: "Ferrite는 Rust와 egui로 만든 가벼운 네이티브 마크다운 에디터로, 브라우저 없이 Mermaid 다이어그램 11종을 렌더링합니다. 코드 전체가 AI로 생성되고 사람이 검토한 투명한 실험이며, 멀티 커서·코드 폴딩과 SVG·PNG 내보내기 등을 추가할 계획입니다."
+featured_image: "image_03e71cec0fd50f9da27cbe7d.webp"
 notion_id: "2e91bab9-e3f8-812e-975e-dda0bc588fb0"
 ---
 

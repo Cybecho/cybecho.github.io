@@ -2,8 +2,7 @@
 title: "Obsidian CLI: 터미널에서 노트를 다루면, 클릭할 일이 사라집니다"
 date: 2026-02-11T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Dev Environment"]
 description: "Obsidian CLI는 터미널에서 노트 생성·검색·태그·작업·플러그인 관리 등을 명령으로 수행하고 자동화할 수 있는 공식 도구입니다. TUI에서는 자동 완성과 명령 히스토리를 사용할 수 있으며, 앱의 내부 API를 통해 실행되므로 앱이 켜져 있어야 합니다."
 featured_image: "image_24fa26e71f94a16f4e1c9322.webp"
 notion_id: "3041bab9-e3f8-8148-bc3f-c805691298fd"

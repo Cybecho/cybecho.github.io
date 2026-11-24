@@ -2,8 +2,8 @@
 title: "Cloudflare Security Audit Skill: 에이전트 보안 감사는 말이 아니라 검증된 기록으로 남깁니다"
 date: 2026-09-27T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill","agent"]
+series: ["AI Harness"]
 description: "Cloudflare Security Audit Skill은 발견과 검증을 서로 다른 에이전트에 맡기고, 감사를 여섯 단계로 나눠 결과를 confirmed, needs_validation, rejected로 기록해 검증 가능한 보고서를 만듭니다. 대상 코드는 샌드박스에서 실행해야 하며, 한 번의 실행으로 모든 취약점을 찾기 어려우므로 반복 감사로 지도를 보완하는 것이 중요합니다."
 featured_image: "image_50fce39a9cce5bbd379e4e4f.webp"
 notion_id: "3e81bab9-e3f8-81f6-b5ac-e1bc5818afdc"

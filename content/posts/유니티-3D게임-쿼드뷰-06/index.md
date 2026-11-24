@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 06"
 date: 2023-02-10T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "자동회전 오류를 수정하고 레이캐스트를 시각적으로 표시하며 아이템과 플레이어 간의 충돌을 방지하는 방법을 설명합니다. Rigidbody를 제어하기 위해 FreezeRotation 함수를 사용하고, Ray를 활용하여 벽 관통 문제를 해결합니다. 아이템의 물리적 상호작용을 조정하기 위해 콜라이더의 순서를 변경하는 방법도 포함되어 있습니다."
+featured_image: "image_9a23aafa38db.png"
 notion_id: "22cc513f-82e6-4ca7-8cf9-052009c4663e"
-notion_url: "https://www.notion.so/3D-06-22cc513f82e64ca78cf9052009c4663e"
 ---
 
 # 유니티 3D게임 쿼드뷰 06

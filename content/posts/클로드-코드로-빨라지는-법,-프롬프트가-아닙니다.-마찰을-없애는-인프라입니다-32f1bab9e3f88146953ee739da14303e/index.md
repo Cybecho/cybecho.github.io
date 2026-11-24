@@ -2,8 +2,8 @@
 title: "클로드 코드로 빨라지는 법, 프롬프트가 아닙니다. 마찰을 없애는 인프라입니다"
 date: 2026-03-26T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding","agent"]
+series: ["AI Harness"]
 description: "클로드 코드로 생산성을 높이는 비결은 프롬프트 기술이 아니라, 에이전트가 일하는 속도를 가로막는 마찰을 하나씩 없애는 인프라입니다. PR 자동화(/git-pr), 1초 미만 재시작, 에이전트의 자체 UI 검증, 포트 충돌 없는 병렬 워크트리 — 네 단계가 차례로 병목을 드러내고 없앴습니다. 결국 개발의 목표는 기능 구현이 아니라, 피드백 루프를 얼마나 빠르게 돌리느냐로 바뀝니다."
 featured_image: "image_ba8746d0edc65b318f795624.webp"
 notion_id: "32f1bab9-e3f8-8146-953e-e739da14303e"

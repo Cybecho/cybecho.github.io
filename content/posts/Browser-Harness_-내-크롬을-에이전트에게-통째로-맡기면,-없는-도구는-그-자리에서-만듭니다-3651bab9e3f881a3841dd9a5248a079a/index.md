@@ -2,8 +2,8 @@
 title: "Browser Harness: 내 크롬을 에이전트에게 통째로 맡기면, 없는 도구는 그 자리에서 만듭니다"
 date: 2026-05-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness","browser-automation"]
+series: ["AI Harness"]
 description: "Browser Harness는 코딩 에이전트를 지금 쓰고 있는 크롬에 직접 붙이는 얇은 하네스로, 중간 서버 없이 개발자 도구 프로토콜 웹소켓 하나면 로그인 상태 그대로 클릭하고 입력하고 다운로드합니다. 없는 도구는 에이전트가 작업 중에 직접 만들어 작업 공간에 남기므로, 할수록 하네스가 똑똑해지고 사이트별 요령도 도메인 스킬로 쌓입니다. 100개 과제 벤치마크에서 점수는 다른 도구와 차이가 없었지만 토큰과 비용이 가장 적었고, 브라우저 전체를 맡기는 만큼 허용 팝업과 텔레메트리 설정은 미리 확인해야 합니다."
 featured_image: "image_f1e9ba6410f5030d2f4d5a45.webp"
 notion_id: "3651bab9-e3f8-81a3-841d-d9a5248a079a"

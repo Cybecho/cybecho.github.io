@@ -2,8 +2,8 @@
 title: "BridgeMind: 바이브 코딩으로 백만 달러를 노리는 법, 제품이 곧 방송입니다"
 date: 2026-03-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "BridgeMind는 음성으로 코딩 에이전트를 조작하는 데스크톱 워크스페이스로, 구독자가 AI 모델 사용료를 별도로 부담합니다. 제품을 만드는 과정을 실시간 방송하고 수익을 투명하게 공개해 콘텐츠를 마케팅과 고객 유입에 연결하며, 구독 수익을 창출합니다. 핵심은 도구 자체보다 제작 과정과 성과를 공개해 신뢰를 쌓고 제품과 콘텐츠를 하나로 묶는 전략입니다."
 featured_image: "image_1e2012c2d19943d4283d640e.webp"
 notion_id: "31f1bab9-e3f8-8149-99ff-c407e7141cd7"

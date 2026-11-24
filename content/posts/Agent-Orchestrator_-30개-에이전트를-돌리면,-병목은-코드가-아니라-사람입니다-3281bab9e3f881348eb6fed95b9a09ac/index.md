@@ -2,8 +2,8 @@
 title: "Agent Orchestrator: 30개 에이전트를 돌리면, 병목은 코드가 아니라 사람입니다"
 date: 2026-03-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","harness"]
+series: ["AI Harness"]
 description: "30개의 AI 에이전트를 병렬 운영해 8일 만에 약 4만 줄의 코드와 플러그인 17개를 만든 실험에서, 핵심 성과는 코딩 속도보다 사람의 관리 부담을 줄인 오케스트레이터였다. 오케스트레이터는 CI 실패와 리뷰 댓글을 에이전트에게 전달해 수정과 반복 작업을 자동화하고, 사람은 아키텍처 결정과 최종 판단에 집중하도록 했다."
 featured_image: "image_d3df52c529a4661728454a03.webp"
 notion_id: "3281bab9-e3f8-8134-8eb6-fed95b9a09ac"

@@ -2,8 +2,8 @@
 title: "Outer Shell: 서버에 터미널만 두지 않습니다. SSH 위에 그래픽 셸을 올립니다"
 date: 2026-07-01T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["Infra"]
+series: ["Infra & Network"]
 description: "서버와 엣지 기기에 터미널 대신 브라우저 기반 그래픽 셸을 올리는 아이디어입니다. 앱 하나하나가 작은 HTTP 서버로 돌고, 암호화는 SSH 계층에 맡겨 앱은 단순하게 유지합니다. 셸이 앱 간 URL 조회 API를 제공해, 파일을 더블클릭하면 맞는 앱으로 열리는 흐름이 됩니다."
 featured_image: "image_eedcbc87334ca2b790c0abb1.webp"
 notion_id: "3901bab9-e3f8-81e4-992f-f758a631d8f5"

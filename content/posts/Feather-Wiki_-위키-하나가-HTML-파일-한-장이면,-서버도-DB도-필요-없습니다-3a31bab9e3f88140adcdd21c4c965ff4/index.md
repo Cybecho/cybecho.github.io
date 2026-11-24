@@ -2,8 +2,7 @@
 title: "Feather Wiki: 위키 하나가 HTML 파일 한 장이면, 서버도 DB도 필요 없습니다"
 date: 2026-07-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Let's Homelab!"]
 description: "Feather Wiki는 앱과 내용을 통째로 담은 HTML 파일 한 장으로 돌아가는 개인용 위키입니다. 브라우저만 있으면 어디서든 고칠 수 있고, 저장은 고친 파일을 다시 내려받아 교체하는 방식이라 서버도 데이터베이스도 계정도 필요 없습니다. 가장 큰 버전도 63.5KB, 최신 버전은 56KB라 가벼움이 무기이지만, 파일 통째로 다시 받는 저장 방식과 동시 편집 불가라는 한계는 알고 써야 합니다."
 featured_image: "image_476e6370560e65c87a7f2751.webp"
 notion_id: "3a31bab9-e3f8-8140-adcd-d21c4c965ff4"

@@ -2,11 +2,11 @@
 title: "AI 인사이트를 얻을 수 있는 혼자먹을 꿀맛 채널을 알아보자"
 date: 2025-12-27T14:32:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "AI 관련 유용한 채널을 소개하며, 해외에서는 Anthropic 공식 채널, AI Engineer 유튜브, Lenny's Podcast, Dwarkesh Podcast를 추천하고, 국내에서는 노정석 유튜브, sudoremove, 백색나무, 조쉬의 프로덕트 레터를 추천한다. 각 채널은 AI 기술, 비즈니스 인사이트, 최신 연구 등을 다룬다."
+featured_image: "image_930cd83af0f55a1437a8336d.png"
 notion_id: "2d61bab9-e3f8-8047-80fc-e5133bcee276"
-notion_url: "https://www.notion.so/AI-2d61bab9e3f8804780fce5133bcee276"
 ---
 
 # AI 인사이트를 얻을 수 있는 혼자먹을 꿀맛 채널을 알아보자
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/AI-2d61bab9e3f8804780fce5133bcee276"
 > AI 관련 유용한 채널을 소개하며, 해외에서는 Anthropic 공식 채널, AI Engineer 유튜브, Lenny's Podcast, Dwarkesh Podcast를 추천하고, 국내에서는 노정석 유튜브, sudoremove, 백색나무, 조쉬의 프로덕트 레터를 추천한다. 각 채널은 AI 기술, 비즈니스 인사이트, 최신 연구 등을 다룬다.
 
 ---
+
+![Image](image_930cd83af0f55a1437a8336d.png)
 
 ### 해외 필수 채널
 
@@ -39,10 +41,23 @@ Dwarkesh Patel의 심층 인터뷰. Ilya Sutskever, Dario Amodei, Mark Zuckerber
 
 **1. 노정석 유튜브**
 
+비팩토리 대표. 아시아 최초 구글 회사 매각 경험자. AI 비즈니스 인사이트 제공
+
 - 유튜브: [https://www.youtube.com/@노정석](https://www.youtube.com/@노정석)
 **2. sudoremove (수도리부트)**
 
+AI 종사자 스터디 그룹. AI, 테크, 개발 최신 소식과 연구 매주 공유
+
+- 유튜브: [https://www.youtube.com/@sudoremove](https://www.youtube.com/@sudoremove)
+- Spotify: [https://creators.spotify.com/pod/profile/sudoremove](https://creators.spotify.com/pod/profile/sudoremove)
 **3. 백색나무**
 
+해외 AI 콘텐츠 한국어 번역 채널
+
+- 유튜브: [https://www.youtube.com/@White_tree](https://www.youtube.com/@White_tree)
 **4. 조쉬의 프로덕트 레터 (빌더 조쉬)**
 
+ex-SKT 프로덕트 디자이너. 1인 창업, 스몰비즈니스, 스타트업 케이스 스터디. AI 시대 비즈니스 트렌드와 1인 사업가 인사이트 제공
+
+- 뉴스레터: [https://maily.so/josh](https://maily.so/josh)
+- 유튜브: [https://www.youtube.com/@builderjoshkim](https://www.youtube.com/@builderjoshkim)

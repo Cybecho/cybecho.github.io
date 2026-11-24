@@ -2,8 +2,8 @@
 title: "논문 수백 편, 손으로 받지 말고 DOI부터 API 순서대로 흘려보내면 됩니다"
 date: 2026-02-12T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["browser-automation"]
+series: ["AI Harness"]
 description: "논문 수백 편을 효율적으로 수집하려면 DOI를 출발점으로 삼아 Crossref에서 목록을 확보하고, 출판사 API를 먼저 시도한 뒤 Unpaywall로 공개 버전을 찾는 파이프라인을 구성합니다. 두 방법이 실패할 경우에만 robots.txt를 준수하며 브라우저 자동화를 사용하고, 코드를 작성하기 전에 전체 흐름과 개념을 먼저 정리하는 것이 중요합니다."
 featured_image: "image_326bd8e95d9f546161e1517c.webp"
 notion_id: "3051bab9-e3f8-8125-9ec7-d0414315d785"

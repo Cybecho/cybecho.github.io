@@ -2,8 +2,8 @@
 title: "Agent Skills: AI가 테스트를 건너뛰지 못하게 하려면, 절차를 스킬로 강제하면 됩니다"
 date: 2026-04-07T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill","agent"]
+series: ["AI Harness"]
 description: "AI 코딩 에이전트가 테스트와 보안 검토를 건너뛰지 않도록, 요구사항 정의부터 배포까지의 절차를 스킬로 구조화해 강제합니다. 변명 반박 표, 검증 체크리스트, 별도 리뷰어 페르소나를 활용해 품질을 높이고, 자동화 중에도 위험한 단계와 최종 판단은 사람이 맡도록 합니다."
 featured_image: "image_1f3a384c089d61cfc4397387.webp"
 notion_id: "33b1bab9-e3f8-817e-801f-ed8d4775e275"

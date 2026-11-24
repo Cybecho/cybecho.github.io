@@ -2,8 +2,8 @@
 title: "sfs: 에이전트마다 따로 쌓던 기억, 폴더 하나에 모으면 팀의 두뇌가 됩니다"
 date: 2026-07-21T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "에이전트는 각자 세션 안에서만 기억해서, 기기가 바뀌면 어제 정리한 내용을 오늘 다른 에이전트가 모릅니다. 여러 에이전트가 폴더 하나를 공유하면 위키·메모·계획이 한곳에 모여 팀의 두뇌가 되고, 파일은 디스크 위의 진짜 파일 그대로 두고 백그라운드에서 동기화합니다. 다만 이 프로젝트는 공개 당시 sfs에서 지금은 BearDrive로 이름과 동기화 방식이 바뀌었고, 아직 별 60개 남짓의 작은 프로젝트라 현재 문서를 먼저 확인해야 합니다."
 featured_image: "image_38a56acc488de44fa9ddbe31.webp"
 notion_id: "3a41bab9-e3f8-81e3-9ca6-ce298fd3785f"

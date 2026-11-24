@@ -2,8 +2,8 @@
 title: "Superset: 에이전트 한 명이 아니라 여러 명을 한 창에서 굴립니다"
 date: 2026-03-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "Superset은 여러 CLI 코딩 에이전트를 한 창에서 병렬로 실행하는 확장 터미널입니다. 작업마다 독립된 Git worktree와 브랜치를 줘 에이전트끼리 파일을 겹치지 않게 하고, 대시보드에서 모든 에이전트 상태를 한눈에 봅니다. 내장 Diff 뷰어로 변경을 검토하고 Workspace Preset으로 반복 준비를 자동화하며, macOS에서 무료로 쓸 수 있습니다."
 featured_image: "image_c70bfb61ff8025b3dfff0190.webp"
 notion_id: "31e1bab9-e3f8-8186-8ef8-cec9ca878104"

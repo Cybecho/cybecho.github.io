@@ -3,10 +3,10 @@ title: "깃허브 100메가 이상 파일 커밋방법"
 date: 2023-03-03T00:00:00.000Z
 draft: false
 tags: ["Git"]
-series: ["Git", "Tips", "진심글쓰기"]
+series: ["Let's Git"]
 description: "100MB 이상의 파일을 GitHub에 커밋하기 위해 Git LFS를 설치하고, 특정 파일 형식을 추적하도록 설정하는 방법을 설명합니다. 에러 발생 시 파일을 이동하고, 커밋 후 다시 업로드하는 절차를 안내합니다."
+featured_image: "image_6f61ff27cfda7c10e7d7dde4.jpg"
 notion_id: "eb0d51d5-9dd5-471c-baa0-dad0ac29dfd4"
-notion_url: "https://www.notion.so/100-eb0d51d59dd5471cbaa0dad0ac29dfd4"
 ---
 
 # 깃허브 100메가 이상 파일 커밋방법
@@ -15,6 +15,10 @@ notion_url: "https://www.notion.so/100-eb0d51d59dd5471cbaa0dad0ac29dfd4"
 > 100MB 이상의 파일을 GitHub에 커밋하기 위해 Git LFS를 설치하고, 특정 파일 형식을 추적하도록 설정하는 방법을 설명합니다. 에러 발생 시 파일을 이동하고, 커밋 후 다시 업로드하는 절차를 안내합니다.
 
 ---
+
+🔗 [https://sheepone.tistory.com/214](https://sheepone.tistory.com/214)
+
+![Image](image_6f61ff27cfda7c10e7d7dde4.jpg)
 
 ## 유니티 프로젝트만들다가 에러났다
 

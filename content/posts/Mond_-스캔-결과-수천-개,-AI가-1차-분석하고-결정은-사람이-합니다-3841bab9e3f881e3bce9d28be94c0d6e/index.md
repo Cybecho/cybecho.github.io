@@ -2,8 +2,8 @@
 title: "Mond: 스캔 결과 수천 개, AI가 1차 분석하고 결정은 사람이 합니다"
 date: 2026-06-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "Mond는 자산부터 스캔, 발견, 승인, 감사까지 한 흐름으로 묶은 AI 기반 셀프서비스 DevSecOps 플랫폼입니다. AI가 발견사항을 1차 분석해 심각도를 다시 매기고 수정 가이드를 제시하지만, 최종 결정은 사람이 내립니다. 스캐너도 AI 제공자도 클라우드도 어디에도 묶이지 않고, 한국어가 기본 화면이며 규제 가이드까지 들어 있습니다. 다만 아직 별 16개의 작은 프로젝트라, 도입 전 30분 데모로 직접 가늠해 보는 게 맞습니다."
 featured_image: "image_814229374c7e51a0a67a5a80.webp"
 notion_id: "3841bab9-e3f8-81e3-bce9-d28be94c0d6e"

@@ -2,8 +2,8 @@
 title: "Phone Harness: 에이전트에게 진짜 폰을 맡기면, 화면을 보고 직접 누릅니다"
 date: 2026-11-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["phone-automation","agent"]
+series: ["On-Device AI"]
 description: "Phone Harness는 에이전트가 진짜 폰을 직접 만지게 하는 오픈소스 도구입니다. 화면을 읽고, 스크롤하고, 누르고, 입력하며, 탈옥도 없고 폰에 설치하는 것도 없습니다. 아이폰은 맥의 미러링 창을, 안드로이드는 adb를 쓰고, 내 폰이 없어도 호스팅된 MCP 서버와 클라우드 폰으로 빌려 쓸 수 있습니다. 다만 잠금 해제나 카메라, Face ID 같은 흐름은 안 되고, 에이전트에게 화면을 보여주는 만큼 민감한 화면은 미리 치워두는 편이 좋습니다."
 featured_image: "image_7160a634e82bc2a6a761fec4.webp"
 notion_id: "41d1bab9-e3f8-815f-a626-ee1837622172"

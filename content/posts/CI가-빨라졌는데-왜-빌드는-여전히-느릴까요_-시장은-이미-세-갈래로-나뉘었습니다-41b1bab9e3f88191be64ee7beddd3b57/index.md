@@ -2,8 +2,8 @@
 title: "CI가 빨라졌는데 왜 빌드는 여전히 느릴까요? 시장은 이미 세 갈래로 나뉘었습니다"
 date: 2026-11-17T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "CI 시장은 이제 \"어디서 돌리느냐\"가 아니라 \"무엇을 파느냐\"로 나뉩니다. 범용 러너 인프라, 오케스트레이션 플랫폼, 프로그래밍 가능한 빌드 계층, 세 갈래입니다. GitHub Actions는 생태계 때문에 여전히 중심이지만, 속도와 디버깅의 한계에 2026년 안정성 문제까지 겹치며 흔들리고 있습니다. 에이전트 시대에는 빠른 러너보다 로컬 재현과 실패 원인 파악이 먼저입니다. 다음 전환은 에이전트 네이티브 CI가 될 가능성이 큽니다."
 featured_image: "image_22478bb2063468e52c65a3c8.webp"
 notion_id: "41b1bab9-e3f8-8191-be64-ee7beddd3b57"

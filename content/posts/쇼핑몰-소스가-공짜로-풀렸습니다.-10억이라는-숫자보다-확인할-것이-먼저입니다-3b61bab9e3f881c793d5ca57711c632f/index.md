@@ -2,8 +2,8 @@
 title: "쇼핑몰 소스가 공짜로 풀렸습니다. 10억이라는 숫자보다 확인할 것이 먼저입니다"
 date: 2026-08-08T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "공개된 쇼핑몰 소스는 무료라는 이유만으로 바로 운영에 올리지 말고, 라이선스와 결제 연동, 기본 계정·비밀 키를 확인해야 합니다. 10억이라는 개발 비용 주장은 검증되지 않았으며, 소스의 가치는 실제 실행 여부와 문서, 유지 관리 상태로 판단해야 합니다."
 featured_image: "image_70ed4ad340c55234f3dc2ca6.webp"
 notion_id: "3b61bab9-e3f8-81c7-93d5-ca57711c632f"

@@ -2,8 +2,8 @@
 title: "Flint: 에이전트에게 차트 코드를 맡기지 마세요. 의미를 적으면 컴파일러가 그립니다"
 date: 2026-07-12T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "Flint는 에이전트가 긴 차트 코드를 직접 쓰게 하지 않고, 짧은 명세로 차트의 의미를 적게 하는 시각화 중간 언어입니다. 데이터 필드의 의미를 의미 타입으로 적으면 컴파일러가 축·색·레이아웃 같은 세부 설정을 알아서 채우고, 명세 하나를 Vega-Lite·ECharts·Chart.js·Plotly·엑셀로 바꿔 그릴 수 있습니다. 공개 당시 46개였던 차트 유형은 지금 52개까지 늘었고 상호작용과 지도까지 들어왔지만, 아직 젊은 프로젝트라 고카디널리티 데이터나 세밀한 커스텀에는 한계가 있습니다."
 featured_image: "image_e0c596d71706effb351adf1a.webp"
 notion_id: "39b1bab9-e3f8-8129-b31b-c000b23c02ce"

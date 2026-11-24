@@ -2,8 +2,8 @@
 title: "Agent Skills 설계, 길게 쓰는 게 아닙니다. 짧게 나눠서 필요할 때만 여는 겁니다"
 date: 2026-07-24T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill"]
+series: ["AI Harness"]
 description: "에이전트 스킬은 긴 프롬프트가 아니라, 반복되는 실패를 평가로 확인한 뒤 필요한 지침만 짧게 나눠 담아야 합니다. 명확한 이름과 사용 조건으로 적절한 스킬을 선택하게 하고, 작업의 위험도에 맞춰 자유도를 조절하며, 검증 루프와 여러 모델 테스트로 완성도를 높이세요."
 featured_image: "image_8cc9f70193c6e5e155c526c5.webp"
 notion_id: "3a71bab9-e3f8-817c-8890-e54354bf7a34"

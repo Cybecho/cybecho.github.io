@@ -2,8 +2,8 @@
 title: "Senior-thinking-skills: \"시니어처럼 생각해\" 대신, 판단 과정을 23개 스킬로 쪼갰습니다"
 date: 2026-09-18T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill"]
+series: ["AI Harness"]
 description: "\"시니어처럼 생각해\"라는 한 문장은 너무 모호해서, 엔지니어의 판단 과정을 23개 작은 스킬로 쪼갠 묶음이 나왔습니다. 라우터 하나가 상황에 맞는 스킬만 골라 불러오고, 각 스킬은 30~70줄짜리 짧은 절차서이며 설명에는 언제, 본문에는 무엇을만 둡니다. 스킬은 판단 방식을 바꾸고 강제력이 필요한 부분은 별도 훅이 경계를 지키며, 지금은 스킬이 29개로 늘었지만 이 글은 원문이 정리한 23개 구조를 기준으로 썼습니다."
 featured_image: "image_2755d6df6b9d90988e5d0bb3.webp"
 notion_id: "3df1bab9-e3f8-814d-86ee-f57c12affe37"

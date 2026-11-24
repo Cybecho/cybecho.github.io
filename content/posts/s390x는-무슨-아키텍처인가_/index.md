@@ -2,11 +2,10 @@
 title: "s390x는 무슨 아키텍처인가?"
 date: 2025-02-24T08:37:00.000Z
 draft: false
-tags: ["Other", "Util"]
 series: ["HW"]
 description: "s390x는 IBM 메인프레임에서 사용되는 64비트 아키텍처로, 금융, 의료 등에서 신뢰성과 성능으로 널리 활용됩니다. 포춘 500대 기업의 71%가 메인프레임을 사용하며, 신용카드 거래의 90%를 처리합니다. 최근 AI와 머신러닝 작업을 지원하기 위해 진화하고 있으며, TensorFlow와 같은 도구가 s390x에서 사용 가능합니다. 하이브리드 클라우드와 AI 통합을 통해 미래에도 중요한 역할을 할 것으로 기대됩니다."
+featured_image: "image_96d1462df995.png"
 notion_id: "1a41bab9-e3f8-8068-a912-c68aa2a93a02"
-notion_url: "https://www.notion.so/s390x-1a41bab9e3f88068a912c68aa2a93a02"
 ---
 
 # s390x는 무슨 아키텍처인가?

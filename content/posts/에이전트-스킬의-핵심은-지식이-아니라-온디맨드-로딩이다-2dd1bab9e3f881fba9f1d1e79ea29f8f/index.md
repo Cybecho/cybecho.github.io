@@ -2,9 +2,10 @@
 title: "에이전트 스킬의 핵심은 지식이 아니라 온디맨드 로딩이다"
 date: 2026-01-03T00:00:00.000Z
 draft: false
-tags: ["AI","Claude"]
-series: ["AI"]
+tags: ["Claude","skill"]
+series: ["AI Harness"]
 description: "에이전트 스킬의 핵심은 지식 제공 자체보다 파일 기반 리소스를 필요할 때만 로드하고, 에이전트가 상황에 맞춰 자율적으로 사용하는 데 있다. 스크립트와 템플릿까지 묶어 재사용·배포할 수 있어 컨텍스트를 아끼고, 사용자가 직접 호출하지 않아도 된다."
+featured_image: "image_0a774de41e52c5d5e6927a91.webp"
 notion_id: "2dd1bab9-e3f8-81fb-a9f1-d1e79ea29f8f"
 ---
 

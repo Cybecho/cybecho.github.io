@@ -2,11 +2,11 @@
 title: "로그라이크 게임 제작 04"
 date: 2023-03-19T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 게임 습작"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "카메라의 화각을 조절하는 방법을 구현하기 위해 Rigidbody를 추가해야 Raycast가 제대로 작동한다는 것을 발견했다. Player.cs에 캐릭터가 벽에 부딪혔을 때 카메라의 위치와 FOV를 조정하는 코드를 추가하였다."
+featured_image: "image_00de77dc3ca6b38747760b79.gif"
 notion_id: "1302b435-80ac-4e1b-8512-ef23e7e5a0f8"
-notion_url: "https://www.notion.so/04-1302b43580ac4e1b8512ef23e7e5a0f8"
 ---
 
 # 로그라이크 게임 제작 04
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/04-1302b43580ac4e1b8512ef23e7e5a0f8"
 > 카메라의 화각을 조절하는 방법을 구현하기 위해 Rigidbody를 추가해야 Raycast가 제대로 작동한다는 것을 발견했다. Player.cs에 캐릭터가 벽에 부딪혔을 때 카메라의 위치와 FOV를 조정하는 코드를 추가하였다.
 
 ---
+
+![Image](image_00de77dc3ca6b38747760b79.gif)
 
 ![Image](image_4bf77eeb5035.png)
 

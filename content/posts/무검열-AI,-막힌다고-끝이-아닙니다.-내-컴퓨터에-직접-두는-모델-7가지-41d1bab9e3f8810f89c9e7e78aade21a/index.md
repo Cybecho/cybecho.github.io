@@ -2,8 +2,8 @@
 title: "무검열 AI, 막힌다고 끝이 아닙니다. 내 컴퓨터에 직접 두는 모델 7가지"
 date: 2026-11-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm"]
+series: ["Self-Hosted AI"]
 description: "무검열 AI는 서버 필터를 우회하는 것이 아니라 거절 기능을 제거하거나 중립적으로 정렬한 오픈 웨이트 모델이며, 선택할 때는 성능보다 컴퓨터 사양과 라이선스·문맥 길이를 먼저 살펴야 합니다. 8B급은 노트북, 24B급은 16GB 그래픽카드, 70B급은 워크스테이션에 적합하며, Ollama나 LM Studio로 로컬에서 실행할 수 있습니다. 로컬 실행은 대화의 프라이버시를 높이지만, 모델 결과물에 대한 책임은 사용자에게 있습니다."
 featured_image: "image_e159254d450c50ecafb6b157.webp"
 notion_id: "41d1bab9-e3f8-810f-89c9-e7e78aade21a"

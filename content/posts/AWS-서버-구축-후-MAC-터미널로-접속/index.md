@@ -2,11 +2,11 @@
 title: "AWS 서버 구축 후 MAC 터미널로 접속"
 date: 2023-06-10T00:00:00.000Z
 draft: false
-tags: ["AWS", "MAC"]
-series: ["원격 라이프!", "Let's MAC!"]
+tags: ["AWS","MAC"]
+series: ["Let's Remote Life"]
 description: "AWS 서버를 구축하고 MAC 터미널로 접속하는 방법을 설명합니다. pem 파일을 ssh 디렉토리에 복사하고 config 파일을 생성 및 수정하여 간편하게 AWS 서버에 접속할 수 있는 명령어를 제공합니다. SSH 연결 해제 방법도 포함되어 있습니다."
+featured_image: "image_5d8da044decc.png"
 notion_id: "f7d98040-a8fc-4ed4-bbc5-f8301c5d6ab7"
-notion_url: "https://www.notion.so/AWS-MAC-f7d98040a8fc4ed4bbc5f8301c5d6ab7"
 ---
 
 # AWS 서버 구축 후 MAC 터미널로 접속

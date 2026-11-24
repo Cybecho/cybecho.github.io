@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 02"
 date: 2023-02-06T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "중력 설정, 물리 충돌 강화, 특정 시간 후 함수 실행, 회피 구현, 아이템 제작 및 열거형 사용 방법에 대한 설명이 포함되어 있다. 파티클 시스템의 설정과 아이템 코드 선언부도 다루고 있다."
+featured_image: "image_db74f5460b89.png"
 notion_id: "54478c15-8de5-411b-ab61-58fcc933f3b2"
-notion_url: "https://www.notion.so/3D-02-54478c158de5411bab6158fcc933f3b2"
 ---
 
 # 유니티 3D게임 쿼드뷰 02

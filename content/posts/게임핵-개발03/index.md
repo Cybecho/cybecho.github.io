@@ -2,11 +2,11 @@
 title: "게임핵 개발03 "
 date: 2023-01-22T00:00:00.000Z
 draft: false
-tags: ["C#", "리버스엔지니어링"]
-series: ["치트엔진 활용 게임핵 개발"]
+tags: ["C#","리버스엔지니어링"]
+series: ["Dev Environment"]
 description: "게임핵 개발에 관한 내용으로, 포인터 찾기, 연산자 변경 함수, 피타고라스 정리 함수를 다루고 있다. 치트엔진을 활용하여 적 캐릭터의 HP를 추적하고, C#에서 double을 float으로 변환하는 함수와 2D 및 3D 거리 계산을 위한 피타고라스 법칙을 적용한 수학 함수를 구현하는 방법이 설명되어 있다."
+featured_image: "image_e93c93241141.png"
 notion_id: "1f0a0f57-48cb-46fa-8a79-4a300f8e907d"
-notion_url: "https://www.notion.so/03-1f0a0f5748cb46fa8a794a300f8e907d"
 ---
 
 # 게임핵 개발03 

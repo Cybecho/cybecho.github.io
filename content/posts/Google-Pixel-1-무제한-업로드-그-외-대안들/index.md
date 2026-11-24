@@ -2,11 +2,10 @@
 title: "Google Pixel 1 무제한 업로드 그 외 대안들"
 date: 2025-07-14T15:15:00.000Z
 draft: false
-tags: ["Other"]
-series: ["Let's Homelab!", "HW", "구글픽셀 개조기"]
+series: ["HW"]
 description: "Google Pixel 1은 무제한 원본 화질 이미지 업로드를 지원하며, 배터리 성능 저하로 전원 공급을 안정화하기 위한 방법과 FTP 서버 운영, 외장 USB 저장소 마운트, 클라이언트와의 네트워크 연결 방법을 설명합니다. 또한 JPEG 인코딩, RAW 파일 업로드, Android 에뮬레이터 사용, Revanced Manager 패치 등 다양한 대안 방법들이 제안됩니다. 다른 사용자들이 제안한 방법으로는 싱글보드컴퓨터 활용, P2P 동기화, 오픈소스 서버 호스팅 등이 있습니다."
+featured_image: "image_215b8afbd858.png"
 notion_id: "2311bab9-e3f8-8006-872f-cf8f734a4f0a"
-notion_url: "https://www.notion.so/Google-Pixel-1-2311bab9e3f88006872fcf8f734a4f0a"
 ---
 
 # Google Pixel 1 무제한 업로드 그 외 대안들

@@ -2,8 +2,8 @@
 title: "OpenJarvis: 개인 AI는 클라우드가 아니라 내 컴퓨터에서 돌아가면 됩니다"
 date: 2026-03-18T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm","agent"]
+series: ["Self-Hosted AI"]
 description: "오픈자비스는 로컬 모델과 도구, 메모리, 에이전트, 학습을 독립적으로 최적화해 개인 AI를 내 기기에서 실행하는 오픈소스 프레임워크입니다. 평가 8개 중 4개에서 클라우드 수준의 정확도를 달성하면서 API 비용을 약 800배, 지연 시간을 4배 줄였으며, 설계 단계에는 클라우드를 활용하되 실제 추론은 로컬에서 수행합니다."
 featured_image: "image_716d3c08cdbfd343314af2e8.webp"
 notion_id: "3271bab9-e3f8-814c-914d-f47adc4a08d9"

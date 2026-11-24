@@ -2,8 +2,8 @@
 title: "웹 서버 1,500만 개, VM 한 대에 올렸습니다. 커널을 비우면 됩니다"
 date: 2026-11-21T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["Infra"]
+series: ["Infra & Network"]
 description: "RAM 10GB, CPU 1코어짜리 VM 한 대에서 웹 서버 1,500만 개를 실행한 실험을 소개했습니다. 포트 부족은 AnyIP로, 프로세스 비용은 맞춤형 런타임과 LFI로, 소켓 비용은 사용자 공간 TCP/IP 스택인 smoltcp로 해결해 유휴 서버당 620바이트까지 줄였습니다. 다만 1,600만 개는 수신 대기 중인 서버 수이며 개념 증명이라는 한계가 있습니다."
 featured_image: "image_f8cee80b59f616f365b4bc01.webp"
 notion_id: "41f1bab9-e3f8-8141-8047-f6be2875f62e"

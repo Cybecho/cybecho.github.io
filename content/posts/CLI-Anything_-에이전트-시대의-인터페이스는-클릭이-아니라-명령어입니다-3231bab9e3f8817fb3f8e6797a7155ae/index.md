@@ -2,8 +2,8 @@
 title: "CLI-Anything: 에이전트 시대의 인터페이스는 클릭이 아니라 명령어입니다"
 date: 2026-03-14T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness","agent"]
+series: ["AI Harness"]
 description: "AI 에이전트에게 GUI 소프트웨어를 시키면 화면 픽셀을 클릭하는 방식은 버튼이 조금만 움직여도 무너집니다. CLI-Anything은 소스가 있는 소프트웨어의 UI 이벤트 뒤에 숨은 비즈니스 로직을 찾아 결정론적 CLI로 바꾸는 7단계 파이프라인으로, 9개 앱에서 1,436개 테스트를 통과했다고 합니다. 다만 소스가 없거나 로직이 UI에 엉킨 앱에는 그대로 쓸 수 없어, 읽기 전용 명령부터 작게 시작하고 샌드박스 안에서 검증하는 게 맞습니다."
 featured_image: "image_9c2c43a2793c23784c0f7f9b.webp"
 notion_id: "3231bab9-e3f8-817f-b3f8-e6797a7155ae"

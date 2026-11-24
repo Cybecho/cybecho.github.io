@@ -2,8 +2,8 @@
 title: "프론트엔드 코드를 3개월 동안 한 줄도 안 썼다고요? 프로토타입은 코드로 만듭니다"
 date: 2026-02-25T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "노션 디자인 팀은 공용 Next.js 앱인 프로토타입 놀이터에서 클로드 코드로 프로토타입을 만듭니다. 정적 목업 대신 돌아가는 코드로 일찍 현실을 만나고, 음성 지시와 계획 모드로 아이디어를 몇 분 만에 화면으로 바꿉니다. 피그마 변환·아이콘 찾기·배포 같은 반복 작업은 명령어와 스킬로 자동화해, 디자이너가 코드 한 줄 안 쓰고도 프로토타입을 끝까지 완성합니다."
 featured_image: "image_88a6e3c17708bfa84cac90dd.webp"
 notion_id: "3111bab9-e3f8-81c2-9a04-f7c3a188e067"

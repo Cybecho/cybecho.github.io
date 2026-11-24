@@ -2,11 +2,11 @@
 title: "안드로이드에서 Linux GUI환경을 사용해보자"
 date: 2026-01-06T01:12:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
 series: ["Let's Linux!"]
 description: "Termux와 proot-distro를 이용해 Android에서 루팅 없이 Debian XFCE 데스크톱 환경을 구축하는 방법을 설명하며, 한글 입력을 지원한다. 설치 과정, 시스템 설정, 환경 구성, 실행 및 종료 스크립트 작성, 문제 해결 방법 등을 포함하여 완전한 Linux GUI 환경을 사용할 수 있도록 안내한다."
+featured_image: "image_09226bc2270f.png"
 notion_id: "2e01bab9-e3f8-800f-a707-efb81b953afb"
-notion_url: "https://www.notion.so/Linux-GUI-2e01bab9e3f8800fa707efb81b953afb"
 ---
 
 # 안드로이드에서 Linux GUI환경을 사용해보자
@@ -245,4 +245,494 @@ exit
 ---
 
 ## 6. XFCE 데스크톱 및 한글 환경 설치
+
+### sbu 사용자로 Debian 진입
+
+```bash
+proot-distro login debian --user sbu
+
+```
+
+프롬프트가 `sbu@localhost:~$`로 바뀌면 성공이다.
+
+### XFCE 데스크톱 설치
+
+```bash
+sudo apt install xfce4 xfce4-goodies xfce4-terminal dbus-x11 -y
+
+```
+
+설치에 10-20분 정도 소요된다.
+
+### 한글 폰트 설치
+
+```bash
+sudo apt install fonts-noto-cjk fonts-noto-cjk-extra -y
+
+```
+
+### 한글 입력기 설치
+
+```bash
+sudo apt install fcitx5 fcitx5-hangul fcitx5-config-qt im-config -y
+
+```
+
+### 문제 유발 패키지 제거 (권장)
+
+proot 환경에서 불필요하고 에러를 유발하는 패키지들:
+
+```bash
+sudo apt remove light-locker xfce4-power-manager xiccd --purge -y
+
+```
+
+### Debian 종료
+
+```bash
+exit
+
+```
+
+---
+
+## 7. 환경변수 설정
+
+### sbu 사용자로 Debian 진입
+
+```bash
+proot-distro login debian --user sbu
+
+```
+
+### .bashrc에 환경변수 추가
+
+```bash
+cat >> ~/.bashrc << 'EOF'
+
+# 한글 환경
+export LANG=ko_KR.UTF-8
+export LC_ALL=ko_KR.UTF-8
+
+# fcitx5 입력기
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+EOF
+
+```
+
+### Debian 종료
+
+```bash
+exit
+
+```
+
+---
+
+## 8. 실행 및 종료 스크립트 작성
+
+Termux에서 다음 스크립트들을 생성한다.
+
+### 실행 스크립트 (start-debian)
+
+```bash
+cat > $PREFIX/bin/start-debian << 'EOF'
+#!/data/data/com.termux/files/usr/bin/bash
+
+# wake-lock 활성화 (Android가 Termux를 종료하지 않도록)
+termux-wake-lock
+
+# 기존 프로세스 정리
+pkill -9 -f "termux-x11" 2>/dev/null
+pkill -9 -f "termux.x11" 2>/dev/null
+pkill -9 -f "pulseaudio" 2>/dev/null
+pkill -9 -f "proot" 2>/dev/null
+sleep 2
+
+# X11 lock 파일 제거
+rm -rf /tmp/.X0-lock 2>/dev/null
+rm -rf $PREFIX/tmp/.X11-unix/X0 2>/dev/null
+
+# PulseAudio 시작
+pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
+
+# Termux:X11 시작
+termux-x11 :0 -ac &
+sleep 3
+
+# Termux:X11 앱 실행
+am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity
+
+# Debian XFCE 세션 시작
+proot-distro login debian --user sbu --shared-tmp -- bash -c "
+    export DISPLAY=:0
+    export PULSE_SERVER=127.0.0.1
+    export XDG_RUNTIME_DIR=/tmp/runtime-sbu
+    export LANG=ko_KR.UTF-8
+    export LC_ALL=ko_KR.UTF-8
+    export GTK_IM_MODULE=fcitx
+    export QT_IM_MODULE=fcitx
+    export XMODIFIERS=@im=fcitx
+    rm -rf /tmp/.X0-lock 2>/dev/null
+    mkdir -p \\$XDG_RUNTIME_DIR
+    chmod 700 \\$XDG_RUNTIME_DIR
+    fcitx5 -d &
+    sleep 1
+    dbus-launch --exit-with-session startxfce4
+"
+EOF
+chmod +x $PREFIX/bin/start-debian
+
+```
+
+### 종료 스크립트 (stop-debian)
+
+```bash
+cat > $PREFIX/bin/stop-debian << 'EOF'
+#!/data/data/com.termux/files/usr/bin/bash
+
+pkill -9 -f "termux-x11"
+pkill -9 -f "termux.x11"
+pkill -9 -f "pulseaudio"
+pkill -9 -f "proot"
+pkill -9 -f "xfce"
+pkill -9 -f "fcitx"
+rm -rf /tmp/.X0-lock 2>/dev/null
+
+# wake-lock 해제
+termux-wake-unlock
+
+echo "Debian 세션이 종료되었습니다."
+EOF
+chmod +x $PREFIX/bin/stop-debian
+
+```
+
+---
+
+## 9. 실행 및 한글 입력 설정
+
+### 실행
+
+Termux에서:
+
+```bash
+start-debian
+
+```
+
+Termux:X11 앱이 자동으로 열리며 XFCE 데스크톱이 표시된다.
+
+### 한글 입력 설정 (최초 1회)
+
+1. XFCE 데스크톱에서 터미널 실행
+1. `fcitx5-configtool` 입력
+1. Input Method 탭에서 + 버튼 클릭
+1. "Only Show Current Language" 체크 해제
+1. Hangul 검색 후 추가
+1. Hangul을 목록 상단으로 이동
+### 한/영 전환 키
+
+- Ctrl + Space
+- 또는 Shift + Space
+### 종료
+
+Termux에서:
+
+```bash
+stop-debian
+
+```
+
+또는 XFCE 내에서 로그아웃하면 Termux로 돌아온다.
+
+---
+
+## 10. 화면 최적화
+
+### Termux:X11 앱 설정
+
+Termux:X11 실행 후 왼쪽 상단 메뉴 (세 줄) > Preferences:
+
+| 설정 | 권장값 |
+| --- | --- |
+| Display resolution mode | scaled |
+| Display scale (percent) | 100 |
+| Reseed screen while soft keyboard... | ON |
+
+### XFCE DPI 조정
+
+XFCE 데스크톱 내에서:
+
+1. Settings Manager > Appearance > Fonts 탭
+1. Custom DPI를 150~180으로 설정
+또는 터미널에서:
+
+```bash
+xfconf-query -c xsettings -p /Xft/DPI -s 160
+
+```
+
+### 사용 팁
+
+- 가로 모드로 사용하면 데스크톱 비율에 맞아 더 자연스럽다
+- 블루투스 키보드/마우스 연결 시 PC와 유사한 경험 가능
+---
+
+## 11. 문제 해결
+
+### 세션이 갑자기 종료됨 (signal 9)
+
+원인: Android가 Termux를 백그라운드 앱으로 판단하여 강제 종료
+
+해결:
+
+1. 배터리 최적화에서 Termux, Termux:X11 제외 (3장 참조)
+1. 스크립트에 `termux-wake-lock` 포함 확인
+1. 개발자 옵션에서 백그라운드 프로세스 제한 해제
+### X server already running on display :0
+
+원인: 이전 세션이 제대로 종료되지 않음
+
+해결:
+
+```bash
+stop-debian
+sleep 2
+start-debian
+
+```
+
+### sudo: sbu is not in the sudoers file
+
+원인: sudo 권한이 제대로 설정되지 않음
+
+해결:
+
+```bash
+proot-distro login debian
+echo "sbu ALL=(ALL:ALL) ALL" >> /etc/sudoers
+exit
+
+```
+
+### adduser: command not found
+
+원인: adduser 패키지 미설치
+
+해결: useradd 명령어 사용
+
+```bash
+useradd -m -s /bin/bash sbu
+passwd sbu
+
+```
+
+### 한글이 깨져서 보임
+
+해결:
+
+```bash
+proot-distro login debian --user sbu
+sudo apt install fonts-noto-cjk fonts-noto-cjk-extra -y
+
+```
+
+### 한글 입력이 안됨
+
+확인사항:
+
+1. fcitx5-configtool에서 Hangul 추가되었는지 확인
+1. 환경변수가 .bashrc에 있는지 확인
+1. fcitx5 -d가 실행 중인지 확인
+### 검은 화면만 나옴
+
+해결:
+
+```bash
+proot-distro login debian --user sbu
+sudo apt install dbus-x11 -y
+
+```
+
+### 터미널 실행 안됨
+
+원인: xfce4-terminal 미설치
+
+해결:
+
+```bash
+proot-distro login debian --user sbu
+sudo apt install xfce4-terminal -y
+
+```
+
+---
+
+## 12. 명령어 총정리
+
+### Termux에서 실행
+
+```bash
+# 1. 기본 설정
+pkg update && pkg upgrade -y
+pkg install x11-repo -y
+pkg install proot-distro termux-x11-nightly pulseaudio -y
+
+# 2. Debian 설치
+proot-distro install debian
+
+```
+
+### Debian (root)에서 실행
+
+```bash
+# Debian 진입
+proot-distro login debian
+
+# 패키지 및 로케일 설정
+apt update && apt upgrade -y
+apt install sudo locales -y
+sed -i 's/# en_US.UTF-8/en_US.UTF-8/' /etc/locale.gen
+sed -i 's/# ko_KR.UTF-8/ko_KR.UTF-8/' /etc/locale.gen
+locale-gen
+
+# 사용자 생성
+useradd -m -s /bin/bash sbu
+passwd sbu
+echo "sbu ALL=(ALL:ALL) ALL" >> /etc/sudoers
+
+# 종료
+exit
+
+```
+
+### Debian (sbu)에서 실행
+
+```bash
+# Debian 진입
+proot-distro login debian --user sbu
+
+# XFCE 및 한글 환경 설치
+sudo apt install xfce4 xfce4-goodies xfce4-terminal dbus-x11 -y
+sudo apt install fonts-noto-cjk fonts-noto-cjk-extra -y
+sudo apt install fcitx5 fcitx5-hangul fcitx5-config-qt im-config -y
+sudo apt remove light-locker xfce4-power-manager xiccd --purge -y
+
+# 환경변수 설정
+cat >> ~/.bashrc << 'EOF'
+
+export LANG=ko_KR.UTF-8
+export LC_ALL=ko_KR.UTF-8
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+EOF
+
+# 종료
+exit
+
+```
+
+### 실행 스크립트 생성 (Termux)
+
+```bash
+cat > $PREFIX/bin/start-debian << 'EOF'
+#!/data/data/com.termux/files/usr/bin/bash
+termux-wake-lock
+pkill -9 -f "termux-x11" 2>/dev/null
+pkill -9 -f "termux.x11" 2>/dev/null
+pkill -9 -f "pulseaudio" 2>/dev/null
+pkill -9 -f "proot" 2>/dev/null
+sleep 2
+rm -rf /tmp/.X0-lock 2>/dev/null
+rm -rf $PREFIX/tmp/.X11-unix/X0 2>/dev/null
+pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
+termux-x11 :0 -ac &
+sleep 3
+am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity
+proot-distro login debian --user sbu --shared-tmp -- bash -c "
+    export DISPLAY=:0
+    export PULSE_SERVER=127.0.0.1
+    export XDG_RUNTIME_DIR=/tmp/runtime-sbu
+    export LANG=ko_KR.UTF-8
+    export LC_ALL=ko_KR.UTF-8
+    export GTK_IM_MODULE=fcitx
+    export QT_IM_MODULE=fcitx
+    export XMODIFIERS=@im=fcitx
+    rm -rf /tmp/.X0-lock 2>/dev/null
+    mkdir -p \\$XDG_RUNTIME_DIR
+    chmod 700 \\$XDG_RUNTIME_DIR
+    fcitx5 -d &
+    sleep 1
+    dbus-launch --exit-with-session startxfce4
+"
+EOF
+chmod +x $PREFIX/bin/start-debian
+
+```
+
+### 종료 스크립트 생성 (Termux)
+
+```bash
+cat > $PREFIX/bin/stop-debian << 'EOF'
+#!/data/data/com.termux/files/usr/bin/bash
+pkill -9 -f "termux-x11"
+pkill -9 -f "termux.x11"
+pkill -9 -f "pulseaudio"
+pkill -9 -f "proot"
+pkill -9 -f "xfce"
+pkill -9 -f "fcitx"
+rm -rf /tmp/.X0-lock 2>/dev/null
+termux-wake-unlock
+echo "Debian 세션이 종료되었습니다."
+EOF
+chmod +x $PREFIX/bin/stop-debian
+
+```
+
+### 일상 사용
+
+```bash
+# 시작
+start-debian
+
+# 종료
+stop-debian
+
+```
+
+---
+
+## 부록: 추가 소프트웨어 설치 예시
+
+Debian 내부에서 일반적인 apt 명령어로 소프트웨어 설치 가능:
+
+```bash
+# 웹 브라우저
+sudo apt install firefox-esr -y
+
+# 텍스트 에디터
+sudo apt install gedit -y
+
+# 파일 관리자 (이미 설치됨)
+sudo apt install thunar -y
+
+# 오피스
+sudo apt install libreoffice -y
+
+# 개발 도구
+sudo apt install build-essential git -y
+
+# Python
+sudo apt install python3 python3-pip -y
+
+```
+
+---
+
+이 가이드를 따라하면 Android 기기에서 완전한 Linux 데스크톱 환경을 사용할 수 있다.
+
 

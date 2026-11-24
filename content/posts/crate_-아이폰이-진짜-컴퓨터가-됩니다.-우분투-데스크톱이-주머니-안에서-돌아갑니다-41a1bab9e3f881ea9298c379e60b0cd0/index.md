@@ -2,8 +2,7 @@
 title: "crate: 아이폰이 진짜 컴퓨터가 됩니다. 우분투 데스크톱이 주머니 안에서 돌아갑니다"
 date: 2026-11-16T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["HW"]
 description: "crate는 아이폰과 아이패드에서 우분투·데비안·아치 리눅스의 전체 데스크톱을 가상 머신으로 직접 실행하는 도구입니다. Rust 기반 Arm64 번역과 GPU 가속으로 성능을 높였으며, 오프라인 사용과 개발 작업을 지원합니다. 다만 앱스토어에서 제공되지 않아 직접 서명하고 JIT를 활성화해야 하며, 일부 기능은 아직 개선 중입니다."
 featured_image: "image_140b52887870507ac00d247c.webp"
 notion_id: "41a1bab9-e3f8-81ea-9298-c379e60b0cd0"

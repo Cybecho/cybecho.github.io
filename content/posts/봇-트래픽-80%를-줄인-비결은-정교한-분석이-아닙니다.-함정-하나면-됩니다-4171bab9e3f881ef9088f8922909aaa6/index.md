@@ -2,8 +2,8 @@
 title: "봇 트래픽 80%를 줄인 비결은 정교한 분석이 아닙니다. 함정 하나면 됩니다"
 date: 2026-11-13T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["Infra"]
+series: ["Infra & Network"]
 description: "한 취미 사이트가 한 달에 2.5TB를 넘게 전송했습니다. 인기가 아니라 AI 봇이 데이터와 이미지를 끝없이 긁어간 탓이었습니다. 해법은 정교한 분석이 아니었습니다. robots.txt에서 접근을 금지한 숨은 함정에 발을 들인 IP를 그 자리에서 차단하는 투박한 방법이었습니다. 일주일 만에 봇 트래픽이 80% 넘게 줄고, 하루 전송량은 216GB에서 25GB로 떨어졌습니다. 다만 오차단과 회피라는 숙제도 함께 남았습니다."
 featured_image: "image_e9ad3cd22ae5afb974dfcd00.webp"
 notion_id: "4171bab9-e3f8-81ef-9088-f8922909aaa6"

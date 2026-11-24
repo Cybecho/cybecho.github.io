@@ -2,8 +2,8 @@
 title: "무주택 생애최초, 첫 집은 아홉 가지 도구로 가격부터 확인합니다"
 date: 2026-09-01T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["real-estate"]
+series: ["Real Estate"]
 description: "첫 집을 살 때는 호가와 실거래가를 여러 도구로 교차 확인하고, 로드뷰와 현장 방문으로 입지를 살펴야 합니다. 예산에 맞지 않으면 경매를 검토하되 권리분석은 직접 확인하고, 취득세 감면 등 세금도 계약 전에 챙기는 것이 중요합니다."
 featured_image: "image_38617ae8fc10fd15051e362f.webp"
 notion_id: "3cd1bab9-e3f8-8181-9b06-e8442bd0ccba"

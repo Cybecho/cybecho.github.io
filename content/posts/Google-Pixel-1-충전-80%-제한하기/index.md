@@ -2,11 +2,10 @@
 title: "Google Pixel 1 충전 80% 제한하기"
 date: 2024-07-18T12:34:00.000Z
 draft: false
-tags: ["Other"]
-series: ["Let's Homelab!", "HW", "구글픽셀 개조기"]
+series: ["HW"]
 description: "Tasker와 스마트 플러그를 사용하여 충전 비율을 80%로 제한하는 방법을 설명합니다. AccuBattery 앱을 통해 충전 상태를 모니터링하고, IFTTT를 통해 스마트 플러그를 제어하여 자동으로 충전을 중지합니다. 이 방법은 루팅이 필요 없으며, 배터리 수명을 연장할 수 있는 안전한 방법입니다."
+featured_image: "image_532797522d0a.webp"
 notion_id: "f36d494b-d658-48dc-aad0-da5de2663c85"
-notion_url: "https://www.notion.so/Google-Pixel-1-80-f36d494bd65848dcaad0da5de2663c85"
 ---
 
 # Google Pixel 1 충전 80% 제한하기

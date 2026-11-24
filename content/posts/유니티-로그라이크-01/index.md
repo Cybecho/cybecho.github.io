@@ -2,11 +2,11 @@
 title: "유니티 로그라이크 01"
 date: 2023-03-03T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 클론 게임 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "URP는 다양한 플랫폼에 최적화된 그래픽을 제공하며, 캐릭터 스프라이트 설정, 기즈모 크기 변경, 중력 설정 및 이미지 레이어 순서 조정 방법을 설명한다."
+featured_image: "image_5f0bb567e78f.png"
 notion_id: "bda7e6da-7959-4f02-a4e4-d561ee769b61"
-notion_url: "https://www.notion.so/01-bda7e6da79594f02a4e4d561ee769b61"
 ---
 
 # 유니티 로그라이크 01

@@ -2,8 +2,8 @@
 title: "cf: 1.0 RC가 나왔습니다. 명령어 2,900개, 에이전트가 더는 curl을 손으로 짜지 않습니다"
 date: 2026-11-21T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "cf 1.0 RC는 2,900개 이상의 Cloudflare API 명령, 자연어 기반 명령 검색, 간결한 JSON 출력, Wrangler 설정의 타입스크립트 마이그레이션을 제공해 에이전트가 대시보드나 직접 작성한 curl 없이 Cloudflare를 다루도록 돕습니다. 아직 정식판이 아니며 명령 변경 가능성과 기본 활성화된 검색어 포함 사용 통계에 유의하고, 버전을 고정해 검색·스키마 확인·dry-run 후 실행하는 것이 좋습니다."
 featured_image: "image_a316a543f8009fef576461c2.webp"
 notion_id: "41f1bab9-e3f8-81e2-8ed6-fbbb9d65b4a0"

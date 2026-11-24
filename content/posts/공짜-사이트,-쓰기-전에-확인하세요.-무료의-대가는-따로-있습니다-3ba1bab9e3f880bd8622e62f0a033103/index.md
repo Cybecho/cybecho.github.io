@@ -2,8 +2,7 @@
 title: "공짜 사이트, 쓰기 전에 확인하세요. 무료의 대가는 따로 있습니다"
 date: 2026-08-12T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Tips"]
 description: "무료 사이트는 광고와 기능 제한, 데이터 수집으로 대가를 치를 수 있으므로, 파일 보관 정책과 계정 요구 이유, 운영 주체와 출처를 확인해야 합니다. 민감한 파일은 올리지 않고 약관과 무료 범위가 투명한 서비스를 선택하면 더 안전하게 이용할 수 있습니다."
 featured_image: "image_1317c28ed3d316ab5a89b481.webp"
 notion_id: "3ba1bab9-e3f8-80bd-8622-e62f0a033103"

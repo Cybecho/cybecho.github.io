@@ -2,8 +2,8 @@
 title: "아스트라: '예쁘게 해줘'만 외치면 평생 걸립니다. 재료 시트 한 장이 먼저입니다"
 date: 2026-09-18T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "모션그래픽 제작에서는 “예쁘게 해줘” 같은 모호한 요청보다 캐릭터·소품·타이포·장식을 6×6 재료 시트 한 장에 담아 스타일과 요소를 명확히 전달하는 것이 효과적입니다. 재료를 겹치거나 잘리지 않게 배치하면 일관성이 높아지고 수정과 토큰 사용을 줄일 수 있지만, 시트 품질은 직접 확인해야 합니다."
 featured_image: "image_3f569b6d7578023d26fa762b.webp"
 notion_id: "3de1bab9-e3f8-8148-a04e-e46454e5c3dc"

@@ -2,11 +2,11 @@
 title: "유니티 로그라이크 11"
 date: 2023-03-08T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 클론 게임 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "원거리 공격 구현을 위한 CircleCastAll 함수 사용법, 가장 가까운 적을 찾는 방법, 콜라이더 크기 리셋 방법, 스크립트 컴포넌트화 및 총알 발사 로직을 포함한 코드 예시가 제공됩니다. 또한, PoolManager에 원거리 공격을 등록하는 방법과 FromToRotation 함수의 사용법도 설명됩니다."
+featured_image: "image_ed612daf0374.png"
 notion_id: "696f1831-c3f7-4ca9-9e95-df5a3fe977e8"
-notion_url: "https://www.notion.so/11-696f1831c3f74ca99e95df5a3fe977e8"
 ---
 
 # 유니티 로그라이크 11

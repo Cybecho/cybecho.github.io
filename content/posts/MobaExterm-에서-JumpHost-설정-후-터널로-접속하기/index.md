@@ -2,11 +2,10 @@
 title: "MobaExterm 에서 JumpHost 설정 후 터널로 접속하기"
 date: 2025-06-17T02:24:00.000Z
 draft: false
-tags: ["Util"]
-series: ["오픈소스"]
+series: ["Let's Open Source"]
 description: "AWS 배스천을 통해 SSH 접속하기 위해 MobaXterm의 터널링 기능을 설정하고, 원격 서버에 접속하기 위해 'localhost'와 설정한 포트를 사용하여 세션을 생성하는 방법을 설명합니다. MobaXterm은 시각적으로 편리하여 앞으로 자주 사용할 것이라고 결론짓습니다."
+featured_image: "image_f3fa2b8ddba7.png"
 notion_id: "2151bab9-e3f8-8068-bddc-d8d1234d7399"
-notion_url: "https://www.notion.so/MobaExterm-JumpHost-2151bab9e3f88068bddcd8d1234d7399"
 ---
 
 # MobaExterm 에서 JumpHost 설정 후 터널로 접속하기

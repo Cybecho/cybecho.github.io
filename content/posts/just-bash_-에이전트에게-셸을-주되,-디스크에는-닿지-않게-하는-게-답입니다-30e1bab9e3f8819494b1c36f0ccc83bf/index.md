@@ -2,9 +2,10 @@
 title: "just-bash: 에이전트에게 셸을 주되, 디스크에는 닿지 않게 하는 게 답입니다"
 date: 2026-02-21T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness"]
+series: ["AI Harness"]
 description: "just-bash는 TypeScript로 구현한 가상 Bash 환경으로, 에이전트가 메모리 파일시스템에서 70개 이상의 명령어를 실행하도록 해 실제 디스크 접근을 막습니다. 네트워크와 실행 한도를 제어하며, 가벼운 로컬 개발에 적합하지만 VM 수준의 격리를 제공하지는 않습니다."
+featured_image: "image_91f866dde50e9673bd34ef59.webp"
 notion_id: "30e1bab9-e3f8-8194-94b1-c36f0ccc83bf"
 ---
 

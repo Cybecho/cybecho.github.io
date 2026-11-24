@@ -2,8 +2,8 @@
 title: "free-claude-code: 클로드 코드는 그대로, 모델만 무료로 바꾸는 방법입니다"
 date: 2026-09-13T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding","local-llm"]
+series: ["AI Harness"]
 description: "클로드 코드의 터미널과 에이전트 기능은 유지하면서 로컬 프록시를 통해 61개 제공사의 무료 모델로 요청을 보내는 방법을 소개합니다. 여러 모델과 코딩 에이전트를 연결하고 휴대폰으로 작업을 지시할 수 있지만, 무료 모델은 유료 클로드와 성능이 다르고 사용량 제한과 제공사별 약관이 있으므로 조건을 확인해야 합니다."
 featured_image: "image_833590d98445468a378a064a.webp"
 notion_id: "3d91bab9-e3f8-8113-8c5a-c5b6195583e6"

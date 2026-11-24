@@ -3,10 +3,10 @@ title: "ProxMox 네트워크 모드 - Bridge , NAT , Bond"
 date: 2025-03-05T08:31:00.000Z
 draft: false
 tags: ["ProxMox"]
-series: ["Infra & Network", "Let's Homelab!"]
+series: ["Infra & Network"]
 description: "ProxMox의 네트워크 모드는 브리지, 라우팅, NAT, 본딩으로 나뉘며, 각 방식은 가상 머신의 인터넷 연결 방식에 따라 다릅니다. 브리지는 가상 스위치를 통해 직접 연결을 제공하고, 라우팅은 서버가 모든 네트워크 신호를 처리합니다. NAT는 내부 IP를 사용하여 외부 인터넷에 접속하며, 본딩은 여러 네트워크 포트를 결합하여 안정성과 속도를 향상시킵니다."
+featured_image: "image_558d68cfc8aa.png"
 notion_id: "1ad1bab9-e3f8-80d8-b1f7-e01b801ed27c"
-notion_url: "https://www.notion.so/ProxMox-Bridge-NAT-Bond-1ad1bab9e3f880d8b1f7e01b801ed27c"
 ---
 
 # ProxMox 네트워크 모드 - Bridge , NAT , Bond

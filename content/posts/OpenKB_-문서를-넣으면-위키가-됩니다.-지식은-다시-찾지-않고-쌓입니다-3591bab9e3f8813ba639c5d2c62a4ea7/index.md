@@ -2,8 +2,8 @@
 title: "OpenKB: 문서를 넣으면 위키가 됩니다. 지식은 다시 찾지 않고 쌓입니다"
 date: 2026-05-07T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["rag","agent"]
+series: ["AI Harness"]
 description: "OpenKB는 문서를 요약·개념 페이지와 교차 링크가 연결된 마크다운 위키로 컴파일해 지식을 축적하며, 긴 PDF는 PageIndex로 처리하고 위키를 에이전트 스킬·지식 그래프·슬라이드로 만들 수 있습니다. 다만 개발이 멈춰 있고 LLM 오류와 문서 처리 비용이 발생할 수 있어 결과를 검토해야 합니다."
 featured_image: "image_47c59f2835eda1b35be82463.webp"
 notion_id: "3591bab9-e3f8-813b-a639-c5d2c62a4ea7"

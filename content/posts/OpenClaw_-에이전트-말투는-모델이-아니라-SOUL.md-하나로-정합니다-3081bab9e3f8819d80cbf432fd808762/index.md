@@ -2,8 +2,8 @@
 title: "OpenClaw: 에이전트 말투는 모델이 아니라 SOUL.md 하나로 정합니다"
 date: 2026-02-15T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","prompt-engineering"]
+series: ["AI Harness"]
 description: "OpenClaw는 SOUL.md를 매 세션 시스템 프롬프트에 주입해 에이전트의 말투·가치관·경계를 정하며, 모델을 바꾸지 않고도 개성을 조정할 수 있습니다. 파일을 짧고 구체적으로 작성하고 Git으로 변경 사항을 관리해 프롬프트 인젝션이나 악의적인 수정에 대비해야 합니다."
 featured_image: "image_d442a42fe52d2323604835e5.webp"
 notion_id: "3081bab9-e3f8-819d-80cb-f432fd808762"

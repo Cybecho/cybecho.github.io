@@ -2,8 +2,8 @@
 title: "EMP: 448GB 서버가 1.8TB 작업을 돌립니다. 남는 메모리를 빌려 쓰면 됩니다"
 date: 2026-11-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["Infra"]
+series: ["Infra & Network"]
 description: "EMP는 데이터센터의 유휴 메모리를 모아 메모리가 부족한 서버에 빌려주는 하이퍼바이저로, 코드 수정 없이 대규모 작업을 실행할 수 있습니다. 미국 500노드 슈퍼컴퓨터 클러스터에서 448GB 서버로 1.8TB 유전체 분석을 수행했고, 단위 메모리당 성능은 최대 2.30배를 기록했습니다. 다만 원격 메모리는 로컬 메모리보다 느리며, 기술은 아직 시범 운영 단계입니다."
 featured_image: "image_a8ed9f8053381bc37d1f1cf3.webp"
 notion_id: "41e1bab9-e3f8-819e-9654-e9bb0842e717"

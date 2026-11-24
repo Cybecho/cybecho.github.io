@@ -2,8 +2,8 @@
 title: "OpenSpec: PRD를 완벽하게 짜지 말고, 바뀔 때마다 spec을 고치면 됩니다"
 date: 2026-02-03T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "OpenSpec은 완벽한 PRD를 미리 작성하는 대신, 제안·구현·보관의 반복 과정에서 spec을 최신 상태로 유지하는 가벼운 AI 개발 방식입니다. 요구사항을 저장소 파일로 관리해 AI가 맥락을 잃지 않도록 하고, 수정이 반복돼도 구현의 일관성과 안정성을 높입니다."
 featured_image: "image_24e661510beafcd73d347f8c.webp"
 notion_id: "2fc1bab9-e3f8-8193-b69f-e8b31f121817"

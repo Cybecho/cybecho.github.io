@@ -2,8 +2,8 @@
 title: "ai-goofish-monitor: 원하는 중고 매물이 뜨자마자, AI가 골라서 알려줍니다"
 date: 2026-11-05T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "ai-goofish-monitor는 셴위에서 키워드·가격·지역 조건에 맞는 중고 매물을 자동 검색하고, 상품 사진과 설명을 AI로 분석해 새 매물을 알립니다. 도커와 웹 UI로 쉽게 관리할 수 있으며, 로그인 상태 만료와 과도한 요청에 따른 계정 제한, AI 판단의 오류에 주의해야 합니다."
 featured_image: "image_394fd4e85b4e591fe1112820.webp"
 notion_id: "40f1bab9-e3f8-811c-a3db-cde3a90f8b62"

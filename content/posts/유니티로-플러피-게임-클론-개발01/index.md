@@ -2,11 +2,11 @@
 title: "유니티로 플러피 게임 클론 개발01"
 date: 2023-02-03T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 플러피 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "유니티로 플러피 게임 클론을 개발하는 방법에 대한 내용으로, VS Code 자동완성 오류 해결, 이미지 레이어 순서 설정, 애니메이션 커브 설정, 물리 법칙 적용 및 오브젝트 콜라이더 설정 방법을 포함하고 있다. 또한, Rigidbody2D를 사용한 점프 및 파이프 장애물 이동 코드를 제공하며, 프리팹과 제네레이터 개념을 설명한다."
+featured_image: "image_1f89ae66b07224bd2f221274.png"
 notion_id: "a3bc9908-85bd-4f8e-921f-13019d832dd9"
-notion_url: "https://www.notion.so/01-a3bc990885bd4f8e921f13019d832dd9"
 ---
 
 # 유니티로 플러피 게임 클론 개발01
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/01-a3bc990885bd4f8e921f13019d832dd9"
 > 유니티로 플러피 게임 클론을 개발하는 방법에 대한 내용으로, VS Code 자동완성 오류 해결, 이미지 레이어 순서 설정, 애니메이션 커브 설정, 물리 법칙 적용 및 오브젝트 콜라이더 설정 방법을 포함하고 있다. 또한, Rigidbody2D를 사용한 점프 및 파이프 장애물 이동 코드를 제공하며, 프리팹과 제네레이터 개념을 설명한다.
 
 ---
+
+![Image](image_1f89ae66b07224bd2f221274.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=EqoU1PodQQ4&t=460s)
 

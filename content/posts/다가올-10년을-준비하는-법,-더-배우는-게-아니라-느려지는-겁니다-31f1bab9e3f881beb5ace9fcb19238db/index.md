@@ -2,8 +2,7 @@
 title: "다가올 10년을 준비하는 법, 더 배우는 게 아니라 느려지는 겁니다"
 date: 2026-03-11T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Essays"]
 description: "다가올 10년의 빠른 기술 변화에 대비하려면 더 많이 배우기보다 의도적으로 속도를 늦추고, 판단력·취향·연결력 같은 깊은 역량을 길러야 합니다. 신경계를 돌보고, 정체성과 성공의 기준을 다시 살피며, 기술이 주는 것과 빼앗는 것을 점검하고, 긴 안목과 희망을 지키는 실천이 중요합니다."
 featured_image: "image_9e0ee1dd28d2e34263d028ff.webp"
 notion_id: "31f1bab9-e3f8-81be-b5ac-e9fcb19238db"

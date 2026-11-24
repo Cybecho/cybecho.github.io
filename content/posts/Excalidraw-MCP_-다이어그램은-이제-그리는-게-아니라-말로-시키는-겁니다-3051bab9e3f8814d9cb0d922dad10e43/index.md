@@ -2,8 +2,8 @@
 title: "Excalidraw MCP: 다이어그램은 이제 그리는 게 아니라 말로 시키는 겁니다"
 date: 2026-02-12T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp"]
+series: ["AI Harness"]
 description: "Excalidraw MCP는 말로 요청하면 채팅 안에서 손그림 스타일 다이어그램을 실시간으로 만들고 편집할 수 있는 공식 서버로, 가입이나 API 키가 필요 없습니다. 다만 모델이 결과를 직접 확인하지 못하고 터미널에서는 캔버스가 보이지 않는 등 한계가 있어, 용도에 맞게 활용해야 합니다."
 featured_image: "image_bf10d1b07ec60f14a358347e.webp"
 notion_id: "3051bab9-e3f8-814d-9cb0-d922dad10e43"

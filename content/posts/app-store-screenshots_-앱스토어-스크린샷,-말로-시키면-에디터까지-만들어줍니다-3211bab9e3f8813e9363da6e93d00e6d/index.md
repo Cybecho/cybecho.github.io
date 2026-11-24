@@ -2,8 +2,8 @@
 title: "app-store-screenshots: 앱스토어 스크린샷, 말로 시키면 에디터까지 만들어줍니다"
 date: 2026-03-12T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill","coding"]
+series: ["AI Harness"]
 description: "앱스토어 스크린샷 제작 스킬은 코딩 에이전트가 앱 맥락과 원본 화면을 바탕으로 편집 가능한 Next.js 에디터를 만들고, 연결된 캔버스에서 디자인과 문구를 다듬어 다양한 기기·언어별 스토어 규격 이미지 묶음으로 내보내도록 돕습니다. 작업 상태는 파일로 저장해 깃으로 관리하고 다른 컴퓨터에서도 이어갈 수 있습니다."
 featured_image: "image_b23ada1bcd54a33a956fc1e6.webp"
 notion_id: "3211bab9-e3f8-813e-9363-da6e93d00e6d"

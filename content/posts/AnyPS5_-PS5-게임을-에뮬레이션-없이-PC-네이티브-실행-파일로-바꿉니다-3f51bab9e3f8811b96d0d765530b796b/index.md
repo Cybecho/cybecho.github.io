@@ -2,8 +2,7 @@
 title: "AnyPS5: PS5 게임을 에뮬레이션 없이 PC 네이티브 실행 파일로 바꿉니다"
 date: 2026-10-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Tips"]
 description: "PS5 게임을 PC에서 돌리는 길이 에뮬레이션만 있는 건 아닙니다. 실행 파일 자체를 PC 네이티브 형식으로 바꾸는 포팅이라는 방법이 있습니다. AnyPS5는 리링커가 PS5 실행 파일을 Linux와 Windows 네이티브 실행 파일로 변환하고, 시스템 PRX 라이브러리 구현을 동적 링크로 붙여줍니다. 별도 런타임 프로세스도 없습니다. 2D 게임 한 편이 보급형 PC에서 60fps로 돌아가는 단계까지 왔지만, 아직 초기 실험입니다. 시스템 라이브러리 매핑 87%라는 숫자부터 분모를 정확히 봐야 합니다."
 featured_image: "image_bcf76aa943b8a116aecadb84.webp"
 notion_id: "3f51bab9-e3f8-811b-96d0-d765530b796b"

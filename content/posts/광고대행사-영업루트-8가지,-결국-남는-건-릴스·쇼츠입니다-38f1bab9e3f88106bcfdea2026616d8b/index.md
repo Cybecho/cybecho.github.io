@@ -2,8 +2,7 @@
 title: "광고대행사 영업루트 8가지, 결국 남는 건 릴스·쇼츠입니다"
 date: 2026-06-30T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Essays"]
 description: "광고대행사의 영업 루트는 플랫폼·유료 광고·아웃바운드·숏폼까지 8가지로 갈립니다. 채널마다 비용·효율·난이도가 다릅니다. 한 채널만으로는 답이 안 나옵니다. 현장에서 가장 지금 시대에 맞는 답은 SNS 릴스·쇼츠 마케팅이었습니다. 유명해지면 영업이 따라옵니다."
 featured_image: "image_2271cd7857d9cf8f919f5144.webp"
 notion_id: "38f1bab9-e3f8-8106-bcfd-ea2026616d8b"

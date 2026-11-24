@@ -2,8 +2,8 @@
 title: "Hermes Agent Self-Evolution: 프롬프트는 사람이 고치는 게 아닙니다. 실패 기록이 스스로 고칩니다"
 date: 2026-05-16T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering","agent"]
+series: ["AI Harness"]
 description: "에이전트를 똑똑하게 만드는 일은 이제 사람이 프롬프트를 고치는 노동이 아닙니다. 실패 기록을 읽고 원인을 분석해 프롬프트를 스스로 고치는 진화 루프가 돌고 있습니다. 핵심 엔진은 GEPA로, 실행 트레이스를 보고 왜 실패했는지 가설을 세우고 그 가설을 겨냥한 변이만 만듭니다. 진화는 별도 저장소에서 돌고 검증된 결과만 사람 리뷰를 거쳐 본 저장소에 PR로 들어가며, 한 번 돌리는 데 토큰 비용은 약 2~10달러이고 GPU 학습은 필요 없습니다."
 featured_image: "image_77a8c4186af9b9c501389e26.webp"
 notion_id: "3621bab9-e3f8-8129-b3fd-e304fcaeb1e5"

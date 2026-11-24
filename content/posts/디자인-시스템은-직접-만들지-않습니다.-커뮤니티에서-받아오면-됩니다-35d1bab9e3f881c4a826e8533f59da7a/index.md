@@ -2,8 +2,8 @@
 title: "디자인 시스템은 직접 만들지 않습니다. 커뮤니티에서 받아오면 됩니다"
 date: 2026-05-11T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering","coding"]
+series: ["AI Harness"]
 description: "AI 코딩 시대에는 색상, 폰트, 여백, 컴포넌트 규칙을 담은 디자인 시스템 파일을 커뮤니티에서 받아 프로젝트에 적용해 화면의 일관성을 유지할 수 있습니다. 마켓플레이스형, 브랜드 분석형, 스킬형 커뮤니티는 각각 파일 탐색, 브랜드 참고, 에이전트 내 활용에 적합하며, 파일의 출처와 최신성, 프로젝트와의 적합성을 확인하고 브랜드 자산을 그대로 복제하지 않도록 주의해야 합니다."
 featured_image: "image_9ed5b815238b565be253f4f0.webp"
 notion_id: "35d1bab9-e3f8-81c4-a826-e8533f59da7a"

@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 16"
 date: 2023-02-26T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "유니티 3D 게임 개발에 관한 내용으로, UI 로직 구성, 타이틀 카메라 제작, PlayerPrefs를 통한 저장 기능, GameManager 생성 및 변수 설정, 점수 및 플레이 시간 포맷 구현, 보스 체력 표시 방법 등을 다루고 있습니다. 또한, 애니메이션 추가 및 메뉴 관리에 대한 코드 예시도 포함되어 있습니다."
+featured_image: "image_e971d1c9b715.png"
 notion_id: "1aab9cfe-6a86-49ca-b7a8-1e1bc9d689ea"
-notion_url: "https://www.notion.so/3D-16-1aab9cfe6a8649cab7a81e1bc9d689ea"
 ---
 
 # 유니티 3D게임 쿼드뷰 16

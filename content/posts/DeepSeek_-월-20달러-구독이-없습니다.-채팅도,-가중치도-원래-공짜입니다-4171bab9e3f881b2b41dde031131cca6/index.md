@@ -2,8 +2,8 @@
 title: "DeepSeek: 월 20달러 구독이 없습니다. 채팅도, 가중치도 원래 공짜입니다"
 date: 2026-11-13T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm"]
+series: ["Self-Hosted AI"]
 description: "딥시크 채팅과 MIT 라이선스로 공개된 가중치는 무료이며, API만 사용량에 따라 유료입니다. 채팅은 서버 혼잡과 개인정보 보호에 유의해야 하고, 민감한 정보를 다루려면 가중치를 직접 실행하는 방법이 더 안전합니다."
 featured_image: "image_c08aa5b43697c8e6e60f6dc8.webp"
 notion_id: "4171bab9-e3f8-81b2-b41d-de031131cca6"

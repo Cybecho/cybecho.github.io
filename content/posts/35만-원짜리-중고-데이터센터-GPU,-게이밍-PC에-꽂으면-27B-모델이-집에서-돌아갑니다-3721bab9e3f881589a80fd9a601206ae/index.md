@@ -2,8 +2,8 @@
 title: "35만 원짜리 중고 데이터센터 GPU, 게이밍 PC에 꽂으면 27B 모델이 집에서 돌아갑니다"
 date: 2026-06-01T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm"]
+series: ["Self-Hosted AI"]
 description: "기존 RTX 4080에 약 35만 원을 추가해 중고 테슬라 V100을 장착하면 32GB VRAM으로 27B 모델을 초당 약 32토큰으로 로컬 실행할 수 있습니다. 높은 메모리 대역폭과 낮은 비용이 장점이지만, 팬 소음 해결과 구형 드라이버 설정, 재부팅 문제가 따릅니다."
 featured_image: "image_0aeb96212e92a74938071652.webp"
 notion_id: "3721bab9-e3f8-8158-9a80-fd9a601206ae"

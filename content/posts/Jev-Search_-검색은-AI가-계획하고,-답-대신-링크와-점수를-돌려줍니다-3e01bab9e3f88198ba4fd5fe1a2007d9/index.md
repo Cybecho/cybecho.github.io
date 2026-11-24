@@ -2,8 +2,8 @@
 title: "Jev Search: 검색은 AI가 계획하고, 답 대신 링크와 점수를 돌려줍니다"
 date: 2026-09-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "Jev Search interpretiert Suchanfragen, wählt passende Quellen und Zeiträume aus und durchsucht zwölf Plattformen parallel. Ein Entscheidungsmodell bewertet und sortiert die Ergebnisse, liefert aber nur Links, Auszüge und Relevanzwerte statt Antworten. Der MIT-lizenzierte App-Code ist offen; für den Betrieb sind kostenpflichtige Such- und Modell-APIs erforderlich, daher sollten Nutzungskosten begrenzt werden."
 featured_image: "image_d5054160bed33eb3b269fa83.webp"
 notion_id: "3e01bab9-e3f8-8198-ba4f-d5fe1a2007d9"

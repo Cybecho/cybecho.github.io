@@ -2,8 +2,8 @@
 title: "Spec Kit: 코딩 전에 문서를 쓰면, 에이전트가 엉뚱한 코드를 짜지 않습니다"
 date: 2026-03-16T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding","agent"]
+series: ["AI Harness"]
 description: "Spec Kit은 코딩 전에 헌법·스펙·계획·작업을 작성하고, 구현 결과를 기준에 맞게 검토·수렴하도록 돕는 오픈소스 도구입니다. 명확한 의도와 요구사항을 문서로 정리하면 에이전트의 임의 해석을 줄이고, 스펙을 구현과 검증의 지속적인 기준으로 활용할 수 있습니다."
 featured_image: "image_29d5554e026d80b02362c9bc.webp"
 notion_id: "3251bab9-e3f8-818d-b3e2-f64a75bf6872"

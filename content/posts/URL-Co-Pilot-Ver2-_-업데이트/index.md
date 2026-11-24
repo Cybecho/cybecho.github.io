@@ -3,23 +3,23 @@ title: "URL Co-Pilot Ver2 : 업데이트"
 date: 2023-03-01T00:00:00.000Z
 draft: false
 tags: ["Python"]
-series: ["매크로개발", "진심글쓰기"]
-description: "ver2 업데이트로 키마다 URL적용 버튼이 추가되었으며, F4 키 매핑 시 발생하는 버그를 수정하기 위해 새로운 코드를 작성하였다. 파이썬에서 클래스 상속을 사용하는 방법과 tkinter 라이브러리를 활용한 버튼 텍스트 우측 정렬 방법도 설명되었다."
+series: ["Let's Macro"]
+description: "URL Co-Pilot Ver2에 키별 URL 적용 버튼과 Shift+Alt 입력 기능이 추가되었으며, F4 실행 시 발생하던 오류를 막기 위해 상속 클래스로 딜레이를 적용했다. tkinter 버튼 텍스트 우측 정렬도 시도했지만 적용하지 않기로 했다."
+featured_image: "image_244ffb713e5853a61b0312aa.png"
 notion_id: "a1a7f4a9-f9df-442b-9a46-39a02363c57b"
-notion_url: "https://www.notion.so/URL-Co-Pilot-Ver2-a1a7f4a9f9df442b9a4639a02363c57b"
 ---
 
 # URL Co-Pilot Ver2 : 업데이트
 
 > **Summary**
-> ver2 업데이트로 키마다 URL적용 버튼이 추가되었으며, F4 키 매핑 시 발생하는 버그를 수정하기 위해 새로운 코드를 작성하였다. 파이썬에서 클래스 상속을 사용하는 방법과 tkinter 라이브러리를 활용한 버튼 텍스트 우측 정렬 방법도 설명되었다.
+> URL Co-Pilot Ver2에 키별 URL 적용 버튼과 Shift+Alt 입력 기능이 추가되었으며, F4 실행 시 발생하던 오류를 막기 위해 상속 클래스로 딜레이를 적용했다. tkinter 버튼 텍스트 우측 정렬도 시도했지만 적용하지 않기로 했다.
 
 ---
 
 - ver2 업데이트 내용 *
 - 이제 키마다 URL적용 버튼을 가지게 되었습니다
 - shift + alt 를 눌렀을 때 '12121212' 가 입력됩니다 (버튼이 눌렸을때만 활성화)
-![Image](image_ced7cd325d1b.png)
+![Image](image_244ffb713e5853a61b0312aa.png)
 
 > 🔥 **파이썬에서 클래스를 상속받는방법은 다음과같다**
 > # `class 함수명(상속받을함수):`

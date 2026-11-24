@@ -2,8 +2,8 @@
 title: "Gemma 4 12B Heretic: 12GB 그래픽카드면 됩니다. 한 달 10만 명이 고른 로컬 모델입니다"
 date: 2026-11-21T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm"]
+series: ["Self-Hosted AI"]
 description: "Gemma 4 12B Heretic은 양자화하면 7~8GB로 줄어 12GB 그래픽카드나 16GB 맥에서 실행할 수 있는 로컬 멀티모달 모델입니다. 코드·긴 논리·이미지를 처리하며 Ollama나 LM Studio에서 오프라인으로 사용할 수 있지만, 거절 기능 제거에 대한 주장은 모델 제작자의 설명으로 보고 다운로드 수가 적합성을 보장하지 않는다는 점도 유의해야 합니다."
 featured_image: "image_5701eb0ebec3e25473361c81.webp"
 notion_id: "41f1bab9-e3f8-8199-a8e5-d59fc95e2d14"

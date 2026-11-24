@@ -2,8 +2,8 @@
 title: "Bubble Tea: 터미널 UI, 이제 웹처럼 컴포넌트로 조립하면 됩니다"
 date: 2026-02-16T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "Bubble Tea·Lip Gloss·Huh로 이루어진 Charm 스택을 쓰면 터미널 UI를 웹 프런트엔드처럼 컴포넌트로 조립할 수 있습니다. 코딩 에이전트가 tmux 세션을 직접 몰면서 화면을 캡처해 검증하니, 한 팀은 단 2일 만에 TUI를 만들어 출시했습니다. 비결은 명세 기반 설계와 기존 화면을 참조 구현으로 삼는 짧은 피드백 루프입니다."
 featured_image: "image_7cb0ed9afad49b20350fa2d9.webp"
 notion_id: "3091bab9-e3f8-81e7-aec2-e4b45f1a9c69"

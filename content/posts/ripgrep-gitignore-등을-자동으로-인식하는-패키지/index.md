@@ -2,19 +2,21 @@
 title: "ripgrep - gitignore 등을 자동으로 인식하는 패키지"
 date: 2025-07-21T14:32:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
-series: ["Let's Linux!", "Git"]
-description: "ripgrep은 빠르고 효율적인 텍스트 검색 도구로, Rust 언어로 개발되어 높은 성능과 메모리 안정성을 제공합니다. 자동으로 "
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
+series: ["Let's Linux!"]
+description: "ripgrep은 빠르고 효율적인 텍스트 검색 도구로, Rust 언어로 개발되어 높은 성능과 메모리 안정성을 제공합니다. 자동으로 .gitignore 파일을 인식하여 불필요한 검색을 생략하며, 다양한 검색 옵션과 설치 방법을 제공합니다. Neovim과 같은 텍스트 편집기와 통합하여 사용하면 더욱 효과적입니다."
+featured_image: "image_db053b1dcab5f6896697a930.png"
 notion_id: "2371bab9-e3f8-807f-8df2-c5394471b684"
-notion_url: "https://www.notion.so/ripgrep-gitignore-2371bab9e3f8807f8df2c5394471b684"
 ---
 
 # ripgrep - gitignore 등을 자동으로 인식하는 패키지
 
 > **Summary**
-> ripgrep은 빠르고 효율적인 텍스트 검색 도구로, Rust 언어로 개발되어 높은 성능과 메모리 안정성을 제공합니다. 자동으로 
+> ripgrep은 빠르고 효율적인 텍스트 검색 도구로, Rust 언어로 개발되어 높은 성능과 메모리 안정성을 제공합니다. 자동으로 .gitignore 파일을 인식하여 불필요한 검색을 생략하며, 다양한 검색 옵션과 설치 방법을 제공합니다. Neovim과 같은 텍스트 편집기와 통합하여 사용하면 더욱 효과적입니다.
 
 ---
+
+![Image](image_db053b1dcab5f6896697a930.png)
 
 ### **Why: 왜 ripgrep을 사용하는가?**
 

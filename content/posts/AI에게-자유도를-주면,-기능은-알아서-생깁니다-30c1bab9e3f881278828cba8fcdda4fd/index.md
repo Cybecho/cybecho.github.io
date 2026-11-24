@@ -2,9 +2,10 @@
 title: "AI에게 자유도를 주면, 기능은 알아서 생깁니다"
 date: 2026-02-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "소프트웨어의 가치는 미리 만든 기능이 아니라 AI의 '자유도'에 달려 있습니다. UI와 기본 기능은 두되 모든 기능을 API로 열어 AI가 이해하고 제어하게 만들고, 사용자가 '이거 해줘' 한 마디로 원하는 결과를 얻을 수 있게 해야 합니다. 개발자는 닫힌 기능이 아니라 열린 확장성을 설계해야 합니다."
+featured_image: "image_dbdc8ac6608b40c8afdcea04.webp"
 notion_id: "30c1bab9-e3f8-8127-8828-cba8fcdda4fd"
 ---
 

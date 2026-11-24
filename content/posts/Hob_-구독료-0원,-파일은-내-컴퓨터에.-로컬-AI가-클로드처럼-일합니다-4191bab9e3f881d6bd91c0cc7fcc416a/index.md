@@ -2,8 +2,8 @@
 title: "Hob: 구독료 0원, 파일은 내 컴퓨터에. 로컬 AI가 클로드처럼 일합니다"
 date: 2026-11-15T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm"]
+series: ["Self-Hosted AI"]
 description: "Hob은 구독료와 계정 없이 컴퓨터에서 AI 모델을 실행하며, 파일을 읽고 수정하고 분석하는 무료 오픈소스 앱입니다. 모델을 자동으로 선택하고 오프라인에서도 사용할 수 있어 대화와 파일이 컴퓨터에 남지만, 성능은 컴퓨터 사양에 좌우되고 외부 서비스 연결 시 필요한 정보가 전송될 수 있습니다."
 featured_image: "image_caa9a06e8758ce2f829ae72f.webp"
 notion_id: "4191bab9-e3f8-81d6-bd91-c0cc7fcc416a"

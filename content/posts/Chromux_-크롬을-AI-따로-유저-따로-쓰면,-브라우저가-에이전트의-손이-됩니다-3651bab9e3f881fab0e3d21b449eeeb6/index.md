@@ -2,8 +2,8 @@
 title: "Chromux: 크롬을 AI 따로 유저 따로 쓰면, 브라우저가 에이전트의 손이 됩니다"
 date: 2026-05-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["browser-automation","agent"]
+series: ["AI Harness"]
 description: "Chromux는 실제 크롬을 그대로 쓰면서, 탭·프로필·세션을 나눠 여러 에이전트가 동시에 일하게 만드는 CLI입니다. 별도 Chromium 없이 Chrome DevTools Protocol로 직접 제어하고, 세 가지 모양(크롤링 플릿·로그인 자동화·라이브 모드)을 하나의 명령 집합으로 묶었으며, 확인 한 번이 토큰 47개 수준으로 끝납니다. 직접 비교에서 작업 성공률 100%(35/35)와 가장 낮은 토큰·비용·시간을 기록했고, 사이트 메모와 재생 스크립트가 쌓여 두 번째 방문부터 같은 일이 점점 싸집니다."
 featured_image: "image_276d444889dae80d592d35cf.webp"
 notion_id: "3651bab9-e3f8-81fa-b0e3-d21b449eeeb6"

@@ -2,11 +2,11 @@
 title: "Cladue 검색 프롬프트는 어떻게 동작할까?"
 date: 2025-03-22T05:57:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering"]
+series: ["AI Harness"]
 description: "앤트로픽이 공개한 Claude의 웹 검색 시스템 프롬프트는 AI가 검색 도구를 사용할 때 명확한 조건을 규정하고 있다. 사용자가 요청할 때만 검색을 수행하며, 검색 결과는 간결하고 신뢰성 있는 정보만을 포함해야 한다. 저작권을 준수하고, 과도한 정보 제공을 피하며, 필요한 경우 재검색을 제안하는 방식으로 AI의 행동을 관리한다."
+featured_image: "image_930cd83af0f55a1437a8336d.png"
 notion_id: "1be1bab9-e3f8-8043-901a-cee405b0af3e"
-notion_url: "https://www.notion.so/Cladue-1be1bab9e3f88043901acee405b0af3e"
 ---
 
 # Cladue 검색 프롬프트는 어떻게 동작할까?
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/Cladue-1be1bab9e3f88043901acee405b0af3e"
 > 앤트로픽이 공개한 Claude의 웹 검색 시스템 프롬프트는 AI가 검색 도구를 사용할 때 명확한 조건을 규정하고 있다. 사용자가 요청할 때만 검색을 수행하며, 검색 결과는 간결하고 신뢰성 있는 정보만을 포함해야 한다. 저작권을 준수하고, 과도한 정보 제공을 피하며, 필요한 경우 재검색을 제안하는 방식으로 AI의 행동을 관리한다.
 
 ---
+
+![Image](image_930cd83af0f55a1437a8336d.png)
 
 [https://www.threads.net/@aicoffeechat/post/DHdvKxSSI9p](https://www.threads.net/@aicoffeechat/post/DHdvKxSSI9p)
 

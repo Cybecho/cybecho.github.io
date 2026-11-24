@@ -2,11 +2,11 @@
 title: "연탄맥(2013) 에 여러 OS 설치"
 date: 2024-02-10T00:00:00.000Z
 draft: false
-tags: ["ubuntu", "Arch", "WINDOWS", "MAC"]
-series: ["개발환경"]
+tags: ["ubuntu","Arch","WINDOWS"]
+series: ["Dev Environment"]
 description: "연탄맥에 윈도우 설치 후 D300 활성화 방법, 우분투 네이티브 설치 과정, Fedora 기반의 Bazzite 설치 및 재설치 해결 방법에 대한 설명이 포함되어 있습니다. 각 OS 설치에 필요한 링크와 절차가 제공됩니다."
+featured_image: "image_831ee7a69f5b.png"
 notion_id: "acef8a38-d071-491f-89f2-f981070e9b7d"
-notion_url: "https://www.notion.so/2013-OS-acef8a38d071491f89f2f981070e9b7d"
 ---
 
 # 연탄맥(2013) 에 여러 OS 설치
@@ -57,7 +57,7 @@ archilinux install gdisk 로드라이브 날리고 그 후에 ubuntu 설치
 1. 해당 디스크들 삭제하고
 1. 남는 프리 디스크 강제로 합병하고
 1. ms-DOS로 새롭게 마운트함 (안되면 터미널에서 강제로 마운트)
-1. 그리고 [MAC EFI boot 찌꺼기 삭제하기](https://www.notion.so/7e96a6c1114c4d5f89ff5aace5ac2bff) 기존 EFI 정보 날리고
+1. 그리고 [MAC EFI boot 찌꺼기 삭제하기](https://app.notion.com/p/7e96a6c1114c4d5f89ff5aace5ac2bff) 기존 EFI 정보 날리고
 1. 1회정도는 재부팅으로 맥OS 들어가서 마운트된거보고
 1. option누르고 재부팅하고 재설치
 1. fedora 나오면 설치 디스크에서 자동으로 해두고 공간 확보해야한다고하면 아까 ms DOS로 생성한 디스크 삭제해서 공간확보 후 OS설치

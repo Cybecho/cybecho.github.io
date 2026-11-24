@@ -2,9 +2,10 @@
 title: "TerminaI: 월 100달러짜리 AI 시스템 오퍼레이터, 로컬에서 무료로 돌리는 방법이 있다"
 date: 2026-01-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "TerminaI는 Gemini 3를 기반으로 로컬에서 무료로 실행되는 오픈소스 AI 시스템 오퍼레이터입니다. 명령 실행 전 위험도를 검토하고, 작업 수준에 따라 사용자 승인이나 추가 인증을 요청하며, 모든 주요 작업을 감사 로그에 기록합니다. 긴 로그 분석과 오류 수정도 지원해 컴퓨터 제어의 편의성과 데이터 주권, 사용자 통제를 함께 제공합니다."
+featured_image: "image_28b61899c6272ee14eee9eb8.webp"
 notion_id: "2ec1bab9-e3f8-81ce-84b9-da95e16677b6"
 ---
 

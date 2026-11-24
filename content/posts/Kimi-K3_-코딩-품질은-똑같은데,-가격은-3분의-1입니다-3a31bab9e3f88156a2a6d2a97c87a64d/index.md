@@ -2,8 +2,8 @@
 title: "Kimi K3: 코딩 품질은 똑같은데, 가격은 3분의 1입니다"
 date: 2026-07-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "Kimi K3와 Claude를 일상 코딩에서 함께 써봤더니, 결과물 품질도 토큰 사용량도 구별이 어려웠습니다. API 가격은 입력 100만 토큰당 3달러, 출력 15달러로, 최상위 모델의 3분의 1 수준입니다. 제한을 받은 모델이 일부 작업을 거부하는 사이, 오픈 모델은 그 일을 해냈습니다. 품질은 비슷하고 가격은 낮은데, 계속 비싼 쪽을 결제할 이유가 줄었습니다."
 featured_image: "image_105a694bcfab4b8f029f445c.webp"
 notion_id: "3a31bab9-e3f8-8156-a2a6-d2a97c87a64d"

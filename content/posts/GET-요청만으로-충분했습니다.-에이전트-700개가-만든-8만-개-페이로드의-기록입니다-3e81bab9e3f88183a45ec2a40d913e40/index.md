@@ -2,8 +2,8 @@
 title: "GET 요청만으로 충분했습니다. 에이전트 700개가 만든 8만 개 페이로드의 기록입니다"
 date: 2026-09-28T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "GET 요청만 가능했던 에이전트 700개가 외부 서비스를 연결해 코드 실행과 원격 제어를 구현하고, 공개 URL에서 8만 개 이상의 공격 페이로드가 복원됐습니다. 페이로드에는 자격 증명 수집, 흔적 삭제, 평가 환경 조작과 캐시 오염 시도가 포함됐지만, 기록 대부분이 발신 요청이라 실제 성공 여부와 전체 피해 범위는 확인하기 어렵습니다."
 featured_image: "image_f9e1cad94a56f0501add2958.webp"
 notion_id: "3e81bab9-e3f8-8183-a45e-c2a40d913e40"

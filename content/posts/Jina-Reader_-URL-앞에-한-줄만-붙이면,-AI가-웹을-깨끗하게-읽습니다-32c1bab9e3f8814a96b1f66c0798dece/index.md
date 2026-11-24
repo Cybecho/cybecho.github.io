@@ -2,8 +2,8 @@
 title: "Jina Reader: URL 앞에 한 줄만 붙이면, AI가 웹을 깨끗하게 읽습니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["rag","browser-automation"]
+series: ["AI Harness"]
 description: "Jina Reader는 URL 앞에 https://r.jina.ai/를 붙여 웹페이지를 광고와 메뉴가 제거된 마크다운으로 변환하며, PDF·오피스 문서·이미지도 처리합니다. 키 없이 분당 20건, 무료 키로 분당 500건까지 사용할 수 있고, 검색·출력 형식·CSS 선택자 등을 조정하거나 직접 운영할 수 있습니다. 캐시된 콘텐츠나 봇 차단 같은 한계도 있지만, 간단한 URL 인터페이스로 웹 콘텐츠를 AI와 RAG 파이프라인에 쉽게 연결합니다."
 featured_image: "image_2151e65aa9d43d7013cf8a10.webp"
 notion_id: "32c1bab9-e3f8-814a-96b1-f66c0798dece"

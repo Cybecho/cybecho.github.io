@@ -2,8 +2,8 @@
 title: "파일시스템이 다시 주목받는 이유, 에이전트의 기억은 파일에 저장됩니다"
 date: 2026-03-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","harness"]
+series: ["AI Harness"]
 description: "에이전트의 기억 문제는 모델 성능이 아니라 컨텍스트에 있습니다. 컨텍스트 윈도우는 계속 지워지는 화이트보드에 가까워, 자동 압축이 뜨면 쌓아온 기억이 사라집니다. 파일시스템은 기록을 파일에 쓰고 필요할 때 다시 읽는 가장 단순한 해결책이며, 기억을 넘어 스킬과 상호운용성까지 담당하지만, 파일은 최소한만 적어야 합니다."
 featured_image: "image_dea17ce9c24f367cf8d25991.webp"
 notion_id: "31e1bab9-e3f8-81ad-84bc-ede2c1197586"

@@ -2,11 +2,11 @@
 title: "유니티 로그라이크 06"
 date: 2023-03-04T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 클론 게임 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "몬스터를 따라오게 만들기 위한 C# 코드와 관련된 설명이 포함되어 있으며, 적 스프라이트의 회전 방지, 몬스터가 플레이어를 바라보게 하는 방법, 화면을 벗어난 몬스터를 텔레포트시키는 기능을 구현하는 방법이 제시되어 있습니다."
+featured_image: "image_1226eeab5620.png"
 notion_id: "af7c1c92-c779-4ec0-8935-e4b379cfa259"
-notion_url: "https://www.notion.so/06-af7c1c92c7794ec08935e4b379cfa259"
 ---
 
 # 유니티 로그라이크 06
@@ -72,7 +72,7 @@ notion_url: "https://www.notion.so/06-af7c1c92c7794ec08935e4b379cfa259"
 >     }
 > ```
 >
-> ![Image](image_c3e4f36ee3cf.png)
+> ![Image](image_1226eeab5620.png)
 >
 >
 

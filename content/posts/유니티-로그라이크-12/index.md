@@ -2,11 +2,11 @@
 title: "유니티 로그라이크 12"
 date: 2023-03-09T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 클론 게임 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "유니티 로그라이크 게임 개발에 대한 내용으로, 적 처치 로직, 넉백 구현, 리지드바디 및 콜라이더 비활성화, 애니메이션에서 스크립트 추가, 카테고리 이름 헤더 추가 등의 주제를 다루고 있습니다. 또한, 레벨업 시스템과 무기 데미지 증가에 대한 코드 수정 방법도 설명하고 있습니다."
+featured_image: "image_7de16a463cd5.png"
 notion_id: "39b7bec2-674b-4ad5-aa66-83c7f02e326c"
-notion_url: "https://www.notion.so/12-39b7bec2674b4ad5aa6683c7f02e326c"
 ---
 
 # 유니티 로그라이크 12

@@ -2,8 +2,8 @@
 title: "Hell Grind: 95분짜리 AI 장편 영화의 진짜 가치는 영화가 아니라 공개된 프롬프트입니다"
 date: 2026-08-07T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "Hell Grind은 15명이 14일간 생성 작업을 진행해 만든 95분짜리 AI 장편 영화로, 제작비 50만 달러 중 40만 달러가 컴퓨트 비용이다. 모델의 기억 부족을 인물 에셋 시트와 반복되는 상세 프롬프트, 장면 평면도, 스트레스 테스트로 보완했으며, 11만 건이 넘는 생성 기록과 프롬프트, 제작 도구와 방법론을 공개해 AI 영화 제작의 재현 가능한 레시피를 제시했다."
 featured_image: "image_0fd3be2334e448fe3e4b47af.webp"
 notion_id: "3b51bab9-e3f8-8178-a159-fdb2a86b444c"

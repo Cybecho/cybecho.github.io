@@ -2,9 +2,10 @@
 title: "클로드 코드 팀, 비싼 모델은 리더 한 명이면 충분합니다"
 date: 2026-02-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "클로드 코드 팀 기능은 리더 한 명과 여러 팀원이 각자 pane에서 일하는 구조다. tmux session-created 훅에 환경변수를 주입하면 팀원만 대체 모델로 실행할 수 있고, 리더는 오퍼스를 그대로 쓴다. API 키 방식 모델은 키만 넣으면 되고, OAuth 방식 모델은 로컬 프록시 서버를 사이에 둔다."
+featured_image: "image_91ced2f073a4c8d4d59a77cb.webp"
 notion_id: "30c1bab9-e3f8-8156-9f91-ea5b626353ab"
 ---
 

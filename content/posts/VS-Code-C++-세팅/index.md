@@ -2,11 +2,11 @@
 title: "VS Code C++ 세팅"
 date: 2024-01-09T00:42:00.000Z
 draft: false
-tags: ["C++", "MAC", "WINDOWS"]
-series: ["개발환경"]
+tags: ["MAC","WINDOWS"]
+series: ["Dev Environment"]
 description: "VS Code에서 C++ 개발환경을 설정하는 방법에 대한 안내로, 설치 과정, 헤더 파일 포함 방법, 빌드 설정을 위한 JSON 파일 작성법 등을 설명하고 있습니다. 추가적으로 유용한 링크와 디스코드 커뮤니티 참여를 권장합니다."
+featured_image: "image_18490feae0c9b74fa7f65738.png"
 notion_id: "877b6f3e-0e2f-4285-bc5d-c174ff5e5110"
-notion_url: "https://www.notion.so/VS-Code-C-877b6f3e0e2f4285bc5dc174ff5e5110"
 ---
 
 # VS Code C++ 세팅
@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VS-Code-C-877b6f3e0e2f4285bc5dc174ff5e5110"
 
 ---
 
-![Image](image_ce051c6190b5.png)
+![Image](image_18490feae0c9b74fa7f65738.png)
 
 # 설치
 

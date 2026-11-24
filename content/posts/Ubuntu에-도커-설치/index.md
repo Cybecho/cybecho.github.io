@@ -2,11 +2,11 @@
 title: "Ubuntu에 도커 설치"
 date: 2023-07-20T00:00:00.000Z
 draft: false
-tags: ["Docker", "ubuntu"]
-series: ["개발환경"]
+tags: ["Docker","ubuntu"]
+series: ["Dev Environment"]
 description: "우분투 22.04에 도커를 설치하는 방법은 두 가지가 있다. 첫 번째는 인스톨러를 사용하는 방법으로, Mac에서는 공식 홈페이지에서 dmg 파일을 다운로드하여 설치할 수 있으나, CPU 사용량 버그가 있어 Edge 버전을 사용하는 것이 좋다. 두 번째 방법은 터미널을 통해 설치하는 것으로, 시스템 패키지를 업데이트하고 필요한 패키지를 설치한 후, 공식 GPG 키와 apt 저장소를 추가하여 도커를 설치한다. 설치 후 도커의 실행 상태를 확인할 수 있다."
+featured_image: "image_8bb58d8c34cc.png"
 notion_id: "18ecb698-f491-40b9-abb3-535689d1531f"
-notion_url: "https://www.notion.so/Ubuntu-18ecb698f49140b9abb3535689d1531f"
 ---
 
 # Ubuntu에 도커 설치

@@ -2,8 +2,8 @@
 title: "Markdown for Agents: 웹을 지키던 방패가 에이전트에게 길을 열어줍니다"
 date: 2026-03-13T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "Accept: text/markdown 헤더 하나로 웹페이지를 엣지에서 마크다운으로 변환해 에이전트의 토큰 사용을 약 80% 줄일 수 있습니다. 설정과 분석 기능이 제공되지만, 오리진이 AI 트래픽을 식별해 사람과 다른 콘텐츠를 보여주는 클로킹, 크롤링 과금, 변환 과정의 맥락 손실에 대한 우려도 있습니다."
 featured_image: "image_afac8c27f0468da6a7fd4dc4.webp"
 notion_id: "3211bab9-e3f8-8100-b029-d61786de113b"

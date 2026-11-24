@@ -3,10 +3,10 @@ title: "CLI상에서 GitHub 자동 로그인 설정하기"
 date: 2025-07-21T01:45:00.000Z
 draft: false
 tags: ["Git"]
-series: ["Git", "Tips"]
+series: ["Let's Git"]
 description: "Ubuntu에서 Personal Access Token(PAT)을 사용하여 GitHub에 자동 로그인하는 두 가지 방법을 소개합니다. 첫 번째 방법은 .netrc 파일과 Git Credential Helper를 이용하여 토큰을 저장하고 인증 정보를 관리하는 것이고, 두 번째 방법은 GitHub CLI를 설치하고 환경 변수에 토큰을 추가하여 인증하는 것입니다. 두 방법 모두 보안 주의사항이 있으며, 파일 권한 설정을 확인해야 합니다."
+featured_image: "image_9e72b2aec085.png"
 notion_id: "2371bab9-e3f8-8092-8e1f-f1b2a4a385e8"
-notion_url: "https://www.notion.so/CLI-GitHub-2371bab9e3f880928e1ff1b2a4a385e8"
 ---
 
 # CLI상에서 GitHub 자동 로그인 설정하기

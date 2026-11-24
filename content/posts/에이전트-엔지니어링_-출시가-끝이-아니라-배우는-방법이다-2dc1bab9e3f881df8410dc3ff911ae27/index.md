@@ -2,9 +2,10 @@
 title: "에이전트 엔지니어링: 출시가 끝이 아니라 배우는 방법이다"
 date: 2026-01-03T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "에이전트 엔지니어링은 비결정적인 LLM 시스템을 프로덕션에서 신뢰할 수 있도록 Build, Test, Ship, Observe, Refine, Repeat의 사이클로 지속 개선하는 과정이다. 제품 사고·엔지니어링·데이터 사이언스가 협력해 모든 입력과 실제 사용 데이터를 추적하고, 실패를 평가와 회귀 테스트에 반영하며, 출시를 학습의 시작점으로 삼는다."
+featured_image: "image_92baca4980a06cfd08fb2d30.webp"
 notion_id: "2dc1bab9-e3f8-81df-8410-dc3ff911ae27"
 ---
 

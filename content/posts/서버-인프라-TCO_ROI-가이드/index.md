@@ -2,11 +2,11 @@
 title: "서버 인프라 TCO/ROI 가이드"
 date: 2026-01-11T06:26:00.000Z
 draft: false
-tags: ["Sales", "인사이트", "Infra"]
-series: ["Pre-Sales", "Infra & Network"]
+tags: ["인사이트","Infra"]
+series: ["Tips"]
 description: "서버 인프라의 총소유비용(TCO)과 투자수익률(ROI)을 체계적으로 분석하고, 프리세일즈 관점에서 고객에게 효과적으로 제시하는 방법을 다룬다. TCO는 자본지출(CapEx)과 운영지출(OpEx)으로 나뉘며, 숨겨진 비용이 전체 TCO의 최대 40%를 차지할 수 있다. ROI와 순현재가치(NPV) 분석을 통해 인프라 도입의 경제성을 입증해야 하며, 하이브리드 클라우드 모델이 퍼블릭 클라우드보다 비용 효율적임을 강조한다. 고객 제안 시 기술적 우위와 비즈니스 임팩트를 정량화하여 전달하는 전략이 필요하다."
+featured_image: "image_45ca0ab67dae.png"
 notion_id: "2e51bab9-e3f8-80f0-bfac-eba5cf0ff94f"
-notion_url: "https://www.notion.so/TCO-ROI-2e51bab9e3f880f0bfaceba5cf0ff94f"
 ---
 
 # 서버 인프라 TCO/ROI 가이드

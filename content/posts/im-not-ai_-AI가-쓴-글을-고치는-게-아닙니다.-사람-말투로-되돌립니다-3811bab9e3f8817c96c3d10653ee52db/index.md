@@ -2,8 +2,8 @@
 title: "im-not-ai: AI가 쓴 글을 고치는 게 아닙니다. 사람 말투로 되돌립니다"
 date: 2026-06-16T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill"]
+series: ["AI Harness"]
 description: "im-not-ai는 AI가 쓴 한글의 85가지 패턴을 찾아 사실과 의미는 유지한 채 사람다운 말투로 다듬는 스킬입니다. 글 상태에 따라 처리 경로를 선택하고 변경률을 제한해 과도한 수정을 막으며, CLI 도구에서 사용할 수 있습니다."
 featured_image: "image_7ae2bb9712b8dccb527caf1f.webp"
 notion_id: "3811bab9-e3f8-817c-96c3-d10653ee52db"

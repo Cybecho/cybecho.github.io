@@ -2,8 +2,8 @@
 title: "Matrix: AI가 10만 개가 넘으면, 어떤 AI에게 맡길지는 검색이 정합니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","skill"]
+series: ["AI Harness"]
 description: "Matrix는 의미 검색, 전문 검색, 신경망 라우팅을 결합해 10만 개가 넘는 AI 도구·스킬·에이전트 중 적합한 기능을 찾습니다. 검색 반응을 학습에 반영하는 분산 구조로 검색 품질을 개선하며, 대규모 환경에서 정확한 기능을 찾는 일이 핵심 과제입니다. v5의 검색 품질은 아직 확인되지 않았습니다."
 featured_image: "image_b320850722fee81666bddf70.webp"
 notion_id: "32c1bab9-e3f8-811e-8bd3-f84acd03ab2f"

@@ -2,8 +2,8 @@
 title: "Korean Law MCP: 법령을 검색하는 게 아니라, AI에게 법령을 직접 물어보면 됩니다"
 date: 2026-03-31T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp"]
+series: ["AI Harness"]
 description: "Korean Law MCP는 법제처 42개 API를 10개 도구로 묶어, AI 어시스턴트가 대한민국 법령·판례를 원문 그대로 조회하게 만드는 MCP 서버입니다. '화관법 알려줘' 한 마디면 약칭을 풀고 조문을 찾아오고, AI 답변의 인용이 진짜인지 원문과 대조해 검증까지 해줍니다. 설치 없이 공개 서버 주소 하나만 연결하면 바로 쓸 수 있고, 도구는 64개에서 10개로 압축되며 더 빨라졌습니다."
 featured_image: "image_70f06e6a5a22c77b89ad4c7c.webp"
 notion_id: "3341bab9-e3f8-81ff-b45a-cbebf10e082f"

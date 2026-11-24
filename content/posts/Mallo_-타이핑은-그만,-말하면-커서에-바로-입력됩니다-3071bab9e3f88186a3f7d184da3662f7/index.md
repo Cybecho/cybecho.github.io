@@ -2,8 +2,8 @@
 title: "Mallo: 타이핑은 그만, 말하면 커서에 바로 입력됩니다"
 date: 2026-02-15T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness"]
+series: ["AI Harness"]
 description: "Mallo는 단축키를 누르고 말하면 커서 위치에 음성을 바로 입력하는 맥용 받아쓰기 앱입니다. 로컬 Whisper 모델로 오프라인에서 작동하고, 전문용어 등록과 다양한 입력 앱을 지원하며, 구독 없이 한 번 결제로 사용할 수 있습니다."
 featured_image: "image_2271de33df2530c895bd4755.webp"
 notion_id: "3071bab9-e3f8-8186-a3f7-d184da3662f7"

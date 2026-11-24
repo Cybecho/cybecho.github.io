@@ -2,8 +2,8 @@
 title: "OpenDesign: 클로드 디자인의 오픈소스 대안, 반년 만에 별 10만 개가 찍혔습니다"
 date: 2026-05-09T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "OpenDesign은 클로드 디자인의 오픈소스 대안으로 시작해, 쓰는 코딩 에이전트를 디자인 엔진으로 삼는 협업 워크스페이스로 커진 프로젝트입니다. 브랜드 기준을 DESIGN.md 한 장에 적어두면 에이전트가 그 기준에 맞춰 프로토타입·덱·이미지·영상까지 뽑아냅니다. 별 10만 개를 넘긴 인기 프로젝트지만, 호스팅 모델 크레딧은 유료 플랜이고 리눅스 설치 파일은 아직 없어 소스 빌드가 필요하다는 점은 알고 써야 합니다."
 featured_image: "image_f64edaafd9d33c88f59b31dc.webp"
 notion_id: "35b1bab9-e3f8-8143-809b-ff18afaaba1a"

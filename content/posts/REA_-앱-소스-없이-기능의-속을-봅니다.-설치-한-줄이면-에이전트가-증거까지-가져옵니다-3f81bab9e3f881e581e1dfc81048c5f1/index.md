@@ -2,8 +2,8 @@
 title: "REA: 앱 소스 없이 기능의 속을 봅니다. 설치 한 줄이면 에이전트가 증거까지 가져옵니다"
 date: 2026-10-13T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "REA는 소스 코드 없이도 바이너리와 앱을 로컬에서 분석해 기능의 동작과 근거를 확인하고, 에이전트가 설명·구현·테스트에 활용하도록 돕습니다. 설치와 설정이 간편하지만, 소유했거나 분석 허가를 받은 소프트웨어만 공식 경로에서 받아 사용하고 관련 라이선스와 약관을 확인해야 합니다."
 featured_image: "image_ff25ab49c5f0a29b7f9eb0a3.webp"
 notion_id: "3f81bab9-e3f8-81e5-81e1-dfc81048c5f1"

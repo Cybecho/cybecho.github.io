@@ -2,11 +2,11 @@
 title: "엑셀 데이터를 활용하여 보고서를 자동으로 작성하는 등의 다양한 AI 도구들"
 date: 2025-04-22T00:51:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering"]
+series: ["AI Harness"]
 description: "AI 도구를 활용하여 리더는 올바른 지시와 구성원 역량 평가를 할 수 있으며, 구성원은 의미 없는 노동을 줄이고 가치 있는 일에 집중할 수 있다. 스토리텔.ai와 데이터베이스.빌드를 통해 데이터 분석과 보고서 작성이 효율적으로 이루어지며, AI는 HR 혁신을 통해 퇴사자 인터뷰와 리더십 평가를 지원하고 데이터 기반 인사이트를 제공한다."
+featured_image: "image_7a03b76c8e81.png"
 notion_id: "1dd1bab9-e3f8-80b3-b725-ff35b4f538ca"
-notion_url: "https://www.notion.so/AI-1dd1bab9e3f880b3b725ff35b4f538ca"
 ---
 
 # 엑셀 데이터를 활용하여 보고서를 자동으로 작성하는 등의 다양한 AI 도구들

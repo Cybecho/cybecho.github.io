@@ -3,16 +3,16 @@ title: "ProxMox 네트워크 모드 - 디폴트 설정과 폐쇄망 만드는 �
 date: 2025-03-05T08:36:00.000Z
 draft: false
 tags: ["ProxMox"]
-series: ["Infra & Network", "Let's Homelab!"]
-description: "Proxmox에서 VM을 생성하면 기본적으로 Bridge 모드로 설정되며, "
+series: ["Infra & Network"]
+description: "Proxmox에서 VM을 생성하면 기본적으로 Bridge 모드로 설정되며, vmbr0이라는 기본 브리지가 자동으로 만들어집니다. 특정 VM들끼리만 통신할 수 있는 독립된 네트워크를 만들기 위해서는 새로운 브리지를 만들거나 VLAN을 사용하거나 Open vSwitch를 활용할 수 있습니다. 이를 통해 VM들이 서로 통신할 수 있는 환경을 설정할 수 있습니다."
+featured_image: "image_d6afbd9f21d1.png"
 notion_id: "1ad1bab9-e3f8-80a3-9495-f8ed670086fa"
-notion_url: "https://www.notion.so/ProxMox-1ad1bab9e3f880a39495f8ed670086fa"
 ---
 
 # ProxMox 네트워크 모드 - 디폴트 설정과 폐쇄망 만드는 방법
 
 > **Summary**
-> Proxmox에서 VM을 생성하면 기본적으로 Bridge 모드로 설정되며, 
+> Proxmox에서 VM을 생성하면 기본적으로 Bridge 모드로 설정되며, vmbr0이라는 기본 브리지가 자동으로 만들어집니다. 특정 VM들끼리만 통신할 수 있는 독립된 네트워크를 만들기 위해서는 새로운 브리지를 만들거나 VLAN을 사용하거나 Open vSwitch를 활용할 수 있습니다. 이를 통해 VM들이 서로 통신할 수 있는 환경을 설정할 수 있습니다.
 
 ---
 

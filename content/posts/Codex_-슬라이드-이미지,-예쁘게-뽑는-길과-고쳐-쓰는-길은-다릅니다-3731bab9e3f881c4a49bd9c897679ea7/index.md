@@ -2,8 +2,8 @@
 title: "Codex: 슬라이드 이미지, 예쁘게 뽑는 길과 고쳐 쓰는 길은 다릅니다"
 date: 2026-06-02T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","image-generation"]
+series: ["AI Media"]
 description: "코덱스로 슬라이드를 만들 때는 발표 후 수정 빈도와 디자인 요구에 따라 방식을 선택해야 합니다. 코드 기반 공식 스킬은 편집과 검수에 유리하고 추가 비용이 없지만 디자인이 평범할 수 있으며, 이미지 기반 스킬은 더 화려한 결과물을 내지만 수정 시 재생성이 필요하고 비용과 품질 변동이 따릅니다. 반복 발행에는 일관된 템플릿 방식도 적합합니다."
 featured_image: "image_7b17db76014cf21b4012b0ed.webp"
 notion_id: "3731bab9-e3f8-81c4-a49b-d9c897679ea7"

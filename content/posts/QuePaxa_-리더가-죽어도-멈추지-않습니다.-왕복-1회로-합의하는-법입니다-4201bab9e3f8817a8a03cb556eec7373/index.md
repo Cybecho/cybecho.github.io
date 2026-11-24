@@ -2,8 +2,8 @@
 title: "QuePaxa: 리더가 죽어도 멈추지 않습니다. 왕복 1회로 합의하는 법입니다"
 date: 2026-11-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["Infra"]
+series: ["Infra & Network"]
 description: "QuePaxa는 리더 장애나 네트워크 지연에도 합의가 멈추지 않도록 리더를 필수 조건이 아닌 빠른 경로로 활용하는 비동기 합의 프로토콜입니다. 헤징과 제안자 간 협력으로 장애 탐지와 리더 선거에 따른 정지를 피하며, 평가에서는 결정의 95% 이상이 왕복 1회로 완료되고 리더 장애 중에도 평소 속도의 약 65%로 처리가 이어졌습니다. 실전 검증과 장애 후 복구 지원은 아직 진행 중입니다."
 featured_image: "image_ab3db741852938ba224e97b3.webp"
 notion_id: "4201bab9-e3f8-817a-8a03-cb556eec7373"

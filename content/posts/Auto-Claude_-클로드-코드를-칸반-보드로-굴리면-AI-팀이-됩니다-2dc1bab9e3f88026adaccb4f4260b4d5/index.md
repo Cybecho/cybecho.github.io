@@ -2,9 +2,10 @@
 title: "Auto Claude: 클로드 코드를 칸반 보드로 굴리면 AI 팀이 됩니다"
 date: 2026-01-02T07:28:00.000Z
 draft: false
-tags: ["AI","Claude"]
-series: ["AI"]
+tags: ["Claude","agent"]
+series: ["AI Harness"]
 description: "Auto Claude는 Claude Code를 칸반 보드 기반의 AI 팀으로 운영하는 무료 오픈소스 도구입니다. 작업을 티켓으로 만들면 AI가 계획·실행·검토하고, Git 워크트리에서 최대 12개 에이전트가 병렬 작업하며 충돌도 자동으로 해결합니다. 코드베이스를 기억해 기능 제안과 체인지로그 생성까지 지원하고, 사람은 최종 결과를 검토하고 승인합니다."
+featured_image: "image_81feecef47ab196ae2f2bb74.webp"
 notion_id: "2dc1bab9-e3f8-8026-adac-cb4f4260b4d5"
 ---
 

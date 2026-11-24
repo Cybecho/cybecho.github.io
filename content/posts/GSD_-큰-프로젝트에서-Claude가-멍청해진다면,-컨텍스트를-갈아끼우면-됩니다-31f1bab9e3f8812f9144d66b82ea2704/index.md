@@ -2,8 +2,8 @@
 title: "GSD: 큰 프로젝트에서 Claude가 멍청해진다면, 컨텍스트를 갈아끼우면 됩니다"
 date: 2026-03-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "GSD는 대규모 Claude Code 작업에서 컨텍스트가 가득 차며 품질이 저하되는 문제를 단계별 계획과 새 컨텍스트의 서브에이전트 실행으로 줄입니다. 논의·계획·실행·검증의 과정을 파일로 기록해 세션이 바뀌어도 진행 상황과 결정이 유지되며, 작은 작업에는 간단한 방식으로 대응하고 토큰 비용과 권한 설정에도 주의해야 합니다. 원본 저장소는 아카이브됐고 프로젝트는 GSD Core로 이어집니다."
 featured_image: "image_c062d2132adcaa02468ab6f3.webp"
 notion_id: "31f1bab9-e3f8-812f-9144-d66b82ea2704"

@@ -2,11 +2,11 @@
 title: "라즈베리파이에Lineage OS 설치 시 이미지 쓰기 오류 해결 과정"
 date: 2025-07-17T15:47:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
 series: ["Let's Linux!"]
 description: "라즈베리파이에 Lineage OS를 설치하는 과정에서 SD카드에 이미지 쓰기 오류가 발생했으나, SD 협회에서 제공하는 SD Card Formatter를 사용하여 포맷한 후 오류가 해결되었다. 일반 포맷 도구와 달리 SD Card Formatter는 SD 카드의 내부 구조를 최적화하여 정확한 파티션 정렬과 FAT 파일 시스템 구성을 수행함으로써 임베디드 장치에서의 신뢰성을 높인다."
+featured_image: "image_b9d7c4ac1e67.png"
 notion_id: "2331bab9-e3f8-8019-a0b2-f53b1d89c0af"
-notion_url: "https://www.notion.so/Lineage-OS-2331bab9e3f88019a0b2f53b1d89c0af"
 ---
 
 # 라즈베리파이에Lineage OS 설치 시 이미지 쓰기 오류 해결 과정

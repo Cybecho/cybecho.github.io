@@ -2,8 +2,8 @@
 title: "autoresearch: 밤새 에이전트가 연구하면, 아침에는 더 나은 모델이 기다립니다"
 date: 2026-03-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "오토리서치는 에이전트가 train.py만 수정하며 5분 학습과 val_bpb 평가를 반복해 모델을 개선하는 자동 연구 루프입니다. 사람은 program.md에 목표와 제약을 정하고, 에이전트는 개선된 변경만 유지해 밤새 수많은 실험을 수행합니다. 성과는 평가 기준과 지침의 품질에 달려 있으며, 이 실험·측정·유지 또는 폐기 방식은 모델 학습 외의 작업에도 적용할 수 있습니다."
 featured_image: "image_dab5aea1bbccd5bdf0d768a0.webp"
 notion_id: "31f1bab9-e3f8-81fa-9d7e-e6fdb661bf22"

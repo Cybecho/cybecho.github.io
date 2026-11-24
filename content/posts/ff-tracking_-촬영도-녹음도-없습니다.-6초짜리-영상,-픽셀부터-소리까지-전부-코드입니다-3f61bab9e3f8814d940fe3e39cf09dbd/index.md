@@ -2,8 +2,8 @@
 title: "ff-tracking: 촬영도 녹음도 없습니다. 6초짜리 영상, 픽셀부터 소리까지 전부 코드입니다"
 date: 2026-10-11T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "AI 에이전트가 터미널에 타이핑하는 6초를 가상의 카메라가 촬영한 영상입니다. 촬영도 녹음도 없이 픽셀부터 소리까지 전부 코드로 만들었습니다. 화면을 그리는 패스 1개, 렌즈를 흉내 내는 셰이더 패스 1개, 소리를 합성하는 스크립트 1개가 같은 장면 데이터를 공유해, 초점과 소리가 글자 위치를 정확히 따라갑니다. 장면 목록의 문장·색·카메라 값만 바꾸면 내 영상이 되고, 렌더링은 한 줄 명령어로 끝나며, M3 Pro 기준 약 40초가 걸립니다."
 featured_image: "image_108f80a5fbf0dd2a2ce91ba5.webp"
 notion_id: "3f61bab9-e3f8-814d-940f-e3e39cf09dbd"

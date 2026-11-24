@@ -2,8 +2,8 @@
 title: "나만의 AI, 내 컴퓨터에 둡니다. 계정도 구독료도 없이, 오프라인에서도 돌아갑니다"
 date: 2026-11-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm"]
+series: ["Self-Hosted AI"]
 description: "Ollama와 Open WebUI를 이용하면 계정이나 구독료 없이 오프라인에서도 개인 컴퓨터에서 AI를 실행할 수 있습니다. 모델 크기는 그래픽카드 메모리에 맞춰 선택하고, 성능과 컨텍스트 길이를 확인해야 합니다. 로컬 AI는 프라이버시와 오프라인 사용에 유용하지만 프론티어 모델보다 능력이 낮을 수 있으며, 결과에 대한 책임을 지고 서버 포트를 인터넷에 노출하지 않도록 주의해야 합니다."
 featured_image: "image_9842bbda7483c2997614493a.webp"
 notion_id: "41d1bab9-e3f8-81b9-879c-e4f5966b7cc2"

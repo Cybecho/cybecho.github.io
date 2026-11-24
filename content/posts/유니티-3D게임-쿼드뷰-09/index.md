@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 09"
 date: 2023-02-17T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "유니티 3D 게임 개발에 있어 적 AI 구현을 위해 GetComponentInChildren<>();와 NavMeshAgent를 사용하며, NavMesh 베이킹을 통해 적이 플레이어를 잘 따라오도록 설정합니다. 애니메이터 컨트롤러를 통해 적의 애니메이션을 관리하고, 공격 범위를 설정하기 위해 SphereCastAll을 활용하여 플레이어를 타겟팅하는 코드를 작성합니다."
+featured_image: "image_ac44dec23ece.png"
 notion_id: "39ad5223-d16d-489b-a97d-4dcd626b0636"
-notion_url: "https://www.notion.so/3D-09-39ad5223d16d489ba97d4dcd626b0636"
 ---
 
 # 유니티 3D게임 쿼드뷰 09

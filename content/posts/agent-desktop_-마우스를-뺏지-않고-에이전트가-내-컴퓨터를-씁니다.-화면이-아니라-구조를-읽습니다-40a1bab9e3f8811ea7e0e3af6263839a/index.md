@@ -2,8 +2,8 @@
 title: "agent-desktop: 마우스를 뺏지 않고 에이전트가 내 컴퓨터를 씁니다. 화면이 아니라 구조를 읽습니다"
 date: 2026-10-31T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "agent-desktop은 스크린샷 대신 운영체제의 접근성 트리를 읽어 UI 요소를 구조화하고, 참조 번호로 앱을 조작합니다. 기본적으로 마우스와 포커스를 빼앗지 않아 사용자가 다른 작업을 계속할 수 있으며, 여러 에이전트의 동시 작업도 지원하지만 실제 물리 입력은 차례대로 처리됩니다. 접근성 정보가 없는 앱이나 캔버스에는 한계가 있고, 스냅샷과 클립보드에 민감한 정보가 포함될 수 있어 주의가 필요합니다."
 featured_image: "image_994a251ff0fcaf6764deb475.webp"
 notion_id: "40a1bab9-e3f8-811e-a7e0-e3af6263839a"

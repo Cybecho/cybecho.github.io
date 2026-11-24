@@ -2,8 +2,8 @@
 title: "Codex: 한 줄 프롬프트보다 쌓이는 설정이 먼저입니다"
 date: 2026-03-30T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "Codex는 터미널·에디터·앱에서 활용하는 코딩 에이전트로, 목표·맥락·제약·완료 조건을 명확히 제시하고 AGENTS.md에 규칙을 쌓아 일관된 결과를 얻을 수 있습니다. 복잡한 작업은 계획부터 세우고 테스트·린트·리뷰까지 검증하며, 반복 작업은 스킬로 묶고 충분히 신뢰할 수 있을 때 자동화하세요. 권한은 신중히 관리하고 스레드는 작업별로 나누는 것이 중요합니다."
 featured_image: "image_7489210fb10960eda626af14.webp"
 notion_id: "3331bab9-e3f8-8107-b368-fe4ca63914a5"

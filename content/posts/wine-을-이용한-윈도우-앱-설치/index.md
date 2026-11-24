@@ -2,11 +2,11 @@
 title: "wine 을 이용한 윈도우 앱 설치"
 date: 2024-06-06T06:17:00.000Z
 draft: false
-tags: ["ubuntu", "Debian", "Arch", "RHEL/Fedora/Rocky"]
+tags: ["ubuntu","Debian","Arch"]
 series: ["Let's Linux!"]
 description: "윈도우 앱 설치를 위해 wine과 playonlinux를 사용하며, 카카오톡, 반디집, 노션 등의 프로그램 설치 방법을 설명한다. 글꼴 설치와 exe 파일 다운로드도 안내한다."
+featured_image: "image_6c7243b4bba3.png"
 notion_id: "6d0d0331-75ee-4c73-8707-0be5d3d992f4"
-notion_url: "https://www.notion.so/wine-6d0d033175ee4c7387070be5d3d992f4"
 ---
 
 # wine 을 이용한 윈도우 앱 설치
@@ -17,6 +17,8 @@ notion_url: "https://www.notion.so/wine-6d0d033175ee4c7387070be5d3d992f4"
 ---
 
 ![Image](image_6c7243b4bba3.png)
+
+![Image](image_db053b1dcab5f6896697a930.png)
 
 [https://hamonikr.org/used_hamonikr/82280](https://hamonikr.org/used_hamonikr/82280)
 

@@ -2,9 +2,11 @@
 title: "OS를 직접 구축해보자 (자료정리)"
 date: 2026-01-02T00:00:00.000Z
 draft: false
+tags: ["coding"]
+series: ["Dev Environment"]
 description: "운영체제 개발을 위한 필수 지식, 튜토리얼, 아키텍처별 학습 경로, 학습용 프로젝트, 개발 단계별 자료, 교재 및 강좌, 개발 환경과 디버깅, 커뮤니티 지원, 권장 학습 로드맵, 아키텍처 선택 가이드를 포함한 포괄적인 자료를 제공. 각 단계에서 필요한 리소스와 링크를 통해 운영체제 구축의 기초부터 고급 기능까지 체계적으로 학습할 수 있도록 안내."
+featured_image: "image_3725caab2579.png"
 notion_id: "2dc1bab9-e3f8-81cd-a31c-d1b35bbf40e2"
-notion_url: "https://www.notion.so/OS-2dc1bab9e3f881cda31cd1b35bbf40e2"
 ---
 
 # OS를 직접 구축해보자 (자료정리)

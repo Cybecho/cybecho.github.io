@@ -2,8 +2,8 @@
 title: "Auto-Research Trading: AI가 전략을 스스로 진화시키면, 시장은 AI끼리의 대결이 됩니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "Auto-Research Trading은 AI 에이전트가 매매 전략을 103회 자율적으로 실험해 백테스트 샤프 지수를 2.7에서 21.4로 높인 사례다. 핵심은 전략의 성과보다 연구 속도와 설계 방식의 변화이며, 검증 데이터에 과적합된 결과일 수 있으므로 수수료·슬리피지와 새로운 구간을 반영한 실전 검증이 필요하다. AI 전략이 빠르게 같은 패턴으로 수렴할수록 사람은 연구 방향과 규칙, 검증 기준을 설계하는 역할을 맡게 된다."
 featured_image: "image_b84cc7862ce742a5866c80ee.webp"
 notion_id: "32c1bab9-e3f8-81d6-867f-db3e0573c20b"

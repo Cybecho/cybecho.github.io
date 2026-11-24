@@ -2,11 +2,11 @@
 title: "유니티 로그라이크 09"
 date: 2023-03-05T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 클론 게임 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "회전 근접무기를 구현하기 위해 Bullet.cs와 Enemy.cs를 수정하는 방법에 대해 설명합니다. Bullet 클래스는 피해량을 초기화하는 Init 함수를 포함하고, Enemy 클래스는 OnTriggerEnter2D 메서드를 통해 플레이어의 무기와 충돌 시 피해를 처리합니다."
+featured_image: "image_bddbfa9920bf.png"
 notion_id: "90c181ee-53bf-4741-8094-1b362cee236e"
-notion_url: "https://www.notion.so/09-90c181ee53bf474180941b362cee236e"
 ---
 
 # 유니티 로그라이크 09

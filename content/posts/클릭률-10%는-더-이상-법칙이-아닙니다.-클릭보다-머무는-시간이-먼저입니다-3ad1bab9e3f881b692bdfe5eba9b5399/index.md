@@ -2,8 +2,8 @@
 title: "클릭률 10%는 더 이상 법칙이 아닙니다. 클릭보다 머무는 시간이 먼저입니다"
 date: 2026-07-30T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["blog-monetization"]
+series: ["블로그 수익 글쓰기"]
 description: "클릭률 10%는 유튜브의 합격선이 아니라 흔히 관찰되는 범위의 상단이며, 노출이 넓어지면 클릭률이 낮아져도 조회수는 늘 수 있습니다. 클릭률은 유입 경로가 같은 영상끼리 비교하고 평균 시청 지속 시간 및 시청자 만족도와 함께 살펴야 합니다. 제목·썸네일의 약속이 영상 내용과 맞아 시청자가 오래 머물도록 하는 것이 중요합니다."
 featured_image: "image_e69f24e7a66df7558f4eb3ec.webp"
 notion_id: "3ad1bab9-e3f8-81b6-92bd-fe5eba9b5399"

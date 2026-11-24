@@ -2,8 +2,8 @@
 title: "OpenDataLoader PDF: 출시 일주일 만에 깃허브 트렌딩 1위, 하루에 별 1,800개가 찍혔습니다"
 date: 2026-03-24T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["rag","coding"]
+series: ["AI Harness"]
 description: "OpenDataLoader PDF는 로컬에서 작동하는 하이브리드 방식으로 PDF의 텍스트·표·이미지·수식 등을 AI가 처리할 수 있는 형태로 변환하는 오픈소스 도구다. 2026년 3월 v2.0 출시 후 깃허브 트렌딩 1위에 올랐고 별이 꾸준히 늘어 10월에는 약 3만 개를 기록했다. 공개된 벤치마크와 재현 코드로 성능을 검증할 수 있으며, Apache 2.0 라이선스로 자유롭게 사용할 수 있다."
 featured_image: "image_a978c77683e5a37ff785859e.webp"
 notion_id: "32d1bab9-e3f8-81a7-bd7e-f68368dfb395"

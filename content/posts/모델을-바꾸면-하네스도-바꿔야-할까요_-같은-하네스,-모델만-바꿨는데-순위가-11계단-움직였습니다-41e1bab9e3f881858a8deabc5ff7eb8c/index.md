@@ -2,8 +2,8 @@
 title: "모델을 바꾸면 하네스도 바꿔야 할까요? 같은 하네스, 모델만 바꿨는데 순위가 11계단 움직였습니다"
 date: 2026-11-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness"]
+series: ["AI Harness"]
 description: "같은 하네스를 쓰고 모델만 바꿨더니 하네스 순위가 22개 중 11계단이나 움직였고, 모델마다 가성비가 가장 좋은 하네스는 따로 있었습니다. GLM-5.3에는 Codex CLI, GLM Flash에는 Pi, DeepSeek에는 ZCode, Muse에는 Oh My Pi, Kimi-K3에는 Alma가 가장 좋았습니다. 다섯 모델 중 네 모델에서는 가장 비싼 하네스가 통과율도 가장 낮았습니다. 비싼 하네스가 더 잘한다는 보장은 없었고, 같은 모델에서도 하네스에 따라 작업당 비용이 1.8배에서 5.0배까지 벌어졌습니다. 비용을 가른 건 프롬프트 크기가 아니라 실행 단계 수였습니다. 매 단계마다 전체 문맥을 다시 보내기 때문이고, 실패한 시도가 전체 비용의 64.5%를 차지했습니다. 모델을 바꾸면 하네스도 다시 비교해야 합니다."
 featured_image: "image_ca557a99f93854bccac1e7b3.webp"
 notion_id: "41e1bab9-e3f8-8185-8a8d-eabc5ff7eb8c"

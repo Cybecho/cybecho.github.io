@@ -2,8 +2,8 @@
 title: "tutor-skills: AI가 먼저 묻는 공부법, 2주 매일 30분으로 자격증을 땄습니다"
 date: 2026-03-04T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill"]
+series: ["AI Harness"]
 description: "tutor-skills는 클로드 코드 스킬 두 개로 교재나 코드베이스를 옵시디언 학습 노트로 바꾸고, 퀴즈로 약점을 찾아 반복하는 메타인지 학습 시스템입니다. 자료를 넣으면 /tutor-setup이 개념 노트와 연습 문제를 담은 StudyVault를 만들고, /tutor가 한 라운드 4문제씩 물어 개념별 숙련도를 5단계 배지로 추적합니다. 2주 동안 매일 30분씩 돌린 결과 자격증에 합격했고, 자격증 준비와 새 프로젝트 온보딩, 기술 서적 공부에 그대로 쓸 수 있습니다."
 featured_image: "image_d358c256715ba874a61cf362.webp"
 notion_id: "3191bab9-e3f8-81fc-8aee-e3de671134c4"

@@ -2,11 +2,11 @@
 title: "AI를 무한루프한 경험 공유"
 date: 2026-01-11T07:54:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "‘RepoMirror’ 팀은 코딩 에이전트를 무한 루프에서 실행하여 여러 코드베이스를 자동으로 포팅하는 실험을 진행했습니다. 이 과정에서 1,000개 이상의 커밋과 6개의 포팅된 코드베이스가 생성되었으며, 간단한 지시로 에이전트가 작업을 수행하도록 했습니다. 프롬프트의 길이가 짧을수록 성능이 향상되었고, 새로운 도구인 RepoMirror를 통해 다양한 소스와 타깃 레포를 설정할 수 있게 되었습니다."
+featured_image: "image_e9f981d32006.png"
 notion_id: "2e51bab9-e3f8-80ca-865a-c8f7266e108f"
-notion_url: "https://www.notion.so/AI-2e51bab9e3f880ca865ac8f7266e108f"
 ---
 
 # AI를 무한루프한 경험 공유

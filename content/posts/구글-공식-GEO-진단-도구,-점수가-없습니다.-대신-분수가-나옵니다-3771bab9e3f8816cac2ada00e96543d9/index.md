@@ -2,8 +2,8 @@
 title: "구글 공식 GEO 진단 도구, 점수가 없습니다. 대신 분수가 나옵니다"
 date: 2026-06-06T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "라이트하우스의 Agentic Browsing 검사는 WebMCP, 접근성 트리, 레이아웃 안정성, llms.txt 등 6개 항목을 점수 대신 통과한 검사 수로 보여줍니다. 이는 검색 순위가 아니라 에이전트가 사이트에서 작업을 수행하기 쉬운지를 진단하며, 지금은 접근성과 화면 안정성을 개선하고 WebMCP는 필요해질 때까지 지켜보면 됩니다."
 featured_image: "image_de4f3e5b0e8d4889586de95a.webp"
 notion_id: "3771bab9-e3f8-816c-ac2a-da00e96543d9"

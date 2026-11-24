@@ -2,8 +2,7 @@
 title: "MVP는 끝났습니다, 이제는 사랑받는 최소 제품이 기준입니다"
 date: 2026-03-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Essays"]
 description: "AI가 개발 비용을 무너뜨리면서 기능만 갖춘 제품은 더 이상 통하지 않으며, 새 기준선은 사용자가 사랑할 수 있는 최소 제품, MLP가 됐습니다. MVP는 원래 빠른 학습 도구였지만 '최소한으로 작동하는 제품'이라는 변명으로 변질됐고, 이제 기능은 누구나 만들 수 있어 차별화가 안 됩니다. 남은 해자는 감정입니다. 피라미드 꼭대기 Lovable까지 올라가고 작은 기쁨의 순간을 의도적으로 설계하는 팀이 살아남습니다."
 featured_image: "image_168de075e48f2da313b35abf.webp"
 notion_id: "31e1bab9-e3f8-81a4-8c19-c3654bc6cd5c"

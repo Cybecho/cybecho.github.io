@@ -2,11 +2,11 @@
 title: "썬더볼트를 이용한 mac , windows , linux 연결"
 date: 2025-02-10T10:44:00.000Z
 draft: false
-tags: ["MAC", "WINDOWS", "ubuntu"]
-series: ["Let's Homelab!", "원격 라이프!"]
+tags: ["MAC","WINDOWS","ubuntu"]
+series: ["Let's Homelab!"]
 description: "썬더볼트를 이용하여 mac, windows, linux 간 연결 방법을 설명합니다. Windows와 macOS 간 직접 화면 공유는 불가능하지만, 네트워크 설정 후 원격 데스크톱 소프트웨어를 사용하여 화면을 공유할 수 있습니다. Linux와 macOS는 Thunderbolt 네트워킹을 통해 직접 연결할 수 있으며, 파일 전송과 원격 제어가 가능합니다. 각 시스템의 네트워크 설정 방법도 안내합니다."
+featured_image: "image_71584037f33c.png"
 notion_id: "1961bab9-e3f8-8039-bba8-ca70524471e9"
-notion_url: "https://www.notion.so/mac-windows-linux-1961bab9e3f88039bba8ca70524471e9"
 ---
 
 # 썬더볼트를 이용한 mac , windows , linux 연결

@@ -2,8 +2,8 @@
 title: "Pascal Editor: 브라우저만 켜면 3D 건물 설계가 됩니다. 설치도, 라이선스도 필요 없습니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp","agent"]
+series: ["AI Harness"]
 description: "Pascal Editor는 설치나 라이선스 비용 없이 브라우저에서 실시간 3D 건축 설계를 할 수 있는 오픈소스 도구입니다. 작업은 로컬에 저장되며, MCP를 통해 AI 에이전트와 함께 설계할 수 있습니다. 다만 공사비·법규 검토 기능과 IFC 내보내기는 없고, 대형 장면의 성능과 초기 버전의 안정성에는 한계가 있습니다."
 featured_image: "image_7624f5f102a17cf41ebb9ea6.webp"
 notion_id: "32c1bab9-e3f8-8138-907f-ff477cf4b968"

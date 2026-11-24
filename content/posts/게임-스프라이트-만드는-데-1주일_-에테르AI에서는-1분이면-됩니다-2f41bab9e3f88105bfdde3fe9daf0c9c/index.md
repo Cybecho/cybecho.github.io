@@ -2,7 +2,10 @@
 title: "게임 스프라이트 만드는 데 1주일? 에테르AI에서는 1분이면 됩니다"
 date: 2026-01-26T00:00:00.000Z
 draft: false
+tags: ["image-generation"]
+series: ["AI Media"]
 description: "에테르AI는 스타일을 개인화하고 일관성을 유지하며 2D 스프라이트와 VFX를 빠르게 제작하고, 결과물을 유니티에서 바로 사용할 수 있게 합니다. AI 게임 개발에서는 2D에 에테르AI, 3D 모델에 Meshy AI, 코드에 AI 도구를 활용하며, 두 플랫폼을 통합하는 서비스도 예정돼 있습니다."
+featured_image: "image_dff40f2a00d7ec76f6106b64.webp"
 notion_id: "2f41bab9-e3f8-8105-bfdd-e3fe9daf0c9c"
 ---
 

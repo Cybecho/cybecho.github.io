@@ -2,8 +2,8 @@
 title: "gstack: 슬래시 하나로 전문가 6명을 부르면, 혼자서도 팀처럼 일합니다"
 date: 2026-03-13T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill","agent"]
+series: ["AI Harness"]
 description: "gstack은 클로드 코드에서 CEO, 엔지니어링 매니저, 리뷰어, 릴리즈 엔지니어, QA, 회고 담당 역할을 불러 팀처럼 일하게 하는 무료 오픈소스 스킬 모음입니다. 아이디어 검토부터 계획, 구현, 리뷰, 테스트, 출시, 회고까지 단계별 문서를 이어받아 진행하며, 코드 작성 전에 질문과 설계를 거쳐 방향을 점검합니다. 터미널에서 간단히 설치할 수 있고, 필요한 스킬부터 선택해 사용할 수 있습니다."
 featured_image: "image_7e5e0a4a2a7ec9e72058d0a4.webp"
 notion_id: "3221bab9-e3f8-818b-9079-e11b162e5524"

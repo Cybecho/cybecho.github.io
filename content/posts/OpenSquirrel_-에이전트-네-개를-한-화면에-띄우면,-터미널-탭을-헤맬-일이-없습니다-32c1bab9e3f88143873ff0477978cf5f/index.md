@@ -2,8 +2,8 @@
 title: "OpenSquirrel: 에이전트 네 개를 한 화면에 띄우면, 터미널 탭을 헤맬 일이 없습니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","harness"]
+series: ["AI Harness"]
 description: "OpenSquirrel은 Rust와 GPUI로 만든 macOS용 콘솔로, Claude Code·Codex·Cursor·OpenCode를 타일 화면에서 동시에 관리하고 에이전트 간 작업 위임과 세션 복원을 지원합니다. 키보드 중심의 가벼운 인터페이스를 제공하며, 초기 단계의 macOS 전용 프로젝트로 직접 빌드해야 합니다. 권한 우회 옵션은 위험할 수 있으므로 격리된 작업 공간에서만 사용하는 것이 안전합니다."
 featured_image: "image_1ee0af1b24771bd9b2b70b94.webp"
 notion_id: "32c1bab9-e3f8-8143-873f-f0477978cf5f"

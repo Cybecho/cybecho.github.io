@@ -2,8 +2,8 @@
 title: "Claude Opus 5.5: 영상은 찍는 게 아닙니다. 코드로 그려서 녹화합니다"
 date: 2026-11-08T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation","coding"]
+series: ["AI Media"]
 description: "Opus 5.5는 영상을 직접 생성하는 대신 시간에 따라 결정적으로 장면을 그리는 코드를 작성하고, 브라우저가 프레임을 렌더링해 MP4로 만듭니다. 명확한 지시, 레퍼런스, 프레임 검증이 좋은 결과의 핵심이며, 공개된 703개 프롬프트 모음집은 제작 패턴을 익히는 데 활용할 수 있습니다. 이 방식은 수정이 쉽고 모션 그래픽에 적합하지만, 실사 영상과 소리는 별도로 다뤄야 합니다."
 featured_image: "image_dbf45649157b43ed2fa824d4.webp"
 notion_id: "4121bab9-e3f8-814a-b30a-fe7b31f3f136"

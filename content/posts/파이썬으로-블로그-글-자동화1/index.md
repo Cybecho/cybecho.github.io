@@ -2,11 +2,11 @@
 title: "파이썬으로 블로그 글 자동화1"
 date: 2023-03-02T00:00:00.000Z
 draft: false
-tags: ["Python", "AI", "Notion"]
-series: ["Notion ↔ Git Pages 자동화"]
+tags: ["Python","AI","Notion"]
+series: ["Dev Environment"]
 description: "파이썬과 노션 AI를 활용하여 블로그 글을 자동으로 생성하고 티스토리에 업로드하는 방법을 설명합니다. 노션 AI를 통해 주제에 대한 블로그 글을 작성하고, 티스토리 API를 사용하여 자동으로 게시하는 과정과 필요한 설정을 안내합니다."
+featured_image: "image_8375e17952c2.png"
 notion_id: "13eab0d8-2881-4494-8c2a-5433567082ca"
-notion_url: "https://www.notion.so/1-13eab0d8288144948c2a5433567082ca"
 ---
 
 # 파이썬으로 블로그 글 자동화1

@@ -2,8 +2,8 @@
 title: "noapi-google-search-mcp: API 키 없이 로컬 LLM이 구글 검색을 직접 합니다"
 date: 2026-02-13T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp","local-llm"]
+series: ["AI Harness"]
 description: "API 키 없이 로컬 LLM이 실제 구글 검색 결과를 쓸 수 있게 해주는 MCP 서버 noapi-google-search-mcp를 소개합니다. 헤드리스 크로미움으로 브라우저가 직접 구글을 방문하는 방식이라 공식 API의 클라우드 설정·하루 100회 한도·커스텀 검색 결과 문제를 피하고, 검색·뉴스·논문·쇼핑·항공권·호텔·날씨·금융까지 자연어로 물으면 LLM이 도구를 골라 실행합니다. 설치는 두 줄이면 되고 설정 파일에 넣을 비밀값도 없습니다."
 featured_image: "image_ccb67281549683c49e85e3f7.webp"
 notion_id: "3061bab9-e3f8-810f-b091-fb82a274bd3c"

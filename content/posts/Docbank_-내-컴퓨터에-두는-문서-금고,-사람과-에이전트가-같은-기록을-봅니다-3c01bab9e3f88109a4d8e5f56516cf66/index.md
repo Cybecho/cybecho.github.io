@@ -2,8 +2,8 @@
 title: "Docbank: 내 컴퓨터에 두는 문서 금고, 사람과 에이전트가 같은 기록을 봅니다"
 date: 2026-08-18T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","rag"]
+series: ["AI Harness"]
 description: "Docbank는 내 컴퓨터에서 돌아가는 문서 금고로, 사람과 에이전트가 같은 문서, 같은 ID, 같은 버전을 보고 일합니다. 문서마다 평생 바뀌지 않는 노드 ID가 있고 모든 버전은 SHA-256 해시로 검증되며, 조용한 덮어쓰기 대신 리비전 사전조건으로 명시적 충돌을 만듭니다. 동기화·공유·협업 편집은 없는 아카이브 겸 기록 시스템으로, 삭제·백업·복원도 각각 별도의 결정과 검증을 거칩니다."
 featured_image: "image_d76af3e5431fd34fd66193fb.webp"
 notion_id: "3c01bab9-e3f8-8109-a4d8-e5f56516cf66"

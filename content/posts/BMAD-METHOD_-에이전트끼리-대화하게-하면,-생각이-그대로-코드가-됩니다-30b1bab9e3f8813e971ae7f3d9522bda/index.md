@@ -2,7 +2,10 @@
 title: "BMAD-METHOD: 에이전트끼리 대화하게 하면, 생각이 그대로 코드가 됩니다"
 date: 2026-02-19T00:00:00.000Z
 draft: false
+tags: ["agent"]
+series: ["AI Harness"]
 description: "BMAD-METHOD는 여러 전문 AI 에이전트가 함께 계획하고 토론하며, 사람이 판단을 주도하도록 돕는 애자일 AI 개발 방법론입니다. 작은 변경은 빠르게 구현하고 복잡한 작업은 단계적으로 계획하며, 결정과 맥락을 이어 가며 소프트웨어를 만들고 검증합니다."
+featured_image: "image_7617218ddea0aac2f7a2966e.webp"
 notion_id: "30b1bab9-e3f8-813e-971a-e7f3d9522bda"
 ---
 

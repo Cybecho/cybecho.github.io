@@ -2,8 +2,8 @@
 title: "DOT Studio: 터미널이 아니라 캔버스에서 에이전트를 조립하면 됩니다"
 date: 2026-03-13T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","harness"]
+series: ["AI Harness"]
 description: "DOT Studio es una herramienta visual local que permite configurar agentes de IA en un lienzo, combinando identidad, habilidades, modelos y herramientas en unidades de trabajo colaborativo. OpenCode se encarga de ejecutar las tareas, mientras que el modo seguro permite revisar los cambios en un entorno aislado antes de aplicarlos."
 featured_image: "image_6a017dc7cd798a5d87b74fb2.webp"
 notion_id: "3211bab9-e3f8-81bd-bf94-d14ebe5dda21"

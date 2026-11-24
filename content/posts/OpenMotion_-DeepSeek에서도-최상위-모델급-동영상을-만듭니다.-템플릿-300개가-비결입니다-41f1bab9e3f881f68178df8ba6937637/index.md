@@ -2,8 +2,8 @@
 title: "OpenMotion: DeepSeek에서도 최상위 모델급 동영상을 만듭니다. 템플릿 300개가 비결입니다"
 date: 2026-11-21T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation","skill"]
+series: ["AI Media"]
 description: "OpenMotion은 300개 이상의 템플릿과 152개 이상의 디자인 스타일을 활용해 DeepSeek 하네스에서 모션 그래픽 영상을 만들 수 있는 무료 오픈소스 플러그인입니다. 영상은 HTML·CSS·JavaScript 기반의 편집 가능한 프로젝트로 생성해 MP4로 내보낼 수 있으며, 모델 사용 비용은 별도로 부담해야 합니다. 실사 영상 제작 도구가 아니고 템플릿은 참고용이며, DeepSeek 하네스는 아직 미리보기 단계입니다."
 featured_image: "image_67cf5c881b9729327dc4916a.webp"
 notion_id: "41f1bab9-e3f8-81f6-8178-df8ba6937637"

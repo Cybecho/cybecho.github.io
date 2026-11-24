@@ -2,8 +2,8 @@
 title: "llmfit: 내 컴퓨터에서 돌아가는 LLM, 다운로드 전에 먼저 골라줍니다"
 date: 2026-03-02T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm"]
+series: ["Self-Hosted AI"]
 description: "llmfit은 CPU·RAM·GPU 등 컴퓨터 사양을 분석해 실행 가능한 LLM을 적합도, 속도, 품질, 컨텍스트 기준으로 추천하는 터미널 도구입니다. 메모리에 들어가는 가장 높은 품질의 양자화를 골라 다운로드 전 적합성을 확인할 수 있으며, 성능 예측은 실제 벤치마크로 검증할 수 있습니다. 모델 실행은 Ollama나 llama.cpp 같은 별도 런타임이 담당합니다."
 featured_image: "image_6a0d2982a7cda5ea45da289f.webp"
 notion_id: "3171bab9-e3f8-81c8-8bb8-f7d45b69d354"

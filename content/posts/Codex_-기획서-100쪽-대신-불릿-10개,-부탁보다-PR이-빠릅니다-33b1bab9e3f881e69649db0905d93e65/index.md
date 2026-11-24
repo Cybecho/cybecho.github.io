@@ -2,8 +2,8 @@
 title: "Codex: 기획서 100쪽 대신 불릿 10개, 부탁보다 PR이 빠릅니다"
 date: 2026-04-07T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "Codex 팀은 문서가 필요한 경우에만 불릿 10개 안팎으로 핵심 맥락을 정리하고, 작은 변경은 직접 PR을 보내며 중간 규모 작업은 에이전트의 계획을 검토합니다. 모델이 빠르게 바뀌므로 구체적인 계획은 최대 8주까지만 세우고, 코드와 PR로 아이디어를 검증합니다. 에이전트가 많은 코드를 작성해도 설계와 판단, 검증과 책임은 사람의 몫이며, 이런 방식은 사용자와 가깝고 기술에 익숙한 팀에서 특히 효과적입니다."
 featured_image: "image_27c4090bb61aff743fdecaa2.webp"
 notion_id: "33b1bab9-e3f8-81e6-9649-db0905d93e65"

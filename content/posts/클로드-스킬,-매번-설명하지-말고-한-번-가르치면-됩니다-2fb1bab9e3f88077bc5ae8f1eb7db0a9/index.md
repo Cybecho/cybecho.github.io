@@ -2,8 +2,8 @@
 title: "클로드 스킬, 매번 설명하지 말고 한 번 가르치면 됩니다"
 date: 2026-02-02T22:38:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill"]
+series: ["AI Harness"]
 description: "클로드 스킬은 반복 작업의 지식과 절차를 폴더에 담아 재사용하는 방법입니다. 이름과 설명, 본문, 참조 파일을 단계적으로 불러 토큰을 절약하며, 구체적인 사용 사례를 바탕으로 만들고 트리거·기능·성능을 테스트해 반복적으로 개선합니다."
 featured_image: "image_5fba13827f2ce7d995ecb304.webp"
 notion_id: "2fb1bab9-e3f8-8077-bc5a-e8f1eb7db0a9"

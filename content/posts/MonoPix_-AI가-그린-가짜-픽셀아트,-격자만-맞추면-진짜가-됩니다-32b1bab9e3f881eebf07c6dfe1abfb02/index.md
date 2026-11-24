@@ -2,8 +2,8 @@
 title: "MonoPix: AI가 그린 가짜 픽셀아트, 격자만 맞추면 진짜가 됩니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Media"]
 description: "MonoPix는 AI가 만든 가짜 픽셀아트를 진짜 픽셀아트로 되돌려 주는 무료 오픈소스 도구입니다. 스냅 기능이 원래 격자를 찾아내 한 칸마다 색 하나만 남기고, 사진도 8×8부터 256×256까지 픽셀아트로 바꿔 줍니다. 모든 처리는 브라우저 안에서만 이뤄져서 서버도 계정도 업로드도 필요 없습니다."
 featured_image: "image_6f8f335b2c489ae1ac36897b.webp"
 notion_id: "32b1bab9-e3f8-81ee-bf07-c6dfe1abfb02"

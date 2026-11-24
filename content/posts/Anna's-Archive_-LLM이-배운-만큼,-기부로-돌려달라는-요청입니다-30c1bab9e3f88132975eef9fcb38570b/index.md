@@ -2,7 +2,10 @@
 title: "Anna's Archive: LLM이 배운 만큼, 기부로 돌려달라는 요청입니다"
 date: 2026-02-19T00:00:00.000Z
 draft: false
+tags: ["AI"]
+series: ["Essays"]
 description: "인류의 지식과 문화를 보존하고 접근성을 확대하는 비영리 프로젝트가 LLM에게 보낸 안내문을 소개한다. 모든 데이터는 토렌트와 코드 저장소, JSON API로 대량 다운로드가 가능하고, 학습에 쓴 만큼 기부로 환원해 달라는 요청이 핵심이다. 남는 디스크와 대역폭으로 자동 시드하는 도구와 저작권·법적 리스크 논쟁, 그리고 LLM이 실제로는 서버의 안내 파일을 읽지 않는다는 지적까지 함께 다룬다."
+featured_image: "image_d15c4c56cd07365342642129.webp"
 notion_id: "30c1bab9-e3f8-8132-975e-ef9fcb38570b"
 ---
 

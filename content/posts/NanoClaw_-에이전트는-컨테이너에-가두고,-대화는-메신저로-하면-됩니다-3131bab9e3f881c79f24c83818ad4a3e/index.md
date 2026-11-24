@@ -2,8 +2,8 @@
 title: "NanoClaw: 에이전트는 컨테이너에 가두고, 대화는 메신저로 하면 됩니다"
 date: 2026-02-27T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "NanoClaw는 WhatsApp·Telegram 같은 메신저로 대화하는 개인용 AI 에이전트로, 각 세션을 OS 컨테이너에 격리해 접근을 제한합니다. 약 15개 파일과 3,900줄의 간결한 코드로 메시징, 메모리, 스케줄링, 웹 접근을 제공하며, 설정 파일 대신 스킬로 코드를 수정해 필요한 기능만 추가합니다. 사용자가 코드를 직접 읽고 관리하는 것을 전제로 한 오픈소스 프로젝트입니다."
 featured_image: "image_c939281408733fc0ba8bac61.webp"
 notion_id: "3131bab9-e3f8-81c7-9f24-c83818ad4a3e"

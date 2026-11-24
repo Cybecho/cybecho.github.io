@@ -2,11 +2,11 @@
 title: "유니티 로그라이크 13"
 date: 2023-03-12T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 클론 게임 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "UI(HUD) 구성 방법, 해상도에 상관없이 UI 텍스트 설정, UI 캔버스 크기를 카메라에 맞추는 방법, 경험치 바 제작을 위한 슬라이더 활용, string.Format() 사용법, 플레이어의 위치를 따라가는 체력바 생성 방법에 대해 설명합니다."
+featured_image: "image_c3807eec5fbb.png"
 notion_id: "0637370b-b32e-49d3-821d-ba6c24de5279"
-notion_url: "https://www.notion.so/13-0637370bb32e49d3821dba6c24de5279"
 ---
 
 # 유니티 로그라이크 13

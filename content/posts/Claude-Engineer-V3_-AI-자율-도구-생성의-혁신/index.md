@@ -2,11 +2,10 @@
 title: "Claude Engineer V3: AI 자율 도구 생성의 혁신"
 date: 2024-12-29T12:11:00.000Z
 draft: false
-tags: ["Util"]
-series: ["오픈소스"]
+series: ["Let's Open Source"]
 description: "Claude Engineer V3는 AI가 프로그래밍 작업 중 필요한 도구를 자동으로 생성하고 관리할 수 있도록 설계된 오픈 소스 프로젝트입니다. 사용자 친화적인 CLI와 웹 인터페이스를 통해 Python 스크립트 생성, 데이터 변환 도구 등을 신속하게 제공하며, 복잡한 작업을 자동화하여 개발자와 데이터 과학자에게 효율적인 지원을 합니다."
+featured_image: "image_444f59d8fcb0cf11909bc3db.png"
 notion_id: "16b1bab9-e3f8-807e-95fc-f9b6e4c2729c"
-notion_url: "https://www.notion.so/Claude-Engineer-V3-AI-16b1bab9e3f8807e95fcf9b6e4c2729c"
 ---
 
 # Claude Engineer V3: AI 자율 도구 생성의 혁신
@@ -15,6 +14,8 @@ notion_url: "https://www.notion.so/Claude-Engineer-V3-AI-16b1bab9e3f8807e95fcf9b
 > Claude Engineer V3는 AI가 프로그래밍 작업 중 필요한 도구를 자동으로 생성하고 관리할 수 있도록 설계된 오픈 소스 프로젝트입니다. 사용자 친화적인 CLI와 웹 인터페이스를 통해 Python 스크립트 생성, 데이터 변환 도구 등을 신속하게 제공하며, 복잡한 작업을 자동화하여 개발자와 데이터 과학자에게 효율적인 지원을 합니다.
 
 ---
+
+![Image](image_444f59d8fcb0cf11909bc3db.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=mspXJaWagdw)
 

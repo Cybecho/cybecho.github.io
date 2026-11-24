@@ -2,11 +2,11 @@
 title: "유니티 로그라이크 08"
 date: 2023-03-05T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 클론 게임 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "게임의 난이도를 시간에 따라 조절하는 코드 구현, C#에서 실수형과 정수형 변환, 직렬화 기법을 사용하여 사용자 정의 클래스를 인스펙터에 노출시키는 방법, 몬스터 스폰 데이터 관리 및 초기화 방법에 대해 설명합니다."
+featured_image: "image_275c37cf8fa9.png"
 notion_id: "874bd934-c25c-4293-83cd-d6c4a7a0d086"
-notion_url: "https://www.notion.so/08-874bd934c25c429383cdd6c4a7a0d086"
 ---
 
 # 유니티 로그라이크 08

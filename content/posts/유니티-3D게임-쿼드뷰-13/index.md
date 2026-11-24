@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 13"
 date: 2023-02-24T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "유니티 3D 게임 개발에 대한 내용으로, gameObject.layer를 변경하여 충돌 설정, 보스 패턴 구현, 확률 설정 및 버그 해결 방법을 다룹니다. 또한, 부모 클래스의 Awake() 메서드 문제와 해결책, 보스의 다양한 공격 메커니즘 구현에 대한 코드 예시가 포함되어 있습니다."
+featured_image: "image_380288dcc8cc.png"
 notion_id: "fad748f6-bb6f-458e-8989-81b1bbf80599"
-notion_url: "https://www.notion.so/3D-13-fad748f6bb6f458e898981b1bbf80599"
 ---
 
 # 유니티 3D게임 쿼드뷰 13

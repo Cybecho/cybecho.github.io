@@ -2,11 +2,10 @@
 title: "\"Claude 편집, Gemini 읽기\" - Gemini와 Claude, 두 AI의 장점만 뽑아 쓰는 최강 코딩 워크플로우"
 date: 2025-07-21T14:59:00.000Z
 draft: false
-tags: ["AI", "Claude"]
-series: ["AI"]
+tags: ["Claude","coding"]
+series: ["AI Harness"]
 description: "Gemini와 Claude를 결합한 AI 코딩 워크플로우는 각 AI의 장점을 활용하여 개발 생산성을 극대화합니다. Gemini는 대규모 코드 분석과 정보 수집에 특화되어 있고, Claude는 높은 품질의 코드 작성에 강점을 가지고 있습니다. 이 두 도구를 함께 사용함으로써 비용과 시간을 절약하고, 코드 품질을 향상시킬 수 있습니다. 설치 및 설정 방법, 효율적인 연동 방법, 그리고 고급 최적화 기법도 제시됩니다."
 notion_id: "2371bab9-e3f8-807d-9908-f17e8fa8cbd0"
-notion_url: "https://www.notion.so/Claude-Gemini-Gemini-Claude-AI-2371bab9e3f8807d9908f17e8fa8cbd0"
 ---
 
 # "Claude 편집, Gemini 읽기" - Gemini와 Claude, 두 AI의 장점만 뽑아 쓰는 최강 코딩 워크플로우
@@ -17,6 +16,11 @@ notion_url: "https://www.notion.so/Claude-Gemini-Gemini-Claude-AI-2371bab9e3f880
 ---
 
 > **"Claude 편집, Gemini 읽기" 방식**
+> Reddit과 Medium의 실제 사용자들이 발견한 가장 효과적인 패턴은 다음과 같습니다:
+>
+> 1. **Gemini CLI**: 대용량 컨텍스트로 정보 수집 및 분석
+> 1. **Claude Code**: 실제 코드 작성 및 구현
+>
 
 # Gemini와 Claude, 두 AI의 장점만 뽑아 쓰는 최강 코딩 워크플로우
 

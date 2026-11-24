@@ -2,8 +2,8 @@
 title: "에이전트를 장시간 일하게 하려면, 프롬프트가 아니라 절차·실행·압축입니다"
 date: 2026-02-12T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","skill"]
+series: ["AI Harness"]
 description: "장시간 작업을 안정적으로 수행하려면 긴 프롬프트보다 절차는 스킬로, 실행은 셸로, 맥락은 압축으로 분리해야 합니다. 스킬에는 사용 조건과 반례를 명확히 적고, 연속성을 위해 같은 실행 환경과 대화 흐름을 유지하며, 네트워크 허용 목록과 비밀 정보 분리로 안전을 설계합니다."
 featured_image: "image_0fdcafdff8f0b4ae8a9484f1.webp"
 notion_id: "3051bab9-e3f8-810f-a613-fc9f8da3d961"

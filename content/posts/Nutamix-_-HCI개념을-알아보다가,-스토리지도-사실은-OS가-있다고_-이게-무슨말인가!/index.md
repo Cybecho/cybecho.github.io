@@ -2,11 +2,10 @@
 title: "Nutamix : HCI개념을 알아보다가, 스토리지도 사실은 OS가 있다고? 이게 무슨말인가!"
 date: 2025-06-16T12:55:00.000Z
 draft: false
-tags: ["Other", "Util"]
 series: ["HW"]
 description: "Nutanix의 HCI는 각 서버 노드가 독립적인 스토리지 컨트롤러 역할을 수행하여 성능 병목을 해소하고, 간편한 확장성과 데이터 안정성을 제공한다. 소프트웨어 정의 기술을 통해 서버, 스토리지, 네트워크를 통합하여 운영 효율성을 극대화하며, 하이브리드 멀티클라우드 환경에서의 유연한 관리가 가능하다. 이는 기존의 복잡한 인프라 구조를 혁신적으로 단순화하고 자동화하는 솔루션이다."
+featured_image: "image_2119be04f353.png"
 notion_id: "2141bab9-e3f8-8079-a1f0-d8de153cc6cc"
-notion_url: "https://www.notion.so/Nutamix-HCI-OS-2141bab9e3f88079a1f0d8de153cc6cc"
 ---
 
 # Nutamix : HCI개념을 알아보다가, 스토리지도 사실은 OS가 있다고? 이게 무슨말인가!

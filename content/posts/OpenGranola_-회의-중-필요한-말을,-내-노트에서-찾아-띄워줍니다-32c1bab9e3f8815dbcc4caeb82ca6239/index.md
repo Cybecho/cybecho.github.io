@@ -2,8 +2,8 @@
 title: "OpenGranola: 회의 중 필요한 말을, 내 노트에서 찾아 띄워줍니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm"]
+series: ["Self-Hosted AI"]
 description: "OpenGranola(OpenOats)는 회의 양쪽의 음성을 기기 안에서 받아 적고 메모에서 필요한 정보를 찾아 띄워주는 macOS 오픈소스 도구입니다. 오디오는 외부로 전송되지 않으며, 로컬 모델을 사용하면 텍스트도 기기 밖으로 나가지 않습니다. 현재 OpenOats 2.0에서는 라이브 기능이 빠졌고, 라이브 비서가 필요하면 1.x를 사용할 수 있습니다. 녹음 전에는 참석자의 동의를 받아야 합니다."
 featured_image: "image_ba7a1cf9cac7f41b6828d8c0.webp"
 notion_id: "32c1bab9-e3f8-815d-bcc4-caeb82ca6239"

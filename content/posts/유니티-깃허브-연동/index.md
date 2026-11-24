@@ -2,11 +2,11 @@
 title: "유니티 깃허브 연동"
 date: 2023-02-14T00:00:00.000Z
 draft: false
-tags: ["Git", "UNITY"]
-series: ["Git", "Tips"]
+tags: ["Git","UNITY"]
+series: ["Let's Git"]
 description: "유니티 프로젝트 관리를 위해 깃허브와 연동하는 방법에 대한 정보가 포함되어 있으며, 새로운 리포지토리 생성 및 프로젝트를 깃허브에 올리는 방법에 대한 링크가 제공됩니다."
+featured_image: "image_7efb76a6fd20.jpg"
 notion_id: "fd20e715-5a4a-4b6b-96d2-fc1dad157b96"
-notion_url: "https://www.notion.so/fd20e7155a4a4b6b96d2fc1dad157b96"
 ---
 
 # 유니티 깃허브 연동

@@ -2,8 +2,8 @@
 title: "Pascal Editor: 에이전트가 건물 장면을 직접 읽고 고칩니다. 설계가 에이전트의 일이 됩니다"
 date: 2026-05-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp","agent"]
+series: ["AI Harness"]
 description: "Pascal Editor는 AI 에이전트가 MCP를 통해 건물의 3D 장면을 읽고 편집·검증·저장할 수 있는 오픈소스 건축 편집기입니다. 로컬 우선으로 작업을 저장하며, 3D 스캔을 참고해 편집 가능한 모델을 만들고 IFC 파일도 가져올 수 있습니다. MIT 라이선스로 공개됐고, 블렌더 연동과 건물 내부 워크스루 등은 향후 방향으로 소개됩니다."
 featured_image: "image_892e0f5baead8688b0192190.webp"
 notion_id: "3661bab9-e3f8-81dc-b462-ee0d4cb1b039"

@@ -2,8 +2,8 @@
 title: "OpenDesign Motion: 최상위 모델 없이도 모션 그래픽을 만듭니다. 모델은 골라 쓰는 것입니다"
 date: 2026-10-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "OpenDesign Motion은 사용자가 원하는 모델과 코딩 에이전트를 골라 프롬프트를 HTML·CSS·GSAP 코드로 바꾸고, HyperFrames로 편집 가능한 소스와 MP4를 만드는 무료 오픈소스 모션 그래픽 도구입니다. 고가의 최상위 모델이나 타임라인 편집 없이 제품 홍보 영상과 키네틱 타이포 등을 제작할 수 있지만, 실사 영상 제작에는 적합하지 않고 초기 버전이라는 점을 고려해야 합니다."
 featured_image: "image_65d8e1bfab6e7aec98dab194.webp"
 notion_id: "3ff1bab9-e3f8-81ee-b759-d80ebdaab1c4"

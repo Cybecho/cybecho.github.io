@@ -2,8 +2,8 @@
 title: "Codex: 코드 생성기로 쓰면 손해입니다. 워크플로우로 써야 생산성이 됩니다"
 date: 2026-03-29T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "Codex의 생산성을 높이려면 코드 생성만 맡기지 말고, 기존 디자인 시스템 재사용, 브라우저에서의 시각적 검증, 데이터 분석 절차, 평가 점수와 종료 조건을 포함한 반복 워크플로우로 활용해야 합니다. 프로젝트 규칙을 AGENTS.md에 기록하면 맥락과 기준을 매번 설명하지 않아도 일관되게 작업할 수 있습니다."
 featured_image: "image_81faea909bb2ef381f03f278.webp"
 notion_id: "3321bab9-e3f8-8113-ba27-ca79a5c17ec2"

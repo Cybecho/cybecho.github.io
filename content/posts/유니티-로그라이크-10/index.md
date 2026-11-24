@@ -2,11 +2,11 @@
 title: "유니티 로그라이크 10"
 date: 2023-03-07T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 클론 게임 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "유니티 로그라이크 게임 개발에 대한 내용으로, Init 함수와 parent 속성을 통해 부모를 변경하는 방법, 무기와 총알의 초기화 및 배치 방법을 설명합니다. 또한, 공전하는 무기를 생성하고 레벨업에 따라 무기의 개수를 늘리는 기능을 구현하는 코드 예시를 제공합니다."
+featured_image: "image_2404190a4a93.png"
 notion_id: "4702c5ac-1b38-49c8-b8e3-871a36a9f438"
-notion_url: "https://www.notion.so/10-4702c5ac1b3849c8b8e3871a36a9f438"
 ---
 
 # 유니티 로그라이크 10
@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/10-4702c5ac1b3849c8b8e3871a36a9f438"
 
 ---
 
-![Image](image_cbf3d59768eb.png)
+![Image](image_2404190a4a93.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=HPJVVcRKwn0&list=PLO-mt5Iu5TeZF8xMHqtT_DhAPKmjF6i3x&index=10)
 

@@ -2,8 +2,8 @@
 title: "예쁜 부품이 예쁜 UI를 만들지 않습니다. 서로 맞는 부품이 만듭니다"
 date: 2026-06-18T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "AI가 만든 UI는 부품 하나하나는 멀쩡한데, 합치면 어색한 티가 납니다. 원인은 못생긴 부품이 아니라 부품들이 서로 안 맞는 것, 정합성의 부재입니다. 모서리·그림자·강조색·간격 같은 디자인 축마다 값을 하나만 정해 토큰으로 박고 어디서나 적용하면, 그 한 가지 규율만으로 '로봇이 만들었네'와 '디자이너가 만들었네'가 갈립니다."
 featured_image: "image_d8c24ab81755a6b8d60a655a.webp"
 notion_id: "3831bab9-e3f8-8177-acd6-e833667aecae"

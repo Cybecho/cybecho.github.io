@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 18 (최종)"
 date: 2023-02-27T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "사운드 구현을 위해 각 사운드별로 AudioSource가 담긴 자식 오브젝트를 추가하고, 원하는 사운드를 다운로드하여 Player.cs에 jumpSound 변수를 추가한 후 음향효과를 활성화하는 코드를 작성합니다. Play On Awake 옵션은 해제해야 합니다."
+featured_image: "image_3dcd020427e1.png"
 notion_id: "f5c063cd-6078-4af1-91c3-f24f494aa538"
-notion_url: "https://www.notion.so/3D-18-f5c063cd60784af191c3f24f494aa538"
 ---
 
 # 유니티 3D게임 쿼드뷰 18 (최종)

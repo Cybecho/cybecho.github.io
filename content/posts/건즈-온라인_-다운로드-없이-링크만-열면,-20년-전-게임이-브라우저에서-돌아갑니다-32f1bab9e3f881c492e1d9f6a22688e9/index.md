@@ -2,8 +2,7 @@
 title: "건즈 온라인: 다운로드 없이 링크만 열면, 20년 전 게임이 브라우저에서 돌아갑니다"
 date: 2026-03-26T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Tips"]
 description: "건즈 온라인을 원본 C++ 코드를 그대로 둔 채 WebAssembly와 WebGL 기반 번역 레이어로 브라우저에 이식해, 설치 없이 10초 안에 플레이할 수 있게 했습니다. 서버·사운드·입력·파일 처리도 웹 환경에 맞게 구현했으며, 새 코드의 99%는 AI가 작성했습니다. 다만 유출된 원본 소스의 저작권 문제는 남아 있습니다."
 featured_image: "image_29ae8e2cbd3d760cae1b877e.webp"
 notion_id: "32f1bab9-e3f8-81c4-92e1-d9f6a22688e9"

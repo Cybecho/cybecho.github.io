@@ -2,9 +2,10 @@
 title: "클로드 코드, 질문에 답하는 게 아니라 직접 고치고 실행합니다"
 date: 2026-02-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "클로드 코드는 코드베이스를 이해해 여러 파일을 직접 수정하고 명령을 실행하는 AI 코딩 도구입니다. 터미널, 에디터, 데스크톱, 웹 등 어디서나 같은 설정과 기억을 이어 사용할 수 있으며, 설치와 로그인을 마친 뒤 작은 작업부터 맡기고 변경을 승인하며 시작하면 됩니다. 원격 제어, 자동화, 팀 작업 연동과 확장 기능도 제공합니다."
+featured_image: "image_9086eee9d710623d929bc23e.webp"
 notion_id: "30d1bab9-e3f8-81c5-9ee6-fa2892bcb89e"
 ---
 

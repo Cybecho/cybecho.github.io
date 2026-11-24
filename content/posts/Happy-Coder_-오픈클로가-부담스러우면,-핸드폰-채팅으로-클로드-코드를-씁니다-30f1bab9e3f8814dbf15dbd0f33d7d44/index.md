@@ -2,9 +2,10 @@
 title: "Happy Coder: 오픈클로가 부담스러우면, 핸드폰 채팅으로 클로드 코드를 씁니다"
 date: 2026-02-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["phone-automation"]
+series: ["On-Device AI"]
 description: "Happy Coder позволяет управлять с телефона сессиями Claude Code и Codex, работающими на собственном компьютере, через зашифрованное соединение. Альтернатива — Telegram-бот, который запускает Claude Code на облачном компьютере и управляет им через чат; выбор зависит от того, нужно ли продолжать локальную работу с телефона или запускать задачи в облаке круглосуточно."
+featured_image: "image_ac5b6496f41056b3e7236161.webp"
 notion_id: "30f1bab9-e3f8-814d-bf15-dbd0f33d7d44"
 ---
 

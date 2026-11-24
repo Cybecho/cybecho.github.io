@@ -2,8 +2,8 @@
 title: "Claude Code 스킬 10만 개 중 살아남은 4개, 기준은 매일 쓰는지입니다"
 date: 2026-02-11T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill"]
+series: ["AI Harness"]
 description: "클로드 코드 스킬은 많이 설치하기보다 매일 쓰는 것만 남기는 것이 중요합니다. 개발 프로세스를 개선하는 Superpowers, AI 글을 자연스럽게 다듬는 Humanizer, 화면의 템플릿 느낌을 줄이는 UI/UX Pro Max, 스킬을 검색·설치·관리하는 Find Skills를 소개하며, 일주일 동안 쓰지 않은 스킬은 삭제하고 남은 스킬을 주기적으로 업데이트하라고 제안합니다."
 featured_image: "image_d5efbdc0bc7afe70f0333900.webp"
 notion_id: "3031bab9-e3f8-812d-b105-d6f911a150ab"

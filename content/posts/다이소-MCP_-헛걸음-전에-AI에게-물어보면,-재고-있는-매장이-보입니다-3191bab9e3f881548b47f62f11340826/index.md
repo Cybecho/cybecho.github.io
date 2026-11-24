@@ -2,8 +2,8 @@
 title: "다이소 MCP: 헛걸음 전에 AI에게 물어보면, 재고 있는 매장이 보입니다"
 date: 2026-03-04T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp"]
+series: ["AI Harness"]
 description: "다이소 MCP는 AI에게 다이소 상품·매장·재고를 물어볼 수 있게 해주는 공개 MCP 서버입니다. 설치도 API 키도 필요 없으며, 원격 MCP 서버를 연결하거나 채팅 앱에서 바로 쓸 수 있고, 터미널에서는 한 줄 명령으로도 조회할 수 있습니다. 다이소에서 시작해 편의점·영화관·올리브영까지 조회 범위가 넓어지고 있으며, 노션 쇼핑 목록과 함께 쓰면 필요한 물건을 주변 매장에서 찾는 흐름까지 만들 수 있습니다."
 featured_image: "image_986560dbd1a8e51096de7fd6.webp"
 notion_id: "3191bab9-e3f8-8154-8b47-f62f11340826"

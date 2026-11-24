@@ -2,8 +2,8 @@
 title: "Patchright: import 한 줄만 바꾸면, 봇 탐지가 브라우저를 못 알아봅니다"
 date: 2026-03-22T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["browser-automation"]
+series: ["AI Harness"]
 description: "Patchright는 Playwright의 브라우저 자동화 신호를 줄여 봇 탐지를 피하도록 수정한 도구입니다. 일부 탐지 시스템에서 효과가 있을 수 있지만 크로미움 전용이며 콘솔 기능이 제한되고, 자바스크립트 챌린지·TLS 지문·IP 평판 문제는 해결하지 못하므로 사이트 이용 규칙을 확인해야 합니다."
 featured_image: "image_2feff9cd91fbd0b0cb5dd6c9.webp"
 notion_id: "32b1bab9-e3f8-81c9-af8e-f1f7f1d7fb74"

@@ -2,8 +2,8 @@
 title: "LLM으로 수만 줄 프로젝트를 유지하는 법: 코드는 AI가 쓰고, 설계는 사람이 합니다"
 date: 2026-03-24T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding","agent"]
+series: ["AI Harness"]
 description: "LLM으로 수만 줄짜리 프로젝트를 유지하는 비결은 역할 나누기에 있습니다. 강한 모델이 설계하고, 싼 모델이 계획대로 구현하고, 다른 모델들이 교차로 리뷰합니다. 코드를 직접 쓰지 않아도 되지만, 아키텍처를 알고 결정을 내리고 품질을 감독하는 사람의 판단력은 오히려 더 중요해졌습니다."
 featured_image: "image_d61b076c580ca7c4ad04d8d1.webp"
 notion_id: "32d1bab9-e3f8-817d-8269-d712b7d1d0c8"

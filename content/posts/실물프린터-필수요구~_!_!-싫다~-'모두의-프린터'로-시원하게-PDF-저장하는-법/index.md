@@ -2,11 +2,10 @@
 title: "실물프린터 필수요구~?!?! 싫다~ '모두의 프린터'로 시원하게 PDF 저장하는 법"
 date: 2025-10-09T11:57:00.000Z
 draft: false
-tags: ["Util"]
-series: ["오픈소스"]
+series: ["Let's Open Source"]
 description: "'모두의 프린터'는 가상 프린터 프로그램으로, 인쇄 명령을 PDF 파일이나 이미지 파일로 변환해줍니다. OPIc 성적표와 같은 특정 사이트에서 보안상의 이유로 인쇄가 불가능할 때, IP 대역을 변경하여 문제를 해결할 수 있는 방법을 제공합니다. 이 프로그램을 통해 프린터 없이도 문서 작업을 자유롭게 할 수 있습니다."
+featured_image: "image_851b48866e33.png"
 notion_id: "2871bab9-e3f8-80db-be5b-ea0a8e463d6f"
-notion_url: "https://www.notion.so/PDF-2871bab9e3f880dbbe5bea0a8e463d6f"
 ---
 
 # 실물프린터 필수요구~?!?! 싫다~ '모두의 프린터'로 시원하게 PDF 저장하는 법

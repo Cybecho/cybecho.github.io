@@ -2,8 +2,8 @@
 title: "파이썬 크롤러가 자꾸 입구컷 당하는 이유, 문제는 코드가 아니라 지문입니다"
 date: 2026-03-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["browser-automation","coding"]
+series: ["AI Harness"]
 description: "크롤러 차단은 코드보다 IP 평판, TLS·브라우저 지문, 행동 패턴의 불일치에서 비롯됩니다. 브라우저 자동화 도구마다 탐지 지점이 다르지만, Playwright는 드라이버 흔적이 적어 유리할 수 있습니다. 다만 안티봇 탐지와 우회는 계속 바뀌므로 한 가지 신호만으로는 차단을 피하기 어렵습니다."
 featured_image: "image_e8565adaeec76eb404448dbb.webp"
 notion_id: "31f1bab9-e3f8-8114-a507-fb77262e5ef6"

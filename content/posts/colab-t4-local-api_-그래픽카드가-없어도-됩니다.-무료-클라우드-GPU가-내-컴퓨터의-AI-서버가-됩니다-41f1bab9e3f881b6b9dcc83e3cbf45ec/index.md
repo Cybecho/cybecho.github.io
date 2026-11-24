@@ -2,8 +2,8 @@
 title: "colab-t4-local-api: 그래픽카드가 없어도 됩니다. 무료 클라우드 GPU가 내 컴퓨터의 AI 서버가 됩니다"
 date: 2026-11-21T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm"]
+series: ["Self-Hosted AI"]
 description: "그래픽카드가 없어도 무료 클라우드 GPU에 추론 서버를 올리고, 로컬 게이트웨이와 임시 터널을 통해 내 컴퓨터에서 로컬 API처럼 사용할 수 있습니다. 모델은 드라이브에 저장해 세션 종료 후에도 복원할 수 있지만, 무료 자원은 사용 시간과 이용 가능성이 보장되지 않으므로 실험과 테스트 용도로 활용해야 합니다."
 featured_image: "image_dc10cac9c40aac2b8451e183.webp"
 notion_id: "41f1bab9-e3f8-81b6-b9dc-c83e3cbf45ec"

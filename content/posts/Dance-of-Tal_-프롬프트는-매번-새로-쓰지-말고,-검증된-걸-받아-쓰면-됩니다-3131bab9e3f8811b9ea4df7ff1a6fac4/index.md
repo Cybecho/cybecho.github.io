@@ -2,8 +2,8 @@
 title: "Dance of Tal: 프롬프트는 매번 새로 쓰지 말고, 검증된 걸 받아 쓰면 됩니다"
 date: 2026-02-26T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering","skill"]
+series: ["AI Harness"]
 description: "AI 프롬프트에도 의존성 주입과 패키지 매니저가 생겼습니다. Dance of Tal은 거대한 프롬프트를 정체성(Tal)과 스킬(Dance)로 쪼개 레지스트리에 올립니다. 한 줄 설치로 검증된 작업 방식을 내 프로젝트에 꽂을 수 있고, 팀 전원이 같은 버전의 표준 컨텍스트를 씁니다. 한 번 발행된 자산은 같은 주소로 다시 발행할 수 없어, 팀과 CI가 같은 기준을 공유합니다."
 featured_image: "image_13e878d090be694f082813a8.webp"
 notion_id: "3131bab9-e3f8-811b-9ea4-df7ff1a6fac4"

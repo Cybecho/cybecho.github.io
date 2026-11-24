@@ -2,8 +2,8 @@
 title: "Code Review: PR마다 에이전트 팀이 달리면, 훑어보기가 진짜 리뷰가 됩니다"
 date: 2026-03-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "코드 생산량이 1년 만에 200% 늘면서 코드 리뷰가 병목이 됐습니다. PR이 열리면 멀티 에이전트 팀이 병렬로 버그를 찾고, 검증으로 오탐을 걸러 심각도 순으로 정리해 줍니다. 도입 전에는 PR의 16%만 실질적 리뷰를 받았는데, 도입 후 54%로 올랐고, 대규모 PR에서는 84%가 발견 사항을 포함했으며 오탐은 1% 미만이고, 승인은 여전히 사람이 맡으며 리뷰 한 건당 평균 $15~25의 토큰 비용이 들고 Team·Enterprise 플랜의 리서치 프리뷰로 제공됩니다."
 featured_image: "image_0f87f66a27ec2de96270dd52.webp"
 notion_id: "31f1bab9-e3f8-81af-b23b-dc1e9018149c"

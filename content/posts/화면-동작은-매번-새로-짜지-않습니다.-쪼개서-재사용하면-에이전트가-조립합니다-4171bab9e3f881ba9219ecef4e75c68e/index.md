@@ -2,8 +2,8 @@
 title: "화면 동작은 매번 새로 짜지 않습니다. 쪼개서 재사용하면 에이전트가 조립합니다"
 date: 2026-11-13T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "UI SDK는 팝업, 선택, 키보드 탐색, 포커스 관리 같은 화면 동작을 재사용 가능한 조각으로 나눠 에이전트가 필요한 컴포넌트를 조립하도록 합니다. 프레임워크별 어댑터와 에이전트의 화면 직접 조작 기능을 제공해 접근성과 자동화를 돕지만, 공개 베타라 API가 바뀔 수 있어 도입 전 검증이 필요합니다."
 featured_image: "image_c0080ac28c277ed6a5a72893.webp"
 notion_id: "4171bab9-e3f8-81ba-9219-ecef4e75c68e"

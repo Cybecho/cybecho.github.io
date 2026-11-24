@@ -2,11 +2,11 @@
 title: "Linux에 google Drive 로컬 마운트하기"
 date: 2024-06-11T13:54:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
 series: ["Let's Linux!"]
 description: "구글 드라이브를 리눅스에 로컬로 마운트하는 방법은 매우 간단하다. 설정에서 온라인 계정을 추가하면 쉽게 연결할 수 있다."
+featured_image: "image_1dfc87862657.png"
 notion_id: "c807bfda-4256-432f-a6e0-add51b1010af"
-notion_url: "https://www.notion.so/Linux-google-Drive-c807bfda4256432fa6e0add51b1010af"
 ---
 
 # Linux에 google Drive 로컬 마운트하기

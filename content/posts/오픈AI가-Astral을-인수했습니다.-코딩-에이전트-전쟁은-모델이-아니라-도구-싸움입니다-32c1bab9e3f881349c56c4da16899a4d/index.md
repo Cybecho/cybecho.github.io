@@ -2,8 +2,8 @@
 title: "오픈AI가 Astral을 인수했습니다. 코딩 에이전트 전쟁은 모델이 아니라 도구 싸움입니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "오픈AI는 파이썬 도구 uv, Ruff, ty를 만든 Astral을 인수해 Codex를 코드 생성에서 설계·검증·유지까지 담당하는 에이전트로 확장하려 합니다. 세 도구는 오픈소스로 유지될 예정이지만, 경쟁사도 널리 쓰는 만큼 인수 후 거버넌스와 기여 정책, 제품 방향을 지켜볼 필요가 있습니다."
 featured_image: "image_405275d534ba762f8d4cc215.webp"
 notion_id: "32c1bab9-e3f8-8134-9c56-c4da16899a4d"

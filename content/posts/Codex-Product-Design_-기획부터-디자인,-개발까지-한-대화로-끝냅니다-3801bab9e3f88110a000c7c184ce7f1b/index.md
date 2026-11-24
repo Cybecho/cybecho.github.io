@@ -2,8 +2,8 @@
 title: "Codex Product Design: 기획부터 디자인, 개발까지 한 대화로 끝냅니다"
 date: 2026-06-15T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding","agent"]
+series: ["AI Harness"]
 description: "Codex의 Product Design 플러그인은 기획부터 프로토타입 제작과 검수까지 한 대화에서 이어 주며, 이미지 에셋 생성과 세 가지 디자인 방향 제시, 자동 화면 비교·수정이 강점입니다. 초기 아이디어를 빠르게 클릭 가능한 앱으로 만들기에 유용하지만, 복잡한 로직과 출시 수준의 완성도는 사람의 보완이 필요합니다."
 featured_image: "image_831fe07854beed4bdbb86cd7.webp"
 notion_id: "3801bab9-e3f8-8110-a000-c7c184ce7f1b"

@@ -2,8 +2,8 @@
 title: "llms.txt: 구글이 라이트하우스에 넣었습니다. 하지만 검색 순위에 도움은 안 됩니다"
 date: 2026-05-26T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "llms.txt는 AI 에이전트가 사이트의 핵심 구조와 페이지를 빠르게 파악하도록 돕는 선택적 안내 파일입니다. 구글 라이트하우스에 검사가 추가됐지만, 파일이 없어도 감점되지 않으며 구글 검색 순위에도 영향을 주지 않습니다. 순위 개선이 아닌 에이전트의 사이트 이해를 돕기 위해 만들고, 사이트가 바뀌면 함께 업데이트하면 됩니다."
 featured_image: "image_4c7ae90058c82360a493eb33.webp"
 notion_id: "36c1bab9-e3f8-818a-bdf5-cca8f7ae2e30"

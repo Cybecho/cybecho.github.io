@@ -2,11 +2,11 @@
 title: "유니티로 플러피 게임 클론 개발02"
 date: 2023-02-04T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 플러피 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "프리팹을 특정 초 후에 삭제하는 방법과 UI 생성 방법을 설명하며, 점수를 증가시키는 콜라이더 생성 및 게임 오버 씬 설정에 대한 내용을 포함하고 있습니다. 코드 예시를 통해 점수를 화면에 표시하고, 트리거 설정을 통해 점수를 증가시키는 방법을 설명합니다."
+featured_image: "image_601ebd34294b.png"
 notion_id: "b4b74f0f-fe84-4f61-9ef2-1f438c04a435"
-notion_url: "https://www.notion.so/02-b4b74f0ffe844f619ef21f438c04a435"
 ---
 
 # 유니티로 플러피 게임 클론 개발02

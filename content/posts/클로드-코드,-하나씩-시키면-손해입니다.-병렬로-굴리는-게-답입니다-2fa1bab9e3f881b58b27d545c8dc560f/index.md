@@ -2,7 +2,10 @@
 title: "클로드 코드, 하나씩 시키면 손해입니다. 병렬로 굴리는 게 답입니다"
 date: 2026-02-01T00:00:00.000Z
 draft: false
+tags: ["coding","skill"]
+series: ["AI Harness"]
 description: "클로드 코드 창시자가 공개한 실전 사용 팁 10가지를 정리했습니다. 병렬 작업이 최고의 생산성 팁으로, 3~5개 git worktree에 각각 Claude 세션을 띄워 동시에 굴립니다. 복잡한 일은 계획 모드로 시작하고, 반복되는 일은 스킬로 고정하고, 규칙은 CLAUDE.md에 쌓아 실수를 줄입니다. 버그 수정·데이터 분석·학습까지 Claude에게 맡기는 방법도 다룹니다."
+featured_image: "image_2d0816102d7d8d4b5a6385ff.webp"
 notion_id: "2fa1bab9-e3f8-81b5-8b27-d545c8dc560f"
 ---
 

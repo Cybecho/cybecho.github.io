@@ -2,11 +2,11 @@
 title: "유니티 로그라이크 07"
 date: 2023-03-04T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 클론 게임 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "무한으로 생성되는 몬스터를 제작하기 위해 PoolManager를 사용하여 프리팹을 관리하고, Spawner를 통해 몬스터를 소환하는 방법을 설명합니다. OnEnable 이벤트를 사용하여 인스턴스된 적이 플레이어를 타겟으로 설정하는 과정도 포함되어 있습니다. 타이머를 이용해 주기적으로 몬스터를 생성하는 코드도 제공됩니다."
+featured_image: "image_70be9b900116.png"
 notion_id: "e15763de-9751-499c-9c7a-76f2845abfab"
-notion_url: "https://www.notion.so/07-e15763de9751499c9c7a76f2845abfab"
 ---
 
 # 유니티 로그라이크 07

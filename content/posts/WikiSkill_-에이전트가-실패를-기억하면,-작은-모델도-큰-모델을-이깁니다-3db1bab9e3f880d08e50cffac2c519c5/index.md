@@ -2,8 +2,8 @@
 title: "WikiSkill: 에이전트가 실패를 기억하면, 작은 모델도 큰 모델을 이깁니다"
 date: 2026-09-14T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill","agent"]
+series: ["AI Harness"]
 description: "WikiSkill은 에이전트의 실행 기록에서 성공·실패 경험을 위키에 축적하고, 이를 바탕으로 스킬을 수정한 뒤 검증을 거쳐 개선된 스킬만 채택하는 방법입니다. 실험에서 위키를 활용한 스킬은 성능을 높이고 작은 모델이 더 큰 모델을 앞서는 결과를 보였으며, 위키를 제거하면 성능이 크게 떨어졌습니다. 다만 오래된 지식을 정리하거나 매우 긴 작업을 처리하는 기능은 아직 검증되지 않았습니다."
 featured_image: "image_b0d5ebf44bb6addf098d23c1.webp"
 notion_id: "3db1bab9-e3f8-80d0-8e50-cffac2c519c5"

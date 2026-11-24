@@ -2,11 +2,11 @@
 title: " Excalidraw 개발자 다이어그램 툴"
 date: 2023-07-30T00:00:00.000Z
 draft: false
-tags: ["Other", "obsidian", "excalidraw"]
+tags: ["obsidian"]
 series: ["Tips"]
 description: "Excalidraw는 개발자들이 쉽게 다이어그램을 그릴 수 있는 도구로, 직관적인 UI와 다양한 라이브러리를 제공하며, 오픈소스 프로젝트로도 활용 가능하다. 그러나 폰트 변경이 불가능하다는 단점이 있다."
+featured_image: "image_b5598c674515.png"
 notion_id: "7cb30c5e-770e-4971-b422-ccb1404f0ec9"
-notion_url: "https://www.notion.so/Excalidraw-7cb30c5e770e4971b422ccb1404f0ec9"
 ---
 
 #  Excalidraw 개발자 다이어그램 툴

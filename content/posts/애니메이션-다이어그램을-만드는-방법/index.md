@@ -3,10 +3,10 @@ title: "애니메이션 다이어그램을 만드는 방법"
 date: 2025-01-26T10:58:00.000Z
 draft: false
 tags: ["ubuntu"]
-series: ["오픈소스"]
+series: ["Let's Open Source"]
 description: "애니메이션 다이어그램은 개념을 시각적으로 설명하는 강력한 도구로, Canva, Figma, Draw.io와 같은 다양한 도구를 사용하여 제작할 수 있다. 각 도구는 특정 포맷을 지원하며, 애니메이션 효과를 통해 복잡한 개념을 쉽게 전달할 수 있다. 최종적으로, 적절한 도구를 선택하여 효과적인 시각 자료를 제작하는 것이 중요하다."
+featured_image: "image_444f59d8fcb0cf11909bc3db.png"
 notion_id: "1871bab9-e3f8-800a-b222-fdc01cb1c01f"
-notion_url: "https://www.notion.so/1871bab9e3f8800ab222fdc01cb1c01f"
 ---
 
 # 애니메이션 다이어그램을 만드는 방법
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/1871bab9e3f8800ab222fdc01cb1c01f"
 > 애니메이션 다이어그램은 개념을 시각적으로 설명하는 강력한 도구로, Canva, Figma, Draw.io와 같은 다양한 도구를 사용하여 제작할 수 있다. 각 도구는 특정 포맷을 지원하며, 애니메이션 효과를 통해 복잡한 개념을 쉽게 전달할 수 있다. 최종적으로, 적절한 도구를 선택하여 효과적인 시각 자료를 제작하는 것이 중요하다.
 
 ---
+
+![Image](image_444f59d8fcb0cf11909bc3db.png)
 
 🎥 [동영상 보기](https://youtu.be/JRwTCKjc37o?si=8p99eToEy6TnXVBI)
 

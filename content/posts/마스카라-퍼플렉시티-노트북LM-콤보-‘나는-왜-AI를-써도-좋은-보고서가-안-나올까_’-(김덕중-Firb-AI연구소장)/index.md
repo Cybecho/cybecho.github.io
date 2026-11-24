@@ -2,11 +2,11 @@
 title: "마스카라-퍼플렉시티-노트북LM 콤보 ‘나는 왜 AI를 써도 좋은 보고서가 안 나올까?’ (김덕중 Firb AI연구소장)"
 date: 2025-04-22T00:36:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering"]
+series: ["AI Harness"]
 description: "AI 도구인 마스카라, 퍼플렉시티, 노트북 LM을 활용하여 업무 효율성을 극대화할 수 있다. 마스카라는 심층 연구를 위한 프롬프트를 생성하고, 퍼플렉시티는 자동으로 보고서를 작성하며, 노트북 LM은 자료를 통합하고 학습 효과를 높인다. AI 도구의 활용은 직장인의 경쟁력을 강화하고 혁신을 이끌어낼 필수 요소가 된다."
+featured_image: "image_317472d9c190.png"
 notion_id: "1dd1bab9-e3f8-8089-a15b-ce47ad64fa6a"
-notion_url: "https://www.notion.so/LM-AI-Firb-AI-1dd1bab9e3f88089a15bce47ad64fa6a"
 ---
 
 # 마스카라-퍼플렉시티-노트북LM 콤보 ‘나는 왜 AI를 써도 좋은 보고서가 안 나올까?’ (김덕중 Firb AI연구소장)

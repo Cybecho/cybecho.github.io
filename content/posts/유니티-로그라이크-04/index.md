@@ -2,11 +2,11 @@
 title: "유니티 로그라이크 04"
 date: 2023-03-03T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 클론 게임 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "유니티 로그라이크 게임 개발에 관한 내용으로, 플레이어의 이동 방향에 따라 시선을 바꾸는 코드 구현, 애니메이션 제작 방법, 애니메이터 오버라이드 활용법 등을 다루고 있다. 애니메이션의 속도를 조절하기 위해 magnitude를 사용하고, 애니메이션 트리거와 파라미터 설정에 대한 설명도 포함되어 있다."
+featured_image: "image_190ed48028bc.png"
 notion_id: "324a28ab-6122-422d-ae6e-e989ed1148c0"
-notion_url: "https://www.notion.so/04-324a28ab6122422dae6ee989ed1148c0"
 ---
 
 # 유니티 로그라이크 04
@@ -117,7 +117,7 @@ notion_url: "https://www.notion.so/04-324a28ab6122422dae6ee989ed1148c0"
 >
 > ![Image](image_02f0718e3966.png)
 >
-> ![Image](image_40b64b6bcf1b.png)
+> ![Image](image_190ed48028bc.png)
 >
 >
 

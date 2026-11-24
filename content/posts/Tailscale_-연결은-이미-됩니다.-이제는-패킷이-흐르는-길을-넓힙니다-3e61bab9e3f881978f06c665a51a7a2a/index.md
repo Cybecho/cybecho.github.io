@@ -2,8 +2,8 @@
 title: "Tailscale: 연결은 이미 됩니다. 이제는 패킷이 흐르는 길을 넓힙니다"
 date: 2026-09-25T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["Infra"]
+series: ["Infra & Network"]
 description: "테일스케일이 다음으로 손본 것은 연결이 아니라 데이터가 흐르는 속도입니다. 1 KiB짜리 작은 패킷을 64 KiB 버퍼에 따로 복사하던 낭비를 없애 약 5% 빨라졌고, 멀티 큐로 여러 CPU 코어에 일을 나눕니다. 시작할 때 쓸 네트워크 지도를 디스크에 저장해 두면, 연결이 안 좋은 곳에서도 데이터 전송 시작이 10~100배 빨라집니다."
 featured_image: "image_ebf6b79966648b952b3b5397.webp"
 notion_id: "3e61bab9-e3f8-8197-8f06-c665a51a7a2a"

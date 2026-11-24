@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 04"
 date: 2023-02-08T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "아이템 입수, 잔상효과 파티클 생성, 수류탄 회전 기능 구현에 대한 내용. 플레이어의 아이템 저장 변수 생성 및 아이템 수치 변경 함수 제작, 수류탄 태그 수정, 잔상효과를 위한 파티클 위치 변화 설정, Orbit.cs를 통한 수류탄 공전 구현 등이 포함되어 있습니다."
+featured_image: "image_40140261a7c7.png"
 notion_id: "a8e0b9c3-cf5c-4fd6-8ca2-ff49fad8c5a2"
-notion_url: "https://www.notion.so/3D-04-a8e0b9c3cf5c4fd68ca2ff49fad8c5a2"
 ---
 
 # 유니티 3D게임 쿼드뷰 04

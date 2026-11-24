@@ -2,8 +2,8 @@
 title: "MiniMax H3: 6시간 걸리던 영상 작업이 45분으로 줄었습니다. 소리까지 한 번에 나옵니다"
 date: 2026-08-01T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "MiniMax H3은 영상과 효과음·대사·배경음을 한 번에 생성해 후반 작업 시간을 줄이는 모델로, 작성자는 작업 시간이 6시간에서 45분으로 단축됐다고 밝혔습니다. 무료 체험은 일회성 크레딧만 제공되고 결과물에 워터마크가 붙으며, 한국에서는 로컬 실행이 제한돼 공식 앱이나 API를 이용해야 합니다."
 featured_image: "image_8bc3850b976614530a2e2a57.webp"
 notion_id: "3af1bab9-e3f8-8114-8c92-c56dd00ce66d"

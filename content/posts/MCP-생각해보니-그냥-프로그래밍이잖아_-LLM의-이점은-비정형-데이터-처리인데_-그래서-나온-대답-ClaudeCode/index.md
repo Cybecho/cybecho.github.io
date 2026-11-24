@@ -2,11 +2,11 @@
 title: "MCP 생각해보니 그냥 프로그래밍이잖아? LLM의 이점은 비정형 데이터 처리인데? 그래서 나온 대답 ClaudeCode"
 date: 2025-12-18T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp","skill"]
+series: ["AI Harness"]
 description: "MCP는 LLM의 자연어 이해 능력을 활용하지 않고 정형화된 프로토콜에 의존하고 있다는 역설을 지적하며, 클로드 스킬은 자연어로 지시하는 방식으로 이를 해결합니다. 클로드 스킬은 간단한 마크다운 파일로 워크플로를 정의할 수 있어 프로그래밍의 유연함을 제공합니다. MCP는 여전히 대규모 배포와 서비스 연동에 유용하지만, 개인 워크플로와 빠른 프로토타이핑에는 클로드 스킬이 적합합니다."
+featured_image: "image_74a3a1a6e3f8.png"
 notion_id: "2cc1bab9-e3f8-810c-8605-eabc8085413c"
-notion_url: "https://www.notion.so/MCP-LLM-ClaudeCode-2cc1bab9e3f8810c8605eabc8085413c"
 ---
 
 # MCP 생각해보니 그냥 프로그래밍이잖아? LLM의 이점은 비정형 데이터 처리인데? 그래서 나온 대답 ClaudeCode

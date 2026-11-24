@@ -2,8 +2,7 @@
 title: ".self: 내 서버의 주소, 빌리는 게 아니라 갖는 겁니다"
 date: 2026-06-30T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Let's Homelab!"]
 description: "셀프호스팅 전용 최상위 도메인 .self가 ICANN 2026 라운드에 신청됐습니다. 1인 1서브도메인 무료, VPN 터널과 신뢰 메일 서버 같은 공유 서비스, 오픈소스 클라이언트까지 한 묶음이고, 공공재로 운영되며 규칙은 커뮤니티가 정합니다. 다만 아직은 제안 단계라, 22만 7천 달러의 신청비와 무료 도메인의 남용 우려, 1인 1도메인 검증 문제, 경합 신청자까지 넘어야 할 관문이 많습니다."
 featured_image: "image_169535a1cf7ad7dd4d3722a8.webp"
 notion_id: "38f1bab9-e3f8-81d9-a104-ce2eec76a967"

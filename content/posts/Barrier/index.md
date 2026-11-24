@@ -1,15 +1,15 @@
 ---
-title: "Barrier - "
+title: "Barrier - 소프트웨어 기반 KVM"
 date: 2025-01-24T12:34:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
 series: ["Let's Linux!"]
 description: "소프트웨어 기반 KVM에 대한 내용으로, Arch, Debian, RHEL/Fedora/Rocky, Ubuntu와 관련된 정보가 포함되어 있으며, 링크를 통해 추가적인 자료를 확인할 수 있습니다."
+featured_image: "image_2d6af4b23f2c.png"
 notion_id: "1ac1bab9-e3f8-8050-8048-d4ef0ab28cbf"
-notion_url: "https://www.notion.so/Barrier-KVM-1ac1bab9e3f880508048d4ef0ab28cbf"
 ---
 
-# Barrier - 
+# Barrier - 소프트웨어 기반 KVM
 
 > **Summary**
 > 소프트웨어 기반 KVM에 대한 내용으로, Arch, Debian, RHEL/Fedora/Rocky, Ubuntu와 관련된 정보가 포함되어 있으며, 링크를 통해 추가적인 자료를 확인할 수 있습니다.

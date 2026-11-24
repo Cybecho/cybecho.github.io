@@ -2,11 +2,10 @@
 title: "Google Pixel 1 간헐적 동기화 서버 설계"
 date: 2024-07-18T15:10:00.000Z
 draft: false
-tags: ["Other"]
-series: ["Let's Homelab!", "HW", "구글픽셀 개조기"]
+series: ["HW"]
 description: "픽셀 1의 간헐적 동기화를 위해 윈도우 서버를 사용하여 사진을 동기화하고, FTP 서버를 설정하여 파일을 관리하는 방법을 설명합니다. 또한, Syncthing을 통해 자동 파일 전송을 설정하고, MacroDroid를 이용해 Google Photos의 자동 백업을 유지하는 방법을 안내합니다. 배터리 과열 방지를 위한 스마트 플러그 사용도 권장됩니다."
+featured_image: "image_ff5c3fa9ca48.webp"
 notion_id: "baa1f2f9-90ef-4a90-b84e-86dbcd5b5d7b"
-notion_url: "https://www.notion.so/Google-Pixel-1-baa1f2f990ef4a90b84e86dbcd5b5d7b"
 ---
 
 # Google Pixel 1 간헐적 동기화 서버 설계
@@ -36,7 +35,7 @@ Pixel 1 이 켜졌을때, 그동안 저장되었었던 Windows에 있던 사진 
 
 ## Google Pixel 1 저장공간 확장하기
 
-> 💡 **[Google Pixel 1 에 외장하드 마운트하기](https://www.notion.so/1a28f3aeda114b0380435ba02c83e9e1) **
+> 💡 **[Google Pixel 1 에 외장하드 마운트하기](https://app.notion.com/p/1a28f3aeda114b0380435ba02c83e9e1) **
 
 ## Pixel 1 아이피 고정 & FTP 서버 개설
 
@@ -59,8 +58,20 @@ Pixel 1 이 켜졌을때, 그동안 저장되었었던 Windows에 있던 사진 
 ---
 
 > 서버 개설
+> ![Image](image_98116c34bc5244e1508be73d.png)
+>
+> ![Image](image_f1b30bddc1fcc605b8d8a1f7.png)
+>
+> ![Image](image_c8c389c34651eff574e79564.png)
+>
+>
 
 > 윈도우에서 ftp 서버 마운트
+> ![Image](image_24a8cdcabd0106d9b4b052fb.png)
+>
+> ![Image](image_c29c002cf05d6aae34e75a58.png)
+>
+>
 
 ## 윈도우→안드로이드 동기화
 
@@ -90,7 +101,7 @@ Pixel 1 이 켜졌을때, 그동안 저장되었었던 Windows에 있던 사진 
 
 1. 안드로이드 홈 화면 중앙에 'Photos - 여유 공간' 아이콘 배치
   - Photos 앱 아이콘을 길게 눌러 '여유 공간' 옵션을 홈 화면으로 드래그
-![Image](image_caad5a71dfd8.png)
+![Image](image_426e8e744aa4a8354aae56a9.png)
 
 ### → MacroDroid 설정 방법
 

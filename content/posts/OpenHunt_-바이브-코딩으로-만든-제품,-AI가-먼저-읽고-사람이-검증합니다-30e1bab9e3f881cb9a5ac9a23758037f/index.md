@@ -2,9 +2,10 @@
 title: "OpenHunt: 바이브 코딩으로 만든 제품, AI가 먼저 읽고 사람이 검증합니다"
 date: 2026-02-21T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "OpenHunt은 제품을 등록하면 AI 에이전트가 사용성·차별점·개선점을 분석해 구조화된 리뷰를 제공하고, 사람이 공감과 업보트로 검증하는 AI 네이티브 런칭 플랫폼입니다. 무료 핵심 기능과 주간 랭킹, 개인 에이전트 추천을 통해 하루짜리 관심에 그치지 않고 좋은 제품이 지속적으로 발견되도록 돕습니다. 다만 효과는 커뮤니티 활성도에 달려 있으며, AI 평가의 뉘앙스 손실과 조작 방지, 도달 범위는 과제로 남아 있습니다."
+featured_image: "image_410a06a4548859179044e498.webp"
 notion_id: "30e1bab9-e3f8-81cb-9a5a-c9a23758037f"
 ---
 

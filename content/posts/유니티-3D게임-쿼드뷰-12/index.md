@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 12"
 date: 2023-02-23T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "클래스 상속, 보스 구현, 코루틴 사용법, localScale 조정, 모든 메쉬 색상 변경 방법, 플레이어 방향 예측 및 보스 패턴 개발에 관한 내용을 다루고 있습니다. 각 주제에 대한 코드 예시와 설명이 포함되어 있습니다."
+featured_image: "image_f6af99cb6d4f.png"
 notion_id: "58df85f9-7db2-460f-9d28-c50ddbea8630"
-notion_url: "https://www.notion.so/3D-12-58df85f97db2460f9d28c50ddbea8630"
 ---
 
 # 유니티 3D게임 쿼드뷰 12

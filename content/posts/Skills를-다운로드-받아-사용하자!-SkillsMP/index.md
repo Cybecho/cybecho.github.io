@@ -2,11 +2,11 @@
 title: "Skills를 다운로드 받아 사용하자! SkillsMP"
 date: 2026-01-18T06:47:00.000Z
 draft: false
-tags: ["AI", "Claude"]
-series: ["AI"]
+tags: ["Claude","skill"]
+series: ["AI Harness"]
 description: "고성능 AI 에이전트의 활용이 증가함에 따라, SkillsMP 플랫폼은 65,000개 이상의 스킬을 제공하여 개발자들이 효율적으로 기능을 구현할 수 있도록 돕는다. 이 플랫폼은 천문학, 물리학 등 다양한 전문 분야의 스킬 라이브러리를 갖추고 있으며, 사용자는 필요한 스킬을 검색하여 다운로드 후 설치할 수 있다. 또한, AI를 통한 자동 설치 기능을 제공하는 대안 플랫폼도 등장하고 있으며, 향후 에이전트 스킬 시장은 기존 스킬의 조합과 관리에 중점을 두게 될 전망이다."
+featured_image: "image_b3580e1a3f3e.png"
 notion_id: "2ec1bab9-e3f8-8051-b71a-caa8350f6a7a"
-notion_url: "https://www.notion.so/Skills-SkillsMP-2ec1bab9e3f88051b71acaa8350f6a7a"
 ---
 
 # Skills를 다운로드 받아 사용하자! SkillsMP

@@ -2,8 +2,8 @@
 title: "Patina: AI 티를 벗기면, 뜻은 그대로 남습니다"
 date: 2026-06-02T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill"]
+series: ["블로그 수익 글쓰기"]
 description: "Patina는 AI가 쓴 글의 티를 189개 패턴으로 찾아내 뜻은 그대로 두고 포장만 벗기는 오픈소스 도구입니다. 다시 쓰는 게 아니라 뭘 왜 바꿨는지 보여주는 게 핵심이라, 바뀐 부분과 이유를 하나씩 확인할 수 있습니다. 스킬·CLI·브라우저 세 가지로 쓸 수 있고, 점수는 참고 신호일 뿐이라 마지막 판단은 사람이 합니다."
 featured_image: "image_987d1ed674b6a202eb8437c1.webp"
 notion_id: "3721bab9-e3f8-8154-96ac-e35d0aa21453"

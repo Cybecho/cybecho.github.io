@@ -2,11 +2,11 @@
 title: "VPN서버 구축"
 date: 2024-04-23T02:46:00.000Z
 draft: false
-tags: ["Other", "보안"]
-series: ["Infra & Network", "Let's Homelab!"]
+tags: ["보안"]
+series: ["Infra & Network"]
 description: "VPN 서버 구축을 위해 Tailscale이나 PiVPN을 설정하고, OpenVPN을 사용할 계획이다. Fail2ban을 통해 SSH 서버의 보안을 강화하고, Docker를 이용해 OpenMediaVault, Nginx Proxy, OpenVPN, Fail2Ban을 설치하여 관리할 수 있다. 각 서비스의 설정 파일을 수정하여 외부에서 안전하게 NAS에 접속할 수 있도록 하고, 무차별 대입 공격을 차단한다."
+featured_image: "image_fc0c4547f60172ae06e86e5d.png"
 notion_id: "bc4c874c-5da5-4797-aea5-07aac90246d6"
-notion_url: "https://www.notion.so/VPN-bc4c874c5da54797aea507aac90246d6"
 ---
 
 # VPN서버 구축
@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/VPN-bc4c874c5da54797aea507aac90246d6"
 
 ---
 
-![Image](image_1fea3b1b011b.png)
+![Image](image_fc0c4547f60172ae06e86e5d.png)
 
 ```latex
 Tailscale이나 PiVPN 하나 설정해두시고 VPN 접속해서 SSH 접속하시는걸 추천합니다.

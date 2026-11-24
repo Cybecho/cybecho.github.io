@@ -2,8 +2,8 @@
 title: "Outer Loop: 브라우저가 SSH를 알면, 서버 앱이 그냥 열립니다"
 date: 2026-07-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["browser-automation"]
+series: ["AI Harness"]
 description: "Outer Loop는 SSH를 아는 브라우저입니다. 탭 하나가 서버 하나에 연결돼, 원격 포트와 소켓에 바로 닿습니다. 기존 ssh -L 포트 포워딩은 노트북을 닫으면 끊기고, 로컬 포트를 기기의 누구나 쓸 수 있습니다. Outer Loop는 비밀번호로 보호된 프록시 하나로 바꿉니다. 핸드폰에서는 QR 코드 하나로 서버를 넘겨받고, VPN만 쓰는 방식보다 포트를 열지 않아 인증 단계가 사라집니다."
 featured_image: "image_63e9a129add7f7ce8073a44c.webp"
 notion_id: "3a31bab9-e3f8-813e-81e7-d883c9551c71"

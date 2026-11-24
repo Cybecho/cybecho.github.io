@@ -2,11 +2,11 @@
 title: "로그라이크 게임 제작 05"
 date: 2023-03-20T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 게임 습작"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "무한 맵 구현을 위한 C# 코드와 알고리즘을 설명하며, 플레이어의 위치에 따라 맵 프리팹을 재배치하는 방법을 다룹니다. 플레이어와 프리팹 간의 거리 차이를 계산하여 특정 조건을 만족할 때 프리팹을 이동시키는 로직이 포함되어 있습니다."
+featured_image: "image_da3a8c310f1ad0f7b2290578.gif"
 notion_id: "97fe70d5-bcf1-49d4-921a-55346d46e2b6"
-notion_url: "https://www.notion.so/05-97fe70d5bcf149d4921a55346d46e2b6"
 ---
 
 # 로그라이크 게임 제작 05
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/05-97fe70d5bcf149d4921a55346d46e2b6"
 > 무한 맵 구현을 위한 C# 코드와 알고리즘을 설명하며, 플레이어의 위치에 따라 맵 프리팹을 재배치하는 방법을 다룹니다. 플레이어와 프리팹 간의 거리 차이를 계산하여 특정 조건을 만족할 때 프리팹을 이동시키는 로직이 포함되어 있습니다.
 
 ---
+
+![Image](image_da3a8c310f1ad0f7b2290578.gif)
 
 ## 참고 코드
 

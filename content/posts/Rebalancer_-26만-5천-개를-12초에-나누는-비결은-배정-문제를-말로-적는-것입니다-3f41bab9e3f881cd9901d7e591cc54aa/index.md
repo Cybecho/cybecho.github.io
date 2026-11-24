@@ -2,8 +2,7 @@
 title: "Rebalancer: 26만 5천 개를 12초에 나누는 비결은 배정 문제를 말로 적는 것입니다"
 date: 2026-10-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Tips"]
 description: "Rebalancer는 객체·통·제약·목표로 배정 문제를 표현하고, 문제 규모와 요구에 따라 지역 탐색이나 최적 솔버를 선택해 풉니다. 메타에서 하루 약 4천만 건을 처리하며, 관련 도구와 함께 공개되어 서버 작업부터 회의실 배정까지 다양한 분야에서 활용할 수 있습니다."
 featured_image: "image_c147159e1107bdcb989c0d58.webp"
 notion_id: "3f41bab9-e3f8-81cd-9901-d7e591cc54aa"

@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 17"
 date: 2023-02-26T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "유니티 3D 게임 개발에 관한 내용으로, 게임 시작 및 종료 기능 구현, 몬스터 소환 로직, 네비게이션 타겟 설정 방법, 씬 관리 함수 사용법, 버튼 클릭 방지 설정 등이 포함되어 있습니다."
+featured_image: "image_e94b0d401e94.png"
 notion_id: "1402a9ea-4e6d-4d58-b0c8-674f341514bf"
-notion_url: "https://www.notion.so/3D-17-1402a9ea4e6d4d58b0c8674f341514bf"
 ---
 
 # 유니티 3D게임 쿼드뷰 17

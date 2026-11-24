@@ -2,11 +2,10 @@
 title: "Google Pixel 1 애초에 Pixel1이 필요도 없었다고?"
 date: 2025-07-14T15:16:00.000Z
 draft: false
-tags: ["Other"]
-series: ["Let's Homelab!", "HW", "구글픽셀 개조기"]
+series: ["HW"]
 description: "Revanced Manager를 사용하여 Google Photos 앱을 패치하면 루트 권한 없이 무제한 원본 품질 백업 기능을 활성화할 수 있습니다. 주요 단계는 기존 앱 제거, Revanced Manager 설치, Google Photos APK 로드 및 패치 적용, GmsCore 설치, 패치된 앱 실행입니다. 이 과정을 통해 누구나 쉽게 무제한 백업 기능을 추가할 수 있습니다."
+featured_image: "image_6222a4437615.webp"
 notion_id: "2311bab9-e3f8-80eb-87ea-e270f1df5b7f"
-notion_url: "https://www.notion.so/Google-Pixel-1-Pixel1-2311bab9e3f880eb87eae270f1df5b7f"
 ---
 
 # Google Pixel 1 애초에 Pixel1이 필요도 없었다고?

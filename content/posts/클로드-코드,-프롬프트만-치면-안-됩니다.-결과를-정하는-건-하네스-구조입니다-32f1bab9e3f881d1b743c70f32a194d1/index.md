@@ -2,8 +2,8 @@
 title: "클로드 코드, 프롬프트만 치면 안 됩니다. 결과를 정하는 건 하네스 구조입니다"
 date: 2026-03-26T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness","agent"]
+series: ["AI Harness"]
 description: "클로드 코드의 성과는 프롬프트보다 작업 구조와 검증 방식에 달려 있습니다. 기획자·생성자·평가자를 나누고 스프린트 목표와 테스트 기준을 합의하면 결과물의 기능성과 완성도를 높일 수 있습니다. 모델이 발전하면 하네스를 단계적으로 가볍게 하되, 모델이 혼자 해결하기 어려운 영역에서는 평가자를 유지해야 합니다."
 featured_image: "image_12229c5c326df44fa5fde721.webp"
 notion_id: "32f1bab9-e3f8-81d1-b743-c70f32a194d1"

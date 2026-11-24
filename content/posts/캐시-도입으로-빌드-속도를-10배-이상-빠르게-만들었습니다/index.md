@@ -2,11 +2,11 @@
 title: "캐시 도입으로 빌드 속도를 10배 이상 빠르게 만들었습니다"
 date: 2025-07-25T06:45:00.000Z
 draft: false
-tags: ["Git", "Notion"]
-series: ["Notion ↔ Git Pages 자동화", "Git", "Tips"]
+tags: ["Git","Notion"]
+series: ["Dev Environment"]
 description: "GitHub Actions의 캐시를 활용하여 블로그 빌드 시간을 10분에서 1분으로 단축시켰다. 매번 새로 설치하던 도구와 원고를 캐시하여 효율성을 높였으며, 자동화 시스템의 비효율성을 인식하고 개선하는 과정에서 블로그 성장의 증거를 발견했다."
+featured_image: "image_455c95d412cb.png"
 notion_id: "23b1bab9-e3f8-8024-8273-f875108d25f6"
-notion_url: "https://www.notion.so/10-23b1bab9e3f880248273f875108d25f6"
 ---
 
 # 캐시 도입으로 빌드 속도를 10배 이상 빠르게 만들었습니다

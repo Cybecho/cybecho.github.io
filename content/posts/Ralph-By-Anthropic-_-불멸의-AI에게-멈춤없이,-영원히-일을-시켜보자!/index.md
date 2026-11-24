@@ -2,17 +2,17 @@
 title: "Ralph By Anthropic : 불멸의 AI에게 멈춤없이, 영원히 일을 시켜보자!"
 date: 2026-01-11T07:30:00.000Z
 draft: false
-tags: ["AI", "Claude"]
-series: ["AI"]
-description: "Ralph 플러그인은 Anthropic의 Claude를 위한 도구로, 과업이 완료될 때까지 동일한 프롬프트를 반복 실행하여 조기 포기를 방지합니다. 사용자는 "
+tags: ["Claude","coding"]
+series: ["AI Harness"]
+description: "Ralph 플러그인은 Anthropic의 Claude를 위한 도구로, 과업이 완료될 때까지 동일한 프롬프트를 반복 실행하여 조기 포기를 방지합니다. 사용자는 /ralph 명령어를 통해 작업을 설정하고, 완료 신호를 지정하여 자동 반복을 제어할 수 있습니다. 상태 파일과 스탑 훅 기술을 활용하여 작업의 진행 상황을 관리하며, 비용 리스크를 줄이기 위해 최대 반복 횟수를 설정할 수 있습니다. 효율적인 과업 수행을 위해서는 명확하고 검증 가능한 프롬프트 전략이 필요합니다."
+featured_image: "image_0650f82c5dfd.png"
 notion_id: "2e51bab9-e3f8-806d-b12b-f05b64df2efe"
-notion_url: "https://www.notion.so/Ralph-By-Anthropic-AI-2e51bab9e3f8806db12bf05b64df2efe"
 ---
 
 # Ralph By Anthropic : 불멸의 AI에게 멈춤없이, 영원히 일을 시켜보자!
 
 > **Summary**
-> Ralph 플러그인은 Anthropic의 Claude를 위한 도구로, 과업이 완료될 때까지 동일한 프롬프트를 반복 실행하여 조기 포기를 방지합니다. 사용자는 
+> Ralph 플러그인은 Anthropic의 Claude를 위한 도구로, 과업이 완료될 때까지 동일한 프롬프트를 반복 실행하여 조기 포기를 방지합니다. 사용자는 /ralph 명령어를 통해 작업을 설정하고, 완료 신호를 지정하여 자동 반복을 제어할 수 있습니다. 상태 파일과 스탑 훅 기술을 활용하여 작업의 진행 상황을 관리하며, 비용 리스크를 줄이기 위해 최대 반복 횟수를 설정할 수 있습니다. 효율적인 과업 수행을 위해서는 명확하고 검증 가능한 프롬프트 전략이 필요합니다.
 
 ---
 

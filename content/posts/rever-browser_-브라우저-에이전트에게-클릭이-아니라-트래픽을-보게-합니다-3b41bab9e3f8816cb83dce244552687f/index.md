@@ -2,8 +2,8 @@
 title: "rever-browser: 브라우저 에이전트에게 클릭이 아니라 트래픽을 보게 합니다"
 date: 2026-08-06T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["browser-automation","agent"]
+series: ["AI Harness"]
 description: "공식 API가 없는 사이트에서 에이전트는 화면을 클릭하는 대신 뒤에서 오가는 요청을 읽습니다. rever-browser는 진짜 브라우저 탭과 에이전트를 한 앱에 묶어, 트래픽 기록부터 서명 재현까지 다섯 단계 루프로 이어지게 만듭니다. 마지막에는 LLM 없이 돌아가는 매크로와 파이썬 클라이언트가 남고, 토큰은 일반 방식보다 최대 218배 적게 듭니다."
 featured_image: "image_6e07327802b30cf5f632ac36.webp"
 notion_id: "3b41bab9-e3f8-816c-b83d-ce244552687f"

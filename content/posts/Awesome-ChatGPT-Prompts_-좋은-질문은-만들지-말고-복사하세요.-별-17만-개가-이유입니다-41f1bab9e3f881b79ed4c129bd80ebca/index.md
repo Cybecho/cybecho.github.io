@@ -2,8 +2,8 @@
 title: "Awesome ChatGPT Prompts: 좋은 질문은 만들지 말고 복사하세요. 별 17만 개가 이유입니다"
 date: 2026-11-21T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering"]
+series: ["AI Harness"]
 description: "prompts.chat은 커뮤니티가 검증한 프롬프트를 검색하고 한 번에 복사해 다양한 AI 모델에 활용할 수 있는 대규모 오픈소스 모음입니다. 무료 안내서와 봇 목록도 제공하며, MIT 및 CC0 라이선스와 자가 호스팅을 지원해 조직 전용 모음으로 만들 수 있습니다. 투표 순위는 참고만 하고, 각 프롬프트를 자신의 목적과 조건에 맞게 다듬어야 합니다."
 featured_image: "image_90f7b478fbbf25220aa4fd8b.webp"
 notion_id: "41f1bab9-e3f8-81b7-9ed4-c129bd80ebca"

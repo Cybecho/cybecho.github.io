@@ -3,10 +3,10 @@ title: "Git 동기화시 충돌 발생했을때 해결법"
 date: 2023-10-29T00:00:00.000Z
 draft: false
 tags: ["obsidian"]
-series: ["Git", "Tips"]
+series: ["Let's Git"]
 description: "깃 충돌이 발생했을 때, 에러 메시지를 더블클릭하면 충돌이 일어난 파일들의 로그를 확인할 수 있으며, 충돌 해결을 위해 git rm <파일> 명령어를 사용할 수 있습니다."
+featured_image: "image_49f5a6ca9beb.png"
 notion_id: "c00dabb6-8b8f-4de0-8733-95dc39aa66b4"
-notion_url: "https://www.notion.so/Git-c00dabb68b8f4de0873395dc39aa66b4"
 ---
 
 # Git 동기화시 충돌 발생했을때 해결법

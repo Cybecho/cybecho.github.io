@@ -2,8 +2,8 @@
 title: "voxl: 에이전트에게 화면을 60프레임으로 보여주면, 기다림이 사라집니다"
 date: 2026-11-04T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "voxl은 원격 컴퓨터 화면을 브라우저에 초당 60프레임으로 스트리밍해 AI 에이전트가 작업 결과를 실시간으로 확인하도록 돕는 Rust 기반 오픈소스 도구입니다. 스크린샷·녹화·화면 변화 감지 API를 제공해 고정된 시간만큼 기다리는 대신 화면 상태에 맞춰 작업할 수 있으며, 리눅스·맥·윈도우를 지원하지만 Wayland는 아직 지원하지 않습니다."
 featured_image: "image_8d87c7f4aac847b1a2bab7ca.webp"
 notion_id: "40e1bab9-e3f8-814f-ac0a-eba7793cff0d"

@@ -2,8 +2,8 @@
 title: "Hermes Agent: 에이전트가 자기 도구를 직접 만들면, 학습 속도가 곱해집니다"
 date: 2026-05-07T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness","agent"]
+series: ["AI Harness"]
 description: "Hermes는 작업 기록을 분석해 스킬을 사후에 개선하고, Browser Harness는 작업 중 필요한 도구를 직접 만들어 로그인된 크롬에서 활용합니다. 두 학습 방식이 결합하면 에이전트가 작업할 때마다 도구와 스킬이 함께 발전해 자동화의 속도와 정확도를 높입니다."
 featured_image: "image_9f6c068e1ecc2982884de815.webp"
 notion_id: "3581bab9-e3f8-8179-81dc-c325c39e682e"

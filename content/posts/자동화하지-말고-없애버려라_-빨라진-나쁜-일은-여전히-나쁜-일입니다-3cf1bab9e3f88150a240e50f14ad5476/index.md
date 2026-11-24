@@ -2,8 +2,8 @@
 title: "자동화하지 말고 없애버려라: 빨라진 나쁜 일은 여전히 나쁜 일입니다"
 date: 2026-09-02T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "자동화는 낡은 절차를 빠르게 만들 뿐이지만, 없애버리는 일은 절차 자체를 사라지게 만드는 것입니다. 인터넷이 유통 비용을 낮춰 미디어의 힘을 약화시켰듯, AI는 전문 지식의 비용을 낮춰 중개자의 권력을 고객에게 넘기고 있습니다. AI 의사와 AI 공장, 사업 전체를 대신 실행하는 서비스처럼, 진짜 기회는 일을 빠르게 하는 데가 아니라 일을 없애는 데 있습니다."
 featured_image: "image_58a8bebc8a9f2e4f940b0da2.webp"
 notion_id: "3cf1bab9-e3f8-8150-a240-e50f14ad5476"

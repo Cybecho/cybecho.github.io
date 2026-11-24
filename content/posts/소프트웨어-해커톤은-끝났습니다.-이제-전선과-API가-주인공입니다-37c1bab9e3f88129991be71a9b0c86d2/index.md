@@ -2,8 +2,8 @@
 title: "소프트웨어 해커톤은 끝났습니다. 이제 전선과 API가 주인공입니다"
 date: 2026-06-11T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "AI가 코드를 써주면서 해커톤의 승부는 코드량에서 시스템 설계로 옮겨갔습니다. 48시간 동안 코드 한 줄도 보지 않고, 회전식 전화기에 Raspberry Pi를 달아 AI 음악 비서를 만든 팀이 그 증거입니다. 웹 앱만으로는 이제 놀라기 어려워졌고, 오래된 기계를 다시 만지는 하드웨어 해커톤이 다음 무대가 됩니다."
 featured_image: "image_00afb23d03a5e01d45c25b24.webp"
 notion_id: "37c1bab9-e3f8-8129-991b-e71a9b0c86d2"

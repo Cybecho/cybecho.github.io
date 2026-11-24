@@ -2,8 +2,8 @@
 title: "이슈 제목이 명령이 되면, AI 봇은 읽고 실행합니다"
 date: 2026-03-11T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "GitHub 이슈 제목에 숨긴 명령이 AI 이슈 분류 봇을 속였고, 캐시 오염과 인증 정보 탈취를 거쳐 악성 패키지가 배포됐습니다. 2026년 2월 17일, 악성 cline@2.3.0이 8시간 동안 npm에 올라 있었고 약 4,000건이 내려갔습니다. 코드 리뷰·npm audit·출처 증명은 이 공격을 잡지 못했으므로, 막는 방법은 권한을 줄이고 비밀과 불신 입력을 분리하는 것입니다."
 featured_image: "image_f08060cccbac09ceb2ab2576.webp"
 notion_id: "3201bab9-e3f8-810e-a9d2-e3bb42ab84f0"

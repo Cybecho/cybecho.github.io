@@ -2,8 +2,8 @@
 title: "notebooklm-py: 노트북LM은 웹에서만 쓰는 게 아니라, 코드로 굴리는 겁니다"
 date: 2026-03-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp","coding"]
+series: ["AI Harness"]
 description: "notebooklm-py는 노트북LM의 자료 수집, 질문, 콘텐츠 생성과 다운로드를 파이썬·CLI·MCP 등으로 자동화하는 비공식 라이브러리입니다. 분석은 노트북LM 서버에서 처리해 에이전트의 부담을 줄이고, 근거 있는 답변과 프로젝트 지식을 활용할 수 있지만, 내부 API 변경과 인증 정보 관리 위험이 있어 프로토타입·연구·개인 프로젝트에 적합합니다."
 featured_image: "image_5a25ec667d1b6ff10a245307.webp"
 notion_id: "31f1bab9-e3f8-8164-9012-c3a8861da9a5"

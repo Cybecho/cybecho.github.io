@@ -2,8 +2,8 @@
 title: "stickman-video-director: 문장 하나를 1분짜리 스틱맨 영상으로 바꾸는 법"
 date: 2026-09-03T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "문장 하나를 붙여넣으면 스킬이 1분짜리 스틱맨 영상의 대본과 연출안을 먼저 짜주고, 여섯 장면의 연출안을 확인한 뒤에야 생성용 프롬프트를 만듭니다. 모델 엔진은 영상 생성 모델로 클립을 직접 렌더링하고, 코드 엔진은 에이전트가 코드를 짜서 로컬에서 렌더링하므로 영상 모델 크레딧 없이 만들 수 있습니다. 스타일 15개와 세 가지 화면 비율, 밝은·어두운 테마를 고를 수 있고, 썸네일과 제목, 설명까지 챙기는 마무리 키트도 함께 제공합니다."
 featured_image: "image_e3df84bd4d45ac53fc27f40b.webp"
 notion_id: "3cf1bab9-e3f8-817d-bb79-e86f3c49ce7f"

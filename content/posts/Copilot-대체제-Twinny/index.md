@@ -2,11 +2,11 @@
 title: "Copilot 대체제 Twinny"
 date: 2024-07-21T08:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI", "개발환경"]
+tags: ["coding","local-llm"]
+series: ["AI Harness"]
 description: "Twinny와 Codestral을 결합하여 로컬에서 동작하는 고성능 코딩 어시스턴트를 구현하는 방법을 설명합니다. 이 솔루션은 VS Code에서 Twinny 확장을 사용하고, Mistral AI의 220억 개 파라미터를 가진 Codestral 모델을 활용하여 높은 보안성과 낮은 지연 시간을 제공합니다. 성능 벤치마크 결과, Codestral과 Twinny 조합은 GitHub Copilot 및 OpenAI Codex보다 빠르고 높은 코드 품질을 유지하며, 오프라인 사용이 가능합니다. 개발자들은 이 솔루션을 통해 데이터 프라이버시를 유지하면서 AI의 힘을 활용할 수 있습니다."
+featured_image: "image_3a0e66d4431e.png"
 notion_id: "11ad1a50-1541-4e19-ba9d-b038b3f22142"
-notion_url: "https://www.notion.so/Copilot-Twinny-11ad1a5015414e19ba9db038b3f22142"
 ---
 
 # Copilot 대체제 Twinny
@@ -27,8 +27,6 @@ notion_url: "https://www.notion.so/Copilot-Twinny-11ad1a5015414e19ba9db038b3f221
 ## 시스템 아키텍처
 
 먼저, 전체 시스템의 아키텍처를 살펴보겠습니다:
-
-![Image](image_39773dfca7ab.png)
 
 이 아키텍처는 다음과 같은 주요 컴포넌트로 구성됩니다:
 

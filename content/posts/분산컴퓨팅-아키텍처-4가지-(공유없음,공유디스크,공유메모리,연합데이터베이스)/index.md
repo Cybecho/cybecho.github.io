@@ -3,10 +3,10 @@ title: "분산컴퓨팅 아키텍처 4가지 (공유없음,공유디스크,공�
 date: 2025-04-09T09:56:00.000Z
 draft: false
 tags: ["Distributed Computing"]
-series: ["분산컴퓨팅을 공부해보자"]
+series: ["Infra & Network"]
 description: "분산컴퓨팅 아키텍처에는 네 가지 방식이 있다: 공유 없음(각 노드가 독립적으로 작업), 공유 디스크(공통 저장공간 사용), 공유 메모리(복잡한 동기화 문제), 연합 데이터베이스(여러 데이터베이스를 하나처럼 보이게 하는 미들웨어). 각 방식은 데이터 공유와 일관성 문제를 다루는 설계 철학을 반영한다."
+featured_image: "image_e9b74f22f626d4a06da55545.png"
 notion_id: "1d01bab9-e3f8-80dc-8252-e2907f9e25c4"
-notion_url: "https://www.notion.so/4-1d01bab9e3f880dc8252e2907f9e25c4"
 ---
 
 # 분산컴퓨팅 아키텍처 4가지 (공유없음,공유디스크,공유메모리,연합데이터베이스)
@@ -16,9 +16,11 @@ notion_url: "https://www.notion.so/4-1d01bab9e3f880dc8252e2907f9e25c4"
 
 ---
 
+![Image](image_e9b74f22f626d4a06da55545.png)
+
 ## 여러 노드가 데이터를 어떻게 공유할까에 대한 설계 철학임
 
-![Image](image_38abe2e37988.png)
+![Image](image_232e8b44a7f0ebdd908853f8.png)
 
 ### 공유 없음 (Shared Nothing) 방식: 각자도생허셈
 
@@ -32,7 +34,7 @@ notion_url: "https://www.notion.so/4-1d01bab9e3f880dc8252e2907f9e25c4"
 
 - AWS의 NFS 개념 생각해두면 됨
 - 즉, 여러 노드가 각자 일하되, 일한 데이터는 공통으로 마운트된 공용 HDD에 업데이트 해두는거제
-- 근데 이러면 자연스럽게 [Untitled](https://www.notion.so/29e8d820a4c94ffd8f55d7ce18ba8042)  문제가 대두되겄지?
+- 근데 이러면 자연스럽게 [Untitled](https://app.notion.com/p/29e8d820a4c94ffd8f55d7ce18ba8042)  문제가 대두되겄지?
 - 결국 순서게임이야~
 
 ### **공유 메모리 (Shared Memory) 방식**

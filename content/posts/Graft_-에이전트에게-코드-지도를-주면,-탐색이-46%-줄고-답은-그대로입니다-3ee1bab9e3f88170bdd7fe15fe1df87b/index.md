@@ -2,8 +2,8 @@
 title: "Graft: 에이전트에게 코드 지도를 주면, 탐색이 46% 줄고 답은 그대로입니다"
 date: 2026-10-04T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "Graft(현재 Trail-code의 일부)는 코드베이스를 파일·함수·호출 관계로 구성한 로컬 코드 지도로 에이전트의 반복 탐색을 줄입니다. 자체 측정에서 도구 호출은 46%, 토큰은 42%, 작업 시간은 60% 감소했고 정답률은 유지됐으며, 실제 이슈 해결 과제는 27개에서 33개로 늘었습니다. 지도는 코드 변경분만 갱신되며 훅, MCP, CLI로 사용할 수 있지만, 지원 언어와 코드 중심이라는 한계가 있습니다."
 featured_image: "image_cdef4ac0d36293c1815a8f6c.webp"
 notion_id: "3ee1bab9-e3f8-8170-bdd7-fe15fe1df87b"

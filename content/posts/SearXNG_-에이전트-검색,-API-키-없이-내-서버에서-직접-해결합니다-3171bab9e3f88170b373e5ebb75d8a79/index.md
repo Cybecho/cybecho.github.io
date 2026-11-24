@@ -2,8 +2,8 @@
 title: "SearXNG: 에이전트 검색, API 키 없이 내 서버에서 직접 해결합니다"
 date: 2026-03-02T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp"]
+series: ["Self-Hosted AI"]
 description: "SearXNG를 직접 띄우면 검색 API 키 없이 에이전트에게 최신 정보 검색을 시킬 수 있습니다. Docker Compose로 SearXNG와 Valkey, 리버스 프록시 3개 컨테이너를 올리고 settings.yml에 JSON 형식을 켜면 에이전트 연동 준비가 됩니다. MCP 서버를 클로드 코드에 등록하면 웹·뉴스·이미지·영상 검색과 본문 추출을 에이전트가 직접 쓰고, 비용은 들지 않습니다."
 featured_image: "image_acf647b50816e9588b7c1f18.webp"
 notion_id: "3171bab9-e3f8-8170-b373-e5ebb75d8a79"

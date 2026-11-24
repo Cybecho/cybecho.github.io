@@ -2,8 +2,8 @@
 title: "Jev 활용법: 에이전트 루프 전에 갈림길을 정합니다. 빠른 판단이 루프를 이끕니다"
 date: 2026-11-11T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "Jev는 글을 생성하지 않고 확률과 점수로 판단하는 모델로, 에이전트 루프에서 질문 라우팅, 답변 검증, 인용 검토, 메모리 선별, 실행 승인 등 다섯 가지 결정을 빠르게 처리합니다. 임계값과 안전장치는 코드가 관리하며, 확신이 부족하면 기록 검색이나 추가 검증으로 돌아가고 위험한 실행은 사람의 확인을 거칩니다."
 featured_image: "image_6eb581f814ade25ab898ed39.webp"
 notion_id: "4151bab9-e3f8-8151-a9b4-c6bef6c55fbf"

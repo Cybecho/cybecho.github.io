@@ -2,8 +2,8 @@
 title: "하루 7만 원 찍었다고 끝이 아닙니다. 다음 날도 7만 원인 블로그가 다릅니다"
 date: 2026-11-16T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["blog-monetization"]
+series: ["블로그 수익 글쓰기"]
 description: "하루 수익 급등은 한 글의 일시적 노출에 그칠 수 있으므로, 안정적인 수익을 위해서는 한 주제를 꾸준히 다루고 신뢰도와 글의 품질을 쌓아야 합니다. 애드포스트의 가입·지급 기준을 확인하고, 과도한 키워드 반복이나 클릭 유도 등 검색 제한을 부르는 행위는 피해야 합니다."
 featured_image: "image_22ae119a6cece46d9492281c.webp"
 notion_id: "41a1bab9-e3f8-81ea-949f-de2f18be47df"

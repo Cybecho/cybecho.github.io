@@ -2,8 +2,8 @@
 title: "ChatGPT Small Business Collection: 16개 도구를 연결하면 답변이 아니라 일이 됩니다"
 date: 2026-09-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "ChatGPT 소상공인 컬렉션은 회계·결제·고객 관리·디자인 등 16개 도구를 연결해 실제 사업 기록을 바탕으로 답하고 초안을 작성하도록 돕습니다. 필요한 도구 2~3개부터 연결하고 권한을 최소화하는 것이 좋으며, 구독료가 별도로 들고 회계 연동은 미국 전용이라 한국 사업자는 사용 가능 여부를 확인해야 합니다."
 featured_image: "image_eae8ed0435e0f7608427e14b.webp"
 notion_id: "3d71bab9-e3f8-81cd-80d2-f560c5583256"

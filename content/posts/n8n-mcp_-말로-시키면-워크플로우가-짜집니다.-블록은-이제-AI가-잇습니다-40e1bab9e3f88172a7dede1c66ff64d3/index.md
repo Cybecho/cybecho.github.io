@@ -2,8 +2,8 @@
 title: "n8n-mcp: 말로 시키면 워크플로우가 짜집니다. 블록은 이제 AI가 잇습니다"
 date: 2026-11-05T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp","agent"]
+series: ["AI Harness"]
 description: "n8n-mcp는 AI 비서가 자연어 지시만으로 n8n 워크플로우를 만들고 수정·검증·실행하며 오류까지 분석하도록 돕는 오픈소스 MCP 서버입니다. 방대한 노드 문서와 템플릿, 스냅샷·되돌리기·읽기 전용 모드 같은 안전장치를 제공해 자동화 구축의 문턱을 낮추지만, 운영에 적용하기 전에는 복사본이나 스테이징 환경에서 충분히 테스트해야 합니다."
 featured_image: "image_4bac239cc6d7bcaf270c4e49.webp"
 notion_id: "40e1bab9-e3f8-8172-a7de-de1c66ff64d3"

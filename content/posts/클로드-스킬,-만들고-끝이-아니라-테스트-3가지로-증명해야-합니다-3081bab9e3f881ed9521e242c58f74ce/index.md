@@ -2,8 +2,8 @@
 title: "클로드 스킬, 만들고 끝이 아니라 테스트 3가지로 증명해야 합니다"
 date: 2026-02-15T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill"]
+series: ["AI Harness"]
 description: "클로드 스킬은 만들기만 해서는 충분하지 않으며, 트리거·기능·성능 테스트로 효과를 검증해야 합니다. 관련 요청의 자동 호출률 90%, API 실패 0회 등 성공 기준을 정하고, 결과에 따라 설명과 범위를 다듬은 뒤 팀이나 커뮤니티에 배포합니다."
 featured_image: "image_222d988c57b0e4a2470a48b2.webp"
 notion_id: "3081bab9-e3f8-81ed-9521-e242c58f74ce"

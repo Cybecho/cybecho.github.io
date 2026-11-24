@@ -1,20 +1,22 @@
 ---
-title: "라즈베리파이에"
+title: "라즈베리파이에LineageOS를 설치해서 안드로이드 머신으로 써볼까요"
 date: 2025-07-17T09:00:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
 series: ["Let's Linux!"]
 description: "라즈베리파이에 LineageOS를 설치하여 안드로이드를 사용할 수 있으며, KonstaKANG이 개발한 LineageOS는 Raspberry Pi 4 모델 이상에서 저사양 스마트폰 수준의 성능을 제공합니다. 설치 과정은 LineageOS 이미지 다운로드, SD 카드에 플래싱, 초기 설정, Google Apps 설치로 구성되며, MindTheGapps 패키지가 권장됩니다. 또한, Revanced를 통해 Google Photos의 무제한 백업 기능을 활성화할 수 있는 방법도 안내됩니다."
+featured_image: "image_db053b1dcab5f6896697a930.png"
 notion_id: "2331bab9-e3f8-801f-af43-e085b9c24e07"
-notion_url: "https://www.notion.so/LineageOS-2331bab9e3f8801faf43e085b9c24e07"
 ---
 
-# 라즈베리파이에
+# 라즈베리파이에LineageOS를 설치해서 안드로이드 머신으로 써볼까요
 
 > **Summary**
 > 라즈베리파이에 LineageOS를 설치하여 안드로이드를 사용할 수 있으며, KonstaKANG이 개발한 LineageOS는 Raspberry Pi 4 모델 이상에서 저사양 스마트폰 수준의 성능을 제공합니다. 설치 과정은 LineageOS 이미지 다운로드, SD 카드에 플래싱, 초기 설정, Google Apps 설치로 구성되며, MindTheGapps 패키지가 권장됩니다. 또한, Revanced를 통해 Google Photos의 무제한 백업 기능을 활성화할 수 있는 방법도 안내됩니다.
 
 ---
+
+![Image](image_db053b1dcab5f6896697a930.png)
 
 # 라즈베리파이에서 안드로이드를 애초에 깔수가 있을까?
 
@@ -157,6 +159,9 @@ adb sideload MindTheGapps-15.0.0-arm64-YYYYMMDD.zip
 
 1. 전송이 끝나면 TWRP에서 *Wipe → Factory Reset* 후 재부팅.
 > 주의
+> **반드시 다시 초기화 후 재설치**
+>
+>
 
 ---
 
@@ -460,3 +465,18 @@ Settings → System → Buttons → Power menu → Advanced restart
 
 - [디바이스마트 - 라즈베리파이 4 안드로이드 OS 설치](https://www.youtube.com/watch?v=Mkpus60QJd0)
 - [LineageOS 20 설치 가이드](https://www.youtube.com/watch?v=psPi6VLJn4E)
+- [ReVanced Photos 무제한 스토리지](https://www.youtube.com/watch?v=yipSKsD4rRs)
+### **GitHub 프로젝트**
+
+- [ReVanced Google Photos Build](https://github.com/Unofficial-Life/revanced-gphotos-build)
+- [Free Unlimited Google Cloud Backup](https://github.com/VehanRajintha/Free-Unlimited-Google-Cloud-Backup-Magisk-Module)
+---
+
+## ⚠️ **주의사항**
+
+1. **법적 고지**: 이 방법은 교육 목적으로만 사용하세요
+1. **데이터 백업**: 중요한 데이터는 별도 백업 권장
+1. **안정성**: 비공식 빌드이므로 일부 기능 제한 가능
+1. **업데이트**: 정기적인 보안 업데이트 확인 필요
+**🎯 성공적으로 완료되면 라즈베리파이 4B에서 무제한 Google Photos 백업이 가능한 완전한 시스템을 구축할 수 있습니다!**
+

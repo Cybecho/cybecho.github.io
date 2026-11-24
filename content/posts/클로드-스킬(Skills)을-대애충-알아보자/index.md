@@ -2,11 +2,11 @@
 title: "클로드 스킬(Skills)을 대애충 알아보자"
 date: 2025-10-21T00:28:00.000Z
 draft: false
-tags: ["AI", "Claude"]
-series: ["AI"]
+tags: ["Claude","skill"]
+series: ["AI Harness"]
 description: "클로드의 '스킬' 기능은 AI 워크플로 도구로서의 가능성을 크게 향상시킵니다. 사용자는 클로드를 통해 PPT, PDF 등 다양한 문서를 자동으로 생성할 수 있으며, 커스텀 스킬을 만들어 데이터 분석을 일관되게 수행할 수 있습니다. 여러 스킬을 조합하여 복잡한 작업을 처리할 수 있으며, 이는 클로드를 엔터프라이즈 환경에서 효과적으로 활용할 수 있게 합니다."
+featured_image: "image_5357dbf3c8a6.png"
 notion_id: "2931bab9-e3f8-8009-9a8c-f666031c9e87"
-notion_url: "https://www.notion.so/Skills-2931bab9e3f880099a8cf666031c9e87"
 ---
 
 # 클로드 스킬(Skills)을 대애충 알아보자

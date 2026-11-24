@@ -2,9 +2,10 @@
 title: "Open Interpreter: PDF 양식 채우기부터 경비 정산까지, AI가 내 파일로 직접 처리합니다"
 date: 2026-02-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "Open Interpreter은 로컬 파일을 직접 읽고 수정해 PDF 양식 작성, 영수증 경비 정산, 회의록 반영 같은 반복 업무를 처리하는 오픈소스 AI 에이전트입니다. 터미널 코딩 에이전트와 데스크톱 앱을 제공하며, 샌드박스와 승인 절차로 중요한 작업을 안전하게 검토할 수 있습니다."
+featured_image: "image_793ae9ffb43c3ef08333be33.webp"
 notion_id: "30c1bab9-e3f8-8173-be31-e59a8bcfd79c"
 ---
 

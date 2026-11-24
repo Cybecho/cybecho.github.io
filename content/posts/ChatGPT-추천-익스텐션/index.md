@@ -2,11 +2,11 @@
 title: "ChatGPT 추천 익스텐션"
 date: 2023-02-17T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering"]
+series: ["AI Harness"]
 description: "ChatGPT 관련 추천 익스텐션 목록: WebChatGPT (인터넷 액세스), Chat GPT Optimizer (복사 붙여넣기), 프롬프트 지니 (자동 번역기), ChatGPT for Search Engines (검색 결과 통합), ChatGPT to Notion (결과 저장), ChatGPT Writer (신속한 글 작성), YouTube Summary with ChatGPT (영상 요약), AIPRM for ChatGPT (질문 공유)."
+featured_image: "image_efea6a2861a9.png"
 notion_id: "f55e6aa8-5675-4f89-b0c3-d7bc63d656a3"
-notion_url: "https://www.notion.so/ChatGPT-f55e6aa856754f89b0c3d7bc63d656a3"
 ---
 
 # ChatGPT 추천 익스텐션

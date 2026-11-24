@@ -2,8 +2,8 @@
 title: "Pixel Agents: 에이전트가 지금 뭘 하는지, 로그가 아니라 캐릭터 움직임으로 봅니다"
 date: 2026-02-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "Pixel Agents는 클로드 코드 에이전트의 상태와 활동을 픽셀 캐릭터의 움직임, 말풍선, 컨텍스트 막대로 실시간 시각화하는 도구입니다. 여러 에이전트를 한눈에 관리하고 사무실에서 실행·재개할 수 있으며, 공간과 캐릭터를 꾸미고 브라우저에서도 사용할 수 있습니다. 현재는 클로드 코드만 지원합니다."
 featured_image: "image_3de47b9830916b9ce055a178.webp"
 notion_id: "3101bab9-e3f8-8111-a64d-efdd945cd036"

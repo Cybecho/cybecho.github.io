@@ -2,11 +2,11 @@
 title: "Ansible, Terraform, 그리고 Vagrant… 다 IaC인데 뭐가 다를까?"
 date: 2025-04-08T03:28:00.000Z
 draft: false
-tags: ["Util", "AI Generate"]
-series: ["오픈소스"]
+tags: ["AI Generate"]
+series: ["Let's Open Source"]
 description: "Ansible, Terraform, Vagrant는 각각 개발 환경 관리, 인프라 프로비저닝, 시스템 구성 관리에 특화된 도구로, 함께 사용하여 효율적인 자동화 워크플로우를 구축할 수 있다. Vagrant는 로컬에서 테스트 환경을 신속하게 구성하고, Terraform은 인프라 자원을 코드로 관리하며, Ansible은 서버 내부의 소프트웨어 설치와 설정을 자동화한다."
+featured_image: "image_444f59d8fcb0cf11909bc3db.png"
 notion_id: "1cf1bab9-e3f8-80b4-a38e-d01475cbf8b7"
-notion_url: "https://www.notion.so/Ansible-Terraform-Vagrant-IaC-1cf1bab9e3f880b4a38ed01475cbf8b7"
 ---
 
 # Ansible, Terraform, 그리고 Vagrant… 다 IaC인데 뭐가 다를까?
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/Ansible-Terraform-Vagrant-IaC-1cf1bab9e3f880b
 > Ansible, Terraform, Vagrant는 각각 개발 환경 관리, 인프라 프로비저닝, 시스템 구성 관리에 특화된 도구로, 함께 사용하여 효율적인 자동화 워크플로우를 구축할 수 있다. Vagrant는 로컬에서 테스트 환경을 신속하게 구성하고, Terraform은 인프라 자원을 코드로 관리하며, Ansible은 서버 내부의 소프트웨어 설치와 설정을 자동화한다.
 
 ---
+
+![Image](image_444f59d8fcb0cf11909bc3db.png)
 
 Ansible, Terraform, 그리고 Vagrant는 모두 인프라 및 환경 관리를 자동화하는 도구이지만, 각각 고유한 역할과 목적이 있습니다. 이들의 차이점을 이해하기 위해 주요 기능과 사용 사례를 살펴보겠습니다.
 

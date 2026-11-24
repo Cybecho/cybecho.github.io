@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 08"
 date: 2023-02-15T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "수류탄 구현 및 폭발 기능을 위한 C# 코드 예시를 제공하며, 수류탄의 투척, 폭발 후 효과, 적에게 데미지를 주는 방법을 설명한다. 또한, 적의 반응을 다르게 설정하고 Rigidbody의 회전 고정을 조정하는 방법도 포함되어 있다."
+featured_image: "image_d22ef2c5db1d.png"
 notion_id: "6e9fae20-0009-4d3d-b7b9-3a03586b41d6"
-notion_url: "https://www.notion.so/3D-08-6e9fae2000094d3db7b93a03586b41d6"
 ---
 
 # 유니티 3D게임 쿼드뷰 08

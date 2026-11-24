@@ -3,10 +3,10 @@ title: "컨테이너에서 해시 왜 씀?"
 date: 2026-01-28T04:44:00.000Z
 draft: false
 tags: ["Docker"]
-series: ["Infra & Network", "Let's Bootc!"]
+series: ["Infra & Network"]
 description: "해시는 파일 내용을 기반으로 하여 각 레이어 tar 파일, config.json, manifest.json을 해시하여 레지스트리에서 식별합니다. 해시는 내용의 동일성만 보장하지만, 안전성이나 악성코드 여부는 확인하지 않으므로 서명이 필요합니다. 레지스트리는 해시를 통해 중복 저장을 방지하며, 이미지 전송 시 해시 검증을 통해 변조 여부를 확인합니다."
+featured_image: "image_a2e3e9aed4b0591051ccb5a9.png"
 notion_id: "2f61bab9-e3f8-8002-b619-d9405283a14c"
-notion_url: "https://www.notion.so/2f61bab9e3f88002b619d9405283a14c"
 ---
 
 # 컨테이너에서 해시 왜 씀?
@@ -16,8 +16,10 @@ notion_url: "https://www.notion.so/2f61bab9e3f88002b619d9405283a14c"
 
 ---
 
+![Image](image_a2e3e9aed4b0591051ccb5a9.png)
 
-![Image](image_0ac9f23300b4.png)
+
+![Image](image_66d8aebccdcf9cfb3efe5f3c.png)
 
 
 ## 컨테이너에서 해시 왜 씀?

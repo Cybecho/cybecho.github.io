@@ -2,11 +2,10 @@
 title: "cursor 완전삭제"
 date: 2024-04-06T14:09:00.000Z
 draft: false
-tags: ["Other"]
-series: ["개발환경"]
+series: ["Dev Environment"]
 description: "WSL2에서 cursor 문제를 해결하기 위해 cursor 프로그램을 삭제하고 관련 디렉토리를 비운 후, 특정 코드를 복사하여 cursor를 대체하면 정상적으로 작동한다."
+featured_image: "image_78903691ac25.png"
 notion_id: "04331296-b3eb-46a6-a516-2085118c1cd1"
-notion_url: "https://www.notion.so/cursor-04331296b3eb46a6a5162085118c1cd1"
 ---
 
 # cursor 완전삭제

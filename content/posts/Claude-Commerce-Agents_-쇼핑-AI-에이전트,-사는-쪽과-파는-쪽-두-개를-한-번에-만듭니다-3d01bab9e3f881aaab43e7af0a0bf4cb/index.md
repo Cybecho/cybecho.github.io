@@ -2,8 +2,8 @@
 title: "Claude Commerce Agents: 쇼핑 AI 에이전트, 사는 쪽과 파는 쪽 두 개를 한 번에 만듭니다"
 date: 2026-09-04T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "Claude Commerce Agents는 쇼핑객을 돕는 에이전트와 판매자를 돕는 에이전트를 함께 제공하며, 하나의 에이전트가 필요한 스킬을 상황에 맞게 불러오는 구조를 택합니다. 쇼핑 에이전트는 상품 검색과 비교, 장바구니 구성까지 맡고 결제는 기존 시스템으로 넘기며, 판매자 에이전트는 매출·재고·가격·캠페인을 분석하고 제안하되 변경은 사람의 별도 승인을 거쳐야 합니다. 코드는 참고용 설계도로 공개됐으며, 발표된 성과 수치는 실제 매장마다 다를 수 있고 모델 사용료와 운영은 별도로 고려해야 합니다."
 featured_image: "image_35939f7a9a7ef80faac961f8.webp"
 notion_id: "3d01bab9-e3f8-81aa-ab43-e7af0a0bf4cb"

@@ -2,8 +2,8 @@
 title: "Whiteboard: AI가 짠 코드, 줄줄 읽지 말고 그림으로 검토합니다"
 date: 2026-09-28T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding","agent"]
+series: ["AI Harness"]
 description: "AI가 짠 PR을 줄 단위로 다 읽지 않아도 됩니다. Whiteboard는 에이전트가 만든 코드의 구조와 변경 이유를 캔버스 그림으로 보여줍니다. 그림을 클릭하면 바로 코드로 이동합니다. 시퀀스 다이어그램, 관계도, 에이전트 실행 기록이 코드와 이어져 있습니다. 줄 나열이 아니라 의미 단위로 diff를 보여주고, 에이전트가 스스로 내린 결정까지 로그로 남깁니다. 로컬에서 MIT 라이선스로 돌아갑니다."
 featured_image: "image_f16ee9304778341741e5c066.webp"
 notion_id: "3e91bab9-e3f8-8165-a701-d3c024b3c780"

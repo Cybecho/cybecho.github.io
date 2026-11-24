@@ -2,8 +2,8 @@
 title: "클로드 코드 가이드: 부탁은 가끔 놓치고, 훅은 절대 놓치지 않습니다"
 date: 2026-03-07T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding","harness"]
+series: ["AI Harness"]
 description: "클로드 코드의 지시는 모델이 판단하는 프롬프트·CLAUDE.md와 하네스가 강제하는 훅·deny 규칙으로 구분해야 합니다. 반드시 지켜야 할 규칙은 훅이나 deny 규칙, 샌드박스로 강제하고, CLAUDE.md는 코드만으로 알기 어려운 내용만 짧게 유지하세요. 완료 여부는 테스트와 검증 결과로 확인하고, /usage, /clear 등으로 비용과 세션을 관리하세요."
 featured_image: "image_6aa85e9fcc416df2015ad78b.webp"
 notion_id: "31c1bab9-e3f8-8132-ad58-ed6f0a0ec20e"

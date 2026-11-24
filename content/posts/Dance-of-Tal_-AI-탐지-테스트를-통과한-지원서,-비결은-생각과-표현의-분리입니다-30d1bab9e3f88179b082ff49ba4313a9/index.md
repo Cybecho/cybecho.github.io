@@ -2,9 +2,10 @@
 title: "Dance of Tal: AI 탐지 테스트를 통과한 지원서, 비결은 생각과 표현의 분리입니다"
 date: 2026-02-21T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","prompt-engineering"]
+series: ["AI Harness"]
 description: "Dance of Tal은 생각을 만드는 층과 표현을 만드는 층을 분리해 AI가 쓴 지원서의 반복적인 문체를 줄이는 구조입니다. Codex와 OpenClaw로 수백 건의 지원서를 자동 작성하고 탐지 테스트를 진행했으며, 이 아이디어는 정체성과 스킬을 조합하는 에이전트 관리 플랫폼으로 확장됐습니다."
+featured_image: "image_9c2ebda9a94abd1a3b4873b6.webp"
 notion_id: "30d1bab9-e3f8-8179-b082-ff49ba4313a9"
 ---
 

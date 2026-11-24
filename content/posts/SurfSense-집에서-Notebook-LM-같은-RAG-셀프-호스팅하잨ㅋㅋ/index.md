@@ -2,11 +2,10 @@
 title: "SurfSense 집에서 Notebook LM 같은 RAG 셀프 호스팅하잨ㅋㅋ"
 date: 2025-12-27T15:07:00.000Z
 draft: false
-tags: ["Util"]
-series: ["오픈소스"]
+series: ["Let's Open Source"]
 description: "SurfSense는 개인 지식을 통합하는 오픈소스 AI 연구 비서로, 내부 문서와 인증이 필요한 자료를 처리할 수 있습니다. 20초 만에 팟캐스트를 생성하고, 하이브리드 검색 기능으로 정확한 정보를 찾으며, 다양한 파일 형식을 지원합니다. Ollama와 통합하여 모든 처리를 로컬에서 실행하며, 빠르게 성장하는 커뮤니티와 함께 다양한 설치 방법을 제공합니다."
+featured_image: "image_fa427b4a6d48.png"
 notion_id: "2d61bab9-e3f8-802f-8cf7-f3dbafd17712"
-notion_url: "https://www.notion.so/SurfSense-Notebook-LM-RAG-2d61bab9e3f8802f8cf7f3dbafd17712"
 ---
 
 # SurfSense 집에서 Notebook LM 같은 RAG 셀프 호스팅하잨ㅋㅋ

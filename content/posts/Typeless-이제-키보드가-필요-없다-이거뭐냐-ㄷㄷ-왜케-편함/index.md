@@ -2,11 +2,11 @@
 title: "Typeless 이제 키보드가 필요 없다 이거뭐냐 ㄷㄷ 왜케 편함"
 date: 2025-12-27T15:01:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness"]
+series: ["AI Harness"]
 description: "Typeless는 AI 음성 받아쓰기 도구로, 사용자가 말하는 내용을 자연스러운 글로 변환하여 불필요한 부분을 자동으로 제거하고, 상황에 맞는 톤으로 조절합니다. 모든 음성 데이터는 사용자 컴퓨터에 저장되며, 100개 이상의 언어를 지원합니다. 특별한 설정 없이 다양한 애플리케이션에서 사용 가능하며, 키보드를 대체하는 것이 아니라 생각하는 속도로 글을 쓸 수 있는 새로운 방법을 제공합니다."
+featured_image: "image_2e8f522bc36d.png"
 notion_id: "2d61bab9-e3f8-8030-a5fc-e89c4bde097e"
-notion_url: "https://www.notion.so/Typeless-2d61bab9e3f88030a5fce89c4bde097e"
 ---
 
 # Typeless 이제 키보드가 필요 없다 이거뭐냐 ㄷㄷ 왜케 편함

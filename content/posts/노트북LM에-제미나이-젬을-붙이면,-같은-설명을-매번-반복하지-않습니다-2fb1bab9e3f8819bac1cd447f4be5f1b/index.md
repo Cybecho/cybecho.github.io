@@ -2,8 +2,8 @@
 title: "노트북LM에 제미나이 젬을 붙이면, 같은 설명을 매번 반복하지 않습니다"
 date: 2026-02-02T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering"]
+series: ["AI Harness"]
 description: "노트북LM 노트북을 제미나이 젬에 연결하면 지시를 한 번만 설정해 두고, 자료가 업데이트될 때마다 최신 지식을 활용할 수 있습니다. 개인 계정의 젬은 2026년 11월 17일부터 읽기 전용이 되고 12월 17일 스킬로 전환되므로, 이전되지 않는 파일은 미리 내려받아야 합니다."
 featured_image: "image_93be6f1f8f680f5d3a499d34.webp"
 notion_id: "2fb1bab9-e3f8-819b-ac1c-d447f4be5f1b"

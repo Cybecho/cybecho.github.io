@@ -2,8 +2,8 @@
 title: "Promptfoo: 프롬프트 단어 하나 바꾸고 기도하는 시대는 끝났습니다"
 date: 2026-03-12T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering","coding"]
+series: ["AI Harness"]
 description: "Promptfoo는 프롬프트, 모델, 테스트 사례의 조합을 자동 평가해 변경으로 인한 회귀를 찾는 오픈소스 도구입니다. 결정적인 검사를 우선하고, LLM 심사관은 사람 판정과 비교해 보정하며, 안정성이 확인된 평가부터 단계적으로 CI 차단에 적용해야 합니다. 캐시와 실행 범위 설정으로 비용을 관리하고, 정기적인 전체 평가로 결과의 최신성을 확인할 수 있습니다."
 featured_image: "image_f00e0779598fe081d2b06d49.webp"
 notion_id: "3211bab9-e3f8-8146-8047-f428755910a5"

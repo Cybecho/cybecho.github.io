@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 03"
 date: 2023-02-06T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "프리팹 태그 설정과 무기 선택 후 애니메이션 작업에 대한 설명. 아이템 종류에 맞춰 플레이어 변수 설정, 무기 스왑 및 선택 코드 작성, 애니메이션 실행 시 무기 유무 체크를 포함한 코드 예시 제공."
+featured_image: "image_5edd6ddc4281.png"
 notion_id: "7ea9930a-e740-4a2c-9055-ef447a04cf8a"
-notion_url: "https://www.notion.so/3D-03-7ea9930ae7404a2c9055ef447a04cf8a"
 ---
 
 # 유니티 3D게임 쿼드뷰 03

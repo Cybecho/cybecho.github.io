@@ -2,11 +2,11 @@
 title: "무료 DNS - DuckDNS"
 date: 2024-07-15T03:08:00.000Z
 draft: false
-tags: ["Util", "Other", "ProxMox"]
+tags: ["ProxMox"]
 series: ["Infra & Network"]
 description: "무료 DNS 서비스인 DuckDNS에 대한 정보와 관련 링크가 포함되어 있습니다."
+featured_image: "image_2f56f49f094c.png"
 notion_id: "9a32dca9-a863-4d3f-8ab3-667b829686c7"
-notion_url: "https://www.notion.so/DNS-DuckDNS-9a32dca9a8634d3f8ab3667b829686c7"
 ---
 
 # 무료 DNS - DuckDNS

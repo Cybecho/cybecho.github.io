@@ -2,8 +2,8 @@
 title: "OpenFilm: 영상은 파일이 아닙니다. 웹 페이지 한 폴더입니다. 에이전트가 쓰고, 클릭으로 고칩니다"
 date: 2026-11-15T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation","agent"]
+series: ["AI Media"]
 description: "OpenFilm은 코딩 에이전트를 영상 에이전트로 바꾸는 오픈소스 도구입니다. 영상은 웹 페이지 한 폴더이고, 에이전트가 쓰고 Studio에서 클릭으로 고칩니다. 촬영 영상 편집부터 뮤직비디오, 설명 영상, 광고까지 만듭니다. 모든 프레임은 병렬로 렌더링되고, 최대 4K까지 나옵니다. 제작과 편집, 렌더링은 무료이고 내 컴퓨터에서 돌아갑니다. 계정도 필요 없습니다."
 featured_image: "image_89fe2d6157a829d4e065ca21.webp"
 notion_id: "4191bab9-e3f8-8100-a9d8-fb924ad856a4"

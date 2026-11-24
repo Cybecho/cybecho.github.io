@@ -2,8 +2,8 @@
 title: "OpenSpec: 코드부터 짜지 말고, 명세부터 합의하세요. 에이전트와 싸우는 시간이 줄어듭니다"
 date: 2026-09-18T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding","skill"]
+series: ["AI Harness"]
 description: "OpenSpec은 코딩 에이전트에게 코드를 맡기기 전에, 무엇을 만들지 명세로 먼저 합의하는 가벼운 개발 도구입니다. 변경 하나마다 제안서·명세·설계·작업 목록을 별도 폴더에 모아 Markdown 파일로 저장하고, 사람이 검토한 뒤에야 구현이 시작됩니다. 계획은 구현 중에도 고칠 수 있고, 기존 코드베이스에도 바로 붙일 수 있으며, 30개 넘는 코딩 도구와 함께 쓸 수 있습니다."
 featured_image: "image_d2eccaad953f1f73c297f3d9.webp"
 notion_id: "3df1bab9-e3f8-8163-97c3-dfd56ccffbec"

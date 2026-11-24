@@ -2,11 +2,11 @@
 title: "EXO Labs: 온갖 기기를 묶어 하나의 AI클러스터로 만들어보자!"
 date: 2025-12-21T02:07:00.000Z
 draft: false
-tags: ["Util", "Infra"]
-series: ["오픈소스", "Infra & Network"]
+tags: ["Infra"]
+series: ["Let's Open Source"]
 description: "EXO Labs는 다양한 개인 기기를 하나의 AI 클러스터로 통합하는 오픈소스 프레임워크를 개발하고 있으며, 이를 통해 대규모 언어 모델을 효율적으로 실행할 수 있는 솔루션을 제공합니다. 핵심 기술로는 파이프라인 병렬 추론, 동적 모델 파티셔닝, P2P 구조가 있으며, Apple Silicon의 특성을 활용하여 메모리 효율성을 극대화하고 있습니다. EXO는 사용자 경험을 단순화하고, 다양한 모델을 지원하며, AI 민주화를 실현하는 데 기여하고 있습니다. 향후 네트워크 지연시간 극복과 iOS 구현의 고도화가 과제로 남아 있습니다."
+featured_image: "image_2c6fe8f191a1.png"
 notion_id: "2d01bab9-e3f8-8075-8c69-dceda6820d2f"
-notion_url: "https://www.notion.so/EXO-Labs-AI-2d01bab9e3f880758c69dceda6820d2f"
 ---
 
 # EXO Labs: 온갖 기기를 묶어 하나의 AI클러스터로 만들어보자!

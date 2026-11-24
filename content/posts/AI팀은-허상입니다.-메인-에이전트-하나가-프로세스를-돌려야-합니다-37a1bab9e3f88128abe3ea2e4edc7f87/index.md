@@ -2,8 +2,8 @@
 title: "AI팀은 허상입니다. 메인 에이전트 하나가 프로세스를 돌려야 합니다"
 date: 2026-06-09T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","harness"]
+series: ["AI Harness"]
 description: "멀티 에이전트의 가치는 역할극이 아니라 컨텍스트 분리, 병렬 조사, 독립 검토, 권한 분리처럼 작업 구조가 나뉠 때 생깁니다. 기본적으로는 기준과 장기 기억을 가진 메인 에이전트 하나가 필요할 때만 임시 워커를 불러 쓰고 결과를 검수하는 방식이 더 단순하고 효율적입니다."
 featured_image: "image_73017549c4f1c6d4b9cb5436.webp"
 notion_id: "37a1bab9-e3f8-8128-abe3-ea2e4edc7f87"

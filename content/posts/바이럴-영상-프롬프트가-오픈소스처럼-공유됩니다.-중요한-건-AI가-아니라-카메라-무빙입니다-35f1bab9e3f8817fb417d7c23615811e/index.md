@@ -2,8 +2,8 @@
 title: "바이럴 영상 프롬프트가 오픈소스처럼 공유됩니다. 중요한 건 AI가 아니라 카메라 무빙입니다"
 date: 2026-05-14T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation","prompt-engineering"]
+series: ["AI Media"]
 description: "Scenic.sh는 Seedance 2.5용 AI 영상 프롬프트와 미리보기, 제작 과정을 공유하는 라이브러리입니다. 좋은 영상의 핵심은 모델보다 샷 구성, 카메라 움직임, 조명, 렌즈와 오디오를 구체적으로 설계하는 데 있으며, 프롬프트의 구조를 익힌 뒤 소재를 바꾸고 결과에 맞춰 수정하면 됩니다. 같은 프롬프트가 같은 결과를 보장하지 않으며, 브랜드 자산과 인물 이미지의 사용 권리도 확인해야 합니다."
 featured_image: "image_ee17caebc11703faf97205f3.webp"
 notion_id: "35f1bab9-e3f8-817f-b417-d7c23615811e"

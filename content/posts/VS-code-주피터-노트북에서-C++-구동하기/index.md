@@ -2,11 +2,10 @@
 title: "VS code 주피터 노트북에서 C++ 구동하기"
 date: 2023-06-14T00:00:00.000Z
 draft: false
-tags: ["Other"]
-series: ["개발환경"]
+series: ["Dev Environment"]
 description: "VSCode에서 C++를 실행하기 위해서는 MAC 환경에서 homebrew와 anaconda를 설치하고, zsh를 설정한 후, Jupyter Notebook 플러그인을 설치해야 합니다. xeus-cling 커널을 설치하여 C++ 코드를 실행할 수 있으며, 필요한 명령어와 설정 방법이 안내되어 있습니다."
+featured_image: "image_0cfbc8fadbef.png"
 notion_id: "58e389d1-3eb6-40fe-95fc-1a38d8f66c55"
-notion_url: "https://www.notion.so/VS-code-C-58e389d13eb640fe95fc1a38d8f66c55"
 ---
 
 # VS code 주피터 노트북에서 C++ 구동하기

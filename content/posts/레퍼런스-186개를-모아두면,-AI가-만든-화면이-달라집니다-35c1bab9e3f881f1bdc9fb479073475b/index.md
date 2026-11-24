@@ -2,8 +2,8 @@
 title: "레퍼런스 186개를 모아두면, AI가 만든 화면이 달라집니다"
 date: 2026-05-11T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering","coding"]
+series: ["AI Harness"]
 description: "AI 시대에 디자이너가 사라진다는 말과 달리, 진짜 격차는 취향에서 나옵니다. 디자인 툴과 UI 레퍼런스 186개가 Use·Explore·Read·Build·Learn·Watch 여섯 갈래로 한 페이지에 정리된 모음집은, AI 코딩 에이전트에게 보여줄 기준점을 모아둔 재료 창고입니다. 레퍼런스 두세 개를 골라 에이전트에 함께 건네면 대량 생산되는 평범한 화면 대신 일관된 디자인이 나오고, 목록은 계속 바뀌니 필요할 때마다 열어보는 습관이 중요합니다."
 featured_image: "image_99de3cece5579633e0904188.webp"
 notion_id: "35c1bab9-e3f8-81f1-bdc9-fb479073475b"

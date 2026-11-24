@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 14"
 date: 2023-02-25T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "UI 구성 및 EventSystem 사용법, RectTransform의 스크린 좌표 이해, 글자 크기 문제 해결 방법, 선명한 글자 얻는 방법, HP 구현 방법에 대한 설명이 포함되어 있습니다. 게임 UI는 여러 판넬을 만들고 필요할 때 불러오는 방식으로 작업합니다."
+featured_image: "image_f2c34ef3c18b.png"
 notion_id: "1326f328-573e-4360-8b0e-060a3f305b1a"
-notion_url: "https://www.notion.so/3D-14-1326f328573e43608b0e060a3f305b1a"
 ---
 
 # 유니티 3D게임 쿼드뷰 14

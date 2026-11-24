@@ -2,8 +2,8 @@
 title: "korea-stock-mcp: 수십 MB짜리 공시도 목차부터 보면, 필요한 부분만 쏙 가져옵니다"
 date: 2026-03-13T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp"]
+series: ["AI Harness"]
 description: "korea-stock-mcp는 DART와 KRX 공식 API를 통해 공시와 주가 데이터를 조회·분석하는 MCP 서버입니다. 1MB 이상 대용량 공시는 목차를 먼저 제공하고 필요한 섹션만 선택해 읽도록 해 응답 한도 문제를 해결합니다. API 키를 설정하면 클로드 데스크탑에서 자연어로 재무제표, 공시, 주가 등을 질문할 수 있으며, 결과는 정보 제공용으로 투자 조언이 아닙니다."
 featured_image: "image_67336fd43741ce2f1a0a7fbc.webp"
 notion_id: "3211bab9-e3f8-818e-bc85-d58b2f35a68a"

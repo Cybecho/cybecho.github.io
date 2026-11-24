@@ -2,8 +2,8 @@
 title: "tutor-skills: 교재를 노트로 바꾸면, 퀴즈가 약점을 먼저 찾아줍니다"
 date: 2026-03-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["skill"]
+series: ["AI Harness"]
 description: "tutor-skills는 교재나 코드베이스를 옵시디언 학습 노트로 바꾸는 게 아니라, 노트로 퀴즈를 만들어 약점을 찾는 메타인지 학습 시스템입니다. 자료를 넣으면 /tutor-setup이 대시보드와 주제별 폴더로 정리된 StudyVault를 만들고, /tutor가 한 라운드 4문제씩 힌트 없이 물어 개념별 숙련도를 5단계 배지로 추적합니다. 문서 모드와 코드베이스 모드가 각각 9단계로 나뉘어 있어, 교재 공부와 새 프로젝트 온보딩을 같은 구조로 돌릴 수 있습니다."
 featured_image: "image_8b29966c5eae18af457c039d.webp"
 notion_id: "31e1bab9-e3f8-8150-8494-c9505e092ffd"

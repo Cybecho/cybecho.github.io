@@ -2,8 +2,8 @@
 title: "OpenGauss: 4시간 제한으로 무제한 아리스토텔레스를 이겼습니다. 판정은 커널이 합니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "OpenGauss는 자연어 수학 문제를 Lean 증명으로 바꾸는 에이전트로, 박사 자격시험 수준 문제 23개 중 8개를 4시간과 약 25달러로 풀어 시간 제한이 없던 아리스토텔레스를 앞섰습니다. 핵심 기여는 Lean 커널이 증명을 판정하는 검증 가능한 벤치마크를 공개한 것이며, 다만 OpenGauss 하네스와 벤치마크만 공개됐고 Gauss 본체는 비공개입니다."
 featured_image: "image_e962f6eba1bfa73211ab0aa1.webp"
 notion_id: "32c1bab9-e3f8-819d-a2d4-d9053e399486"

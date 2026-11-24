@@ -2,8 +2,8 @@
 title: "Phone Harness MCP: 설치 없이 URL 하나로, 클라우드의 진짜 아이폰을 에이전트에게 맡깁니다"
 date: 2026-11-03T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["phone-automation","mcp"]
+series: ["On-Device AI"]
 description: "Phone Harness MCP는 URL 하나로 클라우드의 실제 아이폰이나 안드로이드를 AI 에이전트에 연결해 화면 확인, 터치, 입력, 앱 테스트와 반복 작업을 맡기는 서비스입니다. 설치와 케이블은 필요 없지만 안드로이드는 분당 과금, 아이폰은 월정액이며, 에이전트가 계정 권한을 그대로 사용하므로 민감한 앱과 개인정보에 주의해야 합니다."
 featured_image: "image_c7bbf1980584126811b0c5b0.webp"
 notion_id: "40d1bab9-e3f8-815c-b9aa-e3653364de07"

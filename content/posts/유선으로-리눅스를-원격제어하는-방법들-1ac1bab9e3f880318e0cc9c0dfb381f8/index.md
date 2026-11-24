@@ -2,8 +2,8 @@
 title: "유선으로 리눅스를 원격제어하는 방법들"
 date: 2025-01-24T12:31:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky","Arch","ubuntu","Debian"]
-series: ["Let's Linux!","개발환경","Tips"]
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
+series: ["Let's Linux!"]
 description: "리눅스를 유선으로 원격 제어하는 다양한 방법을 소개하며, KVM 스위치, Synergy/Barrier, Thunderbolt 연결, HDMI/DP 캡처 카드, USB-KVM 어댑터 등을 통해 최소 레이턴시와 안정성을 확보할 수 있는 솔루션을 제안합니다. KVM 스위치가 가장 빠르고 안정적인 방법으로 추천되며, 설정의 편의성을 중시한다면 Synergy/Barrier가 적합합니다."
 notion_id: "1ac1bab9-e3f8-8031-8e0c-c9c0dfb381f8"
 ---

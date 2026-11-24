@@ -2,8 +2,8 @@
 title: "Lightpanda: 화면을 그리지 않는 브라우저, 크롤링이 9배 빨라집니다"
 date: 2026-03-13T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["browser-automation","coding"]
+series: ["AI Harness"]
 description: "Lightpanda는 화면 렌더링을 생략하고 자바스크립트 실행과 DOM 구축에 집중하는 헤드리스 브라우저로, 프로젝트 벤치마크에서 Chrome보다 약 9배 빠르고 메모리를 16배 적게 사용합니다. Playwright·Puppeteer와 연동할 수 있어 대량 크롤링과 AI 에이전트에 적합하지만, 시각적 스크린샷이나 CSS 확인에는 Chrome이 필요하며 아직 베타 단계입니다."
 featured_image: "image_7500d3e076f4945da7373ceb.webp"
 notion_id: "3221bab9-e3f8-810f-b00e-d36bb4ab4b0d"

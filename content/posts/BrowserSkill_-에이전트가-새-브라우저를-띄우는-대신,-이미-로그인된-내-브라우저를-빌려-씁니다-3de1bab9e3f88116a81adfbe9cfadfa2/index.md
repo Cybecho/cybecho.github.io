@@ -2,8 +2,8 @@
 title: "BrowserSkill: 에이전트가 새 브라우저를 띄우는 대신, 이미 로그인된 내 브라우저를 빌려 씁니다"
 date: 2026-09-17T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["browser-automation","skill"]
+series: ["AI Harness"]
 description: "BrowserSkill은 로그인된 브라우저를 활용해 AI 에이전트가 별도 창에서 작업하도록 하며, 기존 탭은 사용자의 승인 없이 건드리지 않습니다. 로컬에서 작동하고, CAPTCHA나 로그인처럼 사람의 개입이 필요한 단계에서는 도움을 요청해 안전하고 투명한 브라우저 자동화를 지원합니다."
 featured_image: "image_6d9171c3a05c179209673d4e.webp"
 notion_id: "3de1bab9-e3f8-8116-a81a-dfbe9cfadfa2"

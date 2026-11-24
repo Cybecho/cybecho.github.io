@@ -2,11 +2,11 @@
 title: "Opencode + Antgravity : Opencode가 막혔다고?! 하지만 우리는 언제나 그렇듯, 방법을 찾는다."
 date: 2026-01-11T07:18:00.000Z
 draft: false
-tags: ["AI", "Claude"]
-series: ["AI"]
+tags: ["Claude","coding"]
+series: ["AI Harness"]
 description: "Anthropic은 'Claude Code Max' 플랜 사용자들의 비공식 접근을 차단하며, 특정 기업에 대한 보복적 조치를 취하고 있다. 이에 대응하여 OpenAI와 Google은 개방형 구독 모델을 통해 시장 점유율을 확대하고 있으며, 'Anti-gravity Auth'를 통해 Claude 4.5 Opus 모델을 사용할 수 있는 대안이 마련되었다. 아시아 AI 기업들도 유연한 정책을 통해 개발자들이 최신 모델을 쉽게 도입할 수 있도록 하고 있다. Anthropic의 정책은 자사 SDK와의 차별적 허용 문제와 이중 잣대가 개발자 신뢰를 저해하고 있으며, 향후 AI 시장은 개발자의 워크플로우 존중 여부에 따라 주도권이 재편될 것으로 보인다."
+featured_image: "image_d80843068c18.png"
 notion_id: "2e51bab9-e3f8-80cf-8768-ce89a413fddd"
-notion_url: "https://www.notion.so/Opencode-Antgravity-Opencode-2e51bab9e3f880cf8768ce89a413fddd"
 ---
 
 # Opencode + Antgravity : Opencode가 막혔다고?! 하지만 우리는 언제나 그렇듯, 방법을 찾는다.

@@ -2,11 +2,11 @@
 title: "게임핵 개발01 "
 date: 2023-01-21T00:00:00.000Z
 draft: false
-tags: ["C#", "리버스엔지니어링"]
-series: ["치트엔진 활용 게임핵 개발"]
+tags: ["C#","리버스엔지니어링"]
+series: ["Dev Environment"]
 description: "비주얼 스튜디오에서 프로세스를 불러오고 관리하는 방법에 대한 코드 예제와 예외 처리 방법을 설명하며, 프로세스 ID를 추출하는 방법과 관련된 유용한 팁을 제공한다. 코드 샘플은 프로세스 목록을 가져오고 선택된 프로세스에 대한 권한을 얻는 과정을 포함한다."
+featured_image: "image_aefe0d33b63302e895705669.png"
 notion_id: "de67bf6d-84c3-449d-b372-f957558064a6"
-notion_url: "https://www.notion.so/01-de67bf6d84c3449db372f957558064a6"
 ---
 
 # 게임핵 개발01 
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/01-de67bf6d84c3449db372f957558064a6"
 > 비주얼 스튜디오에서 프로세스를 불러오고 관리하는 방법에 대한 코드 예제와 예외 처리 방법을 설명하며, 프로세스 ID를 추출하는 방법과 관련된 유용한 팁을 제공한다. 코드 샘플은 프로세스 목록을 가져오고 선택된 프로세스에 대한 권한을 얻는 과정을 포함한다.
 
 ---
+
+![Image](image_aefe0d33b63302e895705669.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=mZ40JEzqhHQ&list=PLnIaYcDMsScxvz3yyClxLU9W6upAUyPzc&index=6)
 

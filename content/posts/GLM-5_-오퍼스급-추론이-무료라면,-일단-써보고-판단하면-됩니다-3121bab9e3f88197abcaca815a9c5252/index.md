@@ -2,8 +2,8 @@
 title: "GLM-5: 오퍼스급 추론이 무료라면, 일단 써보고 판단하면 됩니다"
 date: 2026-02-25T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "GLM-5는 정체불명 스텔스 모델 포니 알파의 정체로, 오퍼스 4.5와 맞먹는 추론 성능을 가진 지아이의 새 플래그십 모델입니다. 킬로 코드가 이 모델을 한시적으로 무료로 풀었습니다. API 키도, 구독도, 숨은 비용도 없이 CLI와 VS Code 확장 어디서든 쓸 수 있습니다. 무료는 영원하지 않으므로, 기간이 끝나기 전에 직접 써보고 내 작업에 맞는지 확인하는 게 핵심입니다."
 featured_image: "image_2f0f8e2891b71eceb3a4304b.webp"
 notion_id: "3121bab9-e3f8-8197-abca-ca815a9c5252"

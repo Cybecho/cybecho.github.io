@@ -3,16 +3,16 @@ title: "안드로이드 서버, 어떻게 원격 제어할까? (feat. droidVNC-N
 date: 2025-07-24T14:12:00.000Z
 draft: false
 tags: ["Infra"]
-series: ["Let's Homelab!", "원격 라이프!"]
-description: "안드로이드 기기를 원격으로 제어하기 위해 "
+series: ["Let's Homelab!"]
+description: "안드로이드 기기를 원격으로 제어하기 위해 droidVNC-NG 앱을 사용하면 루팅 없이도 접근성 서비스 API를 활용하여 간편하게 설정할 수 있다. 이 앱은 부팅 시 자동으로 VNC 서버를 시작하는 기능이 있어, 원격 서버로 활용하는 데 매우 유용하다. JumpDesktop과 함께 사용하면 반응 속도도 만족스럽고, 화면을 쉽게 제어할 수 있다."
+featured_image: "image_3ce217032547.png"
 notion_id: "23a1bab9-e3f8-800c-9075-dcdae82dcbbf"
-notion_url: "https://www.notion.so/feat-droidVNC-NG-23a1bab9e3f8800c9075dcdae82dcbbf"
 ---
 
 # 안드로이드 서버, 어떻게 원격 제어할까? (feat. droidVNC-NG)
 
 > **Summary**
-> 안드로이드 기기를 원격으로 제어하기 위해 
+> 안드로이드 기기를 원격으로 제어하기 위해 droidVNC-NG 앱을 사용하면 루팅 없이도 접근성 서비스 API를 활용하여 간편하게 설정할 수 있다. 이 앱은 부팅 시 자동으로 VNC 서버를 시작하는 기능이 있어, 원격 서버로 활용하는 데 매우 유용하다. JumpDesktop과 함께 사용하면 반응 속도도 만족스럽고, 화면을 쉽게 제어할 수 있다.
 
 ---
 
@@ -34,7 +34,7 @@ notion_url: "https://www.notion.so/feat-droidVNC-NG-23a1bab9e3f8800c9075dcdae82d
 
 VNC 클라이언트는 여러 가지가 있지만, 나는 평소 애용하는 `JumpDesktop`을 사용했다. `JumpDesktop`에 `droidVNC-NG`가 알려준 주소를 그대로 입력하니, 지체 없이 안드로이드 화면이 내 PC 모니터에 나타났다. 반응 속도도 만족스러웠고, 마우스로 기본적인 조작을 하기에 전혀 무리가 없었다.
 
-![Image](image_7e8571da4f9e.png)
+![Image](image_318129414d43b4cd62eacd6c.png)
 
 하지만 나를 가장 만족시킨 기능은 따로 있었다. 바로 **‘부팅 시 자동으로 VNC 서버 시작’** 옵션이다. 이걸 활성화하니, 내 픽셀 서버가 어떤 이유로 재부팅되더라도 신경 쓸 필요 없이 VNC 서버가 자동으로 켜졌다. 원격 서버로 활용하는 기기에는 이보다 더 편리할 수 없는 기능이다. 더 이상 문제가 생겼을 때 기기를 직접 확인하러 가지 않아도 된다는 해방감은 기대 이상이었다.
 

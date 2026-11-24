@@ -2,8 +2,8 @@
 title: "노트북이 수십 개면, 폴더가 아니라 컬렉션입니다. 한 노트북이 여러 그룹에 들어갑니다"
 date: 2026-08-03T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["rag"]
+series: ["AI Harness"]
 description: "NotebookLM 컬렉션은 노트북을 이름과 이모지로 묶는 계정 동기화 기능이며, 하나의 노트북을 여러 컬렉션에 넣을 수 있습니다. 미분류 필터와 일괄 추가·교체 기능으로 많은 노트북도 쉽게 정리할 수 있고, 기존 태그는 네이티브 컬렉션으로 변환할 수 있습니다. 컬렉션은 기기와 확장 프로그램에 관계없이 유지되지만 중첩은 지원하지 않습니다."
 featured_image: "image_26e05c9c9e4328ef88613b78.webp"
 notion_id: "3b11bab9-e3f8-8163-b44c-c3def2566ccd"

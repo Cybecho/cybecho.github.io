@@ -2,8 +2,8 @@
 title: "CartCut: 자막 달고 무음 자르는 일, 이제 돈 내고 기다릴 필요가 없습니다"
 date: 2026-09-18T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "CartCut은 자막 생성과 무음 구간 제거를 자동화하는 무료 오픈소스 영상 편집기로, 레이어 편집, 키프레임, 녹화와 8K 렌더링을 지원합니다. 코딩 에이전트에 자연어로 편집을 지시할 수 있으며, 영상은 로컬에서 처리되고 변경 사항은 실행 취소로 되돌릴 수 있습니다. 자동 자막은 검수가 필요하고 직접 빌드할 때는 추가 설정이 필요합니다."
 featured_image: "image_818af9a88f3a67b0cc65dab9.webp"
 notion_id: "3de1bab9-e3f8-81a4-bcf0-e9e707e26715"

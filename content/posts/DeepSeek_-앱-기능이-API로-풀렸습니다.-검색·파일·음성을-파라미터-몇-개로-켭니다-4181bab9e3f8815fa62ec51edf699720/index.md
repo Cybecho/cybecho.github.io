@@ -2,8 +2,8 @@
 title: "DeepSeek: 앱 기능이 API로 풀렸습니다. 검색·파일·음성을 파라미터 몇 개로 켭니다"
 date: 2026-11-14T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "DeepSeek의 deepseek-flash API에서 웹·딥씽킹 검색, URL 읽기, 파일 파싱, OCR, 음성 처리 등 앱 기능을 도구로 사용할 수 있게 됐습니다. 서버가 검색과 파일 처리를 맡고 답변에 출처를 붙여 개발 부담을 줄이지만, 도구 사용료가 토큰 비용에 추가되며 모델이 도구를 항상 호출하는 것은 아닙니다. 오픈소스 챗 데모도 공개됐으며, 실제 서비스에서는 API 키를 백엔드에 보관하는 것이 안전합니다."
 featured_image: "image_05ddd3f2cfb09a0e806df654.webp"
 notion_id: "4181bab9-e3f8-815f-a62e-c51edf699720"

@@ -2,8 +2,7 @@
 title: "REFOURIER: 파일을 올리지 않고 PDF·HWP를 바꿉니다. 변환은 내 브라우저 안에서 끝납니다"
 date: 2026-09-28T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Tips"]
 description: "REFOURIER는 파일을 서버에 올리지 않고 브라우저 안에서 PDF·HWP를 변환하는 도구로, 설치도 회원가입도 필요 없습니다. HWP는 한컴 없이 열어 보고 고치고 PDF로 바꾸고, 워드·PPT는 원본 글꼴을 살려 PDF로 만들며, PDF 합치기·나누기·이미지 추출까지 한 자리에서 됩니다. 변환 엔진이 내 컴퓨터 안에서 돌아가기 때문에 계약서나 이력서처럼 남에게 보이기 꺼려지는 문서도 안심하고 쓸 수 있습니다."
 featured_image: "image_98e9ecccf07c8abf85291d84.webp"
 notion_id: "3e91bab9-e3f8-81ba-97c2-fcc0a255c8ef"

@@ -2,11 +2,11 @@
 title: "MCP Super Assistant : 뭣?! Google AI Studio에서 Notion MCP Server를 쓸 수 있다고라?!?!?!"
 date: 2025-06-20T02:11:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp"]
+series: ["AI Harness"]
 description: "MCP SuperAssistant는 Google AI Studio와 Notion MCP Server를 연결하는 크롬 확장 프로그램으로, 복잡한 API 설정 없이 로컬 시스템 리소스에 접근할 수 있게 해줍니다. 설치 후 Google AI Studio에서 바로 사용 가능하며, Notion과의 연동을 통해 다양한 명령을 실행할 수 있습니다. 주요 특징으로는 자동/수동 실행 모드 지원과 6000개 이상의 MCP 서버와의 호환성이 있습니다."
+featured_image: "image_d0b0fa8c1ea4.png"
 notion_id: "2181bab9-e3f8-801a-a878-e17a7a611dee"
-notion_url: "https://www.notion.so/MCP-Super-Assistant-Google-AI-Studio-Notion-MCP-Server-2181bab9e3f8801aa878e17a7a611dee"
 ---
 
 # MCP Super Assistant : 뭣?! Google AI Studio에서 Notion MCP Server를 쓸 수 있다고라?!?!?!
@@ -22,7 +22,7 @@ notion_url: "https://www.notion.so/MCP-Super-Assistant-Google-AI-Studio-Notion-M
 
 [https://www.youtube.com/watch?v=B0-sCIOgI-s](https://www.youtube.com/watch?v=B0-sCIOgI-s)
 
-[Untitled](https://www.notion.so/1e1a9862621f8081b9e3ddf14196a6f7) 
+[Untitled](https://app.notion.com/p/1e1a9862621f8081b9e3ddf14196a6f7) 
 
 ## MCP SuperAssistant란?
 

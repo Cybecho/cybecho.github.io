@@ -2,11 +2,11 @@
 title: "Google CLI Conductor: 컨텍스트 중심의 개발 접근법 제안"
 date: 2025-12-21T02:39:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "AI 시대의 개발에서 즉흥적 접근 방식의 위험성을 지적하며, 구글의 Conductor는 개발 맥락을 코드베이스와 통합하여 지속 가능한 문서화와 팀 협업을 촉진하는 구조적 접근법을 제안한다. 이 시스템은 프로젝트의 정체성을 정의하고, 명세 및 계획 단계를 통해 작업을 구체화하며, 구현 단계에서 AI가 계획을 실행하도록 한다. 또한, 기존 프로젝트에 적용할 때의 복잡성을 해결하고, 팀의 일관성을 높이며, 개발자의 역할을 재정의하는 데 중점을 둔다. 그러나 오버헤드 문제, 문서의 최신성 유지, 창의성 제약 등의 도전 과제가 존재한다."
+featured_image: "image_08163063c0ed5a7d0046b118.png"
 notion_id: "2d01bab9-e3f8-8085-b209-d1d8d17d14d4"
-notion_url: "https://www.notion.so/Google-CLI-Conductor-2d01bab9e3f88085b209d1d8d17d14d4"
 ---
 
 # Google CLI Conductor: 컨텍스트 중심의 개발 접근법 제안
@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Google-CLI-Conductor-2d01bab9e3f88085b209d1d8
 
 ---
 
-![Image](image_f7e5abcdda54.png)
+![Image](image_08163063c0ed5a7d0046b118.png)
 
 🔗 [https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/](https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/)
 

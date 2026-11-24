@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 15"
 date: 2023-02-26T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "고리모양 파티클 시스템 생성, UI에서 이미지 컴포넌트 추가 및 버튼 클릭 시 함수 실행 방법, NPC 대화 구현을 포함한 유니티 3D 쿼터뷰 게임 클론 개발에 대한 내용입니다. 파티클 시스템의 속성 조정, UI 코드 생성, 외부 코드 호출 방법, 구매 및 대화 생성 스크립트 작성 방법이 설명됩니다."
+featured_image: "image_ab20ff883af8.png"
 notion_id: "ea201c1a-c470-47d5-8f20-3173ded9577a"
-notion_url: "https://www.notion.so/3D-15-ea201c1ac47047d58f203173ded9577a"
 ---
 
 # 유니티 3D게임 쿼드뷰 15

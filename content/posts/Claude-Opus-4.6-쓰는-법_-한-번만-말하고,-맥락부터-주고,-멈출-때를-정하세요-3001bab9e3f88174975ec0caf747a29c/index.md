@@ -2,8 +2,8 @@
 title: "Claude Opus 4.6 쓰는 법: 한 번만 말하고, 맥락부터 주고, 멈출 때를 정하세요"
 date: 2026-02-07T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering"]
+series: ["AI Harness"]
 description: "Opus 4.6은 지시를 더 정확히 따르고 행동 전에 맥락부터 읽는 모델이라, 쓰는 법도 달라집니다. 한 번만 말하고 맥락을 먼저 주고 멈출 지점을 정하면, 대안 제안과 긴 작업까지 더 크게 맡길 수 있습니다."
 featured_image: "image_7704a71aaec04275a269c17b.webp"
 notion_id: "3001bab9-e3f8-8174-975e-c0caf747a29c"

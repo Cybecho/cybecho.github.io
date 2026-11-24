@@ -2,8 +2,8 @@
 title: "쿠팡파트너스 대충 하면 월 수익 0원입니다. 클릭이 아니라 구매가 돈입니다"
 date: 2026-07-26T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["blog-monetization"]
+series: ["블로그 수익 글쓰기"]
 description: "쿠팡파트너스는 클릭이 아니라 링크 클릭 후 24시간 안에 발생한 구매에 대해 수수료를 지급하므로, 낮은 수수료율과 정산 기준 때문에 링크만 대충 공유하면 수익이 거의 없거나 입금이 늦어질 수 있습니다. 구매 의사가 높은 사람에게 상품 정보를 제공하고, 제휴 문구를 명확히 표시하며 정직하게 운영하는 것이 중요합니다."
 featured_image: "image_69169d9ed3f1bce3f53bb338.webp"
 notion_id: "3a81bab9-e3f8-81f0-ba1c-e6e9732da5db"

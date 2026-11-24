@@ -2,11 +2,10 @@
 title: "x86, ARM, s390x의 차이점"
 date: 2025-02-24T08:55:00.000Z
 draft: false
-tags: ["Other", "Util"]
 series: ["HW"]
 description: "x86는 개인용 컴퓨터와 서버에 사용되는 CISC 아키텍처로 소프트웨어 호환성이 뛰어나고, ARM은 에너지 효율이 중요한 기기에 주로 사용되는 RISC 아키텍처이며, s390x는 IBM 메인프레임에서 사용되는 64비트 CISC 아키텍처로 높은 신뢰성과 대규모 트랜잭션 처리에 최적화되어 있습니다. 각 아키텍처는 서로 다른 설계 목표와 사용 사례를 가지고 있으며, 특히 s390x는 AI와 컨테이너 기술의 통합으로 미래에도 중요한 역할을 할 것으로 예상됩니다."
+featured_image: "image_00ea8e36e3d6.png"
 notion_id: "1a41bab9-e3f8-808e-820c-eb348ce6fdbc"
-notion_url: "https://www.notion.so/x86-ARM-s390x-1a41bab9e3f8808e820ceb348ce6fdbc"
 ---
 
 # x86, ARM, s390x의 차이점

@@ -2,8 +2,8 @@
 title: "Univer: 엑셀·워드·PPT, 내 제품 안에 통째로 넣습니다. 직접 만들지 말고 임베드부터 보세요"
 date: 2026-11-15T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "Univer는 스프레드시트·문서 편집기와 수식 계산을 제품에 임베드할 수 있는 오픈소스 SDK로, Facade API와 헤드리스 실행을 통해 앱과 AI 에이전트가 같은 워크북을 편집할 수 있습니다. 실시간 협업, 파일 변환, 차트 등은 상용 확장이므로 필요한 기능과 라이선스 범위를 확인한 뒤 도입해야 합니다."
 featured_image: "image_a2ebfbc052633f2c02b69449.webp"
 notion_id: "4191bab9-e3f8-811f-a793-d321ee1739b0"

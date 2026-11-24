@@ -2,8 +2,8 @@
 title: "Codex: 슬라이드, 직접 만들지 않습니다. 시키면 한 장씩 그려줍니다"
 date: 2026-06-02T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Media"]
 description: "Codex의 이미지 생성 기능과 슬라이드 제작 스킬을 활용하면 개요와 스타일을 확인한 뒤 슬라이드 이미지를 병렬로 만들고 .pptx로 묶을 수 있습니다. 추가 API 비용 없이 빠르게 디자인된 발표 자료를 만들 수 있지만, 각 장이 통이미지라 글자를 직접 편집할 수 없고 장마다 생성 시간과 사용량이 듭니다."
 featured_image: "image_1f40505422fb81e5f6382623.webp"
 notion_id: "3731bab9-e3f8-81ba-a5b0-dd19d02f5267"

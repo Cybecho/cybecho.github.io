@@ -2,9 +2,10 @@
 title: "에이전트가 짠 코드, 사람이 읽지 말고 기계가 남긴 증거로 검증합니다"
 date: 2026-02-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "에이전트가 대량으로 생성한 코드는 사람이 모두 읽는 대신, 머지 규칙과 최신 커밋 기준 검증, 중앙화된 재실행, 고정된 모델, 안전한 자동 정리, 검증 가능한 증거를 갖춘 7단계 파이프라인으로 관리해야 합니다. UI 변경은 브라우저 화면 비교와 회귀 테스트로 확인하고, 기계가 남긴 증거를 기계가 판단하는 구조를 구축하는 것이 핵심입니다."
+featured_image: "image_462d96b274954123d655687f.webp"
 notion_id: "30f1bab9-e3f8-817a-aab8-da5b41a7e6dc"
 ---
 

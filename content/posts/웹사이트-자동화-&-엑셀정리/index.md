@@ -2,11 +2,11 @@
 title: "웹사이트 자동화 & 엑셀정리"
 date: 2023-01-26T00:00:00.000Z
 draft: false
-tags: ["Python", "Gadget"]
-series: ["매크로개발"]
+tags: ["Python"]
+series: ["Let's Macro"]
 description: "외부에서 파이썬 스크립트를 실행하는 방법에 대한 내용으로, 매크로 개발과 관련된 예제 코드가 포함되어 있으며, 파이썬 PATH 설정이 올바르게 되어 있어야 한다고 언급하고 있다."
+featured_image: "image_2ac45e5c97055d8bdd52b293.png"
 notion_id: "b7e3749b-e09d-4eb6-b0a9-02969fced665"
-notion_url: "https://www.notion.so/b7e3749be09d4eb6b0a902969fced665"
 ---
 
 # 웹사이트 자동화 & 엑셀정리
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/b7e3749be09d4eb6b0a902969fced665"
 > 외부에서 파이썬 스크립트를 실행하는 방법에 대한 내용으로, 매크로 개발과 관련된 예제 코드가 포함되어 있으며, 파이썬 PATH 설정이 올바르게 되어 있어야 한다고 언급하고 있다.
 
 ---
+
+![Image](image_2ac45e5c97055d8bdd52b293.png)
 
 ```python
 import subprocess

@@ -2,8 +2,8 @@
 title: "motion-video-skill: 90초 영상, 감으로 만들지 말고 게이트를 통과시켜 만듭니다"
 date: 2026-10-02T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation","skill"]
+series: ["AI Media"]
 description: "15~90초 모션 그래픽·홍보·캐릭터 영상을 7단계로 나누고, 각 단계마다 게이트가 산출물을 검사해 통과해야 다음 단계로 넘어갑니다. 숫자로 잴 수 있는 것은 기계가 재고, 얼굴이 바뀌는지 같은 것은 사람이 눈으로 봐야 합니다. 눈 검수 기록이 없으면 게이트는 통과시켜 주지 않습니다. 엔진은 두 가지입니다. 코드로 화면을 그리는 방식과 HTML 파일로 만드는 방식 중 영상에 맞는 것을 고릅니다."
 featured_image: "image_4524db0df2e21e6637423f92.webp"
 notion_id: "3ed1bab9-e3f8-81e7-acfe-ce07e127f583"

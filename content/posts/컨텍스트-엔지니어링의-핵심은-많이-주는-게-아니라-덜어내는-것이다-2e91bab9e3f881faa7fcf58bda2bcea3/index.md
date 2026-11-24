@@ -2,7 +2,10 @@
 title: "컨텍스트 엔지니어링의 핵심은 많이 주는 게 아니라 덜어내는 것이다"
 date: 2026-01-15T00:00:00.000Z
 draft: false
+tags: ["prompt-engineering","agent"]
+series: ["AI Harness"]
 description: "컨텍스트 엔지니어링은 정보를 많이 제공하는 대신, 질문과 진행 상황에 따라 필요한 정보만 단계적으로 제공하는 방식이다. 불필요하거나 질 낮은 정보는 LLM의 성능과 판단력을 떨어뜨리므로, 관련 도구와 사용법, 행동 지침, API 응답 스키마를 필요한 순간에 선별해 컨텍스트를 줄이는 것이 대규모 AI 서비스를 더 정확하고 효율적으로 만든다."
+featured_image: "image_f3bfb9383e1347fd9bf8e338.webp"
 notion_id: "2e91bab9-e3f8-81fa-a7fc-f58bda2bcea3"
 ---
 

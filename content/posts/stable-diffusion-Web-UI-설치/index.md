@@ -2,11 +2,11 @@
 title: "stable-diffusion Web UI 설치"
 date: 2023-03-28T00:00:00.000Z
 draft: false
-tags: ["AI", "ubuntu", "Python"]
-series: ["AI"]
+tags: ["ubuntu","Python"]
+series: ["Self-Hosted AI"]
 description: "Stable Diffusion 웹 UI 설치를 위한 가이드로, GitHub에서 레포지토리를 다운로드하고 Python 3.10으로 다운그레이드하여 설치 오류를 해결하는 방법을 설명합니다. VRAM을 줄이는 방법과 다양한 프롬프트 입력 방식, 필수 및 추천 익스텐션에 대한 정보도 포함되어 있습니다. 로컬 서버 웹 호스팅 방법도 간단히 언급됩니다."
+featured_image: "image_efca25a86748.png"
 notion_id: "a3fc2a94-6365-4500-9281-c7828c7b6f23"
-notion_url: "https://www.notion.so/stable-diffusion-Web-UI-a3fc2a94636545009281c7828c7b6f23"
 ---
 
 # stable-diffusion Web UI 설치

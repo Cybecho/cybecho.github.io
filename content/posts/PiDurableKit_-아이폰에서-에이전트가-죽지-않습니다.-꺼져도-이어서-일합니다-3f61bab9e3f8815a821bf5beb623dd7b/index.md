@@ -2,8 +2,8 @@
 title: "PiDurableKit: 아이폰에서 에이전트가 죽지 않습니다. 꺼져도 이어서 일합니다"
 date: 2026-10-11T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["phone-automation","agent"]
+series: ["On-Device AI"]
 description: "PiDurableKit은 대화, 도구 호출, 작업 상태를 SQLite나 JSONL에 먼저 저장해 앱이 종료돼도 재시작 후 이어서 실행할 수 있게 하는 에이전트 런타임입니다. 여러 클라우드·기기 내 모델과 다양한 애플 기기를 지원하지만, 시연에 나온 화면 터치 기능과 예제 앱은 공개 저장소에 포함되어 있지 않습니다."
 featured_image: "image_a63825fdde16061b38df0e43.webp"
 notion_id: "3f61bab9-e3f8-815a-821b-f5beb623dd7b"

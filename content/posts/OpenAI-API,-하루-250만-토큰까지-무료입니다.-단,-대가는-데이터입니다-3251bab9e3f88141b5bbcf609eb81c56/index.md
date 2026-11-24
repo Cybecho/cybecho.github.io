@@ -2,8 +2,8 @@
 title: "OpenAI API, 하루 250만 토큰까지 무료입니다. 단, 대가는 데이터입니다"
 date: 2026-03-16T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "OpenAI는 데이터 공유에 동의한 일부 조직에 모델과 사용 등급에 따라 하루 최대 250만~1,000만 토큰을 무료로 제공하며, 사용량은 매일 UTC 자정에 초기화됩니다. 대상 여부와 양의 잔액 등 조건을 확인하고, 공유한 입력·출력은 모델 학습에 쓰일 수 있으므로 민감한 정보가 없는 테스트 프로젝트에서만 이용하는 것이 안전합니다."
 featured_image: "image_194097f61b060eba1c7748ab.webp"
 notion_id: "3251bab9-e3f8-8141-b5bb-cf609eb81c56"

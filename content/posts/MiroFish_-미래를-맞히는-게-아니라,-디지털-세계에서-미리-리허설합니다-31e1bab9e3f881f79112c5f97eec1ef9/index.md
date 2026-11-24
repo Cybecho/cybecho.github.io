@@ -2,8 +2,8 @@
 title: "MiroFish: 미래를 맞히는 게 아니라, 디지털 세계에서 미리 리허설합니다"
 date: 2026-03-09T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "MiroFish는 현실 자료를 바탕으로 AI 에이전트들이 상호작용하는 디지털 사회를 만들어 정책이나 여론의 가능성을 시뮬레이션하는 오픈소스 도구입니다. 정확도 검증은 아직 없어 예측을 정답으로 받아들이기보다, 의사결정 전에 여러 시나리오를 무위험으로 리허설하는 용도로 활용하는 것이 적절합니다."
 featured_image: "image_411692fd71ed71105e65b53d.webp"
 notion_id: "31e1bab9-e3f8-81f7-9112-c5f97eec1ef9"

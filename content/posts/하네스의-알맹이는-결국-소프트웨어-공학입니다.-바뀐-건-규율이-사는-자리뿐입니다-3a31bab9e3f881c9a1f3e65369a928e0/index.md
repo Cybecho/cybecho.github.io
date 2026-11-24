@@ -2,8 +2,8 @@
 title: "하네스의 알맹이는 결국 소프트웨어 공학입니다. 바뀐 건 규율이 사는 자리뿐입니다"
 date: 2026-07-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness"]
+series: ["AI Harness"]
 description: "하네스라는 새 단어의 포장지를 뜯으면, 안에는 우리가 이미 알던 소프트웨어 공학이 들어 있습니다. 바이브 코딩은 프로토타이핑, 스펙 코딩은 요구공학, 루프는 스파이럴 모델, 하네스는 테스트 하네스의 확장입니다. 새로 바뀐 것은 하나뿐입니다. 규율이 사람의 리뷰에서 기계의 게이트로 자리를 옮겼습니다."
 featured_image: "image_2d5f4c02f0f201f234e7c6c3.webp"
 notion_id: "3a31bab9-e3f8-81c9-a1f3-e65369a928e0"

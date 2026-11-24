@@ -2,11 +2,11 @@
 title: "유니티 3D게임 쿼드뷰 01"
 date: 2023-02-05T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 3D 쿼터뷰 게임 클론 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "플레이어를 생성하고 필요한 컴포넌트인 Rigidbody와 Collider를 설정하며, Input.GetAxisRaw()를 사용하여 캐릭터의 움직임을 제어한다. Collision Detection을 Continuous로 변경하여 충돌 버그를 방지하고, LookAt() 함수를 사용하여 캐릭터가 이동 방향을 바라보게 한다. 카메라를 따라오게 만들고, bool 연산자를 사용하여 코드의 간결성을 높인다. 애니메이션 트리거 설정 시 주의가 필요하다."
+featured_image: "image_9fc8cd33ff54.png"
 notion_id: "2e99bfee-f2da-4c76-ac8e-ecca4dc23fe6"
-notion_url: "https://www.notion.so/3D-01-2e99bfeef2da4c76ac8eecca4dc23fe6"
 ---
 
 # 유니티 3D게임 쿼드뷰 01

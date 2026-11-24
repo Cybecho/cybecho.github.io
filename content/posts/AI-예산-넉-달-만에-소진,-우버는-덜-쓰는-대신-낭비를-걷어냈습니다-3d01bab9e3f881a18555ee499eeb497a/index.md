@@ -2,8 +2,8 @@
 title: "AI 예산 넉 달 만에 소진, 우버는 덜 쓰는 대신 낭비를 걷어냈습니다"
 date: 2026-09-03T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness"]
+series: ["AI Harness"]
 description: "우버는 AI 사용량을 줄이는 대신 비용을 사용자 수, 세션, 턴, 요청, 토큰, 단가로 나눠 측정하고, 모델 선택·컨텍스트 압축·프롬프트 캐시·도구 호출 최적화와 실시간 비용 가시화로 낭비를 줄였습니다. 그 결과 AI 사용량이 7배 늘어나는 동안 요청 1,000건당 비용은 34%, 세션당 비용은 52% 감소해 지출을 안정시켰습니다."
 featured_image: "image_4e20a5b12aba7fd19f93cb83.webp"
 notion_id: "3d01bab9-e3f8-81a1-8555-ee499eeb497a"

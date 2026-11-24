@@ -2,8 +2,8 @@
 title: "쿠파스로 월 300만 원, 터진 글 100개를 뜯어보니 답은 구조 복사에 있었습니다"
 date: 2026-07-24T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["blog-monetization"]
+series: ["블로그 수익 글쓰기"]
 description: "쿠팡 파트너스로 수익을 내려면 터진 글 100개를 분석해 첫 줄, 사진, 정보 순서, 링크 위치의 구조를 파악하고 이를 자신의 상품과 말투에 맞게 적용해야 합니다. 기본 수수료 3%로 월 300만 원을 벌려면 월 1억 원의 판매를 유도해야 하며, 성과를 꾸준히 측정하고 글의 구조를 개선해야 합니다."
 featured_image: "image_ccf6dcfb46b6cb264e5ca4fa.webp"
 notion_id: "3a71bab9-e3f8-8166-abea-de6f72f85b2a"

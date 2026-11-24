@@ -2,8 +2,8 @@
 title: "Zotero + Obsidian: 논문은 폴더에 쌓는 게 아니라 구조를 잡는 겁니다"
 date: 2026-02-12T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["rag"]
+series: ["AI Harness"]
 description: "Zotero에 논문을 모으고 Obsidian에서 논문별 reading log를 작성해 폴더 단위로 유사점과 차이점을 파악하면, PDF를 쌓아두는 데 그치지 않고 구조적인 문헌 검토가 가능하다. AI 요약에는 PDF 원문 검색과 인용 발췌를 강제해 지어내기를 줄이고, 주제에 맞게 템플릿과 흐름을 조정해야 한다."
 featured_image: "image_d9d267f4997c791e7197d2f0.webp"
 notion_id: "3041bab9-e3f8-8176-8d59-ffb77dfce05f"

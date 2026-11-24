@@ -2,8 +2,8 @@
 title: "Auto Ontology: 매출 숫자가 틀리면 빠른 답은 소용없습니다. 의미 지도를 먼저 만듭니다"
 date: 2026-11-04T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","mcp"]
+series: ["AI Harness"]
 description: "Auto Ontology는 데이터베이스의 스키마·값·쿼리 기록을 바탕으로 비즈니스 용어, 컬럼, 조인, 계산식, 출처를 연결한 의미 지도를 자동 생성합니다. 사람이 검수·인증한 정의를 바탕으로 에이전트가 SQL과 근거를 제시하며 답하고, 데이터가 부족하면 모른다고 응답합니다. MCP·CLI·REST API와 여러 데이터베이스를 지원하지만, 초안을 반드시 검수하고 설치 및 보안 요구사항을 고려해야 합니다."
 featured_image: "image_1f899e5f34911757de24a043.webp"
 notion_id: "40e1bab9-e3f8-81f0-8801-f31d008384e8"

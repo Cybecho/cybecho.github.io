@@ -2,8 +2,8 @@
 title: "Diffusion Studio: 에이전트에게 영상 편집을 맡기면, 타임라인이 코드가 됩니다"
 date: 2026-08-11T10:05:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "Diffusion Studio는 편집을 JSX 코드로 저장해 코딩 에이전트와 사람이 같은 프로젝트를 이어서 작업할 수 있는 오픈소스 영상 편집기입니다. 말로 요청하면 에이전트가 컷 편집, 필러 워드 제거, 자막과 모션 그래픽 제작, 영상 분석 및 렌더링을 수행하며, 아직 초기 단계라 사용 전 저장소 문서를 확인하는 것이 좋습니다."
 featured_image: "image_066d47d6f82b769f0bd3c4b2.webp"
 notion_id: "3b91bab9-e3f8-81b0-9753-d73476d5459d"

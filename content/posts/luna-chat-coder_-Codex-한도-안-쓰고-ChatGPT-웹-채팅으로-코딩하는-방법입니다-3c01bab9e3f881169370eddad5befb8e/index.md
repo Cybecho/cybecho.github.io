@@ -2,8 +2,8 @@
 title: "luna-chat-coder: Codex 한도 안 쓰고 ChatGPT 웹 채팅으로 코딩하는 방법입니다"
 date: 2026-08-18T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "ChatGPT 웹 채팅 사용량은 Codex 한도와 별개로 계산되며, 무료 채팅도 넉넉하게 쓸 수 있습니다. 템플릿 저장소와 스킬을 쓰면 샌드박스에서 편집·빌드·테스트를 하고, 막히는 부분만 GitHub와 제한된 Actions로 보완합니다. 작업은 저장소 작업 브랜치에 자주 저장돼 샌드박스가 사라져도 이어갈 수 있지만, Actions 사용량과 도구 제한은 따로 챙겨야 합니다."
 featured_image: "image_b00eddfe11683c059324933c.webp"
 notion_id: "3c01bab9-e3f8-8116-9370-eddad5befb8e"

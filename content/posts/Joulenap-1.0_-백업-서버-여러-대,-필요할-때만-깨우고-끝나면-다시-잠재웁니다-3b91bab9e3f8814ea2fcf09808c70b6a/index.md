@@ -2,8 +2,7 @@
 title: "Joulenap 1.0: 백업 서버 여러 대, 필요할 때만 깨우고 끝나면 다시 잠재웁니다"
 date: 2026-08-11T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Let's Homelab!"]
 description: "Joulenap 1.0은 여러 Proxmox 호스트와 백업 서버를 관리하며, 백업·동기화·외부 감시·검증 작업에 맞춰 서버를 깨우고 작업 후 다시 잠재우는 스케줄러입니다. 새 실행 큐와 전원 임대 기능으로 서버를 효율적으로 공유하고, 설정은 자동 변환되지만 제외 모드와 대시보드 API·메트릭이 변경되어 업그레이드 후 확인이 필요합니다."
 featured_image: "image_01555264bcff4185c4476846.webp"
 notion_id: "3b91bab9-e3f8-814e-a2fc-f09808c70b6a"

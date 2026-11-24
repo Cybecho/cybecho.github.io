@@ -2,8 +2,8 @@
 title: "Opus 만능 프롬프트: AI를 기술 공동창업자로 쓰면, 5분 만에 진짜 제품이 나옵니다"
 date: 2026-02-09T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering"]
+series: ["AI Harness"]
 description: "AI를 기술 공동창업자로 설정해 아이디어를 실제 제품으로 발전시키려면, 발견·기획·구축·다듬기·인계의 단계를 따르고 명확한 버전 1 사양서를 작성하는 것이 중요합니다. AI는 추측하지 않고 질문하며 단계별로 구현하고, 사람은 범위와 주요 결정을 맡습니다. 5분 MVP는 간단한 제품에서 가능하지만, 핵심은 속도보다 명확한 사양과 반복적인 협업입니다."
 featured_image: "image_1b30469d3e187652771c619a.webp"
 notion_id: "3021bab9-e3f8-81d2-a12e-e095c2f1a9dc"

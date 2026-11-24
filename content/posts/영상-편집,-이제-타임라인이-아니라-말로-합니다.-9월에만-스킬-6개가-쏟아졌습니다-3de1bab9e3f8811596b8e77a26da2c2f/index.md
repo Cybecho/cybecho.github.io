@@ -2,8 +2,8 @@
 title: "영상 편집, 이제 타임라인이 아니라 말로 합니다. 9월에만 스킬 6개가 쏟아졌습니다"
 date: 2026-09-17T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["video-generation"]
+series: ["AI Media"]
 description: "9월에는 영상 편집을 말로 지시하는 다양한 AI 스킬이 등장했습니다. 잘된 영상의 편집 구조를 복제하는 도구, 번역·더빙·생성을 한곳에서 다루는 작업공간, 숏폼 제작 키트 등은 컷과 자막을 단어 단위로 조정해 편집 과정을 간소화합니다. 다만 에이전트·생성 비용과 설치 요건을 확인하고, 원본 영상의 화면과 소리를 무단으로 사용하지 않도록 주의해야 합니다."
 featured_image: "image_6794b55c66d5338deed07a96.webp"
 notion_id: "3de1bab9-e3f8-8115-96b8-e77a26da2c2f"

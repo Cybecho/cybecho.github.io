@@ -2,8 +2,8 @@
 title: "Next ADE, Hide: 에이전트 10개를 띄워도 확인할 건 나를 부르는 일뿐입니다"
 date: 2026-11-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "Hide는 여러 코딩 에이전트를 한 화면에서 관리하며, AI가 세션을 읽어 사람을 기다리는 작업만 우선 보여줍니다. Conductor는 미션을 여러 기계와 에이전트에 나누고 결과를 풀 리퀘스트로 모으며, Project Memory는 결정 사항을 다른 에이전트와 공유합니다. 무료로 제공되지만 아직 초기 단계이고 일부 기능은 개발 중입니다."
 featured_image: "image_c0bef2bd73065a61acceef3b.webp"
 notion_id: "41d1bab9-e3f8-81b9-b3fa-e77b1758cec6"

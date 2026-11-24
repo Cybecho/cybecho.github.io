@@ -2,11 +2,11 @@
 title: "프리세일즈 및 엔지니어링 관점의 TCO 및 ROI 는 어떻게 다가올까?"
 date: 2026-01-11T05:38:00.000Z
 draft: false
-tags: ["Sales", "인사이트"]
-series: ["Pre-Sales"]
+tags: ["인사이트"]
+series: ["Tips"]
 description: "현대 IT 인프라의 재무 아키텍처는 기술적 성능을 재무적 언어로 변환하는 것이 필수적이며, TCO와 ROI 분석을 통해 비즈니스 설득력을 확보해야 한다. OPEX 모델로의 전환이 진행되며, 숨겨진 비용과 기술 부채를 고려한 ROI 극대화가 중요하다. 성공적인 비즈니스 케이스 구축을 위해 3단계 지평 피치 전략을 통해 즉각적 구호, 운영 효율성, 전략적 변혁을 제안한다."
+featured_image: "image_304946a571ea.png"
 notion_id: "2e51bab9-e3f8-8062-95d4-f25fe8a3abf9"
-notion_url: "https://www.notion.so/TCO-ROI-2e51bab9e3f8806295d4f25fe8a3abf9"
 ---
 
 # 프리세일즈 및 엔지니어링 관점의 TCO 및 ROI 는 어떻게 다가올까?

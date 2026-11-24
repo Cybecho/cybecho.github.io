@@ -2,17 +2,17 @@
 title: "Claude Code에서 GLM 과 Claude를 동시에 사용해보자"
 date: 2026-01-02T04:20:00.000Z
 draft: false
-tags: ["AI", "Claude"]
-series: ["AI"]
-description: "Claude Code에서 GLM 모델과 Claude 모델을 동시에 사용하기 위해서는 래퍼 스크립트와 프록시 도구를 활용하여 환경변수를 설정하고, 여러 세션을 동시에 열어 사용할 수 있다. 기본적으로는 각 모델에 대해 별도의 터미널을 열어 독립적으로 작업하며, ccx 프록시를 사용하면 한 세션 내에서 모델을 자유롭게 전환할 수 있다. 이를 통해 사용자는 Anthropic Claude와 "
+tags: ["Claude","coding"]
+series: ["AI Harness"]
+description: "Claude Code에서 GLM 모델과 Claude 모델을 동시에 사용하기 위해서는 래퍼 스크립트와 프록시 도구를 활용하여 환경변수를 설정하고, 여러 세션을 동시에 열어 사용할 수 있다. 기본적으로는 각 모델에 대해 별도의 터미널을 열어 독립적으로 작업하며, ccx 프록시를 사용하면 한 세션 내에서 모델을 자유롭게 전환할 수 있다. 이를 통해 사용자는 Anthropic Claude와 Z.AI GLM을 효율적으로 병행하여 활용할 수 있다."
+featured_image: "image_8bf071d880f3.png"
 notion_id: "2dc1bab9-e3f8-802a-bb8b-e1f94fbbc87b"
-notion_url: "https://www.notion.so/Claude-Code-GLM-Claude-2dc1bab9e3f8802abb8be1f94fbbc87b"
 ---
 
 # Claude Code에서 GLM 과 Claude를 동시에 사용해보자
 
 > **Summary**
-> Claude Code에서 GLM 모델과 Claude 모델을 동시에 사용하기 위해서는 래퍼 스크립트와 프록시 도구를 활용하여 환경변수를 설정하고, 여러 세션을 동시에 열어 사용할 수 있다. 기본적으로는 각 모델에 대해 별도의 터미널을 열어 독립적으로 작업하며, ccx 프록시를 사용하면 한 세션 내에서 모델을 자유롭게 전환할 수 있다. 이를 통해 사용자는 Anthropic Claude와 
+> Claude Code에서 GLM 모델과 Claude 모델을 동시에 사용하기 위해서는 래퍼 스크립트와 프록시 도구를 활용하여 환경변수를 설정하고, 여러 세션을 동시에 열어 사용할 수 있다. 기본적으로는 각 모델에 대해 별도의 터미널을 열어 독립적으로 작업하며, ccx 프록시를 사용하면 한 세션 내에서 모델을 자유롭게 전환할 수 있다. 이를 통해 사용자는 Anthropic Claude와 Z.AI GLM을 효율적으로 병행하여 활용할 수 있다.
 
 ---
 
@@ -248,3 +248,194 @@ claude-glm-wrapper의 래퍼 스크립트와 앞서 본 alias 패턴은 내부�
   - CLAUDE_HOME을 이 모델 전용 설정 디렉터리(예: ~/.claude-glm)로 설정
 1. 그 상태에서 claude(실제 Claude Code CLI)를 실행
   - 래퍼 스크립트 입장에서는 “환경변수만 바꾸고 실제 바이너리는 실행만 해 주는” 얇은 층이다.
+1. 종료 시
+  - 실제 시스템 전역 환경변수는 건드리지 않기 때문에, 세션이 끝나면 원래 상태로 자동 복구된다.
+claude-glm-wrapper의 README에서도 각 모델용 래퍼가 ~/.local/bin 또는 %USERPROFILE%\.local\bin 아래에 작은 bash/PowerShell 스크립트로 설치된다고 설명한다.【turn9fetch0】
+
+### 4.2 환경변수와 [Z.AI](http://z.ai/) 엔드포인트
+
+래퍼와 프록시 모두 [Z.AI](http://z.ai/) 쪽에서 “Anthropic 호환” 형태를 제공한다는 점을 이용한다.
+
+README의 ccx 설정 예시를 보면 다음과 같은 형태가 나온다.【turn4fetch0】
+
+- GLM 관련:
+```bash
+GLM_UPSTREAM_URL=https://api.z.ai/api/anthropic
+ZAI_API_KEY=...
+
+```
+
+- Anthropic 관련:
+```bash
+ANTHROPIC_UPSTREAM_URL=https://api.anthropic.com
+ANTHROPIC_API_KEY=sk-ant-...
+
+```
+
+이는 곧:
+
+- Z.AI가 [https://api.z.ai/api/anthropic](https://api.z.ai/api/anthropic) 라는 엔드포인트를 통해, Anthropic API와 유사한 인터페이스를 제공한다.
+- 래퍼/프록시는 이 “업스트림 URL”과 “각 프로바이더별 API 키”만 가지고 요청을 적절히 포워딩한다.
+따라서 사용자 관점에서는:
+
+- Claude Code 클라이언트는 여전히 “동일한 프로토콜/요청 포맷”을 사용한다.
+- 중간에 있는 래퍼/프록시가 실제 요청을 어디로 보낼지만 결정한다.
+- 이로 인해 “클라이언트는 그대로 두고 백엔드만 갈아끼우는” 구조가 가능하다.
+## 5. 프록시 도구(ccx)를 활용한 한 세션 내에서의 모델 스위칭
+
+여기까지는 “세션 단위로 모델을 고정”하는 방식이었다.
+
+Reddit과 GitHub에서는 이를 한 단계 더 나아가, “한 세션 안에서 모델을 자유롭게 바꾸는” 프록시 ccx도 소개한다.【turn4fetch0】【turn9fetch0】
+
+### 5.1 ccx의 개념
+
+- ccx는 로컬에서 도는 프록시 프로세스다.
+- Claude Code는 이 프록시를 API 서버인 것처럼 바라보고, ccx는 실제 요청을 설정된 여러 프로바이더(OpenAI, OpenRouter, Gemini, GLM, Anthropic 등)로 라우팅한다.【turn4fetch0】
+- 사용자는 Claude Code 대화 내에서 `/model` 명령을 사용해, provider:model 형식으로 모델을 바꾼다.
+  - 예:
+    - /model glm:glm-4.6
+    - /model openai:gpt-4o
+    - /model anthropic:claude-3-5-sonnet-20241022【turn9fetch0】
+### 5.2 ccx 설치와 초기 설정
+
+1. 설치는 앞서와 동일하다.
+```bash
+npx claude-glm-installer
+
+```
+
+1. ccx 전용 API 키 설정
+- 처음에 다음 명령을 실행하면 설정 파일이 생성된다.
+```bash
+ccx --setup
+
+```
+
+- 이 과정에서 ~/.claude-proxy/.env(macOS/Linux) 또는 %USERPROFILE%\.claude-proxy\.env(Windows) 파일이 만들어진다.【turn4fetch0】
+1. .env 파일 편집
+- 예시 내용은 다음과 같다(실제 키는 본인 것으로 교체).【turn4fetch0】
+```bash
+# OpenAI
+OPENAI_API_KEY=sk-...
+
+# OpenRouter
+OPENROUTER_API_KEY=sk-or-...
+
+# Gemini
+GEMINI_API_KEY=AIza...
+
+# Z.AI GLM
+GLM_UPSTREAM_URL=https://api.z.ai/api/anthropic
+ZAI_API_KEY=...
+
+# Anthropic (프록시를 통해 Anthropic도 라우팅하고 싶은 경우)
+ANTHROPIC_UPSTREAM_URL=https://api.anthropic.com
+ANTHROPIC_API_KEY=sk-ant-...
+
+```
+
+### 5.3 ccx 실행 및 /model 사용 흐름
+
+1. 프록시 실행
+```bash
+ccx
+
+```
+
+- 이 명령을 치면:
+  - 로컬 프록시가 백그라운드에서 실행되고,
+  - Claude Code는 이 프록시에 연결된 상태로 세션이 시작된다.【turn4fetch0】
+1. 모델 전환
+- 이후 대화 중에 다음처럼 /model 명령을 쓰면 실제 백엔드 모델이 바뀐다.【turn9fetch0】
+```plain text
+/model openai:gpt-4o
+/model gemini:gemini-1.5-pro
+/model glm:glm-4.6
+/model anthropic:claude-3-5-sonnet-20241022
+
+```
+
+1. ccx의 특징과 장점
+- 단일 세션: 종료 없이 모델 전환 가능
+- 컨텍스트 유지: 채팅 기록은 그대로 유지된 채로 모델만 바뀌므로, 이전 맥락을 기반으로 다른 모델에게 계속 질문할 수 있다.
+- 쉬운 비교: 같은 질문을 다른 모델에 던져 답변 비교가 가능하다.
+- 다중 프로바이더: OpenAI, OpenRouter, Gemini, GLM, Anthropic을 한 세션에서 모두 사용할 수 있다.【turn9fetch0】
+1. 한계와 trade-off
+- 프록시 프로세스가 추가로 도는 오버헤드가 있다.
+- 전역 환경변수가 아니라 .env 기반 설정이므로, 키 관리가 한 곳으로 집중된다.
+- 여러 모델의 히스토리가 섞이므로, “모델별로 완전히 격리된 기록”을 원하는 경우에는 ccg/ccg45/ccf 같은 전용 래퍼가 더 낫다.【turn9fetch0】
+README에서도 “ccx는 세션 내 유연성이 중요할 때, ccg/ccg45/ccf는 모델별 히스토리 분리가 중요할 때”라고 구분해서 권장하고 있다.【turn9fetch0】
+
+## 6. 실무 관점에서의 구성 전략 – 논리적인 흐름으로 정리
+
+지금까지 살펴본 내용을 바탕으로, “하나의 Claude Code 터미널 환경에서 Claude와 GLM을 동시에 활용”하기 위해 실제로 추천할 수 있는 논리 흐름을 정리하면 다음과 같다.
+
+### 6.1 기본 전략: 전용 래퍼 + 멀티 터미널 병행
+
+가장 단순하고 안정적인 패턴은:
+
+- cc: 기본 Claude Code 세션 (Anthropic)
+- ccg(또는 glm): GLM-4.6 세션
+- 필요에 따라 ccg45, ccf로 세분화
+이 구성으로 “여러 터미널 탭/창을 열어 두고 각각 다른 모델 세션을 사용”하는 것이다.【turn4fetch0】【turn8fetch0】
+논리적 장점:
+
+- 각 모델마다 독립된 설정과 히스토리를 가지므로,
+  - GLM에서 실험하다가
+  - Claude에서 최종 검증
+하는 식의 워크플로우가 자연스럽다.
+- 래퍼/프록시 오류가 발생해도, Anthropic 쪽 원본 세션(cc)에는 영향이 없다.
+예시 워크플로우:
+
+1. 테스트/탐색: GLM-4.6(ccg)로 비교적 저렴하게 자주 질의
+1. 빠른 피드백이 필요한 작업: GLM-4.5-Air(ccf)로 속도 우선
+1. 중요한 리팩터링/설계 검토: Claude(cc)로 품질 우선
+### 6.2 높은 유연성이 필요할 때: ccx 프록시 추가
+
+만약 “세션 내에서 모델을 자주 바꾸면서 비교”하는 패턴이 주가 된다면:
+
+- 기본 cc/ccg 세션들은 큰 작업 단위로 유지
+- 세부 아이디어 비교/반복 실험이 필요할 때는 ccx 세션을 따로 열어 두고 /model로 모델만 수시로 바꾸는 방식이 좋다.
+장점:
+
+- 같은 맥락에서 “GLM-4.6으로 답변 받고, 바로 Claude 3.5 Sonnet로도 같은 질문을 던져 비교”하는 식의 흐름이 자연스럽다.
+- 여러 터미널을 열어 두되, 각 터미널이 역할(예: A창=ccg, B창=ccx)을 가지게 할 수 있다.
+단점:
+
+- 모델별로 히스토리가 섞이므로, “이 모델이 했던 과거 추론만 보고 싶다”는 식의 정리가 조금 더 어렵다.
+### 6.3 Windows/macOS/WSL 혼합 환경에서의 전략
+
+Reddit에서 언급되는 또 다른 패턴은 “환경 자체를 분리”하는 것이다. 예를 들어:
+
+- Windows PowerShell: GLM 4.6용 Claude Code 세션
+- WSL: Claude(Sonnet 4.5 등)용 Claude Code 세션
+- IDE(WebStorm, VS Code 등) 내장 터미널을 열어, 사용 중인 프로젝트나 작업 성격에 따라 두 세션 중 하나를 선택해 사용
+논리적으로는:
+
+- OS/터미널마다 다른 스크립트나 설정을 적용해 두고,
+- 사용자는 “어떤 작업을 어느 환경에서 할지”를 고수준으로만 선택한다.
+이 패턴은 “한 기계 안에서 여러 OS/환경을 이미 쓰고 있는 경우”에 추가 설정이 거의 없이 유용하다.
+
+## 7. 정리 –Claude와 GLM을 “하나의 Claude Code 터미널 환경”에서 동시에 쓰는 현실적인 방법
+
+정리하면, 다음과 같이 구성하는 것이 논리적이고 실무적이다.
+
+1. 가장 먼저 할 것: claude-glm-installer로 cc, ccg, ccg45, ccf, ccx 설치
+  - 한 줄 명령으로 플랫폼에 맞는 래퍼/alias가 자동 생성된다.
+  - 이후 설정 파일과 히스토리가 모델별로 격리되어, 기존 Claude 설정을 보존하면서 GLM을 쓸 수 있다.【turn4fetch0】【turn8fetch0】
+1. 기본 병행 사용 패턴
+  - 터미널 A: cc → Anthropic Claude 세션
+  - 터미널 B: ccg(또는 glm) → GLM-4.6 세션
+  - 필요에 따라 ccg45, ccf를 추가로 사용
+→ 두 세션을 동시에 띄워 두고 작업하므로, 사실상 “동시에 두 모델 활용”이 가능해진다.【turn4fetch0】【turn9fetch0】
+1. 세션 내 모델 스위칭이 필요할 때
+  - 별도 터미널에서 ccx 실행 후,
+  - 대화 중 `/model glm:glm-4.6`, `/model anthropic:claude-3-5-sonnet-20241022` 등으로 모델을 자유롭게 변경하며 비교 및 혼합 사용.【turn9fetch0】
+1. 더 커스텀한 흐름이 필요하다면
+  - 앞서 설명한 Z.AI_BASE_URL/ZAI_API_KEY 환경변수와 alias 패턴을 직접 응용해,
+  - use-glm/use-claude 같은 자신만의 스크립트를 만들어 사용하면 된다.
+  - 이 경우 내부 동작 원리는 claude-glm-wrapper와 동일하다.
+결국, “Claude Code 자체를 고치는 것이 아니라, 실행 환경(Claude를 어떤 설정/어떤 백엔드로 띄우느냐)만 분리”하면,
+
+한 터미널 안에서도 Anthropic Claude와 [Z.AI](http://z.ai/) GLM을 상황에 맞춰 자유롭게, 그리고 논리적으로 함께 쓸 수 있는 환경을 만들 수 있다.
+

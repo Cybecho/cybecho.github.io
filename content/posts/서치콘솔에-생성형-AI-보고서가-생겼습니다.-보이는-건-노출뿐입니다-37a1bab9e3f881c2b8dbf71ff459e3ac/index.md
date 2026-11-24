@@ -2,8 +2,8 @@
 title: "서치콘솔에 생성형 AI 보고서가 생겼습니다. 보이는 건 노출뿐입니다"
 date: 2026-06-09T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["blog-monetization"]
+series: ["블로그 수익 글쓰기"]
 description: "서치콘솔의 생성형 AI 보고서는 AI 오버뷰와 AI 모드에서 발생한 사이트 노출 수를 페이지·국가·기기·날짜별로 보여주지만, 클릭이나 검색어는 제공하지 않습니다. 클릭과 쿼리는 기존 성과 보고서에서 확인해야 하며, 두 보고서의 노출 수를 더하면 중복 집계됩니다."
 featured_image: "image_6763f3400acf59e22a28cfe8.webp"
 notion_id: "37a1bab9-e3f8-81c2-b8db-f71ff459e3ac"

@@ -2,11 +2,11 @@
 title: "Linux + VNC + JumpDesktop 를 이용한 리눅스 원격 환경 구성"
 date: 2024-12-15T08:49:00.000Z
 draft: false
-tags: ["ubuntu", "popOS"]
+tags: ["ubuntu"]
 series: ["Let's Linux!"]
 description: "Pop!_OS에서 VNC 서버를 설정하고 Jump Desktop 클라이언트를 통해 원격 접속하는 방법을 설명합니다. Vino를 설치하고 Xorg 세션을 활성화한 후, dconf를 사용해 VNC 설정을 변경합니다. 방화벽 설정, IP 주소 확인, Jump Desktop에서의 연결 방법 및 Vino 서버의 자동 시작 설정도 포함되어 있습니다."
+featured_image: "image_e08869f32b86.png"
 notion_id: "15d1bab9-e3f8-808f-ab6a-db70849ae23c"
-notion_url: "https://www.notion.so/Linux-VNC-JumpDesktop-15d1bab9e3f8808fab6adb70849ae23c"
 ---
 
 # Linux + VNC + JumpDesktop 를 이용한 리눅스 원격 환경 구성

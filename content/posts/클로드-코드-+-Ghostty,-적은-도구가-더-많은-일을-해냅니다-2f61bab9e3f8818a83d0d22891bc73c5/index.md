@@ -3,8 +3,9 @@ title: "클로드 코드 + Ghostty, 적은 도구가 더 많은 일을 해냅니
 date: 2026-01-29T00:00:00.000Z
 draft: false
 tags: ["AI"]
-series: ["개발환경"]
+series: ["Dev Environment"]
 description: "AI 개발 생산성은 도구를 늘리기보다 Ghostty, 클로드 코드, CLI 중심의 간결한 환경으로 맥락을 깨끗하게 유지하는 데서 나옵니다. 작은 일은 바로 실행하고 큰 일은 계획을 검토받으며, 작업에 맞춰 에이전트 수를 조절하고 같은 맥락에서 테스트를 작성하면 효율적으로 개발할 수 있습니다."
+featured_image: "image_f5cdcbea479ef3ca4243fd04.webp"
 notion_id: "2f61bab9-e3f8-818a-83d0-d22891bc73c5"
 ---
 

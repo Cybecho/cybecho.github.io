@@ -2,7 +2,10 @@
 title: "MonoSketch: 다이어그램은 그림이 아니라 텍스트로 그립니다"
 date: 2026-02-16T00:00:00.000Z
 draft: false
+tags: ["coding"]
+series: ["Let's Open Source"]
 description: "MonoSketch는 설치·계정·서버 없이 브라우저에서 ASCII 다이어그램을 그리는 무료 오픈소스 도구입니다. 결과물이 순수 텍스트라 문서나 코드에 쉽게 붙여넣고 Git으로 버전 관리할 수 있으며, 사각형·텍스트·선 도구와 자동 저장, 무한 캔버스 등 편집 기능을 제공합니다."
+featured_image: "image_4107f52f8b0304a86e150d6b.webp"
 notion_id: "3091bab9-e3f8-81fa-94c3-fac68728b7ca"
 ---
 

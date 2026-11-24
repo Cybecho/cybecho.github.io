@@ -2,8 +2,8 @@
 title: "LazyCodex: 큰 코드베이스에서는 프롬프트가 아니라 하네스가 일합니다"
 date: 2026-06-08T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness","agent"]
+series: ["AI Harness"]
 description: "LazyCodex는 Codex에 프로젝트 기억, 계획, 실행, 검증을 결합한 하네스를 제공해 큰 코드베이스에서도 작업을 이어가고 결과를 증거로 확인합니다. 단, 전체 OmO의 일부 기능만 포함하며 반복 검증에는 토큰이 많이 들 수 있습니다."
 featured_image: "image_2af90f79749fe496bd64b5af.webp"
 notion_id: "3791bab9-e3f8-8100-b4d9-d873b5efdf31"

@@ -2,8 +2,8 @@
 title: "cmux: 에이전트 여러 개를 동시에 돌린다면, 누가 나를 부르는지 한눈에 보입니다"
 date: 2026-03-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "cmux는 Ghostty 엔진을 사용하는 네이티브 macOS 터미널로, 여러 AI 코딩 에이전트의 입력 대기 상태를 파란 링과 알림 패널로 한눈에 보여줍니다. 내장 브라우저와 CLI·소켓 API로 에이전트 작업을 자동화하고, 터미널·브라우저·알림 등을 자유롭게 조합해 협업 환경을 구성할 수 있습니다. macOS 14 이상에서 사용할 수 있으며 AGPL-3.0으로 공개되어 있습니다."
 featured_image: "image_8de9827186cd60d5168ac3e3.webp"
 notion_id: "3281bab9-e3f8-81a5-9f8a-da6d19407006"

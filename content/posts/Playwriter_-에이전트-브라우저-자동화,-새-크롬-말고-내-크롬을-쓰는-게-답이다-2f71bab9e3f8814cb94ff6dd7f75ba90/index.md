@@ -2,7 +2,10 @@
 title: "Playwriter: 에이전트 브라우저 자동화, 새 크롬 말고 내 크롬을 쓰는 게 답이다"
 date: 2026-01-29T00:00:00.000Z
 draft: false
+tags: ["agent","browser-automation"]
+series: ["AI Harness"]
 description: "Playwriter는 에이전트가 새 브라우저 대신 로그인과 확장 프로그램이 유지된 사용자의 크롬을 자동화하도록 돕습니다. 화면 좌표가 아니라 웹 요소를 정확히 선택하고, Playwright API를 execute 하나로 실행해 적은 컨텍스트로 다양한 작업과 디버깅을 지원합니다. 로컬에서 동작하며 접근성 스냅샷으로 페이지를 가볍게 읽고, 여러 에이전트의 세션 관리와 네트워크 분석도 가능합니다."
+featured_image: "image_1a1d37a5ae67ee0e1b24dc0a.webp"
 notion_id: "2f71bab9-e3f8-814c-b94f-f6dd7f75ba90"
 ---
 

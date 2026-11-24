@@ -2,11 +2,11 @@
 title: "리버스 프롬프팅 : 프롬프트 생각하는데 시간쓰지말고, gemini를 이용해 아주 멋드러지게 뽑아내보자"
 date: 2025-12-27T14:40:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering"]
+series: ["AI Harness"]
 description: "Gemini와 Google AI Studio를 활용하여 이미지, 영상, 코드용 프롬프트를 자동으로 생성해 작업 효율을 극대화하는 방법을 제안한다. 복잡한 프롬프트를 외우기보다는 AI에게 메타 프롬프트를 요청하여 필요한 세부 정보를 구조화된 형식으로 얻고, 이를 통해 이미지 변환 및 동영상 생성 프롬프트를 효율적으로 작성할 수 있다. 또한, 자연어 요청에서 시작해 점차 세부 사항을 수정하는 경험이 중요하며, 리버스 프롬프팅 기법을 통해 정밀한 프롬프트 설계가 가능하다고 강조한다."
+featured_image: "image_7b19838c8ee2.png"
 notion_id: "2d61bab9-e3f8-8051-9bcb-e57f0c37d040"
-notion_url: "https://www.notion.so/gemini-2d61bab9e3f880519bcbe57f0c37d040"
 ---
 
 # 리버스 프롬프팅 : 프롬프트 생각하는데 시간쓰지말고, gemini를 이용해 아주 멋드러지게 뽑아내보자

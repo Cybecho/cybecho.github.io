@@ -3,10 +3,10 @@ title: "민팅 매크로 개발 01"
 date: 2023-02-19T00:00:00.000Z
 draft: false
 tags: ["Python"]
-series: ["매크로개발"]
+series: ["Let's Macro"]
 description: "서버 시간 동기화 방법과 특정 색 클릭 매크로 개발을 위한 Python 코드 예시를 제공하며, 클릭 범위를 비율로 계산하는 방법과 RGB 인식 클릭 구현 방법을 설명합니다."
+featured_image: "image_8746692dfaefb6c048bafa3e.png"
 notion_id: "f146239f-6f7b-4006-b085-ea3833d6a76a"
-notion_url: "https://www.notion.so/01-f146239f6f7b4006b085ea3833d6a76a"
 ---
 
 # 민팅 매크로 개발 01
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/01-f146239f6f7b4006b085ea3833d6a76a"
 > 서버 시간 동기화 방법과 특정 색 클릭 매크로 개발을 위한 Python 코드 예시를 제공하며, 클릭 범위를 비율로 계산하는 방법과 RGB 인식 클릭 구현 방법을 설명합니다.
 
 ---
+
+![Image](image_8746692dfaefb6c048bafa3e.png)
 
 > 🔥 **MBX 서버위치 확인**
 > 🔗 [https://sitereport.netcraft.com/?url=https://playone.marblex.io](https://sitereport.netcraft.com/?url=https://playone.marblex.io)

@@ -2,8 +2,8 @@
 title: "MOSS-Image: 포스터 글자가 깨지지 않습니다. 글자와 위치를 프롬프트로 정합니다"
 date: 2026-10-19T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["local-llm","image-generation"]
+series: ["AI Media"]
 description: "MOSS-Image는 포스터·인포그래픽처럼 글자와 배치가 중요한 이미지 제작에 강한 오픈 모델로, 최대 4,000토큰의 프롬프트를 읽고 JSON으로 글자와 사물의 위치를 지정할 수 있습니다. 권장되는 SFT 버전은 공식 50단계 생성 경로를 사용하며, 8단계 버전은 빠르지만 커뮤니티 제작물이라 글자 오류를 확인해야 합니다. Apache 2.0 라이선스로 공개되어 로컬 실행과 Base 모델 기반의 파인튜닝이 가능하지만, 상당한 하드웨어 자원이 필요합니다."
 featured_image: "image_9d8709e9314beedd0c1f67c8.webp"
 notion_id: "3fe1bab9-e3f8-8113-b2b8-cf135760ba7b"

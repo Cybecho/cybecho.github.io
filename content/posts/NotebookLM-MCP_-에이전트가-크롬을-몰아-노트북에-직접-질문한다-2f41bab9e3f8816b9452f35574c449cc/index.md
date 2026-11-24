@@ -2,7 +2,10 @@
 title: "NotebookLM MCP: 에이전트가 크롬을 몰아 노트북에 직접 질문한다"
 date: 2026-01-26T00:00:00.000Z
 draft: false
+tags: ["mcp","browser-automation"]
+series: ["AI Harness"]
 description: "노트북LM MCP 서버는 크롬 브라우저를 자동화해 AI 에이전트가 노트북에 질문하고 출처를 확인하거나 자료를 추가하고 오디오 요약을 생성하도록 지원합니다. 설치와 초기 로그인이 간편하지만, 저장소가 2026년 9월 아카이브되어 유지보수와 장기적인 사용이 불확실합니다."
+featured_image: "image_fb5941bab3986e4daaf8cad4.webp"
 notion_id: "2f41bab9-e3f8-816b-9452-f35574c449cc"
 ---
 

@@ -2,8 +2,8 @@
 title: "iPhone Use: 말 한 마디면 AI가 진짜 아이폰을 만집니다. 화면이 아니라 UI 구조를 읽습니다"
 date: 2026-10-11T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["phone-automation","mcp"]
+series: ["On-Device AI"]
 description: "AI는 맥의 로컬 MCP 서버와 USB로 연결된 아이폰의 WebDriverAgent를 통해 앱을 열고, 누르고, 입력하는 등 실제 기기를 조작합니다. 화면 캡처보다 UI 구조를 우선 활용하고, 찾지 못하면 스크린샷을 분석해 좌표로 조작합니다. 탈옥은 필요 없지만 전체 Xcode와 계정 서명 등 초기 설정이 필요하며, 인증·결제 같은 민감한 작업은 사람이 직접 처리하도록 제한합니다."
 featured_image: "image_2e9bb35f0df7eee1bb1ea038.webp"
 notion_id: "3f61bab9-e3f8-81d4-9f8d-c99a76211200"

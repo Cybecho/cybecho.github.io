@@ -3,10 +3,10 @@ title: "Synology NAS는 ip를 알려준적도 없는데, ddns를 키면 클라�
 date: 2026-01-19T09:19:00.000Z
 draft: false
 tags: ["NAS"]
-series: ["Let's Homelab!", "Infra & Network"]
+series: ["Let's Homelab!"]
 description: "시놀로지 NAS는 UPnP를 통해 공유기의 포트포워딩을 자동 설정하여 외부 접속 경로를 확보하고, 클라이언트는 DDNS를 통해 공인 IP를 확인하여 NAS에 접속한다. NAT Loopback 기능 덕분에 내부망에서도 외부 IP로 접근할 수 있으며, 포트 번호 없이 접속할 경우 NAS가 자동으로 리다이렉트를 통해 관리 페이지로 안내한다. 수동 포트포워딩이 우선시되므로, 포트 충돌이 발생할 경우 사용자가 명시적으로 포트를 입력해야 한다."
+featured_image: "image_0a83d2bcdad4b99f65514d6b.png"
 notion_id: "2ed1bab9-e3f8-802a-93a7-fee192646d7e"
-notion_url: "https://www.notion.so/Synology-NAS-ip-ddns-NAS-2ed1bab9e3f8802a93a7fee192646d7e"
 ---
 
 # Synology NAS는 ip를 알려준적도 없는데, ddns를 키면 클라이언트는 어떻게 NAS를 인식할까?
@@ -16,9 +16,11 @@ notion_url: "https://www.notion.so/Synology-NAS-ip-ddns-NAS-2ed1bab9e3f8802a93a7
 
 ---
 
-![Image](image_db2481a9cb8c.png)
+![Image](image_0a83d2bcdad4b99f65514d6b.png)
 
-![Image](image_678d5188cc11.png)
+![Image](image_fc0c0b84af0ce830c5be7b50.png)
+
+![Image](image_ad054d74e7758a42d6cd2999.png)
 
 ## [주제 1: NAS와 공유기 간의 UPnP 자동 설정 및 우선순위]
 
@@ -73,7 +75,7 @@ notion_url: "https://www.notion.so/Synology-NAS-ip-ddns-NAS-2ed1bab9e3f8802a93a7
 
 # QnA로 이해해보자
 
-![Image](image_d85a8dc31ea0.png)
+![Image](image_783322fa59c0da956aa1905d.png)
 
 
 ### 1. NAS가 라우터에게 무엇을 "집어넣었나?"

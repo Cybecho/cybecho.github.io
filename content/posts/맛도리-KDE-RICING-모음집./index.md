@@ -2,11 +2,11 @@
 title: "맛도리 KDE RICING 모음집."
 date: 2026-01-18T04:57:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
 series: ["Let's Linux!"]
 description: "다양한 KDE 테마 설정을 소개하며, 각 테마는 독특한 특징을 가지고 있습니다. 예를 들어, 페도라와 윈도우를 통합한 설정, 최신 쿠분투 기반의 현대적인 UI, 밸브의 디자인 언어를 반영한 게이밍 테마, 실험적인 레이아웃을 가진 독창적인 설정, 극단적인 단순함을 추구하는 흑백 테마, 윈도우 에어로 테마의 현대적 변형, 그리고 90년대 복고풍 감성을 담은 설정이 포함됩니다."
+featured_image: "image_a6a5dcffa82d.png"
 notion_id: "2ec1bab9-e3f8-80aa-9134-d0dbda286c97"
-notion_url: "https://www.notion.so/KDE-RICING-2ec1bab9e3f880aa9134d0dbda286c97"
 ---
 
 # 맛도리 KDE RICING 모음집.

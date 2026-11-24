@@ -2,8 +2,8 @@
 title: "kakao-auto: 카톡 대화방 90개, 새벽 2시에 사람 없이 CSV로 정리합니다"
 date: 2026-09-04T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["phone-automation"]
+series: ["On-Device AI"]
 description: "kakao-auto는 매일 새벽 2시에 카카오톡 대화방을 순회해 대화를 SQLite와 방별 CSV로 정리하고 사진을 로컬에 저장하는 도구입니다. 검색·대시보드·백업 기능도 제공하지만, 비공식 클라이언트 자동화로 계정 정지 위험이 있으며 수집된 개인정보에 대한 책임은 사용자에게 있으므로 본인 계정의 참여 대화만 적법한 목적으로 사용해야 합니다."
 featured_image: "image_2290a66aa903e5879896289a.webp"
 notion_id: "3d01bab9-e3f8-81fc-98fa-d25262130235"

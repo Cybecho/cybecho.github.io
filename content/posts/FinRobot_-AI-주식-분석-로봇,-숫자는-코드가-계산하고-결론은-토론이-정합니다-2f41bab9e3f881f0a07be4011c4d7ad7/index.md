@@ -2,7 +2,10 @@
 title: "FinRobot: AI 주식 분석 로봇, 숫자는 코드가 계산하고 결론은 토론이 정합니다"
 date: 2026-01-27T00:00:00.000Z
 draft: false
+tags: ["agent"]
+series: ["AI Harness"]
 description: "이 플랫폼은 주식 분석에서 숫자를 지어내는 문제를 막기 위해 계산은 파이썬 코드가, 해석과 보고서 작성은 LLM이 맡도록 역할을 분리합니다. 다섯 개 분석 에이전트와 세 개 토론 에이전트가 협력해 출처를 추적할 수 있는 13장짜리 리서치 보고서를 만들며, 교육용·웹 앱·실전용 데스크톱 버전으로 제공됩니다. 오픈소스이지만 데이터 제공자와 LLM 사용을 위한 별도 키가 필요합니다."
+featured_image: "image_3a3f6e50b0a76ddfa7cd2392.webp"
 notion_id: "2f41bab9-e3f8-81f0-a07b-e4011c4d7ad7"
 ---
 

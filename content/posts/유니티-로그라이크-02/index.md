@@ -2,11 +2,11 @@
 title: "유니티 로그라이크 02"
 date: 2023-03-03T00:00:00.000Z
 draft: false
-tags: ["C#", "UNITY"]
-series: ["유니티 로그라이크 클론 게임 개발"]
+tags: ["C#","UNITY"]
+series: ["Unity Game Clones"]
 description: "플레이어 이동을 위한 Rigidbody2D 함수 설명과 FixedUpdate의 사용법을 다루며, 입력 벡터를 정규화하고 속도를 제어하는 방법을 설명합니다. GetAxis 대신 GetAxisRaw를 사용하여 반응성을 개선할 수 있습니다."
+featured_image: "image_33da8c27fd14.png"
 notion_id: "8f5e0db5-c75c-4700-997d-1b35a3411446"
-notion_url: "https://www.notion.so/02-8f5e0db5c75c4700997d1b35a3411446"
 ---
 
 # 유니티 로그라이크 02

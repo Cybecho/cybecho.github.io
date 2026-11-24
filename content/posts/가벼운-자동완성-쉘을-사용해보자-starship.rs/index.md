@@ -2,11 +2,11 @@
 title: "가벼운 자동완성 쉘을 사용해보자 starship.rs"
 date: 2026-01-21T07:36:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
 series: ["Let's Linux!"]
 description: "Starship은 다양한 셸 환경에서 일관된 프롬프트 경험을 제공하는 크로스 셸 엔진으로, 개발 및 운영 작업의 효율성을 높이기 위해 필요한 맥락 정보를 시각적으로 표시한다. 싱글 바이너리 구조로 되어 있어 설치가 간편하며, 각 셸의 설정 파일에 초기화 코드를 추가하여 작동한다. 사용자는 단일 설정 파일인 starship.toml을 통해 프롬프트의 모듈 구성과 색상 등을 쉽게 조정할 수 있다."
+featured_image: "image_db053b1dcab5f6896697a930.png"
 notion_id: "2ef1bab9-e3f8-805a-b8cf-e6c6a8926f32"
-notion_url: "https://www.notion.so/starship-rs-2ef1bab9e3f8805ab8cfe6c6a8926f32"
 ---
 
 # 가벼운 자동완성 쉘을 사용해보자 starship.rs
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/starship-rs-2ef1bab9e3f8805ab8cfe6c6a8926f32"
 > Starship은 다양한 셸 환경에서 일관된 프롬프트 경험을 제공하는 크로스 셸 엔진으로, 개발 및 운영 작업의 효율성을 높이기 위해 필요한 맥락 정보를 시각적으로 표시한다. 싱글 바이너리 구조로 되어 있어 설치가 간편하며, 각 셸의 설정 파일에 초기화 코드를 추가하여 작동한다. 사용자는 단일 설정 파일인 starship.toml을 통해 프롬프트의 모듈 구성과 색상 등을 쉽게 조정할 수 있다.
 
 ---
+
+![Image](image_db053b1dcab5f6896697a930.png)
 
 
 ## [주제 1: Starship의 정의와 크로스 셸 엔진으로서의 정체성]

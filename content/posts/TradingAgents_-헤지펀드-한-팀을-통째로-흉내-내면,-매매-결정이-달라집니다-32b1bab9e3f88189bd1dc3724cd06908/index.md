@@ -2,8 +2,8 @@
 title: "TradingAgents: 헤지펀드 한 팀을 통째로 흉내 내면, 매매 결정이 달라집니다"
 date: 2026-03-22T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "TradingAgents는 애널리스트, 강세·약세 리서처, 트레이더, 리스크 관리팀, 포트폴리오 매니저 역할을 나눈 멀티에이전트 트레이딩 프레임워크입니다. 분석과 토론, 위험 평가를 거쳐 모의 매매를 결정하고 결과를 기록해 다음 판단에 반영합니다. 연구 결과는 일부 성과 지표의 개선을 보고했지만, 결과는 모델과 데이터 등에 따라 달라지며 공식적으로 연구용 도구로 안내됩니다."
 featured_image: "image_dbd2ce6cc159200fd4598d1f.webp"
 notion_id: "32b1bab9-e3f8-8189-bd1d-c3724cd06908"

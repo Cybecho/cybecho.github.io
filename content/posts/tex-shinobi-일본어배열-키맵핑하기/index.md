@@ -3,10 +3,10 @@ title: "tex shinobi 일본어배열 키맵핑하기"
 date: 2023-11-17T00:00:00.000Z
 draft: false
 tags: ["WINDOWS"]
-series: ["개발환경"]
+series: ["Dev Environment"]
 description: "TEX shinobi의 일본어 배열 키 맵핑 방법에 대해 설명하며, 웹 UI가 일본어 배열을 인식하지 못해 WINDOWS에서는 레지스트리를 수정해야 하고, MAC에서는 카라비너 설정이 필요하다고 안내합니다."
+featured_image: "image_c2122ed3652c.png"
 notion_id: "d7660270-d1f6-4065-bf0e-7837c66271a1"
-notion_url: "https://www.notion.so/tex-shinobi-d7660270d1f64065bf0e7837c66271a1"
 ---
 
 # tex shinobi 일본어배열 키맵핑하기

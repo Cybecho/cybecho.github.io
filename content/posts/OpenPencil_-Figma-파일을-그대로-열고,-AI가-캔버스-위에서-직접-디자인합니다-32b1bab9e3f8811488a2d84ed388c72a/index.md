@@ -2,8 +2,8 @@
 title: "OpenPencil: Figma 파일을 그대로 열고, AI가 캔버스 위에서 직접 디자인합니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","mcp"]
+series: ["AI Harness"]
 description: "OpenPencil은 Figma의 .fig 파일을 그대로 열고 저장하는 오픈소스 디자인 편집기입니다. 변환이 아니라 같은 형식을 직접 읽고 씁니다. 채팅으로 말을 걸면 100개가 넘는 도구가 캔버스 위에서 도형을 만들고 속성을 바꾸고 레이아웃을 잡아줍니다. 계정도, 서버도 필요 없습니다. 데스크톱 앱·웹앱·CLI·MCP 서버까지 한 묶음으로, 디자인을 코드와 자동화의 영역으로 가져옵니다."
 featured_image: "image_9c51bca0d7da98e9de4e9a58.webp"
 notion_id: "32b1bab9-e3f8-8114-88a2-d84ed388c72a"

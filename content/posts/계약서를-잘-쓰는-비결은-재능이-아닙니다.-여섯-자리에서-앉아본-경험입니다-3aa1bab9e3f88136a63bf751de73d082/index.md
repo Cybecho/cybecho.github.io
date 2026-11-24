@@ -2,8 +2,8 @@
 title: "계약서를 잘 쓰는 비결은 재능이 아닙니다. 여섯 자리에서 앉아본 경험입니다"
 date: 2026-07-27T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["real-estate"]
+series: ["Real Estate"]
 description: "계약서를 잘 쓰는 핵심은 문장 재능보다 소송, 중개, 임차·임대, 설계와 창업 등 여러 입장을 직접 경험하는 데 있습니다. 구두 약속을 문서화하고 관련 서류를 대조하며, 특약과 금액·기간·해지 조건을 명확히 해 분쟁이 생길 지점을 미리 막아야 합니다."
 featured_image: "image_0df0b9f2543571a1cb4c66f6.webp"
 notion_id: "3aa1bab9-e3f8-8136-a63b-f751de73d082"

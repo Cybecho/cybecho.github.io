@@ -2,8 +2,8 @@
 title: "Astryx: 13,000개 앱을 굴리던 디자인 시스템, 이제 에이전트와 함께 씁니다"
 date: 2026-11-14T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","mcp"]
+series: ["AI Harness"]
 description: "Astryx는 Meta가 8년간 다듬어 13,000개가 넘는 앱에 쓴 내부 디자인 시스템을 오픈소스로 공개한 것으로, 150개가 넘는 접근성 지원 컴포넌트와 테마, 템플릿, CLI를 하나의 시스템으로 묶었습니다. 토큰만 바꾸면 화면 전체가 다시 칠해지고, 컴포넌트 소스를 꺼내 직접 소유할 수도 있으며, 사람과 AI 코딩 에이전트가 CLI와 MCP로 같은 설명서를 보고 화면을 만듭니다. 다만 아직 공개 베타라 API가 빠르게 바뀌고 일부 패키지는 카나리아 배포만 있으니, 버전을 고정하고 시험 단계로 쓰는 것이 맞습니다."
 featured_image: "image_9618c8d15289f8b640944f16.webp"
 notion_id: "4181bab9-e3f8-8178-abdc-e387de5cc0e4"

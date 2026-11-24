@@ -2,8 +2,8 @@
 title: "같은 10억, 3년 차이로 송파와 관악이 갈렸습니다. 첫 집은 타이밍이 절반입니다"
 date: 2026-07-27T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["real-estate"]
+series: ["Real Estate"]
 description: "같은 10억이라도 집값과 대출 조건에 따라 살 수 있는 동네와 평형은 달라지며, 3년 사이 송파와 관악의 격차가 이를 보여줍니다. 타이밍은 바꾸기 어렵지만 예산, 평형, 지역, 대출 조건을 꼼꼼히 계산하면 현실적인 선택지를 찾을 수 있습니다."
 featured_image: "image_5f04de5eb460ae44138ee8ba.webp"
 notion_id: "3aa1bab9-e3f8-8102-9273-c6a3f262c598"

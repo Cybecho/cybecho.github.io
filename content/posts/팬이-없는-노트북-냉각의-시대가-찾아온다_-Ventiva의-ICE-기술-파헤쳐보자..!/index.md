@@ -2,11 +2,11 @@
 title: "팬이 없는 노트북 냉각의 시대가 찾아온다? Ventiva의 ICE 기술 파헤쳐보자..!"
 date: 2025-03-23T04:44:00.000Z
 draft: false
-tags: ["Other", "Util", "AI Generate"]
+tags: ["AI Generate"]
 series: ["HW"]
 description: "Dell의 Ventiva Ice 9 기술은 이온화된 공기를 사용하여 노트북을 냉각하는 혁신적인 팬리스 솔루션으로, 소음이 적고 디자인의 유연성을 높입니다. 이 기술은 5,000V의 전압을 이용해 공기를 이온화하고, 기존 팬 방식보다 더 조용하게 작동하지만, 오존 발생과 고전압 전원 공급 문제 등 해결해야 할 과제가 있습니다. Ventiva는 인텔과 델과 협력하여 이 기술을 상용화하고 있으며, 팬리스 냉각의 미래를 열어갈 가능성이 큽니다."
+featured_image: "image_a282f39e4c2c2e005ca6e176.png"
 notion_id: "1bf1bab9-e3f8-80d9-9681-f01712226d22"
-notion_url: "https://www.notion.so/Ventiva-ICE-1bf1bab9e3f880d99681f01712226d22"
 ---
 
 # 팬이 없는 노트북 냉각의 시대가 찾아온다? Ventiva의 ICE 기술 파헤쳐보자..!
@@ -16,7 +16,7 @@ notion_url: "https://www.notion.so/Ventiva-ICE-1bf1bab9e3f880d99681f01712226d22"
 
 ---
 
-![Image](image_9d83d76960e8.png)
+![Image](image_a282f39e4c2c2e005ca6e176.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=2lTWI7kfkt0)
 

@@ -2,11 +2,11 @@
 title: "RAID , ZFS , SHR , LVM 무슨 차이일까?"
 date: 2026-01-20T04:09:00.000Z
 draft: false
-tags: ["ProxMox", "NAS"]
-series: ["Let's Homelab!", "Infra & Network"]
+tags: ["ProxMox","NAS"]
+series: ["Let's Homelab!"]
 description: "RAID, LVM, ZFS, SHR는 데이터 관리 방식에서 차이를 보이며, 각각 성능과 유연성에 영향을 미친다. RAID는 하드웨어 추상화에 집중하고, LVM은 물리 장치와 파일 시스템 간의 중간 계층을 제공한다. ZFS는 파일 시스템과 RAID 기능을 통합하여 높은 데이터 일관성을 제공하며, SHR은 RAID와 LVM을 결합하여 다양한 용량의 디스크를 효율적으로 활용한다. 각 기술의 메타데이터 관리 방식은 복구 능력에 영향을 미치며, ZFS는 Copy-on-Write 방식을 통해 강력한 복구 기능을 제공한다."
+featured_image: "image_0a83d2bcdad4b99f65514d6b.png"
 notion_id: "2ee1bab9-e3f8-806d-b504-fc9206958384"
-notion_url: "https://www.notion.so/RAID-ZFS-SHR-LVM-2ee1bab9e3f8806db504fc9206958384"
 ---
 
 # RAID , ZFS , SHR , LVM 무슨 차이일까?
@@ -16,7 +16,9 @@ notion_url: "https://www.notion.so/RAID-ZFS-SHR-LVM-2ee1bab9e3f8806db504fc920695
 
 ---
 
-![Image](image_a3ca02cc1aaa.png)
+![Image](image_0a83d2bcdad4b99f65514d6b.png)
+
+![Image](image_23b244d43b5277a2bc012439.png)
 
 
 [https://www.perplexity.ai/search/raid-zfs-lvm-shr-edaehae-gagga-hyGdcu6jQCWJLIkbpyumMw#0](https://www.perplexity.ai/search/raid-zfs-lvm-shr-edaehae-gagga-hyGdcu6jQCWJLIkbpyumMw#0)
@@ -55,13 +57,13 @@ ZFS의 RAIDZ는 더 복잡한 유한체(Galois Field) 연산을 사용합니다.
 | ZFS | zfs | Copy-on-Write (순환) | 데이터 무결성 검증, 스냅샷 효율성 |
 | SHR | md + lvm | 혼합 방식 | 이종 용량 디스크 최적 |
 
-![Image](image_c0d933d27fc2.png)
+![Image](image_eeb0c8f7ae800bf7df24e301.png)
 
-![Image](image_80cd0627325b.png)
+![Image](image_dc181c505b5cc471855f9801.png)
 
-![Image](image_17fa3145bb22.png)
+![Image](image_813ee39e3738238c9b9b8000.png)
 
-![Image](image_95114a412706.png)
+![Image](image_d1d092782aa04ce6e94fbfb9.png)
 
 
 단순히 블록 레벨의 보호가 우선인 환경에서는 하드웨어 RAID나 mdadm이 적합하며, 유연한 파티션 관리가 필요한 리눅스 서버 환경에서는 LVM이 권장됩니다. 데이터의 절대적인 무결성과 무제한에 가까운 스냅샷 기능이 필수적인 엔터프라이즈 스토리지에는 ZFS가 최적의 대안입니다. 개인용 NAS와 같이 디스크 용량이 제각각인 환경에서는 SHR이 가장 높은 공간 효율성을 제공합니다.

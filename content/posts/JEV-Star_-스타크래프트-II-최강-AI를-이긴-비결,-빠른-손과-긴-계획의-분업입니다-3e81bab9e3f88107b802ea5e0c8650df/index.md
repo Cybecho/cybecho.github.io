@@ -2,8 +2,8 @@
 title: "JEV-Star: 스타크래프트 II 최강 AI를 이긴 비결, 빠른 손과 긴 계획의 분업입니다"
 date: 2026-09-27T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "빠른 결정 모델이 0.4초마다 다음 행동을 고르고, 큰 모델이 장기 계획을 붙잡아 두는 스타크래프트 II 컨트롤러입니다. 계획이 없던 컨트롤러는 20분 동안 확장 한 번 못 하고 졌지만, 계획을 붙이자 치트 없는 최강 난이도 7레벨을 두 번 이겼습니다. 게임 한 판에 약 3.71달러가 들었는데, 계획이 96%를 차지했습니다. 빠름과 계획, 둘 다 필요했습니다."
 featured_image: "image_462a3489db37a36615ede693.webp"
 notion_id: "3e81bab9-e3f8-8107-b802-ea5e0c8650df"

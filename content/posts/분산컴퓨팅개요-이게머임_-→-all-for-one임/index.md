@@ -2,11 +2,11 @@
 title: "분산컴퓨팅개요 - 이게머임? → all for one임"
 date: 2025-04-09T09:20:00.000Z
 draft: false
-tags: ["Infra", "ComputerArchitecture", "Distributed Computing"]
-series: ["분산컴퓨팅을 공부해보자"]
+tags: ["Infra","Distributed Computing"]
+series: ["Infra & Network"]
 description: "분산컴퓨팅은 여러 컴퓨터가 네트워크로 연결되어 공동 목표를 위해 함께 작업하는 시스템이다. 각 시스템은 독립적인 CPU, RAM, HDD를 가지고 있으며, 복잡한 규칙을 통해 통신한다. 이 기술은 VRAM 부족 문제를 해결하고 클라우드 서비스의 기초가 되며, 중요한 작업의 가용성을 보장하는 데 사용된다."
+featured_image: "image_e9b74f22f626d4a06da55545.png"
 notion_id: "1d01bab9-e3f8-80f9-af00-c0a2aac6bc44"
-notion_url: "https://www.notion.so/all-for-one-1d01bab9e3f880f9af00c0a2aac6bc44"
 ---
 
 # 분산컴퓨팅개요 - 이게머임? → all for one임
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/all-for-one-1d01bab9e3f880f9af00c0a2aac6bc44"
 > 분산컴퓨팅은 여러 컴퓨터가 네트워크로 연결되어 공동 목표를 위해 함께 작업하는 시스템이다. 각 시스템은 독립적인 CPU, RAM, HDD를 가지고 있으며, 복잡한 규칙을 통해 통신한다. 이 기술은 VRAM 부족 문제를 해결하고 클라우드 서비스의 기초가 되며, 중요한 작업의 가용성을 보장하는 데 사용된다.
 
 ---
+
+![Image](image_e9b74f22f626d4a06da55545.png)
 
 ![Image](image_5108464e2ef2.png)
 

@@ -2,8 +2,8 @@
 title: "하네스 엔지니어링: 모델을 바꾸기 전에, 실패가 안 돌아오게 하네스를 바꿉니다"
 date: 2026-03-30T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["harness","agent"]
+series: ["AI Harness"]
 description: "하네스 엔지니어링은 모델 자체를 바꾸기보다 규칙, 상황별 절차, 자동 검증, 실패 기록을 체계화해 에이전트의 반복 실수를 막고 새 프로젝트에서도 일관된 운영 품질을 재현하는 방법입니다. 실패 원인에 따라 규칙·스킬·훅·문서에 개선을 반영하고, 불필요하거나 중복된 규칙은 주기적으로 정리합니다."
 featured_image: "image_4022b80fb534d2af8f1b341c.webp"
 notion_id: "3331bab9-e3f8-8146-aebc-cd9b25295e3b"

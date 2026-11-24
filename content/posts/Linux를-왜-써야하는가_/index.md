@@ -2,11 +2,11 @@
 title: "Linux를 왜 써야하는가?"
 date: 2024-06-08T13:21:00.000Z
 draft: false
-tags: ["RHEL/Fedora/Rocky", "Arch", "ubuntu", "Debian"]
+tags: ["RHEL/Fedora/Rocky","Arch","ubuntu"]
 series: ["Let's Linux!"]
 description: "Windows 11에서 Linux Mint로의 전환은 사용자에게 많은 장점을 안겼습니다. 리눅스는 시스템의 효율성을 높이고, 사용자 맞춤 설정이 용이하며, TimeShift와 같은 유용한 도구가 기본으로 제공되어 안심하고 사용할 수 있었습니다. 그러나 특정 소프트웨어 설치 시 어려움이 있었고, 게임 호환성 문제도 있었지만 AI 챗봇의 도움으로 해결했습니다. 전반적으로 만족스러운 경험이었지만, 특정 드라이버 문제로 인해 다시 Windows로 돌아갈 가능성도 언급했습니다."
+featured_image: "image_db053b1dcab5f6896697a930.png"
 notion_id: "2904ea4d-1244-4c79-aa9d-0cf389431ede"
-notion_url: "https://www.notion.so/Linux-2904ea4d12444c79aa9d0cf389431ede"
 ---
 
 # Linux를 왜 써야하는가?
@@ -15,6 +15,8 @@ notion_url: "https://www.notion.so/Linux-2904ea4d12444c79aa9d0cf389431ede"
 > Windows 11에서 Linux Mint로의 전환은 사용자에게 많은 장점을 안겼습니다. 리눅스는 시스템의 효율성을 높이고, 사용자 맞춤 설정이 용이하며, TimeShift와 같은 유용한 도구가 기본으로 제공되어 안심하고 사용할 수 있었습니다. 그러나 특정 소프트웨어 설치 시 어려움이 있었고, 게임 호환성 문제도 있었지만 AI 챗봇의 도움으로 해결했습니다. 전반적으로 만족스러운 경험이었지만, 특정 드라이버 문제로 인해 다시 Windows로 돌아갈 가능성도 언급했습니다.
 
 ---
+
+![Image](image_db053b1dcab5f6896697a930.png)
 
 🎥 [동영상 보기](https://www.youtube.com/watch?v=HL1XavoNqsM)
 

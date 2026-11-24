@@ -2,8 +2,8 @@
 title: "LLM-Wiki: 검색은 한 번으로 끝나지 않습니다. 위키로 엮으면 에이전트가 추론하며 찾아갑니다"
 date: 2026-07-30T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["rag","agent"]
+series: ["AI Harness"]
 description: "LLM-Wiki는 문서를 양방향 링크와 출처가 있는 위키 페이지로 구성하고, 에이전트가 검색·읽기·링크 탐색을 반복하며 증거를 모아 답하도록 합니다. 세 벤치마크에서 기존 방법보다 높은 성능을 보였으며, 특히 탐색 과정이 큰 성과를 냈고 에러 북을 통한 자동 검증·수정으로 위키의 오류를 줄입니다. 다만 초기 구축 비용이 크고, 대규모·단일 문서 질문에는 한계가 있습니다."
 featured_image: "image_dff8d84f607d8820b1b19e99.webp"
 notion_id: "3ad1bab9-e3f8-818e-8f38-f944ba4e7271"

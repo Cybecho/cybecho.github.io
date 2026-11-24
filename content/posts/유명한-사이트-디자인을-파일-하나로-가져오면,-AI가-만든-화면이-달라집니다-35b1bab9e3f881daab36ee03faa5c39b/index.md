@@ -2,8 +2,8 @@
 title: "유명한 사이트 디자인을 파일 하나로 가져오면, AI가 만든 화면이 달라집니다"
 date: 2026-05-09T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["prompt-engineering"]
+series: ["AI Harness"]
 description: "getdesign.md는 유명 사이트 85개의 디자인 언어를 DESIGN.md 파일로 모아 둔 모음 사이트입니다. 마음에 드는 디자인을 골라 한 줄 명령으로 프로젝트에 넣고 에이전트에게 파일을 따라 만들라고 하면, AI가 만든 화면이 어디서 본 듯한 평균에서 벗어납니다. 파일은 실제 사이트를 분석한 스냅샷이고 공식 디자인 시스템이 아니므로, 느낌을 빌려 오는 기준으로 쓰는 게 맞습니다."
 featured_image: "image_46e3a5dbfb37908a53791166.webp"
 notion_id: "35b1bab9-e3f8-81da-ab36-ee03faa5c39b"

@@ -2,11 +2,11 @@
 title: "Copilot 대체제 Continue"
 date: 2024-07-21T07:31:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI", "개발환경"]
+tags: ["coding","local-llm"]
+series: ["AI Harness"]
 description: "Continue는 GitHub Copilot의 오픈소스 대안으로, 다양한 AI 모델을 지원하며 로컬에서 실행할 수 있는 장점이 있습니다. Ollama를 통해 모델을 설치하고 VSCode에서 사용할 수 있으며, 채팅 모드와 자동완성 모드를 통해 효율적인 코딩 환경을 제공합니다. Mistral 모델의 뛰어난 성능과 StarCoder의 빠른 응답 속도를 활용하여 개발자들은 더욱 창의적인 코딩 경험을 즐길 수 있습니다."
+featured_image: "image_3d77396b80b7.png"
 notion_id: "59143691-caa9-4b4a-bbcf-23bc652378d7"
-notion_url: "https://www.notion.so/Copilot-Continue-59143691caa94b4abbcf23bc652378d7"
 ---
 
 # Copilot 대체제 Continue

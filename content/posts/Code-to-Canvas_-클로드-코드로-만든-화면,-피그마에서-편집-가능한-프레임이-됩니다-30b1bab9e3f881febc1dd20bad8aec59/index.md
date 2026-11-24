@@ -2,7 +2,10 @@
 title: "Code to Canvas: 클로드 코드로 만든 화면, 피그마에서 편집 가능한 프레임이 됩니다"
 date: 2026-02-18T00:00:00.000Z
 draft: false
+tags: ["mcp","coding"]
+series: ["AI Harness"]
 description: "Code to Canvas는 클로드 코드로 만든 화면을 편집 가능한 피그마 프레임으로 가져와 아이디어와 여러 화면을 빠르게 탐색하게 합니다. 피그마 MCP를 통해 디자인 변경 사항을 코드로 다시 반영할 수 있어, 코드와 디자인 캔버스 사이의 왕복 작업을 지원합니다."
+featured_image: "image_b1e781ca7edce4968188a4c1.webp"
 notion_id: "30b1bab9-e3f8-81fe-bc1d-d20bad8aec59"
 ---
 

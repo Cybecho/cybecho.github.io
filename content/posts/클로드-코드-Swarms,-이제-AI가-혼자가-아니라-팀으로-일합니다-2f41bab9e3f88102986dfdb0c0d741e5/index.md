@@ -2,8 +2,8 @@
 title: "클로드 코드 Swarms, 이제 AI가 혼자가 아니라 팀으로 일합니다"
 date: 2026-01-26T00:00:00.000Z
 draft: false
-tags: ["AI","Claude"]
-series: ["AI"]
+tags: ["Claude","agent"]
+series: ["AI Harness"]
 description: "Swarms는 클로드 코드의 숨겨진 멀티 에이전트 기능으로, 팀 리드 AI가 계획을 세우고 작업자 에이전트들이 구현·검토를 병렬로 수행합니다. 아직 정식 공개 전이며, 별도 빌드에서 체험할 수 있고 큰 기능이나 여러 파일을 다루는 작업에서 효율을 높일 잠재력이 있습니다."
 featured_image: "image_289bf3e637497a4651f9a8f5.webp"
 notion_id: "2f41bab9-e3f8-8102-986d-fdb0c0d741e5"

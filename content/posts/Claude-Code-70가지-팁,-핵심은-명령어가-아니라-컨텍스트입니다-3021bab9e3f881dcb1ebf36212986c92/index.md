@@ -2,8 +2,8 @@
 title: "Claude Code 70가지 팁, 핵심은 명령어가 아니라 컨텍스트입니다"
 date: 2026-02-09T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "클로드 코드 70가지 팁을 13개 파트로 묶은 54쪽 가이드의 핵심은 컨텍스트 관리와 계획, 통제입니다. 새 대화로 시작하고 주기적으로 압축하며 계획 모드와 훅으로 통제하는 습관이 클로드 코드를 동료로 만드는 방법입니다."
 featured_image: "image_b0ff600db0d97af204bceae1.webp"
 notion_id: "3021bab9-e3f8-81dc-b1eb-f36212986c92"

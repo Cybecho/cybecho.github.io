@@ -2,8 +2,8 @@
 title: "Codex: 인간은 코드를 쓰지 않습니다, 환경을 설계합니다"
 date: 2026-02-12T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent","coding"]
+series: ["AI Harness"]
 description: "5개월간 약 100만 줄의 코드와 1,500개의 PR을 에이전트가 작성한 사례는 엔지니어의 역할이 코딩에서 환경 설계와 의도 명세로 바뀌고 있음을 보여줍니다. 짧은 안내서와 구조화된 지식 저장소, 에이전트가 직접 활용하는 관측성 도구, 린터와 명확한 규칙이 자율적이고 안정적인 작업을 뒷받침합니다. 핵심은 코드를 직접 만드는 대신 에이전트가 잘 만들 수 있는 환경과 피드백·통제 체계를 설계하는 것입니다."
 featured_image: "image_6a77bde51b42e298710f8079.webp"
 notion_id: "3051bab9-e3f8-8182-bd02-fadfb303b6ae"

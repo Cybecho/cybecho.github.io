@@ -2,8 +2,8 @@
 title: "Remodex: Codex는 맥에 두고, 손은 아이폰으로 움직이면 됩니다"
 date: 2026-03-10T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["phone-automation","agent"]
+series: ["On-Device AI"]
 description: "Remodex는 아이폰으로 맥에서 실행 중인 Codex 작업을 원격 조종하는 로컬 우선 오픈소스 앱입니다. 암호화된 연결로 프롬프트 전송, 작업 조정, Git 작업 등을 할 수 있고, 코드는 맥에 남습니다. 설치와 QR 페어링이 간단하며, 릴레이를 직접 운영할 수도 있지만 아직 초기 단계라 버그와 일부 기능 제한을 고려해야 합니다."
 featured_image: "image_a9f051d28f17af1eaac1581a.webp"
 notion_id: "31f1bab9-e3f8-81d1-bbe2-c440583fc2f9"

@@ -2,8 +2,8 @@
 title: "oh-my-agent: 에이전트 한 명이 아니라 역할이 나뉜 팀이 일합니다"
 date: 2026-02-02T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["agent"]
+series: ["AI Harness"]
 description: "소프트웨어 개발은 이제 코드를 직접 쓰는 일이 아니라 에이전트를 조율하고 감독하는 일로 바뀌었습니다. oh-my-agent는 역할을 나눈 에이전트 팀에 공용 메모리를 붙여 협업 구조를 기본값으로 제공하고, 모델 성능 변동성을 완화하며 사람이 개입할 지점을 명확히 합니다."
 featured_image: "image_acd7f2c998fc33d91497caf2.webp"
 notion_id: "2fb1bab9-e3f8-819e-9531-cb02018274d4"

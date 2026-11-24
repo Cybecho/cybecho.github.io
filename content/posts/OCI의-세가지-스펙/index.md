@@ -3,10 +3,10 @@ title: "OCI의 세가지 스펙"
 date: 2026-01-28T04:48:00.000Z
 draft: false
 tags: ["Docker"]
-series: ["Infra & Network", "Let's Bootc!"]
+series: ["Infra & Network"]
 description: "OCI의 세 가지 스펙은 이미지 구조, 실행 방법, 배포 방법으로 나뉩니다. 이미지 구조는 여러 레이어로 구성되며, 각 레이어는 해시값으로 식별됩니다. 실행 방법은 컨테이너를 설치하는 방식으로, runc가 지시사항을 읽고 실행합니다. 배포 방법은 레지스트리 서버와의 대화 규칙을 포함하며, HTTP API 엔드포인트와 호출 순서가 정의되어 있습니다."
+featured_image: "image_a2e3e9aed4b0591051ccb5a9.png"
 notion_id: "2f61bab9-e3f8-809f-9fcc-d70730c3ab17"
-notion_url: "https://www.notion.so/OCI-2f61bab9e3f8809f9fccd70730c3ab17"
 ---
 
 # OCI의 세가지 스펙
@@ -16,7 +16,9 @@ notion_url: "https://www.notion.so/OCI-2f61bab9e3f8809f9fccd70730c3ab17"
 
 ---
 
-![Image](image_7cc87755330c.png)
+![Image](image_a2e3e9aed4b0591051ccb5a9.png)
+
+![Image](image_6bab84a74b375c5a83e4f4a5.png)
 
 
 ### Image Specification - 이미지 구조

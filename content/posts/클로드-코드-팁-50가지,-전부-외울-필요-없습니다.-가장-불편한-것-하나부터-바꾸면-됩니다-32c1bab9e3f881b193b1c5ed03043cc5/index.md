@@ -2,8 +2,8 @@
 title: "클로드 코드 팁 50가지, 전부 외울 필요 없습니다. 가장 불편한 것 하나부터 바꾸면 됩니다"
 date: 2026-03-23T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["coding","agent"]
+series: ["AI Harness"]
 description: "클로드 코드 팁 50가지를 다 외울 필요는 없습니다. 되감기로 안전하게 시도하고, 검증 수단으로 품질을 잡고, 컨텍스트를 가볍게 유지하는 세 가지가 핵심입니다. 50개 전부 말고 지금 가장 불편한 것 하나부터 바꾸는 게 목록을 쓰는 방법입니다."
 featured_image: "image_a96a6f5a6f658e93766b18a0.webp"
 notion_id: "32c1bab9-e3f8-81b1-93b1-c5ed03043cc5"

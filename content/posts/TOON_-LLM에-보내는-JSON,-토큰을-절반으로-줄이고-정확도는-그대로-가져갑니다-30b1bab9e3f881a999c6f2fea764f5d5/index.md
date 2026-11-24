@@ -2,9 +2,10 @@
 title: "TOON: LLM에 보내는 JSON, 토큰을 절반으로 줄이고 정확도는 그대로 가져갑니다"
 date: 2026-02-18T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["오픈소스","AI"]
+tags: ["coding"]
+series: ["AI Harness"]
 description: "TOON은 JSON 데이터를 손실 없이 표현하면서 토큰을 크게 줄이는 직렬화 포맷입니다. 필드 이름을 헤더에 한 번만 쓰고 중첩은 들여쓰기로 표현해, 균일한 배열에서 30~60%의 토큰을 절감합니다. 벤치마크에서 정확도 72.2%로 JSON(71.4%)보다 높으면서 토큰은 42.6% 덜 썼고, 구조 검증은 100%를 달성했습니다. CLI와 encode/decode API로 JSON과 양방향 변환을 지원합니다."
+featured_image: "image_b176b85a0b3f4007b950db50.webp"
 notion_id: "30b1bab9-e3f8-81a9-99c6-f2fea764f5d5"
 ---
 

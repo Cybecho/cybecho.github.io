@@ -2,8 +2,8 @@
 title: "kordoc: HWP 파일이 RAG의 병목이라면, 파싱부터 바꿔야 합니다"
 date: 2026-09-28T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["rag"]
+series: ["AI Harness"]
 description: "kordoc은 HWP·HWPX·PDF 등 다양한 문서를 마크다운과 RAG용 구조 청크로 변환하는 오픈소스 파서로, 표 구조 복원과 로컬 OCR을 지원합니다. 공개 벤치에서 높은 성능을 보였지만, 수치는 표 구조 일치 등 특정 범위에 한정되므로 실제 사용 시 최신 옵션과 지표를 확인해야 합니다."
 featured_image: "image_02ada369e9465fc578125de5.webp"
 notion_id: "3e81bab9-e3f8-819d-9dbd-cf3d32d0cc3c"

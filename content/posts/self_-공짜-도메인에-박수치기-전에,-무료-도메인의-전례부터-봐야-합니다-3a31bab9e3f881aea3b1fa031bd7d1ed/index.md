@@ -2,8 +2,7 @@
 title: ".self: 공짜 도메인에 박수치기 전에, 무료 도메인의 전례부터 봐야 합니다"
 date: 2026-07-20T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+series: ["Let's Homelab!"]
 description: ".self 제안에 토론장은 환호보다 20년 전 무료 도메인 .tk의 전례부터 꺼냈습니다. 무료와 자유 선택은 양립이 어렵고, 1인 1도메인 증명과 공유 메일 신뢰도 아직 답이 없습니다. 결론적으로 토론장은 새 주소보다 쉬운 셀프호스팅을 원했습니다."
 featured_image: "image_05da314e6a6f8614bad177ed.webp"
 notion_id: "3a31bab9-e3f8-81ae-a3b1-fa031bd7d1ed"

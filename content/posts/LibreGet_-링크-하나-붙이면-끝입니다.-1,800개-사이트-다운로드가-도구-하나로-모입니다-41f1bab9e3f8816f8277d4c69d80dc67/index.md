@@ -2,8 +2,8 @@
 title: "LibreGet: 링크 하나 붙이면 끝입니다. 1,800개 사이트 다운로드가 도구 하나로 모입니다"
 date: 2026-11-21T00:00:00.000Z
 draft: false
-tags: ["AI"]
-series: ["AI"]
+tags: ["mcp"]
+series: ["AI Harness"]
 description: "LibreGet은 윈도우·맥·리눅스에서 1,800개 이상의 사이트에서 콘텐츠를 내려받고, 이어받기와 자막·PDF·파일 관리 등 158개 도구를 제공하는 무료 오픈소스 앱입니다. MCP 서버와 에이전트 플러그인도 지원하며, 계정·광고·다운로드 기록 전송 없이 작동합니다. DRM 우회나 유료 장벽 해제는 하지 않으며, 초기 실행 시 운영체제별 보안 경고나 추가 설정이 필요할 수 있습니다."
 featured_image: "image_7228783104c01fd6805709a5.webp"
 notion_id: "41f1bab9-e3f8-816f-8277-d4c69d80dc67"
