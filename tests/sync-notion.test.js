@@ -109,3 +109,18 @@ test('external asset warnings keep good body and force retry without advancing t
  warn=false;await syncNotionDatabase(args);assert.equal(attempts,3);
  const last=await syncNotionDatabase(args);assert.equal(last.skipped,1);assert.equal(attempts,3);assert.equal(last.asset_warnings,0);
 });
+
+test('malformed image reference (bare filename) warns and drops the image instead of failing the sync', async t => {
+  const { createRenderer } = require('../scripts/notion-renderer');
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'renderer-test-'));
+  t.after(() => fs.rmSync(dir, { recursive: true, force: true }));
+  const blockId = '11ad1a50-1541-4e19-ba9d-b038b3f22142';
+  const notion = { blocks: { children: { list: async () => ({ results: [{ id: blockId, type: 'image', has_children: false, image: { external: { url: 'twinny-codestral-architecture.svg' } } }], has_more: false }) } } };
+  const warnings = [];
+  const renderer = createRenderer(notion, { onAssetWarning: w => warnings.push(w) });
+  const content = await renderer.convertBlocks('page-id', dir);
+  assert.doesNotMatch(content, /twinny-codestral-architecture/);
+  assert.doesNotMatch(content, /!\[Image\]/);
+  assert.equal(warnings.length, 1);
+  assert.equal(warnings[0].code, 'IMAGE_INVALID_URL');
+});
