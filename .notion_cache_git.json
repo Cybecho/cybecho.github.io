@@ -975,10 +975,9 @@
     "accessed_at": "2026-11-10T09:07:59.545Z"
   },
   "19a1bab9-e3f8-80fa-8643-e42175c26312": {
-    "last_edited_time": "2025-07-24T12:48:00.000Z",
-    "title": "윈도우 원격데스크톱은 데이터를 얼마나 사용할까?`",
+    "last_edited_time": "2026-11-24T06:44:00.000Z",
+    "title": "윈도우 원격데스크톱은 데이터를 얼마나 사용할까?",
     "slug": "윈도우-원격데스크톱은-데이터를-얼마나-사용할까_`",
-    "processed_at": "2026-01-13T10:42:47.881Z",
     "tags": [
       "Infra"
     ],
@@ -986,7 +985,10 @@
       "Infra & Network"
     ],
     "has_content": true,
-    "accessed_at": "2026-11-10T09:07:59.545Z"
+    "content_hash": "eff093aa67f416c8fb6a534a144249e267166432b4dde54588c7084c5900e5b6",
+    "sync_version": 2,
+    "status": "published",
+    "asset_warnings": 0
   },
   "19d1bab9-e3f8-8013-a1bc-c99bf6b2b85b": {
     "last_edited_time": "2025-07-24T10:07:00.000Z",
